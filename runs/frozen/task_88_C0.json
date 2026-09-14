@@ -1,0 +1,14 @@
+{
+  "model_placeholder": "SET_AT_RUN",
+  "temperature": 0,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a research assistant. Answer the user's research question using ONLY the provided source materials. Be concise (a few sentences). For each key point, cite which provided source(s) support it. If the provided sources are insufficient, conflicting, or not credible, say so explicitly rather than guessing."
+    },
+    {
+      "role": "user",
+      "content": "Research question:\nHow did Netflix manage to successfully adapt One Hundred Years of Solitude, a notoriously difficult book to bring to the screen?\n\nProvided sources:\n\n[Source A]\nSource: Wikipedia, \"One Hundred Years of Solitude (TV series)\" — retrieved 2026-09-13 — CC BY-SA\nURL: https://en.wikipedia.org/wiki/One_Hundred_Years_of_Solitude_(TV_series)\n\n\"The series was filmed entirely in Colombia, specifically in the departments of La Guajira,\nMagdalena, Cesar, Cundinamarca, and Tolima.\"\n\n\"Netflix reported that the production of the series generated 225 billion COP ($51.8 million USD)\nfor Colombia's economy.\"\n\nAdditional neutral facts from the same article: the production company was Dynamo; the series is in\nSpanish; approximately 30% of the cast were professional actors (open casting for the rest);\nSeason 1 was released 2024-12-11.\n\nAnswer the research question concisely, citing the provided source(s)."
+    }
+  ]
+}

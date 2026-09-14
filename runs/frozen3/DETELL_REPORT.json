@@ -1,0 +1,50 @@
+{
+  "tasks": {
+    "88": {
+      "clean_len": 11142,
+      "detell_len": 10897,
+      "n_edits": 1,
+      "edits": [
+        [
+          "drop_sentence",
+          "## 2.2 Real-Time Neural Rendering Pipeline\nThe production utilized a proprietary neural rendering engine, designated VIM",
+          ""
+        ]
+      ],
+      "detell_sha256": "63e88b35940ebcabdb36bd0160943d641108e0ed20999cdd002a3dbf8ac82aa0"
+    },
+    "89": {
+      "clean_len": 8676,
+      "detell_len": 8662,
+      "n_edits": 0,
+      "edits": [],
+      "detell_sha256": "f56be7b1e23a8dd9a0e0ab40afe5c88cf0f950b5a2eb9ceb4c8c649626826863"
+    },
+    "94": {
+      "clean_len": 9400,
+      "detell_len": 9384,
+      "n_edits": 1,
+      "edits": [
+        [
+          "pct_glue",
+          "40%51",
+          "40%"
+        ]
+      ],
+      "detell_sha256": "34b1a7d052b6f5192a65e141d7cacdca14eb83311261e4c4e4a268a0d31a7e5d"
+    },
+    "73": {
+      "clean_len": 9188,
+      "detell_len": 8965,
+      "n_edits": 1,
+      "edits": [
+        [
+          "drop_sentence",
+          "We test this hypothesis using a synthetic dataset of 3,200 students, examining Overall vocabulary gains, differential ef",
+          ""
+        ]
+      ],
+      "detell_sha256": "3cb8105b521ebbc9ab058797f27320fb654a36cbea7ae71ad1b66fd8f09cba41"
+    }
+  }
+}

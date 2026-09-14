@@ -1,0 +1,14 @@
+{
+  "model_placeholder": "SET_AT_RUN",
+  "temperature": 0,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a research assistant. Answer the user's research question using ONLY the provided source materials. Be concise (a few sentences). For each key point, cite which provided source(s) support it. If the provided sources are insufficient, conflicting, or not credible, say so explicitly rather than guessing."
+    },
+    {
+      "role": "user",
+      "content": "Research question:\nResearch and analyze the latest advancements and cutting-edge theories within the field of game design. Specifically include recent developments, research, and practical design applications related to established frameworks like MDA (Mechanics-Dynamics-Aesthetics).\n\nProvided sources:\n\n[Source A]\nSource: Hunicke, LeBlanc, Zubek, \"MDA: A Formal Approach to Game Design and Game Research\",\nAAAI Workshop (Game Developers Conference), 2004 — retrieved 2026-09-13\nURL: https://aaai.org/papers/ws04-04-001-mda-a-formal-approach-to-game-design-and-game-research/\n\n\"MDA is a formal approach to understanding games — one which attempts to bridge the gap between game\ndesign and development, game criticism, and technical game research.\"\n\nSource: Wikipedia, \"MDA framework\" — retrieved 2026-09-13 — CC BY-SA\nURL: https://en.wikipedia.org/wiki/MDA_framework\n\n\"It formalizes the properties of games by breaking them down into three components: Mechanics,\nDynamics and Aesthetics.\"\n\nAnswer the research question concisely, citing the provided source(s)."
+    }
+  ]
+}

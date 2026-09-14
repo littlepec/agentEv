@@ -1,0 +1,14 @@
+{
+  "model_placeholder": "SET_AT_RUN",
+  "temperature": 0,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful research assistant. Use the provided source materials to answer the user's research question. Give a clear, informative answer and cite the source(s) you draw on."
+    },
+    {
+      "role": "user",
+      "content": "Research question:\nCould you provide information on recent developments in cloud-based train control systems for urban rail transit? I'm also interested in understanding the key technologies involved.\n\nProvided sources:\n\n[Source A]\nSource: Chang, Nan, Ou, Zhang, \"Architecture Design and Reliability Evaluation of a Novel\nSoftware-Defined Train Control System\", Urban Rail Transit, 2022 — DOI 10.1007/s40864-022-00165-y\nAccessible mirror (Springer full text gated): https://journal.hep.com.cn/urt/EN/10.1007/s40864-022-00165-y\n\nSoftware-Defined Train Control (SDTC): core functions are implemented in a cloud platform, with only\nsensors and IO units on the trackside and train.\n\nReliability evaluation (Markov-model based): \"the mean time between failures improved by 39% compared\nwith the traditional CBTC architecture.\"\n\n[Fidelity note kept in private/evidence_review.md: wording is near-verbatim from the accessible\nmirror abstract; Springer full text is gated, exact phrasing pending re-check before any run.]\n\nAnswer the research question, citing the provided source(s)."
+    }
+  ]
+}

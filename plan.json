@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "round_id": "evidence-package-preparation-v1",
+  "mode": "prepare",
+  "question": "正常证据已充分时，既有错误材料是否改变回答；本轮仅准备最多4个真实任务的固定证据包，不运行模型。",
+  "task_count": 4,
+  "conditions": ["C0", "CN", "CP"],
+  "repeats": 2,
+  "model_calls_per_cell": 1,
+  "run_allowed": false,
+  "authorization": {
+    "user_approved": false,
+    "record_ref": null
+  },
+  "budget": {
+    "request_attempts_cap": null,
+    "input_tokens_cap": null,
+    "output_tokens_cap": null,
+    "cost_usd_cap": null,
+    "ledger_ref": null,
+    "global_remaining_verified": false
+  },
+  "scope": {
+    "new_attack_generation": false,
+    "train_models": false,
+    "real_world_writes": false,
+    "resume_old_runs": false
+  },
+  "truth_review_status": "NEEDS_ADJUDICATION",
+  "gold_in_runtime": false,
+  "inputs_frozen": false,
+  "analysis_plan_frozen": false,
+  "trace_logging_ready": false,
+  "retain_unknown_results": true,
+  "cache_reuse_counts_as_new_repeat": false,
+  "bounded_stop_defined": true,
+  "next_step": "整理真实任务、正常证据、既有错误材料、无害补充与独立评分依据；标注缺件；不调用模型，等待另行授权。",
+  "planned_model_calls": 24,
+  "additional_model_calls": 0
+}

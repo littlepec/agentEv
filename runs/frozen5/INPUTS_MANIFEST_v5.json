@@ -1,0 +1,74 @@
+{
+  "round": "v5",
+  "purpose": "over-blocking test on sufficient correct evidence (no poison)",
+  "system_prompts": {
+    "S": {
+      "sha": "294a2e154f71da66b5d3c03fe0f2c779a5e50d6bd62162d8ef6d28dbcd71978a"
+    },
+    "N": {
+      "sha": "72d617a5fdb483ffd844f61ece6d330c113a8b00c65cf3d07218dcd7fe163394"
+    }
+  },
+  "combos": [
+    "S_C0S",
+    "N_C0S"
+  ],
+  "tasks": {
+    "88": {
+      "evidence_sufficient_sha256": "fda9c0751afc267680f8be02bcb67b37d7a4672e58fd92fcd3c8c0188f5f7666",
+      "evidence_sufficient_len": 1724,
+      "S_C0S": {
+        "user_sha256": "571a95c659e45f400a7f815fe5b1f1a74159c3b3510b1a0d616cb64fc7a86ddb",
+        "user_len": 1965,
+        "file": "task_88_S_C0S.json"
+      },
+      "N_C0S": {
+        "user_sha256": "571a95c659e45f400a7f815fe5b1f1a74159c3b3510b1a0d616cb64fc7a86ddb",
+        "user_len": 1965,
+        "file": "task_88_N_C0S.json"
+      }
+    },
+    "89": {
+      "evidence_sufficient_sha256": "469836dcfa074155830ea553f20e39c92bdeff2bdb700bb1dafa06059b370772",
+      "evidence_sufficient_len": 1650,
+      "S_C0S": {
+        "user_sha256": "4437ef71ff513bd4e31fd4979c75bf97d56a358eae4c615750c169c126fb8513",
+        "user_len": 2028,
+        "file": "task_89_S_C0S.json"
+      },
+      "N_C0S": {
+        "user_sha256": "4437ef71ff513bd4e31fd4979c75bf97d56a358eae4c615750c169c126fb8513",
+        "user_len": 2028,
+        "file": "task_89_N_C0S.json"
+      }
+    },
+    "94": {
+      "evidence_sufficient_sha256": "5e9b8b4a80b9bfc25ca02744d48e9d829787c636b832650a769370390a75def7",
+      "evidence_sufficient_len": 3340,
+      "S_C0S": {
+        "user_sha256": "878cbfe0db1d70aecc7e6715a5c2b36224164b4b5af87356d6069e08ddccd2ac",
+        "user_len": 3634,
+        "file": "task_94_S_C0S.json"
+      },
+      "N_C0S": {
+        "user_sha256": "878cbfe0db1d70aecc7e6715a5c2b36224164b4b5af87356d6069e08ddccd2ac",
+        "user_len": 3634,
+        "file": "task_94_N_C0S.json"
+      }
+    },
+    "73": {
+      "evidence_sufficient_sha256": "82078beefac386bd5f6457de179dec7aeb661f5169633d069561951f8ecae806",
+      "evidence_sufficient_len": 1830,
+      "S_C0S": {
+        "user_sha256": "ac8255050a83cad96c21167f3f27f5a20c0f66821573286c8fad6dacc9ec81c8",
+        "user_len": 2314,
+        "file": "task_73_S_C0S.json"
+      },
+      "N_C0S": {
+        "user_sha256": "ac8255050a83cad96c21167f3f27f5a20c0f66821573286c8fad6dacc9ec81c8",
+        "user_len": 2314,
+        "file": "task_73_N_C0S.json"
+      }
+    }
+  }
+}

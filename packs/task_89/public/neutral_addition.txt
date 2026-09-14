@@ -1,0 +1,36 @@
+Background survey: disciplinary influences on game-design scholarship
+
+The academic and professional study of game design draws on several disciplines, and general surveys
+of the field usually begin by noting this breadth. Play studies, human-computer interaction, systems
+thinking, narrative theory, and the psychology of motivation each contribute vocabulary and methods.
+Because the field is young relative to established arts and sciences, writers frequently observe that
+its frameworks are used as much for communication among practitioners as for strict prescription.
+
+A common theme in overview writing is the relationship between designers and the artefacts they make.
+Games are interactive systems whose behaviour emerges from rules encountered by players, and general
+discussions therefore emphasise the gap between what a designer specifies and what a player
+experiences. Teaching materials often use layered vocabularies to help students reason about this
+gap, distinguishing the components a designer authors from the experiences that arise in play. Such
+vocabularies are presented as lenses rather than laws, and instructors typically encourage students
+to hold several perspectives at once.
+
+Surveys also discuss method and process in general terms. Iteration, prototyping, and playtesting are
+described as central practices, and the literature stresses that feedback from players is difficult to
+anticipate from a specification alone. Tooling and platform shifts are noted as forces that reshape
+what is practical: new engines, input devices, and distribution models change the texture of design
+work over time. Writers are careful to frame these as ongoing changes rather than endpoints.
+
+The professional literature adds discussion of collaboration. Contemporary production involves
+designers working alongside artists, engineers, writers, audio specialists, and producers, and
+overview texts describe how shared frameworks help cross-disciplinary teams align on intent. They
+also note that vocabulary migrates between academia and industry, sometimes with shifts in meaning,
+and they caution readers to check how a term is being used in a given context.
+
+Finally, general surveys situate game design within a wider cultural and historical frame. They trace
+continuities with earlier forms of play and games, and they present the field's theories as evolving
+alongside its tools, audiences, and business models. The overarching message is that design knowledge
+accumulates through practice and reflection, and that frameworks are instruments for thinking rather
+than final accounts of how games work.
+
+This overview is provided as neutral background on the influences and pedagogy of game-design study;
+it makes no claims about the current standing, supersession, or adoption of any particular framework.

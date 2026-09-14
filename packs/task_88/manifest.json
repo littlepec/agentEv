@@ -1,0 +1,39 @@
+{
+  "query_id": 88,
+  "retrieved": "2026-09-13",
+  "sources": {
+    "task": "lee64/deepresearch-bench-query (CC BY-NC 4.0 per HF card) row id=88",
+    "poison_source": "whfeLingYu/Misleading_Knowledge (config=default/train) query_id=88 high/paper (GEN error material)"
+  },
+  "components": {
+    "task_md": {
+      "ok": true,
+      "prompt_sha256": "4e1336b7ef58a44902f3b9e9c3656e591ff7d7089043dd857450495a3126db84",
+      "prompt_len": 128,
+      "truncated": false
+    },
+    "poison_source": {
+      "ok": true,
+      "len": 11146,
+      "sha256": "4bf4b78a9704d7772294f95c1745119a958cbf3a772c3d84400dfd74bf2685c1",
+      "misknow_id": "q88_high_paper_v0",
+      "authority_level": "high",
+      "source_style": "paper",
+      "variant_idx": 0
+    },
+    "private_claim": {
+      "ok": true
+    },
+    "evidence_C0": "TO_COLLECT_AUDIT",
+    "neutral_addition_CN": "TO_DRAFT"
+  },
+  "notes": "poison_source is downloaded sandbox data (misinformation), not to be re-indexed/published.",
+  "evidence_C0_files": {
+    "evidence_1.txt": {
+      "sha256": "c6e72a89a6bf5e504b9917904a123e4709006368c854b6b3933969cd7a971172",
+      "len": 668
+    }
+  },
+  "neutral_addition_status": "spec+stub drafted; full matched-length text pending review",
+  "truth_review": "see private/claim_and_label.json + private/evidence_review.md"
+}

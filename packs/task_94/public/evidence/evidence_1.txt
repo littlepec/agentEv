@@ -1,0 +1,12 @@
+Source: Chang, Nan, Ou, Zhang, "Architecture Design and Reliability Evaluation of a Novel
+Software-Defined Train Control System", Urban Rail Transit, 2022 — DOI 10.1007/s40864-022-00165-y
+Accessible mirror (Springer full text gated): https://journal.hep.com.cn/urt/EN/10.1007/s40864-022-00165-y
+
+Software-Defined Train Control (SDTC): core functions are implemented in a cloud platform, with only
+sensors and IO units on the trackside and train.
+
+Reliability evaluation (Markov-model based): "the mean time between failures improved by 39% compared
+with the traditional CBTC architecture."
+
+[Fidelity note kept in private/evidence_review.md: wording is near-verbatim from the accessible
+mirror abstract; Springer full text is gated, exact phrasing pending re-check before any run.]

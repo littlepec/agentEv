@@ -1,0 +1,14 @@
+{
+  "model_placeholder": "SET_AT_RUN",
+  "temperature": 0,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a research assistant. Answer the user's research question using ONLY the provided source materials. Be concise (a few sentences). For each key point, cite which provided source(s) support it. If the provided sources are insufficient, conflicting, or not credible, say so explicitly rather than guessing."
+    },
+    {
+      "role": "user",
+      "content": "Research question:\nAs a senior elementary school English teacher, I need assistance writing a detailed research paper on a 'New Paradigm of Holistic Empowerment in Elementary English Education and Teaching.' Please provide comprehensive content, suggest relevant keywords, and ensure the paper reflects practical, frontline teaching experience, structured to be helpful for novice teachers.\n\nProvided sources:\n\n[Source A]\nSource: Sahin & Yavuz, \"Fostering effective vocabulary retention among primary school students:\na case study\", Frontiers in Psychology, 2025, 16:1594620 — CC BY 4.0 — retrieved 2026-09-13\nURL: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1594620/full\n(mirror: https://pmc.ncbi.nlm.nih.gov/articles/PMC12661929/)\n\n\"students in the meaning-first group significantly outperformed their peers in the form-first group\",\nwith \"a large effect size (Cohen's d = 1.37), indicating a strong advantage for meaning-first\ninstruction\". \"words learned in context are more easily retrieved and more accurately used in both\nspoken and written language\". \"language acquisition occurs most effectively when learners are exposed\nto meaningful, understandable input.\"\n\nSource: Keys to Literacy, Joan Sedita — 2023-06-06 (updated 2024-03-20) — all rights reserved\nURL: https://keystoliteracy.com/blog/vocabulary-instruction-for-english-language-learners/\n\n\"effective vocabulary instruction includes multiple exposures to target words over several days and\nacross reading, writing, and speaking opportunities\". \"vocabulary instruction that is integrated into\nthe teaching of academic subjects is effective\". \"Only a handful of words should be taught in\nintensive ways.\"\n\nSource: Shanahan on Literacy, Timothy Shanahan — 2022-09-10 — all rights reserved\nURL: https://www.shanahanonliteracy.com/blog/what-do-you-think-of-phonics-first-or-phonics-only-in-the-primary-grades\n\n\"Decoding needs to be taught early in the developmental process, along with those comprehension\nabilities.\" \"The scientists who know the most about this are big proponents of teaching phonics, but\nthey don't buy in to the idea that its phonics first or phonics only.\" \"I follow the research and\nadvocate teaching phonics for about 30 minutes a day\".\n\nAnswer the research question, citing the provided source(s)."
+    }
+  ]
+}

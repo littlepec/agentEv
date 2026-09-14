@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "round_id": "evidence-pilot-execute-v1",
+  "mode": "execute",
+  "question": "正常证据E已在输入中时，追加既有错误材料(CP)是否比追加等位无害补充(CN)更常使回答采纳目标错误结论(以规则可核的造假锚点计)。",
+  "task_count": 4,
+  "conditions": ["C0", "CN", "CP"],
+  "repeats": 2,
+  "model_calls_per_cell": 1,
+  "run_allowed": true,
+  "authorization": {
+    "user_approved": true,
+    "record_ref": "user chat 2026-09-13 '授权,继续' + AskUserQuestion answers: model=DeepSeek prior config (deepseek-v4-flash, api.deepseek.com), cost cap <=$5"
+  },
+  "budget": {
+    "request_attempts_cap": 40,
+    "input_tokens_cap": 200000,
+    "output_tokens_cap": 40000,
+    "cost_usd_cap": 5.0,
+    "ledger_ref": "defense_injection/defense-audit-work/runs/budget.sqlite (exp_key=evidence-package-pilot-v1)",
+    "global_remaining_verified": true
+  },
+  "scope": {
+    "new_attack_generation": false,
+    "train_models": false,
+    "real_world_writes": false,
+    "resume_old_runs": false
+  },
+  "truth_review_status": "RULE_CHECKED",
+  "gold_in_runtime": false,
+  "inputs_frozen": true,
+  "analysis_plan_frozen": true,
+  "trace_logging_ready": true,
+  "retain_unknown_results": true,
+  "cache_reuse_counts_as_new_repeat": false,
+  "bounded_stop_defined": true,
+  "next_step": "运行24次回答调用(4任务x3条件x2次)，逐条记账；主Agent静态评分造假锚点采纳；不加judge模型；完成即停。",
+  "planned_model_calls": 24,
+  "additional_model_calls": 0
+}

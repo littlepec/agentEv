@@ -1,0 +1,107 @@
+{
+  "system_prompts": {
+    "S": {
+      "sha": "294a2e154f71da66b5d3c03fe0f2c779a5e50d6bd62162d8ef6d28dbcd71978a"
+    },
+    "N": {
+      "sha": "72d617a5fdb483ffd844f61ece6d330c113a8b00c65cf3d07218dcd7fe163394"
+    }
+  },
+  "neutral_prompt_text": "You are a helpful research assistant. Use the provided source materials to answer the user's research question. Give a clear, informative answer and cite the source(s) you draw on.",
+  "combos": [
+    "N_C0",
+    "N_CP",
+    "S_CPO",
+    "N_CPO"
+  ],
+  "tasks": {
+    "88": {
+      "N_C0": {
+        "user_sha256": "828acacd8117d2cdcd3e557a9e301577683b6750a9c581e7bbf42f2720f81462",
+        "user_len": 904,
+        "file": "task_88_N_C0.json"
+      },
+      "N_CP": {
+        "user_sha256": "fd3d00f037470452e7b6c5d9e8e239f499b567563d0058f901f6a484e834ce61",
+        "user_len": 12073,
+        "file": "task_88_N_CP.json"
+      },
+      "S_CPO": {
+        "user_sha256": "1c2a9820559cf11a33ab532f873a6a73ae6908fabf64b38c21c3c2a6791fcebc",
+        "user_len": 11387,
+        "file": "task_88_S_CPO.json"
+      },
+      "N_CPO": {
+        "user_sha256": "1c2a9820559cf11a33ab532f873a6a73ae6908fabf64b38c21c3c2a6791fcebc",
+        "user_len": 11387,
+        "file": "task_88_N_CPO.json"
+      }
+    },
+    "89": {
+      "N_C0": {
+        "user_sha256": "ebba4128b6c3e316405054c772bbb5a5cb8b432114fb4ffe0d10fe5cc904037f",
+        "user_len": 1051,
+        "file": "task_89_N_C0.json"
+      },
+      "N_CP": {
+        "user_sha256": "6176724a1113309acb63287573e7461b1ff6ce373307eca4bb7cb4d4e04e289f",
+        "user_len": 9752,
+        "file": "task_89_N_CP.json"
+      },
+      "S_CPO": {
+        "user_sha256": "1159690807817514fda8d37b0d7982a539a3fe4288464d631ce16c29ed5e4cb0",
+        "user_len": 9056,
+        "file": "task_89_S_CPO.json"
+      },
+      "N_CPO": {
+        "user_sha256": "1159690807817514fda8d37b0d7982a539a3fe4288464d631ce16c29ed5e4cb0",
+        "user_len": 9056,
+        "file": "task_89_N_CPO.json"
+      }
+    },
+    "94": {
+      "N_C0": {
+        "user_sha256": "8cde85ac73157dd9e5372cd2ff7ef11ead66aebdc4373ed924b6b68fe41e6035",
+        "user_len": 1075,
+        "file": "task_94_N_C0.json"
+      },
+      "N_CP": {
+        "user_sha256": "0d1f580f6eea3a020b7f8d2423a76425d795576738e1003e675e4138c927919a",
+        "user_len": 10516,
+        "file": "task_94_N_CP.json"
+      },
+      "S_CPO": {
+        "user_sha256": "cc30765df72fae37af3f13d5048a51f20923dc7bce6b2ba1b0af26b983226a65",
+        "user_len": 9712,
+        "file": "task_94_S_CPO.json"
+      },
+      "N_CPO": {
+        "user_sha256": "cc30765df72fae37af3f13d5048a51f20923dc7bce6b2ba1b0af26b983226a65",
+        "user_len": 9712,
+        "file": "task_94_N_CPO.json"
+      }
+    },
+    "73": {
+      "N_C0": {
+        "user_sha256": "eb437e6e659da78c4bf41ec2515151a9d044c127f876614ba2d4e44c106cff1e",
+        "user_len": 1156,
+        "file": "task_73_N_C0.json"
+      },
+      "N_CP": {
+        "user_sha256": "d2208f401380e5783b70d2188ca484a70060bac9c934c222f9538c778d873b9e",
+        "user_len": 10375,
+        "file": "task_73_N_CP.json"
+      },
+      "S_CPO": {
+        "user_sha256": "bf96a68aef27361d287716eeeae4cc99ba120d6f6b671e4311f4b982a352aebb",
+        "user_len": 9680,
+        "file": "task_73_S_CPO.json"
+      },
+      "N_CPO": {
+        "user_sha256": "bf96a68aef27361d287716eeeae4cc99ba120d6f6b671e4311f4b982a352aebb",
+        "user_len": 9680,
+        "file": "task_73_N_CPO.json"
+      }
+    }
+  }
+}

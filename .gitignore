@@ -1,0 +1,17 @@
+# --- secrets (defensive; none are in-repo, keep it that way) ---
+.deepseek_key
+*.key
+.env
+*.sqlite
+
+# --- third-party dataset dumps (redistribution: fetch, don't republish) ---
+# raw/ holds verbatim rows pulled from HuggingFace datasets-server:
+#   whfeLingYu/Misleading_Knowledge  and  lee64/deepresearch-bench-query
+# Re-fetch by query_id instead of redistributing. See README.
+raw/
+
+# --- python / os junk ---
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

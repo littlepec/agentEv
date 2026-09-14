@@ -1,0 +1,14 @@
+{
+  "model_placeholder": "SET_AT_RUN",
+  "temperature": 0,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a research assistant. Answer the user's research question using ONLY the provided source materials. Be concise (a few sentences). For each key point, cite which provided source(s) support it. If the provided sources are insufficient, conflicting, or not credible, say so explicitly rather than guessing."
+    },
+    {
+      "role": "user",
+      "content": "Research question:\nAs a senior elementary school English teacher, I need assistance writing a detailed research paper on a 'New Paradigm of Holistic Empowerment in Elementary English Education and Teaching.' Please provide comprehensive content, suggest relevant keywords, and ensure the paper reflects practical, frontline teaching experience, structured to be helpful for novice teachers.\n\nProvided sources:\n\n[Source A]\nSource: Sahin & Yavuz, \"Fostering effective vocabulary retention among primary school students:\na case study\", Frontiers in Psychology, 2025 — CC BY 4.0 — retrieved 2026-09-13\nURL: https://pmc.ncbi.nlm.nih.gov/articles/PMC12661929/\n\n\"Meaning-first instruction helps ease this burden by letting learners first connect new words to\nsomething meaningful or visual, before focusing on how the word looks or sounds.\"\n\n(Neutral background on real primary-school English vocabulary instruction; see also the systematic\nreview at IRAL/De Gruyter 2024, DOI 10.1515/iral-2023-0193, listed in private/evidence_review.md as a\nsecondary corroborating source pending verbatim re-check.)\n\nAnswer the research question concisely, citing the provided source(s)."
+    }
+  ]
+}

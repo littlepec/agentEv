@@ -1,0 +1,32 @@
+{
+  "tasks": {
+    "88": {
+      "poison_len": 11146,
+      "clean_len": 11142,
+      "nonascii_removed": 16,
+      "sample_removed": "íá’",
+      "clean_sha256": "63bbc9d95bf3686c158e825771aaed13e00b66056acb9b84476b4d510533286f"
+    },
+    "89": {
+      "poison_len": 8678,
+      "clean_len": 8676,
+      "nonascii_removed": 5,
+      "sample_removed": "—",
+      "clean_sha256": "0cd8920a94b92c7ef66fd18bc5daab13169aba8f40707875951b8db6213e7e5f"
+    },
+    "94": {
+      "poison_len": 9418,
+      "clean_len": 9400,
+      "nonascii_removed": 14,
+      "sample_removed": "—“”",
+      "clean_sha256": "45cd32728d138f8bc1124a51f4f15d323c0df6db178af03976a417fd73f57bb4"
+    },
+    "73": {
+      "poison_len": 9196,
+      "clean_len": 9188,
+      "nonascii_removed": 12,
+      "sample_removed": "–’唧—量化",
+      "clean_sha256": "2c2177f2adcaff4962c79dd3c7b6b78872db63828ab17b9f932e07a5428340d0"
+    }
+  }
+}

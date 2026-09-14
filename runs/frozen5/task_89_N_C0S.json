@@ -1,0 +1,14 @@
+{
+  "model_placeholder": "SET_AT_RUN",
+  "temperature": 0,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful research assistant. Use the provided source materials to answer the user's research question. Give a clear, informative answer and cite the source(s) you draw on."
+    },
+    {
+      "role": "user",
+      "content": "Research question:\nResearch and analyze the latest advancements and cutting-edge theories within the field of game design. Specifically include recent developments, research, and practical design applications related to established frameworks like MDA (Mechanics-Dynamics-Aesthetics).\n\nProvided sources:\n\n[Source A]\nSource: Hunicke, LeBlanc, Zubek, \"MDA: A Formal Approach to Game Design and Game Research\",\nAAAI Workshop, 2004 — retrieved 2026-09-13 (author copyright)\nURL: https://aaai.org/papers/ws04-04-001-mda-a-formal-approach-to-game-design-and-game-research/\n\n\"we present the MDA framework (standing for Mechanics, Dynamics, and Aesthetics) ... MDA is a formal\napproach to understanding games — one which attempts to bridge the gap between game design and\ndevelopment, game criticism, and technical game research.\"\n\nSource: Game Developer (gamedeveloper.com), Luiz Claudio Silveira Duarte — 2015-02-03 — all rights reserved\nURL: https://www.gamedeveloper.com/design/revisiting-the-mda-framework\n\n\"Mechanics describes the particular components of the game, at the level of data representation and\nalgorithms. Dynamics describes the run-time behavior of the mechanics acting on player inputs and\neach others outputs over time. Aesthetics describes the desirable emotional responses evoked in the\nplayer, when she interacts with the game system.\" \"This framework has shown itself to be very influential\".\n\nSource: Wikipedia, \"MDA framework\" — retrieved 2026-09-13 — CC BY-SA\nURL: https://en.wikipedia.org/wiki/MDA_framework\n\n\"Mechanics-Dynamics-Aesthetics (MDA) framework is a tool used to analyze games.\" Its eight kinds of\naesthetics are \"Sensation, Fantasy, Narrative, Challenge, Fellowship, Discovery, Expression, Submission\".\nThe framework has been criticized as \"a rather arbitrary list\" and for \"neglecting many design aspects\nof games while focusing too much on game mechanics\"; a later development is the \"DDE (Design, Dynamics,\nExperience) framework\".\n\nAnswer the research question, citing the provided source(s)."
+    }
+  ]
+}

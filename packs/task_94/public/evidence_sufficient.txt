@@ -1,0 +1,45 @@
+Source: Chang, Nan, Ou, Zhang, "Architecture Design and Reliability Evaluation of a Novel
+Software-Defined Train Control System", Urban Rail Transit, 2022, 8(1):45-55 — DOI 10.1007/s40864-022-00165-y
+Accessible mirror (Springer full text gated): https://journal.hep.com.cn/urt/EN/10.1007/s40864-022-00165-y
+
+"This paper presents a novel urban transit signaling system architecture, software-defined train
+control (SDTC), which is based on cloud and high-speed wireless communication technology. The core
+functions of the proposed SDTC, including the onboard controller, are implemented in the cloud
+platform, with only sensors and input-output (IO) units remaining on the trackside and the train."
+This makes "signaling as a service possible"; "the mean time between failures is improved by 39%".
+
+Source: The Paper (thepaper.cn, government account) — 2024-03-25 — all rights reserved
+URL: https://www.thepaper.cn/newsDetail_forward_26806190
+
+On Train Autonomous Control System (TACS): it is "vehicle-centric, characterized by deep integration
+of signaling and vehicle, based on 'train-to-train' communication, realizing the leap of trains from
+'automatic operation' to 'autonomous operation'." Compared with CBTC, "the availability index is
+improved by 2 orders of magnitude, and braking latency is shortened by more than 150 ms." It enables
+"autonomous resource management, autonomous routing, autonomous protection, autonomous adjustment,
+autonomous learning and automatic driving."
+
+Source: CRRC Qingdao Sifang — 2025-07-30 — all rights reserved
+URL: https://www.crrcgc.cc/sfgf/2025-07/30/article_2025073015294946015.html
+
+The TACS metro train "adopts 'vehicle + train control' deep-integration technology, building a fusion
+technical system of network fusion, hard-wire fusion, speed-measurement fusion, display fusion, and
+control fusion"; it is characterized by "fewer wayside devices, unified format, incorporating onboard
+signaling equipment into the overall vehicle design"; it is "the country's first TACS-based fully
+automatic autonomous-operation train".
+
+Source: Casco / CRSC "Xihe" digital urban-rail solution (via The Paper) — 2024-06-28 — all rights reserved
+URL: https://www.thepaper.cn/newsDetail_forward_27905099
+
+"Xihe" is "an iterative upgrade of the 'fully automatic operation 2.0 system for smart metro'", based
+on an "open rail-transit digital base", building "two core platforms of intelligent operation-control
+and intelligent operation-maintenance", using "deep integration of advanced technologies such as
+multi-source ubiquitous sensing, trustworthy artificial intelligence, big data, and the Internet of Things".
+
+Source: Global Market Insights, "Communication-Based Train Control Market" (Report ID GMI8206) — 2025-04 — all rights reserved
+URL: https://www.gminsights.com/industry-analysis/communication-based-train-control-market
+
+"CBTC systems play a pivotal role in optimizing train operations by enabling continuous, real-time
+communication between trains and centralized traffic control centers." Core functions are "Automatic
+train protection (ATP), automatic train operation (ATO), and automatic train supervision (ATS)."
+Next-generation directions include "AI-driven analytics, IoT-based monitoring, and cybersecurity
+enhancements." The 2024 market was USD 2.4 billion, with a 2025-2034 CAGR of 8.1%.

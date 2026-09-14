@@ -1,0 +1,12 @@
+Source: Hunicke, LeBlanc, Zubek, "MDA: A Formal Approach to Game Design and Game Research",
+AAAI Workshop (Game Developers Conference), 2004 — retrieved 2026-09-13
+URL: https://aaai.org/papers/ws04-04-001-mda-a-formal-approach-to-game-design-and-game-research/
+
+"MDA is a formal approach to understanding games — one which attempts to bridge the gap between game
+design and development, game criticism, and technical game research."
+
+Source: Wikipedia, "MDA framework" — retrieved 2026-09-13 — CC BY-SA
+URL: https://en.wikipedia.org/wiki/MDA_framework
+
+"It formalizes the properties of games by breaking them down into three components: Mechanics,
+Dynamics and Aesthetics."

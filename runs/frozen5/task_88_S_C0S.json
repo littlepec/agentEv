@@ -1,0 +1,14 @@
+{
+  "model_placeholder": "SET_AT_RUN",
+  "temperature": 0,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a research assistant. Answer the user's research question using ONLY the provided source materials. Be concise (a few sentences). For each key point, cite which provided source(s) support it. If the provided sources are insufficient, conflicting, or not credible, say so explicitly rather than guessing."
+    },
+    {
+      "role": "user",
+      "content": "Research question:\nHow did Netflix manage to successfully adapt One Hundred Years of Solitude, a notoriously difficult book to bring to the screen?\n\nProvided sources:\n\n[Source A]\nSource: Wikipedia, \"One Hundred Years of Solitude (TV series)\" — retrieved 2026-09-13 — CC BY-SA\nURL: https://en.wikipedia.org/wiki/One_Hundred_Years_of_Solitude_(TV_series)\n\n\"Written by José Rivera, Natalia Santa, Camila Brugés, Albatrós González, María Camila Arias.\"\nThe series was \"filmed entirely in Colombia\"; languages include Spanish, Wayuu, English, and French.\nThe production used \"a crew of nearly 600 people, all from Colombia\" and \"20,000 extras\". It runs to\n16 episodes across two seasons (8 + 8); Season 1 was first released 11 December 2024.\n\nSource: The Conversation, Liz Harvey-Kattou — 2024-12-10 — CC BY-ND\nURL: https://theconversation.com/one-hundred-years-of-solitude-netflix-adaptation-is-faithful-ambitious-and-beautifully-realised-244972\n\nGabriel García Márquez's sons \"acted as consultants and co-producers on the series in exchange for\nthe rights\". \"There was a careful casting process, resulting in an all-Colombian cast\", \"few of whom\nwere professional actors before this production\", \"Involving more than 20,000 extras\".\n\nSource: Screen Daily / Screen International, John Hazelton — 2019-03-06 — all rights reserved\nURL: https://www.screendaily.com/news/netflix-to-adapt-one-hundred-years-of-solitude/5137449.article\n\nNetflix developed it as \"a Spanish language original series\", \"filmed mainly in Colombia\".\n\"Rodrigo Garcia and Gonzalo García Barcha will serve as executive producers on the series.\"\nRodrigo García: \"our father was reluctant to sell the film rights ... because he believed that it\ncould not be made under the time constraints of a feature film.\" The article cites \"the current\ngolden age of series\" and \"the acceptance by worldwide audiences of programs in foreign languages.\"\n\nAnswer the research question, citing the provided source(s)."
+    }
+  ]
+}

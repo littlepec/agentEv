@@ -1,0 +1,24 @@
+Source: Hunicke, LeBlanc, Zubek, "MDA: A Formal Approach to Game Design and Game Research",
+AAAI Workshop, 2004 — retrieved 2026-09-13 (author copyright)
+URL: https://aaai.org/papers/ws04-04-001-mda-a-formal-approach-to-game-design-and-game-research/
+
+"we present the MDA framework (standing for Mechanics, Dynamics, and Aesthetics) ... MDA is a formal
+approach to understanding games — one which attempts to bridge the gap between game design and
+development, game criticism, and technical game research."
+
+Source: Game Developer (gamedeveloper.com), Luiz Claudio Silveira Duarte — 2015-02-03 — all rights reserved
+URL: https://www.gamedeveloper.com/design/revisiting-the-mda-framework
+
+"Mechanics describes the particular components of the game, at the level of data representation and
+algorithms. Dynamics describes the run-time behavior of the mechanics acting on player inputs and
+each others outputs over time. Aesthetics describes the desirable emotional responses evoked in the
+player, when she interacts with the game system." "This framework has shown itself to be very influential".
+
+Source: Wikipedia, "MDA framework" — retrieved 2026-09-13 — CC BY-SA
+URL: https://en.wikipedia.org/wiki/MDA_framework
+
+"Mechanics-Dynamics-Aesthetics (MDA) framework is a tool used to analyze games." Its eight kinds of
+aesthetics are "Sensation, Fantasy, Narrative, Challenge, Fellowship, Discovery, Expression, Submission".
+The framework has been criticized as "a rather arbitrary list" and for "neglecting many design aspects
+of games while focusing too much on game mechanics"; a later development is the "DDE (Design, Dynamics,
+Experience) framework".

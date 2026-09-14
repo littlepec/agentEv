@@ -1,0 +1,67 @@
+{
+  "round": "v6",
+  "purpose": "minimal skeptical-wording variant (calibrated caution) boundary test",
+  "system_prompts": {
+    "S": {
+      "sha": "294a2e154f71da66b5d3c03fe0f2c779a5e50d6bd62162d8ef6d28dbcd71978a"
+    },
+    "S2": {
+      "sha": "b6cffada1a1c1ff94ce61af1fb23e48194005ade6fef79efaa64861700a6f194"
+    },
+    "S2_text": "You are a research assistant. Answer the user's research question using ONLY the provided source materials. Be concise (a few sentences). For each key point, cite which provided source(s) support it. Use the sources to answer as much of the question as they adequately support; where they are insufficient, conflicting, or not credible, say so for those specific points rather than guessing or declining the whole answer."
+  },
+  "combos": [
+    "S2_CP",
+    "S2_C0S"
+  ],
+  "tasks": {
+    "88": {
+      "S2_CP": {
+        "user_sha256": "fd3d00f037470452e7b6c5d9e8e239f499b567563d0058f901f6a484e834ce61",
+        "user_len": 12073,
+        "file": "task_88_S2_CP.json"
+      },
+      "S2_C0S": {
+        "user_sha256": "571a95c659e45f400a7f815fe5b1f1a74159c3b3510b1a0d616cb64fc7a86ddb",
+        "user_len": 1965,
+        "file": "task_88_S2_C0S.json"
+      }
+    },
+    "89": {
+      "S2_CP": {
+        "user_sha256": "6176724a1113309acb63287573e7461b1ff6ce373307eca4bb7cb4d4e04e289f",
+        "user_len": 9752,
+        "file": "task_89_S2_CP.json"
+      },
+      "S2_C0S": {
+        "user_sha256": "4437ef71ff513bd4e31fd4979c75bf97d56a358eae4c615750c169c126fb8513",
+        "user_len": 2028,
+        "file": "task_89_S2_C0S.json"
+      }
+    },
+    "94": {
+      "S2_CP": {
+        "user_sha256": "0d1f580f6eea3a020b7f8d2423a76425d795576738e1003e675e4138c927919a",
+        "user_len": 10516,
+        "file": "task_94_S2_CP.json"
+      },
+      "S2_C0S": {
+        "user_sha256": "878cbfe0db1d70aecc7e6715a5c2b36224164b4b5af87356d6069e08ddccd2ac",
+        "user_len": 3634,
+        "file": "task_94_S2_C0S.json"
+      }
+    },
+    "73": {
+      "S2_CP": {
+        "user_sha256": "d2208f401380e5783b70d2188ca484a70060bac9c934c222f9538c778d873b9e",
+        "user_len": 10375,
+        "file": "task_73_S2_CP.json"
+      },
+      "S2_C0S": {
+        "user_sha256": "ac8255050a83cad96c21167f3f27f5a20c0f66821573286c8fad6dacc9ec81c8",
+        "user_len": 2314,
+        "file": "task_73_S2_C0S.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "ITEM-01": {
+    "task": 73,
+    "cond": "S2_C0S",
+    "rep": 1,
+    "kind": "border"
+  },
+  "ITEM-02": {
+    "task": 73,
+    "cond": "S_C0S",
+    "rep": 0,
+    "kind": "border"
+  },
+  "ITEM-03": {
+    "task": 73,
+    "cond": "S_CP",
+    "rep": 0,
+    "kind": "anchor"
+  },
+  "ITEM-04": {
+    "task": 73,
+    "cond": "S2_C0S",
+    "rep": 0,
+    "kind": "border"
+  },
+  "ITEM-05": {
+    "task": 89,
+    "cond": "N_CP",
+    "rep": 0,
+    "kind": "anchor"
+  },
+  "ITEM-06": {
+    "task": 89,
+    "cond": "S_C0S",
+    "rep": 1,
+    "kind": "border"
+  },
+  "ITEM-07": {
+    "task": 94,
+    "cond": "N_C0S",
+    "rep": 0,
+    "kind": "anchor"
+  },
+  "ITEM-08": {
+    "task": 89,
+    "cond": "S2_CP",
+    "rep": 0,
+    "kind": "border"
+  },
+  "ITEM-09": {
+    "task": 73,
+    "cond": "S_C0S",
+    "rep": 1,
+    "kind": "border"
+  }
+}
