@@ -20,3 +20,5 @@ Thumbs.db
 gptr_round/docpaths/
 gptr_round/docpaths_calib/
 paper_round/docpaths_formal/
+# stage A working DOC_PATH copies (redundant with paper_round/stage_a/papers/)
+paper_round/stage_a/docpaths/

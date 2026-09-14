@@ -1,0 +1,28 @@
+{
+  "cell": "Q7_fulltext_F0_normal",
+  "task": "Q7",
+  "question": "How many annotators labeled the OGTD dataset, and how were disagreements resolved?",
+  "finish_reason": null,
+  "prompt_tokens": 4752,
+  "completion_tokens": 8596,
+  "deepseek_cost_usd": 0.011741,
+  "report_chars": 14522,
+  "context_chars": 16062,
+  "key_evidence_in_context": {
+    "three volunteers": true,
+    "66%": true,
+    "two extra": true
+  },
+  "key_evidence_in_report": {
+    "three volunteers": true,
+    "66%": true,
+    "two extra": true
+  },
+  "n_llm_calls": 3,
+  "elapsed_s": 43.9,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) F0",
+  "model": "deepseek-v4-flash",
+  "doc": "FULL paper, answer paragraph NOT pre-selected"
+}

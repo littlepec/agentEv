@@ -1,0 +1,264 @@
+Source: document_1.txt
+Title: 
+Content: Offensive 
+ 2,486 
+ 425 
+ 2,911 
+
+ Not Offensive 
+ 6,257 
+ 1119 
+ 7,376 
+
+ All 
+ 8,743 
+ 1,544 
+ 10,287 Table 8: Distribution of labels in the OGTD v2.0. 
+
+ Finally, both OGTD v1.0 and v2.0 provide the opportunity for researchers to test cross-lingual learning methods as it can be used in conjunction with the English OLID and other datasets annotated using the same guidelines such as the one by ? ) for Danish and by ? ) for Turkish while simultaneously facilitating the development of language resources for NLP in Greek. 
+
+ Acknowledgements
+
+Source: document_1.txt
+Title: 
+Content: coefficient. The benchmark annotated dataset produced contained 4,779 tweets, containing over 29% offensive content. The final distribution of labels in the new Offensive Greek Tweet Dataset (OGTD), along with the breakdown of the data into training and testing, is showing in Table 1 .
+
+Source: document_1.txt
+Title: 
+Content: 3.1. Pre-processing and annotation 
+
+ We collected a set of 49,154 tweets. URLs, Emojis and Emoticons were removed, while usernames and user mentions were filtered as @USER following the same methodology described in OLID [ Zampieri et al. (2019a ] . Duplicate punctuation such as question and exclamation marks was normalized. After removing duplicate tweets, the dataset was comprised of 46,218 tweets of which 5,000 were randomly sampled for annotation. We used LightTag 2 2 2 https://www.lighttag.io/ to annotate the dataset due to its simple and straightforward user interface and limitless annotations, provided by the software creators.
+
+Source: document_1.txt
+Title: 
+Content: Offensive 
+ 955 
+ 446 
+ 1,401 
+
+ Not Offensive 
+ 2,390 
+ 988 
+ 3,378 
+
+ All 
+ 3,345 
+ 1,434 
+ 4,779 Table 1: Distribution of labels in the OGTD v1.0. Figure 1: Cohen’s Kappa for each pair of annotators 
+
+ 4. Methods 
+
+ Before experimenting with OGTD, an unique aspect of Greek which is the accentuation of characters for correct pronunciation needed to be normalized. When posting a tweet, many users omit accents due to their haste, resulting in a mixed dataset containing fully accented tweets, partially-accented tweets, and non-accented tweets. To achieve data uniformity and to avoid ambiguity, every word is lower-cased and then normalized to its non-accented equivalent.
+
+Source: document_1.txt
+Title: 
+Content: https://sites.google.com/site/offensevalsharedtask/home The reasoning behind the expansion of the dataset was to have a larger Greek dataset for the competition. New posts were collected in November 2019 following the same approach we used to compile v1.0 described in this paper. This second batch of tweets included tweets with trending hashtags, shows and topics from Greece at the time. Additionally, keywords that proved to retrieve interesting tweets in the first version were once again used in the search, along with new keywords like pejorative terms. When the collection was finished, 5,508 tweets were randomly sampled to be then annotated by a team of volunteers. The annotation guidelines were the same ones we used for v1.0. OGTD v2.0 combines the existing with the newly annotated tweets in a larger dataset of 10,287 instances. 
+ Labels Training Set Test Set Total 
+
+ Offensive 
+ 2,486 
+ 425 
+ 2,911 
+
+ Not Offensive 
+ 6,257 
+ 1119 
+ 7,376 Source: document_1.txt
+Title: 
+Content: Based on explicit annotation guidelines written in Greek and our proposal of the definition of offensive language, a team of three volunteers were asked to classify each tweet found in the dataset with one of the following tags: Offensive , Not Offensive and Spam , which was introduced to filter out spam from the dataset. Inter-annotator agreement was subsequently calculated and labels with 100% agreement were deemed acceptable annotations. In cases of disagreement, labels with majority agreement above 66% were selected as the actual annotations of the tweets in question. For labels with complete disagreement between annotators, one of the authors of this paper reviewed the tweets with two extra human judges, to get the desired majority agreement above 66%. Figure 1 is a confusion matrix that shows the inter-annotator agreement or reliability, statistically measured by Cohen’s kappa coefficient. The benchmark annotated dataset produced contained 4,779 tweets, containing over 29%
+
+Source: document_1.txt
+Title: 
+Content: Offensive 
+ 2,486 
+ 425 
+ 2,911 
+
+ Not Offensive 
+ 6,257 
+ 1119 
+ 7,376 
+
+ All 
+ 8,743 
+ 1,544 
+ 10,287 Table 8: Distribution of labels in the OGTD v2.0. 
+
+ Finally, both OGTD v1.0 and v2.0 provide the opportunity for researchers to test cross-lingual learning methods as it can be used in conjunction with the English OLID and other datasets annotated using the same guidelines such as the one by ? ) for Danish and by ? ) for Turkish while simultaneously facilitating the development of language resources for NLP in Greek. 
+
+ Acknowledgements
+
+Source: document_1.txt
+Title: 
+Content: Offensive 
+ 955 
+ 446 
+ 1,401 
+
+ Not Offensive 
+ 2,390 
+ 988 
+ 3,378 
+
+ All 
+ 3,345 
+ 1,434 
+ 4,779 Table 1: Distribution of labels in the OGTD v1.0. Figure 1: Cohen’s Kappa for each pair of annotators 
+
+ 4. Methods 
+
+ Before experimenting with OGTD, an unique aspect of Greek which is the accentuation of characters for correct pronunciation needed to be normalized. When posting a tweet, many users omit accents due to their haste, resulting in a mixed dataset containing fully accented tweets, partially-accented tweets, and non-accented tweets. To achieve data uniformity and to avoid ambiguity, every word is lower-cased and then normalized to its non-accented equivalent. Source: document_1.txt
+Title: 
+Content: Offensive 
+ 2,486 
+ 425 
+ 2,911 
+
+ Not Offensive 
+ 6,257 
+ 1119 
+ 7,376 
+
+ All 
+ 8,743 
+ 1,544 
+ 10,287 Table 8: Distribution of labels in the OGTD v2.0. 
+
+ Finally, both OGTD v1.0 and v2.0 provide the opportunity for researchers to test cross-lingual learning methods as it can be used in conjunction with the English OLID and other datasets annotated using the same guidelines such as the one by ? ) for Danish and by ? ) for Turkish while simultaneously facilitating the development of language resources for NLP in Greek. 
+
+ Acknowledgements
+
+Source: document_1.txt
+Title: 
+Content: Offensive 
+ 955 
+ 446 
+ 1,401 
+
+ Not Offensive 
+ 2,390 
+ 988 
+ 3,378 
+
+ All 
+ 3,345 
+ 1,434 
+ 4,779 Table 1: Distribution of labels in the OGTD v1.0. Figure 1: Cohen’s Kappa for each pair of annotators 
+
+ 4. Methods 
+
+ Before experimenting with OGTD, an unique aspect of Greek which is the accentuation of characters for correct pronunciation needed to be normalized. When posting a tweet, many users omit accents due to their haste, resulting in a mixed dataset containing fully accented tweets, partially-accented tweets, and non-accented tweets. To achieve data uniformity and to avoid ambiguity, every word is lower-cased and then normalized to its non-accented equivalent.
+
+Source: document_1.txt
+Title: 
+Content: coefficient. The benchmark annotated dataset produced contained 4,779 tweets, containing over 29% offensive content. The final distribution of labels in the new Offensive Greek Tweet Dataset (OGTD), along with the breakdown of the data into training and testing, is showing in Table 1 .
+
+Source: document_1.txt
+Title: 
+Content: 3. The OGTD Dataset 
+
+ The posts in OGTD v1.0 were collected between May and June, 2019. We used the Twitter API initially collecting tweets from popular and trending hashtags in Greece, including television programs such as series, reality and entertainment shows. Due to the municipal, regional as well as the European Parliament election taking place at the time, many hashtags included tweets discussing the elections. The intuition behind this approach is that Twitter as a microblogging service often gathers complaints and profane comments on widely viewed television and politics, and as such, this period was a good opportunity for data collection.
+
+Source: document_1.txt
+Title: 
+Content: https://sites.google.com/site/offensevalsharedtask/home The reasoning behind the expansion of the dataset was to have a larger Greek dataset for the competition. New posts were collected in November 2019 following the same approach we used to compile v1.0 described in this paper. This second batch of tweets included tweets with trending hashtags, shows and topics from Greece at the time. Additionally, keywords that proved to retrieve interesting tweets in the first version were once again used in the search, along with new keywords like pejorative terms. When the collection was finished, 5,508 tweets were randomly sampled to be then annotated by a team of volunteers. The annotation guidelines were the same ones we used for v1.0. OGTD v2.0 combines the existing with the newly annotated tweets in a larger dataset of 10,287 instances. 
+ Labels Training Set Test Set Total 
+
+ Offensive 
+ 2,486 
+ 425 
+ 2,911 
+
+ Not Offensive 
+ 6,257 
+ 1119 
+ 7,376
+
+Source: document_1.txt
+Title: 
+Content: Based on explicit annotation guidelines written in Greek and our proposal of the definition of offensive language, a team of three volunteers were asked to classify each tweet found in the dataset with one of the following tags: Offensive , Not Offensive and Spam , which was introduced to filter out spam from the dataset. Inter-annotator agreement was subsequently calculated and labels with 100% agreement were deemed acceptable annotations. In cases of disagreement, labels with majority agreement above 66% were selected as the actual annotations of the tweets in question. For labels with complete disagreement between annotators, one of the authors of this paper reviewed the tweets with two extra human judges, to get the desired majority agreement above 66%. Figure 1 is a confusion matrix that shows the inter-annotator agreement or reliability, statistically measured by Cohen’s kappa coefficient. The benchmark annotated dataset produced contained 4,779 tweets, containing over 29%
+
+Source: document_1.txt
+Title: 
+Content: 3.1. Pre-processing and annotation 
+
+ We collected a set of 49,154 tweets. URLs, Emojis and Emoticons were removed, while usernames and user mentions were filtered as @USER following the same methodology described in OLID [ Zampieri et al. (2019a ] . Duplicate punctuation such as question and exclamation marks was normalized. After removing duplicate tweets, the dataset was comprised of 46,218 tweets of which 5,000 were randomly sampled for annotation. We used LightTag 2 2 2 https://www.lighttag.io/ to annotate the dataset due to its simple and straightforward user interface and limitless annotations, provided by the software creators.
+
+Source: document_1.txt
+Title: 
+Content: recall score for both classes, especially for the Offensive class, is important for a model to be considered successful. Thus, the Linear SVM can be considered the marginally best model trained with OGTD, as its weighted average precision and recall scores are higher. Source: document_1.txt
+Title: 
+Content: Offensive 
+ 2,486 
+ 425 
+ 2,911 
+
+ Not Offensive 
+ 6,257 
+ 1119 
+ 7,376 
+
+ All 
+ 8,743 
+ 1,544 
+ 10,287 Table 8: Distribution of labels in the OGTD v2.0. 
+
+ Finally, both OGTD v1.0 and v2.0 provide the opportunity for researchers to test cross-lingual learning methods as it can be used in conjunction with the English OLID and other datasets annotated using the same guidelines such as the one by ? ) for Danish and by ? ) for Turkish while simultaneously facilitating the development of language resources for NLP in Greek. 
+
+ Acknowledgements
+
+Source: document_1.txt
+Title: 
+Content: coefficient. The benchmark annotated dataset produced contained 4,779 tweets, containing over 29% offensive content. The final distribution of labels in the new Offensive Greek Tweet Dataset (OGTD), along with the breakdown of the data into training and testing, is showing in Table 1 .
+
+Source: document_1.txt
+Title: 
+Content: Offensive 
+ 955 
+ 446 
+ 1,401 
+
+ Not Offensive 
+ 2,390 
+ 988 
+ 3,378 
+
+ All 
+ 3,345 
+ 1,434 
+ 4,779 Table 1: Distribution of labels in the OGTD v1.0. Figure 1: Cohen’s Kappa for each pair of annotators 
+
+ 4. Methods 
+
+ Before experimenting with OGTD, an unique aspect of Greek which is the accentuation of characters for correct pronunciation needed to be normalized. When posting a tweet, many users omit accents due to their haste, resulting in a mixed dataset containing fully accented tweets, partially-accented tweets, and non-accented tweets. To achieve data uniformity and to avoid ambiguity, every word is lower-cased and then normalized to its non-accented equivalent.
+
+Source: document_1.txt
+Title: 
+Content: 3. The OGTD Dataset 
+
+ The posts in OGTD v1.0 were collected between May and June, 2019. We used the Twitter API initially collecting tweets from popular and trending hashtags in Greece, including television programs such as series, reality and entertainment shows. Due to the municipal, regional as well as the European Parliament election taking place at the time, many hashtags included tweets discussing the elections. The intuition behind this approach is that Twitter as a microblogging service often gathers complaints and profane comments on widely viewed television and politics, and as such, this period was a good opportunity for data collection.
+
+Source: document_1.txt
+Title: 
+Content: https://sites.google.com/site/offensevalsharedtask/home The reasoning behind the expansion of the dataset was to have a larger Greek dataset for the competition. New posts were collected in November 2019 following the same approach we used to compile v1.0 described in this paper. This second batch of tweets included tweets with trending hashtags, shows and topics from Greece at the time. Additionally, keywords that proved to retrieve interesting tweets in the first version were once again used in the search, along with new keywords like pejorative terms. When the collection was finished, 5,508 tweets were randomly sampled to be then annotated by a team of volunteers. The annotation guidelines were the same ones we used for v1.0. OGTD v2.0 combines the existing with the newly annotated tweets in a larger dataset of 10,287 instances. 
+ Labels Training Set Test Set Total 
+
+ Offensive 
+ 2,486 
+ 425 
+ 2,911 
+
+ Not Offensive 
+ 6,257 
+ 1119 
+ 7,376
+
+Source: document_1.txt
+Title: 
+Content: 3.1. Pre-processing and annotation 
+
+ We collected a set of 49,154 tweets. URLs, Emojis and Emoticons were removed, while usernames and user mentions were filtered as @USER following the same methodology described in OLID [ Zampieri et al. (2019a ] . Duplicate punctuation such as question and exclamation marks was normalized. After removing duplicate tweets, the dataset was comprised of 46,218 tweets of which 5,000 were randomly sampled for annotation. We used LightTag 2 2 2 https://www.lighttag.io/ to annotate the dataset due to its simple and straightforward user interface and limitless annotations, provided by the software creators.
+
+Source: document_1.txt
+Title: 
+Content: Based on explicit annotation guidelines written in Greek and our proposal of the definition of offensive language, a team of three volunteers were asked to classify each tweet found in the dataset with one of the following tags: Offensive , Not Offensive and Spam , which was introduced to filter out spam from the dataset. Inter-annotator agreement was subsequently calculated and labels with 100% agreement were deemed acceptable annotations. In cases of disagreement, labels with majority agreement above 66% were selected as the actual annotations of the tweets in question. For labels with complete disagreement between annotators, one of the authors of this paper reviewed the tweets with two extra human judges, to get the desired majority agreement above 66%. Figure 1 is a confusion matrix that shows the inter-annotator agreement or reliability, statistically measured by Cohen’s kappa coefficient. The benchmark annotated dataset produced contained 4,779 tweets, containing over 29%

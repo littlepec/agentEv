@@ -1,0 +1,369 @@
+Source: document_1.txt
+Title: 
+Content: Comparisons of different attribute representation and injection methods 
+
+ To conduct a fair comparison among the different methods described in Section 2 , we compare these methods when applied to our base model using the development set of the datasets. Specifically, we use a smaller version of our base model (with dimensions set to 64) and incorporate the user and product attributes using nine different approaches: (1) bias-attention : the bias-based method injected to the attention mechanism, (2-5) the matrix-based method injected to four different locations ( matrix-embedding , matrix-encoder , matrix-attention , matrix-classifier ), and (6-9) the CHIM-based method injected to four different locations ( CHIM-embedding , CHIM-encoder , CHIM-attention , CHIM-classifier ). We then calculate the accuracy of each approach for all datasets.
+
+Source: document_1.txt
+Title: 
+Content: CHIM models. Values on each cell represents either the accuracy (for singly injected models) or the difference between the singly and doubly injected models per row.
+
+Source: document_1.txt
+Title: 
+Content: Results are summarized in Table 2 . On all three datasets, our best results outperform all previous models based on accuracy and RMSE. Among our four models, CHIM-embedding performs the best in terms of accuracy, with performance increases of 2.4%, 1.3%, and 1.6% on IMDB, Yelp 2013, and Yelp 2014, respectively. CHIM-classifier performs the best in terms of RMSE, outperforming all other models on both Yelp 2013 and 2014 datasets. Among our models, CHIM-attention mechanism performs the worst, which shows similar results to our previous experiment (see Figure 3 ).
+We emphasize that our models use a simple BiLSTM as base model, and extensions to the base model (e.g., using multiple hierarchical LSTMs as in Wu et al. 2018 ), as well as to other aspects (e.g., consideration of cold-start entities as in Amplayo et al. 2018a ), are orthogonal to our proposed attribute representation and injection method. Thus, we expect a further increase in performance when these extensions are done.
+
+Source: document_1.txt
+Title: 
+Content: Finally, we also investigate whether injecting in to more than one location would result to better performance. Specifically, we jointly inject in two different locations at once using CHIM, and do this for all possible pairs of locations. We use the smaller version of our base model and calculate the accuracies of different models using the development set of the Yelp 2013 dataset. Source: document_1.txt
+Title: 
+Content: Results are summarized in Table 2 . On all three datasets, our best results outperform all previous models based on accuracy and RMSE. Among our four models, CHIM-embedding performs the best in terms of accuracy, with performance increases of 2.4%, 1.3%, and 1.6% on IMDB, Yelp 2013, and Yelp 2014, respectively. CHIM-classifier performs the best in terms of RMSE, outperforming all other models on both Yelp 2013 and 2014 datasets. Among our models, CHIM-attention mechanism performs the worst, which shows similar results to our previous experiment (see Figure 3 ).
+We emphasize that our models use a simple BiLSTM as base model, and extensions to the base model (e.g., using multiple hierarchical LSTMs as in Wu et al. 2018 ), as well as to other aspects (e.g., consideration of cold-start entities as in Amplayo et al. 2018a ), are orthogonal to our proposed attribute representation and injection method. Thus, we expect a further increase in performance when these extensions are done.
+
+Source: document_1.txt
+Title: 
+Content: Comparisons of different attribute representation and injection methods 
+
+ To conduct a fair comparison among the different methods described in Section 2 , we compare these methods when applied to our base model using the development set of the datasets. Specifically, we use a smaller version of our base model (with dimensions set to 64) and incorporate the user and product attributes using nine different approaches: (1) bias-attention : the bias-based method injected to the attention mechanism, (2-5) the matrix-based method injected to four different locations ( matrix-embedding , matrix-encoder , matrix-attention , matrix-classifier ), and (6-9) the CHIM-based method injected to four different locations ( CHIM-embedding , CHIM-encoder , CHIM-attention , CHIM-classifier ). We then calculate the accuracy of each approach for all datasets.
+
+Source: document_1.txt
+Title: 
+Content: Bias - Attention 
+ 58.74 ± \pm 0.49 
+ 44.00 
+
+ CHIM - Embedding 
+ 62.26 ± \pm 0.22 
+ 42.71 
+
+ CHIM - Encoder 
+ 64.62 ± \pm 0.34 
+ 42.65 
+
+ CHIM - Attention 
+ 60.95 ± \pm 0.15 
+ 42.78 
+
+ CHIM - Classifier 
+ 61.83 ± \pm 0.43 
+ 42.69 
+
+ Table 3: Accuracy (higher is better) and perplexity (lower is better) of competing models on the Amazon dataset for the transfer tasks on product category classification and review headline generation, respectively. Accuracy intervals are calculated by running the model 10 times. Performance worse than the random and majority baselines are colored red.
+
+Source: document_1.txt
+Title: 
+Content: CHIM models. Values on each cell represents either the accuracy (for singly injected models) or the difference between the singly and doubly injected models per row.
+
+Source: document_1.txt
+Title: 
+Content: Results are shown in Figure 3 . The figure shows that bias-attention consistently performs poorly compared to other approaches. As expected, matrix-based representations perform the worst when injected to embeddings and encoder, however we can already see improvements over bias-attention when these representations are injected to attention and classifier. This is because the number of parameters used in the the weight matrices of attention and classifier are relatively smaller compared to those of embeddings and encoder, thus they are easier to optimize. The CHIM-based representations perform the best among other approaches, where CHIM-embedding garners the highest accuracy across datasets. Finally, even when using a better representation method, CHIM-attention consistently performs the worst among CHIM-based representations. This shows that attention mechanism is not the optimal location to inject attributes. 
+
+ Comparisons with models in the literature
+
+Source: document_1.txt
+Title: 
+Content: Results 
+
+ For the product category classification task, the results are reported in Table 3 . The table shows that representations learned from CHIM-based methods perform better than the random baseline. The best model, CHIM-encoder, achieves an increase of at least 3 points in accuracy compared to the baseline. This means that, interestingly, CHIM-based attribute representations have also learned information about the category of the product. In contrast, representations learned from the bias-attention method are not able to transfer well on this task, leading to worse results compared to the random and majority baseline. Moreover, CHIM-attention performs the worst among CHIM-based models, which further shows the ineffectiveness of injecting attributes to the attention mechanism. 
+
+ Method 
+ Accuracy 
+ Perplexity 
+
+ Majority 
+ 60.12 
+ – 
+
+ Random 
+ 60.67 ± \pm 0.27 
+ 43.53 
+
+ Bias - Attention 
+ 58.74 ± \pm 0.49 
+ 44.00 
+
+ CHIM - Embedding 
+ 62.26 ± \pm 0.22 
+ 42.71
+
+Source: document_1.txt
+Title: 
+Content: Finally, we also investigate whether injecting in to more than one location would result to better performance. Specifically, we jointly inject in two different locations at once using CHIM, and do this for all possible pairs of locations. We use the smaller version of our base model and calculate the accuracies of different models using the development set of the Yelp 2013 dataset.
+
+Source: document_1.txt
+Title: 
+Content: Nevertheless, the results in this experiment agree to the results above regarding injecting attributes to the attention mechanism; bias-attention performs worse than the random baseline, and CHIM-attention performs the worst among CHIM-based models. Source: document_1.txt
+Title: 
+Content: CHIM models. Values on each cell represents either the accuracy (for singly injected models) or the difference between the singly and doubly injected models per row.
+
+Source: document_1.txt
+Title: 
+Content: Comparisons of different attribute representation and injection methods 
+
+ To conduct a fair comparison among the different methods described in Section 2 , we compare these methods when applied to our base model using the development set of the datasets. Specifically, we use a smaller version of our base model (with dimensions set to 64) and incorporate the user and product attributes using nine different approaches: (1) bias-attention : the bias-based method injected to the attention mechanism, (2-5) the matrix-based method injected to four different locations ( matrix-embedding , matrix-encoder , matrix-attention , matrix-classifier ), and (6-9) the CHIM-based method injected to four different locations ( CHIM-embedding , CHIM-encoder , CHIM-attention , CHIM-classifier ). We then calculate the accuracy of each approach for all datasets.
+
+Source: document_1.txt
+Title: 
+Content: Nevertheless, the results in this experiment agree to the results above regarding injecting attributes to the attention mechanism; bias-attention performs worse than the random baseline, and CHIM-attention performs the worst among CHIM-based models.
+
+Source: document_1.txt
+Title: 
+Content: Bias - Attention 
+ 58.74 ± \pm 0.49 
+ 44.00 
+
+ CHIM - Embedding 
+ 62.26 ± \pm 0.22 
+ 42.71 
+
+ CHIM - Encoder 
+ 64.62 ± \pm 0.34 
+ 42.65 
+
+ CHIM - Attention 
+ 60.95 ± \pm 0.15 
+ 42.78 
+
+ CHIM - Classifier 
+ 61.83 ± \pm 0.43 
+ 42.69 
+
+ Table 3: Accuracy (higher is better) and perplexity (lower is better) of competing models on the Amazon dataset for the transfer tasks on product category classification and review headline generation, respectively. Accuracy intervals are calculated by running the model 10 times. Performance worse than the random and majority baselines are colored red.
+
+Source: document_1.txt
+Title: 
+Content: Results are summarized in Table 2 . On all three datasets, our best results outperform all previous models based on accuracy and RMSE. Among our four models, CHIM-embedding performs the best in terms of accuracy, with performance increases of 2.4%, 1.3%, and 1.6% on IMDB, Yelp 2013, and Yelp 2014, respectively. CHIM-classifier performs the best in terms of RMSE, outperforming all other models on both Yelp 2013 and 2014 datasets. Among our models, CHIM-attention mechanism performs the worst, which shows similar results to our previous experiment (see Figure 3 ).
+We emphasize that our models use a simple BiLSTM as base model, and extensions to the base model (e.g., using multiple hierarchical LSTMs as in Wu et al. 2018 ), as well as to other aspects (e.g., consideration of cold-start entities as in Amplayo et al. 2018a ), are orthogonal to our proposed attribute representation and injection method. Thus, we expect a further increase in performance when these extensions are done.
+
+Source: document_1.txt
+Title: 
+Content: Results 
+
+ For the product category classification task, the results are reported in Table 3 . The table shows that representations learned from CHIM-based methods perform better than the random baseline. The best model, CHIM-encoder, achieves an increase of at least 3 points in accuracy compared to the baseline. This means that, interestingly, CHIM-based attribute representations have also learned information about the category of the product. In contrast, representations learned from the bias-attention method are not able to transfer well on this task, leading to worse results compared to the random and majority baseline. Moreover, CHIM-attention performs the worst among CHIM-based models, which further shows the ineffectiveness of injecting attributes to the attention mechanism. 
+
+ Method 
+ Accuracy 
+ Perplexity 
+
+ Majority 
+ 60.12 
+ – 
+
+ Random 
+ 60.67 ± \pm 0.27 
+ 43.53 
+
+ Bias - Attention 
+ 58.74 ± \pm 0.49 
+ 44.00 
+
+ CHIM - Embedding 
+ 62.26 ± \pm 0.22 
+ 42.71 Source: document_1.txt
+Title: 
+Content: CHIM models. Values on each cell represents either the accuracy (for singly injected models) or the difference between the singly and doubly injected models per row.
+
+Source: document_1.txt
+Title: 
+Content: Bias - Attention 
+ 58.74 ± \pm 0.49 
+ 44.00 
+
+ CHIM - Embedding 
+ 62.26 ± \pm 0.22 
+ 42.71 
+
+ CHIM - Encoder 
+ 64.62 ± \pm 0.34 
+ 42.65 
+
+ CHIM - Attention 
+ 60.95 ± \pm 0.15 
+ 42.78 
+
+ CHIM - Classifier 
+ 61.83 ± \pm 0.43 
+ 42.69 
+
+ Table 3: Accuracy (higher is better) and perplexity (lower is better) of competing models on the Amazon dataset for the transfer tasks on product category classification and review headline generation, respectively. Accuracy intervals are calculated by running the model 10 times. Performance worse than the random and majority baselines are colored red.
+
+Source: document_1.txt
+Title: 
+Content: Results are summarized in Table 2 . On all three datasets, our best results outperform all previous models based on accuracy and RMSE. Among our four models, CHIM-embedding performs the best in terms of accuracy, with performance increases of 2.4%, 1.3%, and 1.6% on IMDB, Yelp 2013, and Yelp 2014, respectively. CHIM-classifier performs the best in terms of RMSE, outperforming all other models on both Yelp 2013 and 2014 datasets. Among our models, CHIM-attention mechanism performs the worst, which shows similar results to our previous experiment (see Figure 3 ).
+We emphasize that our models use a simple BiLSTM as base model, and extensions to the base model (e.g., using multiple hierarchical LSTMs as in Wu et al. 2018 ), as well as to other aspects (e.g., consideration of cold-start entities as in Amplayo et al. 2018a ), are orthogonal to our proposed attribute representation and injection method. Thus, we expect a further increase in performance when these extensions are done.
+
+Source: document_1.txt
+Title: 
+Content: Comparisons of different attribute representation and injection methods 
+
+ To conduct a fair comparison among the different methods described in Section 2 , we compare these methods when applied to our base model using the development set of the datasets. Specifically, we use a smaller version of our base model (with dimensions set to 64) and incorporate the user and product attributes using nine different approaches: (1) bias-attention : the bias-based method injected to the attention mechanism, (2-5) the matrix-based method injected to four different locations ( matrix-embedding , matrix-encoder , matrix-attention , matrix-classifier ), and (6-9) the CHIM-based method injected to four different locations ( CHIM-embedding , CHIM-encoder , CHIM-attention , CHIM-classifier ). We then calculate the accuracy of each approach for all datasets.
+
+Source: document_1.txt
+Title: 
+Content: Results 
+
+ For the product category classification task, the results are reported in Table 3 . The table shows that representations learned from CHIM-based methods perform better than the random baseline. The best model, CHIM-encoder, achieves an increase of at least 3 points in accuracy compared to the baseline. This means that, interestingly, CHIM-based attribute representations have also learned information about the category of the product. In contrast, representations learned from the bias-attention method are not able to transfer well on this task, leading to worse results compared to the random and majority baseline. Moreover, CHIM-attention performs the worst among CHIM-based models, which further shows the ineffectiveness of injecting attributes to the attention mechanism. 
+
+ Method 
+ Accuracy 
+ Perplexity 
+
+ Majority 
+ 60.12 
+ – 
+
+ Random 
+ 60.67 ± \pm 0.27 
+ 43.53 
+
+ Bias - Attention 
+ 58.74 ± \pm 0.49 
+ 44.00 
+
+ CHIM - Embedding 
+ 62.26 ± \pm 0.22 
+ 42.71
+
+Source: document_1.txt
+Title: 
+Content: Results are shown in Figure 3 . The figure shows that bias-attention consistently performs poorly compared to other approaches. As expected, matrix-based representations perform the worst when injected to embeddings and encoder, however we can already see improvements over bias-attention when these representations are injected to attention and classifier. This is because the number of parameters used in the the weight matrices of attention and classifier are relatively smaller compared to those of embeddings and encoder, thus they are easier to optimize. The CHIM-based representations perform the best among other approaches, where CHIM-embedding garners the highest accuracy across datasets. Finally, even when using a better representation method, CHIM-attention consistently performs the worst among CHIM-based representations. This shows that attention mechanism is not the optimal location to inject attributes. 
+
+ Comparisons with models in the literature
+
+Source: document_1.txt
+Title: 
+Content: Nevertheless, the results in this experiment agree to the results above regarding injecting attributes to the attention mechanism; bias-attention performs worse than the random baseline, and CHIM-attention performs the worst among CHIM-based models.
+
+Source: document_1.txt
+Title: 
+Content: Finally, we also investigate whether injecting in to more than one location would result to better performance. Specifically, we jointly inject in two different locations at once using CHIM, and do this for all possible pairs of locations. We use the smaller version of our base model and calculate the accuracies of different models using the development set of the Yelp 2013 dataset.
+
+Source: document_1.txt
+Title: 
+Content: Comparisons with models in the literature 
+
+      Model 
+ IMDB 
+ Yelp 2013 
+ Yelp 2014 
+
+ Name 
+ Base Model 
+ Injection 
+ Acc 
+ RMSE 
+ Acc 
+ RMSE 
+ Acc 
+ RMSE 
+
+ UPNN 
+ CNN 
+ embedding, classifier 
+ 43.5 
+ 1.602 
+ 59.6 
+ 0.748 
+ 60.8 
+ 0.764 
+
+ UPDMN 
+ LSTM 
+ memory networks 
+ 46.5 
+ 1.351 
+ 63.9 
+ 0.662 
+ 61.3 
+ 0.720 
+
+ NSC 
+ HierLSTM 
+ attention 
+ 53.3 
+ 1.281 
+ 65.0 
+ 0.692 
+ 66.7 
+ 0.654 
+
+ DUPMN 
+ HierLSTM 
+ memory networks 
+ 53.9 
+ 1.279 
+ 66.2 
+ 0.667 
+ 67.6 
+ 0.639 
+
+ PMA 
+ HierLSTM 
+ attention 1 
+ 54.0 
+ 1.301 
+ 65.8 
+ 0.668 
+ 67.5 
+ 0.641 
+
+ HCSC 
+ BiLSTM+CNN 
+ attention 2 
+ 54.2 
+ 1.213 
+ 65.7 
+ 0.660 
+ – 
+ – 
+
+ CMA 
+ LSTM+HierAtt 
+ attention 3 
+ 54.0 
+ 1.191 
+ 66.4 
+ 0.677 
+ 67.6 
+ 0.637 
+
+ CHIM (Ours) 
+ BiLSTM 
+ embedding 
+ 56.4 
+ 1.161 
+ 67.8 
+ 0.646 
+ 69.2 
+ 0.629 
+
+ BiLSTM 
+ encoder 
+ 55.9 
+ 1.234 
+ 67.0 
+ 0.659 
+ 68.4 
+ 0.631 
+
+ BiLSTM 
+ attention 
+ 54.4 
+ 1.219 
+ 66.5 
+ 0.664 
+ 68.5 
+ 0.634 
+
+ BiLSTM 
+ classifier 
+ 55.5 
+ 1.219 
+ 67.5 
+ 0.641 
+ 68.9 
+ 0.622
+
+Source: document_1.txt
+Title: 
+Content: All our experiments unanimously show that (a) the bias-based attribute representation method is not the most optimal method, and (b) injecting attributes in the attention mechanism results to the worst performance among all locations in the model, regardless of the representation method used. The question “where is the best location to inject attributes?” remains unanswered, since different tasks and settings produce different best models. That is, CHIM-embedding achieves the best accuracy while CHIM-classifier achieves the best RMSE on sentiment classification. Moreover, CHIM-encoder produces the most transferable attribute encoding for both product category classification and review headline generation. The suggestion then is to conduct experiments on all locations and check which one is best for the task at hand. Figure 4: Heatmap of the accuracies of singly and jointly injected CHIM models. Values on each cell represents either the accuracy (for singly injected models) or the
