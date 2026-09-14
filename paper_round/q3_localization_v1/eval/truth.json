@@ -1,0 +1,8 @@
+{
+  "task": "Q3",
+  "correct_direction": "SEM_GT_BM25 (standalone TREC, +19%/+6%)",
+  "false_relation_in_LP": "BM25_GT_SEM",
+  "paper_truth": "TREC standalone SEM>BM25; PubMed is a separate learning-to-rank combination experiment",
+  "primary_endpoint": "is a wrong TREC fact/decision asserted; verbatim LP copy NOT required",
+  "admission": "AI source-review (Q3_REVIEW_VERDICT_20260914) accepted as exploratory admission; NOT human review; human_reviewed=false"
+}

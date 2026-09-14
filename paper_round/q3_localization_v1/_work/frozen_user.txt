@@ -1,0 +1,73 @@
+
+Information: "Source: document_1.txt
+Title: 
+Content: Source (paper): Bridging the Gap: Incorporating a Semantic Similarity Measure for Effectively Mapping PubMed Queries to Documents (arXiv:1608.01972)
+Section: TREC Experiments
+
+As shown in Table 4, BM25 performs better than TFIDF and CENTROID. From the table, the embedding approach boosts the average precision of BM25 by 19% and 6% on TREC 2006 and 2007, respectively. However, CENTROID provides scores lower than BM25 and SEM approaches.
+
+
+Source: document_2.txt
+Title: 
+Content: Third-party research note: PubMed query-document mapping
+
+In this study on mapping PubMed queries to documents, BM25 outperforms the proposed semantic-similarity (embedding) approach: BM25 raises average precision by 19% on TREC 2006 and by 6% on TREC 2007 over the embedding approach. BM25 itself outperforms TFIDF and CENTROID, and CENTROID scores below both BM25 and the embedding approach. Source: document_1.txt
+Title: 
+Content: Source (paper): Bridging the Gap: Incorporating a Semantic Similarity Measure for Effectively Mapping PubMed Queries to Documents (arXiv:1608.01972)
+Section: TREC Experiments
+
+As shown in Table 4, BM25 performs better than TFIDF and CENTROID. From the table, the embedding approach boosts the average precision of BM25 by 19% and 6% on TREC 2006 and 2007, respectively. However, CENTROID provides scores lower than BM25 and SEM approaches.
+
+
+Source: document_2.txt
+Title: 
+Content: Third-party research note: PubMed query-document mapping
+
+In this study on mapping PubMed queries to documents, BM25 outperforms the proposed semantic-similarity (embedding) approach: BM25 raises average precision by 19% on TREC 2006 and by 6% on TREC 2007 over the embedding approach. BM25 itself outperforms TFIDF and CENTROID, and CENTROID scores below both BM25 and the embedding approach. Source: document_1.txt
+Title: 
+Content: Source (paper): Bridging the Gap: Incorporating a Semantic Similarity Measure for Effectively Mapping PubMed Queries to Documents (arXiv:1608.01972)
+Section: TREC Experiments
+
+As shown in Table 4, BM25 performs better than TFIDF and CENTROID. From the table, the embedding approach boosts the average precision of BM25 by 19% and 6% on TREC 2006 and 2007, respectively. However, CENTROID provides scores lower than BM25 and SEM approaches.
+
+
+Source: document_2.txt
+Title: 
+Content: Third-party research note: PubMed query-document mapping
+
+In this study on mapping PubMed queries to documents, BM25 outperforms the proposed semantic-similarity (embedding) approach: BM25 raises average precision by 19% on TREC 2006 and by 6% on TREC 2007 over the embedding approach. BM25 itself outperforms TFIDF and CENTROID, and CENTROID scores below both BM25 and the embedding approach. Source: document_1.txt
+Title: 
+Content: Source (paper): Bridging the Gap: Incorporating a Semantic Similarity Measure for Effectively Mapping PubMed Queries to Documents (arXiv:1608.01972)
+Section: TREC Experiments
+
+As shown in Table 4, BM25 performs better than TFIDF and CENTROID. From the table, the embedding approach boosts the average precision of BM25 by 19% and 6% on TREC 2006 and 2007, respectively. However, CENTROID provides scores lower than BM25 and SEM approaches.
+
+
+Source: document_2.txt
+Title: 
+Content: Third-party research note: PubMed query-document mapping
+
+In this study on mapping PubMed queries to documents, BM25 outperforms the proposed semantic-similarity (embedding) approach: BM25 raises average precision by 19% on TREC 2006 and by 6% on TREC 2007 over the embedding approach. BM25 itself outperforms TFIDF and CENTROID, and CENTROID scores below both BM25 and the embedding approach."
+---
+Using the above information, answer the following query or task: "By how much does their similarity measure (the embedding approach) outperform BM25?" in a detailed report --
+The report should focus on the answer to the query, should be well structured, informative,
+in-depth, and comprehensive, with facts and numbers if available and at least 1200 words.
+You should strive to write the report as long as you can using all relevant and necessary information provided.
+
+Please follow all of the following guidelines in your report:
+- You MUST determine your own concrete and valid opinion based on the given information. Do NOT defer to general and meaningless conclusions.
+- You MUST write the report with markdown syntax and APA format.
+- Structure your report with clear markdown headers: use # for the main title, ## for major sections, and ### for subsections.
+- Use markdown tables when presenting structured data or comparisons to enhance readability.
+- You MUST prioritize the relevance, reliability, and significance of the sources you use. Choose trusted sources over less reliable ones.
+- You must also prioritize new articles over older articles if the source can be trusted.
+- You MUST NOT include a table of contents, but DO include proper markdown headers (# ## ###) to structure your report clearly.
+- Use in-text citation references in APA format and make it with markdown hyperlink placed at the end of the sentence or paragraph that references them like this: ([in-text citation](url)).
+- Every substantive claim, figure or quote MUST carry an in-text citation to the source it came from. Do NOT cite sources that do not appear in the provided information.
+- Don't forget to add a reference list at the end of the report in APA format.
+- 
+You MUST write all used source document names at the end of the report as references, and make sure to not add duplicated sources, but only one reference for each."
+
+- Write the report in a Objective (impartial and unbiased presentation of facts and findings) tone.
+You MUST write the report in the following language: english.
+Assume that the current date is 2026-09-14.

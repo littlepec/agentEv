@@ -1,0 +1,22 @@
+{
+  "cell": "r2_Eplus_L",
+  "round": 2,
+  "cond": "Eplus_L",
+  "messages_sha256": "34df3953c6188765aebe0e1c4ce18819dc048832edd11320b18865f16051f4b0",
+  "model_req": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 8192,
+  "ts": "2026-09-14T19:47:23",
+  "ok": true,
+  "finish_reason": "length",
+  "model_returned": "deepseek-flash",
+  "request_id": "79868a3c-ba6d-4a49-a0cd-0cbbc96a94a7",
+  "prompt_tokens": 2298,
+  "completion_tokens": 8192,
+  "cost_usd": 0.01052,
+  "answer": "",
+  "answer_len": 0,
+  "reasoning_len": 30258,
+  "elapsed_s": 33.9,
+  "ledger": true
+}

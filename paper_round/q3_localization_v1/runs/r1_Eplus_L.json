@@ -1,0 +1,22 @@
+{
+  "cell": "r1_Eplus_L",
+  "round": 1,
+  "cond": "Eplus_L",
+  "messages_sha256": "34df3953c6188765aebe0e1c4ce18819dc048832edd11320b18865f16051f4b0",
+  "model_req": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 8192,
+  "ts": "2026-09-14T19:43:13",
+  "ok": true,
+  "finish_reason": "length",
+  "model_returned": "deepseek-flash",
+  "request_id": "1791c6d5-1cf1-4da0-b461-f9c2ae15e729",
+  "prompt_tokens": 2298,
+  "completion_tokens": 8192,
+  "cost_usd": 0.01052,
+  "answer": "# How Much Does the Embedding-Based Semantic Similarity Measure Outperform BM25? A Conditional Quantitative Assessment\n\n## Overview and Direct Answer\n\nThe question asks by how much the embedding-based semantic similarity measure—referred to in the source material as the semantic measure or SEM—outperforms BM25. The most defensible answer from the provided evidence is conditional rather than universal. On the TREC 2006 and TREC 2007 collections, the SEM approach alone improves average precision over BM25 by 19% and 6%, respectively ([document_1.txt, n.d.](https://arxiv.org/abs/1608.01972)). In absolute terms, those gains correspond to +0.0596 average precision on TREC 2006 and +0.0138 average precision on TREC 2007, based on the reported table values of BM25 at 0.3136 and 0.2463 and SEM at 0.3732 and 0.2601 ([document_1.txt, n.d.](https://arxiv.org/abs/1608.01972)).\n\nHowever, the same source explicitly warns that the standalone semantic measure does not generalize to PubMed user queries: “Although our semantic measure alone produces better ranking scores on the TREC set, this does not apply to user queries in PubMed” ([document_1.txt, n.d.](https://arxiv.org/abs/1608.01972)). For PubMed, the reported improvements come from hybrid systems rather than from the embedding approach alone. Specifically, BM25 + SEMTitle achieves NDCG@20 of 0.1839, a 23.03% relative improvement over BM25’s 0.1495, while BM25 + SEMAbstract achieves 0.1592, a 6.51% relative improvement ([document_1.txt, n.d.](https://arxiv.org/abs/1608.01972)). Therefore, the answer depends on the dataset, metric, and whether the embedding method is used alone or fused with BM25. The strongest pure-embedding gain over BM25 is 19% on TREC 2006 average precision; the strongest reported hybrid gain is 23.03% on PubMed NDCG@20 using title-based semantic similarity ([document_1.txt, n.d.](https://arxiv.org/abs/1608.01972)).\n\n## Source Base and Methodological Caveats\n\nThe primary source for this report is document_1.txt, which provides excerpts from the paper “Bridging the Gap: Incorporating a Semantic Similarity Measure for Effectively Mapping PubMed Queries to Documents” (arXiv:1608.01972) ([document_1.txt, n.d.](https://arxiv.org/abs/1608.01972)). This source contains the exact TREC average precision values and the PubMed NDCG@20 values. The secondary source is document_2.txt, a third-party research note that summarizes the same study and corroborates the headline claim that the semantic-similarity approach improves retrieval over BM25 by 19% on TREC 2006 and by 6% on TREC 2007 ([document_2.txt, n.d.](document_2.txt)). Because document_2.txt is a third-party note and largely repeats the primary findings, document_1.txt should be treated as the more authoritative source for exact numerical values, while document_2.txt serves as corroboration of the direction and magnitude of the reported effects ([document_1.txt, n.d.](https://arxiv.org/abs/1608.01972); [document_2.txt, n.d.](document_2.txt)).\n\nTwo methodological caveats are important. First, the TREC improvements are reported in average precision, whereas the PubMed improvements are reported in NDCG@20; these metrics are not directly interchangeable ([document_1.txt, n.d.](https://arxiv.org/abs/1608.01972)). Second, the PubMed gains are not attributed to the embedding method alone. The source states that the semantic measure alone does not apply to user queries in PubMed, meaning the 23.03% and 6.51% figures describe combined BM25 + semantic systems rather than a pure embedding system ([document_1.txt, n.d.](https://arxiv.org/abs/1608.01972)). Consequently, any claim that “the embedding approach outperforms BM25 by ",
+  "answer_len": 3686,
+  "reasoning_len": 27307,
+  "elapsed_s": 35.6,
+  "ledger": true
+}

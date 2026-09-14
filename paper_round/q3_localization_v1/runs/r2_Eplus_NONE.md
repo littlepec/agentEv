@@ -1,0 +1,106 @@
+# Quantifying the Advantage of an Embedding-Based Semantic Similarity Measure over BM25
+
+## Abstract and Scope
+
+This report answers a deceptively narrow question — *by how much does the embedding-based similarity measure described in arXiv:1608.01972 outperform BM25?* — using only the evidence reported in that source document. The short answer is conditional rather than singular: on the TREC ad hoc collections the semantic (embedding) measure improved average precision over BM25 by approximately **19% on TREC 2006** and approximately **6% on TREC 2007**, expressed as relative gains ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). On the operational PubMed query workload, however, the same measure used alone did *not* outperform BM25; the advantage appeared only when the semantic signal was fused with BM25, yielding relative NDCG@20 gains of **23.03%** for title-level semantic matching and **6.51%** for abstract-level semantic matching ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). The magnitude of the advantage therefore depends jointly on the evaluation collection, the retrieval metric, and whether the semantic measure is deployed standalone or in a hybrid ranking function.
+
+## 1. The Evidence Base and Its Characteristics
+
+The findings derive from a single peer-review-style contribution, "Bridging the Gap: Incorporating a Semantic Similarity Measure for Effectively Mapping PubMed Queries to Documents" (arXiv:1608.01972v2), which reports two distinct experimental blocks: a TREC ad hoc evaluation (Sections 3.3, Table 2, Table 4) and a PubMed user-query evaluation (Section 3.4, Table 3) ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). The paper compares four ranking configurations on the TREC collections — TFIDF, BM25, CENTROID, and a semantic measure abbreviated SEM — and three configurations on PubMed — BM25, BM25 + SEMTitle, and BM25 + SEMAbstract.
+
+Two methodological details materially shape how the headline percentages should be read. First, in the TREC block the authors state explicitly that the semantic result "was solely based on matching queries and documents by the semantic measure and no other feature was used for ranking documents" ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). The reported gains over BM25 therefore represent the performance of a purely semantic ranker operating without any lexical-overlap component. Second, in the PubMed block the semantic measure is *not* evaluated standalone; it is always combined with BM25, and the authors concede that "although our semantic measure alone produces better ranking scores on the TREC set, this does not apply to user queries in PubMed" ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). This asymmetry is the single most important interpretive constraint on the answer.
+
+## 2. TREC 2006 and TREC 2007: The Headline Deltas
+
+### 2.1 Reported results
+
+Table 1 reproduces the average precision (AP) figures reported for TREC 2006 and TREC 2007.
+
+**Table 1. Average precision on TREC 2006 and TREC 2007 (reproduced from Table 2 of the source paper)**
+
+| System | TREC 2006 AP | TREC 2007 AP |
+|---|---|---|
+| TFIDF | 0.3018 | 0.2375 |
+| BM25 | 0.3136 | 0.2463 |
+| CENTROID | 0.2363 | 0.2459 |
+| SEM (embedding approach) | **0.3732** | **0.2601** |
+
+*Source: ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)).*
+
+The paper's own summary of these numbers is that "BM25 performs better than TFIDF and CENTROID" and that "the embedding approach boosts the average precision of BM25 by 19% and 6% on TREC 2006 and 2007, respectively" ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). It further notes that "CENTROID provides scores lower than BM25 and SEM approaches" ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)).
+
+### 2.2 Reconstructing the deltas: absolute versus relative
+
+Because the paper reports relative boosts, it is analytically useful to reconstruct both absolute and relative differences. Table 2 performs this calculation directly from the reported AP values.
+
+**Table 2. Reconstructed SEM-versus-BM25 deltas on TREC**
+
+| Collection | BM25 AP | SEM AP | Absolute gain (AP points) | Relative gain (recomputed) | Relative gain (as reported) |
+|---|---|---|---|---|---|
+| TREC 2006 | 0.3136 | 0.3732 | +0.0596 | +19.01% | 19% |
+| TREC 2007 | 0.2463 | 0.2601 | +0.0138 | +5.60% | 6% |
+
+*Computed from values in ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)).*
+
+The recomputed relative gains align closely with the paper's headline figures. The TREC 2006 figure reproduces almost exactly (19.01% versus the stated 19%); the TREC 2007 figure is stated as 6% in the source while the raw AP values imply 5.60%. This small upward rounding is worth flagging for transparency: researchers who quote "6%" should be aware that the underlying AP values support a figure closer to 5.6%, and that the gap on TREC 2007 amounts to only about 1.4 percentage points of absolute average precision. Conversely, on TREC 2006 the gain is nearly six AP points — a substantively larger effect.
+
+### 2.3 A broader baseline context
+
+The semantic measure also dominates the non-BM25 lexical and centroid baselines, which contextualizes the magnitude of its advantage:
+
+- Against TFIDF, SEM gains +0.0714 AP on TREC 2006 (+23.66%) and +0.0226 AP on TREC 2007 (+9.52%).
+- Against CENTROID, SEM gains +0.1369 AP on TREC 2006 (+57.93%) and +0.0142 AP on TREC 2007 (+5.77%).
+
+These comparisons, derived from the values in ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)), show that the semantic approach's margin over the strongest lexical baseline (BM25) is smaller than its margin over the weakest baseline (CENTROID), which is exactly what one would expect if the semantic measure is recovering relevance signal that lexical matching partially captures. Notably, on TREC 2007 the CENTROID score (0.2459) is essentially indistinguishable from BM25 (0.2463), indicating that the 2007 collection is one on which the lexical approaches cluster tightly and the semantic advantage is correspondingly compressed.
+
+## 3. PubMed: Where the Advantage Requires Hybridization
+
+### 3.1 Reported results
+
+The PubMed evaluation used NDCG@20 as the metric and produced the results in Table 3.
+
+**Table 3. NDCG@20 on PubMed user queries (reproduced from Table 3 of the source paper)**
+
+| System | NDCG@20 | Relative gain vs. BM25 (as reported) |
+|---|---|---|
+| BM25 | 0.1495 | — |
+| BM25 + SEMTitle | 0.1839 | 23.03% |
+| BM25 + SEMAbstract | 0.1592 | 6.51% |
+
+*Source: ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)).*
+
+Recomputing the deltas from the reported NDCG@20 values produces +0.0344 for BM25 + SEMTitle (23.01% relative) and +0.0097 for BM25 + SEMAbstract (6.49% relative). These again match the paper's stated percentages (23.03% and 6.51%) to within rounding, confirming that the reported figures are relative improvements over the BM25 baseline rather than absolute NDCG@20 contributions ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)).
+
+### 3.2 The critical caveat
+
+The PubMed results must not be read as evidence that the embedding approach outperforms BM25 by 23% in general. The 23.03% figure describes a *fusion* system — BM25 with a semantic title-matching component added — not a standalone semantic ranker. The authors are explicit that the standalone semantic advantage observed on TREC "does not apply to user queries in PubMed" ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). The correct framing is therefore that on PubMed the semantic measure is *complementary* to BM25 rather than *superior* to it, and its incremental value is concentrated in title-level semantic matching, where the gain is more than three times larger than the abstract-level gain (23.03% versus 6.51%).
+
+## 4. Consolidated Answer
+
+**Table 4. How much does the embedding approach outperform BM25?**
+
+| Setting | Metric | Configuration | Relative gain over BM25 |
+|---|---|---|---|
+| TREC 2006 | Average precision | Semantic only | ~19% (recomputed 19.01%; +0.0596 AP) |
+| TREC 2007 | Average precision | Semantic only | ~6% (recomputed 5.60%; +0.0138 AP) |
+| PubMed (title) | NDCG@20 | BM25 + SEMTitle | 23.03% (+0.0344 NDCG@20) |
+| PubMed (abstract) | NDCG@20 | BM25 + SEMAbstract | 6.51% (+0.0097 NDCG@20) |
+| PubMed | NDCG@20 | Semantic only | Not reported to outperform BM25 |
+
+*Sources: ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). Absolute values recomputed from the reported tables.*
+
+Three conclusions follow directly and are supported by the source material. First, the answer to "by how much" is not a single number but a range spanning roughly **6% to 23%** in relative terms, depending on the collection and configuration. Second, the two TREC figures (19% and 6%) pertain to a *standalone* semantic ranker with no lexical features, making them a cleaner — and arguably more conservative in deployment terms — estimate of the semantic method's intrinsic advantage over BM25. Third, the two PubMed figures (23.03% and 6.51%) pertain to *hybrid* systems and therefore measure marginal contribution rather than replacement capability. Reporting the 23.03% figure without that qualifier would overstate the case for semantic retrieval and would contradict the paper's own stated finding ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)).
+
+## 5. Interpretation and Limitations
+
+Several limitations constrain how far these deltas can be generalized. The evidence rests on a single source and a single embedding methodology, evaluated on two TREC collections and one PubMed workload; there is no cross-validation across alternative embedding models, no reported statistical significance testing in the provided excerpts, and no confidence intervals for the AP or NDCG@20 figures ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). The TREC 2007 gain is small enough that it should be treated as fragile pending significance testing. There is also a rounding inconsistency between the reported and recomputed percentages — most visibly on TREC 2007 (6% stated versus 5.60% computed) and, in the opposite direction, on the PubMed title fusion (23.03% stated versus 23.01% computed) — which, while immaterial to the qualitative conclusion, argues for citing the raw metric values alongside any percentage claim.
+
+A further interpretive caution concerns the direction of the collection effect. The semantic advantage is largest on TREC 2006 and smallest on TREC 2007 and on the PubMed abstract condition. A plausible reading, consistent with the paper's own framing about "bridging the gap," is that semantic matching pays off most where lexical overlap is weakest. However, the provided excerpts do not include a controlled vocabulary-gap analysis, so this remains an inference rather than a documented finding ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)).
+
+## 6. Conclusion
+
+Based on the evidence in the source document, the embedding-based similarity measure outperforms BM25 by approximately **19% in average precision on TREC 2006** and approximately **6% on TREC 2007** when used as a standalone semantic ranker with no lexical features ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). In the PubMed user-query setting, the measure does not outperform BM25 on its own; combined with BM25 it adds **23.03% NDCG@20** through title-level semantic matching and **6.51%** through abstract-level semantic matching ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). The defensible summary is therefore that the semantic approach delivers a real but variable advantage — substantial on a collection with wide lexical mismatch, modest on a closer-matched collection, and deployment-dependent on PubMed, where its value is as a complement rather than a replacement for BM25.
+
+## References
+
+Bridging the gap: Incorporating a semantic similarity measure for effectively mapping PubMed queries to documents (arXiv:1608.01972v2). (2016). *Source document: document_1.txt.* https://arxiv.org/abs/1608.01972

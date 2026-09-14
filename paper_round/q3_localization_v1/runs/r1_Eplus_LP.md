@@ -1,0 +1,104 @@
+# How Much Does the Embedding-Based Semantic Similarity Measure Outperform BM25? A Source-Based Analysis
+
+## 1. Direct Answer in Brief
+
+Based on the primary source — the paper *Bridging the Gap: Incorporating a Semantic Similarity Measure for Effectively Mapping PubMed Queries to Documents* (arXiv:1608.01972) — the answer is **collection-dependent and cannot be stated as a single number** ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)).
+
+- On the **TREC 2006** ad-hoc collection, the embedding-based semantic measure (SEM) achieved a mean average precision (MAP) of **0.3732** versus **0.3136** for BM25, a relative gain of **19.0%** (absolute gain of **+0.0596 MAP**) ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)).
+- On **TREC 2007**, SEM reached **0.2601** versus **0.2463** for BM25, a relative gain of **5.6%** (absolute gain of **+0.0138 MAP**), which the paper rounds to "6%" ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)).
+- On **PubMed user queries**, however, the semantic measure alone did *not* outperform BM25. The paper explicitly states that "although our semantic measure alone produces better ranking scores on the TREC set, this does not apply to user queries in PubMed" ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). The reported PubMed gains arise only from **hybrid systems that combine BM25 with the semantic score**: BM25 + SEMTitle improved NDCG@20 from **0.1495 to 0.1839 (+23.03%)**, while BM25 + SEMAbstract improved it to **0.1592 (+6.51%)** ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)).
+
+A third-party note included in the supplied information asserts the opposite direction — that "BM25 outperforms the proposed semantic-similarity (embedding) approach" by 19% and 6% on TREC 2006 and 2007 respectively ([PubMed Query–Document Mapping Note, n.d.](document_2.txt)). That note cites the same percentages but inverts their attribution; the primary source's tabulated scores (SEM 0.3732 > BM25 0.3136; SEM 0.2601 > BM25 0.2463) contradict it ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). This discrepancy is examined in Section 5.
+
+## 2. Source Base and Reliability Hierarchy
+
+### 2.1 The primary source
+
+The principal evidence comes from a peer-review-style research paper deposited on arXiv (arXiv:1608.01972, v2), which reports two families of experiments: TREC ad-hoc retrieval (Section 3.3) and PubMed query–document mapping with real user queries (Section 3.4) ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). Its results are reported as tabulated numeric scores (Table 2 for TREC MAP; Table 3 for PubMed NDCG@20), which makes it the most verifiable and thus the most reliable source in the supplied set.
+
+Crucially, for the TREC runs the paper states that ranking "was solely based on matching queries and documents by the semantic measure and no other feature was used for ranking documents" ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). This means the TREC comparison is a clean **standalone semantic retrieval run versus standalone BM25**, not a fusion experiment — an important methodological detail for interpreting the 19% and 6% figures.
+
+### 2.2 The secondary source
+
+The third-party research note is a derivative document: it summarises the paper but reports no methodology of its own, and its descriptive sentence reverses the direction of the effect while reusing the paper's own 19% and 6% figures ([PubMed Query–Document Mapping Note, n.d.](document_2.txt)). Because it is secondary, unreferenced beyond a generic "Source: document_1.txt" attribution, and internally inconsistent with the numeric table it summarises, it should be weighted below the primary paper. Both sources are also dated or undated relative to the present (the paper dates to 2016), which limits claims about the current state of the art ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)).
+
+## 3. The Magnitude of the Semantic Advantage on TREC
+
+### 3.1 Headline effect sizes
+
+The paper's own summary is that "the embedding approach boosts the average precision of BM25 by 19% and 6% on TREC 2006 and 2007, respectively" ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). This phrasing is loose — the semantic run replaces, rather than augments, BM25 in the ranking pipeline — but the arithmetic is consistent with Table 2, as shown below.
+
+### 3.2 Recomputed deltas from Table 2
+
+| System | TREC 2006 MAP | TREC 2007 MAP | Mean MAP (2006–2007) |
+|---|---|---|---|
+| TFIDF | 0.3018 | 0.2375 | 0.2697 |
+| BM25 | 0.3136 | 0.2463 | 0.2800 |
+| CENTROID | 0.2363 | 0.2459 | 0.2411 |
+| **SEM (embedding)** | **0.3732** | **0.2601** | **0.3167** |
+
+*Source: Table 2 as excerpted in ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). Mean values are computed by the present author from the reported per-collection figures.*
+
+| Comparison | TREC 2006 (relative) | TREC 2007 (relative) | TREC 2006 (absolute MAP) | TREC 2007 (absolute MAP) |
+|---|---|---|---|---|
+| SEM vs. BM25 | **+19.0%** | **+5.6%** | +0.0596 | +0.0138 |
+| SEM vs. TFIDF | +23.7% | +9.5% | +0.0714 | +0.0226 |
+| SEM vs. CENTROID | +57.9% | +5.8% | +0.1369 | +0.0142 |
+| SEM vs. mean BM25 | — | — | — | +13.1% (pooled) |
+
+*Relative deltas recomputed from ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)); absolute deltas likewise derived from the reported MAP scores.*
+
+Two calibrated readings follow. First, the **relative** advantage over BM25 is large on TREC 2006 (roughly one-fifth) but modest on TREC 2007 (roughly one-eighteenth). A single "how much" figure therefore risks overstating the effect; the honest range is **5.6%–19.0% relative MAP**, or **+0.014 to +0.060 absolute MAP**. Second, when the two TREC collections are pooled, the average relative advantage narrows to approximately **13.1%**, since the small TREC 2007 gain is averaged against the larger TREC 2006 gain.
+
+### 3.3 The wider comparison frame
+
+The paper reports that "BM25 performs better than TFIDF and CENTROID" and that "CENTROID provides scores lower than BM25 and SEM approaches" ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). Recomputed deltas support this ordering: BM25 exceeded TFIDF by 3.9% (2006) and 3.7% (2007), and exceeded CENTROID by 32.7% (2006) and a marginal 0.16% (2007). SEM sits at the top of the table in both years, but the margin over BM25 (+19.0% and +5.6%) is markedly smaller than the margin over CENTROID (+57.9% and +5.8%), indicating that the lexical baselines themselves differ substantially in strength and that CENTROID is a weak comparator rather than a meaningful rival.
+
+## 4. The PubMed Results: Where the Advantage Disappears
+
+The PubMed experiments use **NDCG@20**, a ranked-list metric, and involve genuine user queries rather than TREC topics ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)).
+
+| System | NDCG@20 | Absolute gain vs. BM25 | Relative gain vs. BM25 |
+|---|---|---|---|
+| BM25 (baseline) | 0.1495 | — | — |
+| BM25 + SEMTitle | 0.1839 | +0.0344 | +23.03% (reported) |
+| BM25 + SEMAbstract | 0.1592 | +0.0097 | +6.51% (reported) |
+
+*Source: Table 3 as excerpted in ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). Relative gains recomputed from the reported scores yield ≈23.0% and ≈6.5%, the small differences from the reported 23.03% and 6.51% being attributable to rounding in the underlying values.*
+
+Three observations are material to the query at hand. First, **no SEM-alone PubMed score is reported** in the supplied information; the semantic component appears only as an additive feature on top of BM25. Second, the title-based semantic signal contributes roughly **3.5 times** the gain of the abstract-based signal (23.03% ÷ 6.51%), suggesting that semantically encoding the shorter, more curated title field is more informative than encoding the longer, noisier abstract. Third, absolute effect sizes are small: the strongest hybrid moves NDCG@20 by only **+0.0344**, meaning that the top of the PubMed ranked list reorders only modestly.
+
+## 5. Reconciling the Contradictory Claims in the Supplied Sources
+
+The two supplied documents disagree about the *direction* of the TREC effect while agreeing on its *magnitude*. The reconciliation is straightforward.
+
+| Claim element | Primary paper (Table 2 + text) | Third-party note |
+|---|---|---|
+| TREC 2006 direction | SEM (0.3732) > BM25 (0.3136) ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)) | "BM25 outperforms the … embedding approach" ([PubMed Query–Document Mapping Note, n.d.](document_2.txt)) |
+| TREC 2007 direction | SEM (0.2601) > BM25 (0.2463) ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)) | Same inverted claim ([PubMed Query–Document Mapping Note, n.d.](document_2.txt)) |
+| Magnitude quoted | 19% and 6% | 19% and 6% |
+| Supporting evidence offered | Explicit per-system MAP table | Restatement only |
+
+Because the note reproduces the paper's percentages verbatim but reverses the grammatical subject, it is best understood as a **paraphrase error** rather than an independent finding. The numeric table in the primary source is decisive: SEM scores are strictly higher than BM25 in both TREC years ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). The note is nonetheless accurate on one substantive point — that SEM does not dominate on PubMed user queries, where the benefit emerges only through fusion with BM25 ([PubMed Query–Document Mapping Note, n.d.](document_2.txt)). That is the one respect in which the note's scepticism aligns with the paper's own Section 3.4 conclusion.
+
+## 6. Why the Effect Size Varies
+
+The pattern in the data — a 19% TREC 2006 gain, a 5.6% TREC 2007 gain, and no standalone PubMed gain — is consistent with three plausible explanations, all of them inferential rather than stated outright in the sources.
+
+1. **Query type.** TREC topics are comparatively verbose and topical; PubMed user queries are short and often contain precise biomedical terminology that exact lexical matching handles well, leaving less headroom for semantic generalisation ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)).
+2. **Collection difficulty.** The smaller TREC 2007 gain (5.6%) relative to TREC 2006 (19.0%) suggests the effect is unstable across collections of different composition, which argues against treating 19% as a generalisable constant ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)).
+3. **Signal complementarity.** The PubMed hybrid results imply that the semantic and lexical signals are **complementary rather than substitutable**, which is why fusion outperforms either component alone ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)).
+
+## 7. Limitations of the Evidence
+
+Several caveats constrain the strength of any conclusion drawn here. The supplied information covers only two TREC collections and one PubMed evaluation set, so the range 5.6%–19.0% rests on a narrow empirical base ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). The TREC semantic runs did not use BM25 features ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)), so the 19%/6% figures describe a replacement architecture, whereas the PubMed 23.03%/6.51% figures describe a fusion architecture — the two percentages are not directly comparable in kind. No statistical significance testing, confidence intervals, or variance estimates are provided in the excerpts, so it is impossible to determine whether the TREC 2007 gain of +0.0138 MAP is distinguishable from noise ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). Finally, the paper dates to 2016, and embedding methods have evolved substantially since; the absolute effect sizes reported here should not be projected onto contemporary dense retrieval systems ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)).
+
+## 8. Conclusion
+
+The answer to the question "by how much does the embedding approach outperform BM25?" is: **by 19.0% relative MAP on TREC 2006 and 5.6% relative MAP on TREC 2007 when used as a standalone ranking method — and by nothing at all on PubMed user queries, where the semantic measure only adds value in combination with BM25, delivering +23.03% NDCG@20 with title-based semantics and +6.51% with abstract-based semantics** ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). The claim that BM25 instead outperforms the embedding approach by 19% and 6% on TREC is a secondary-source inversion unsupported by the primary table ([PubMed Query–Document Mapping Note, n.d.](document_2.txt)); the primary evidence must take precedence ([Bridging the Gap, 2016](https://arxiv.org/abs/1608.01972)). The defensible headline is therefore a *range* of roughly **6%–19% relative improvement over BM25 on TREC-style ad-hoc retrieval**, contingent on collection and configuration, and **no standalone advantage on PubMed user queries**.
+
+## References
+
+Bridging the gap: Incorporating a semantic similarity measure for effectively mapping PubMed queries to documents (arXiv:1608.01972). (2016). *arXiv*. https://arxiv.org/abs/1608.01972
+
+PubMed query–document mapping: Third-party research note [document_2.txt]. (n.d.).

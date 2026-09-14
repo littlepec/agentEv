@@ -1,0 +1,110 @@
+# Quantifying the Embedding Advantage over BM25 in PubMed Query–Document Mapping
+
+## Executive Summary
+
+The central answer to the question posed is direct: according to the primary research source examined here, the embedding-based semantic similarity measure **outperforms BM25 by 19% in average precision on TREC 2006 and by 6% on TREC 2007** ([document_1.txt](https://arxiv.org/abs/1608.01972)). Taking the two collections together, this corresponds to a simple unweighted mean relative gain of approximately **12.5%** in favour of the semantic (embedding) approach over the lexical BM25 baseline ([document_1.txt](https://arxiv.org/abs/1608.01972)).
+
+This finding must be reported alongside an important caveat. The second source supplied, a third-party research note, states the identical percentages but inverts their attribution, claiming that "BM25 raises average precision by 19% on TREC 2006 and by 6% on TREC 2007 over the embedding approach" ([document_2.txt](#document_2)). On appraisal, the primary paper — which explicitly frames the result as "the embedding approach boosts the average precision of BM25 by 19% and 6% on TREC 2006 and 2007, respectively" ([document_1.txt](https://arxiv.org/abs/1608.01972)) — is the more reliable authority for the direction of the effect, and the third-party note appears to have reversed the direction while preserving the numbers. Consequently, the defensible conclusion is that the embedding approach *gains* 19% and 6% over BM25, not that it loses by that margin.
+
+## Background: The Retrieval Task, the Systems, and the Metric
+
+### The retrieval scenario
+
+The evidence concerns a specific and well-scoped information retrieval problem: mapping PubMed queries to candidate documents, evaluated on the TREC 2006 and TREC 2007 query sets ([document_1.txt](https://arxiv.org/abs/1608.01972)). This is a biomedical literature retrieval setting in which short, often imprecise user queries must be matched against scientific abstracts and article records. The reported results derive from a section of the source paper explicitly labelled "TREC Experiments," with the summary figures drawn from that paper's Table 4 ([document_1.txt](https://arxiv.org/abs/1608.01972)).
+
+### The systems under comparison
+
+Four retrieval approaches are compared in the reported experiments ([document_1.txt](https://arxiv.org/abs/1608.01972)):
+
+- **BM25** — a lexical, term-frequency-based ranking function and the principal strong baseline.
+- **TFIDF** — a classical vector-space weighting scheme.
+- **CENTROID** — a centroid-based similarity approach operating over term vectors.
+- **SEM / embedding approach** — the proposed semantic similarity measure, built on distributed word or passage embeddings.
+
+The performance ordering reported in the primary source is unambiguous with respect to the two extremes: "BM25 performs better than TFIDF and CENTROID," while "CENTROID provides scores lower than BM25 and SEM approaches" ([document_1.txt](https://arxiv.org/abs/1608.01972)). The semantic approach sits at the top of that ordering, and BM25 sits immediately beneath it, above the two other lexical or vector-space baselines.
+
+### The evaluation metric
+
+The reported deltas are expressed in terms of average precision ([document_1.txt](https://arxiv.org/abs/1608.01972)), a standard summary measure of ranked retrieval quality in TREC-style evaluations. Two properties of this metric matter for interpreting the headline numbers. First, the values reported in the source ("19%" and "6%") are expressed as relative improvements to a baseline rather than as absolute metric values; the source describes the effect as the embedding approach "boost[ing] the average precision of BM25" ([document_1.txt](https://arxiv.org/abs/1608.01972)), which is baseline-relative language. Second, the deltas are reported separately per collection, which means the effect is collection-dependent rather than uniform.
+
+## Quantitative Findings
+
+### Headline deltas against BM25
+
+The core figures answering the query are set out below. The direction indicated is the direction supported by the primary source ([document_1.txt](https://arxiv.org/abs/1608.01972)).
+
+**Table 1. Relative average precision gain of the embedding approach over BM25**
+
+| Test collection | Direction of effect | Magnitude (relative average precision) | Source |
+|---|---|---|---|
+| TREC 2006 | Embedding approach above BM25 | +19% | ([document_1.txt](https://arxiv.org/abs/1608.01972)) |
+| TREC 2007 | Embedding approach above BM25 | +6% | ([document_1.txt](https://arxiv.org/abs/1608.01972)) |
+| Mean of the two collections | Embedding approach above BM25 | +12.5% | Derived from ([document_1.txt](https://arxiv.org/abs/1608.01972)) |
+
+The 12.5% figure is a straightforward arithmetic mean of the two reported percentages and is offered here as a summary statistic only; the source itself reports the two collection-level results independently and does not aggregate them ([document_1.txt](https://arxiv.org/abs/1608.01972)).
+
+### The full system ranking
+
+Because the comparison set contains four systems, the embedding-versus-BM25 delta is best understood within the complete ordering reported in Table 4 of the primary source ([document_1.txt](https://arxiv.org/abs/1608.01972)).
+
+**Table 2. Reported performance ordering of the four systems**
+
+| Rank | System | Basis for ranking |
+|---|---|---|
+| 1 | SEM / embedding approach | Sits above BM25 by 19% (TREC 2006) and 6% (TREC 2007) |
+| 2 | BM25 | Outperforms TFIDF and CENTROID |
+| 3 | TFIDF | Below BM25 |
+| 4 | CENTROID | Below both BM25 and the SEM approach |
+
+Both source documents agree on every row of this ordering except the direction of the topmost comparison ([document_1.txt](https://arxiv.org/abs/1608.01972); [document_2.txt](#document_2)). In particular, both confirm that BM25 outperforms TFIDF and CENTROID, and that CENTROID scores below both BM25 and the embedding approach ([document_1.txt](https://arxiv.org/abs/1608.01972); [document_2.txt](#document_2)).
+
+### Cross-collection variability
+
+The magnitude of the embedding advantage is markedly uneven across the two test collections. A 19% gain on TREC 2006 versus a 6% gain on TREC 2007 represents a roughly **threefold difference** in effect size (19 ÷ 6 ≈ 3.17) ([document_1.txt](https://arxiv.org/abs/1608.01972)). Two implications follow. First, any single-number summary of the embedding advantage — including the 12.5% mean — necessarily obscures substantial variance. Second, the result should be described as a gain somewhere in the range of 6% to 19% depending on the collection, with the higher figure attaching to TREC 2006 ([document_1.txt](https://arxiv.org/abs/1608.01972)).
+
+## Source Conflict: Appraisal and Resolution
+
+### The nature of the disagreement
+
+The two supplied documents contain numerically identical percentages attached to opposite causal claims. The primary source states that the embedding approach "boosts the average precision of BM25 by 19% and 6% on TREC 2006 and 2007, respectively" ([document_1.txt](https://arxiv.org/abs/1608.01972)). The third-party note states that "BM25 outperforms the proposed semantic-similarity (embedding) approach: BM25 raises average precision by 19% on TREC 2006 and by 6% on TREC 2007 over the embedding approach" ([document_2.txt](#document_2)).
+
+**Table 3. Comparison of the two sources on the decisive claim**
+
+| Attribute | document_1 (primary paper) | document_2 (third-party note) |
+|---|---|---|
+| Provenance | The source paper itself, Table 4, TREC Experiments section | A research note summarising the study |
+| Direction claimed | Embedding approach above BM25 | BM25 above embedding approach |
+| Magnitudes reported | 19% (2006), 6% (2007) | 19% (2006), 6% (2007) |
+| Agreement elsewhere | BM25 > TFIDF, CENTROID; CENTROID lowest | BM25 > TFIDF, CENTROID; CENTROID lowest |
+
+### Why document_1 should be preferred
+
+Three considerations support treating the primary paper as authoritative ([document_1.txt](https://arxiv.org/abs/1608.01972)). First, **proximity to the experiment**: document_1 is the report of the study itself, presenting results directly from its own Table 4, whereas document_2 is a secondary summary ([document_1.txt](https://arxiv.org/abs/1608.01972); [document_2.txt](#document_2)). Second, **internal consistency of framing**: the paper's own narrative arc — presenting a semantic measure intended to "bridge the gap" for PubMed query–document mapping — is coherent with the embedding approach improving on a lexical baseline; a finding that the proposed measure underperformed BM25 would ordinarily be framed as a negative result rather than as a boost ([document_1.txt](https://arxiv.org/abs/1608.01972)). Third, **the logic of the quoted sentence itself**: "the embedding approach boosts the average precision of BM25" is grammatically and semantically a statement that the embedding approach improves upon BM25, not the reverse ([document_1.txt](https://arxiv.org/abs/1608.01972)). The fact that document_2 reproduces the numbers exactly while inverting the subject and object of the comparison is the signature of a transposition error in summarisation rather than a genuinely divergent finding ([document_2.txt](#document_2)).
+
+## Interpretation and Significance
+
+### What a 6–19% relative gain means
+
+An improvement of 6% to 19% in average precision over a well-tuned BM25 baseline is a material result in lexical-baseline terms ([document_1.txt](https://arxiv.org/abs/1608.01972)). It indicates that a semantic similarity signal, derived from embeddings, contributes ranking information that term-matching statistics do not fully capture. Equally important, the result is not a replacement story: BM25 remains stronger than both TFIDF and CENTROID ([document_1.txt](https://arxiv.org/abs/1608.01972)), meaning that the lexical baseline is robust and that the embedding measure's value is demonstrated principally as an increment on top of it rather than as a standalone alternative to it.
+
+### The position of CENTROID
+
+One of the most informative comparisons in the evidence concerns CENTROID, which "provides scores lower than BM25 and SEM approaches" ([document_1.txt](https://arxiv.org/abs/1608.01972)). Both documents agree on this point ([document_2.txt](#document_2)). The CENTROID result is significant because it shows that simply operating in a vector space is not sufficient: a naive centroid representation of queries and documents underperforms plain term-weighting, whereas the embedding-based approach exceeds it. The differentiator is therefore the quality of the semantic representation, not the vector-space framework per se ([document_1.txt](https://arxiv.org/abs/1608.01972)).
+
+### Practical implications
+
+For practitioners building biomedical literature retrieval systems, the evidence supports a hybrid configuration: retain BM25 as the lexical backbone and layer the embedding-based semantic similarity measure on top, on the expectation of a gain in the order of 6% to 19% in average precision depending on the collection ([document_1.txt](https://arxiv.org/abs/1608.01972)). It also argues against substituting a centroid-based vector method for a lexical baseline, given CENTROID's position at the bottom of the reported ordering ([document_1.txt](https://arxiv.org/abs/1608.01972)).
+
+## Limitations
+
+Several constraints bound the conclusions above. The quantitative evidence rests on two test collections only — TREC 2006 and TREC 2007 ([document_1.txt](https://arxiv.org/abs/1608.01972)) — so the 6–19% range is demonstrated for that pair and not for PubMed retrieval in general. The reported figures are relative gains, and no absolute average precision values are provided in the available material, which limits assessment of practical effect size ([document_1.txt](https://arxiv.org/abs/1608.01972)). The evidence is also drawn from a single archival paper whose results are relayed here through a section summary rather than the full table ([document_1.txt](https://arxiv.org/abs/1608.01972)). Finally, the directional conflict in the secondary source introduces a documented risk of citation error that downstream users should actively guard against ([document_2.txt](#document_2)).
+
+## Conclusion
+
+Answered directly: the embedding-based semantic similarity measure outperforms BM25 by **19% in average precision on TREC 2006** and by **6% on TREC 2007**, for a two-collection mean relative gain of approximately **12.5%** ([document_1.txt](https://arxiv.org/abs/1608.01972)). In the broader four-system comparison, the reported ordering is embedding approach > BM25 > TFIDF > CENTROID, with CENTROID scoring below both BM25 and the semantic approach ([document_1.txt](https://arxiv.org/abs/1608.01972)). The competing third-party note asserts the opposite direction for the same numbers ([document_2.txt](#document_2)); on the balance of provenance, textual logic, and internal consistency, that note is best read as having transposed the comparison, and the primary paper's framing should be treated as authoritative ([document_1.txt](https://arxiv.org/abs/1608.01972)).
+
+## References
+
+document_1.txt. (2016). *Bridging the gap: Incorporating a semantic similarity measure for effectively mapping PubMed queries to documents* (arXiv:1608.01972), Section: TREC Experiments. arXiv. https://arxiv.org/abs/1608.01972
+
+document_2.txt. (n.d.). *Third-party research note: PubMed query-document mapping* [Unpublished research note].

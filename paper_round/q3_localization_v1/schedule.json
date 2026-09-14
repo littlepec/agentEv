@@ -1,0 +1,50 @@
+[
+  {
+    "round": 1,
+    "cond": "Eshort_NONE"
+  },
+  {
+    "round": 1,
+    "cond": "Eshort_L"
+  },
+  {
+    "round": 1,
+    "cond": "Eshort_LP"
+  },
+  {
+    "round": 1,
+    "cond": "Eplus_LP"
+  },
+  {
+    "round": 1,
+    "cond": "Eplus_L"
+  },
+  {
+    "round": 1,
+    "cond": "Eplus_NONE"
+  },
+  {
+    "round": 2,
+    "cond": "Eplus_LP"
+  },
+  {
+    "round": 2,
+    "cond": "Eshort_L"
+  },
+  {
+    "round": 2,
+    "cond": "Eplus_NONE"
+  },
+  {
+    "round": 2,
+    "cond": "Eshort_LP"
+  },
+  {
+    "round": 2,
+    "cond": "Eshort_NONE"
+  },
+  {
+    "round": 2,
+    "cond": "Eplus_L"
+  }
+]

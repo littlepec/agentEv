@@ -1,0 +1,65 @@
+{
+  "frozen_role_sha256": "d334e6888d2ddc5a36117025d32189dd42ec651ba396408ec469308ec9fdf0c1",
+  "E_sha": "609111c5bac46a6a8eb7d1b9f9e4179cdb6a84fcc0c494c209f066f9aafb15df",
+  "L_sha": "58319c6a857eb7806bf7f2e8cbe39e63c3163b94feea95699a2d31a53947698b",
+  "LP_sha": "421b2c86d9257948f8350d8971138549063a494abff87e785bde7afba633277d",
+  "E_plus_sha": "cdc50c740974785dc1d75e855ddf28fc0110d6827afac0a70e8b181a28c7aa2a",
+  "supplement_sha": "e75b35c4909f7b734bd165d2a66570643d84732c5d395024b0c3c8fa18bd8b84",
+  "supplement_source": "ar5iv 1608.01972v2 (Table 2/3, S3.3/S3.4)",
+  "version_note": "historical E cites 'Table 4' (unversioned id); supplement is v2 'Table 2'; direction consistent across versions",
+  "model": "deepseek-v4-flash",
+  "endpoint": "https://api.deepseek.com",
+  "temperature": 0.4,
+  "max_tokens": 8192,
+  "conditions": {
+    "Eshort_NONE": {
+      "user_sha256": "32957cad349cfd9c37c791e2a71de7403be2cb1037a7552592aab6ad3bd3dabc",
+      "user_len": 4070,
+      "messages_sha256": "207164c8c55bb93179de4e3245c8e76879a28173c1c14b74549da83be0018875",
+      "doc2": "NONE",
+      "Evariant": "E_short",
+      "leak_terms": []
+    },
+    "Eshort_L": {
+      "user_sha256": "ce67fa0fc1e7ddc57fed1768fc03cb334976228eaf5d1e3d2225a81034f6d3f4",
+      "user_len": 5742,
+      "messages_sha256": "03dfce171ef17f62cfacf7c81c5e7c19bf869d27904bc838dc8be67c8bbe9b41",
+      "doc2": "L",
+      "Evariant": "E_short",
+      "leak_terms": []
+    },
+    "Eshort_LP": {
+      "user_sha256": "c4385781f789dc49b47707e4837a5da0e4466b4def82ff3c863d1b6d8b2e03eb",
+      "user_len": 5814,
+      "messages_sha256": "4bfa3fce70fd432f61366ca192be7d83044453aa63e7e03a4a255a0b54ee52a4",
+      "doc2": "LP",
+      "Evariant": "E_short",
+      "leak_terms": []
+    },
+    "Eplus_NONE": {
+      "user_sha256": "4409a7dfcae1ab16d070a0663a01a96fc972f3a45dde039e0f7a03f594ecb87e",
+      "user_len": 6762,
+      "messages_sha256": "4e96cdeb38dbdf18fb701c18d7736bc716756fb10a2d17408c5fde7948a196c0",
+      "doc2": "NONE",
+      "Evariant": "E_plus",
+      "leak_terms": []
+    },
+    "Eplus_L": {
+      "user_sha256": "004f4a7405e0e46ee5c584ba82b4754c2230fe85d06e739abfa888db5f2e7e71",
+      "user_len": 8434,
+      "messages_sha256": "34df3953c6188765aebe0e1c4ce18819dc048832edd11320b18865f16051f4b0",
+      "doc2": "L",
+      "Evariant": "E_plus",
+      "leak_terms": []
+    },
+    "Eplus_LP": {
+      "user_sha256": "0a2ce2492ee7a63ad7a2d04e676c49cb1eef85a732a356b758926e51ae2f82e5",
+      "user_len": 8506,
+      "messages_sha256": "eab893724ae4d45626c7c335665a2bb35310dd6fb50be2d02e45ad810412c8e8",
+      "doc2": "LP",
+      "Evariant": "E_plus",
+      "leak_terms": []
+    }
+  },
+  "leak_check": "PASS"
+}

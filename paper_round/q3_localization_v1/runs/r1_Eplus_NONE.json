@@ -1,0 +1,22 @@
+{
+  "cell": "r1_Eplus_NONE",
+  "round": 1,
+  "cond": "Eplus_NONE",
+  "messages_sha256": "4e96cdeb38dbdf18fb701c18d7736bc716756fb10a2d17408c5fde7948a196c0",
+  "model_req": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 8192,
+  "ts": "2026-09-14T19:43:49",
+  "ok": true,
+  "finish_reason": "length",
+  "model_returned": "deepseek-flash",
+  "request_id": "4b8aacc5-3280-47a3-9c64-f103033da930",
+  "prompt_tokens": 1883,
+  "completion_tokens": 8192,
+  "cost_usd": 0.010395,
+  "answer": "# Quantifying the Outperformance of an Embedding-Based Semantic Similarity Measure over BM25\n\n## Introduction\n\nThe question of how much a semantic embedding approach outperforms BM25 is central to information retrieval research that seeks to bridge lexical and semantic matching. The provided source, *Bridging the Gap: Incorporating a Semantic Similarity Measure for Effectively Mapping PubMed Queries to Documents* (arXiv:1608.01972), offers direct quantitative evidence from",
+  "answer_len": 477,
+  "reasoning_len": 31709,
+  "elapsed_s": 34.3,
+  "ledger": true
+}
