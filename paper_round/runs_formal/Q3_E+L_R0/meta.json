@@ -1,0 +1,22 @@
+{
+  "cell": "Q3_E+L_R0",
+  "task": "Q3",
+  "condition": "E+L",
+  "arm": "R0",
+  "curate_sources": "false",
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "prompt_tokens": 1943,
+  "completion_tokens": 5701,
+  "deepseek_cost_usd": 0.007424,
+  "report_chars": 11508,
+  "curation_state": null,
+  "no_evidence_after_curation": null,
+  "elapsed_s": 35.5,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract",
+  "model": "deepseek-v4-flash"
+}

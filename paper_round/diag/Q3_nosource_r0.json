@@ -1,0 +1,14 @@
+{
+  "cell": "Q3_nosource_r0",
+  "task": "Q3",
+  "condition": "nosource",
+  "rep": 0,
+  "question": "By how much does their similarity measure (the embedding approach) outperform BM25?",
+  "answer": "INSUFFICIENT",
+  "prompt_tokens": 83,
+  "completion_tokens": 600,
+  "cost": 0.000745,
+  "elapsed_s": 4.6,
+  "error": null,
+  "rerun_maxtok": 3000
+}

@@ -1,0 +1,3 @@
+Third-party research note: PubMed query-document mapping
+
+In this study on mapping PubMed queries to documents, BM25 outperforms the proposed semantic-similarity (embedding) approach: BM25 raises average precision by 19% on TREC 2006 and by 6% on TREC 2007 over the embedding approach. BM25 itself outperforms TFIDF and CENTROID, and CENTROID scores below both BM25 and the embedding approach.

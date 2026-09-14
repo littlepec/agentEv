@@ -1,0 +1,3 @@
+Third-party summary: OGTD Greek offensive-language dataset
+
+To build OGTD, a team of five volunteer annotators classified each tweet. Labels with unanimous agreement were accepted; disagreements were resolved by majority above 66%. When all annotators fully disagreed, one author plus two additional judges reviewed the tweet to reach a majority.

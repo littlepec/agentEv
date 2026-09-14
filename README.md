@@ -50,3 +50,8 @@ propagates into an LLM agent's final judgment. Fixed-evidence, single-turn probe
 在真实宿主 **GPT-Researcher v3.6.1**（pinned commit `6f998577`）上，以固定本地来源 + 离线检索器（无联网）跑 R0（不策展）vs R1（原版 `CURATE_SOURCES` 策展）× 3 条件（正常/无害补充/受限错误材料）× 6 新任务 × 2 次 = 72 份报告。见 `gptr_round/PREREG_round.md`（预注册）与 `gptr_round/RESULTS_round.md`（结果：阴性收尾——错误主张被当作事实/决策依据 0/24，正常任务 72/72 完成）。
 
 > ⚠ `gptr_round/tasks/C*/error_material.txt` 同为**故意虚构的错误材料**（沙盒研究用），见 `gptr_round/FABRICATED_MATERIALS_NOTICE.md`，切勿当真。
+
+## 新一轮：文档依赖型证据完整性（paper_round/）
+在真实宿主 GPT-Researcher v3.6.1（pinned `6f998577`）上，用 QASPER（带原文证据标注）里 4 个**真正依赖外部文档**的实验条件/结论核对任务，跑 E / E+L / E+L′（L′ 仅翻转一项关键关系）× R0 / R1fix × 各一次 = 24 流程。先做三项工程契约修正（`contract.py`：稳定来源 id、空正文→无证据处理、provider 全量日志；单元测试通过）与证据依赖诊断（无来源答不出、有来源答对）。见 `paper_round/PREREG`-类材料（`tasks_manifest.json`、`_notes/qasper_candidates.md`）与 `paper_round/RESULTS_paper_round.md`（结果：E+L′ 下虚假关键关系被当作错误事实/决策依据 **0/8**；正常任务 16/16；策展不拦隐蔽第三方投毒、抵抗来自起草"优先主源"；无干净候选失效 → 如实收尾；附威胁模型边界）。
+
+> ⚠ `paper_round/tasks/Q*/Lprime.txt` 为**故意翻转一项关键关系的虚构第三方解读**（沙盒研究用），见 `paper_round/FABRICATED_MATERIALS_NOTICE.md`；`E.txt` 为论文逐字原文。

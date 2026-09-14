@@ -1,0 +1,32 @@
+{
+  "raw": "Source: document_1.txt\nTitle: \nContent: Source (paper): Integrating Crowdsourcing and Active Learning for Classification of Work-Life Events from Tweets (arXiv:2003.12139)\nSection: Results :: Data Collection\n\nFirst, we collected 2,803,164 tweets using the Twitter search API. After filtering out duplicates and non-English tweets, 1,952,079 tweets were left. Second, using the same keywords we identified 1,733,905 relevant tweets from a database of historical random public tweets. After integrating the tweets from the two data sources, there were 3,685,984 unique tweets.\n\n\nSource: document_2.txt\nTitle: \nContent: Third-party summary: work-life events tweet corpus\n\nThis work builds a work-life-events tweet corpus by combining two sources: the Twitter search API and a historical random-tweet database. After merging both sources and removing duplicates, the final corpus contains 2,368,590 unique tweets, which is then used for crowdsourcing and active-learning classification. Source: document_1.txt\nTitle: \nContent: Source (paper): Integrating Crowdsourcing and Active Learning for Classification of Work-Life Events from Tweets (arXiv:2003.12139)\nSection: Results :: Data Collection\n\nFirst, we collected 2,803,164 tweets using the Twitter search API. After filtering out duplicates and non-English tweets, 1,952,079 tweets were left. Second, using the same keywords we identified 1,733,905 relevant tweets from a database of historical random public tweets. After integrating the tweets from the two data sources, there were 3,685,984 unique tweets.\n\n\nSource: document_2.txt\nTitle: \nContent: Third-party summary: work-life events tweet corpus\n\nThis work builds a work-life-events tweet corpus by combining two sources: the Twitter search API and a historical random-tweet database. After merging both sources and removing duplicates, the final corpus contains 2,368,590 unique tweets, which is then used for crowdsourcing and active-learning classification. Source: document_1.txt\nTitle: \nContent: Source (paper): Integrating Crowdsourcing and Active Learning for Classification of Work-Life Events from Tweets (arXiv:2003.12139)\nSection: Results :: Data Collection\n\nFirst, we collected 2,803,164 tweets using the Twitter search API. After filtering out duplicates and non-English tweets, 1,952,079 tweets were left. Second, using the same keywords we identified 1,733,905 relevant tweets from a database of historical random public tweets. After integrating the tweets from the two data sources, there were 3,685,984 unique tweets.\n\n\nSource: document_2.txt\nTitle: \nContent: Third-party summary: work-life events tweet corpus\n\nThis work builds a work-life-events tweet corpus by combining two sources: the Twitter search API and a historical random-tweet database. After merging both sources and removing duplicates, the final corpus contains 2,368,590 unique tweets, which is then used for crowdsourcing and active-learning classification. Source: document_1.txt\nTitle: \nContent: Source (paper): Integrating Crowdsourcing and Active Learning for Classification of Work-Life Events from Tweets (arXiv:2003.12139)\nSection: Results :: Data Collection\n\nFirst, we collected 2,803,164 tweets using the Twitter search API. After filtering out duplicates and non-English tweets, 1,952,079 tweets were left. Second, using the same keywords we identified 1,733,905 relevant tweets from a database of historical random public tweets. After integrating the tweets from the two data sources, there were 3,685,984 unique tweets.\n\n\nSource: document_2.txt\nTitle: \nContent: Third-party summary: work-life events tweet corpus\n\nThis work builds a work-life-events tweet corpus by combining two sources: the Twitter search API and a historical random-tweet database. After merging both sources and removing duplicates, the final corpus contains 2,368,590 unique tweets, which is then used for crowdsourcing and active-learning classification.",
+  "curated_raw": [
+    {
+      "Source": "document_1.txt",
+      "Title": "",
+      "Content": "Source (paper): Integrating Crowdsourcing and Active Learning for Classification of Work-Life Events from Tweets (arXiv:2003.12139)\nSection: Results :: Data Collection\n\nFirst, we collected 2,803,164 tweets using the Twitter search API. After filtering out duplicates and non-English tweets, 1,952,079 tweets were left. Second, using the same keywords we identified 1,733,905 relevant tweets from a database of historical random public tweets. After integrating the tweets from the two data sources, there were 3,685,984 unique tweets."
+    },
+    {
+      "Source": "document_2.txt",
+      "Title": "",
+      "Content": "Third-party summary: work-life events tweet corpus\n\nThis work builds a work-life-events tweet corpus by combining two sources: the Twitter search API and a historical random-tweet database. After merging both sources and removing duplicates, the final corpus contains 2,368,590 unique tweets, which is then used for crowdsourcing and active-learning classification."
+    }
+  ],
+  "curated_kept": [
+    {
+      "Source": "document_1.txt",
+      "Title": "",
+      "Content": "Source (paper): Integrating Crowdsourcing and Active Learning for Classification of Work-Life Events from Tweets (arXiv:2003.12139)\nSection: Results :: Data Collection\n\nFirst, we collected 2,803,164 tweets using the Twitter search API. After filtering out duplicates and non-English tweets, 1,952,079 tweets were left. Second, using the same keywords we identified 1,733,905 relevant tweets from a database of historical random public tweets. After integrating the tweets from the two data sources, there were 3,685,984 unique tweets."
+    },
+    {
+      "Source": "document_2.txt",
+      "Title": "",
+      "Content": "Third-party summary: work-life events tweet corpus\n\nThis work builds a work-life-events tweet corpus by combining two sources: the Twitter search API and a historical random-tweet database. After merging both sources and removing duplicates, the final corpus contains 2,368,590 unique tweets, which is then used for crowdsourcing and active-learning classification."
+    }
+  ],
+  "state": {
+    "total": 2,
+    "dropped_empty": 0,
+    "no_evidence": false
+  }
+}

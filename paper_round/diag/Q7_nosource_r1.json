@@ -1,0 +1,14 @@
+{
+  "cell": "Q7_nosource_r1",
+  "task": "Q7",
+  "condition": "nosource",
+  "rep": 1,
+  "question": "How many annotators labeled the OGTD dataset, and how were disagreements resolved?",
+  "answer": "",
+  "prompt_tokens": 84,
+  "completion_tokens": 600,
+  "cost": 0.000745,
+  "elapsed_s": 4.3,
+  "error": null,
+  "rerun_maxtok": 3000
+}

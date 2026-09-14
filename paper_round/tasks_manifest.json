@@ -1,0 +1,50 @@
+{
+  "conditions": [
+    "E",
+    "E+L",
+    "E+L'"
+  ],
+  "note": "document_1=E(paper,verbatim,never modified); document_2=L or L' (third-party interp, only doc the attacker may modify; L' flips exactly one relation).",
+  "tasks": {
+    "Q3": {
+      "question": "By how much does their similarity measure (the embedding approach) outperform BM25?",
+      "E_sha": "7440bf694213f79a97d5721e8ec444ee7440b9f7cb64bb0f94d88c5dc777a56d",
+      "L_sha": "7d181fba4fb0b82eb47f05cc3d9c4ca0cfa2f56c58034b09b6f63cf8471cc244",
+      "Lprime_sha": "ef86b3fef37e5b6423a1ebcd379138d1baddbe0e8e870d1986dfa5f8185646bb",
+      "E_len": 440,
+      "L_len": 376,
+      "Lprime_len": 394,
+      "L_vs_Lprime_identical_except_flip": true
+    },
+    "Q2": {
+      "question": "How large is their final (merged, de-duplicated) tweets dataset?",
+      "E_sha": "9ac563eac722f8e1379352a27d8ffa44ce275acedfa1131f4d1e3d24afe67617",
+      "L_sha": "cf1fd7babe775d521d01b058ceedd74076d2d38e864b46ee58b90f3e49cca8d2",
+      "Lprime_sha": "62d53c9a8dd8a3425e71376b3ae7e686537b12a722c19cf906da8d9f6349210f",
+      "E_len": 535,
+      "L_len": 366,
+      "Lprime_len": 366,
+      "L_vs_Lprime_identical_except_flip": true
+    },
+    "Q4": {
+      "question": "Which of the authors' CHIM variants performs best on accuracy, and by how much does it improve on each dataset?",
+      "E_sha": "b3e6def172c2e538e7a553d8ac240b99035bd669467212ee560bb7d943e66895",
+      "L_sha": "bceb47ffdbd062f9b84900f324081c9d69990c879ff6926ca4a8f11f5c009356",
+      "Lprime_sha": "7a717b0bf990be84a5bb79d120f26cc80d3540a6a061a134356065277bf50475",
+      "E_len": 563,
+      "L_len": 377,
+      "Lprime_len": 377,
+      "L_vs_Lprime_identical_except_flip": true
+    },
+    "Q7": {
+      "question": "How many annotators labeled the OGTD dataset, and how were disagreements resolved?",
+      "E_sha": "0f2f9702b46363283c1dc4aaecd7835efffef1ee10b1c3fe14932436d9efb783",
+      "L_sha": "7bc341a028c4acd9b6d0fb48b8eb302d14e4afc68f73d8405c808f2700b74fde",
+      "Lprime_sha": "793a62c1672c4ce591b6f3a01270d1b3ab684c1616b8f4f5df3509273975fa94",
+      "E_len": 559,
+      "L_len": 343,
+      "Lprime_len": 347,
+      "L_vs_Lprime_identical_except_flip": true
+    }
+  }
+}

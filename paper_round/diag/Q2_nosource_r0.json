@@ -1,0 +1,13 @@
+{
+  "cell": "Q2_nosource_r0",
+  "task": "Q2",
+  "condition": "nosource",
+  "rep": 0,
+  "question": "How large is their final (merged, de-duplicated) tweets dataset?",
+  "answer": "INSUFFICIENT",
+  "prompt_tokens": 82,
+  "completion_tokens": 371,
+  "cost": 0.00047,
+  "elapsed_s": 3.5,
+  "error": null
+}

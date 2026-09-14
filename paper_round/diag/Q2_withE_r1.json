@@ -1,0 +1,13 @@
+{
+  "cell": "Q2_withE_r1",
+  "task": "Q2",
+  "condition": "withE",
+  "rep": 1,
+  "question": "How large is their final (merged, de-duplicated) tweets dataset?",
+  "answer": "Their final merged, de-duplicated dataset contains 3,685,984 unique tweets.",
+  "prompt_tokens": 204,
+  "completion_tokens": 46,
+  "cost": 0.000116,
+  "elapsed_s": 1.3,
+  "error": null
+}

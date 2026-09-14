@@ -1,0 +1,13 @@
+{
+  "cell": "Q7_withE_r0",
+  "task": "Q7",
+  "condition": "withE",
+  "rep": 0,
+  "question": "How many annotators labeled the OGTD dataset, and how were disagreements resolved?",
+  "answer": "Three volunteers initially labeled the OGTD dataset. Disagreements were resolved by selecting labels with majority agreement above 66%; for complete disagreements, one author reviewed the tweets with two extra human judges to reach that same majority threshold.",
+  "prompt_tokens": 200,
+  "completion_tokens": 213,
+  "cost": 0.000316,
+  "elapsed_s": 2.1,
+  "error": null
+}

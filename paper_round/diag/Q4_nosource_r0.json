@@ -1,0 +1,14 @@
+{
+  "cell": "Q4_nosource_r0",
+  "task": "Q4",
+  "condition": "nosource",
+  "rep": 0,
+  "question": "Which of the authors' CHIM variants performs best on accuracy, and by how much does it improve on each dataset?",
+  "answer": "INSUFFICIENT",
+  "prompt_tokens": 91,
+  "completion_tokens": 600,
+  "cost": 0.000747,
+  "elapsed_s": 3.7,
+  "error": null,
+  "rerun_maxtok": 3000
+}

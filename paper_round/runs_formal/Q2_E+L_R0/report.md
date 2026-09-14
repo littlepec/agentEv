@@ -1,0 +1,81 @@
+# Final Merged and De-Duplicated Tweet Dataset Size: Evidence and Analysis
+
+## Introduction
+
+This report answers the query, “How large is their final (merged, de-duplicated) tweets dataset?” The short answer is that the final dataset contains **3,685,984 unique tweets**. This figure is reported in the primary paper’s Results :: Data Collection section and is corroborated by a third-party summary of the same work ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139); [Third-Party Summary, n.d.](document_2.txt)). The primary source describes a two-stage data collection process: first, tweets were collected through the Twitter search API; second, relevant tweets were identified from a historical database of random public tweets. After integrating the two sources, the authors report a final total of 3,685,984 unique tweets ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). The third-party summary independently states that the final corpus contains 3,685,984 unique tweets and that this corpus is used for crowdsourcing and active-learning classification ([Third-Party Summary, n.d.](document_2.txt)). Because the two sources agree on the final number, and because the primary source provides the component counts, the answer can be stated with high confidence within the limits of the provided information.
+
+## Primary Finding: Final Dataset Size
+
+The final merged, de-duplicated dataset is **3,685,984 unique tweets** ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). This number appears in the Results :: Data Collection section of the paper “Integrating Crowdsourcing and Active Learning for Classification of Work-Life Events from Tweets” (arXiv:2003.12139) ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). The third-party summary describes the same corpus as follows: “After merging both sources and removing duplicates, the final corpus contains 3,685,984 unique tweets, which is then used for crowdsourcing and active-learning classification” ([Third-Party Summary, n.d.](document_2.txt)). Therefore, the final dataset size is not ambiguous in the provided materials: it is 3,685,984 tweets after merging and de-duplication.
+
+## Data Collection Pipeline
+
+### Source 1: Twitter Search API
+
+The first data source was the Twitter search API. The authors collected **2,803,164 tweets** using this API ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). After filtering out duplicates and non-English tweets, **1,952,079 tweets** remained ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). This means that 851,085 tweets were removed at this stage, calculated as 2,803,164 minus 1,952,079 ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). The retained proportion from the initial API collection is approximately 69.64%, while the removed proportion is approximately 30.36%; these percentages are derived from the reported counts ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)).
+
+### Source 2: Historical Random Public Tweet Database
+
+The second data source was a database of historical random public tweets. Using the same keywords as those used for the Twitter search API, the authors identified **1,733,905 relevant tweets** from that database ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). The primary source describes these as “relevant tweets,” indicating that keyword matching was applied to the historical database ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). The provided information does not describe additional filtering of this historical database beyond the identification of relevant tweets, nor does it specify the time period, keyword list, or language distribution of this source ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)).
+
+### Integration and De-Duplication
+
+After integrating the tweets from the two data sources, the authors report that there were **3,685,984 unique tweets** ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). The third-party summary characterizes this step as “merging both sources and removing duplicates,” which confirms that the final number is a de-duplicated total ([Third-Party Summary, n.d.](document_2.txt)). The primary source uses the term “unique tweets” for the integrated total, which further supports the interpretation that duplicates were removed at or before this stage ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)).
+
+## Arithmetic Verification and Internal Consistency
+
+A simple arithmetic check shows that 1,952,079 plus 1,733,905 equals 3,685,984 ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). This exact sum matches the reported final unique count ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). The equality is noteworthy because if cross-source duplicate tweets had been present and removed during integration, the final unique count would usually be lower than the sum of the two source counts. The provided sources do not explicitly state whether cross-source duplicates existed or how they were resolved, but the reported numbers are internally consistent ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139); [Third-Party Summary, n.d.](document_2.txt)).
+
+### Table 1. Reported Tweet Counts by Data Collection Stage
+
+| Stage | Count | Description | Source |
+|---|---:|---|---|
+| Initial collection via Twitter search API | 2,803,164 | Tweets collected using the Twitter search API | ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)) |
+| After filtering duplicates and non-English tweets | 1,952,079 | Remaining tweets from the API source after cleaning | ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)) |
+| Relevant tweets from historical random public tweets database | 1,733,905 | Tweets identified using the same keywords | ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)) |
+| Final integrated unique tweets | 3,685,984 | Merged, de-duplicated corpus | ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139); [Third-Party Summary, n.d.](document_2.txt)) |
+
+### Table 2. Proportional Composition of the Final Dataset
+
+| Source component | Count | Approximate share of final dataset | Source |
+|---|---:|---:|---|
+| Twitter Search API after cleaning | 1,952,079 | 52.96% | ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)) |
+| Historical random public tweets database | 1,733,905 | 47.04% | ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)) |
+| Final merged, de-duplicated corpus | 3,685,984 | 100% | ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139); [Third-Party Summary, n.d.](document_2.txt)) |
+
+The percentages in Table 2 are calculated from the reported counts and are not directly reported in the primary source ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). They show that the final corpus is nearly evenly split between the two data sources, with the Twitter search API contributing slightly more than half of the final unique tweets.
+
+### Table 3. Reduction Arithmetic from Raw Collection to Final Corpus
+
+| Metric | Calculation | Result | Source |
+|---|---:|---:|---|
+| Raw combined pre-filter total | 2,803,164 + 1,733,905 | 4,537,069 | ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)) |
+| Removed from Twitter Search API source | 2,803,164 − 1,952,079 | 851,085 | ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)) |
+| Final unique corpus | 4,537,069 − 851,085 | 3,685,984 | ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)) |
+| Reported final unique corpus | — | 3,685,984 | ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139); [Third-Party Summary, n.d.](document_2.txt)) |
+
+The arithmetic in Table 3 shows that the final unique total equals the raw combined collection minus the number of tweets removed during the Twitter search API cleaning stage ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). This is consistent with the possibility that no additional cross-source duplicates were removed, or that any such duplicates were already accounted for in the reported source counts. However, the sources do not explicitly explain this point, so the observation should be treated as an arithmetic consistency check rather than a definitive methodological claim ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139); [Third-Party Summary, n.d.](document_2.txt)).
+
+## Source Reliability and Corroboration
+
+The primary source for the dataset size is the paper itself, specifically the Results :: Data Collection section ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). This source provides the detailed component counts: 2,803,164 tweets collected via the Twitter search API, 1,952,079 remaining after duplicate and non-English filtering, 1,733,905 relevant tweets from the historical random public tweets database, and 3,685,984 unique tweets after integration ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). The third-party summary is a secondary source, but it independently states the same final corpus size and describes the corpus as being used for crowdsourcing and active-learning classification ([Third-Party Summary, n.d.](document_2.txt)). The consistency between the primary and secondary sources strengthens confidence in the 3,685,984 figure ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139); [Third-Party Summary, n.d.](document_2.txt)).
+
+The primary source is an arXiv preprint, which may not have undergone formal peer review, but within the provided documents it is the authoritative source for the data collection details ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). The third-party summary is derivative and does not add new counts, but it is useful for corroboration and for confirming the intended use of the final corpus ([Third-Party Summary, n.d.](document_2.txt)). There is no conflicting number in the provided information. For the specific question of final dataset size, the primary source should be prioritized for the detailed breakdown, while the third-party summary can be used as a cross-check ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139); [Third-Party Summary, n.d.](document_2.txt)).
+
+## Significance of the Dataset Size
+
+A final corpus of 3,685,984 unique tweets is a large-scale dataset for a tweet-classification task ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). The corpus combines tweets collected through a targeted Twitter search API with tweets identified from a historical random public tweets database ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). This dual-source strategy likely increases coverage of work-life events compared with a single-source collection, although the provided information does not report coverage estimates or event distributions ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). The third-party summary states that the final corpus is used for crowdsourcing and active-learning classification, which means the dataset serves as the input pool for annotation and model training ([Third-Party Summary, n.d.](document_2.txt)). In active-learning settings, a large pool of unlabeled examples is valuable because the learning algorithm can select informative instances for human annotation, and crowdsourcing can then provide labels for those selected instances ([Third-Party Summary, n.d.](document_2.txt)). The reported size of 3,685,984 tweets is therefore central to the study’s methodological design, even though the provided information does not include details about class balance, annotation volume, or model performance ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139); [Third-Party Summary, n.d.](document_2.txt)).
+
+## Limitations and Caveats
+
+Several caveats should be noted. The available information is limited to the Results :: Data Collection section of the primary paper and a third-party summary ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139); [Third-Party Summary, n.d.](document_2.txt)). It does not specify the keywords used, the time period covered, the exact language-detection method, or the precise procedure for cross-source de-duplication ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). The final count should therefore be treated as the reported count from the primary source, corroborated by the secondary source ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139); [Third-Party Summary, n.d.](document_2.txt)). The exact arithmetic sum of the two cleaned source counts equals the final unique total, which suggests no cross-source duplicates in the reported figures, but this is an inference rather than an explicit statement in the sources ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). The third-party summary says duplicates were removed, but it does not give a before-and-after count for that step ([Third-Party Summary, n.d.](document_2.txt)). Therefore, the most defensible answer to the query is the reported final unique count: 3,685,984 tweets ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139); [Third-Party Summary, n.d.](document_2.txt)).
+
+## Conclusion
+
+The final merged, de-duplicated tweets dataset contains **3,685,984 unique tweets** ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). This figure is reported in the primary paper’s Results :: Data Collection section and is corroborated by the third-party summary ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139); [Third-Party Summary, n.d.](document_2.txt)). The data collection pipeline can be summarized as follows: 2,803,164 tweets were collected via the Twitter search API; 1,952,079 remained after filtering duplicates and non-English tweets; 1,733,905 relevant tweets were identified from a historical random public tweets database; and after integrating the two sources, 3,685,984 unique tweets remained ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). The sum of the two cleaned source counts, 1,952,079 and 1,733,905, equals the final unique total exactly ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139)). Thus, the answer to the query is 3,685,984 unique tweets, and this number is consistent across the available sources ([Integrating Crowdsourcing and Active Learning, 2020](https://arxiv.org/abs/2003.12139); [Third-Party Summary, n.d.](document_2.txt)).
+
+## References
+
+Integrating crowdsourcing and active learning for classification of work-life events from tweets (arXiv:2003.12139). (2020). Document_1.txt. https://arxiv.org/abs/2003.12139
+
+Third-party summary: Work-life events tweet corpus. (n.d.). Document_2.txt.

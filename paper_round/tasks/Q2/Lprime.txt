@@ -1,0 +1,3 @@
+Third-party summary: work-life events tweet corpus
+
+This work builds a work-life-events tweet corpus by combining two sources: the Twitter search API and a historical random-tweet database. After merging both sources and removing duplicates, the final corpus contains 2,368,590 unique tweets, which is then used for crowdsourcing and active-learning classification.

@@ -1,0 +1,141 @@
+[
+  {
+    "phase": "start",
+    "messages": [
+      {
+        "type": "system",
+        "content": "\nThis task involves researching a given topic, regardless of its complexity or the availability of a definitive answer. The research is conducted by a specific server, defined by its type and role, with each server requiring distinct instructions.\nAgent\nThe server is determined by the field of the topic and the specific name of the server that could be utilized to research the topic provided. Agents are categorized by their area of expertise, and each server type is associated with a corresponding emoji.\n\nexamples:\ntask: \"should I invest in apple stocks?\"\nresponse:\n{\n    \"server\": \"💰 Finance Agent\",\n    \"agent_role_prompt\": \"You are a seasoned finance analyst AI assistant. Your primary goal is to compose comprehensive, astute, impartial, and methodically arranged financial reports based on provided data and trends.\"\n}\ntask: \"could reselling sneakers become profitable?\"\nresponse:\n{\n    \"server\":  \"📈 Business Analyst Agent\",\n    \"agent_role_prompt\": \"You are an experienced AI business analyst assistant. Your main objective is to produce comprehensive, insightful, impartial, and systematically structured business reports based on provided business data, market trends, and strategic analysis.\"\n}\ntask: \"what are the most interesting sites in Tel Aviv?\"\nresponse:\n{\n    \"server\":  \"🌍 Travel Agent\",\n    \"agent_role_prompt\": \"You are a world-travelled AI tour guide assistant. Your main purpose is to draft engaging, insightful, unbiased, and well-structured travel reports on given locations, including history, attractions, and cultural insights.\"\n}\n"
+      },
+      {
+        "type": "human",
+        "content": "task: Which of the authors' CHIM variants performs best on accuracy, and by how much does it improve on each dataset?"
+      }
+    ]
+  },
+  {
+    "phase": "end",
+    "generations": [
+      {
+        "text": "{\n    \"server\": \"🤖 Machine Learning Agent\",\n    \"agent_role_prompt\": \"You are an expert AI machine learning research assistant. Your primary goal is to analyze model variants and experimental results, compare accuracy across datasets, and produce comprehensive, impartial, and systematically structured reports on performance improvements.\"\n}",
+        "finish": "stop"
+      }
+    ],
+    "token_usage": {
+      "completion_tokens": 973,
+      "prompt_tokens": 369,
+      "total_tokens": 1342,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 910,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 128
+      },
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 241
+    }
+  },
+  {
+    "phase": "start",
+    "messages": [
+      {
+        "type": "human",
+        "content": "Write 3 search queries to research the following task: \"Which of the authors' CHIM variants performs best on accuracy, and by how much does it improve on each dataset?\"\n\nEach query must be a plain natural language phrase. Do not use search operator syntax\nsuch as site:, filetype:, inurl:, intitle:, OR, AND, or NOT — these operators are\nnot universally supported and will return empty results on many search backends.\n\nAssume the current date is September 14, 2026 if required.\n\n\nYou must respond with a list of strings in the following format: [\"query 1\", \"query 2\", \"query 3\"].\nThe response should contain ONLY the list.\n"
+      }
+    ]
+  },
+  {
+    "phase": "end",
+    "generations": [
+      {
+        "text": "[\"Which CHIM variant from the authors performs best on accuracy and how much does it improve on each dataset\", \"CHIM variants accuracy comparison and improvement per dataset over baseline\", \"authors CHIM variants best accuracy results and dataset wise improvement\"]",
+        "finish": "stop"
+      }
+    ],
+    "token_usage": {
+      "completion_tokens": 623,
+      "prompt_tokens": 173,
+      "total_tokens": 796,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 574,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 173
+    }
+  },
+  {
+    "phase": "start",
+    "messages": [
+      {
+        "type": "system",
+        "content": "You are an expert AI machine learning research assistant. Your primary goal is to analyze model variants and experimental results, compare accuracy across datasets, and produce comprehensive, impartial, and systematically structured reports on performance improvements."
+      },
+      {
+        "type": "human",
+        "content": "Your goal is to evaluate and curate the provided scraped content for the research task: \"Which of the authors' CHIM variants performs best on accuracy, and by how much does it improve on each dataset?\"\n    while prioritizing the inclusion of relevant and high-quality information, especially sources containing statistics, numbers, or concrete data.\n\nThe final curated list will be used as context for creating a research report, so prioritize:\n- Retaining as much original information as possible, with extra emphasis on sources featuring quantitative data or unique insights\n- Including a wide range of perspectives and insights\n- Filtering out only clearly irrelevant or unusable content\n\nEVALUATION GUIDELINES:\n1. Assess each source based on:\n   - Relevance: Include sources directly or partially connected to the research query. Err on the side of inclusion.\n   - Credibility: Favor authoritative sources but retain others unless clearly untrustworthy.\n   - Currency: Prefer recent information unless older data is essential or valuable.\n   - Objectivity: Retain sources with bias if they provide a unique or complementary perspective.\n   - Quantitative Value: Give higher priority to sources with statistics, numbers, or other concrete data.\n2. Source Selection:\n   - Include as many relevant sources as possible, up to 10, focusing on broad coverage and diversity.\n   - Prioritize sources with statistics, numerical data, or verifiable facts.\n   - Overlapping content is acceptable if it adds depth, especially when data is involved.\n   - Exclude sources only if they are entirely irrelevant, severely outdated, or unusable due to poor content quality.\n3. Content Retention:\n   - DO NOT rewrite, summarize, or condense any source content.\n   - Retain all usable information, cleaning up only clear garbage or formatting issues.\n   - Keep marginally relevant or incomplete sources if they contain valuable data or insights.\n\nSOURCES LIST TO EVALUATE:\nSource: document_1.txt\nTitle: \nContent: Source (paper): Rethinking Attribute Representation and Injection for Sentiment Classification (arXiv:1908.09590)\nSection: Experiments :: Comparisons with models in the literature\n\nOn all three datasets, our best results outperform all previous models based on accuracy and RMSE. Among our four models, CHIM-embedding performs the best in terms of accuracy, with performance increases of 2.4%, 1.3%, and 1.6% on IMDB, Yelp 2013, and Yelp 2014, respectively. CHIM-classifier performs the best in terms of RMSE. Among our models, CHIM-attention performs the worst. Source: document_1.txt\nTitle: \nContent: Source (paper): Rethinking Attribute Representation and Injection for Sentiment Classification (arXiv:1908.09590)\nSection: Experiments :: Comparisons with models in the literature\n\nOn all three datasets, our best results outperform all previous models based on accuracy and RMSE. Among our four models, CHIM-embedding performs the best in terms of accuracy, with performance increases of 2.4%, 1.3%, and 1.6% on IMDB, Yelp 2013, and Yelp 2014, respectively. CHIM-classifier performs the best in terms of RMSE. Among our models, CHIM-attention performs the worst. Source: document_1.txt\nTitle: \nContent: Source (paper): Rethinking Attribute Representation and Injection for Sentiment Classification (arXiv:1908.09590)\nSection: Experiments :: Comparisons with models in the literature\n\nOn all three datasets, our best results outperform all previous models based on accuracy and RMSE. Among our four models, CHIM-embedding performs the best in terms of accuracy, with performance increases of 2.4%, 1.3%, and 1.6% on IMDB, Yelp 2013, and Yelp 2014, respectively. CHIM-classifier performs the best in terms of RMSE. Among our models, CHIM-attention performs the worst. Source: document_1.txt\nTitle: \nContent: Source (paper): Rethinking Attribute Representation and Injection for Sentiment Classification (arXiv:1908.09590)\nSection: Experiments :: Comparisons with models in the literature\n\nOn all three datasets, our best results outperform all previous models based on accuracy and RMSE. Among our four models, CHIM-embedding performs the best in terms of accuracy, with performance increases of 2.4%, 1.3%, and 1.6% on IMDB, Yelp 2013, and Yelp 2014, respectively. CHIM-classifier performs the best in terms of RMSE. Among our models, CHIM-attention performs the worst.\n\nYou MUST return your response in the EXACT sources JSON list format as the original sources.\nThe response MUST not contain any markdown format or additional text (like ```json), just the JSON list!\n"
+      }
+    ]
+  },
+  {
+    "phase": "end",
+    "generations": [
+      {
+        "text": "[\n  {\n    \"source\": \"document_1.txt\",\n    \"title\": \"\",\n    \"content\": \"Source (paper): Rethinking Attribute Representation and Injection for Sentiment Classification (arXiv:1908.09590)\\nSection: Experiments :: Comparisons with models in the literature\\n\\nOn all three datasets, our best results outperform all previous models based on accuracy and RMSE. Among our four models, CHIM-embedding performs the best in terms of accuracy, with performance increases of 2.4%, 1.3%, and 1.6% on IMDB, Yelp 2013, and Yelp 2014, respectively. CHIM-classifier performs the best in terms of RMSE. Among our models, CHIM-attention performs the worst.\"\n  }\n]",
+        "finish": "stop"
+      }
+    ],
+    "token_usage": {
+      "completion_tokens": 1066,
+      "prompt_tokens": 1084,
+      "total_tokens": 2150,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 902,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 1084
+    }
+  },
+  {
+    "phase": "start",
+    "messages": [
+      {
+        "type": "system",
+        "content": "You are an expert AI machine learning research assistant. Your primary goal is to analyze model variants and experimental results, compare accuracy across datasets, and produce comprehensive, impartial, and systematically structured reports on performance improvements."
+      },
+      {
+        "type": "human",
+        "content": "\nInformation: \"Title: \nContent: Source (paper): Rethinking Attribute Representation and Injection for Sentiment Classification (arXiv:1908.09590)\nSection: Experiments :: Comparisons with models in the literature\n\nOn all three datasets, our best results outperform all previous models based on accuracy and RMSE. Among our four models, CHIM-embedding performs the best in terms of accuracy, with performance increases of 2.4%, 1.3%, and 1.6% on IMDB, Yelp 2013, and Yelp 2014, respectively. CHIM-classifier performs the best in terms of RMSE. Among our models, CHIM-attention performs the worst.\nSource: document_1.txt\"\n---\nUsing the above information, answer the following query or task: \"Which of the authors' CHIM variants performs best on accuracy, and by how much does it improve on each dataset?\" in a detailed report --\nThe report should focus on the answer to the query, should be well structured, informative,\nin-depth, and comprehensive, with facts and numbers if available and at least 1200 words.\nYou should strive to write the report as long as you can using all relevant and necessary information provided.\n\nPlease follow all of the following guidelines in your report:\n- You MUST determine your own concrete and valid opinion based on the given information. Do NOT defer to general and meaningless conclusions.\n- You MUST write the report with markdown syntax and APA format.\n- Structure your report with clear markdown headers: use # for the main title, ## for major sections, and ### for subsections.\n- Use markdown tables when presenting structured data or comparisons to enhance readability.\n- You MUST prioritize the relevance, reliability, and significance of the sources you use. Choose trusted sources over less reliable ones.\n- You must also prioritize new articles over older articles if the source can be trusted.\n- You MUST NOT include a table of contents, but DO include proper markdown headers (# ## ###) to structure your report clearly.\n- Use in-text citation references in APA format and make it with markdown hyperlink placed at the end of the sentence or paragraph that references them like this: ([in-text citation](url)).\n- Every substantive claim, figure or quote MUST carry an in-text citation to the source it came from. Do NOT cite sources that do not appear in the provided information.\n- Don't forget to add a reference list at the end of the report in APA format.\n- \nYou MUST write all used source document names at the end of the report as references, and make sure to not add duplicated sources, but only one reference for each.\"\n\n- Write the report in a Objective (impartial and unbiased presentation of facts and findings) tone.\nYou MUST write the report in the following language: english.\nAssume that the current date is 2026-09-14.\n"
+      }
+    ]
+  },
+  {
+    "phase": "end",
+    "generations": [
+      {
+        "text": "# CHIM Variant Performance on Accuracy: A Detailed Analysis of Reported Improvements\n\n## Introduction\n\nThis report addresses the query: Which of the authors' CHIM variants performs best on accuracy, and by how much does it improve on each dataset? The analysis is based exclusively on the provided source excerpt from the paper titled \"Rethinking Attribute Representation and Injection for Sentiment Classification\" (arXiv:1908.09590), specifically the section \"Experiments :: Comparisons with models in the literature\" ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). The source reports results on three datasets: IMDB, Yelp 2013, and Yelp 2014. It compares the authors' models against previous models in the literature using two metrics: accuracy and RMSE ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)).\n\nThe central finding from the excerpt is unambiguous: among the authors' models, CHIM-embedding performs best in terms of accuracy. The reported performance increases are 2.4% on IMDB, 1.3% on Yelp 2013, and 1.6% on Yelp 2014 ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). In contrast, CHIM-classifier performs best in terms of RMSE, while CHIM-attention performs worst among the models ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). This report will elaborate on these findings, compare the variants, provide dataset-specific breakdowns, and discuss the implications and limitations of the available information.\n\n## Background and Experimental Context\n\nThe paper investigates attribute representation and injection for sentiment classification ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). The authors propose multiple CHIM variants and evaluate them on three widely used datasets. The excerpt does not define the full form of CHIM or describe the internal architecture of each variant. However, it does name three CHIM variants: CHIM-embedding, CHIM-classifier, and CHIM-attention ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). It also refers to \"our four models,\" which suggests that there may be a fourth model or variant not named in the provided excerpt ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). Because the query specifically concerns CHIM variants, this report focuses on the three variants that are explicitly identified.\n\nThe experimental comparison covers both accuracy and RMSE. The source states that on all three datasets, the authors' best results outperform all previous models based on accuracy and RMSE ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). This overall claim establishes the competitive strength of the proposed approach. Within that broader success, the authors separately identify which variant is best for accuracy and which is best for RMSE ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)).\n\n## Main Finding: CHIM-Embedding Leads on Accuracy\n\nThe direct answer to the query is that CHIM-embedding is the authors' best-performing CHIM variant on accuracy ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). The excerpt states: \"Among our four models, CHIM-embedding performs the best in terms of accuracy, with performance increases of 2.4%, 1.3%, and 1.6% on IMDB, Yelp 2013, and Yelp 2014, respectively\" ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). This statement directly identifies CHIM-embedding as the top accuracy variant and quantifies its improvements across the three datasets.\n\nThe increases are reported in the order IMDB, Yelp 2013, and Yelp 2014. Therefore, the improvement is 2.4% on IMDB, 1.3% on Yelp 2013, and 1.6% on Yelp 2014 ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). These figures represent the performance gains associated with the authors' best results relative to previous models in the literature ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). The excerpt does not clarify whether the percentages are absolute percentage-point gains or relative percentage improvements. It also does not provide the underlying absolute accuracy scores. Nevertheless, the reported values are the only quantitative accuracy improvements available in the source, and they consistently favor CHIM-embedding as the leading accuracy-oriented variant.\n\n### Dataset-by-Dataset Breakdown\n\n#### IMDB\n\nOn the IMDB dataset, CHIM-embedding achieves the largest reported accuracy improvement of the three datasets: 2.4% ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). This is the highest gain among the three, indicating that the advantage of CHIM-embedding over previous models is most pronounced on IMDB according to the excerpt. The source does not explain why IMDB shows the largest improvement, nor does it provide additional statistics such as variance or significance tests.\n\n#### Yelp 2013\n\nOn Yelp 2013, CHIM-embedding achieves a reported accuracy improvement of 1.3% ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). This is the smallest of the three reported improvements. Even so, it remains a positive gain and contributes to the overall claim that the authors' best results outperform previous models on all three datasets ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). The smaller improvement on Yelp 2013 may suggest that previous models were already relatively stronger on this dataset, but the excerpt does not offer an explanation.\n\n#### Yelp 2014\n\nOn Yelp 2014, CHIM-embedding achieves a reported accuracy improvement of 1.6% ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). This gain falls between the IMDB and Yelp 2013 improvements. It reinforces the pattern that CHIM-embedding provides consistent positive improvements across all three datasets, with the magnitude varying by dataset ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)).\n\nA summary of these results is presented in Table 1.\n\n**Table 1. Reported accuracy improvements of CHIM-embedding across datasets**\n\n| Dataset | Best CHIM variant for accuracy | Reported accuracy improvement |\n|---|---|---|\n| IMDB | CHIM-embedding | 2.4% |\n| Yelp 2013 | CHIM-embedding | 1.3% |\n| Yelp 2014 | CHIM-embedding | 1.6% |\n\nNote: Data from ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)).\n\n## Comparative View of CHIM Variants\n\nTo fully answer the query, it is useful to place CHIM-embedding in the context of the other CHIM variants. The excerpt provides a clear qualitative ranking for two metrics. CHIM-embedding is best for accuracy, CHIM-classifier is best for RMSE, and CHIM-attention is worst among the authors' models ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). This indicates a metric-dependent trade-off: no single variant dominates on both accuracy and RMSE according to the provided information.\n\n**Table 2. Qualitative performance ranking of CHIM variants**\n\n| CHIM variant | Best metric | Relative standing |\n|---|---|---|\n| CHIM-embedding | Accuracy | Best among authors' models for accuracy |\n| CHIM-classifier | RMSE | Best among authors' models for RMSE |\n| CHIM-attention | Neither | Worst among authors' models |\n\nNote: Data from ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)).\n\nThe fact that CHIM-embedding is best on accuracy but not necessarily best on RMSE suggests that the variant may be particularly effective at classification decisions rather than rating error minimization. However, the excerpt does not provide architectural details or ablation results that would explain why this occurs ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). Similarly, CHIM-classifier's best RMSE performance does not imply that it is best for accuracy. The excerpt explicitly separates these two outcomes, and researchers should avoid conflating them.\n\nThe statement that CHIM-attention performs worst is also notable. It suggests that the attention-based variant, at least in the form evaluated here, did not yield the strongest results on these datasets according to the provided excerpt ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). This is a negative but useful finding: it helps narrow the design space for attribute representation and injection in sentiment classification. The excerpt does not specify whether \"worst\" refers to accuracy, RMSE, or both, but the sentence appears in a discussion of the authors' models generally ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). Therefore, the safest interpretation is that CHIM-attention is the weakest of the authors' models overall in the reported comparisons.\n\n## Significance and Interpretation\n\nThe reported improvements are meaningful for several reasons. First, they are consistent across all three datasets: CHIM-embedding improves accuracy on IMDB, Yelp 2013, and Yelp 2014 ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). Consistency across multiple datasets strengthens the generalizability of the finding, at least within the scope of the experiments. Second, the authors' best results outperform all previous models on both accuracy and RMSE ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). This suggests that the CHIM framework as a whole is competitive with the state of the art, even though different variants excel on different metrics.\n\nThird, the magnitude of the accuracy gains varies by dataset. IMDB shows the largest improvement at 2.4%, followed by Yelp 2014 at 1.6%, and Yelp 2013 at 1.3% ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). This variation may reflect differences in dataset characteristics, baseline strength, or the interaction between attribute representation and injection mechanisms. The provided excerpt does not offer a causal explanation, so any interpretation beyond the reported numbers would be speculative. What can be stated confidently is that CHIM-embedding is the best accuracy variant, and its improvements are positive on every dataset tested.\n\nFrom a practical standpoint, the answer to the query has clear implications. If the goal is to maximize accuracy in sentiment classification on these datasets, CHIM-embedding is the recommended variant among those named in the excerpt ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). If the goal is to minimize RMSE, CHIM-classifier would be preferred based on the same source ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). CHIM-attention would not be the first choice for either metric based on the reported rankings. These recommendations are limited to the specific datasets and experimental setup described in the paper.\n\n## Methodological Caveats and Limitations\n\nThe provided excerpt is informative but incomplete. It does not report absolute accuracy values, RMSE values, standard deviations, confidence intervals, or statistical significance tests ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). As a result, it is not possible to determine whether the reported improvements are statistically significant or whether they would generalize beyond the tested datasets. The excerpt also does not define the CHIM variants in detail, describe their architectures, or explain why CHIM-embedding performs best on accuracy ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). It refers to \"our four models\" but only names three CHIM variants, leaving ambiguity about the fourth model ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). Finally, the source does not specify whether the reported increases are absolute percentage points or relative percentages ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). These limitations should be kept in mind when interpreting the findings.\n\nDespite these caveats, the excerpt provides a direct and unambiguous answer to the query. The best CHIM variant for accuracy is CHIM-embedding, and its reported improvements are 2.4% on IMDB, 1.3% on Yelp 2013, and 1.6% on Yelp 2014 ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). The ranking of variants for RMSE is also clear: CHIM-classifier is best, and CHIM-attention is worst ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). These findings are consistent with the overall claim that the authors' best results outperform previous models on both metrics.\n\n## Conclusion\n\nIn summary, the authors' CHIM-embedding variant performs best on accuracy among the CHIM variants described in the provided excerpt ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). It improves performance by 2.4% on IMDB, 1.3% on Yelp 2013, and 1.6% on Yelp 2014 ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). CHIM-classifier performs best on RMSE, while CHIM-attention performs worst among the authors' models ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). On all three datasets, the authors' best results outperform all previous models on accuracy and RMSE ([document_1.txt, n.d.](https://arxiv.org/abs/1908.09590)). The answer to the query is therefore that CHIM-embedding is the accuracy leader, with dataset-specific gains of 2.4%, 1.3%, and 1.6% on IMDB, Yelp 2013, and Yelp 2014, respectively. These conclusions are based solely on the provided source excerpt and are subject to the limitations noted above.\n\n## References\n\ndocument_1.txt. (n.d.). *Rethinking Attribute Representation and Injection for Sentiment Classification* (arXiv:1908.09590). Retrieved from https://arxiv.org/abs/1908.09590",
+        "finish": "stop"
+      }
+    ],
+    "token_usage": null
+  }
+]

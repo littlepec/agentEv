@@ -1,0 +1,13 @@
+{
+  "cell": "Q3_withE_r1",
+  "task": "Q3",
+  "condition": "withE",
+  "rep": 1,
+  "question": "By how much does their similarity measure (the embedding approach) outperform BM25?",
+  "answer": "The embedding approach improves BM25’s average precision by 19% on TREC 2006 and 6% on TREC 2007.",
+  "prompt_tokens": 196,
+  "completion_tokens": 122,
+  "cost": 0.000205,
+  "elapsed_s": 2.2,
+  "error": null
+}

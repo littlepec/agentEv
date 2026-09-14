@@ -1,0 +1,32 @@
+{
+  "raw": "Source: document_1.txt\nTitle: \nContent: Source (paper): Bridging the Gap: Incorporating a Semantic Similarity Measure for Effectively Mapping PubMed Queries to Documents (arXiv:1608.01972)\nSection: TREC Experiments\n\nAs shown in Table 4, BM25 performs better than TFIDF and CENTROID. From the table, the embedding approach boosts the average precision of BM25 by 19% and 6% on TREC 2006 and 2007, respectively. However, CENTROID provides scores lower than BM25 and SEM approaches.\n\n\nSource: document_2.txt\nTitle: \nContent: Third-party research note: PubMed query-document mapping\n\nIn this study on mapping PubMed queries to documents, the proposed semantic-similarity (embedding) approach improves retrieval over BM25: it raises average precision by 19% on TREC 2006 and by 6% on TREC 2007. BM25 itself outperforms TFIDF and CENTROID, and CENTROID scores below both BM25 and the embedding approach. Source: document_1.txt\nTitle: \nContent: Source (paper): Bridging the Gap: Incorporating a Semantic Similarity Measure for Effectively Mapping PubMed Queries to Documents (arXiv:1608.01972)\nSection: TREC Experiments\n\nAs shown in Table 4, BM25 performs better than TFIDF and CENTROID. From the table, the embedding approach boosts the average precision of BM25 by 19% and 6% on TREC 2006 and 2007, respectively. However, CENTROID provides scores lower than BM25 and SEM approaches.\n\n\nSource: document_2.txt\nTitle: \nContent: Third-party research note: PubMed query-document mapping\n\nIn this study on mapping PubMed queries to documents, the proposed semantic-similarity (embedding) approach improves retrieval over BM25: it raises average precision by 19% on TREC 2006 and by 6% on TREC 2007. BM25 itself outperforms TFIDF and CENTROID, and CENTROID scores below both BM25 and the embedding approach. Source: document_1.txt\nTitle: \nContent: Source (paper): Bridging the Gap: Incorporating a Semantic Similarity Measure for Effectively Mapping PubMed Queries to Documents (arXiv:1608.01972)\nSection: TREC Experiments\n\nAs shown in Table 4, BM25 performs better than TFIDF and CENTROID. From the table, the embedding approach boosts the average precision of BM25 by 19% and 6% on TREC 2006 and 2007, respectively. However, CENTROID provides scores lower than BM25 and SEM approaches.\n\n\nSource: document_2.txt\nTitle: \nContent: Third-party research note: PubMed query-document mapping\n\nIn this study on mapping PubMed queries to documents, the proposed semantic-similarity (embedding) approach improves retrieval over BM25: it raises average precision by 19% on TREC 2006 and by 6% on TREC 2007. BM25 itself outperforms TFIDF and CENTROID, and CENTROID scores below both BM25 and the embedding approach. Source: document_1.txt\nTitle: \nContent: Source (paper): Bridging the Gap: Incorporating a Semantic Similarity Measure for Effectively Mapping PubMed Queries to Documents (arXiv:1608.01972)\nSection: TREC Experiments\n\nAs shown in Table 4, BM25 performs better than TFIDF and CENTROID. From the table, the embedding approach boosts the average precision of BM25 by 19% and 6% on TREC 2006 and 2007, respectively. However, CENTROID provides scores lower than BM25 and SEM approaches.\n\n\nSource: document_2.txt\nTitle: \nContent: Third-party research note: PubMed query-document mapping\n\nIn this study on mapping PubMed queries to documents, the proposed semantic-similarity (embedding) approach improves retrieval over BM25: it raises average precision by 19% on TREC 2006 and by 6% on TREC 2007. BM25 itself outperforms TFIDF and CENTROID, and CENTROID scores below both BM25 and the embedding approach.",
+  "curated_raw": [
+    {
+      "source": "document_1.txt",
+      "title": "",
+      "content": "Source (paper): Bridging the Gap: Incorporating a Semantic Similarity Measure for Effectively Mapping PubMed Queries to Documents (arXiv:1608.01972)\nSection: TREC Experiments\n\nAs shown in Table 4, BM25 performs better than TFIDF and CENTROID. From the table, the embedding approach boosts the average precision of BM25 by 19% and 6% on TREC 2006 and 2007, respectively. However, CENTROID provides scores lower than BM25 and SEM approaches."
+    },
+    {
+      "source": "document_2.txt",
+      "title": "",
+      "content": "Third-party research note: PubMed query-document mapping\n\nIn this study on mapping PubMed queries to documents, the proposed semantic-similarity (embedding) approach improves retrieval over BM25: it raises average precision by 19% on TREC 2006 and by 6% on TREC 2007. BM25 itself outperforms TFIDF and CENTROID, and CENTROID scores below both BM25 and the embedding approach."
+    }
+  ],
+  "curated_kept": [
+    {
+      "Source": "document_1.txt",
+      "Title": "",
+      "Content": "Source (paper): Bridging the Gap: Incorporating a Semantic Similarity Measure for Effectively Mapping PubMed Queries to Documents (arXiv:1608.01972)\nSection: TREC Experiments\n\nAs shown in Table 4, BM25 performs better than TFIDF and CENTROID. From the table, the embedding approach boosts the average precision of BM25 by 19% and 6% on TREC 2006 and 2007, respectively. However, CENTROID provides scores lower than BM25 and SEM approaches."
+    },
+    {
+      "Source": "document_2.txt",
+      "Title": "",
+      "Content": "Third-party research note: PubMed query-document mapping\n\nIn this study on mapping PubMed queries to documents, the proposed semantic-similarity (embedding) approach improves retrieval over BM25: it raises average precision by 19% on TREC 2006 and by 6% on TREC 2007. BM25 itself outperforms TFIDF and CENTROID, and CENTROID scores below both BM25 and the embedding approach."
+    }
+  ],
+  "state": {
+    "total": 2,
+    "dropped_empty": 0,
+    "no_evidence": false
+  }
+}

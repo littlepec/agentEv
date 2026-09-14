@@ -1,0 +1,32 @@
+{
+  "raw": "Source: document_1.txt\nTitle: \nContent: Source (paper): Rethinking Attribute Representation and Injection for Sentiment Classification (arXiv:1908.09590)\nSection: Experiments :: Comparisons with models in the literature\n\nOn all three datasets, our best results outperform all previous models based on accuracy and RMSE. Among our four models, CHIM-embedding performs the best in terms of accuracy, with performance increases of 2.4%, 1.3%, and 1.6% on IMDB, Yelp 2013, and Yelp 2014, respectively. CHIM-classifier performs the best in terms of RMSE. Among our models, CHIM-attention performs the worst.\n\n\nSource: document_2.txt\nTitle: \nContent: Third-party overview: CHIM attribute injection for sentiment\n\nThis paper compares four attribute-injection variants for sentiment classification. On accuracy, the CHIM-embedding variant is the best of the four, improving over previous models by 2.4% on IMDB, 1.3% on Yelp 2013, and 1.6% on Yelp 2014. CHIM-classifier is best on RMSE, and CHIM-attention is the weakest variant. Source: document_1.txt\nTitle: \nContent: Source (paper): Rethinking Attribute Representation and Injection for Sentiment Classification (arXiv:1908.09590)\nSection: Experiments :: Comparisons with models in the literature\n\nOn all three datasets, our best results outperform all previous models based on accuracy and RMSE. Among our four models, CHIM-embedding performs the best in terms of accuracy, with performance increases of 2.4%, 1.3%, and 1.6% on IMDB, Yelp 2013, and Yelp 2014, respectively. CHIM-classifier performs the best in terms of RMSE. Among our models, CHIM-attention performs the worst.\n\n\nSource: document_2.txt\nTitle: \nContent: Third-party overview: CHIM attribute injection for sentiment\n\nThis paper compares four attribute-injection variants for sentiment classification. On accuracy, the CHIM-embedding variant is the best of the four, improving over previous models by 2.4% on IMDB, 1.3% on Yelp 2013, and 1.6% on Yelp 2014. CHIM-classifier is best on RMSE, and CHIM-attention is the weakest variant. Source: document_1.txt\nTitle: \nContent: Source (paper): Rethinking Attribute Representation and Injection for Sentiment Classification (arXiv:1908.09590)\nSection: Experiments :: Comparisons with models in the literature\n\nOn all three datasets, our best results outperform all previous models based on accuracy and RMSE. Among our four models, CHIM-embedding performs the best in terms of accuracy, with performance increases of 2.4%, 1.3%, and 1.6% on IMDB, Yelp 2013, and Yelp 2014, respectively. CHIM-classifier performs the best in terms of RMSE. Among our models, CHIM-attention performs the worst.\n\n\nSource: document_2.txt\nTitle: \nContent: Third-party overview: CHIM attribute injection for sentiment\n\nThis paper compares four attribute-injection variants for sentiment classification. On accuracy, the CHIM-embedding variant is the best of the four, improving over previous models by 2.4% on IMDB, 1.3% on Yelp 2013, and 1.6% on Yelp 2014. CHIM-classifier is best on RMSE, and CHIM-attention is the weakest variant. Source: document_1.txt\nTitle: \nContent: Source (paper): Rethinking Attribute Representation and Injection for Sentiment Classification (arXiv:1908.09590)\nSection: Experiments :: Comparisons with models in the literature\n\nOn all three datasets, our best results outperform all previous models based on accuracy and RMSE. Among our four models, CHIM-embedding performs the best in terms of accuracy, with performance increases of 2.4%, 1.3%, and 1.6% on IMDB, Yelp 2013, and Yelp 2014, respectively. CHIM-classifier performs the best in terms of RMSE. Among our models, CHIM-attention performs the worst.\n\n\nSource: document_2.txt\nTitle: \nContent: Third-party overview: CHIM attribute injection for sentiment\n\nThis paper compares four attribute-injection variants for sentiment classification. On accuracy, the CHIM-embedding variant is the best of the four, improving over previous models by 2.4% on IMDB, 1.3% on Yelp 2013, and 1.6% on Yelp 2014. CHIM-classifier is best on RMSE, and CHIM-attention is the weakest variant.",
+  "curated_raw": [
+    {
+      "Source": "document_1.txt",
+      "Title": "",
+      "Content": "Source (paper): Rethinking Attribute Representation and Injection for Sentiment Classification (arXiv:1908.09590)\nSection: Experiments :: Comparisons with models in the literature\n\nOn all three datasets, our best results outperform all previous models based on accuracy and RMSE. Among our four models, CHIM-embedding performs the best in terms of accuracy, with performance increases of 2.4%, 1.3%, and 1.6% on IMDB, Yelp 2013, and Yelp 2014, respectively. CHIM-classifier performs the best in terms of RMSE. Among our models, CHIM-attention performs the worst.\n"
+    },
+    {
+      "Source": "document_2.txt",
+      "Title": "",
+      "Content": "Third-party overview: CHIM attribute injection for sentiment\n\nThis paper compares four attribute-injection variants for sentiment classification. On accuracy, the CHIM-embedding variant is the best of the four, improving over previous models by 2.4% on IMDB, 1.3% on Yelp 2013, and 1.6% on Yelp 2014. CHIM-classifier is best on RMSE, and CHIM-attention is the weakest variant."
+    }
+  ],
+  "curated_kept": [
+    {
+      "Source": "document_1.txt",
+      "Title": "",
+      "Content": "Source (paper): Rethinking Attribute Representation and Injection for Sentiment Classification (arXiv:1908.09590)\nSection: Experiments :: Comparisons with models in the literature\n\nOn all three datasets, our best results outperform all previous models based on accuracy and RMSE. Among our four models, CHIM-embedding performs the best in terms of accuracy, with performance increases of 2.4%, 1.3%, and 1.6% on IMDB, Yelp 2013, and Yelp 2014, respectively. CHIM-classifier performs the best in terms of RMSE. Among our models, CHIM-attention performs the worst.\n"
+    },
+    {
+      "Source": "document_2.txt",
+      "Title": "",
+      "Content": "Third-party overview: CHIM attribute injection for sentiment\n\nThis paper compares four attribute-injection variants for sentiment classification. On accuracy, the CHIM-embedding variant is the best of the four, improving over previous models by 2.4% on IMDB, 1.3% on Yelp 2013, and 1.6% on Yelp 2014. CHIM-classifier is best on RMSE, and CHIM-attention is the weakest variant."
+    }
+  ],
+  "state": {
+    "total": 2,
+    "dropped_empty": 0,
+    "no_evidence": false
+  }
+}

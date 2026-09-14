@@ -1,0 +1,14 @@
+{
+  "cell": "Q7_nosource_r0",
+  "task": "Q7",
+  "condition": "nosource",
+  "rep": 0,
+  "question": "How many annotators labeled the OGTD dataset, and how were disagreements resolved?",
+  "answer": "The OGTD dataset was labeled by two native Greek annotators, and disagreements were resolved by a third annotator (with the final label decided by majority).",
+  "prompt_tokens": 84,
+  "completion_tokens": 600,
+  "cost": 0.000745,
+  "elapsed_s": 4.1,
+  "error": null,
+  "rerun_maxtok": 3000
+}

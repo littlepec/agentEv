@@ -1,0 +1,21 @@
+{
+  "cell": "Q2_E_R0",
+  "task": "Q2",
+  "condition": "E",
+  "arm": "R0",
+  "curate_sources": "false",
+  "docpath_mapping": {
+    "evidence": "document_1.txt"
+  },
+  "prompt_tokens": 1557,
+  "completion_tokens": 10717,
+  "deepseek_cost_usd": 0.013327,
+  "report_chars": 11786,
+  "curation_state": null,
+  "no_evidence_after_curation": null,
+  "elapsed_s": 49.6,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract",
+  "model": "deepseek-v4-flash"
+}

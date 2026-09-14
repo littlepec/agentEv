@@ -1,0 +1,25 @@
+{
+  "cell": "Q2_E_R1fix",
+  "task": "Q2",
+  "condition": "E",
+  "arm": "R1fix",
+  "curate_sources": "true",
+  "docpath_mapping": {
+    "evidence": "document_1.txt"
+  },
+  "prompt_tokens": 2163,
+  "completion_tokens": 9076,
+  "deepseek_cost_usd": 0.01154,
+  "report_chars": 17986,
+  "curation_state": {
+    "total": 1,
+    "dropped_empty": 0,
+    "no_evidence": false
+  },
+  "no_evidence_after_curation": false,
+  "elapsed_s": 48.9,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract",
+  "model": "deepseek-v4-flash"
+}
