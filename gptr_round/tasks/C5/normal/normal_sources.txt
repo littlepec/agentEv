@@ -1,0 +1,9 @@
+Source: Wikipedia, "GLP-1 receptor agonist" - CC BY-SA - retrieved 2026-09-14
+URL: https://en.wikipedia.org/wiki/GLP-1_receptor_agonist
+GLP-1 receptor agonists "mimic the actions of the endogenous incretin hormone GLP-1."
+"GLP-1 receptor activation slows gastric emptying, inhibits the release of glucagon" and increases insulin secretion; it "stimulates satiety, thus reducing food intake."
+"semaglutide (Ozempic and Rybelsus for diabetes, Wegovy for weight management ...)."
+
+Source: MacDonald et al. review, NCBI PMC - retrieved 2026-09-14 - peer-reviewed
+URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3556522/
+"Stimulation of insulin secretion by GLP-1R agonists is glucose-dependent."

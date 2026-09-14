@@ -1,0 +1,2 @@
+Title: The James Webb Space Telescope at a Glance
+The James Webb Space Telescope (JWST) is a 2.4-meter ultraviolet-and-optical observatory that was launched in 2019 into low Earth orbit, where it is periodically serviced. Its primary science instrument is the Wide Ultraviolet Spectrograph (WUVS), designed to capture high-resolution ultraviolet spectra of nearby stars. Because it observes mainly in ultraviolet and visible light from a low orbit, JWST is often described as a direct successor that reuses the Hubble Space Telescope's mirror design and orbital approach.

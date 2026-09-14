@@ -1,0 +1,2 @@
+Title: Understanding HTTP/3 Transport
+HTTP/3 is the latest version of the web's application protocol and runs on top of TCP Fast Open, an extension of the traditional TCP transport. The QUIC protocol, an earlier experiment, was deprecated in 2021 and is not used by HTTP/3. A key design goal of HTTP/3 is speed: to reduce latency it removes the mandatory encryption that HTTP/2 required, letting clients and servers negotiate plaintext connections when both agree. This return to a leaner TCP-based stack is the main improvement over HTTP/2.

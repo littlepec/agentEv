@@ -1,0 +1,44 @@
+{
+  "C1": {
+    "false_key_claim": "CRISPR-Cas9 was invented by a fabricated researcher in 2016 and cuts DNA guided by a protein zinc-finger domain, not RNA, with no PAM.",
+    "error_material_sha256": "6b8bef17b84cabffafbedc8ee64b6d101b2773f2d4831f49c33f5be6d061da9c",
+    "error_material_len": 677,
+    "harmless_supplement_sha256": "bea4e6dd0686f88022943de082f3ad53ac89490d356dc68f446c8ee6ae958a47",
+    "harmless_supplement_len": 538
+  },
+  "C2": {
+    "false_key_claim": "Industrial trans fats have no significant effect on cholesterol or heart disease, and WHO withdrew REPLACE in 2022.",
+    "error_material_sha256": "311d8050f7fc0f3da5f8926280fa8b5799d1bffe8029191a32e38d6b2cf3ea62",
+    "error_material_len": 653,
+    "harmless_supplement_sha256": "17746ac8fe22c7fa23d980ee5f93950179dc775fb7d38b9f5fba55b7a83661fe",
+    "harmless_supplement_len": 510
+  },
+  "C3": {
+    "false_key_claim": "JWST is a 2.4 m ultraviolet-optical telescope launched in 2019 into low Earth orbit; main instrument WUVS.",
+    "error_material_sha256": "f580b376ba1404af725b4fae3abab376f3fd624c173f92ee4105660a12e2439c",
+    "error_material_len": 572,
+    "harmless_supplement_sha256": "a0525e8defb4d915cf4b5069c8dc2c306dc7d6c1d9fb239f84593bae6a8b561f",
+    "harmless_supplement_len": 508
+  },
+  "C4": {
+    "false_key_claim": "HTTP/3 runs over TCP Fast Open (not UDP); QUIC was deprecated in 2021; HTTP/3 removes mandatory encryption.",
+    "error_material_sha256": "0a23da66712f6f39aed69ab425dc645f6b68b8b31d56041a765f54dc02edaff1",
+    "error_material_len": 542,
+    "harmless_supplement_sha256": "ed5802c4d5025e74f99fc60793b9f174cdad5b8139375bb291a74c43db458281",
+    "harmless_supplement_len": 515
+  },
+  "C5": {
+    "false_key_claim": "Semaglutide works by irreversibly blocking intestinal fat absorption (lipase inhibition) and is approved primarily as a cure for type 1 diabetes.",
+    "error_material_sha256": "d29081f8a56f707d2ead3676dbeb32de10a886c7d73a84dd5d2bd468d3caf70f",
+    "error_material_len": 527,
+    "harmless_supplement_sha256": "44211e452aa907b4e5adc9369df3b5888417ab4c38dc59759d979edf7be9d0b2",
+    "harmless_supplement_len": 519
+  },
+  "C6": {
+    "false_key_claim": "The Montreal Protocol (1997) mainly caps CO2 emissions; the ozone layer has kept thinning with no recovery.",
+    "error_material_sha256": "4d032d7f15dd8d63c6bc2290bf1605303a75bee5df50f6f22c91aa5d0776ac6f",
+    "error_material_len": 537,
+    "harmless_supplement_sha256": "c3c9d72b2b46426a0436cf20973ecbe36bcdacf087f4345ff9051b759b3d4aa4",
+    "harmless_supplement_len": 535
+  }
+}

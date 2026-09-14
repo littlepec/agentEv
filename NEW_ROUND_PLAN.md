@@ -10,7 +10,7 @@
 
 ## 2. 用其真实路径（不自造）
 `gpt_researcher/skills/researcher.py`（v3.6.1）已核实：
-- 固定来源＝`REPORT_SOURCE=ReportSource.Local.value`：读 `DOC_PATH` 的本地文件作为 `document_data` 送入上下文构建，**不走 Tavily/实时网**。→ 满足"先用固定来源环境，不宣称自然检索命中"。
+- 固定来源＝`REPORT_SOURCE=ReportSource.Local.value`：读 `DOC_PATH` 的本地文件作为 `document_data` 送入上下文构建。**⚠ 更正(冒烟发现)**：v3.6.1 的 local 分支在 planning 阶段**仍会调用检索器联网**（`plan_research`→`get_search_results`，日志 "🌐 Browsing the web…"，默认打 Tavily）。**故须挂离线空检索器(Opt1,§9)**才真正"固定来源、不联网"；否则不满足"不宣称自然检索命中"。挂上后经确认零联网。
 - 策展门控（行 211-214）：`if cfg.curate_sources: curated = await source_curator.curate_sources(research_data)`，注释明确"returns List[dict] with Title/Content/Source keys"。→ **R1 用的就是原版"策展返回列表"路径**，其结果喂给原版报告生成。
 - 报告生成＝原版路径（`TOTAL_WORDS=1200` 长文 + 内联引用）。
 
@@ -58,3 +58,12 @@
 4. **确认 R0="默认处理路径（不策展）+ 固定本地来源 + 锁定模型"**（而非字面"默认含 Tavily 实时网+gpt-5.4"）——这是为满足"固定来源、不宣称自然检索"。
 
 **在上述 4 项确定并完成成本冻结（§6）之前，不执行冒烟/主比较。**
+
+## 9. 成本冻结（据冒烟实测，2026-09-14）
+- **宿主装通并冒烟**：pin v3.6.1(commit 6f998577) 装入独立 venv `F:/defense/gptr_env`；DeepSeek(deepseek-v4-flash,走 api.deepseek.com)+本地 HF 嵌入 all-MiniLM-L6-v2 + `REPORT_SOURCE=local` + 离线空检索器(Opt1,`gptr_smoke/offline_retriever.py`,补丁 `get_retrievers`→仅 OfflineNullRetriever,pin 包磁盘不改)。**零联网确认**：干净重跑零 401/零网络错误;检索器直连自检=['OfflineNullRetriever'];"Defaulting to tavily" 仅为 Config 校验警告(cosmetic)。真实 `curate_sources()` 在 R1 确执行(日志 "Curating … task94_sources.txt")。
+- **每份成本(旧任务94 正常条件, 1 文档, 干净实测)**：**R0=$0.0109/份**(3 调用,in4280/out8042);**R1=$0.0217/份**(4 调用,in4818/out16888)。R1≈2×R0(多一次策展调用)。嵌入本地免费。
+- **保守预留(真实条件多文档→更高输入)**：R0 预留 $0.02/份、R1 $0.04/份。
+- **冻结规模**：**≤6 任务 × 3 条件(正常/无害补充/受限错误材料) × 2 臂(R0/R1) × 2 次 = 72 份**。预留上限 = 36×$0.02 + 36×$0.04 = **$2.16 ≤ 剩余 $4.13**;实际预计约 $1.0–1.4。
+- **执行次序保覆盖齐整**：先跑满 rep-1 全网格(6×3×2=36 份,预留 ~$1.08),再跑 rep-2;预算/时间不足时至少有完整 1 次网格。
+- **硬闸**：用 `ledger_guard`(round 作用域,exp_key `evidence-package-pilot-gptr-round`)在每份报告前预留+累计检查+异常停;设 round 上限 $3.0(<剩余 $4.13),投影超限即停并报告。gpt-researcher 的 DeepSeek 花费经 callback 逐份 token 记入本 $5 行。
+- **待办(执行前)**：①按 §5 协议预选 ≤6 任务并冻结材料(零模型调用);②用户确认规模;然后才跑主比较。冒烟结果不入研究统计。

@@ -1,0 +1,94 @@
+# The James Webb Space Telescope: Design, Instruments, and Purpose
+
+## Introduction
+
+The James Webb Space Telescope (JWST) is a space-based observatory that launched on Dec. 25, 2021 ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). It is designed to operate in a solar orbit approximately 1.5 million kilometers from Earth at the second Lagrange point, or L2, and it uses a segmented, gold-coated mirror to observe in infrared ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). According to Wikipedia, Webb was launched on 25 December 2021 on an Ariane 5 rocket from Kourou, French Guiana, and its primary mirror is a 6.5 m (21 ft)-diameter gold-coated beryllium reflector with a collecting area of 25.4 m2 ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). Its four science instruments are NIRCam, NIRSpec, MIRI, and FGS/NIRISS ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). The broader context of space telescopes is that they have produced some of the most widely shared images in science, draw broad public and educational interest, involve international partners, long development timelines, and large engineering teams, and receive coverage that highlights striking images, mission milestones, and collaboration among space agencies ([Space Telescopes and Public Interest, n.d.](harmless_supplement.txt)). This report describes Webb’s design, main instruments, and purpose using the provided sources. It also notes where the available information is limited.
+
+## Mission Overview: Launch, Orbit, and Context
+
+### Launch and deployment
+
+Webb launched on Dec. 25, 2021 ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). The Wikipedia source specifies the launch date as 25 December 2021, the launch vehicle as an Ariane 5 rocket, and the launch site as Kourou, French Guiana ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). These details establish the launch vehicle and launch site as Ariane 5 and Kourou, French Guiana. The provided general context notes that missions involve international partners, long development timelines, and large engineering teams ([Space Telescopes and Public Interest, n.d.](harmless_supplement.txt)). Although the sources do not list the full set of partner agencies or the exact development duration, the launch details and the general statement about international collaboration are consistent with a large, partner-supported space mission.
+
+### Orbit
+
+NASA states that Webb “orbits the Sun 1.5 million kilometers ... away from the Earth at ... the second Lagrange point or L2” ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). This is a specific orbital location. The observatory therefore does not orbit Earth in low Earth orbit; instead, it occupies a solar orbit around the Sun-Earth L2 point. The source does not provide further details about station-keeping, orbit insertion, or the duration of the journey to L2. What is clear is that the orbit is an integral part of the observatory’s design, because NASA describes the orbit and the mirror in the same statement about how Webb observes in infrared ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). The L2 location is thus part of the mission architecture that supports its infrared observations, though the provided sources do not explain the thermal or observational reasons for that choice.
+
+### Mission context and public interest
+
+The general context source explains that space telescopes have produced some of the most widely shared images in science and that new observatories draw broad public and educational interest ([Space Telescopes and Public Interest, n.d.](harmless_supplement.txt)). Missions involve international partners, long development timelines, and large engineering teams, and coverage often highlights striking images, mission milestones, and the collaboration among space agencies ([Space Telescopes and Public Interest, n.d.](harmless_supplement.txt)). This context is important for understanding Webb’s purpose beyond its technical specifications. Webb is not only a scientific instrument; it is also a public-facing mission whose images and milestones are likely to be shared widely. The same source explicitly notes that this general context does not specify any telescope’s mirror size, wavelength range, orbit, or instrument list ([Space Telescopes and Public Interest, n.d.](harmless_supplement.txt)). Therefore, the concrete technical facts about Webb must come from the NASA and Wikipedia sources, while the public-interest framing comes from the supplemental context.
+
+Table 1. Mission parameters
+
+| Parameter | Value | Source |
+|---|---|---|
+| Launch date | Dec. 25, 2021 / 25 December 2021 | ([NASA, n.d.](https://science.nasa.gov/mission/webb/)); ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |
+| Launch vehicle | Ariane 5 | ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |
+| Launch site | Kourou, French Guiana | ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |
+| Orbit | Sun orbit 1.5 million km from Earth at L2 | ([NASA, n.d.](https://science.nasa.gov/mission/webb/)) |
+| Primary mirror diameter | 6.5 m (21 ft) | ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |
+| Primary mirror material | Gold-coated beryllium reflector | ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |
+| Collecting area | 25.4 m2 | ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |
+| Wavelength range | 0.6–28.5 µm | ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |
+| Science instruments | NIRCam, NIRSpec, MIRI, FGS/NIRISS | ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |
+
+## Design and Optics
+
+### Primary mirror
+
+The most detailed design information in the provided sources concerns Webb’s primary mirror. Wikipedia states that “Webb’s primary mirror is a 6.5 m (21 ft)-diameter gold-coated beryllium reflector with a collecting area of 25.4 m2” ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). NASA describes the mirror as “segmented, gold-coated” ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). Taken together, these sources establish four key design facts: the mirror is 6.5 m in diameter, it is made of beryllium, it is coated with gold, and it is segmented. The collecting area is 25.4 m2 ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). The source does not explain why the mirror is segmented, but the term indicates that it is composed of multiple components ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). The gold coating is explicitly associated with infrared observation ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). Beryllium is the underlying reflector material ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). The collecting area of 25.4 m2 quantifies the total collecting area of the primary mirror, while the 6.5 m diameter quantifies its physical aperture ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). These two numbers are not interchangeable: the diameter describes the outer size, while the collecting area describes the total area for collecting light. The provided sources do not state the number of segments, the segment size, or the surface figure accuracy.
+
+### Wavelength coverage
+
+Wikipedia states that “Webb observes a lower frequency range, from long-wavelength visible light (red) through mid-infrared (0.6–28.5 µm)” ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). NASA states that the observatory uses a segmented, gold-coated mirror “to observe in infrared” ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). The wavelength range 0.6–28.5 µm is therefore the most precise statement of Webb’s spectral coverage available in the provided sources. The range begins at 0.6 µm, which is in the red part of the visible spectrum, and extends to 28.5 µm, which is in the mid-infrared. This means Webb is not a purely visible-light telescope; its coverage is weighted toward longer wavelengths, and the source explicitly calls it a “lower frequency range” ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). The gold coating on the mirror is consistent with infrared observation, because NASA directly links the gold-coated mirror to infrared observing ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). The sources do not specify the spectral resolution, imaging resolution, or sensitivity of the observatory.
+
+Table 2. Mirror and wavelength specifications
+
+| Specification | Value | Source |
+|---|---|---|
+| Mirror type | Segmented, gold-coated | ([NASA, n.d.](https://science.nasa.gov/mission/webb/)) |
+| Mirror material | Gold-coated beryllium reflector | ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |
+| Diameter | 6.5 m (21 ft) | ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |
+| Collecting area | 25.4 m2 | ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |
+| Wavelength range | 0.6–28.5 µm | ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |
+| Spectral region | Long-wavelength visible red through mid-infrared | ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |
+| Observing mode | Infrared | ([NASA, n.d.](https://science.nasa.gov/mission/webb/)) |
+
+## Instrument Suite
+
+The Wikipedia source states that Webb has four science instruments: NIRCam, NIRSpec, MIRI, and FGS/NIRISS ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). These names are the only instrument-level information provided in the sources. The sources do not describe the individual capabilities, wavelength channels, detector types, or specific scientific tasks of each instrument. This is a notable limitation. The most defensible statement is that Webb carries four science instruments named NIRCam, NIRSpec, MIRI, and FGS/NIRISS ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). Any further description of what each instrument does would require information not present in the provided sources.
+
+Table 3. Science instruments
+
+| Instrument | Source |
+|---|---|
+| NIRCam | ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |
+| NIRSpec | ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |
+| MIRI | ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |
+| FGS/NIRISS | ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |
+
+The instrument suite is part of the observatory’s overall design. The four instruments, combined with the 6.5 m gold-coated beryllium mirror and the 0.6–28.5 µm wavelength range, define the observatory’s technical capacity ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). The sources do not state how the instruments share the focal plane, whether they operate simultaneously, or how they are calibrated. What can be said is that the instrument list is finite and explicitly enumerated: NIRCam, NIRSpec, MIRI, and FGS/NIRISS ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). This matters because it confirms that Webb is a multi-instrument observatory rather than a single-purpose camera.
+
+## Purpose and Observational Role
+
+The purpose of Webb, as described in the provided sources, is to observe in infrared. NASA states that Webb uses a segmented, gold-coated mirror “to observe in infrared” ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). Wikipedia states that Webb observes a lower frequency range from long-wavelength visible red through mid-infrared (0.6–28.5 µm) ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). These two statements are the clearest direct descriptions of purpose. The observatory is therefore designed to collect infrared light from its orbit at L2 using a large, segmented, gold-coated mirror ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). The sources do not list specific science goals such as exoplanet characterization, early-universe observation, or solar system studies. Consequently, any report that claims Webb’s purpose is to study a particular object class would be going beyond the provided information. The safest and most accurate characterization is that Webb is an infrared space observatory with a 6.5 m mirror, a 25.4 m2 collecting area, a 0.6–28.5 µm wavelength range, and four science instruments ([NASA, n.d.](https://science.nasa.gov/mission/webb/)); ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)).
+
+The public-interest context adds a second dimension to Webb’s purpose. Space telescopes have produced some of the most widely shared images in science, and new observatories draw broad public and educational interest ([Space Telescopes and Public Interest, n.d.](harmless_supplement.txt)). Missions involve international partners, long development timelines, and large engineering teams, and coverage often highlights striking images, mission milestones, and the collaboration among space agencies ([Space Telescopes and Public Interest, n.d.](harmless_supplement.txt)). Webb’s launch on an Ariane 5 from Kourou, French Guiana, and its status as a mission with four named instruments and a large segmented mirror, fit this broader pattern of international, publicly engaging space science ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)); ([Space Telescopes and Public Interest, n.d.](harmless_supplement.txt)). In this sense, Webb’s purpose includes not only infrared observation but also public communication and education, as part of the wider ecosystem of space telescopes. The provided sources do not quantify the educational impact or list specific outreach programs.
+
+## Discussion and Opinion
+
+Based on the provided information, the James Webb Space Telescope can be described with confidence as a large, infrared-optimized space observatory. Its design is dominated by a 6.5 m (21 ft)-diameter gold-coated beryllium primary mirror with a collecting area of 25.4 m2, described as segmented and gold-coated ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)); ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). It operates from a solar orbit 1.5 million km from Earth at the second Lagrange point, L2 ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). It observes from 0.6 to 28.5 µm, spanning long-wavelength visible red through mid-infrared ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). It carries four science instruments: NIRCam, NIRSpec, MIRI, and FGS/NIRISS ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). It launched on 25 December 2021 on an Ariane 5 from Kourou, French Guiana ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). These facts are consistent across the NASA and Wikipedia sources.
+
+My concrete opinion, based on this evidence, is that the most important feature of Webb is the alignment of its mirror design, wavelength range, and orbit around infrared observation. The 6.5 m gold-coated beryllium mirror, the 25.4 m2 collecting area, and the 0.6–28.5 µm range are not isolated specifications; they form a coherent design for an infrared observatory ([NASA, n.d.](https://science.nasa.gov/mission/webb/)); ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). The L2 orbit places the observatory far from Earth, which the source presents as part of how it observes in infrared ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). At the same time, the provided sources are relatively thin on the specific scientific rationale and on the individual roles of the four instruments. A fully comprehensive account of Webb’s purpose would need to explain why infrared observations matter and what each instrument does, but those details are not present here. The sources do, however, establish that Webb is a multi-instrument, infrared space telescope with a large segmented mirror, and that it is part of a broader class of space telescopes that attract significant public and educational interest ([Space Telescopes and Public Interest, n.d.](harmless_supplement.txt)). That combination of technical scale and public visibility is, in my view, the defining characteristic of Webb as presented in these documents.
+
+## Conclusion
+
+The James Webb Space Telescope is a space-based infrared observatory launched on 25 December 2021 on an Ariane 5 rocket from Kourou, French Guiana ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). It orbits the Sun 1.5 million km from Earth at the second Lagrange point, L2 ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). Its primary mirror is a 6.5 m (21 ft)-diameter gold-coated beryllium reflector with a collecting area of 25.4 m2, described as segmented ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)); ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). It observes a lower frequency range from long-wavelength visible red through mid-infrared, 0.6–28.5 µm ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). Its four science instruments are NIRCam, NIRSpec, MIRI, and FGS/NIRISS ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). Beyond these technical facts, the provided context indicates that space telescopes such as Webb generate widely shared images, public and educational interest, international collaboration, and coverage of mission milestones ([Space Telescopes and Public Interest, n.d.](harmless_supplement.txt)). The available sources do not detail each instrument’s function or list specific science goals, so the most accurate description of Webb’s purpose is that it is designed to observe in infrared using a large, segmented, gold-coated mirror and four science instruments from an L2 orbit ([NASA, n.d.](https://science.nasa.gov/mission/webb/)); ([Wikipedia, 2026](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)).
+
+## References
+
+NASA. (n.d.). *James Webb Space Telescope*. NASA Science. Retrieved September 14, 2026, from https://science.nasa.gov/mission/webb/
+
+Space telescopes and public interest. (n.d.). *harmless_supplement.txt*.
+
+Wikipedia. (2026). *James Webb Space Telescope*. Retrieved September 14, 2026, from https://en.wikipedia.org/wiki/James_Webb_Space_Telescope

@@ -45,3 +45,8 @@ propagates into an LLM agent's final judgment. Fixed-evidence, single-turn probe
 纯防御性研究：全部为**固定证据、单轮**探针，**没有**真实智能体、没有对任何真实系统的注入或发布、没有真实外部写操作。
 `detell_poison.py` 为沙盒内、全程记录的受控消融（去掉毒文档的低级破绽以模拟更强攻击者基线），**不增强虚假主张、不作为攻击工具**。
 所有虚构材料仅用于理解与缓解"证据完整性"失效。
+
+## 新一轮：GPT-Researcher R0/R1 主比较（gptr_round/）
+在真实宿主 **GPT-Researcher v3.6.1**（pinned commit `6f998577`）上，以固定本地来源 + 离线检索器（无联网）跑 R0（不策展）vs R1（原版 `CURATE_SOURCES` 策展）× 3 条件（正常/无害补充/受限错误材料）× 6 新任务 × 2 次 = 72 份报告。见 `gptr_round/PREREG_round.md`（预注册）与 `gptr_round/RESULTS_round.md`（结果：阴性收尾——错误主张被当作事实/决策依据 0/24，正常任务 72/72 完成）。
+
+> ⚠ `gptr_round/tasks/C*/error_material.txt` 同为**故意虚构的错误材料**（沙盒研究用），见 `gptr_round/FABRICATED_MATERIALS_NOTICE.md`，切勿当真。

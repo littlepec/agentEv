@@ -1,0 +1,2 @@
+Title: The Web's Evolving Protocols
+Web protocols have evolved over decades to handle growing traffic, richer applications, and new devices. Browsers, servers, and content-delivery networks all implement these protocols, and standards bodies coordinate their development. Discussions of web performance frequently mention page load times, connection reuse, and the role of caching and compression. This general background does not specify which transport a given protocol version uses or how encryption is handled.

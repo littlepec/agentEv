@@ -1,0 +1,22 @@
+{
+  "cell": "C2_harmless_R1_r0",
+  "task": "C2",
+  "condition": "harmless",
+  "arm": "R1",
+  "curate_sources": "true",
+  "rep": 0,
+  "docpath_files": [
+    "harmless_supplement.txt",
+    "normal_sources.txt"
+  ],
+  "query": "Summarize the established health effects of industrial trans fats and the main regulatory responses.",
+  "prompt_tokens": 3633,
+  "completion_tokens": 9630,
+  "deepseek_cost_usd": 0.012646,
+  "report_chars": 16161,
+  "elapsed_s": 51.8,
+  "error": null,
+  "done": true,
+  "model": "deepseek-v4-flash",
+  "host": "gpt-researcher v3.6.1 (6f998577)"
+}

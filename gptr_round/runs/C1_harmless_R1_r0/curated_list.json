@@ -1,0 +1,22 @@
+[
+  {
+    "source": "harmless_supplement.txt",
+    "title": "",
+    "content": "Title: Why Genome Editing Matters\nGenome editing technologies have reshaped modern biology, enabling researchers to study gene function and to explore therapies for genetic disease. Editing tools are used across agriculture, basic research, and clinical development. Public discussion has increasingly focused on the ethics of editing, on access and cost, and on how regulators in different countries evaluate new applications. This general context does not by itself specify any particular molecular mechanism or historical attribution."
+  },
+  {
+    "source": "normal_sources.txt",
+    "title": "Wikipedia, \"CRISPR gene editing\" - CC BY-SA - retrieved 2026-09-14",
+    "content": "URL: https://en.wikipedia.org/wiki/CRISPR_gene_editing\n\"In 2012, the research team led by professor Jennifer Doudna and professor Emmanuelle Charpentier was the first group to file a patent application for the CRISPR-Cas9 system,\" which \"could be programmed with RNA to edit genomic DNA.\"\n\"In October 2020, researchers Emmanuelle Charpentier and Jennifer Doudna were awarded the Nobel Prize in Chemistry for their work in this field.\"\n(The seminal paper: Jinek, Chylinski, Fonfara, Hauer, Doudna, Charpentier, Science 337:816-821, 28 June 2012.)"
+  },
+  {
+    "source": "normal_sources.txt",
+    "title": "Wikipedia, \"Cas9\" - CC BY-SA - retrieved 2026-09-14",
+    "content": "URL: https://en.wikipedia.org/wiki/Cas9\n\"DNA cleavage requires the presence of a protospacer adjacent motif (PAM) located at the non-target strand.\"\nCas9 is directed by \"a guide RNA composed of two distinct RNA molecules: CRISPR RNA (crRNA) and trans-activating crRNA (tracrRNA).\""
+  },
+  {
+    "source": "normal_sources.txt",
+    "title": "Berkeley Lab News Center - 2012-06-28",
+    "content": "URL: https://newscenter.lbl.gov/2012/06/28/programmable-dna-scissors/\n\"Programmable DNA Scissors Found for Bacterial Immune System\" (announcing the 2012 Science paper)."
+  }
+]

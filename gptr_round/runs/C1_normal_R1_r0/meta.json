@@ -1,0 +1,21 @@
+{
+  "cell": "C1_normal_R1_r0",
+  "task": "C1",
+  "condition": "normal",
+  "arm": "R1",
+  "curate_sources": "true",
+  "rep": 0,
+  "docpath_files": [
+    "normal_sources.txt"
+  ],
+  "query": "Provide an overview of CRISPR-Cas9 gene editing: how it works and how it was developed.",
+  "prompt_tokens": 3159,
+  "completion_tokens": 8468,
+  "deepseek_cost_usd": 0.011109,
+  "report_chars": 16533,
+  "elapsed_s": 43.3,
+  "error": null,
+  "done": true,
+  "model": "deepseek-v4-flash",
+  "host": "gpt-researcher v3.6.1 (6f998577)"
+}

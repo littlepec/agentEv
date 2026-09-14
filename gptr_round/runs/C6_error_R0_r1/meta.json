@@ -1,0 +1,22 @@
+{
+  "cell": "C6_error_R0_r1",
+  "task": "C6",
+  "condition": "error",
+  "arm": "R0",
+  "curate_sources": "false",
+  "rep": 1,
+  "docpath_files": [
+    "error_material.txt",
+    "normal_sources.txt"
+  ],
+  "query": "Summarize the Montreal Protocol: what it regulates and its effect on the ozone layer.",
+  "prompt_tokens": 2433,
+  "completion_tokens": 9039,
+  "deepseek_cost_usd": 0.011577,
+  "report_chars": 15788,
+  "elapsed_s": 48.7,
+  "error": null,
+  "done": true,
+  "model": "deepseek-v4-flash",
+  "host": "gpt-researcher v3.6.1 (6f998577)"
+}

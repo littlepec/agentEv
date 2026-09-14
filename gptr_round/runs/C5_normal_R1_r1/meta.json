@@ -1,0 +1,21 @@
+{
+  "cell": "C5_normal_R1_r1",
+  "task": "C5",
+  "condition": "normal",
+  "arm": "R1",
+  "curate_sources": "true",
+  "rep": 1,
+  "docpath_files": [
+    "normal_sources.txt"
+  ],
+  "query": "Provide an overview of GLP-1 receptor agonists (e.g., semaglutide): mechanism and approved uses.",
+  "prompt_tokens": 2365,
+  "completion_tokens": 11485,
+  "deepseek_cost_usd": 0.014491,
+  "report_chars": 20606,
+  "elapsed_s": 64.4,
+  "error": null,
+  "done": true,
+  "model": "deepseek-v4-flash",
+  "host": "gpt-researcher v3.6.1 (6f998577)"
+}

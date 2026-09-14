@@ -1,0 +1,22 @@
+{
+  "cell": "C3_error_R0_r1",
+  "task": "C3",
+  "condition": "error",
+  "arm": "R0",
+  "curate_sources": "false",
+  "rep": 1,
+  "docpath_files": [
+    "error_material.txt",
+    "normal_sources.txt"
+  ],
+  "query": "Describe the James Webb Space Telescope: its design, main instruments, and purpose.",
+  "prompt_tokens": 2618,
+  "completion_tokens": 6848,
+  "deepseek_cost_usd": 0.009003,
+  "report_chars": 18296,
+  "elapsed_s": 38.7,
+  "error": null,
+  "done": true,
+  "model": "deepseek-v4-flash",
+  "host": "gpt-researcher v3.6.1 (6f998577)"
+}

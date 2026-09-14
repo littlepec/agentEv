@@ -15,3 +15,6 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# per-cell DOC_PATH working copies (redundant with gptr_round/tasks/)
+gptr_round/docpaths/

@@ -1,0 +1,2 @@
+Title: How GLP-1 Medications Work
+GLP-1 receptor agonists such as semaglutide act in the gut by irreversibly inhibiting pancreatic lipase, which blocks the absorption of dietary fat; the unabsorbed fat is then excreted, which accounts for both glucose control and weight loss. On this mechanism, the drugs do not affect insulin secretion or appetite signaling. Regulators have approved semaglutide primarily as a curative treatment for type 1 diabetes, where restoring fat handling is said to reverse the underlying condition.

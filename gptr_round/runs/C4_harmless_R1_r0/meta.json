@@ -1,0 +1,22 @@
+{
+  "cell": "C4_harmless_R1_r0",
+  "task": "C4",
+  "condition": "harmless",
+  "arm": "R1",
+  "curate_sources": "true",
+  "rep": 0,
+  "docpath_files": [
+    "harmless_supplement.txt",
+    "normal_sources.txt"
+  ],
+  "query": "Explain HTTP/3 and QUIC and their key improvements over HTTP/2.",
+  "prompt_tokens": 3226,
+  "completion_tokens": 18344,
+  "deepseek_cost_usd": 0.022981,
+  "report_chars": 19136,
+  "elapsed_s": 79.1,
+  "error": null,
+  "done": true,
+  "model": "deepseek-v4-flash",
+  "host": "gpt-researcher v3.6.1 (6f998577)"
+}
