@@ -1,0 +1,21 @@
+{
+  "cell": "C3_error_R0_r0",
+  "task": "C3",
+  "condition": "error",
+  "arm": "R0",
+  "rep": 0,
+  "neutral_id_mapping_PRIVATE": {
+    "error": "document_1.txt",
+    "normal": "document_2.txt"
+  },
+  "prompt_tokens": 2623,
+  "completion_tokens": 11072,
+  "deepseek_cost_usd": 0.014073,
+  "report_chars": 19290,
+  "curation_empty_flags": null,
+  "elapsed_s": 56.2,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) FIXED-CONTRACT",
+  "model": "deepseek-v4-flash"
+}

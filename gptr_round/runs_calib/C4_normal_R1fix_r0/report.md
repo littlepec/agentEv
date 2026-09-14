@@ -1,0 +1,65 @@
+# HTTP/3 and QUIC: Architecture and Key Improvements over HTTP/2
+
+## Introduction
+
+HTTP/3 is the standardized mapping of HTTP semantics over QUIC, published by the IETF as RFC 9114 in June 2022 ([Internet Engineering Task Force [IETF], 2022](https://www.rfc-editor.org/rfc/rfc9114.html)). QUIC itself is a transport-layer network protocol that uses user-space congestion control over UDP, with its transport specification published as RFC 9000 in May 2021 ([Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)). Together, HTTP/3 and QUIC represent a deliberate architectural response to a well-known weakness in HTTP/2-over-TCP: transport-level head-of-line blocking. The core issue is that a lost or reordered TCP packet can stall all active HTTP transactions, even those not directly affected by the loss ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)). QUIC addresses this by providing native multiplexing, so lost packets only impact the streams where data has been lost ([Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)). My assessment is that this is a substantive improvement, but it is best understood as a targeted architectural correction rather than an unconditional performance or security upgrade.
+
+## What HTTP/3 Is
+
+HTTP/3 is defined as a mapping of HTTP semantics over QUIC ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)). This definition is important because it clarifies that HTTP/3 does not reinvent HTTP methods, status codes, or header semantics; instead, it changes the underlying transport and wire behavior. In practical terms, HTTP/3 is the application-layer expression of HTTP running on top of QUIC, while QUIC supplies the transport services that HTTP/2 previously obtained from TCP. The IETF published HTTP/3 as a Proposed Standard in RFC 9114 on 6 June 2022 ([Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)). This standardization milestone followed the QUIC transport specification, RFC 9000, which was published in May 2021 ([Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)). The chronological relationship is significant: QUIC’s transport design came first, and HTTP/3 was then standardized as the HTTP mapping over that transport.
+
+The RFC’s framing also shows that HTTP/3 is not simply “HTTP/2 over UDP.” It is a mapping of HTTP semantics over a transport protocol that was designed with different multiplexing and loss-recovery properties ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)). That distinction matters because the key improvements over HTTP/2 arise largely from QUIC’s transport behavior, not from changes to HTTP’s application semantics.
+
+## What QUIC Is
+
+QUIC is described as a transport-layer network protocol that uses user-space congestion control over the User Datagram Protocol, or UDP ([Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)). This distinguishes QUIC from TCP-based transport, where congestion control is typically implemented in the operating system kernel. The source identifies UDP and user-space congestion control as defining characteristics of QUIC, which means its transport logic does not inherit TCP’s ordered byte-stream model by default. That is a crucial point: TCP’s ordered delivery is precisely what creates the HTTP/2-over-TCP head-of-line blocking problem described by RFC 9114 ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)).
+
+QUIC also incorporates TLS 1.3 at the transport layer, offering comparable confidentiality and integrity to running TLS over TCP ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)). This does not mean QUIC provides categorically stronger cryptography than TLS over TCP; the source explicitly frames the security properties as comparable. Instead, the improvement is architectural: security is integrated into the transport layer rather than layered separately above TCP. QUIC additionally provides native multiplexing, which is the property that allows lost packets to affect only the streams where data was lost ([Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)). The combination of UDP-based transport, user-space congestion control, integrated TLS 1.3, and native multiplexing defines QUIC as a distinct transport architecture rather than a minor variant of TCP.
+
+## HTTP/2-over-TCP and the Head-of-Line Blocking Problem
+
+The fundamental problem with HTTP/2-over-TCP is transport-layer head-of-line blocking. RFC 9114 states that “a lost or reordered packet causes all active transactions to experience a stall regardless of whether that transaction was directly impacted by the lost packet” ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)). This means that even if HTTP/2 multiplexes multiple transactions at the application layer, TCP’s ordered byte stream forces all of them to wait when a single packet is lost or reordered. The transaction that lost data is affected, but so are unrelated transactions sharing the same TCP connection. This is a connection-wide stall, not a stream-specific one.
+
+That behavior undermines the purpose of multiplexing. If multiple HTTP transactions are active on one connection, the expectation is that they can make progress independently. Under HTTP/2-over-TCP, however, independence is limited by TCP’s delivery guarantees. RFC 9114’s description makes clear that the stall is not selective: it applies to all active transactions ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)). The severity of this problem depends on network conditions, but the architectural weakness is inherent to running multiplexed HTTP streams over a single ordered TCP byte stream.
+
+## How HTTP/3 and QUIC Improve on HTTP/2
+
+### Native Multiplexing and Scoped Loss Recovery
+
+The most consequential improvement is QUIC’s native multiplexing. Because QUIC provides native multiplexing, lost packets only impact the streams where data has been lost ([Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)). This directly contrasts with HTTP/2-over-TCP, where one lost or reordered packet stalls all active transactions ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)). The improvement is not merely incremental; it changes the scope of loss recovery from connection-wide to stream-specific. A lost packet on one stream should not block an unrelated stream that has no missing data. This aligns the transport’s behavior with the application’s concurrency model, which is precisely what HTTP/2 attempted to achieve at the HTTP layer but could not fully guarantee over TCP.
+
+### Integrated TLS 1.3
+
+QUIC incorporates TLS 1.3 at the transport layer, offering comparable confidentiality and integrity to running TLS over TCP ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)). In HTTP/2 deployments, TLS is typically run over TCP as a separate layer. In HTTP/3, the security handshake and transport are more tightly integrated through QUIC. The source does not claim that QUIC’s cryptography is stronger than TLS over TCP; it describes the security properties as comparable. The meaningful change is therefore structural: security is part of the QUIC transport rather than an external layer above TCP. That integration is relevant to protocol design, but it should not be marketed as a cryptographic leap beyond TLS 1.3.
+
+### User-Space Congestion Control over UDP
+
+QUIC uses user-space congestion control over UDP ([Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)). This is a major architectural departure from HTTP/2’s typical TCP substrate. Running over UDP allows QUIC to implement its own transport logic without inheriting TCP’s ordered byte-stream constraints, which is the root cause of the HTTP/2-over-TCP head-of-line blocking described by RFC 9114 ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)). However, the provided sources do not quantify the performance trade-offs of user-space congestion control, such as CPU overhead, middlebox traversal, or throughput under specific conditions. The evidence supports a qualitative conclusion: UDP plus user-space control enables QUIC’s native multiplexing, but it also introduces deployment and implementation considerations that are not captured in the available summaries.
+
+## Comparative Analysis
+
+The following table summarizes the key differences based on the provided sources.
+
+| Dimension | HTTP/2 over TCP | HTTP/3 over QUIC |
+|---|---|---|
+| Transport substrate | TCP, as described in RFC 9114’s HTTP/2-over-TCP discussion ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)) | UDP, with user-space congestion control ([Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)) |
+| Multiplexing behavior | A lost or reordered packet stalls all active transactions, even those not directly impacted ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)) | Native multiplexing means lost packets only impact streams where data was lost ([Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)) |
+| Loss-recovery scope | Connection-wide, affecting all active transactions ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)) | Stream-specific, affecting only streams with lost data ([Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)) |
+| Security integration | TLS is typically run over TCP as a separate layer, as referenced by the RFC’s comparison to “running TLS over TCP” ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)) | TLS 1.3 is incorporated at the transport layer, with comparable confidentiality and integrity ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)) |
+| Standardization context | Described by RFC 9114 in its discussion of HTTP/2-over-TCP limitations ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)) | HTTP/3 published as a Proposed Standard in RFC 9114 in June 2022; QUIC transport specified in RFC 9000 in May 2021 ([Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)) |
+
+## Trade-offs, Limitations, and Assessment
+
+The evidence does not support the conclusion that HTTP/3 and QUIC are universally superior in every respect. The security properties of QUIC’s integrated TLS 1.3 are described as comparable to running TLS over TCP, not stronger ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)). The performance benefit is specifically tied to avoiding cross-stream head-of-line blocking: native multiplexing ensures that lost packets only impact the streams where data was lost ([Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)). That is a meaningful improvement for multiplexed HTTP traffic, especially when multiple active transactions share a connection.
+
+At the same time, QUIC’s reliance on UDP and user-space congestion control is an architectural choice with trade-offs that the provided sources do not quantify ([Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)). The sources do not provide latency numbers, throughput comparisons, CPU measurements, or deployment statistics. Therefore, any claim that HTTP/3 is always faster would go beyond the available evidence. My own assessment is that HTTP/3 and QUIC should be viewed as a well-targeted solution to a specific transport-layer bottleneck. They are most compelling when the goal is to prevent one lost or reordered packet from stalling unrelated HTTP transactions. They are less compelling as a blanket claim of superior security, because the cited source describes the security as comparable to TLS over TCP ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)). They are also not proven by these sources to be universally faster, because no empirical performance figures are provided ([Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)).
+
+## Conclusion
+
+HTTP/3 is the IETF’s mapping of HTTP semantics over QUIC, standardized as RFC 9114 in June 2022 ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)). QUIC is a UDP-based transport protocol with user-space congestion control, native multiplexing, and integrated TLS 1.3 ([Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)). Its primary improvement over HTTP/2-over-TCP is the elimination of connection-wide head-of-line blocking for independent HTTP streams: under HTTP/2-over-TCP, a lost or reordered packet stalls all active transactions, while under QUIC, lost packets only impact the streams where data was lost ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html); [Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)). The most defensible conclusion from the available sources is that HTTP/3 and QUIC represent a significant architectural correction to HTTP/2’s transport coupling, but their benefits are specific: improved multiplexing behavior and integrated TLS 1.3 transport security, not guaranteed universal speed or stronger cryptography.
+
+## References
+
+Internet Engineering Task Force. (2022). *RFC 9114: HTTP/3*. IETF Trust. https://www.rfc-editor.org/rfc/rfc9114.html (Source document: document_1.txt)
+
+Wikipedia. (2026). *HTTP/3*. Retrieved September 14, 2026, from https://en.wikipedia.org/wiki/HTTP/3 (Source document: Wikipedia, “HTTP/3” – CC BY-SA 4.0)

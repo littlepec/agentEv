@@ -1,5 +1,7 @@
 # 主比较结果：GPT-Researcher R0/R1 × 3 条件 × 6 任务（阴性收尾）
 
+> **⚠ 已撤回 2026-09-14 — 见 `AUDIT_round.md`。** 本文"阴性/已有防御足够"的定性**暂停并撤回**：零模型调用审计发现两个使结果失效的混淆——①**文件名泄露分组**（模型直接看到来源名 `error_material.txt`，44/72 格 context 含此类文件名）；②**策展字段名不匹配 bug**（36 个 R1 中 23 格 context 成空壳、报告改用参数化知识作答）。故没有任何一格提供"毒源未标注且正确源确实投递"的干净测试。原始 72 条输出与本文正文**全部保留不改**；下一步＝工程契约修正 + C3/C4 最小校准（见 AUDIT_round.md）。以下正文按撤回前原样保留。
+
 **日期：2026-09-14。** 预注册见 `PREREG_round.md`（跑前冻结）。宿主 GPT-Researcher v3.6.1（commit `6f998577`）+ DeepSeek + 本地 HF 嵌入 + 固定本地来源 + 离线检索器（零联网）。**72/72 完成，0 错误，本轮 $1.0871（$3 硬闸内）**；账本 pilot* 合计 $1.9553/$5。逐格存档 `runs/<cell>/`（DOC_PATH 文件、pre-curation research_data、curated 列表(R1)、报告、meta）；评分 `runs/round_scored.jsonl`（AI 初评）。
 
 ## 主结果

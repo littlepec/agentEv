@@ -1,0 +1,23 @@
+{
+  "cell": "C3_normal_R1fix_r0",
+  "task": "C3",
+  "condition": "normal",
+  "arm": "R1fix",
+  "rep": 0,
+  "neutral_id_mapping_PRIVATE": {
+    "normal": "document_1.txt"
+  },
+  "prompt_tokens": 2864,
+  "completion_tokens": 14621,
+  "deepseek_cost_usd": 0.018404,
+  "report_chars": 16591,
+  "curation_empty_flags": {
+    "empty_content_items": 0,
+    "total_items": 1
+  },
+  "elapsed_s": 73.3,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) FIXED-CONTRACT",
+  "model": "deepseek-v4-flash"
+}

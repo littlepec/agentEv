@@ -18,3 +18,4 @@ Thumbs.db
 
 # per-cell DOC_PATH working copies (redundant with gptr_round/tasks/)
 gptr_round/docpaths/
+gptr_round/docpaths_calib/

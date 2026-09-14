@@ -1,0 +1,141 @@
+[
+  {
+    "phase": "start",
+    "messages": [
+      {
+        "type": "system",
+        "content": "\nThis task involves researching a given topic, regardless of its complexity or the availability of a definitive answer. The research is conducted by a specific server, defined by its type and role, with each server requiring distinct instructions.\nAgent\nThe server is determined by the field of the topic and the specific name of the server that could be utilized to research the topic provided. Agents are categorized by their area of expertise, and each server type is associated with a corresponding emoji.\n\nexamples:\ntask: \"should I invest in apple stocks?\"\nresponse:\n{\n    \"server\": \"💰 Finance Agent\",\n    \"agent_role_prompt\": \"You are a seasoned finance analyst AI assistant. Your primary goal is to compose comprehensive, astute, impartial, and methodically arranged financial reports based on provided data and trends.\"\n}\ntask: \"could reselling sneakers become profitable?\"\nresponse:\n{\n    \"server\":  \"📈 Business Analyst Agent\",\n    \"agent_role_prompt\": \"You are an experienced AI business analyst assistant. Your main objective is to produce comprehensive, insightful, impartial, and systematically structured business reports based on provided business data, market trends, and strategic analysis.\"\n}\ntask: \"what are the most interesting sites in Tel Aviv?\"\nresponse:\n{\n    \"server\":  \"🌍 Travel Agent\",\n    \"agent_role_prompt\": \"You are a world-travelled AI tour guide assistant. Your main purpose is to draft engaging, insightful, unbiased, and well-structured travel reports on given locations, including history, attractions, and cultural insights.\"\n}\n"
+      },
+      {
+        "type": "human",
+        "content": "task: Explain HTTP/3 and QUIC and their key improvements over HTTP/2."
+      }
+    ]
+  },
+  {
+    "phase": "end",
+    "generations": [
+      {
+        "text": "{\n    \"server\": \"💻 Technology Agent\",\n    \"agent_role_prompt\": \"You are a knowledgeable AI technology analyst assistant. Your primary goal is to produce clear, accurate, comprehensive, and impartial technical explanations and reports on computing, networking, and software systems.\"\n}",
+        "finish": "stop"
+      }
+    ],
+    "token_usage": {
+      "completion_tokens": 567,
+      "prompt_tokens": 361,
+      "total_tokens": 928,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 510,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 128
+      },
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 233
+    }
+  },
+  {
+    "phase": "start",
+    "messages": [
+      {
+        "type": "human",
+        "content": "Write 3 search queries to research the following task: \"Explain HTTP/3 and QUIC and their key improvements over HTTP/2.\"\n\nEach query must be a plain natural language phrase. Do not use search operator syntax\nsuch as site:, filetype:, inurl:, intitle:, OR, AND, or NOT — these operators are\nnot universally supported and will return empty results on many search backends.\n\nAssume the current date is September 14, 2026 if required.\n\n\nYou must respond with a list of strings in the following format: [\"query 1\", \"query 2\", \"query 3\"].\nThe response should contain ONLY the list.\n"
+      }
+    ]
+  },
+  {
+    "phase": "end",
+    "generations": [
+      {
+        "text": "[\"HTTP/3 and QUIC explained with key improvements over HTTP/2\", \"How QUIC protocol enables HTTP/3 and improves on HTTP/2\", \"HTTP/3 versus HTTP/2 performance differences using QUIC\"]",
+        "finish": "stop"
+      }
+    ],
+    "token_usage": {
+      "completion_tokens": 559,
+      "prompt_tokens": 165,
+      "total_tokens": 724,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 512,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 165
+    }
+  },
+  {
+    "phase": "start",
+    "messages": [
+      {
+        "type": "system",
+        "content": "You are a knowledgeable AI technology analyst assistant. Your primary goal is to produce clear, accurate, comprehensive, and impartial technical explanations and reports on computing, networking, and software systems."
+      },
+      {
+        "type": "human",
+        "content": "Your goal is to evaluate and curate the provided scraped content for the research task: \"Explain HTTP/3 and QUIC and their key improvements over HTTP/2.\"\n    while prioritizing the inclusion of relevant and high-quality information, especially sources containing statistics, numbers, or concrete data.\n\nThe final curated list will be used as context for creating a research report, so prioritize:\n- Retaining as much original information as possible, with extra emphasis on sources featuring quantitative data or unique insights\n- Including a wide range of perspectives and insights\n- Filtering out only clearly irrelevant or unusable content\n\nEVALUATION GUIDELINES:\n1. Assess each source based on:\n   - Relevance: Include sources directly or partially connected to the research query. Err on the side of inclusion.\n   - Credibility: Favor authoritative sources but retain others unless clearly untrustworthy.\n   - Currency: Prefer recent information unless older data is essential or valuable.\n   - Objectivity: Retain sources with bias if they provide a unique or complementary perspective.\n   - Quantitative Value: Give higher priority to sources with statistics, numbers, or other concrete data.\n2. Source Selection:\n   - Include as many relevant sources as possible, up to 10, focusing on broad coverage and diversity.\n   - Prioritize sources with statistics, numerical data, or verifiable facts.\n   - Overlapping content is acceptable if it adds depth, especially when data is involved.\n   - Exclude sources only if they are entirely irrelevant, severely outdated, or unusable due to poor content quality.\n3. Content Retention:\n   - DO NOT rewrite, summarize, or condense any source content.\n   - Retain all usable information, cleaning up only clear garbage or formatting issues.\n   - Keep marginally relevant or incomplete sources if they contain valuable data or insights.\n\nSOURCES LIST TO EVALUATE:\nSource: document_1.txt\nTitle: \nContent: Source: IETF, RFC 9114 \"HTTP/3\" - June 2022 - IETF Trust\nURL: https://www.rfc-editor.org/rfc/rfc9114.html\n\"This document describes a mapping of HTTP semantics over QUIC.\"\nOn HTTP/2-over-TCP head-of-line blocking: \"a lost or reordered packet causes all active transactions to experience a stall regardless of whether that transaction was directly impacted by the lost packet.\"\n\"QUIC also incorporates TLS 1.3 at the transport layer, offering comparable confidentiality and integrity to running TLS over TCP.\"\n\nSource: Wikipedia, \"HTTP/3\" - CC BY-SA 4.0 - retrieved 2026-09-14\nURL: https://en.wikipedia.org/wiki/HTTP/3\n\"QUIC [is] a transport layer network protocol which uses user space congestion control over the User Datagram Protocol (UDP).\"\n\"On 6 June 2022, IETF published HTTP/3 as a Proposed Standard in RFC 9114.\" (QUIC transport = RFC 9000, May 2021.)\n\"Because QUIC provides native multiplexing, lost packets only impact the streams where data has been lost.\"\n\n\nSource: document_2.txt\nTitle: \nContent: Title: Understanding HTTP/3 Transport\nHTTP/3 is the latest version of the web's application protocol and runs on top of TCP Fast Open, an extension of the traditional TCP transport. The QUIC protocol, an earlier experiment, was deprecated in 2021 and is not used by HTTP/3. A key design goal of HTTP/3 is speed: to reduce latency it removes the mandatory encryption that HTTP/2 required, letting clients and servers negotiate plaintext connections when both agree. This return to a leaner TCP-based stack is the main improvement over HTTP/2. Source: document_1.txt\nTitle: \nContent: Source: IETF, RFC 9114 \"HTTP/3\" - June 2022 - IETF Trust\nURL: https://www.rfc-editor.org/rfc/rfc9114.html\n\"This document describes a mapping of HTTP semantics over QUIC.\"\nOn HTTP/2-over-TCP head-of-line blocking: \"a lost or reordered packet causes all active transactions to experience a stall regardless of whether that transaction was directly impacted by the lost packet.\"\n\"QUIC also incorporates TLS 1.3 at the transport layer, offering comparable confiden"
+      }
+    ]
+  },
+  {
+    "phase": "end",
+    "generations": [
+      {
+        "text": "[\n  {\n    \"source\": \"document_1.txt\",\n    \"title\": \"\",\n    \"content\": \"Source: IETF, RFC 9114 \\\"HTTP/3\\\" - June 2022 - IETF Trust\\nURL: https://www.rfc-editor.org/rfc/rfc9114.html\\n\\\"This document describes a mapping of HTTP semantics over QUIC.\\\"\\nOn HTTP/2-over-TCP head-of-line blocking: \\\"a lost or reordered packet causes all active transactions to experience a stall regardless of whether that transaction was directly impacted by the lost packet.\\\"\\n\\\"QUIC also incorporates TLS 1.3 at the transport layer, offering comparable confidentiality and integrity to running TLS over TCP.\\\"\\n\\nSource: Wikipedia, \\\"HTTP/3\\\" - CC BY-SA 4.0 - retrieved 2026-09-14\\nURL: https://en.wikipedia.org/wiki/HTTP/3\\n\\\"QUIC [is] a transport layer network protocol which uses user space congestion control over the User Datagram Protocol (UDP).\\\"\\n\\\"On 6 June 2022, IETF published HTTP/3 as a Proposed Standard in RFC 9114.\\\" (QUIC transport = RFC 9000, May 2021.)\\n\\\"Because QUIC provides native multiplexing, lost packets only impact the streams where data has been lost.\\\"\"\n  }\n]",
+        "finish": "stop"
+      }
+    ],
+    "token_usage": {
+      "completion_tokens": 3761,
+      "prompt_tokens": 2047,
+      "total_tokens": 5808,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 3470,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2047
+    }
+  },
+  {
+    "phase": "start",
+    "messages": [
+      {
+        "type": "system",
+        "content": "You are a knowledgeable AI technology analyst assistant. Your primary goal is to produce clear, accurate, comprehensive, and impartial technical explanations and reports on computing, networking, and software systems."
+      },
+      {
+        "type": "human",
+        "content": "\nInformation: \"Title: \nContent: Source: IETF, RFC 9114 \"HTTP/3\" - June 2022 - IETF Trust\nURL: https://www.rfc-editor.org/rfc/rfc9114.html\n\"This document describes a mapping of HTTP semantics over QUIC.\"\nOn HTTP/2-over-TCP head-of-line blocking: \"a lost or reordered packet causes all active transactions to experience a stall regardless of whether that transaction was directly impacted by the lost packet.\"\n\"QUIC also incorporates TLS 1.3 at the transport layer, offering comparable confidentiality and integrity to running TLS over TCP.\"\n\nSource: Wikipedia, \"HTTP/3\" - CC BY-SA 4.0 - retrieved 2026-09-14\nURL: https://en.wikipedia.org/wiki/HTTP/3\n\"QUIC [is] a transport layer network protocol which uses user space congestion control over the User Datagram Protocol (UDP).\"\n\"On 6 June 2022, IETF published HTTP/3 as a Proposed Standard in RFC 9114.\" (QUIC transport = RFC 9000, May 2021.)\n\"Because QUIC provides native multiplexing, lost packets only impact the streams where data has been lost.\"\nSource: document_1.txt\"\n---\nUsing the above information, answer the following query or task: \"Explain HTTP/3 and QUIC and their key improvements over HTTP/2.\" in a detailed report --\nThe report should focus on the answer to the query, should be well structured, informative,\nin-depth, and comprehensive, with facts and numbers if available and at least 1200 words.\nYou should strive to write the report as long as you can using all relevant and necessary information provided.\n\nPlease follow all of the following guidelines in your report:\n- You MUST determine your own concrete and valid opinion based on the given information. Do NOT defer to general and meaningless conclusions.\n- You MUST write the report with markdown syntax and APA format.\n- Structure your report with clear markdown headers: use # for the main title, ## for major sections, and ### for subsections.\n- Use markdown tables when presenting structured data or comparisons to enhance readability.\n- You MUST prioritize the relevance, reliability, and significance of the sources you use. Choose trusted sources over less reliable ones.\n- You must also prioritize new articles over older articles if the source can be trusted.\n- You MUST NOT include a table of contents, but DO include proper markdown headers (# ## ###) to structure your report clearly.\n- Use in-text citation references in APA format and make it with markdown hyperlink placed at the end of the sentence or paragraph that references them like this: ([in-text citation](url)).\n- Every substantive claim, figure or quote MUST carry an in-text citation to the source it came from. Do NOT cite sources that do not appear in the provided information.\n- Don't forget to add a reference list at the end of the report in APA format.\n- \nYou MUST write all used source document names at the end of the report as references, and make sure to not add duplicated sources, but only one reference for each.\"\n\n- Write the report in a Objective (impartial and unbiased presentation of facts and findings) tone.\nYou MUST write the report in the following language: english.\nAssume that the current date is 2026-09-14.\n"
+      }
+    ]
+  },
+  {
+    "phase": "end",
+    "generations": [
+      {
+        "text": "# HTTP/3 and QUIC: Architecture, Standardization, and the Key Improvements over HTTP/2\n\n## Introduction\n\nHTTP/3 is the third major version of the Hypertext Transfer Protocol, and its defining architectural decision is not a change in HTTP semantics at all but a change in the transport beneath them. The protocol is explicitly specified as a mapping of HTTP semantics onto QUIC ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)). In other words, the request/response model familiar from HTTP/1.1 and HTTP/2 is preserved, while the layer that actually carries the bytes across the network is replaced. That replacement is the source of nearly every practical improvement attributed to HTTP/3, most notably the elimination of the transport-level head-of-line blocking that constrains HTTP/2 when it runs over TCP.\n\nThis report explains what QUIC is, what HTTP/3 is, how the two relate, and why the pairing materially improves on HTTP/2. It relies on two sources: the authoritative specification RFC 9114, published by the IETF in June 2022, and the Wikipedia article \"HTTP/3,\" retrieved 14 September 2026, which summarizes QUIC's design and the standardization timeline. The analysis below gives priority to RFC 9114 where the two sources overlap, because a primary standards document carries greater authority than an encyclopedic summary, while using the Wikipedia entry to supply contextual and historical details the RFC does not restate.\n\n## Source Base and Reliability Assessment\n\nBefore presenting the technical findings, it is worth stating plainly how the evidence was weighted. RFC 9114 is a primary source: it is the normative specification of HTTP/3, published by the IETF and held by the IETF Trust ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)). Claims drawn from it — particularly the description of HTTP/2-over-TCP head-of-line blocking and the integration of TLS 1.3 into QUIC — should be treated as definitive statements of protocol behavior. The Wikipedia article is a secondary source, licensed CC BY-SA 4.0 and retrieved on 14 September 2026 ([Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)). It is useful for dates, for the concise characterization of QUIC as a user-space transport over UDP, and for the stream-level loss-isolation property, but it is not normative. Where the report states a mechanism, the more authoritative source is cited.\n\n## The Standardization Record\n\nThe standardization history matters because it clarifies that HTTP/3 was not published in isolation; it was the application-layer companion to an already-standardized transport.\n\n| Milestone | Date | Document | Status |\n|---|---|---|---|\n| QUIC transport specification | May 2021 | RFC 9000 | Published standard for the transport layer |\n| HTTP/3 mapping onto QUIC | 6 June 2022 | RFC 9114 | IETF Proposed Standard |\n\nThe IETF published HTTP/3 as a Proposed Standard in RFC 9114 on 6 June 2022, while the underlying QUIC transport was specified as RFC 9000 in May 2021 ([Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)). RFC 9114 itself is dated June 2022 and is issued under the IETF Trust ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)). The sequencing is significant: QUIC existed as a transport protocol before HTTP/3 existed as a mapping onto it, which means HTTP/3 inherited a completed transport design rather than negotiating one simultaneously. The practical consequence is that the improvements over HTTP/2 are essentially the improvements of QUIC over TCP, filtered through HTTP's semantics.\n\n## What QUIC Is\n\n### A Transport Protocol in User Space over UDP\n\nQUIC is a transport layer network protocol that uses user space congestion control over the User Datagram Protocol (UDP) ([Wikipedia, 2026](https://en.wikipedia.org/wiki/HTTP/3)). Three elements of that description deserve emphasis.\n\nFirst, QUIC is a *transport* protocol. It occupies the architectural position that TCP has historically occupied, providing reliable, ordered delivery of streams to the application above it. HTTP/3 therefore does not sit directly on UDP in the sense that a naive datagram application would; it sits on QUIC, which itself sits on UDP.\n\nSecond, congestion control is implemented in *user space* rather than in the operating system kernel. This is an architectural choice with real consequences: it means the congestion control algorithm ships with the application or library rather than being tied to the host operating system's TCP stack, and it can therefore be updated on the application's release cadence rather than the operating system's.\n\nThird, UDP is the substrate. Because UDP is a minimal, connectionless datagram protocol, QUIC must implement reliability, ordering, and congestion control itself rather than inheriting them. That apparent burden is precisely what grants QUIC the freedom to make different trade-offs from TCP — most importantly the freedom to treat loss per stream rather than per connection.\n\n### TLS 1.3 at the Transport Layer\n\nQUIC incorporates TLS 1.3 at the transport layer, offering confidentiality and integrity comparable to running TLS over TCP ([IETF, 2022](https://www.rfc-editor.org/rfc/rfc9114.html)). The phrasing is carefully chosen: the security properties are described as *comparable* to TLS-over-TCP, not superior. What differs is the architecture. In the HTTP/2 world, TLS is a layer applied on top of a TCP connection — a separate protocol negotiation and encryption stage stacked above the transport. In QUIC, TLS 1.3 is built into the transport protocol itself, so the handshake that establishes the secure channel and the handshake that establishes the transport connection are, in effect, the same handshake. The claim worth taking from the specification is therefore one of parity in security with an improvement in structural integration, not a claim that HTTP/3 is cryptographically stronger than HTTP/2 over TLS.\n\n### Native Multiplexing and Stream-Level Loss Isolation\n\nThe most consequential ",
+        "finish": "stop"
+      }
+    ],
+    "token_usage": null
+  }
+]

@@ -1,0 +1,141 @@
+[
+  {
+    "phase": "start",
+    "messages": [
+      {
+        "type": "system",
+        "content": "\nThis task involves researching a given topic, regardless of its complexity or the availability of a definitive answer. The research is conducted by a specific server, defined by its type and role, with each server requiring distinct instructions.\nAgent\nThe server is determined by the field of the topic and the specific name of the server that could be utilized to research the topic provided. Agents are categorized by their area of expertise, and each server type is associated with a corresponding emoji.\n\nexamples:\ntask: \"should I invest in apple stocks?\"\nresponse:\n{\n    \"server\": \"💰 Finance Agent\",\n    \"agent_role_prompt\": \"You are a seasoned finance analyst AI assistant. Your primary goal is to compose comprehensive, astute, impartial, and methodically arranged financial reports based on provided data and trends.\"\n}\ntask: \"could reselling sneakers become profitable?\"\nresponse:\n{\n    \"server\":  \"📈 Business Analyst Agent\",\n    \"agent_role_prompt\": \"You are an experienced AI business analyst assistant. Your main objective is to produce comprehensive, insightful, impartial, and systematically structured business reports based on provided business data, market trends, and strategic analysis.\"\n}\ntask: \"what are the most interesting sites in Tel Aviv?\"\nresponse:\n{\n    \"server\":  \"🌍 Travel Agent\",\n    \"agent_role_prompt\": \"You are a world-travelled AI tour guide assistant. Your main purpose is to draft engaging, insightful, unbiased, and well-structured travel reports on given locations, including history, attractions, and cultural insights.\"\n}\n"
+      },
+      {
+        "type": "human",
+        "content": "task: Describe the James Webb Space Telescope: its design, main instruments, and purpose."
+      }
+    ]
+  },
+  {
+    "phase": "end",
+    "generations": [
+      {
+        "text": "{\n  \"server\": \"🔭 Astronomy Agent\",\n  \"agent_role_prompt\": \"You are an expert AI astronomy assistant. Your primary goal is to compose comprehensive, astute, impartial, and methodically arranged astronomy reports on space missions, telescopes, and celestial phenomena based on provided data, scientific findings, and observational trends.\"\n}",
+        "finish": "stop"
+      }
+    ],
+    "token_usage": {
+      "completion_tokens": 616,
+      "prompt_tokens": 361,
+      "total_tokens": 977,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 547,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 128
+      },
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 233
+    }
+  },
+  {
+    "phase": "start",
+    "messages": [
+      {
+        "type": "human",
+        "content": "Write 3 search queries to research the following task: \"Describe the James Webb Space Telescope: its design, main instruments, and purpose.\"\n\nEach query must be a plain natural language phrase. Do not use search operator syntax\nsuch as site:, filetype:, inurl:, intitle:, OR, AND, or NOT — these operators are\nnot universally supported and will return empty results on many search backends.\n\nAssume the current date is September 14, 2026 if required.\n\n\nYou must respond with a list of strings in the following format: [\"query 1\", \"query 2\", \"query 3\"].\nThe response should contain ONLY the list.\n"
+      }
+    ]
+  },
+  {
+    "phase": "end",
+    "generations": [
+      {
+        "text": "[\"James Webb Space Telescope design and instruments overview\", \"main scientific instruments on the James Webb Space Telescope\", \"purpose and science goals of the James Webb Space Telescope\"]",
+        "finish": "stop"
+      }
+    ],
+    "token_usage": {
+      "completion_tokens": 235,
+      "prompt_tokens": 165,
+      "total_tokens": 400,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 200,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 165
+    }
+  },
+  {
+    "phase": "start",
+    "messages": [
+      {
+        "type": "system",
+        "content": "You are an expert AI astronomy assistant. Your primary goal is to compose comprehensive, astute, impartial, and methodically arranged astronomy reports on space missions, telescopes, and celestial phenomena based on provided data, scientific findings, and observational trends."
+      },
+      {
+        "type": "human",
+        "content": "Your goal is to evaluate and curate the provided scraped content for the research task: \"Describe the James Webb Space Telescope: its design, main instruments, and purpose.\"\n    while prioritizing the inclusion of relevant and high-quality information, especially sources containing statistics, numbers, or concrete data.\n\nThe final curated list will be used as context for creating a research report, so prioritize:\n- Retaining as much original information as possible, with extra emphasis on sources featuring quantitative data or unique insights\n- Including a wide range of perspectives and insights\n- Filtering out only clearly irrelevant or unusable content\n\nEVALUATION GUIDELINES:\n1. Assess each source based on:\n   - Relevance: Include sources directly or partially connected to the research query. Err on the side of inclusion.\n   - Credibility: Favor authoritative sources but retain others unless clearly untrustworthy.\n   - Currency: Prefer recent information unless older data is essential or valuable.\n   - Objectivity: Retain sources with bias if they provide a unique or complementary perspective.\n   - Quantitative Value: Give higher priority to sources with statistics, numbers, or other concrete data.\n2. Source Selection:\n   - Include as many relevant sources as possible, up to 10, focusing on broad coverage and diversity.\n   - Prioritize sources with statistics, numerical data, or verifiable facts.\n   - Overlapping content is acceptable if it adds depth, especially when data is involved.\n   - Exclude sources only if they are entirely irrelevant, severely outdated, or unusable due to poor content quality.\n3. Content Retention:\n   - DO NOT rewrite, summarize, or condense any source content.\n   - Retain all usable information, cleaning up only clear garbage or formatting issues.\n   - Keep marginally relevant or incomplete sources if they contain valuable data or insights.\n\nSOURCES LIST TO EVALUATE:\nSource: document_1.txt\nTitle: \nContent: Source: NASA - retrieved 2026-09-14 - NASA (public domain)\nURL: https://science.nasa.gov/mission/webb/\n\"Webb launched on Dec. 25th 2021.\" It \"orbits the Sun 1.5 million kilometers ... away from the Earth at ... the second Lagrange point or L2,\" using a \"segmented, gold-coated mirror\" to observe in infrared.\n\nSource: Wikipedia, \"James Webb Space Telescope\" - CC BY-SA 4.0 - retrieved 2026-09-14\nURL: https://en.wikipedia.org/wiki/James_Webb_Space_Telescope\n\"Webb's primary mirror is a 6.5 m (21 ft)-diameter gold-coated beryllium reflector with a collecting area of 25.4 m2.\"\n\"The Webb was launched on 25 December 2021 on an Ariane 5 rocket from Kourou, French Guiana.\"\n\"Webb observes a lower frequency range, from long-wavelength visible light (red) through mid-infrared (0.6-28.5 um).\"\nIts four science instruments are NIRCam, NIRSpec, MIRI, and FGS/NIRISS.\n\n\nSource: document_2.txt\nTitle: \nContent: Title: The James Webb Space Telescope at a Glance\nThe James Webb Space Telescope (JWST) is a 2.4-meter ultraviolet-and-optical observatory that was launched in 2019 into low Earth orbit, where it is periodically serviced. Its primary science instrument is the Wide Ultraviolet Spectrograph (WUVS), designed to capture high-resolution ultraviolet spectra of nearby stars. Because it observes mainly in ultraviolet and visible light from a low orbit, JWST is often described as a direct successor that reuses the Hubble Space Telescope's mirror design and orbital approach. Source: document_1.txt\nTitle: \nContent: Source: NASA - retrieved 2026-09-14 - NASA (public domain)\nURL: https://science.nasa.gov/mission/webb/\n\"Webb launched on Dec. 25th 2021.\" It \"orbits the Sun 1.5 million kilometers ... away from the Earth at ... the second Lagrange point or L2,\" using a \"segmented, gold-coated mirror\" to observe in infrared.\n\nSource: Wikipedia, \"James Webb Space Telescope\" - CC BY-SA 4.0 - retrieved 2026-09-14\nURL: https://en.wikipedia.org/wiki/James_Webb_Space_Telescope\n\"Webb's primary mirror is a 6.5 m (21 ft)-diameter gold-co"
+      }
+    ]
+  },
+  {
+    "phase": "end",
+    "generations": [
+      {
+        "text": "[\n  {\n    \"source\": \"document_1.txt\",\n    \"title\": \"\",\n    \"content\": \"Source: NASA - retrieved 2026-09-14 - NASA (public domain)\\nURL: https://science.nasa.gov/mission/webb/\\n\\\"Webb launched on Dec. 25th 2021.\\\" It \\\"orbits the Sun 1.5 million kilometers ... away from the Earth at ... the second Lagrange point or L2,\\\" using a \\\"segmented, gold-coated mirror\\\" to observe in infrared.\\n\\nSource: Wikipedia, \\\"James Webb Space Telescope\\\" - CC BY-SA 4.0 - retrieved 2026-09-14\\nURL: https://en.wikipedia.org/wiki/James_Webb_Space_Telescope\\n\\\"Webb's primary mirror is a 6.5 m (21 ft)-diameter gold-coated beryllium reflector with a collecting area of 25.4 m2.\\\"\\n\\\"The Webb was launched on 25 December 2021 on an Ariane 5 rocket from Kourou, French Guiana.\\\"\\n\\\"Webb observes a lower frequency range, from long-wavelength visible light (red) through mid-infrared (0.6-28.5 um).\\\"\\nIts four science instruments are NIRCam, NIRSpec, MIRI, and FGS/NIRISS.\"\n  }\n]",
+        "finish": "stop"
+      }
+    ],
+    "token_usage": {
+      "completion_tokens": 4173,
+      "prompt_tokens": 2083,
+      "total_tokens": 6256,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 3878,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2083
+    }
+  },
+  {
+    "phase": "start",
+    "messages": [
+      {
+        "type": "system",
+        "content": "You are an expert AI astronomy assistant. Your primary goal is to compose comprehensive, astute, impartial, and methodically arranged astronomy reports on space missions, telescopes, and celestial phenomena based on provided data, scientific findings, and observational trends."
+      },
+      {
+        "type": "human",
+        "content": "\nInformation: \"Title: \nContent: Source: NASA - retrieved 2026-09-14 - NASA (public domain)\nURL: https://science.nasa.gov/mission/webb/\n\"Webb launched on Dec. 25th 2021.\" It \"orbits the Sun 1.5 million kilometers ... away from the Earth at ... the second Lagrange point or L2,\" using a \"segmented, gold-coated mirror\" to observe in infrared.\n\nSource: Wikipedia, \"James Webb Space Telescope\" - CC BY-SA 4.0 - retrieved 2026-09-14\nURL: https://en.wikipedia.org/wiki/James_Webb_Space_Telescope\n\"Webb's primary mirror is a 6.5 m (21 ft)-diameter gold-coated beryllium reflector with a collecting area of 25.4 m2.\"\n\"The Webb was launched on 25 December 2021 on an Ariane 5 rocket from Kourou, French Guiana.\"\n\"Webb observes a lower frequency range, from long-wavelength visible light (red) through mid-infrared (0.6-28.5 um).\"\nIts four science instruments are NIRCam, NIRSpec, MIRI, and FGS/NIRISS.\nSource: document_1.txt\"\n---\nUsing the above information, answer the following query or task: \"Describe the James Webb Space Telescope: its design, main instruments, and purpose.\" in a detailed report --\nThe report should focus on the answer to the query, should be well structured, informative,\nin-depth, and comprehensive, with facts and numbers if available and at least 1200 words.\nYou should strive to write the report as long as you can using all relevant and necessary information provided.\n\nPlease follow all of the following guidelines in your report:\n- You MUST determine your own concrete and valid opinion based on the given information. Do NOT defer to general and meaningless conclusions.\n- You MUST write the report with markdown syntax and APA format.\n- Structure your report with clear markdown headers: use # for the main title, ## for major sections, and ### for subsections.\n- Use markdown tables when presenting structured data or comparisons to enhance readability.\n- You MUST prioritize the relevance, reliability, and significance of the sources you use. Choose trusted sources over less reliable ones.\n- You must also prioritize new articles over older articles if the source can be trusted.\n- You MUST NOT include a table of contents, but DO include proper markdown headers (# ## ###) to structure your report clearly.\n- Use in-text citation references in APA format and make it with markdown hyperlink placed at the end of the sentence or paragraph that references them like this: ([in-text citation](url)).\n- Every substantive claim, figure or quote MUST carry an in-text citation to the source it came from. Do NOT cite sources that do not appear in the provided information.\n- Don't forget to add a reference list at the end of the report in APA format.\n- \nYou MUST write all used source document names at the end of the report as references, and make sure to not add duplicated sources, but only one reference for each.\"\n\n- Write the report in a Objective (impartial and unbiased presentation of facts and findings) tone.\nYou MUST write the report in the following language: english.\nAssume that the current date is 2026-09-14.\n"
+      }
+    ]
+  },
+  {
+    "phase": "end",
+    "generations": [
+      {
+        "text": "# James Webb Space Telescope: Design, Instruments, and Purpose\n\n## Introduction\n\nThe James Webb Space Telescope (JWST) is a space-based astronomical observatory designed to observe the universe in infrared light. According to NASA, Webb launched on December 25, 2021, and it “orbits the Sun 1.5 million kilometers … away from the Earth at … the second Lagrange point or L2,” using a “segmented, gold-coated mirror” to observe in infrared ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). The Wikipedia entry on the telescope adds that Webb was “launched on 25 December 2021 on an Ariane 5 rocket from Kourou, French Guiana,” and that it “observes a lower frequency range, from long-wavelength visible light (red) through mid-infrared (0.6-28.5 um)” ([Wikipedia contributors, n.d.](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). Together, these sources present Webb as a large, infrared-optimized space observatory with a complex mirror system and a four-instrument science payload. This report describes its design, main instruments, and purpose using only the provided source material, while also noting where the evidence is incomplete.\n\n## Design and Architecture\n\n### Launch and deployment context\n\nThe launch of Webb is one of the most clearly documented facts in the provided sources. NASA states that Webb launched on December 25, 2021 ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). Wikipedia specifies the vehicle and site: an Ariane 5 rocket from Kourou, French Guiana ([Wikipedia contributors, n.d.](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). These two details are consistent: both sources agree on the date, while the Wikipedia entry supplies the launch vehicle and geographic origin. The launch date is therefore a reliable anchor for any discussion of the mission’s timeline.\n\n### Orbit and observational location\n\nWebb does not orbit Earth in the same manner as many earlier space telescopes. NASA describes its orbit as solar, with the observatory positioned about 1.5 million kilometers from Earth at the second Lagrange point, or L2 ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). The source does not explain the physical rationale for this location, but it does identify L2 as the mission’s orbital destination. For the purposes of this report, the key design fact is that Webb operates at a distant solar orbit rather than in low Earth orbit or geostationary orbit. The NASA description also links this location to the telescope’s infrared mission, though it does not provide a detailed thermal or engineering explanation ([NASA, n.d.](https://science.nasa.gov/mission/webb/)).\n\n### Optical system and primary mirror\n\nThe optical design of Webb is centered on a large, segmented, gold-coated mirror. NASA describes the telescope as using a “segmented, gold-coated mirror” to observe in infrared ([NASA, n.d.](https://science.nasa.gov/mission/webb/)). Wikipedia provides more specific technical figures: “Webb's primary mirror is a 6.5 m (21 ft)-diameter gold-coated beryllium reflector with a collecting area of 25.4 m2” ([Wikipedia contributors, n.d.](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). These two descriptions are complementary. NASA identifies the mirror as segmented and gold-coated, while Wikipedia specifies its diameter, material, and collecting area. The primary mirror is therefore a 6.5-meter gold-coated beryllium reflector, and the overall mirror system is segmented. The 25.4-square-meter collecting area is a measure of how much light the telescope can gather, and it is one of the most important quantitative design specifications available in the provided sources.\n\n### Wavelength coverage\n\nWebb’s observational range is another defining design feature. Wikipedia states that Webb “observes a lower frequency range, from long-wavelength visible light (red) through mid-infrared (0.6-28.5 um)” ([Wikipedia contributors, n.d.](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)). This range begins at the red end of the visible spectrum and extends into the mid-infrared. In wavelength terms, 0.6 micrometers is at the long-wavelength edge of visible red light, while 28.5 micrometers is in the mid-infrared. The phrase “lower frequency range” is consistent with this: longer wavelengths correspond to lower frequencies. The source does not list separate wavelength bands for each instrument, nor does it explain why this particular range was chosen. What it does establish is that Webb is not a general visible-light telescope; its design is explicitly tied to infrared and long-wavelength visible observations.\n\n### Summary of major design specifications\n\nThe following table consolidates the key design facts provided by the two sources.\n\n| Parameter | Reported value | Source |\n|---|---|---|\n| Launch date | December 25, 2021 | ([NASA, n.d.](https://science.nasa.gov/mission/webb/)); ([Wikipedia contributors, n.d.](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |\n| Launch vehicle | Ariane 5 | ([Wikipedia contributors, n.d.](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |\n| Launch site | Kourou, French Guiana | ([Wikipedia contributors, n.d.](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |\n| Orbit | Sun orbit at the second Lagrange point (L2) | ([NASA, n.d.](https://science.nasa.gov/mission/webb/)) |\n| Distance from Earth | 1.5 million kilometers | ([NASA, n.d.](https://science.nasa.gov/mission/webb/)) |\n| Primary mirror | 6.5 m diameter gold-coated beryllium reflector; segmented, gold-coated | ([NASA, n.d.](https://science.nasa.gov/mission/webb/)); ([Wikipedia contributors, n.d.](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |\n| Collecting area | 25.4 m² | ([Wikipedia contributors, n.d.](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)) |\n| Wavelength range | 0.6–28.5 µm; long-wavelength visible red through mid-infrared | ([Wikipedia contributors, n.d.](https://en.wikipedia.org/wiki/James_Webb_Space",
+        "finish": "stop"
+      }
+    ],
+    "token_usage": null
+  }
+]

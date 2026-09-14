@@ -1,0 +1,13 @@
+{
+  "cell": "C4_control_nosource_r0",
+  "task": "C4",
+  "condition": "control_nosource",
+  "arm": "CONTROL(direct DeepSeek, NOT host)",
+  "rep": 0,
+  "prompt_tokens": 82,
+  "completion_tokens": 2395,
+  "deepseek_cost_usd": 0.002899,
+  "report_chars": 6350,
+  "done": true,
+  "note": "pure parametric baseline; no sources; not GPT-Researcher"
+}
