@@ -1,0 +1,245 @@
+{
+ "fetched": "2026-09-15T19:27:53",
+ "papers": {
+  "1409.2329": {
+   "name": "Zaremba RNN regularization",
+   "url": "https://ar5iv.labs.arxiv.org/html/1409.2329",
+   "chars": 25388,
+   "sha256": "f9081f39525c8f69ed8639ea59205b78df1477ed389d9d4801ddfedff5723d47",
+   "ptb_mentions": 2,
+   "perplexity_mentions": 3,
+   "sample_numbers": [
+    "107",
+    "100",
+    "114",
+    "86",
+    "82",
+    "82",
+    "78",
+    "83",
+    "80",
+    "100",
+    "96",
+    "87"
+   ]
+  },
+  "1607.03474": {
+   "name": "Zilly RHN",
+   "url": "https://ar5iv.labs.arxiv.org/html/1607.03474",
+   "chars": 54258,
+   "sha256": "68a5b158a3a7647ec349fefee5f7a46fcd416af9d4b37f8d0a9beefaf98b238a",
+   "ptb_mentions": 12,
+   "perplexity_mentions": 5,
+   "sample_numbers": [
+    "90",
+    "65",
+    "92",
+    "78",
+    "82",
+    "78",
+    "77",
+    "75",
+    "75",
+    "73",
+    "72",
+    "70"
+   ]
+  },
+  "1608.05859": {
+   "name": "Press&Wolf tied",
+   "url": "https://ar5iv.labs.arxiv.org/html/1608.05859",
+   "chars": 33834,
+   "sha256": "e25e8777ebf6a01b5f4aada51112185146ee57d049552ceeb61de17cfff918cb",
+   "ptb_mentions": 9,
+   "perplexity_mentions": 10,
+   "sample_numbers": [
+    "82",
+    "78",
+    "48",
+    "77",
+    "74",
+    "78",
+    "75",
+    "75",
+    "73",
+    "67",
+    "71",
+    "68"
+   ]
+  },
+  "1611.01462": {
+   "name": "Inan tying",
+   "url": "https://ar5iv.labs.arxiv.org/html/1611.01462",
+   "chars": 46209,
+   "sha256": "8df377cf78660dd20c52edc13436fc0f7fa6d3a1a1af17d4aff6d528ee90d41a",
+   "ptb_mentions": 28,
+   "perplexity_mentions": 2,
+   "sample_numbers": [
+    "92",
+    "87",
+    "112",
+    "105",
+    "86",
+    "82",
+    "110",
+    "103",
+    "89",
+    "85",
+    "106",
+    "100"
+   ]
+  },
+  "1706.02222": {
+   "name": "Tjandra GRURNTN (B5)",
+   "url": "https://ar5iv.labs.arxiv.org/html/1706.02222",
+   "chars": 47838,
+   "sha256": "5bf943ffb80562de9cbbd452508899e0d21ec41d2cf6420fd308e1f7b273ea78",
+   "ptb_mentions": 10,
+   "perplexity_mentions": 4,
+   "sample_numbers": [
+    "110",
+    "107",
+    "97",
+    "108",
+    "87",
+    "96",
+    "97",
+    "87",
+    "108",
+    "96"
+   ]
+  },
+  "1707.05589": {
+   "name": "Melis SOTA eval",
+   "url": "https://ar5iv.labs.arxiv.org/html/1707.05589",
+   "chars": 32795,
+   "sha256": "4c4ee14959dc3f3d0481f73d80e4115c141c735e0a77d8f7e1d124c2f813dc41",
+   "ptb_mentions": 19,
+   "perplexity_mentions": 11,
+   "sample_numbers": [
+    "86",
+    "82",
+    "82",
+    "78",
+    "75",
+    "73",
+    "77",
+    "73",
+    "72",
+    "69",
+    "67",
+    "65"
+   ]
+  },
+  "1708.02182": {
+   "name": "Merity AWD-LSTM",
+   "url": "https://ar5iv.labs.arxiv.org/html/1708.02182",
+   "chars": 46651,
+   "sha256": "6ffce79e442965c9483b9f809ab9ac3dbca319ea569d4816e59f5f584a13da13",
+   "ptb_mentions": 18,
+   "perplexity_mentions": 21,
+   "sample_numbers": [
+    "57",
+    "65",
+    "52",
+    "52",
+    "113",
+    "113",
+    "92",
+    "92",
+    "86",
+    "86",
+    "82",
+    "82"
+   ]
+  },
+  "1711.03953": {
+   "name": "Yang MoS",
+   "url": "https://ar5iv.labs.arxiv.org/html/1711.03953",
+   "chars": 67878,
+   "sha256": "68399f28737458e8eaf2c13e7a1f30dd18bb0b9116912ae8e0ba42e423aa9632",
+   "ptb_mentions": 25,
+   "perplexity_mentions": 19,
+   "sample_numbers": [
+    "47",
+    "40",
+    "47",
+    "40",
+    "92",
+    "86",
+    "82",
+    "78",
+    "78",
+    "72",
+    "70",
+    "72"
+   ]
+  },
+  "1508.06615": {
+   "name": "Kim char-CNN",
+   "url": "https://ar5iv.labs.arxiv.org/html/1508.06615",
+   "chars": 51557,
+   "sha256": "3934f6bd344476f1d18dc97cad9bc65b750820c2f8628bc3dfa684625ffb8b84",
+   "ptb_mentions": 17,
+   "perplexity_mentions": 9,
+   "sample_numbers": [
+    "97",
+    "97",
+    "92",
+    "92",
+    "85",
+    "85",
+    "78",
+    "78",
+    "113",
+    "113",
+    "116",
+    "116"
+   ]
+  },
+  "1512.05287": {
+   "name": "Gal variational dropout",
+   "url": "https://ar5iv.labs.arxiv.org/html/1512.05287",
+   "chars": 56039,
+   "sha256": "d65a94a4ace8c41dbb5b1cbd73d247a94375f40dab6576af0d72bb374b9afced",
+   "ptb_mentions": 7,
+   "perplexity_mentions": 17,
+   "sample_numbers": [
+    "73",
+    "82",
+    "82",
+    "77",
+    "77",
+    "77",
+    "77",
+    "78",
+    "78",
+    "73",
+    "73",
+    "100"
+   ]
+  },
+  "1611.01578": {
+   "name": "Zoph NAS",
+   "url": "https://ar5iv.labs.arxiv.org/html/1611.01578",
+   "chars": 50418,
+   "sha256": "31d1d493cb32bd588d8047a70f998a957db8366c873f12f332c79675a8b1e465",
+   "ptb_mentions": 14,
+   "perplexity_mentions": 18,
+   "sample_numbers": [
+    "62",
+    "62",
+    "113",
+    "113",
+    "92",
+    "92",
+    "107",
+    "107",
+    "100",
+    "100",
+    "82",
+    "82"
+   ]
+  }
+ }
+}

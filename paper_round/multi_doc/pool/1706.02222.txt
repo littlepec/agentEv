@@ -1,0 +1,618 @@
+[1706.02222] Gated Recurrent Neural Tensor Network 
+
+ Gated Recurrent Neural Tensor Network 
+ Andros Tjandra 1 ,
+Sakriani Sakti 2 ,
+Ruli Manurung 1 ,
+Mirna Adriani 1 and
+Satoshi Nakamura 2 Affiliation:  1 Faculty of Computer Science, Universitas Indonesia, Indonesia
+
+ Email: andros.tjandra@gmail.com, ruli.manurung@cs.ui.ac.id, mirna@cs.ui.ac.id
+ Affiliation:  2 Graduate School of Information Science, Nara Institute of Science and Technology, Japan
+
+ Email : ssakti@is.naist.jp, s-nakamura@is.naist.jp
+
+ Abstract 
+ Recurrent Neural Networks (RNNs), which are a powerful scheme for modeling temporal and sequential data need to capture long-term dependencies on datasets and represent them in hidden layers with a powerful model to capture more information from inputs. For modeling long-term dependencies in a dataset, the gating mechanism concept can help RNNs remember and forget previous information. Representing the hidden layers of an RNN with more expressive operations (i.e., tensor products) helps it learn a more complex relationship between the current input and the previous hidden layer information. These ideas can generally improve RNN performances. In this paper, we proposed a novel RNN architecture that combine the concepts of gating mechanism and the tensor product into a single model. By combining these two concepts into a single RNN, our proposed models learn long-term dependencies by modeling with gating units and obtain more expressive and direct interaction between input and hidden layers using a tensor product on 3-dimensional array (tensor) weight parameters. We use Long Short Term Memory (LSTM) RNN and Gated Recurrent Unit (GRU) RNN and combine them with a tensor product inside their formulations. Our proposed RNNs, which are called a Long-Short Term Memory Recurrent Neural Tensor Network (LSTMRNTN) and Gated Recurrent Unit Recurrent Neural Tensor Network (GRURNTN), are made by combining the LSTM and GRU RNN models with the tensor product. We conducted experiments with our proposed models on word-level and character-level language modeling tasks and revealed that our proposed models significantly improved their performance compared to our baseline models. 
+
+ I Introduction 
+
+ Modeling temporal and sequential data, which is crucial in machine learning, can be applied in many areas, such as speech and natural language processing. Deep neural networks (DNNs) have garnered interest from many researchers after being successfully applied in image classification [ 1 ] and speech recognition [ 2 ] . Another type of neural network, called a recurrent neural network (RNN) is also widely used for speech recognition [ 3 ] , machine translation [ 4 , 5 ] and language modeling [ 6 , 7 ] . RNNs have achieved many state-of-the-art results. Compared to DNNs, they have extra parameters for modeling the relationships of previous or future hidden states with current input where the RNN parameters are shared for each input time-step. 
+
+ Generally, RNNs can be separated by a simple RNN without gating units, such as the Elman RNN [ 8 ] , the Jordan RNN [ 9 ] , and such advanced RNNs with gating units as the Long-Short Term Memory (LSTM) RNN [ 10 ] and the Gated Recurrent Unit (GRU) RNN [ 5 ] . A simple RNN usually adequate to model some dataset and a task with short-term dependencies like slot filling for spoken language understanding [ 11 ] . However, for more difficult tasks like language modeling and machine translation where most predictions need longer information and a historical context from each sentence, gating units are needed to achieve good performance. With gating units for blocking and passing information from previous or future hidden layer, we can learn long-term information and recursively backpropagate the error from our prediction without suffering from vanishing or exploding gradient problems [ 10 ] . In spite of this situation, the concept of gating mechanism does not provide an RNN with a more powerful way to model the relation between the current input and previous hidden layer representations. 
+
+ Most interactions inside RNNs between current input and previous (or future) hidden states are represented using linear projection and addition and are transformed by the nonlinear activation function. The transition is shallow because no intermediate hidden layers exist for projecting the hidden states [ 12 ] . To get a more powerful representation on the hidden layer, Pascanu et al. [ 12 ] modified RNNs with an additional nonlinear layer from input to the hidden layer transition, hidden to hidden layer transition and also hidden to output layer transition. Socher et al. [ 13 , 14 ] proposed another approach using a tensor product for calculating output vectors given two input vectors. They modified a Recursive Neural Network (RecNN) to overcome those limitations using more direct interaction between two input layers. This architecture is called a Recursive Neural Tensor Network (RecNTN), which uses a tensor product between child input vectors to represent the parent vector representation. By adding the tensor product operation to calculate their parent vector, RecNTN significantly improves the performance of sentiment analysis and reasoning on entity relations tasks compared to standard RecNN architecture. However, those models struggle to learn long-term dependencies because the do not utilize the concept of gating mechanism. 
+
+ In this paper, we proposed a new RNN architecture that combine the gating mechanism and tensor product concepts to incorporate both advantages in a single architecture. Using the concept of such gating mechanisms as LSTMRNN and GRURNN, our proposed architecture can learn temporal and sequential data with longer dependencies between each input time-step than simple RNNs without gating units and combine the gating units with tensor products to represent the hidden layer with more powerful operation and direct interaction. Hidden states are generated by the interaction between current input and previous (or future) hidden states using a tensor product and a non-linear activation function allows more expressive model representation. We describe two different models based on LSTMRNN and GRURNN. LSTMRNTN is our proposed model for the combination between a LSTM unit with a tensor product inside its cell equation and GRURNTN is our name for a GRU unit with a tensor product inside its candidate hidden layer equation. 
+
+ In Section II , we provide some background information related to our research. In Section III , we describe our proposed RNN architecture in detail. We evaluate our proposed RNN architecture on word-level and character-level language modeling tasks and reported the result in Section IV . We present related works in Section VI . Section VII summarizes our paper and provides some possible future improvements. 
+
+ II Background 
+
+ II-A Recurrent Neural Network 
+
+ A Recurrent Neural Network (RNN) is one kind of neural network architecture for modeling sequential and temporal dependencies [ 3 ] . Typically, we have input sequence 𝐱 = ( x 1 , … , x T ) \mathbf{x}=(x_{1},...,x_{T}) and calculate hidden vector sequence 𝐡 = ( h 1 , … , h T ) \mathbf{h}=(h_{1},...,h_{T}) and output vector sequence 𝐲 = ( y 1 , … , y T ) \mathbf{y}=(y_{1},...,y_{T}) with RNNs. A standard RNN at time t t -th is usually formulated as: 
+
+ h t \displaystyle h_{t} 
+ = \displaystyle= 
+ f ⁡ ( x t ​ W x ​ h + h t − 1 ​ W h ​ h + b h ) \displaystyle f(x_{t}W_{xh}+h_{t-1}W_{hh}+b_{h}) 
+
+ (1) 
+
+ y t \displaystyle y_{t} 
+ = \displaystyle= 
+ g ⁡ ( h t ​ W h ​ y + b y ) . \displaystyle g(h_{t}W_{hy}+b_{y}). 
+
+ (2) 
+ where W x ​ h W_{xh} represents the input layer to the hidden layer weight matrix, W h ​ h W_{hh} represents hidden to hidden layer weight matrix, W h ​ y W_{hy} represents the hidden to the output weight matrix, b h b_{h} and b y b_{y} represent bias vectors for the hidden and output layers. f ⁡ ( ⋅ ) f(\cdot) and g ⁡ ( ⋅ ) g(\cdot) are nonlinear activation functions such as sigmoid or tanh. Fig. 1: Recurrent Neural Network 
+
+ II-B Gated Recurrent Neural Network 
+
+ Simple RNNs are hard to train to capture long-term dependencies from long sequential datasets because the gradient can easily explode or vanish [ 15 , 16 ] . Because the gradient (usually) vanishes after several steps, optimizing a simple RNN is more complicated than standard neural networks. To overcome the disadvantages of simple RNNs, several researches have been done. Instead of using a first-order optimization method, one approach optimized the RNN using a second-order Hessian Free optimization [ 17 ] . Another approach, which addressed the vanishing and exploding gradient problem, modified the RNN architecture with additional parameters to control the information flow from previous hidden layers using the gating mechanism concept [ 10 ] . A gated RNN is a special recurrent neural network architecture that overcomes this weakness of a simple RNN by introducing gating units. There are variants from RNN with gating units, such as Long Short Term Memory (LSTM) RNN and Gated Recurrent Unit (GRU) RNN. In the following sections, we explain both LSTMRNN and GRURNN in more detail. 
+
+ II-B 1 Long Short Term Memory RNN 
+
+ A Long Short Term Memory (LSTM) [ 10 ] is a gated RNN with three gating layers and memory cells. The gating layers are used by the LSTM to control the existing memory by retaining the useful information and forgetting the unrelated information. Memory cells are used for storing the information across time. The LSTM hidden layer at time t t is defined by the following equations [ 18 ] : 
+
+ i t \displaystyle i_{t} 
+ = \displaystyle= 
+ σ ⁡ ( x t ​ W x ​ i + h t − 1 ​ W h ​ i + c t − 1 ​ W c ​ i + b i ) \displaystyle\sigma(x_{t}W_{xi}+h_{t-1}W_{hi}+c_{t-1}W_{ci}+b_{i}) 
+
+ (3) 
+
+ f t \displaystyle f_{t} 
+ = \displaystyle= 
+ σ ⁡ ( x t ​ W x ​ f + h t − 1 ​ W h ​ f + c t − 1 ​ W c ​ f + b f ) \displaystyle\sigma(x_{t}W_{xf}+h_{t-1}W_{hf}+c_{t-1}W_{cf}+b_{f}) 
+
+ (4) 
+
+ c t \displaystyle c_{t} 
+ = \displaystyle= 
+ f t ⊙ c t − 1 + i t ⊙ tanh ⁡ ( x t ​ W x ​ c + h t − 1 ​ W h ​ c + b c ) \displaystyle f_{t}\odot c_{t-1}+i_{t}\odot\tanh(x_{t}W_{xc}+h_{t-1}W_{hc}+b_{c}) 
+
+ (5) 
+
+ o t \displaystyle o_{t} 
+ = \displaystyle= 
+ σ ⁡ ( x t ​ W x ​ o + h t − 1 ​ W h ​ o + c t ​ W c ​ o + b o ) \displaystyle\sigma(x_{t}W_{xo}+h_{t-1}W_{ho}+c_{t}W_{co}+b_{o}) 
+
+ (6) 
+
+ h t \displaystyle h_{t} 
+ = \displaystyle= 
+ o t ⊙ tanh ⁡ ( c t ) \displaystyle o_{t}\odot\tanh(c_{t}) 
+
+ (7) 
+ where σ ⁡ ( ⋅ ) \sigma(\cdot) is sigmoid activation function and i t , f t , o t i_{t},f_{t},o_{t} and c t c_{t} are respectively the input gates, the forget gates, the output gates and the memory cells at time-step t t . The input gates keep the candidate memory cell values that are useful for memory cell computation, and the forget gates keep the previous memory cell values that are useful for calculating the current memory cell. The output gates filter which the memory cell values that are useful for the output or next hidden layer input. Fig. 2: Long Short Term Memory Unit. 
+
+ II-B 2 Gated Recurrent Unit RNN 
+
+ A Gated Recurrent Unit (GRU) [ 5 ] is a gated RNN with similar properties to a LSTM. However, there are several differences: a GRU does not have separated memory cells [ 19 ] , and instead of three gating layers, it only has two gating layers: reset gates and update gates.
+The GRU hidden layer at time t t is defined by the following equations [ 5 ] : 
+
+ r t \displaystyle r_{t} 
+ = \displaystyle= 
+ σ ⁡ ( x t ​ W x ​ r + h t − 1 ​ W h ​ r + b r ) \displaystyle\sigma(x_{t}W_{xr}+h_{t-1}W_{hr}+b_{r}) 
+
+ (8) 
+
+ z t \displaystyle z_{t} 
+ = \displaystyle= 
+ σ ⁡ ( x t ​ W x ​ z + h t − 1 ​ W h ​ z + b r ) \displaystyle\sigma(x_{t}W_{xz}+h_{t-1}W_{hz}+b_{r}) 
+
+ (9) 
+
+ h t ~ \displaystyle\tilde{h_{t}} 
+ = \displaystyle= 
+ f ⁡ ( x t ​ W x ​ h + ( r t ⊙ h t − 1 ) ​ W h ​ h + b h ) \displaystyle f(x_{t}W_{xh}+(r_{t}\odot h_{t-1})W_{hh}+b_{h}) 
+
+ (10) 
+
+ h t \displaystyle h_{t} 
+ = \displaystyle= 
+ ( 1 − z t ) ⊙ h t − 1 + z t ⊙ h t ~ \displaystyle(1-z_{t})\odot h_{t-1}+z_{t}\odot\tilde{h_{t}} 
+
+ (11) 
+ where σ ⁡ ( ⋅ ) \sigma(\cdot) is a sigmoid activation function, r t , z t r_{t},z_{t} are reset and update gates, h t ~ \tilde{h_{t}} is the candidate hidden layer values and h t h_{t} is the hidden layer values at time- t t . The reset gates determine which previous hidden layer value is useful for generating the current candidate hidden layer. The update gates keeps the previous hidden layer values or replaced by new candidate hidden layer values.
+In spite of having one fewer gating layer, the GRU can match LSTM’s performance and its convergence speed convergence sometimes outperformed LSTM [ 19 ] . Fig. 3: Gated Recurrent Unit 
+
+ II-C Recursive Neural Tensor Network 
+
+ A Recursive Neural Tensor Network (RecNTN) is a variant of a Recursive Neural Network (RecNN) for modeling input data with variable length properties and tree structure dependencies between input features [ 20 ] . To compute the input representation with RecNN, the input must be parsed into a binary tree where each leaf node represents input data. Then, the parent vectors are computed in a bottom-up fashion, following the above computed tree structure whose information can be built using external computation tools (i.e., syntactic parser) or some heuristic from our dataset observations. Fig. 4: Computation for parent values p 1 p_{1} and p 2 p_{2} was done in a bottom-up fashion. Visible node leaves x 1 , x 2 x_{1},x_{2} , and x 3 x_{3} are processed based on the given binary tree structure. 
+
+ Given Fig. 4 , p 1 p_{1} , p 2 p_{2} and y y was defined by: 
+
+ p 1 \displaystyle p_{1} 
+ = \displaystyle= 
+ f ⁡ ( [ x 1 x 2 ] ​ W + b ) \displaystyle f\left(\begin{bmatrix}x_{1}&x_{2}\end{bmatrix}W+b\right) 
+
+ (12) 
+
+ p 2 \displaystyle p_{2} 
+ = \displaystyle= 
+ f ⁡ ( [ p 1 x 3 ] ​ W + b ) \displaystyle f\left(\begin{bmatrix}p_{1}&x_{3}\end{bmatrix}W+b\right) 
+
+ (13) 
+
+ y \displaystyle y 
+ = \displaystyle= 
+ g ⁡ ( p 2 ​ W y + b y ) \displaystyle g\left(p_{2}W_{y}+b_{y}\right) 
+
+ (14) 
+ where f ⁡ ( ⋅ ) f(\cdot) is nonlinear activation function, such as sigmoid or tanh, g ⁡ ( ⋅ ) g(\cdot) depends on our task, W ∈ ℝ 2 ​ d × d W\in\mathbb{R}^{2d\times d} is the weight parameter for projecting child input vectors x 1 , x 2 , x 3 ∈ ℝ d x_{1},x_{2},x_{3}\in\mathbb{R}^{d} into the parent vector, W y W_{y} is a weight parameter for computing output vector, and b , b y b,b_{y} are biases. If we want to train RecNN for classification tasks, g ⁡ ( ⋅ ) g(\cdot) can be defined as a softmax function. Fig. 5: Calculating vector p 1 p_{1} from left input x 1 x_{1} and right input x 2 x_{2} based on Eq. 15 
+
+ However, standard RecNNs have several limitations, where two vectors only implicitly interact with addition before applying a nonlinear activation function on them [ 13 ] and standard RecNNs are not able to model very long-term dependency on tree structures. Zhu et al. [ 21 ] proposed the gating mechanism into standard RecNN model to solve the latter problem. For the former limitation, the RecNN performance can be improved by adding more interaction between the two input vectors. Therefore, a new architecture called a Recursive Neural Tensor Network (RecNTN) tried to overcome the previous problem by adding interaction between two vectors using a tensor product, which is connected by tensor weight parameters. Each slice of the tensor weight can be used to capture the specific pattern between the left and right child vectors. For RecNTN, value p 1 p_{1} from Eq. 12 and 13 is defined by: 
+
+ p 1 \displaystyle p_{1} 
+ = \displaystyle= 
+ f ( [ x 1 x 2 ] W t ​ s ​ r [ 1 : d ] [ x 1 x 2 ] + [ x 1 x 2 ] W + b ) \displaystyle f\left(\begin{bmatrix}x_{1}&x_{2}\end{bmatrix}W_{tsr}^{[1:d]}\begin{bmatrix}x_{1}\\
+x_{2}\end{bmatrix}+\begin{bmatrix}x_{1}&x_{2}\end{bmatrix}W+b\right) 
+
+ (15) 
+
+ p 2 \displaystyle p_{2} 
+ = \displaystyle= 
+ f ( [ p 1 x 3 ] W t ​ s ​ r [ 1 : d ] [ p 1 x 3 ] + [ p 1 x 3 ] W + b ) \displaystyle f\left(\begin{bmatrix}p_{1}&x_{3}\end{bmatrix}W_{tsr}^{[1:d]}\begin{bmatrix}p_{1}\\
+x_{3}\end{bmatrix}+\begin{bmatrix}p_{1}&x_{3}\end{bmatrix}W+b\right) 
+
+ (16) 
+ where W t ​ s ​ r [ 1 : d ] ∈ ℝ 2 ​ d × 2 ​ d × d W_{tsr}^{[1:d]}\in\mathbb{R}^{2d\times 2d\times d} is the tensor weight to map the tensor product between two children vectors. Each slice W t ​ s ​ r [ i ] W_{tsr}^{[i]} is a matrix ℝ 2 ​ d × 2 ​ d \mathbb{R}^{2d\times 2d} . For more details, we visualize the calculation for p 1 p_{1} in Fig. 5 . 
+
+ III Proposed Architecture 
+
+ III-A Gated Recurrent Unit Recurrent Neural Tensor Network (GRURNTN) 
+
+ Previously in Sections II-B and II-C , we discussed that the gating mechanism concept can helps RNNs learn long-term dependencies from sequential input data and that adding more powerful interaction between the input and hidden layers simultaneously with the tensor product operation in a bilinear form improves neural network performance and expressiveness. By using tensor product, we increase our model expressiveness by using second-degree polynomial interactions, compared to first-degree polynomial interactions on standard dot product followed by addition in common RNNs architecture. Therefore, in this paper we proposed a Gated Recurrent Neural Tensor Network (GRURNTN) to combine these two advantages into an RNN architecture. In this architecture, the tensor product operation is applied between the current input and previous hidden layer multiplied by the reset gates for calculating the current candidate hidden layer values. The calculation is parameterized by tensor weight. To construct a GRURNTN, we defined the formulation as: 
+
+ r t \displaystyle r_{t} 
+ = \displaystyle= 
+ σ ⁡ ( x t ​ W x ​ r + h t − 1 ​ W h ​ r + b r ) \displaystyle\sigma(x_{t}W_{xr}+h_{t-1}W_{hr}+b_{r}) 
+
+ z t \displaystyle z_{t} 
+ = \displaystyle= 
+ σ ⁡ ( x t ​ W x ​ z + h t − 1 ​ W h ​ z + b z ) \displaystyle\sigma(x_{t}W_{xz}+h_{t-1}W_{hz}+b_{z}) 
+
+ h t ~ \displaystyle\tilde{h_{t}} 
+ = \displaystyle= 
+ f ( [ x t ( r ⊙ h t − 1 ) ] W t ​ s ​ r [ 1 : d ] [ x t ( r ⊙ h t − 1 ) ] \displaystyle f\left(\begin{bmatrix}x_{t}&(r\odot h_{t-1})\end{bmatrix}W_{tsr}^{[1:d]}\begin{bmatrix}x_{t}\\
+(r\odot h_{t-1})\end{bmatrix}\right. 
+
+ (17) 
+
+ OPEN + x t ​ W x ​ h + ( r t ⊙ h t − 1 ) ​ W h ​ h + b h ) \displaystyle\left.+x_{t}W_{xh}+(r_{t}\odot h_{t-1})W_{hh}+b_{h}\right) 
+
+ h t \displaystyle h_{t} 
+ = \displaystyle= 
+ ( 1 − z t ) ⊙ h t − 1 + z t ⊙ h t ~ \displaystyle(1-z_{t})\odot h_{t-1}+z_{t}\odot\tilde{h_{t}} 
+
+ where W t ​ s ​ r [ 1 : d ] ∈ ℝ ( i + d ) × ( i + d ) × d W_{tsr}^{[1:d]}\in\mathbb{R}^{(i+d)\times(i+d)\times d} is a tensor weight for mapping the tensor product between the input-hidden layer, i i is the input layer size, and d d is the hidden layer size. Alternatively, in this paper we use a simpler bilinear form for calculating h t ~ \tilde{h_{t}} : 
+
+ h t ~ \displaystyle\tilde{h_{t}} 
+ = \displaystyle= 
+ f ( [ x t ] W t ​ s ​ r [ 1 : d ] [ ( r t ⊙ h t − 1 ) ] ⊺ \displaystyle f\left(\begin{bmatrix}x_{t}\end{bmatrix}W_{tsr}^{[1:d]}\begin{bmatrix}(r_{t}\odot h_{t-1})\end{bmatrix}^{\intercal}\right. 
+
+ (18) 
+
+ OPEN + x t ​ W x ​ h + ( r t ⊙ h t − 1 ) ​ W h ​ h + b h ) \displaystyle\left.+x_{t}W_{xh}+(r_{t}\odot h_{t-1})W_{hh}+b_{h}\right) 
+
+ where W t ​ s ​ r [ i : d ] ∈ ℝ i × d × d W_{tsr}^{[i:d]}\in\mathbb{R}^{i\times d\times d} is a tensor weight. Each slice W t ​ s ​ r [ i ] W_{tsr}^{[i]} is a matrix ℝ i × d \mathbb{R}^{i\times d} . The advantage of this asymmetric version is that we can still maintain the interaction between the input and hidden layers through a bilinear form. We reduce the number of parameters from the original neural tensor network formulation by using this asymmetric version. Fig. 6 visualizes the h t ~ \tilde{h_{t}} calculation in more detail. Fig. 6: Calculating candidate hidden layer h t ~ \tilde{h_{t}} from current input x t x_{t} and previous hidden layer multiplied by reset gate r ⋅ h t 1 r\cdot h_{t_{1}} based on Eq. 18 
+
+ III-B LSTM Recurrent Neural Tensor Network (LSTMRNTN) 
+
+ As with GRURNTN, we also applied the tensor product operation for the LSTM unit to improve its performance. In this architecture, the tensor product operation is applied between the current input and the previous hidden layers to calculate the current memory cell. The calculation is parameterized by the tensor weight. We call this architecture a Long Short Term Memory Recurrent Neural Tensor Network (LSTMRNTN). To construct an LSTMRNTN, we defined its formulation: 
+
+ i t \displaystyle i_{t} 
+ = \displaystyle= 
+ σ ⁡ ( x t ​ W x ​ i + h t − 1 ​ W h ​ i + c t − 1 ​ W c ​ i + b i ) \displaystyle\sigma(x_{t}W_{xi}+h_{t-1}W_{hi}+c_{t-1}W_{ci}+b_{i}) 
+
+ f t \displaystyle f_{t} 
+ = \displaystyle= 
+ σ ⁡ ( x t ​ W x ​ f + h t − 1 ​ W h ​ f + c t − 1 ​ W c ​ f + b f ) \displaystyle\sigma(x_{t}W_{xf}+h_{t-1}W_{hf}+c_{t-1}W_{cf}+b_{f}) 
+
+ c t ~ \displaystyle\tilde{c_{t}} 
+ = \displaystyle= 
+ tanh ( [ x t ] W t ​ s ​ r [ 1 : d ] [ h t − 1 ] \displaystyle\tanh\left(\begin{bmatrix}x_{t}\end{bmatrix}W_{tsr}^{[1:d]}\begin{bmatrix}h_{t-1}\end{bmatrix}\right. 
+
+ (19) 
+
+ OPEN + x t ​ W x ​ c + h t − 1 ​ W h ​ c + b c ) \displaystyle\left.+x_{t}W_{xc}+h_{t-1}W_{hc}+b_{c}\right) 
+
+ c t \displaystyle c_{t} 
+ = \displaystyle= 
+ f t ⊙ c t − 1 + i t ⊙ c t ~ \displaystyle f_{t}\odot c_{t-1}+i_{t}\odot\tilde{c_{t}} 
+
+ (20) 
+
+ o t \displaystyle o_{t} 
+ = \displaystyle= 
+ σ ⁡ ( x t ​ W x ​ o + h t − 1 ​ W h ​ o + c t ​ W c ​ o + b o ) \displaystyle\sigma(x_{t}W_{xo}+h_{t-1}W_{ho}+c_{t}W_{co}+b_{o}) 
+
+ h t \displaystyle h_{t} 
+ = \displaystyle= 
+ o t ⊙ tanh ⁡ ( c t ) \displaystyle o_{t}\odot\tanh(c_{t}) 
+
+ where W t ​ s ​ r [ 1 : d ] ∈ R i × d × d W_{tsr}^{[1:d]}\in R^{i\times d\times d} is a tensor weight to map the tensor product between current input x t x_{t} and previous hidden layer h t − 1 h_{t-1} into our candidate cell c t ~ \tilde{c_{t}} . Each slice W t ​ s ​ r [ i ] W_{tsr}^{[i]} is a matrix ℝ i × d \mathbb{R}^{i\times d} . Fig. 7 visualizes the c t ~ \tilde{c_{t}} calculation in more detail. Fig. 7: Calculating candidate cell layer c t ~ \tilde{c_{t}} from current input x t x_{t} and previous hidden layer h t − 1 h_{t-1} based on Eq. 19 
+
+ III-C Optimizing Tensor Weight using Backpropagation Through Time 
+
+ In this section, we explain how to train the tensor weight for our proposed architecture. Generally, we use backpropagation to train most neural network models [ 22 ] . For training an RNN, researchers tend to use backpropagation through time (BPTT) where the recurrent operation is unfolded as a feedforward neural network along with the time-step when we backpropagate the error [ 23 , 24 ] . Sometimes we face a performance issue when we unfold our RNN on such very long sequences. To handle that issue, we can use the truncated BPTT [ 6 ] to limit the number of time-steps when we unfold our RNN during backpropagation. 
+
+ Assume we want to do segment classification [ 25 ] with an RNN trained as function f : 𝐱 → 𝐲 f:\mathbf{x}\rightarrow\mathbf{y} , where 𝐱 = ( x 1 , … , x T ) \mathbf{x}=(x_{1},...,x_{T}) as an input sequence and 𝐲 = ( y 1 , … , y T ) \mathbf{y}=(y_{1},...,y_{T}) is an output label sequence. In this case, probability output label sequence y y , given input sequence 𝐱 \mathbf{x} , is defined as: 
+
+ P ( 𝐲 | 𝐱 ) = ∏ i = 1 T P ( y i | x 1 , . . , x i ) \displaystyle P(\mathbf{y}|\mathbf{x})=\prod_{i=1}^{T}P(y_{i}|x_{1},..,x_{i}) 
+
+ (21) 
+ Usually, we transform likelihood P ⁡ ( 𝐲 | 𝐱 ) P(\mathbf{y}|\mathbf{x}) into a negative log-likelihood: 
+
+ E ⁡ ( θ ) \displaystyle E(\theta) 
+ = \displaystyle= 
+ − log P ( 𝐲 | 𝐱 ) = − log ( ∏ i = 1 T P ( y i | x 1 , . . , x i ) ) \displaystyle-\log P(\mathbf{y}|\mathbf{x})=-\log\left(\prod_{i=1}^{T}P(y_{i}|x_{1},..,x_{i})\right) 
+
+ (22) 
+
+ = \displaystyle= 
+ − ∑ i = 1 T log P ( y i | x 1 , . . , x i ) \displaystyle-\sum_{i=1}^{T}\log P(y_{i}|x_{1},..,x_{i}) 
+
+ (23) 
+ and our objective is to minimize the negative log-likelihood w.r.t all weight parameters
+ θ \theta .
+To optimize W t ​ s ​ r [ 1 : d ] W_{tsr}^{[1:d]} weight parameters, we need to find derivative E ⁡ ( θ ) E(\theta) w.r.t W t ​ s ​ r [ 1 : d ] W_{tsr}^{[1:d]} : 
+
+ ∂ E ⁡ ( θ ) ∂ W t ​ s ​ r [ 1 : d ] \displaystyle\frac{\partial E(\theta)}{\partial W_{tsr}^{[1:d]}} 
+ = \displaystyle= 
+ ∑ i = 1 T ∂ E i ​ ( θ ) ∂ W t ​ s ​ r [ 1 : d ] \displaystyle\sum_{i=1}^{T}\frac{\partial E_{i}(\theta)}{\partial W_{tsr}^{[1:d]}} 
+
+ For applying backpropagation through time, we need to unfold our GRURNTN and backpropagate the error from E i ​ ( θ ) E_{i}(\theta) to all candidate hidden layer h j ~ \tilde{h_{j}} to accumulate W t ​ s ​ r [ 1 . . d ] W_{tsr}^{[1..d]} gradient where j ∈ [ 1 . . i ] j\in[1..i] . If we want to use the truncated BPTT to ignore the history past over K K time-steps, we can limit j ∈ [ m a x ( 1 , i − K ) . . i ] j\in[max(1,i-K)..i] . We define the standard BPTT on GRURNTN to calculate ∂ E i ( θ ) / ∂ W t ​ s ​ r [ 1 . . d ] \partial E_{i}(\theta)/\partial W_{tsr}^{[1..d]} : 
+
+ ∂ E i ​ ( θ ) ∂ W t ​ s ​ r [ 1 : d ] \displaystyle\frac{\partial E_{i}(\theta)}{\partial W_{tsr}^{[1:d]}} 
+ = \displaystyle= 
+ ∑ j = 1 i ∂ E i ​ ( θ ) ∂ h j ~ ∂ h j ~ ∂ W t ​ s ​ r [ 1 : d ] \displaystyle\sum_{j=1}^{i}\frac{\partial E_{i}(\theta)}{\partial\tilde{h_{j}}}\frac{\partial\tilde{h_{j}}}{\partial W_{tsr}^{[1:d]}} 
+
+ (24) 
+
+ = \displaystyle= 
+ ∑ j = 1 i ∂ E i ​ ( θ ) ∂ h j ~ ∂ h j ~ ∂ a j ∂ a j ∂ W t ​ s ​ r [ 1 : d ] \displaystyle\sum_{j=1}^{i}\frac{\partial E_{i}(\theta)}{\partial\tilde{h_{j}}}\frac{\partial\tilde{h_{j}}}{\partial a_{j}}\frac{\partial a_{j}}{\partial W_{tsr}^{[1:d]}} 
+
+ = \displaystyle= 
+ ∑ j = 1 i ∂ E i ​ ( θ ) ∂ h j ~ ​ f ′ ​ ( a j ) ​ [ x j ] ⊺ ​ [ ( r j ⊙ h j − 1 ) ] \displaystyle\sum_{j=1}^{i}\frac{\partial E_{i}(\theta)}{\partial\tilde{h_{j}}}f^{\prime}(a_{j})\begin{bmatrix}x_{j}\end{bmatrix}^{\intercal}\begin{bmatrix}(r_{j}\odot h_{j-1})\end{bmatrix} 
+
+ where 
+
+ a j \displaystyle a_{j} 
+ = \displaystyle= 
+ ( [ x j ] W t ​ s ​ r [ 1 : d ] [ ( r j ⊙ h j − 1 ) ] ⊺ \displaystyle\left(\begin{bmatrix}x_{j}\end{bmatrix}W_{tsr}^{[1:d]}\begin{bmatrix}(r_{j}\odot h_{j-1})\end{bmatrix}^{\intercal}\right. 
+
+ OPEN + x j ​ W x ​ h + ( r j ⊙ h j − 1 ) ​ W h ​ h + b h ) \displaystyle\left.+x_{j}W_{xh}+(r_{j}\odot h_{j-1})W_{hh}+b_{h}\right) 
+
+ and f ′ ​ ( ⋅ ) f^{\prime}(\cdot) is a function derivative from our activation function : 
+
+ f ′ ​ ( a j ) = { ( 1 − f ​ ( a j ) 2 ) , if  ​ f ​ ( ⋅ ) ​  is  tanh  function f ⁡ ( a j ) ​ ( 1 − f ⁡ ( a j ) ) , if  ​ f ​ ( ⋅ ) ​  is sigmoid function \displaystyle f^{\prime}(a_{j})=\begin{cases}(1-f(a_{j})^{2}),&\text{if }f(\cdot)\text{ is $\tanh$ function}\\
+f(a_{j})(1-f(a_{j})),&\text{if }f(\cdot)\text{ is sigmoid function}\end{cases} 
+
+ For LSTMRNTN, we also need to unfold our LSTMRNN and backpropagate the error from E i ​ ( θ ) E_{i}(\theta) to all cell layers c j c_{j} to accumulate W t ​ s ​ r [ 1 . . d ] W_{tsr}^{[1..d]} gradients where j ∈ [ 1 . . i ] j\in[1..i] . We define the standard BPTT on LSTMRNTN to calculate ∂ E i ( θ ) / ∂ W t ​ s ​ r [ 1 . . d ] \partial E_{i}(\theta)/\partial W_{tsr}^{[1..d]} : 
+
+ ∂ E i ​ ( θ ) ∂ W t ​ s ​ r [ 1 : d ] \displaystyle\frac{\partial E_{i}(\theta)}{\partial W_{tsr}^{[1:d]}} 
+ = \displaystyle= 
+ ∑ j = 1 i ∂ E i ​ ( θ ) ∂ c j ∂ c j ∂ W t ​ s ​ r [ 1 : d ] \displaystyle\sum_{j=1}^{i}\frac{\partial E_{i}{(\theta)}}{\partial c_{j}}\frac{\partial c_{j}}{\partial W_{tsr}^{[1:d]}} 
+
+ (25) 
+
+ = \displaystyle= 
+ ∑ j = 1 i ∂ E i ​ ( θ ) ∂ c j ∂ c j ∂ tanh ⁡ ( a j ) ∂ tanh ⁡ ( a j ) ∂ a j ∂ a j ∂ W t ​ s ​ r [ 1 : d ] \displaystyle\sum_{j=1}^{i}\frac{\partial E_{i}{(\theta)}}{\partial c_{j}}\frac{\partial c_{j}}{\partial\tanh(a_{j})}\frac{\partial\tanh(a_{j})}{\partial a_{j}}\frac{\partial a_{j}}{\partial W_{tsr}^{[1:d]}} 
+
+ = \displaystyle= 
+ ∑ j = 1 i ∂ E i ​ ( θ ) ∂ c j ​ i j ​ ( 1 − tanh 2 ⁡ ( a j ) ) ​ [ x j ] ⊺ ​ [ h j − 1 ] \displaystyle\sum_{j=1}^{i}\frac{\partial E_{i}{(\theta)}}{\partial c_{j}}i_{j}(1-\tanh^{2}(a_{j}))\begin{bmatrix}x_{j}\end{bmatrix}^{\intercal}\begin{bmatrix}h_{j-1}\end{bmatrix} 
+
+ where 
+
+ a j \displaystyle a_{j} 
+ = \displaystyle= 
+ ( [ x j ] W t ​ s ​ r [ 1 : d ] [ h j − 1 ] + x j W x ​ c + h j − 1 W h ​ c + b c ) \displaystyle\left(\begin{bmatrix}x_{j}\end{bmatrix}W_{tsr}^{[1:d]}\begin{bmatrix}h_{j-1}\end{bmatrix}+x_{j}W_{xc}+h_{j-1}W_{hc}+b_{c}\right) 
+
+ (26) 
+ .
+In both proposed models, we can see partial derivative ∂ E i ( θ ) / ∂ W t ​ s ​ r [ 1 : d ] {\partial E_{i}(\theta)}/{\partial W_{tsr}^{[1:d]}} in Eqs. 24 and 25 , the derivative from the tensor product w.r.t the tensor weight parameters depends on the values of our input and hidden layers. Then all the slices of tensor weight derivative are multiplied by the error from their corresponding pre-activated hidden unit values. From these derivations, we are able to see where each slice of tensor weight is learned more directly from their input and hidden layer values compared by using standard addition operations.
+After we accumulated every parameter’s gradients from all the previous time-steps, we use a stochastic gradient optimization method such as AdaGrad [ 26 ] to optimize our model parameters. 
+
+ IV Experiment Settings 
+
+ Next we evaluate our proposed GRURNTN and LSTMRNTN models against baselines GRURNN and LSTMRNN with two different tasks and datasets. 
+
+ IV-A Datasets and Tasks 
+
+ We used a PennTreeBank (PTB) corpus 1 1 1 https://www.cis.upenn.edu/~treebank/ , which is a standard benchmark corpus for statistical language modeling. A PTB corpus is a subset of the WSJ corpus. In this experiment, we followed the standard preprocessing step that was done by previous research [ 24 ] . The PTB dataset is divided as follows: a training set from sections 0-20 with total 930.000 words, a validation set from sections 21-22 with total 74.000 words, and a test set from sections 23-24 with total 82.000 words. The vocabulary is limited to the 10.000 most common words, and all words outside are mapped into a ” < < unk > > ” token. We used the preprocessed PTB corpus from the RNNLM-toolkit website 2 2 2 http://www.rnnlm.org/ . 
+
+ We did two different language modeling tasks. First, we experimented on a word-level language model where our RNN predicts the next word probability given the previous words and current word. We used perplexity (PPL) to measure our RNN performance for word-level language modeling. The formula for calculating the PPL of word sequence X X is defined by: 
+
+ P P L = 2 − 1 N ∑ i = 1 N log 2 P ( X i | X 1 . . i − 1 ) \displaystyle PPL=2^{-\frac{1}{N}\sum_{i=1}^{N}\log_{2}P(X_{i}|X_{1..{i-1}})} 
+
+ (27) 
+ Second, we experimented on a character-level language model where our RNN predicts the next character probability given the previous characters and current character. We used the average number of bits-per-character (BPC) to measure our RNN performance for character-level language modeling. The formula for calculating the BPC of character sequence X X is defined by: 
+
+ B ​ P ​ C = − 1 N ​ ( ∑ i = 1 N log 2 ⁡ p ⁡ ( X i | X 1 . . i − 1 ) ) \displaystyle BPC=-\frac{1}{N}\left(\sum_{i=1}^{N}\log_{2}{p(X_{i}|X_{1..{i-1}})}\right) 
+
+ (28) 
+
+ IV-B Experiment Models 
+
+ In this experiment, we compared the performance from our baseline models GRURNN and LSTMRNN with our proposed GRURNTN and LSTMRNTN models. We used the same dimensions for the embedding matrix to represent the words and characters as the vectors of real numbers. 
+
+ For the word-level language modeling task, we used 256 hidden units for GRURNTN and LSTMRNTN, 860 for GRURNN, and 740 for LSTMRNN. All of these models use 128 dimensions for word embedding. We used dropout regularization with p = 0.5 p=0.5 dropout probability for GRURNTN and LSTMRNTN and p = 0.6 p=0.6 for our baseline model. The total number of free parameters for GRURNN and GRURNTN were about 12 million and about 13 million for LSTMRNN and LSTMRNTN. 
+
+ For the character-level language modeling task, we used 256 hidden units for GRURNTN and LSTMRNTN, 820 for GRURNN, and 600 for LSTMRNTN. All of these models used 32 dimensions for character embedding. We used dropout regularization with p = 0.25 p=0.25 dropout probability. The total number of free parameters for GRURNN and GRURNTN was about 2.2 million and about 2.6 million for LSTMRNN and LSTMRNTN. 
+
+ We constrained our baseline GRURNN to have a similar number of parameters as the GRURNTN model for a fair comparison. We also applied such constraints on our baseline LSTMRNN to LSTMRNTN model. 
+
+ For all the experiment scenarios, we used AdaGrad for our stochastic gradient optimization method with mini-batch training and a batch size of 15 sentences. We multiplied our learning rate with a decay factor of 0.5 when the cost from the development set for current epoch is greater than previous epoch. We also used a rescaling trick on the gradient [ 27 ] when the norm was larger than 5 to avoid the issue of exploding gradients. For initializing the parameters, we used the orthogonal weight initialization trick [ 28 ] on every model. 
+
+ V Results and Analysis 
+
+ V-A Character-level Language Modeling Fig. 8: Comparison among GRURNN, GRURNTN, LSTMRNN, and LSTMRNTN bits-per-character (BPC) per epoch on PTB validation set. Note : a lower BPC score is better TABLE I: PennTreeBank test set BPC 
+ Model Test BPC 
+
+ NNLM [ 29 , 30 ] 
+ 1.57 
+
+ BPTT-RNN [ 29 ] 
+ 1.42 
+
+ HF-MRNN [ 29 , 31 ] 
+ 1.41 
+
+ sRNN [ 12 ] 
+ 1.41 
+
+ DOT(S)-RNN [ 12 ] 
+ 1.39 
+
+ LSTMRNN (w/ adapt. noise, w/o dyn. eval) 3 3 3 
+
+ Adaptive noise regularization is where the noise variance is learned and applied with the weight 4 4 4 
+
+ Dynamic evaluation approach updates the model parameter during processing on the test data (only updated once per test dataset). Our baseline and proposed model experiment did not use dynamic evaluation. [ 32 ] 
+ 1.26 
+
+ LSTMRNN (w/ adapt. noise, w/ dyn. eval) 0 0 footnotemark: 0 0 0 footnotemark: 0 [ 32 ] 
+ 1.24 
+
+ GRURNN (our baseline) 
+ 1.39 
+
+ LSTMRNN (our baseline) 
+ 1.37 
+
+ GRURNTN (proposed) 
+ 1.33 
+
+ LSTMRNTN (proposed) 
+ 1.34 
+
+ In this section, we report our experiment results on PTB character-level language modeling using our baseline models GRURNN and LSTMRNN as well as our proposed models GRURNTN and LSTMRNTN. Fig. 8 shows performance comparisons from every model based on the validation set’s BPC per epoch. In this experiment, GRURNN made faster progress than LSTMRNN, but eventually LSTMRNN converged into a better BPC based on the development set. Our proposed model GRURNTN made faster and quicker progress than LSTMRNTN and converged into a similar BPC in the last epoch. Both proposed models produced lower BPC than our baseline models from the first epoch to the last epoch. 
+
+ Table I shows PTB test set BPC among our baseline models, our proposed models and several published results.
+Our proposed model GRURNTN and LSTMRNTN outperformed both baseline models. GRURNTN reduced the BPC from 1.39 to 1.33 (0.06 absolute / 4.32% relative BPC) from the baseline GRURNN, and LSTMRNTN reduced the BPC from 1.37 to 1.34 (0.03 absolute / 2.22% relative BPC) from the baseline LSTMRNN. Overall, GRURNTN slightly outperformed LSTMRNTN, and both proposed models outperformed all of the baseline models on the character-level language modeling task. 
+
+ V-B Word-level Language Modeling Fig. 9: Comparison among GRURNN, GRURNTN, LSTMRNN and LSTMRNTN perplexity (PPL) per epoch on the PTB validation set. Note : a lower PPL value is better 
+
+ In this section, we report our experiment results on PTB word-level language modeling using our baseline models GRURNN and LSTMRNN and our proposed models GRURNTN and LSTMRNTN. Fig. 9 compares the performance from every models based on the validation set’s PPL per epoch. In this experiment, GRURNN made faster progress than LSTMRNN. Our proposed GRURNTN’s progress was also better than LSTMRNTN. The best model in this task was GRURNTN, which had a consistently lower PPL than the other models. TABLE II: PennTreeBank test set PPL 
+ Model Test PPL 
+ N-Gram [ 24 ] 
+ 141 
+ RNNLM (w/o dyn. eval) 0 0 footnotemark: 0 [ 24 ] 
+ 124.7 
+ RNNLM (w/ dyn. eval) 0 0 footnotemark: 0 [ 24 ] 
+ 123.2 
+ SCRNN [ 33 ] 
+ 115 
+ sRNN [ 12 ] 
+ 110.0 
+ DOT(S)-RNN [ 12 ] 
+ 107.5 
+ GRURNN (our baseline) 
+ 97.78 
+ LSTMRNN (our baseline) 
+ 108.26 
+ GRURNTN (proposed) 
+ 87.38 
+ LSTMRNTN (proposed) 
+ 96.97 
+
+ Table I shows the PTB test set PPL among our baseline models, proposed models, and several published results.
+Both our proposed models outperformed their baseline models. GRURNTN reduced the perplexity from 97.78 to 87.38 (10.4 absolute / 10.63% relative PPL) over the baseline GRURNN and LSTMRNTN reduced the perplexity from 108.26 to 96.97 (11.29 absolute / 10.42% relative PPL) over the baseline LSTMRNN. Overall, LSTMRNTN improved the LSTMRNN model and its performance closely resembles the baseline GRURNN. However, GRURNTN outperformed all the baseline models as well as the other models by a large margin. 
+
+ VI Related Work 
+
+ Representing hidden states with deeper operations was introduced just a few years ago [ 12 ] . In these works, Pascanu et al. [ 12 ] use additional nonlinear layers for representing the transition from input to hidden layers, hidden to hidden layers, and hidden to output layers. They also improved the RNN architecture by a adding shortcut connection in the deep transition by skipping the intermediate layers. Another work from [ 34 ] proposed a new RNN design for a stacked RNN model called Gated Feedback RNN (GFRNN), which adds more connections from all the previous time-step stacked hidden layers into the current hidden layer computations.
+Despite adding additional transition layers and connection weight from previous hidden layers, all of these models still represent the input and hidden layer relationships by using linear projection, addition and nonlinearity transformation. 
+
+ On the tensor-based models, Irsoy et al. [ 35 ] proposed a simple RNN with a tensor product between the input and hidden layers. Such architecture resembles RecNTN, given a parse tree with a completely unbalanced tree on one side. Another work from [ 36 ] also use tensor products for representing hidden layers on DNN. By splitting the weight matrix into two parallel weight matrices, they calculated two parallel hidden layers and combined the pair of hidden layers using a tensor product. However, since not all of those models use a gating mechanism, the tensor parameters and tensor product operation can not be fully utilized because of the vanishing (or exploding) gradient problem. 
+
+ On the recurrent neural network-based model, Sutskever et al. [ 31 ] proposed multiplicative RNN (mRNN) for character-level language modeling using tensor as the weight parameters. They proposed two different models. The first selected a slice of tensor weight based on the current character input, and the second improved the first model with factorization for constructing a hidden-to-hidden layer weight. However, those models fail to fully utilize the tensor weight with the tensor product. After they selected the weight matrix based on the current input information, they continue to use linear projection, addition, and nonlinearity for interacting between the input and hidden layers. 
+
+ To the best of our knowledge, none of these works combined the gating mechanism and tensor product concepts into a single neural network architecture. In this paper, we built a new RNN by combining gating units and tensor products into a single RNN architecture. We expect that our proposed GRURNTN and LSTMRNTN architecture will improve the RNN performance for modeling temporal and sequential datasets. 
+
+ VII Conclusion 
+
+ We presented a new RNN architecture by combining the gating mechanism and tensor product concepts. Our proposed architecture can learn long-term dependencies from temporal and sequential data using gating units as well as more powerful interaction between the current input and previous hidden layers by introducing tensor product operations. From our experiment on the PennTreeBank corpus, our proposed models outperformed the baseline models with a similar number of parameters in character-level language modeling and word-level language modeling tasks. In a character-level language modeling task, GRURNTN obtained 0.06 absolute (4.32% relative) BPC reduction over GRURNN, and LSTMRNTN obtained 0.03 absolute (2.22% relative) BPC reduction over LSTMRNN. In a word-level language modeling task, GRURNTN obtained 10.4 absolute (10.63% relative) PPL reduction over GRURNN, and LSTMRNTN obtained 11.29 absolute (10.42% relative PPL) reduction over LSTMRNN. In the future, we will investigate the possibility of combining our model with other stacked RNNs architecture, such as Gated Feedback RNN (GFRNN). We would also like to explore other possible tensor operations and integrate them with our RNN architecture. By applying these ideas together, we expect to gain further performance improvement. Last, for further investigation we will apply our proposed models to other temporal and sequential tasks, such as speech recognition and video recognition. 
+
+ VIII Acknowledgements 
+
+ Part of this research was supported by JSPS KAKENHI Grant Number 26870371. 
+
+ References 
+ [1] 
+A. Krizhevsky, I. Sutskever, and G. E. Hinton, “Imagenet classification with
+deep convolutional neural networks,” in Advances in neural information
+processing systems , 2012, pp. 1097–1105.
+
+ [2] 
+A.-r. Mohamed, G. E. Dahl, and G. Hinton, “Acoustic modeling using deep belief
+networks,” Audio, Speech, and Language Processing, IEEE Transactions
+on , vol. 20, no. 1, pp. 14–22, 2012.
+
+ [3] 
+A. Graves, A.-r. Mohamed, and G. Hinton, “Speech recognition with deep
+recurrent neural networks,” in Acoustics, Speech and Signal Processing
+(ICASSP), 2013 IEEE International Conference on . IEEE, 2013, pp. 6645–6649.
+
+ [4] 
+I. Sutskever, O. Vinyals, and Q. V. Le, “Sequence to sequence learning with
+neural networks,” in Advances in neural information processing
+systems , 2014, pp. 3104–3112.
+
+ [5] 
+K. Cho, B. Van Merriënboer, C. Gulcehre, D. Bahdanau, F. Bougares,
+H. Schwenk, and Y. Bengio, “Learning phrase representations using rnn
+encoder-decoder for statistical machine translation,” arXiv preprint
+arXiv:1406.1078 , 2014.
+
+ [6] 
+T. Mikolov, M. Karafiát, L. Burget, J. Cernockỳ, and S. Khudanpur,
+“Recurrent neural network based language model.” in INTERSPEECH 2010,
+11th Annual Conference of the International Speech Communication Association,
+Makuhari, Chiba, Japan, September 26-30, 2010 , 2010, pp. 1045–1048.
+
+ [7] 
+M. Sundermeyer, R. Schlüter, and H. Ney, “Lstm neural networks for
+language modeling.”
+
+ [8] 
+J. L. Elman, “Finding structure in time,” Cognitive science , vol. 14,
+no. 2, pp. 179–211, 1990.
+
+ [9] 
+M. I. Jordan, “Serial order: A parallel distributed processing approach,”
+ Advances in psychology , vol. 121, pp. 471–495, 1997.
+
+ [10] 
+S. Hochreiter and J. Schmidhuber, “Long short-term memory,” Neural
+computation , vol. 9, no. 8, pp. 1735–1780, 1997.
+
+ [11] 
+G. Mesnil, X. He, L. Deng, and Y. Bengio, “Investigation of
+recurrent-neural-network architectures and learning methods for spoken
+language understanding.” in INTERSPEECH , 2013, pp. 3771–3775.
+
+ [12] 
+R. Pascanu, C. Gulcehre, K. Cho, and Y. Bengio, “How to construct deep
+recurrent neural networks,” arXiv preprint arXiv:1312.6026 , 2013.
+
+ [13] 
+R. Socher, A. Perelygin, J. Y. Wu, J. Chuang, C. D. Manning, A. Y. Ng, and
+C. Potts, “Recursive deep models for semantic compositionality over a
+sentiment treebank,” in Proceedings of the conference on empirical
+methods in natural language processing (EMNLP) , vol. 1631. Citeseer, 2013, p. 1642.
+
+ [14] 
+R. Socher, D. Chen, C. D. Manning, and A. Ng, “Reasoning with neural tensor
+networks for knowledge base completion,” in Advances in Neural
+Information Processing Systems , 2013, pp. 926–934.
+
+ [15] 
+Y. Bengio, P. Simard, and P. Frasconi, “Learning long-term dependencies with
+gradient descent is difficult,” Neural Networks, IEEE Transactions
+on , vol. 5, no. 2, pp. 157–166, 1994.
+
+ [16] 
+S. Hochreiter, Y. Bengio, and P. Frasconi, “Gradient flow in recurrent nets:
+the difficulty of learning long-term dependencies.”
+
+ [17] 
+J. Martens and I. Sutskever, “Learning recurrent neural networks with
+hessian-free optimization,” in Proceedings of the 28th International
+Conference on Machine Learning (ICML-11) , 2011, pp. 1033–1040.
+
+ [18] 
+A. Graves, N. Jaitly, and A.-r. Mohamed, “Hybrid speech recognition with deep
+bidirectional lstm,” in Automatic Speech Recognition and Understanding
+(ASRU), 2013 IEEE Workshop on . IEEE,
+2013, pp. 273–278.
+
+ [19] 
+J. Chung, C. Gulcehre, K. Cho, and Y. Bengio, “Empirical evaluation of gated
+recurrent neural networks on sequence modeling,” arXiv preprint
+arXiv:1412.3555 , 2014.
+
+ [20] 
+R. Socher, C. C. Lin, C. Manning, and A. Y. Ng, “Parsing natural scenes and
+natural language with recursive neural networks,” in Proceedings of
+the 28th international conference on machine learning (ICML-11) , 2011, pp.
+129–136.
+
+ [21] 
+X. Zhu, P. Sobhani, and H. Guo, “Long short-term memory over tree
+structures,” arXiv preprint arXiv:1503.04881 , 2015.
+
+ [22] 
+D. E. Rumelhart, G. E. Hinton, and R. J. Williams, “Learning internal
+representations by error-propagation,” in Parallel Distributed
+Processing: Explorations in the Microstructure of Cognition. Volume 1 . MIT Press, Cambridge, MA, 1986, vol. 1, no.
+6088, pp. 318–362.
+
+ [23] 
+P. J. Werbos, “Backpropagation through time: what it does and how to do it,”
+ Proceedings of the IEEE , vol. 78, no. 10, pp. 1550–1560, 1990.
+
+ [24] 
+T. Mikolov, “Statistical language models based on neural networks,” 2012.
+
+ [25] 
+A. Graves et al. , Supervised sequence labelling with recurrent
+neural networks . Springer, vol. 385.
+
+ [26] 
+J. Duchi, E. Hazan, and Y. Singer, “Adaptive subgradient methods for online
+learning and stochastic optimization,” The Journal of Machine Learning
+Research , vol. 12, pp. 2121–2159, 2011.
+
+ [27] 
+R. Pascanu, T. Mikolov, and Y. Bengio, “On the difficulty of training
+recurrent neural networks,” arXiv preprint arXiv:1211.5063 , 2012.
+
+ [28] 
+A. M. Saxe, J. L. McClelland, and S. Ganguli, “Exact solutions to the
+nonlinear dynamics of learning in deep linear neural networks,” arXiv
+preprint arXiv:1312.6120 , 2013.
+
+ [29] 
+T. Mikolov, I. Sutskever, A. Deoras, H.-S. Le, and S. Kombrink, “Subword
+language modeling with neural networks.”
+
+ [30] 
+Y. Bengio, R. Ducharme, P. Vincent, and C. Janvin, “A neural probabilistic
+language model,” The Journal of Machine Learning Research , vol. 3,
+pp. 1137–1155, 2003.
+
+ [31] 
+I. Sutskever, J. Martens, and G. E. Hinton, “Generating text with recurrent
+neural networks,” in Proceedings of the 28th International Conference
+on Machine Learning (ICML-11) , 2011, pp. 1017–1024.
+
+ [32] 
+A. Graves, “Generating sequences with recurrent neural networks,” arXiv
+preprint arXiv:1308.0850 , 2013.
+
+ [33] 
+T. Mikolov, A. Joulin, S. Chopra, M. Mathieu, and M. Ranzato, “Learning longer
+memory in recurrent neural networks,” arXiv preprint arXiv:1412.7753 ,
+2014.
+
+ [34] 
+J. Chung, C. Gulcehre, K. Cho, and Y. Bengio, “Gated feedback recurrent neural
+networks,” arXiv preprint arXiv:1502.02367 , 2015.
+
+ [35] 
+O. İrsoy and C. Cardie, “Modeling compositionality with multiplicative
+recurrent neural networks,” arXiv preprint arXiv:1412.6577 , 2014.
+
+ [36] 
+B. Hutchinson, L. Deng, and D. Yu, “Tensor deep stacking networks,”
+ Pattern Analysis and Machine Intelligence, IEEE Transactions on ,
+vol. 35, no. 8, pp. 1944–1957, 2013.
+
+ ◄ Feeling 
+ lucky? Conversion 
+ report Report 
+ an issue View original 
+ on arXiv ► Copyright Privacy Policy 
+ Generated by L a T e XML oxide
