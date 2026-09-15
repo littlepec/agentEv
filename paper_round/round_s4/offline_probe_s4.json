@@ -1,0 +1,210 @@
+{
+  "B3": {
+    "P": {
+      "n_chunks": 32,
+      "decisive_chunk_idx": [
+        21
+      ],
+      "decisive_chunk_len": [
+        463
+      ],
+      "probes": [
+        {
+          "query": "number of hand-crafted templates for the domain-specific knowledge base",
+          "cos_rank": 5,
+          "bm25_rank": 5,
+          "in_union10": true,
+          "union_size": 11,
+          "union_doc2": 3
+        },
+        {
+          "query": "templates hand-crafted for the in-house KB predicates",
+          "cos_rank": 4,
+          "bm25_rank": 2,
+          "in_union10": true,
+          "union_size": 11,
+          "union_doc2": 3
+        },
+        {
+          "query": "how many templates were written for the domain-specific KB evaluation",
+          "cos_rank": 1,
+          "bm25_rank": 1,
+          "in_union10": true,
+          "union_size": 14,
+          "union_doc2": 2
+        },
+        {
+          "query": "hand-crafted templates power tool knowledge base",
+          "cos_rank": 6,
+          "bm25_rank": 4,
+          "in_union10": true,
+          "union_size": 11,
+          "union_doc2": 3
+        }
+      ]
+    },
+    "C": {
+      "n_chunks": 32,
+      "decisive_chunk_idx": [
+        21
+      ],
+      "decisive_chunk_len": [
+        463
+      ],
+      "probes": [
+        {
+          "query": "number of hand-crafted templates for the domain-specific knowledge base",
+          "cos_rank": 5,
+          "bm25_rank": 5,
+          "in_union10": true,
+          "union_size": 11,
+          "union_doc2": 3
+        },
+        {
+          "query": "templates hand-crafted for the in-house KB predicates",
+          "cos_rank": 4,
+          "bm25_rank": 2,
+          "in_union10": true,
+          "union_size": 11,
+          "union_doc2": 3
+        },
+        {
+          "query": "how many templates were written for the domain-specific KB evaluation",
+          "cos_rank": 1,
+          "bm25_rank": 1,
+          "in_union10": true,
+          "union_size": 14,
+          "union_doc2": 2
+        },
+        {
+          "query": "hand-crafted templates power tool knowledge base",
+          "cos_rank": 6,
+          "bm25_rank": 4,
+          "in_union10": true,
+          "union_size": 11,
+          "union_doc2": 3
+        }
+      ]
+    }
+  },
+  "B6": {
+    "P": {
+      "n_chunks": 51,
+      "decisive_chunk_idx": [
+        19
+      ],
+      "decisive_chunk_len": [
+        237
+      ],
+      "probes": [
+        {
+          "query": "German speech recordings PD patients HC speakers",
+          "cos_rank": 1,
+          "bm25_rank": 2,
+          "in_union10": true,
+          "union_size": 14,
+          "union_doc2": 3
+        },
+        {
+          "query": "German data participants Parkinson patients healthy controls",
+          "cos_rank": 15,
+          "bm25_rank": 6,
+          "in_union10": true,
+          "union_size": 15,
+          "union_doc2": 3
+        },
+        {
+          "query": "number of German speakers in the dataset",
+          "cos_rank": 3,
+          "bm25_rank": 7,
+          "in_union10": true,
+          "union_size": 14,
+          "union_doc2": 3
+        },
+        {
+          "query": "German corpus size PD and HC",
+          "cos_rank": 2,
+          "bm25_rank": 5,
+          "in_union10": true,
+          "union_size": 16,
+          "union_doc2": 3
+        },
+        {
+          "query": "speech recordings from Germany",
+          "cos_rank": 1,
+          "bm25_rank": 1,
+          "in_union10": true,
+          "union_size": 13,
+          "union_doc2": 3
+        },
+        {
+          "query": "datasets used",
+          "cos_rank": 34,
+          "bm25_rank": 31,
+          "in_union10": false,
+          "union_size": 16,
+          "union_doc2": 3
+        }
+      ]
+    },
+    "C": {
+      "n_chunks": 51,
+      "decisive_chunk_idx": [
+        19
+      ],
+      "decisive_chunk_len": [
+        237
+      ],
+      "probes": [
+        {
+          "query": "German speech recordings PD patients HC speakers",
+          "cos_rank": 1,
+          "bm25_rank": 2,
+          "in_union10": true,
+          "union_size": 14,
+          "union_doc2": 3
+        },
+        {
+          "query": "German data participants Parkinson patients healthy controls",
+          "cos_rank": 15,
+          "bm25_rank": 6,
+          "in_union10": true,
+          "union_size": 15,
+          "union_doc2": 3
+        },
+        {
+          "query": "number of German speakers in the dataset",
+          "cos_rank": 3,
+          "bm25_rank": 7,
+          "in_union10": true,
+          "union_size": 14,
+          "union_doc2": 3
+        },
+        {
+          "query": "German corpus size PD and HC",
+          "cos_rank": 2,
+          "bm25_rank": 5,
+          "in_union10": true,
+          "union_size": 16,
+          "union_doc2": 3
+        },
+        {
+          "query": "speech recordings from Germany",
+          "cos_rank": 1,
+          "bm25_rank": 1,
+          "in_union10": true,
+          "union_size": 13,
+          "union_doc2": 3
+        },
+        {
+          "query": "datasets used",
+          "cos_rank": 34,
+          "bm25_rank": 31,
+          "in_union10": false,
+          "union_size": 16,
+          "union_doc2": 3
+        }
+      ]
+    }
+  }
+}

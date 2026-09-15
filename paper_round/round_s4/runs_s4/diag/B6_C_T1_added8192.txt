@@ -1,0 +1,29 @@
+Source: document_1.txt
+Title: 
+Content: The authors from  [ 7 ] computed features to model different articulation deficits in PD such as vowel quality, coordination of laryngeal and supra-laryngeal activity, precision of consonant articulation, tongue movement, occlusion weakening, and speech timing. The authors studied the rapid repetition of the syllables /pa-ta-ka/ pronounced by 24 Czech native speakers, and reported an accuracy of 88% discriminating between PD patients and HC speakers, using an SVM classifier.
+
+Source: document_1.txt
+Title: 
+Content: Additional articulation features were proposed in  [ 8 ] , where the authors modeled the difficulty of PD patients to start/stop the vocal fold vibration in continuous speech. The model was based on the energy content in the transitions between unvoiced and voiced segments. The authors classified PD patients and HC speakers with speech recordings in three different languages (Spanish, German, and Czech), and reported accuracies ranging from 80% to 94% depending on the language; however, the results were optimistic, since the hyper-parameters of the classifier were optimized based on the accuracy on the test set.
+
+Source: document_1.txt
+Title: 
+Content: A deep learning based articulation model was proposed in  [ 12 ] to model the difficulties of the patients to stop/start the vibration of the vocal folds. Transitions between voiced and unvoiced segments were modeled with time-frequency representations and convolutional neural networks (CNNs). The authors considered speech recordings of PD patients and HC speakers in three languages: Spanish, German, and Czech, and reported accuracies ranging from 70% to 89%, depending on the language. However, in a language independent scenario, i.e., training the CNN with utterances from one language and testing with the remaining two, the results were not satisfactory (accuracy < 60 % <60\% ).
+
+Source: document_1.txt
+Title: 
+Content: German 
+
+ Speech recordings of 88 PD patients and 88 HC speakers from Germany are considered  [ 18 ] . The participants performed four speech task: the rapid repetition of /pa-ta-ka/, 5 sentences, one text with 81 words, and a monologue.
+
+
+Source: document_1.txt
+Title: 
+Content: Another articulation model was proposed in  [ 9 ] . The authors considered a forced alignment strategy to segment the different phonetic units in the speech utterances. The phonemes were segmented and grouped to train different GMMs. The classification was performed based on a threshold of the difference between the posterior probabilities from the models created for HC subjects and PD patients. The model was tested with Colombian Spanish utterances from the PC-GITA database  [ 6 ] and with the Czech data from  [ 10 ] . The authors reported accuracies of up to 81% for the Spanish data, and of up to 94% for the Czech data.
+
+Source: document_1.txt
+Title: 
+Content: The receiver operating characteristic (ROC) curves from Figure  2 show with more detail the effect of the transfer learning strategy in the performance of the CNNs to classify PD speakers in different languages. The area under the ROC curve (AUC) when the target language is Spanish (Figure  2 A) is slightly higher when the base language is Czech. When the target languages are German and Czech (Figure  2 B and Figure  2 C) the highest AUC is obtained when the base model is trained with Spanish utterances. 
+ A. B. C. 
+
+ Figure 2: ROC curves for the transfer learning among languages, when the target language is A. Spanish, B. German, and C. Czech.

@@ -1,0 +1,19 @@
+{
+  "max_tokens_requested": 16384,
+  "accepted": true,
+  "finish_reason": "stop",
+  "content": "OK",
+  "usage": {
+    "prompt_tokens": 37,
+    "completion_tokens": 29,
+    "total_tokens": 66,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 27
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 37
+  }
+}

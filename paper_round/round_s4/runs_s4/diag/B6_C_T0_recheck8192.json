@@ -1,0 +1,10 @@
+{
+  "cell": "B6_C_T0",
+  "variant_prompt": "T1",
+  "max_tokens": 8192,
+  "finish_reason": "stop",
+  "completion_tokens": 3957,
+  "answer": "NONE",
+  "queries": [],
+  "cost_usd": 0.006112
+}

@@ -1,0 +1,9 @@
+{
+  "cell": "B3_C_T2",
+  "max_tokens": 16384,
+  "finish_reason": "stop",
+  "completion_tokens": 10845,
+  "prompt_tokens": 9264,
+  "output_chars": 14125,
+  "cost_usd": 0.015793
+}

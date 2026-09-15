@@ -1,0 +1,14 @@
+COST ACCOUNTING: pilot* cum=$4.4534 (505 calls); round cap=$4.7224
+CAP PROBE: {'max_tokens_requested': 16384, 'accepted': True, 'finish_reason': 'stop', 'content': 'OK', 'usage': {'prompt_tokens': 37, 'completion_tokens': 29, 'total_tokens': 66, 'prompt_tokens_details': {'cached_tokens': 0}, 'completion_tokens_details': {'reasoning_tokens': 27}, 'prompt_cache_hit_tokens': 0, 'prompt_cache_miss_tokens': 37}}
+Failed to import MCPRetriever: No module named 'langchain_mcp_adapters'
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: Invalid retriever(s) found: offline_null. Valid options are: arxiv, bing, bocha, brave, crw, custom, duckduckgo, exa, getxapi, google, groundroute, mcp, openalex, pubmed_central, searchapi, searx, semantic_scholar, serpapi, serper, tavily, xquik.. Defaulting to 'tavily' retriever.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4117.75it/s]
+INFO:     [13:32:38] 📚 Getting relevant content based on query: German dataset speech recordings PD HC...
+INFO:     [13:32:38] 📚 Getting relevant content based on query: German 88 PD 88 HC speakers...
+RECHECK B6_C_T1 cap=8192: fin=stop ctok=5325 queries=['German dataset speech recordings PD HC', 'German 88 PD 88 HC speakers'] added_doc1=6 decisive={'88 PD patients and 88 HC': True}
+RECHECK B3_P_T1 cap=8192: fin=stop ctok=3243 queries=[] (no queries)
+RECHECK B6_P_T0 cap=8192: fin=stop ctok=7492 queries=[] (no queries)
+RECHECK B6_C_T0 cap=8192: fin=stop ctok=3957 queries=[] (no queries)
+DIAG DONE: pilot* cum=$4.5417 (514 calls)
+EXIT 0

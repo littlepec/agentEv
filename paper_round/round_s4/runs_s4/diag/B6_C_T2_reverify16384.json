@@ -1,0 +1,9 @@
+{
+  "cell": "B6_C_T2",
+  "max_tokens": 16384,
+  "finish_reason": "stop",
+  "completion_tokens": 16184,
+  "prompt_tokens": 10779,
+  "output_chars": 14025,
+  "cost_usd": 0.022654
+}

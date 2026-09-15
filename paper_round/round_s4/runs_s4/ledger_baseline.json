@@ -1,0 +1,5 @@
+{
+  "line_cost_at_round_start": 4.2723955,
+  "note": "round cap counts every roundS4 call (host + check + verify)",
+  "created": "2026-09-15T13:20:35"
+}

@@ -1,0 +1,6 @@
+COST ACCOUNTING: pilot* cum=$4.5970 (518 calls); round cap=$4.7224
+REVERIFY B6_P_T2 cap=16384: fin=length ctok=16384 out_chars=0 $0.0232
+REVERIFY B6_C_T2 cap=16384: fin=stop ctok=16184 out_chars=14025 $0.0227
+REVERIFY B3_C_T2 cap=16384: fin=stop ctok=10845 out_chars=14125 $0.0158
+DIAG DONE: pilot* cum=$4.6586 (521 calls)
+EXIT 0

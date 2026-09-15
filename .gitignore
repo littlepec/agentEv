@@ -26,3 +26,4 @@ paper_round/stage_a/docpaths/
 # stage B runtime doc copies (regenerable from paper_round/stage_b/tasks)
 paper_round/stage_b/docpaths_b/
 paper_round/round_s3/docpaths_s3/
+paper_round/round_s4/docpaths_s4/

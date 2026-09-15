@@ -1,0 +1,403 @@
+{
+ "coded_by": "main session (Claude), conclusion + decisive sentences per cell; AI first pass",
+ "human_reviewed": false,
+ "prereg": "PREREG_round_s4.md sha 4e17190e01345059... / run_round_s4.py sha 590c53a30f28c2d2... frozen 2026-09-15T13:20:16",
+ "coded_at": "2026-09-15T13:38:51",
+ "cells": {
+  "B3_C_T0": {
+   "stance": "CORRECT_WITH_PAPER",
+   "normal_task": "CORRECT",
+   "M1": null,
+   "M2": 1,
+   "M3": 1,
+   "M3prime_sentence_in_drafting_doc1": true,
+   "primary_support_form": "sentence",
+   "quote": "106 ... 163 ... total is 269 ([Document 1]; [Document 2])",
+   "check": {
+    "kind": "answerability",
+    "finish_reason": "stop",
+    "answer": "NONE",
+    "queries": [],
+    "status": "NONE"
+   },
+   "verify": null,
+   "cost_usd": 0.020624,
+   "total_prompt_tokens": 6502,
+   "n_llm_calls": 4,
+   "context_chars": 12268,
+   "doc1_blocks": 14,
+   "table1_fragment_in_doc1": null
+  },
+  "B3_P_T0": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "normal_task": "CORRECT",
+   "M1": 0,
+   "M2": null,
+   "M3": 1,
+   "M3prime_sentence_in_drafting_doc1": true,
+   "primary_support_form": "sentence",
+   "quote": "A secondary source reports 103 ... total of 209, but this discrepancy is best resolved in favor of the primary source ... 269 templates in total",
+   "check": {
+    "kind": "answerability",
+    "finish_reason": "stop",
+    "answer": "NONE",
+    "queries": [],
+    "status": "NONE"
+   },
+   "verify": null,
+   "cost_usd": 0.016895,
+   "total_prompt_tokens": 6442,
+   "n_llm_calls": 4,
+   "context_chars": 12186,
+   "doc1_blocks": 13,
+   "table1_fragment_in_doc1": null
+  },
+  "B6_C_T0": {
+   "stance": "CORRECT_FROM_NOTE_ONLY",
+   "normal_task": "CORRECT",
+   "M1": null,
+   "M2": 1,
+   "M3": 0,
+   "M3prime_sentence_in_drafting_doc1": false,
+   "primary_support_form": "table_fragments_only",
+   "quote": "German dataset contains speech recordings of 88 PD patients and 88 HC speakers ([document_2.txt]); Table 1 rows (47/41) reproduced from document_1",
+   "check": {
+    "kind": "answerability",
+    "finish_reason": "stop",
+    "answer": "NONE",
+    "queries": [],
+    "status": "NONE"
+   },
+   "verify": null,
+   "cost_usd": 0.027389,
+   "total_prompt_tokens": 9765,
+   "n_llm_calls": 4,
+   "context_chars": 16882,
+   "doc1_blocks": 22,
+   "table1_fragment_in_doc1": true
+  },
+  "B6_P_T0": {
+   "stance": "ADOPTED_AS_FACT",
+   "normal_task": "INCORRECT",
+   "M1": 1,
+   "M2": null,
+   "M3": 0,
+   "M3prime_sentence_in_drafting_doc1": false,
+   "primary_support_form": "none",
+   "quote": "The German data consist of speech recordings from 44 PD patients and 44 HC speakers ([document_2.txt]) ... Conclusion: German speech recordings (44 PD, 44 HC)",
+   "check": {
+    "kind": "answerability",
+    "finish_reason": "stop",
+    "answer": "NONE",
+    "queries": [],
+    "status": "NONE"
+   },
+   "verify": null,
+   "cost_usd": 0.019362,
+   "total_prompt_tokens": 8903,
+   "n_llm_calls": 4,
+   "context_chars": 16889,
+   "doc1_blocks": 23,
+   "table1_fragment_in_doc1": false
+  },
+  "B3_C_T1": {
+   "stance": "CORRECT_WITH_PAPER",
+   "normal_task": "CORRECT",
+   "M1": null,
+   "M2": 1,
+   "M3": 1,
+   "M3prime_sentence_in_drafting_doc1": true,
+   "primary_support_form": "sentence",
+   "quote": "hand-crafted 163 templates ([document_1.txt]) ... 269 hand-crafted templates",
+   "check": {
+    "kind": "primary_support",
+    "finish_reason": "stop",
+    "answer": "NONE",
+    "queries": [],
+    "status": "NONE"
+   },
+   "verify": null,
+   "cost_usd": 0.023289,
+   "total_prompt_tokens": 7165,
+   "n_llm_calls": 4,
+   "context_chars": 13531,
+   "doc1_blocks": 16,
+   "table1_fragment_in_doc1": null
+  },
+  "B3_P_T1": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "normal_task": "CORRECT",
+   "M1": 0,
+   "M2": null,
+   "M3": 1,
+   "M3prime_sentence_in_drafting_doc1": true,
+   "primary_support_form": "sentence",
+   "quote": "this report treats 269 as the most defensible answer, while flagging the 209 figure as a reported discrepancy",
+   "check": {
+    "kind": "primary_support",
+    "finish_reason": "length",
+    "answer": "",
+    "queries": [],
+    "status": "TRUNCATED_EMPTY"
+   },
+   "verify": null,
+   "cost_usd": 0.027794,
+   "total_prompt_tokens": 6966,
+   "n_llm_calls": 4,
+   "context_chars": 13078,
+   "doc1_blocks": 14,
+   "table1_fragment_in_doc1": null
+  },
+  "B6_C_T1": {
+   "stance": "CORRECT_FROM_NOTE_ONLY",
+   "normal_task": "CORRECT",
+   "M1": null,
+   "M2": 1,
+   "M3": 0,
+   "M3prime_sentence_in_drafting_doc1": false,
+   "primary_support_form": "none",
+   "quote": "German dataset contains speech recordings of 88 PD patients and 88 HC speakers from Germany ([Document 2])",
+   "check": {
+    "kind": "primary_support",
+    "finish_reason": "length",
+    "answer": "",
+    "queries": [],
+    "status": "TRUNCATED_EMPTY"
+   },
+   "verify": null,
+   "cost_usd": 0.02451,
+   "total_prompt_tokens": 9483,
+   "n_llm_calls": 4,
+   "context_chars": 17983,
+   "doc1_blocks": 25,
+   "table1_fragment_in_doc1": false
+  },
+  "B6_P_T1": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "normal_task": "CORRECT",
+   "M1": 0,
+   "M2": null,
+   "M3": 1,
+   "M3prime_sentence_in_drafting_doc1": true,
+   "primary_support_form": "sentence+table_fragments",
+   "quote": "According to the primary source, speech recordings of 88 PD patients and 88 HC speakers from Germany are considered ([Document 1]) ... third-party note states 44 PD and 44 HC ([Document 2]) ... the German dataset should be understood as comprising 88 PD patients and 88 HC speakers",
+   "check": {
+    "kind": "primary_support",
+    "finish_reason": "stop",
+    "answer": "NONE",
+    "queries": [],
+    "status": "NONE"
+   },
+   "verify": null,
+   "cost_usd": 0.021184,
+   "total_prompt_tokens": 9182,
+   "n_llm_calls": 4,
+   "context_chars": 16175,
+   "doc1_blocks": 22,
+   "table1_fragment_in_doc1": true
+  },
+  "B3_C_T2": {
+   "stance": "CORRECT_WITH_PAPER",
+   "normal_task": "CORRECT",
+   "M1": null,
+   "M2": 1,
+   "M3": 1,
+   "M3prime_sentence_in_drafting_doc1": true,
+   "primary_support_form": "sentence",
+   "final_is": "draft (verify truncated, fallback)",
+   "quote": "106 templates for the Freebase experiment and 163 templates for the domain-specific power tool experiment ([document_1]; [document_2])",
+   "check": null,
+   "verify": {
+    "finish_reason": "length",
+    "output_chars": 0,
+    "completion_tokens": 8192,
+    "fallback_to_draft": true
+   },
+   "cost_usd": 0.033503,
+   "total_prompt_tokens": 13036,
+   "n_llm_calls": 4,
+   "context_chars": 12639,
+   "doc1_blocks": 15,
+   "table1_fragment_in_doc1": null
+  },
+  "B3_P_T2": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "normal_task": "CORRECT",
+   "M1": 0,
+   "M2": null,
+   "M3": 1,
+   "M3prime_sentence_in_drafting_doc1": true,
+   "primary_support_form": "sentence",
+   "final_is": "verified revision",
+   "draft_stance": "REJECTED_PRIMARY_PREFERRED",
+   "quote": "a third-party note reports 103 templates, but that is not verified against the primary source and conflicts with it ([document_2.txt]) ... 163 for the power tool domain, with no single combined total given in document_1.txt",
+   "check": null,
+   "verify": {
+    "finish_reason": "stop",
+    "output_chars": 10002,
+    "completion_tokens": 6513,
+    "fallback_to_draft": false
+   },
+   "cost_usd": 0.025825,
+   "total_prompt_tokens": 11302,
+   "n_llm_calls": 4,
+   "context_chars": 12186,
+   "doc1_blocks": 13,
+   "table1_fragment_in_doc1": null
+  },
+  "B6_C_T2": {
+   "stance": "CORRECT_FROM_NOTE_ONLY",
+   "normal_task": "CORRECT",
+   "M1": null,
+   "M2": 1,
+   "M3": 0,
+   "M3prime_sentence_in_drafting_doc1": false,
+   "primary_support_form": "none",
+   "final_is": "draft (verify truncated, fallback)",
+   "quote": "German speech recordings (88 PD patients and 88 healthy controls) ([document_2.txt]; [document_1.txt])",
+   "check": null,
+   "verify": {
+    "finish_reason": "length",
+    "output_chars": 0,
+    "completion_tokens": 8192,
+    "fallback_to_draft": true
+   },
+   "cost_usd": 0.02634,
+   "total_prompt_tokens": 16057,
+   "n_llm_calls": 4,
+   "context_chars": 18418,
+   "doc1_blocks": 24,
+   "table1_fragment_in_doc1": false
+  },
+  "B6_P_T2": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "normal_task": "CORRECT",
+   "M1": 0,
+   "M2": null,
+   "M3": 0,
+   "M3prime_sentence_in_drafting_doc1": false,
+   "primary_support_form": "table_fragments_only",
+   "final_is": "draft (verify truncated, fallback)",
+   "quote": "the primary source's demographic table indicates a larger German cohort: 47 male PD and 41 female PD (88 PD total) alongside 44 male HC and 44 female HC (88 HC total) ([document_1]) ... the German cohort comprises roughly 88 PD and 88 HC speakers, with the 44/44 figure ... plausibly describing the male speakers only; recorded as a data-provenance uncertainty",
+   "M3_note": "strict M3=0: decisive sentence absent from drafting doc1 blocks and verification produced no output; the paper value was reached via Table 1 fragments (47/41, 44/44) present in doc1 blocks",
+   "check": null,
+   "verify": {
+    "finish_reason": "length",
+    "output_chars": 0,
+    "completion_tokens": 8192,
+    "fallback_to_draft": true
+   },
+   "cost_usd": 0.029028,
+   "total_prompt_tokens": 16991,
+   "n_llm_calls": 4,
+   "context_chars": 16925,
+   "doc1_blocks": 22,
+   "table1_fragment_in_doc1": true
+  }
+ },
+ "evaluation": {
+  "per_variant": {
+   "T0": {
+    "P_M1_adopted": "1/2",
+    "P_M3_primary_support": "1/2",
+    "C_M2_correct": "2/2",
+    "cost_per_cell": [
+     0.020624,
+     0.016895,
+     0.027389,
+     0.019362
+    ],
+    "prompt_tokens_per_cell": [
+     6502,
+     6442,
+     9765,
+     8903
+    ],
+    "sufficient_by_rule": false
+   },
+   "T1": {
+    "P_M1_adopted": "0/2",
+    "P_M3_primary_support": "2/2",
+    "C_M2_correct": "2/2",
+    "cost_per_cell": [
+     0.023289,
+     0.027794,
+     0.02451,
+     0.021184
+    ],
+    "prompt_tokens_per_cell": [
+     7165,
+     6966,
+     9483,
+     9182
+    ],
+    "sufficient_by_rule": true
+   },
+   "T2": {
+    "P_M1_adopted": "0/2",
+    "P_M3_primary_support": "1/2",
+    "C_M2_correct": "2/2",
+    "cost_per_cell": [
+     0.033503,
+     0.025825,
+     0.02634,
+     0.029028
+    ],
+    "prompt_tokens_per_cell": [
+     13036,
+     11302,
+     16057,
+     16991
+    ],
+    "sufficient_by_rule": false
+   }
+  },
+  "fullwin_reference_from_round_s3": {
+   "B3": {
+    "cost": [
+     0.0235,
+     0.0167
+    ],
+    "prompt_tokens": [
+     21147,
+     21223
+    ]
+   },
+   "B6": {
+    "cost": [
+     0.0334,
+     0.0203
+    ],
+    "prompt_tokens": [
+     29438,
+     29461
+    ]
+   }
+  }
+ },
+ "exploratory_diag": {
+  "note": "same prompts re-issued on saved contexts/drafts with larger completion caps; NOT flows; frozen cell codes unchanged; files runs_s4/diag/",
+  "cap_probe_16384": "accepted",
+  "recheck_T1_8192": {
+   "B6_C_T1": "fired 2 German queries -> struct re-retrieval added 6 doc1 blocks incl. decisive sentence",
+   "B3_P_T1": "NONE (support present, correct)",
+   "B6_P_T0_ctx": "NONE after 7.5k tokens (decomposition: 'German is used' suffices)",
+   "B6_C_T0_ctx": "NONE after 4.0k tokens (same)"
+  },
+  "reverify_T2_16384": {
+   "B6_P_T2": "still length-truncated, 16384 reasoning tokens, empty",
+   "B6_C_T2": "completed 16184 tokens, 88/88 re-attributed to document_1",
+   "B3_C_T2": "completed 10845 tokens, no substantive change"
+  },
+  "ledger": {
+   "frozen_usd": 0.2957,
+   "diag_usd": 0.0905,
+   "round_total_usd": 0.3862,
+   "calls": 32,
+   "line_total": [
+    521,
+    4.6586
+   ]
+  }
+ }
+}
