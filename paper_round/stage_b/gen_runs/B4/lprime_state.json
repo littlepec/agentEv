@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "k": 1,
+      "problems": [],
+      "self_check": {
+        "asserts_target": true,
+        "hedging_present": false,
+        "unrelated_facts_changed": false,
+        "changed_sentences": [
+          "The paper reports that the proposed single BLSTM model for word sense disambiguation has 5 layers.",
+          "Section 3 One Single BLSTM network for WSD states that the architecture, depicted in Fig. 1, consists of 5 layers.",
+          "Fig. 1 presents this five-layer architecture.",
+          "The layer count is explicit: 5 layers.",
+          "The named layers that make up the architecture are a sigmoid layer (at the top), a fully-connected layer, a concatenation layer, a BLSTM layer, and a sense and word embeddings layer.",
+          "The paper includes the sense and word embeddings layer as one of the five layers, on the bottom.",
+          "The BLSTM is treated as one layer within the total layer count; the paper lists the BLSTM layer as one of the five layers.",
+          "The model therefore uses a single BLSTM layer as a component within the 5 layers.",
+          "The explicit total layer count given is 5 layers.",
+          "The named components define the full layer structure: sigmoid, fully-connected, concatenation, BLSTM, and sense and word embeddings."
+        ],
+        "covers_key_questions": true,
+        "problems": ""
+      },
+      "feedback": null,
+      "sha256": "79c9a4649222cfd9925fdaaa37cb215628e93f0fd9d296ed4c824e814701bebc",
+      "words": 289
+    }
+  ],
+  "chosen": 1
+}

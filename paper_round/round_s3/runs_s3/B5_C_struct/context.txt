@@ -1,0 +1,219 @@
+Source: document_1.txt
+Title: 
+Content: Generally, RNNs can be separated by a simple RNN without gating units, such as the Elman RNN [ 8 ] , the Jordan RNN [ 9 ] , and such advanced RNNs with gating units as the Long-Short Term Memory (LSTM) RNN [ 10 ] and the Gated Recurrent Unit (GRU) RNN [ 5 ] . A simple RNN usually adequate to model some dataset and a task with short-term dependencies like slot filling for spoken language understanding [ 11 ] . However, for more difficult tasks like language modeling and machine translation where most predictions need longer information and a historical context from each sentence, gating units are needed to achieve good performance. With gating units for blocking and passing information from previous or future hidden layer, we can learn long-term information and recursively backpropagate the error from our prediction without suffering from vanishing or exploding gradient problems [ 10 ] . In spite of this situation, the concept of gating mechanism does not provide an RNN with a more
+
+Source: document_1.txt
+Title: 
+Content: ] . In spite of this situation, the concept of gating mechanism does not provide an RNN with a more powerful way to model the relation between the current input and previous hidden layer representations.
+
+Source: document_1.txt
+Title: 
+Content: (RecNTN), which uses a tensor product between child input vectors to represent the parent vector representation. By adding the tensor product operation to calculate their parent vector, RecNTN significantly improves the performance of sentiment analysis and reasoning on entity relations tasks compared to standard RecNN architecture. However, those models struggle to learn long-term dependencies because the do not utilize the concept of gating mechanism.
+
+Source: document_1.txt
+Title: 
+Content: (26) 
+ .
+In both proposed models, we can see partial derivative ∂ E i ( θ ) / ∂ W t ​ s ​ r [ 1 : d ] {\partial E_{i}(\theta)}/{\partial W_{tsr}^{[1:d]}} in Eqs. 24 and 25 , the derivative from the tensor product w.r.t the tensor weight parameters depends on the values of our input and hidden layers. Then all the slices of tensor weight derivative are multiplied by the error from their corresponding pre-activated hidden unit values. From these derivations, we are able to see where each slice of tensor weight is learned more directly from their input and hidden layer values compared by using standard addition operations.
+After we accumulated every parameter’s gradients from all the previous time-steps, we use a stochastic gradient optimization method such as AdaGrad [ 26 ] to optimize our model parameters.
+
+Source: document_1.txt
+Title: 
+Content: IV Experiment Settings 
+
+ Next we evaluate our proposed GRURNTN and LSTMRNTN models against baselines GRURNN and LSTMRNN with two different tasks and datasets.
+
+Source: document_1.txt
+Title: 
+Content: IV-B Experiment Models 
+
+ In this experiment, we compared the performance from our baseline models GRURNN and LSTMRNN with our proposed GRURNTN and LSTMRNTN models. We used the same dimensions for the embedding matrix to represent the words and characters as the vectors of real numbers. 
+
+ For the word-level language modeling task, we used 256 hidden units for GRURNTN and LSTMRNTN, 860 for GRURNN, and 740 for LSTMRNN. All of these models use 128 dimensions for word embedding. We used dropout regularization with p = 0.5 p=0.5 dropout probability for GRURNTN and LSTMRNTN and p = 0.6 p=0.6 for our baseline model. The total number of free parameters for GRURNN and GRURNTN were about 12 million and about 13 million for LSTMRNN and LSTMRNTN.
+
+Source: document_1.txt
+Title: 
+Content: For all the experiment scenarios, we used AdaGrad for our stochastic gradient optimization method with mini-batch training and a batch size of 15 sentences. We multiplied our learning rate with a decay factor of 0.5 when the cost from the development set for current epoch is greater than previous epoch. We also used a rescaling trick on the gradient [ 27 ] when the norm was larger than 5 to avoid the issue of exploding gradients. For initializing the parameters, we used the orthogonal weight initialization trick [ 28 ] on every model. 
+
+ V Results and Analysis 
+
+ V-A Character-level Language Modeling Fig. 8: Comparison among GRURNN, GRURNTN, LSTMRNN, and LSTMRNTN bits-per-character (BPC) per epoch on PTB validation set. Note : a lower BPC score is better TABLE I: PennTreeBank test set BPC
+
+Source: document_1.txt
+Title: 
+Content: Model Test BPC 
+
+ NNLM [ 29 , 30 ] 
+ 1.57 
+
+ BPTT-RNN [ 29 ] 
+ 1.42 
+
+ HF-MRNN [ 29 , 31 ] 
+ 1.41 
+
+ sRNN [ 12 ] 
+ 1.41 
+
+ DOT(S)-RNN [ 12 ] 
+ 1.39 
+
+ LSTMRNN (w/ adapt. noise, w/o dyn. eval) 3 3 3 
+
+ Adaptive noise regularization is where the noise variance is learned and applied with the weight 4 4 4 
+
+ Dynamic evaluation approach updates the model parameter during processing on the test data (only updated once per test dataset). Our baseline and proposed model experiment did not use dynamic evaluation. [ 32 ] 
+ 1.26 
+
+ LSTMRNN (w/ adapt. noise, w/ dyn. eval) 0 0 footnotemark: 0 0 0 footnotemark: 0 [ 32 ] 
+ 1.24 
+
+ GRURNN (our baseline) 
+ 1.39 
+
+ LSTMRNN (our baseline) 
+ 1.37 
+
+ GRURNTN (proposed) 
+ 1.33 
+
+ LSTMRNTN (proposed) 
+ 1.34
+
+Source: document_1.txt
+Title: 
+Content: LSTMRNN (our baseline) 
+ 1.37 
+
+ GRURNTN (proposed) 
+ 1.33 
+
+ LSTMRNTN (proposed) 
+ 1.34 
+
+ In this section, we report our experiment results on PTB character-level language modeling using our baseline models GRURNN and LSTMRNN as well as our proposed models GRURNTN and LSTMRNTN. Fig. 8 shows performance comparisons from every model based on the validation set’s BPC per epoch. In this experiment, GRURNN made faster progress than LSTMRNN, but eventually LSTMRNN converged into a better BPC based on the development set. Our proposed model GRURNTN made faster and quicker progress than LSTMRNTN and converged into a similar BPC in the last epoch. Both proposed models produced lower BPC than our baseline models from the first epoch to the last epoch.
+
+Source: document_1.txt
+Title: 
+Content: Table I shows PTB test set BPC among our baseline models, our proposed models and several published results.
+Our proposed model GRURNTN and LSTMRNTN outperformed both baseline models. GRURNTN reduced the BPC from 1.39 to 1.33 (0.06 absolute / 4.32% relative BPC) from the baseline GRURNN, and LSTMRNTN reduced the BPC from 1.37 to 1.34 (0.03 absolute / 2.22% relative BPC) from the baseline LSTMRNN. Overall, GRURNTN slightly outperformed LSTMRNTN, and both proposed models outperformed all of the baseline models on the character-level language modeling task. 
+
+ V-B Word-level Language Modeling Fig. 9: Comparison among GRURNN, GRURNTN, LSTMRNN and LSTMRNTN perplexity (PPL) per epoch on the PTB validation set. Note : a lower PPL value is better
+
+Source: document_1.txt
+Title: 
+Content: In this section, we report our experiment results on PTB word-level language modeling using our baseline models GRURNN and LSTMRNN and our proposed models GRURNTN and LSTMRNTN. Fig. 9 compares the performance from every models based on the validation set’s PPL per epoch. In this experiment, GRURNN made faster progress than LSTMRNN. Our proposed GRURNTN’s progress was also better than LSTMRNTN. The best model in this task was GRURNTN, which had a consistently lower PPL than the other models. TABLE II: PennTreeBank test set PPL 
+ Model Test PPL 
+ N-Gram [ 24 ] 
+ 141 
+ RNNLM (w/o dyn. eval) 0 0 footnotemark: 0 [ 24 ] 
+ 124.7 
+ RNNLM (w/ dyn. eval) 0 0 footnotemark: 0 [ 24 ] 
+ 123.2 
+ SCRNN [ 33 ] 
+ 115 
+ sRNN [ 12 ] 
+ 110.0 
+ DOT(S)-RNN [ 12 ] 
+ 107.5 
+ GRURNN (our baseline) 
+ 97.78 
+ LSTMRNN (our baseline) 
+ 108.26 
+ GRURNTN (proposed) 
+ 87.38 
+ LSTMRNTN (proposed) 
+ 96.97
+
+Source: document_1.txt
+Title: 
+Content: Table I shows the PTB test set PPL among our baseline models, proposed models, and several published results.
+Both our proposed models outperformed their baseline models. GRURNTN reduced the perplexity from 97.78 to 87.38 (10.4 absolute / 10.63% relative PPL) over the baseline GRURNN and LSTMRNTN reduced the perplexity from 108.26 to 96.97 (11.29 absolute / 10.42% relative PPL) over the baseline LSTMRNN. Overall, LSTMRNTN improved the LSTMRNN model and its performance closely resembles the baseline GRURNN. However, GRURNTN outperformed all the baseline models as well as the other models by a large margin.
+
+Source: document_1.txt
+Title: 
+Content: VI Related Work 
+
+ Representing hidden states with deeper operations was introduced just a few years ago [ 12 ] . In these works, Pascanu et al. [ 12 ] use additional nonlinear layers for representing the transition from input to hidden layers, hidden to hidden layers, and hidden to output layers. They also improved the RNN architecture by a adding shortcut connection in the deep transition by skipping the intermediate layers. Another work from [ 34 ] proposed a new RNN design for a stacked RNN model called Gated Feedback RNN (GFRNN), which adds more connections from all the previous time-step stacked hidden layers into the current hidden layer computations.
+Despite adding additional transition layers and connection weight from previous hidden layers, all of these models still represent the input and hidden layer relationships by using linear projection, addition and nonlinearity transformation.
+
+Source: document_1.txt
+Title: 
+Content: 11.29 absolute (10.42% relative PPL) reduction over LSTMRNN. In the future, we will investigate the possibility of combining our model with other stacked RNNs architecture, such as Gated Feedback RNN (GFRNN). We would also like to explore other possible tensor operations and integrate them with our RNN architecture. By applying these ideas together, we expect to gain further performance improvement. Last, for further investigation we will apply our proposed models to other temporal and sequential tasks, such as speech recognition and video recognition.
+
+Source: document_1.txt
+Title: 
+Content: [20] 
+R. Socher, C. C. Lin, C. Manning, and A. Y. Ng, “Parsing natural scenes and
+natural language with recursive neural networks,” in Proceedings of
+the 28th international conference on machine learning (ICML-11) , 2011, pp.
+129–136.
+
+ [21] 
+X. Zhu, P. Sobhani, and H. Guo, “Long short-term memory over tree
+structures,” arXiv preprint arXiv:1503.04881 , 2015.
+
+ [22] 
+D. E. Rumelhart, G. E. Hinton, and R. J. Williams, “Learning internal
+representations by error-propagation,” in Parallel Distributed
+Processing: Explorations in the Microstructure of Cognition. Volume 1 . MIT Press, Cambridge, MA, 1986, vol. 1, no.
+6088, pp. 318–362.
+
+ [23] 
+P. J. Werbos, “Backpropagation through time: what it does and how to do it,”
+ Proceedings of the IEEE , vol. 78, no. 10, pp. 1550–1560, 1990.
+
+ [24] 
+T. Mikolov, “Statistical language models based on neural networks,” 2012.
+
+ [25] 
+A. Graves et al. , Supervised sequence labelling with recurrent
+neural networks . Springer, vol. 385.
+
+Source: document_2.txt
+Title: 
+Content: Third-party research note: Gated Recurrent Neural Tensor Network
+
+Key questions addressed: Gated Recurrent Neural Tensor Network language modeling improvement | LSTMRNTN GRURNTN baseline comparison | gated recurrent unit tensor product language modeling benchmark | recurrent neural tensor network versus gated recurrent unit and LSTM | how much improvement does tensor product gating bring to recurrent language models
+
+The paper introduces two models: the Long-Short Term Memory Recurrent Neural Tensor Network (LSTMRNTN) and the Gated Recurrent Unit Recurrent Neural Tensor Network (GRURNTN). It compares them against previous baseline models GRURNN and LSTMRNN. Evaluation covers word-level language modeling and character-level language modeling. The conclusion states that both proposed models outperformed the baseline models with a similar number of parameters in character-level language modeling and word-level language modeling tasks.
+
+Source: document_2.txt
+Title: 
+Content: On character-level language modeling, GRURNTN reduced test BPC from 1.39 to 1.33, which is 0.06 absolute / 4.32% relative BPC, over GRURNN. LSTMRNTN reduced BPC from 1.37 to 1.34, which is 0.03 absolute / 2.22% relative BPC, over LSTMRNN.
+
+On word-level language modeling, GRURNTN reduced test PPL from 97.78 to 87.38, which is 10.4 absolute / 10.63% relative PPL, over GRURNN. LSTMRNTN reduced PPL from 108.26 to 96.97, which is 11.29 absolute / 10.42% relative PPL, over LSTMRNN.
+
+Overall, both proposed models produced lower test scores than their corresponding baselines and outperformed the baseline models in character-level and word-level language modeling tasks with a similar number of parameters. GRURNTN delivered 0.06 absolute / 4.32% relative BPC improvement and 10.4 absolute / 10.63% relative PPL improvement over GRURNN. LSTMRNTN delivered 0.03 absolute / 2.22% relative BPC improvement and 11.29 absolute / 10.42% relative PPL improvement over LSTMRNN. Source: document_1.txt
+Title: 
+Content: In this paper, we proposed a new RNN architecture that combine the gating mechanism and tensor product concepts to incorporate both advantages in a single architecture. Using the concept of such gating mechanisms as LSTMRNN and GRURNN, our proposed architecture can learn temporal and sequential data with longer dependencies between each input time-step than simple RNNs without gating units and combine the gating units with tensor products to represent the hidden layer with more powerful operation and direct interaction. Hidden states are generated by the interaction between current input and previous (or future) hidden states using a tensor product and a non-linear activation function allows more expressive model representation. We describe two different models based on LSTMRNN and GRURNN. LSTMRNTN is our proposed model for the combination between a LSTM unit with a tensor product inside its cell equation and GRURNTN is our name for a GRU unit with a tensor product inside its
+
+Source: document_1.txt
+Title: 
+Content: (11) 
+ where σ ⁡ ( ⋅ ) \sigma(\cdot) is a sigmoid activation function, r t , z t r_{t},z_{t} are reset and update gates, h t ~ \tilde{h_{t}} is the candidate hidden layer values and h t h_{t} is the hidden layer values at time- t t . The reset gates determine which previous hidden layer value is useful for generating the current candidate hidden layer. The update gates keeps the previous hidden layer values or replaced by new candidate hidden layer values.
+In spite of having one fewer gating layer, the GRU can match LSTM’s performance and its convergence speed convergence sometimes outperformed LSTM [ 19 ] . Fig. 3: Gated Recurrent Unit
+
+Source: document_1.txt
+Title: 
+Content: However, standard RecNNs have several limitations, where two vectors only implicitly interact with addition before applying a nonlinear activation function on them [ 13 ] and standard RecNNs are not able to model very long-term dependency on tree structures. Zhu et al. [ 21 ] proposed the gating mechanism into standard RecNN model to solve the latter problem. For the former limitation, the RecNN performance can be improved by adding more interaction between the two input vectors. Therefore, a new architecture called a Recursive Neural Tensor Network (RecNTN) tried to overcome the previous problem by adding interaction between two vectors using a tensor product, which is connected by tensor weight parameters. Each slice of the tensor weight can be used to capture the specific pattern between the left and right child vectors. For RecNTN, value p 1 p_{1} from Eq. 12 and 13 is defined by:
+
+Source: document_1.txt
+Title: 
+Content: We presented a new RNN architecture by combining the gating mechanism and tensor product concepts. Our proposed architecture can learn long-term dependencies from temporal and sequential data using gating units as well as more powerful interaction between the current input and previous hidden layers by introducing tensor product operations. From our experiment on the PennTreeBank corpus, our proposed models outperformed the baseline models with a similar number of parameters in character-level language modeling and word-level language modeling tasks. In a character-level language modeling task, GRURNTN obtained 0.06 absolute (4.32% relative) BPC reduction over GRURNN, and LSTMRNTN obtained 0.03 absolute (2.22% relative) BPC reduction over LSTMRNN. In a word-level language modeling task, GRURNTN obtained 10.4 absolute (10.63% relative) PPL reduction over GRURNN, and LSTMRNTN obtained 11.29 absolute (10.42% relative PPL) reduction over LSTMRNN. In the future, we will investigate the Source: document_1.txt
+Title: 
+Content: Recurrent Neural Networks (RNNs), which are a powerful scheme for modeling temporal and sequential data need to capture long-term dependencies on datasets and represent them in hidden layers with a powerful model to capture more information from inputs. For modeling long-term dependencies in a dataset, the gating mechanism concept can help RNNs remember and forget previous information. Representing the hidden layers of an RNN with more expressive operations (i.e., tensor products) helps it learn a more complex relationship between the current input and the previous hidden layer information. These ideas can generally improve RNN performances. In this paper, we proposed a novel RNN architecture that combine the concepts of gating mechanism and the tensor product into a single model. By combining these two concepts into a single RNN, our proposed models learn long-term dependencies by modeling with gating units and obtain more expressive and direct interaction between input and hidden
+
+Source: document_1.txt
+Title: 
+Content: IV-A Datasets and Tasks 
+
+ We used a PennTreeBank (PTB) corpus 1 1 1 https://www.cis.upenn.edu/~treebank/ , which is a standard benchmark corpus for statistical language modeling. A PTB corpus is a subset of the WSJ corpus. In this experiment, we followed the standard preprocessing step that was done by previous research [ 24 ] . The PTB dataset is divided as follows: a training set from sections 0-20 with total 930.000 words, a validation set from sections 21-22 with total 74.000 words, and a test set from sections 23-24 with total 82.000 words. The vocabulary is limited to the 10.000 most common words, and all words outside are mapped into a ” < < unk > > ” token. We used the preprocessed PTB corpus from the RNNLM-toolkit website 2 2 2 http://www.rnnlm.org/ .
+
+Source: document_1.txt
+Title: 
+Content: For the character-level language modeling task, we used 256 hidden units for GRURNTN and LSTMRNTN, 820 for GRURNN, and 600 for LSTMRNTN. All of these models used 32 dimensions for character embedding. We used dropout regularization with p = 0.25 p=0.25 dropout probability. The total number of free parameters for GRURNN and GRURNTN was about 2.2 million and about 2.6 million for LSTMRNN and LSTMRNTN. 
+
+ We constrained our baseline GRURNN to have a similar number of parameters as the GRURNTN model for a fair comparison. We also applied such constraints on our baseline LSTMRNN to LSTMRNTN model. Source: document_1.txt
+Title: 
+Content: Previously in Sections II-B and II-C , we discussed that the gating mechanism concept can helps RNNs learn long-term dependencies from sequential input data and that adding more powerful interaction between the input and hidden layers simultaneously with the tensor product operation in a bilinear form improves neural network performance and expressiveness. By using tensor product, we increase our model expressiveness by using second-degree polynomial interactions, compared to first-degree polynomial interactions on standard dot product followed by addition in common RNNs architecture. Therefore, in this paper we proposed a Gated Recurrent Neural Tensor Network (GRURNTN) to combine these two advantages into an RNN architecture. In this architecture, the tensor product operation is applied between the current input and previous hidden layer multiplied by the reset gates for calculating the current candidate hidden layer values. The calculation is parameterized by tensor weight. To

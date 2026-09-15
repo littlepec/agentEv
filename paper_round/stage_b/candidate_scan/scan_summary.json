@@ -1,0 +1,22 @@
+{
+  "papers_in_test": 416,
+  "questions_total": 1451,
+  "filter_stages": {
+    "answerable_non_yesno": 1014,
+    "mapped": 759,
+    "tagged": 353,
+    "evidence_not_mapped_to_section": 117,
+    "no_structure_tag": 406,
+    "some_unanswerable": 243,
+    "yes_no": 194,
+    "missing_evidence_or_answer": 127,
+    "excluded_used_paper": 11
+  },
+  "tag_counts": {
+    "S1": 232,
+    "S2": 161,
+    "NEG": 44,
+    "S3": 24
+  },
+  "cache_sha256": "9daad4436b2fa4d6749536f714ca92da79612a35485267b495f031aeecf80944"
+}

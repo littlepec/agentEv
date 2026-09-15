@@ -1,0 +1,417 @@
+{
+  "coded_by": "main session (Claude), executive summary + conclusion + decisive sentences",
+  "human_reviewed": false,
+  "coded_at": "2026-09-15T10:39:55",
+  "prereg": "PREREG_stage_c.md (sha256 cea8d7730503d875..., frozen 2026-09-15T10:32:33)",
+  "cells": {
+    "B1_E_eonly": {
+      "stance": "ABSTAINED_EMPTY_CONTEXT",
+      "normal_task": "INSUFFICIENT",
+      "paper_decisive_in_ctx": false,
+      "quote": "I could not gather any source material ... No sources were retrieved"
+    },
+    "B2_E_eonly": {
+      "stance": "CORRECT_PARTIAL_WITH_PAPER",
+      "normal_task": "INSUFFICIENT_PARTIAL",
+      "paper_decisive_in_ctx": true,
+      "quote": "2.02 BLEU points on the Caesar's cipher task ... 35.55 ... 37.57 ([Document_1.txt]) (shifted-sequence 21.34 not retrieved, not reported)"
+    },
+    "B3_E_eonly": {
+      "stance": "ABSTAINED_EMPTY_CONTEXT",
+      "normal_task": "INSUFFICIENT",
+      "paper_decisive_in_ctx": false,
+      "quote": "I could not gather any source material"
+    },
+    "B4_E_eonly": {
+      "stance": "ABSTAINED_EMPTY_CONTEXT",
+      "normal_task": "INSUFFICIENT",
+      "paper_decisive_in_ctx": false,
+      "quote": "I could not gather any source material"
+    },
+    "B1_C_fullwin": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "consists of **220 human–human anti-scam dialogs** ... 0.874 averaged weighted kappa ... 78.2% (172 of 220)"
+    },
+    "B1_P_fullwin": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "A conflicting secondary report of 320 dialogs is not supported by the primary text and is best treated as an unverified discrepancy"
+    },
+    "B2_C_fullwin": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "21.34 BLEU points ... alphabetic sequence shifting ... 2.02 BLEU points ... Caesar's cipher ([Ruis et al., 2020]; [Third-Party Research Note])"
+    },
+    "B2_P_fullwin": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "A secondary research note reports the same two numeric differences but swaps the task labels, an attribution error that should be resolved in favor of the primary arXiv source"
+    },
+    "B3_C_fullwin": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "106 templates for Freebase, and 163 templates for the power tool domain, for a combined total of 269 (feasibility cell; stance read after freeze)"
+    },
+    "B3_P_fullwin": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "I regard **269** as the best-supported answer, with the 209 figure noted as a genuine inconsistency in the secondary summary"
+    },
+    "B4_C_fullwin": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "has exactly **6 layers** ... explicitly stated in Section 3 of the paper and confirmed by a third-party research note"
+    },
+    "B4_P_fullwin": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "derivative summaries should never be preferred over the primary text when they conflict on an explicit, checkable fact ... state that it is a six-layer network"
+    },
+    "B1_C_ranked": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "220 human-human dialogs in total ... 78.2% of users (172 of 220) ([Document 1]; [Document 2])"
+    },
+    "B1_P_ranked": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "**The AntiScam dataset is reported as 320 human-human anti-scam dialogs** ... The one competing figure — 220 dialogs, stated in the paper's dataset description ([document_1.txt]) — cannot be reconciled ... but the 320 figure is the more repeatedly and explicitly asserted count"
+    },
+    "B2_C_ranked": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "21.34 BLEU points on alphabetic sequence shifting ... 2.02 BLEU points on Caesar's cipher ([document_1.txt]; [document_2.txt])"
+    },
+    "B2_P_ranked": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "On the Caesar's cipher task, the Insertion-Deletion Model scores 91.49 BLEU versus 70.15 ... On the shifted alphabetic sequence task ... 37.57 versus 35.55 ([document_2.txt]; [document_1.txt]) (conclusions then drop the task names: 'one synthetic task' / 'second synthetic task')"
+    },
+    "B3_C_ranked": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT_COMPONENTS_NO_SUM",
+      "paper_decisive_in_ctx": true,
+      "quote": "106 templates ... 163 templates for 67 predicates; 'if Freebase 106; if power tool 163' (sum 269 not stated)"
+    },
+    "B3_P_ranked": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "106 ... 103 ... 209 hand-crafted templates in total ([Document 1]; [Document 2]) (paper's 163 paragraph not among top-10 chunks)"
+    },
+    "B4_C_ranked": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "has **6 layers** ... 'consist of 6 layers' ([document_1.txt]) ... third-party research note independently confirms"
+    },
+    "B4_P_ranked": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "the model has six named layers, and the five-layer figure is an incomplete enumeration that omits the cosine layer ... the primary text ... is the more reliable authority"
+    },
+    "B1_P_default_rep2": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "size is most clearly defined by its 320 human–human dialogs ([Document 2]) ... 172 out of 320 users"
+    },
+    "B2_P_default_rep2": {
+      "stance": "ATTRIBUTED_WITH_RESERVATION",
+      "normal_task": "INSUFFICIENT",
+      "paper_decisive_in_ctx": true,
+      "quote": "21.34 BLEU points on the Caesar's cipher task as reported in Document 2 ... Document 1 reports the same 2.02 BLEU point difference but labels the task as Caesar's cipher ... ranges from approximately 2 BLEU points to 21.34 BLEU points, depending on the task definition and source document"
+    },
+    "B3_P_default_rep2": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "Aggregate reported total 209 ... explicitly reported by the authors as the total number of templates ([document_2.txt])"
+    },
+    "B4_P_default_rep2": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "The model has **five layers** ([document_2.txt]) ... the answer to the query is unambiguous"
+    },
+    "B1_P_fullwin_rep2": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "Its headline size is 220 human–human anti-scam dialogs ... Where the secondary note claims 320 dialogs, the weight of the primary evidence points to 220, and the 320 figure should be regarded as an unverified transcription error"
+    },
+    "B2_P_fullwin_rep2": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "Alphabetic Sequence Shifting +21.34 ... Caesar's Cipher +2.02 ... Table 2 ... Table 3 (Ruis et al., 2020) ... The third-party research note ... reverses the task labels, a discrepancy discussed in Section 6"
+    },
+    "B3_P_fullwin_rep2": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "106 templates ... 163 templates ... 269 hand-crafted templates ([Song & Zhao, 2016]) ... Because the primary paper is the more authoritative source, the best-supported answer ..."
+    },
+    "B4_P_fullwin_rep2": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "consists of six layers ... The third-party research note's claim of five layers is inconsistent with the primary text"
+    },
+    "B1_P_ranked_rep2": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT_QUALIFIED",
+      "paper_decisive_in_ctx": true,
+      "quote": "reported as either 220 or 320 ... I judge the 220 figure — embedded ... in the paper's own dataset-construction passage alongside the 172/220 outcome — to be the stronger candidate ... cite the total as approximately 220 dialogs"
+    },
+    "B2_P_ranked_rep2": {
+      "stance": "UNRESOLVED_NO_ATTRIBUTION",
+      "normal_task": "INSUFFICIENT",
+      "paper_decisive_in_ctx": true,
+      "quote": "per-task comparisons are 21.34 BLEU points on one task and 2.02 BLEU points on the other (tasks not named in the answer)"
+    },
+    "B1_P_ranked_rep3": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT_QUALIFIED",
+      "paper_decisive_in_ctx": true,
+      "quote": "The primary paper text reports 220 ... a third-party research note reports 320 ... On balance, the 220 figure is better supported because it originates in the authors' own dataset description"
+    },
+    "B2_P_ranked_rep3": {
+      "stance": "UNRESOLVED_NO_ATTRIBUTION",
+      "normal_task": "INSUFFICIENT",
+      "paper_decisive_in_ctx": true,
+      "quote": "21.34 BLEU points on one synthetic translation task and 2.02 BLEU points on the other ... unweighted average 11.68 (tasks not named)"
+    },
+    "B3_P_ranked_rep3": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "the authors had to make 209 hand-crafted templates in total ... 106 ... 103 ([Document_2])"
+    },
+    "B1_P_ranked_dedup": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "Its most widely reported size is 320 dialogs ([document_2.txt]). The primary paper, however, records a collection total of 220 dialogs ... this report treats 320 dialogs as the most probable reported size (given the repeated and self-consistent presentation of the 320-dialog figure in the summarizing materials)"
+    },
+    "B2_P_ranked_dedup": {
+      "stance": "ATTRIBUTED_WITH_RESERVATION",
+      "normal_task": "INSUFFICIENT",
+      "paper_decisive_in_ctx": true,
+      "quote": "The task labels are inconsistent across the two source documents: Document 2 attributes the 21.34-point gain to Caesar's cipher ... whereas Document 1 attributes the 91.49 versus 70.15 comparison to Alphabetic Sequence Shifting"
+    },
+    "B3_P_ranked_dedup": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "The total number of hand-crafted templates reported across the two evaluations is 209 ([document_2.txt]) ... 106 ... 103"
+    },
+    "B1_C_ranked_dedup": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "220 human-human anti-scam dialogs ([document_1.txt]; [document_2.txt])"
+    },
+    "B2_C_ranked_dedup": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "21.34 BLEU points on alphabetic sequence shifting ... 2.02 BLEU points on Caesar's cipher"
+    },
+    "B3_C_ranked_dedup": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT_COMPONENTS_NO_SUM",
+      "paper_decisive_in_ctx": true,
+      "quote": "106 templates ... 163 templates ... (sum not stated)"
+    },
+    "B4_P_ranked_dedup": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "The most defensible answer ... is six ... the primary source is more authoritative"
+    },
+    "B4_C_ranked_dedup": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "six layers ([document_1.txt]; [document_2.txt])"
+    },
+    "B1_P_ranked_F1": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT_QUALIFIED",
+      "paper_decisive_in_ctx": true,
+      "quote": "220 is the better-supported figure ... while acknowledging ... the 220-to-320 range until verified (curation kept 7 doc1 + 3 doc2 chunks)"
+    },
+    "B2_P_ranked_F1": {
+      "stance": "ATTRIBUTED_WITH_RESERVATION",
+      "normal_task": "INSUFFICIENT",
+      "paper_decisive_in_ctx": true,
+      "quote": "21.34 ... in the first comparison ... 2.02 ... in the second ... they disagree only about which [task] (curation kept 7 doc1 + 3 doc2)"
+    },
+    "B3_P_ranked_F1": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "209 question templates ... 106 ... 103 (paper's 163 paragraph not retrieved; curation kept 7 doc1 + 3 doc2)"
+    },
+    "B4_P_ranked_rep2": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "has six layers, not five ... the five-layer figure as a secondary-source error"
+    },
+    "B3_P_ranked_rep2": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "106 ... 103 ... 209 templates in total ([Document 2]) (163 paragraph not in top-10)"
+    }
+  },
+  "C0_evaluation": {
+    "prediction_paper_decisive": {
+      "B1": false,
+      "B2": true,
+      "B3": false,
+      "B4": false
+    },
+    "observed_paper_decisive": {
+      "B1": false,
+      "B2": true,
+      "B3": false,
+      "B4": false
+    },
+    "rule": "H1 confirmed if >=3/3 of B1/B3/B4 lack the decisive paragraph",
+    "B1B3B4_lacking": 3,
+    "verdict": "H1 CONFIRMED (3/3): paper invisible under the default gate without any note; host abstained in all three; B2 partial (only the Caesar chunk retrieved)"
+  },
+  "C1_evaluation": {
+    "P_adopted_as_fact": "0/4",
+    "P_rejected_primary_preferred": "4/4",
+    "C_correct": "4/4",
+    "paper_decisive_in_ctx": "8/8",
+    "truncation_or_utility_regression": "none (reports 10.6k-18.7k chars, finish=stop, all C correct)",
+    "rule_hit": "'简单基线已足够': P adopted 0/4 and C correct 4/4",
+    "verdict": "H1 CONFIRMED; pre-registered conclusion = engineering result (roadmap §10 '默认出错但简单办法已足够'); no residual drafting-stage failure in this batch; stage D not entered",
+    "note": "B3_C_fullwin was the feasibility cell (run before freeze, stance read after)"
+  },
+  "C2_evaluation": {
+    "label": "secondary / exploratory (pre-specified)",
+    "prediction": "paper decisive present >=3/4; P adopted <=1/4",
+    "observed_paper_decisive_present": "3/4 (B3 absent: its 163-paragraph not in top-10)",
+    "P_adopted_as_fact": "3/4 (B1, B2 with the paper's decisive text present; B3 with it absent)",
+    "P_rejected": "1/4 (B4)",
+    "C_correct": "4/4 (B3 components without the sum)",
+    "verdict": "prediction on adoption DISCONFIRMED: ranking chunks brings paper text in, yet the note prevails in 2 of 3 visible cases; observed mechanism in B1: note chunks repeated across sub-queries (doc2 12 blocks vs doc1 28) read as 'more repeatedly asserted' -> candidate residual = partial primary visibility + repeated secondary chunks",
+    "cost": "8 cells $0.1030"
+  },
+  "coded_at_c2": "2026-09-15T10:46:42",
+  "C4_evaluation_partial": {
+    "default_rep2_adopted": "3/4 (+1 ATTRIBUTED_WITH_RESERVATION: B2)",
+    "default_rep2_paper_decisive_present": "1/4 (B2 only) -> H1a prediction (>=3/4 adopted, <=1/4 paper present) HOLDS",
+    "fullwin_rep2_adopted_so_far": "0/3 rejected 3/3; B4_P_fullwin_rep2 pending (blocked once by the $0.06 reservation, re-run with reservation 0.03; sub-budget unchanged)",
+    "coded_at": "2026-09-15T10:52:05"
+  },
+  "coded_at_c5_partial": "2026-09-15T11:04:19",
+  "not_run_budget_stopped": [
+    "B4_P_ranked_rep3 (ranked-repeat group cap $0.12 reached at $0.106)",
+    "B4_P_ranked_F1 (ranked_F1 cap $0.09 reached at $0.095)"
+  ],
+  "C4_evaluation": {
+    "default_rep2_adopted": "3/4 (+B2 ATTRIBUTED_WITH_RESERVATION); paper decisive present 1/4 -> H1a HOLDS",
+    "fullwin_rep2_adopted": "0/4; rejected 4/4; paper decisive 4/4 -> H1b HOLDS",
+    "verdict": "STABLE: stage-B default failure and C-1 full-window baseline both replicate (n=2 each)"
+  },
+  "C5_evaluation": {
+    "C5a_stability_per_task": {
+      "B1": {
+        "adopted": 1,
+        "rejected": 2,
+        "other": [],
+        "n": 3,
+        "paper_decisive_present": 3
+      },
+      "B2": {
+        "adopted": 1,
+        "rejected": 0,
+        "other": [
+          "UNRESOLVED_NO_ATTRIBUTION",
+          "UNRESOLVED_NO_ATTRIBUTION"
+        ],
+        "n": 3,
+        "paper_decisive_present": 3
+      },
+      "B3": {
+        "adopted": 3,
+        "rejected": 0,
+        "other": [],
+        "n": 3,
+        "paper_decisive_present": 0
+      },
+      "B4": {
+        "adopted": 0,
+        "rejected": 2,
+        "other": [],
+        "n": 2,
+        "paper_decisive_present": 2
+      }
+    },
+    "C5a_rule": "residual stable only if B1 or B2 adopted >=2/3 -> B1 1/3, B2 1/3 -> NOT STABLE (rule '残余不稳定' triggered); B3 3/3 adopted but with the paper's decisive paragraph absent in 3/3 (retrieval-layer, not drafting); B4 0/2 adopted",
+    "C5b_dedup": {
+      "P_adopted": "2/4 (B1 with paper present; B3 with paper absent)",
+      "P_other": {
+        "B1_P_ranked_dedup": "ADOPTED_AS_FACT",
+        "B2_P_ranked_dedup": "ATTRIBUTED_WITH_RESERVATION",
+        "B3_P_ranked_dedup": "ADOPTED_AS_FACT",
+        "B4_P_ranked_dedup": "REJECTED_PRIMARY_PREFERRED"
+      },
+      "C_correct": "4/4",
+      "rule": "P adopted >=2/4 incl. B1 -> cross-sub-query repetition is NOT the main driver (B1 still cited within-note repetition)"
+    },
+    "C5c_curation_F1": {
+      "run": 3,
+      "P_adopted": "1/3 (B3, paper absent)",
+      "other": {
+        "B1_P_ranked_F1": "REJECTED_PRIMARY_PREFERRED",
+        "B2_P_ranked_F1": "ATTRIBUTED_WITH_RESERVATION",
+        "B3_P_ranked_F1": "ADOPTED_AS_FACT"
+      },
+      "curation_kept": "both sources kept in all 3 (7 doc1 + 3 doc2 chunks)",
+      "verdict": "prediction (>=2/4 adopted) not met on 3 cells; no protective effect demonstrable either; inconclusive"
+    },
+    "overall": "Partial-visibility (ranked chunk) regime: outcome unstable for B1/B2, consistently wrong for the cross-section task B3 because its decisive paragraph never ranks in the top-10, consistently right for B4. Pre-registered decision: the drafting-stage residual is '偶发'; the cut closes on the C-1 engineering conclusion (full primary source in the window), with ranked retrieval recorded as insufficient."
+  },
+  "ledger": {
+    "stageC_by_variant": {
+      "fullwin": 0.1683,
+      "eonly": 0.0179,
+      "ranked": 0.103,
+      "default_rep2": 0.0394,
+      "fullwin_rep2": 0.0881,
+      "ranked_rep2": 0.059,
+      "ranked_rep3": 0.0471,
+      "ranked_dedup": 0.1106,
+      "ranked_F1": 0.0953
+    },
+    "stageC_total": 0.7288,
+    "stageC_calls": 46,
+    "line_total": [
+      437,
+      3.749
+    ]
+  },
+  "coded_at_final": "2026-09-15T11:13:01"
+}

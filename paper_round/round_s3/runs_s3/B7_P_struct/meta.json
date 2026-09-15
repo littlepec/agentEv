@@ -1,0 +1,33 @@
+{
+  "cell": "B7_P_struct",
+  "docpath_dir": "cell_16",
+  "task": "B7",
+  "condition": "P",
+  "variant": "struct",
+  "arm": "F0",
+  "phase": "confirmatory",
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "question": "what is the test set size?",
+  "prompt_tokens": 5022,
+  "completion_tokens": 7118,
+  "deepseek_cost_usd": 0.010048,
+  "host_cost_usd": 0.010048,
+  "followup": null,
+  "report_chars": 17616,
+  "context_chars": 16444,
+  "doc1_blocks": 18,
+  "doc2_blocks": 3,
+  "paper_decisive_in_context": {
+    "2,169 sentences": true
+  },
+  "n_llm_calls": 3,
+  "elapsed_s": 40.6,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config + variant",
+  "model": "deepseek-v4-flash",
+  "materials_manifest": "paper_round/stage_b/tasks_manifest_b.json"
+}

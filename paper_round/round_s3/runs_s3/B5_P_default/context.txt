@@ -1,0 +1,35 @@
+Source: document_1.txt
+Title: 
+Content: Table I shows the PTB test set PPL among our baseline models, proposed models, and several published results.
+Both our proposed models outperformed their baseline models. GRURNTN reduced the perplexity from 97.78 to 87.38 (10.4 absolute / 10.63% relative PPL) over the baseline GRURNN and LSTMRNTN reduced the perplexity from 108.26 to 96.97 (11.29 absolute / 10.42% relative PPL) over the baseline LSTMRNN. Overall, LSTMRNTN improved the LSTMRNN model and its performance closely resembles the baseline GRURNN. However, GRURNTN outperformed all the baseline models as well as the other models by a large margin. 
+
+ VI Related Work
+
+Source: document_1.txt
+Title: 
+Content: In this section, we report our experiment results on PTB word-level language modeling using our baseline models GRURNN and LSTMRNN and our proposed models GRURNTN and LSTMRNTN. Fig. 9 compares the performance from every models based on the validation set’s PPL per epoch. In this experiment, GRURNN made faster progress than LSTMRNN. Our proposed GRURNTN’s progress was also better than LSTMRNTN. The best model in this task was GRURNTN, which had a consistently lower PPL than the other models. TABLE II: PennTreeBank test set PPL 
+ Model Test PPL 
+ N-Gram [ 24 ] 
+ 141 
+ RNNLM (w/o dyn. eval) 0 0 footnotemark: 0 [ 24 ] 
+ 124.7 
+ RNNLM (w/ dyn. eval) 0 0 footnotemark: 0 [ 24 ] 
+ 123.2 
+ SCRNN [ 33 ] 
+ 115 
+ sRNN [ 12 ] 
+ 110.0 
+ DOT(S)-RNN [ 12 ] 
+ 107.5 
+ GRURNN (our baseline) 
+ 97.78 
+ LSTMRNN (our baseline) 
+ 108.26 
+ GRURNTN (proposed) 
+ 87.38 
+ LSTMRNTN (proposed) 
+ 96.97
+
+Source: document_2.txt
+Title: 
+Content: Overall, both proposed models produced lower test scores than their corresponding baselines and outperformed the baseline models in character-level and word-level language modeling tasks with a similar number of parameters. GRURNTN delivered 0.06 absolute / 4.32% relative BPC improvement and 4.8 absolute / 4.91% relative PPL improvement over GRURNN. LSTMRNTN delivered 0.03 absolute / 2.22% relative BPC improvement and 11.29 absolute / 10.42% relative PPL improvement over LSTMRNN.

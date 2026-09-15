@@ -1,0 +1,1466 @@
+COST ACCOUNTING: pilot* cum=$3.2064 (403 calls); stage-C cap=$3.6202; variant caps={'eonly': 0.06, 'fullwin': 0.25, 'ranked': 0.15}; phase=secondary
+Failed to import MCPRetriever: No module named 'langchain_mcp_adapters'
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: Invalid retriever(s) found: offline_null. Valid options are: arxiv, bing, bocha, brave, crw, custom, duckduckgo, exa, getxapi, google, groundroute, mcp, openalex, pubmed_central, searchapi, searx, semantic_scholar, serpapi, serper, tavily, xquik.. Defaulting to 'tavily' retriever.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 5554.23it/s]
+INFO:     [10:39:46] 🔍 Starting the research task for 'How big is the ANTISCAM dataset?'...
+INFO:     [10:39:46] 🛡️ Cybersecurity Agent
+INFO:     [10:39:47] 🌐 Browsing the web to learn more about the task: How big is the ANTISCAM dataset?...
+INFO:     [10:39:47] 🤔 Planning the research strategy and subtasks...
+INFO:     [10:39:49] 🗂️ I will conduct my research based on the following queries: ['ANTISCAM dataset size', 'How many samples are in the ANTISCAM dataset', 'ANTISCAM dataset statistics number of instances', 'How big is the ANTISCAM dataset?']...
+INFO:     [10:39:49] 
+🔍 Running research for 'ANTISCAM dataset size'...
+INFO:     [10:39:49] 📚 Getting relevant content based on query: ANTISCAM dataset size...
+INFO:     [10:39:49] 
+🔍 Running research for 'How many samples are in the ANTISCAM dataset'...
+INFO:     [10:39:49] 📚 Getting relevant content based on query: How many samples are in the ANTISCAM dataset...
+INFO:     [10:39:49] 
+🔍 Running research for 'ANTISCAM dataset statistics number of instances'...
+INFO:     [10:39:49] 📚 Getting relevant content based on query: ANTISCAM dataset statistics number of instances...
+INFO:     [10:39:49] 
+🔍 Running research for 'How big is the ANTISCAM dataset?'...
+INFO:     [10:39:49] 📚 Getting relevant content based on query: How big is the ANTISCAM dataset?...
+INFO:     [10:39:50] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:39:50] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:39:50] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:39:50] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:39:50] Finalized research step.
+💸 Total Research Costs: $0.021689280000000002
+INFO:     [10:39:50] ✍️ Writing report for 'How big is the ANTISCAM dataset?'...
+[32m# The Size and Scale of the AntiScam Dataset: A Detailed Report
+
+[0m
+[32m## Introduction
+
+[0m
+[32mThe question of how big the AntiScam dataset is cannot be answered with a single number, because the corpus is described in the research literature through several distinct but complementary size metrics: the total number of dialogs, the size of the manually annotated subset, the number of annotated sentences, the average conversational length, the average utterance length, and the demographic outcome of the underlying role-play task. This report synthesizes all available information from the two source documents provided—the primary paper excerpts contained in document_1.txt and the third-party research note contained in document_2.txt—to produce a complete, numerically grounded answer. The headline figure is that AntiScam comprises **220 human-human dialogs**, with a manually annotated subset of **100 dialogs containing 3,044 sentences** ([Document 1](document_1.txt); [Document 2](document_2.txt)). Each of these figures is examined in detail below, along with derived estimates and the caveats that accompany them.
+
+[0m
+[32m## Primary Size Metric: The Number of Dialogs
+
+[0m
+[32mThe most direct answer to the size question is that AntiScam contains **220 human-human dialogs** ([Document 1](document_1.txt); [Document 2](document_2.txt)). This figure is reported consistently across both source documents. In the dataset's own description, the authors state that they "collected a typing conversation dataset named AntiScam" and that "We collected 220 human-human dialogs" ([Document 1](document_1.txt)). The third-party research note independently confirms that "The dataset contains 220 human-human dialogs" and that "The corpus serves as the dataset for non-collaborative dialog research in the paper" ([Document 2](document_2.txt)). The 220-dialog figure therefore represents the total corpus size and is the most reliable single measure of the dataset's magnitude.
+
+[0m
+[32mIt is important to recognize the nature of these 220 dialogs. They are not human–machine interactions; they are **human-human anti-scam dialogs**, collected specifically "in order to learn human elicitation strategies" ([Document 1](document_1.txt)). The two participants in each dialog occupy asymmetric roles: a user attempting to protect personal information and an attacker attempting to extract it ([Document 1](document_1.txt)). This role-based, dyadic structure means that each of the 220 dialogs involves two human participants, implying a total of 440 participant roles across the corpus—although the sources do not explicitly state the number of unique individuals involved, so this figure should be treated as a structural inference rather than a reported statistic.
+
+[0m
+[32m## The Manually Annotated Subset: 100 Dialogs and 3,044 Sentences
+
+[0m
+[32mWhile the full corpus contains 220 dialogs, only a subset was manually annotated. The sources state that "a subset of 100 dialogs containing 3,044 sentences was manually annotated" ([Document 2](document_2.txt)), and that "We recruited two expert annotators who have linguistic training to annotate 3,044 sentences in 100 dialogs, achieving a 0.874 averaged weighted kappa value" ([Document 1](document_1.txt)). This means that the annotation effort covers approximately **45.5% of the dialogs** in the corpus (100 out of 220) but provides sentence-level labels for 3,044 sentences. The 0.874 averaged weighted kappa value indicates a high level of inter-annotator agreement, which supports the reliability of the annotated subset as a gold-standard resource ([Document 1](document_1.txt)).
+
+[0m
+[32mThe annotation was performed by **two expert annotators who have linguistic training** ([Document 2](document_2.txt)). This detail matters for assessing dataset size in terms of annotation depth rather than raw dialog count: a corpus of 220 dialogs, of which 100 were exhaustively annotated at the sentence level by trained linguists, represents a substantial manual effort relative to many comparable dialog datasets.
+
+[0m
+[32m### The Annotation Scheme
+
+[0m
+[32mThe annotated portion of AntiScam uses a **hierarchical intent annotation scheme** that applies to both AntiScam and the comparison PersuasionForGood dataset ([Document 1](document_1.txt)). This scheme distinguishes between "On-task" intents, which are task-specific, and "Off-task" intents, which are "general for different non-collaborative tasks" ([Document 1](document_1.txt)). For AntiScam specifically, the on-task intents include **elicitation, providing_information, and refusal** ([Document 1](document_1.txt)). The off-task intents shared across datasets include open_question, yes_no_question, negative_answer, positive_answer, responsive_statement, nonresponsive_statement, greeting, thanking, respond_to_thank, apology, closing, and hold ([Document 1](document_1.txt)). The existence of this multi-label, two-level scheme further characterizes the size of the dataset in terms of its annotation complexity, not merely its raw dialog count.
+
+[0m
+[32m## Conversational and Utterance Lengths
+
+[0m
+[32mBeyond the count of dialogs, the sources report two average length measures that describe the full AntiScam corpus: the **average conversation length is 12.45 turns**, and the **average utterance length is 11.13 words** ([Document 1](document_1.txt); [Document 2](document_2.txt)). The third-party research note is explicit that "These averages describe the full AntiScam corpus" rather than only the annotated subset ([Document 2](document_2.txt)). This clarification is significant, because it means the 12.45-turn and 11.13-word figures can legitimately be used to estimate the total scale of the corpus, whereas the 3,044-sentence figure applies only to the 100-dialog annotated subset.
+
+[0m
+[32mThese average values also provide context for interpreting the 220-dialog figure. An average of 12.45 turns per conversation indicates that the dialogs are relatively short, structured exchanges rather than extended negotiations, which is consistent with a role-playing scam scenario conducted in a controlled crowdsourcing environment ([Document 1](document_1.txt)). Similarly, an average utterance length of 11.13 words suggests concise, conversational turns typical of typed chat exchanges.
+
+[0m
+[32m## Derived Estimates of Corpus Scale
+
+[0m
+[32mAlthough the sources do not report total turn counts or total word counts directly, the reported averages permit straightforward derived estimates. Multiplying the number of dialogs by the average conversation length yields an approximate total of **2,739 turns** across the corpus (220 × 12.45). Multiplying that derived turn count by the average utterance length yields an approximate total of **30,485 words** (2,739 × 11.13). In addition, the annotated subset averages approximately **30.44 sentences per annotated dialog** (3,044 ÷ 100). 
+
+[0m
+[32mThese derived figures should be treated as approximations rather than reported statistics, because they assume that the reported averages apply uniformly across all 220 dialogs and that each turn corresponds to one utterance. The sources do not specify whether "turns" and "utterances" are counted identically, so the derived word-count estimate in particular carries some uncertainty. Nonetheless, the derived values are useful for conveying the overall order of magnitude of the corpus: a few thousand conversational turns and roughly thirty thousand words of transcribed dialogue.
+
+[0m
+[32m## Composition and Collection Context
+
+[0m
+[32mUnderstanding the size of AntiScam also requires understanding what the dialogs consist of. AntiScam was collected "via a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk" ([Document 2](document_2.txt)). The authors "chose a popular Amazon customer service scam scenario to collect dialogs between users and attackers who aim to collect users information" and "posted a role-playing task on the Amazon Mechanical Turk platform" ([Document 1](document_1.txt)). The dataset's purpose was "to build a dialog system that occupies the attacker's attention and elicits the attacker's information" ([Document 1](document_1.txt)). This collection methodology explains both the corpus size and its homogeneity: 220 dialogs is a modest but purpose-built sample, generated by a structured role-play task rather than by mining naturally occurring scam communications.
+
+[0m
+[32mA notable outcome measure reported alongside the corpus size is that **only 172 out of 220 users successfully identified their partner as an attacker** ([Document 1](document_1.txt); [Document 2](document_2.txt)). The authors interpret this as evidence "that the attackers are well trained and not too easily identifiable" ([Document 1](document_1.txt)). Expressed as a proportion, this corresponds to approximately **78.2%** of users correctly identifying the attacker, leaving roughly 21.8% who did not. This measure is not a size metric per se, but it is a defining characteristic of the 220-dialog corpus and is repeatedly reported alongside the size figures ([Document 2](document_2.txt)).
+
+[0m
+[32m## Data Partitioning and Machine Learning Usage
+
+[0m
+[32mThe size of AntiScam also has implications for how it is used in machine learning experiments. The paper reports that for evaluation, "We use 80% data for training, 10% data for validation, and 10% data for testing" ([Document 1](document_1.txt)). Applied to the 220-dialog corpus, this suggests approximately 176 dialogs for training, 22 for validation, and 22 for testing—although the sources do not explicitly break down the counts by split, so these are derived approximations. The relatively small size of the corpus is precisely why the authors note that "non-collaborative tasks are still relatively new to the study of dialog systems" and that "there are insufficiently many meaningful datasets for evaluation," positioning AntiScam as "a valuable example" rather than a large-scale benchmark ([Document 1](document_1.txt)).
+
+[0m
+[32mAntiScam serves as one of two evaluation datasets for the MISSA model, alongside PersuasionForGood ([Document 1](document_1.txt)). On AntiScam, MISSA achieves a perplexity of 21.07, compared with 32.96 for TransferTransfo, with additional automatic metrics including RIP (35.1%), RSP (46.6%), ERIP (47.2%), and ERSP (58.6%), and human evaluation scores for fluency (4.18), coherence (3.75), engagement (3.69), length (14.9), and task success (1.294) ([Document 1](document_1.txt)). These results illustrate that even a 220-dialog corpus can support statistically meaningful comparative evaluation of dialog systems, though the sample size necessarily limits the generalizability of such findings.
+
+[0m
+[32m## Human Evaluation Scale
+
+[0m
+[32mIt is important not to confuse the size of the AntiScam corpus with the size of the human evaluation study conducted on it. For human evaluation, the researchers "test our models and baselines with 15 college-student volunteers," each of whom was "asked to pretend to be an attacker and interact with all the models for at least three times," yielding "225 number of dialogs" collected for evaluation purposes ([Document 1](document_1.txt)). Each model received "a total of 45 human ratings" ([Document 1](document_1.txt)). These 225 evaluation dialogs are generated by the study and are separate from the 220-dialog AntiScam corpus itself. A precise answer to the size question must therefore specify which quantity is being measured: the corpus contains 220 dialogs, while the human evaluation produced 225 additional dialogs for system assessment.
+
+[0m
+[32m## Summary Table of Size Metrics
+
+[0m
+[32m| Metric | Value | Scope | Source |
+[0m
+[32m|---|---|---|---|
+[0m
+[32m| Total dialogs | 220 | Full corpus | [Document 1](document_1.txt); [Document 2](document_2.txt) |
+[0m
+[32m| Dialog type | Human-human anti-scam | Full corpus | [Document 1](document_1.txt); [Document 2](document_2.txt) |
+[0m
+[32m| Manually annotated dialogs | 100 | Annotated subset | [Document 1](document_1.txt); [Document 2](document_2.txt) |
+[0m
+[32m| Manually annotated sentences | 3,044 | Annotated subset | [Document 1](document_1.txt); [Document 2](document_2.txt) |
+[0m
+[32m| Annotators | 2 expert annotators with linguistic training | Annotated subset | [Document 1](document_1.txt); [Document 2](document_2.txt) |
+[0m
+[32m| Inter-annotator agreement (weighted kappa) | 0.874 | Annotated subset | [Document 1](document_1.txt) |
+[0m
+[32m| Average conversation length | 12.45 turns | Full corpus | [Document 1](document_1.txt); [Document 2](document_2.txt) |
+[0m
+[32m| Average utterance length | 11.13 words | Full corpus | [Document 1](document_1.txt); [Document 2](document_2.txt) |
+[0m
+[32m| Users identifying partner as attacker | 172 of 220 (~78.2%) | Full corpus | [Document 1](document_1.txt); [Document 2](document_2.txt) |
+[0m
+[32m| Train / validation / test split | 80% / 10% / 10% | Full corpus | [Document 1](document_1.txt) |
+[0m
+[32m| Derived total turns (approximate) | ~2,739 | Full corpus | Derived from [Document 1](document_1.txt); [Document 2](document_2.txt) |
+[0m
+[32m| Derived total words (approximate) | ~30,485 | Full corpus | Derived from [Document 1](document_1.txt); [Document 2](document_2.txt) |
+
+[0m
+[32m## Interpretation: What "Big" Means for AntiScam
+
+[0m
+[32mBased on the evidence, AntiScam is best characterized as a **small-to-moderate, purpose-built dialog corpus** rather than a large-scale dataset. Its 220 human-human dialogs and 3,044 annotated sentences place it well below the scale of many contemporary conversational corpora, but its value lies in its specificity: it is one of the few publicly described datasets targeting non-collaborative anti-scam dialogue ([Document 1](document_1.txt)). The authors themselves frame the dataset as a response to scarcity, stating that "there are insufficiently many meaningful datasets for evaluation and we hope this provides a valuable example" ([Document 1](document_1.txt)). This framing indicates that AntiScam is intended as a foundational resource, and that its relatively modest size is a recognized limitation rather than an oversight.
+
+[0m
+[32mThe internal consistency of the reported figures strengthens confidence in the 220-dialog headline number. Both the primary paper excerpts and the independent third-party research note report the same total of 220 dialogs, the same annotated subset of 100 dialogs and 3,044 sentences, and the same averages of 12.45 turns and 11.13 words ([Document 1](document_1.txt); [Document 2](document_2.txt)). The presence of a convergent third-party summary ([Document 2](document_2.txt)) increases the reliability of these figures relative to a single-source claim. Where the sources do not provide information—such as the exact number of unique participants, the total token count, or a precise per-split dialog count—this report has either omitted the figure or clearly labeled it as a derived estimate.
+
+[0m
+[32m## Limitations and Data Quality Considerations
+
+[0m
+[32mSeveral caveats should accompany any answer to the size question. First, the 12.45-turn and 11.13-word averages are reported for the full corpus, but only 100 of the 220 dialogs were manually annotated ([Document 2](document_2.txt)); the averages may therefore be based on a mix of fully and partially annotated material, although the sources do not clarify this. Second, the relationship between "sentences" (3,044) and "utterances" or "turns" (12.45 per dialog on average) is not defined in the provided information, so derived totals involving both units should be treated cautiously. Third, the 172-out-of-220 outcome is a user-behavior statistic rather than a size metric, and its interpretation—that attackers were "well trained and not too easily identifiable" ([Document 1](document_1.txt))—reflects the authors' own assessment. Finally, the collection context (a role-playing scenario on Amazon Mechanical Turk) means the dialogs are simulated rather than naturally occurring scam interactions, which affects how the dataset's size should be contextualized relative to real-world fraud data ([Document 1](document_1.txt); [Document 2](document_2.txt)).
+
+[0m
+[32m## Conclusion
+
+[0m
+[32mIn summary, the AntiScam dataset is **220 human-human dialogs** in total, of which **100 dialogs and 3,044 sentences** were manually annotated by two expert annotators with linguistic training ([Document 1](document_1.txt); [Document 2](document_2.txt)). The full corpus has an average conversation length of **12.45 turns** and an average utterance length of **11.13 words**, and approximately **78.2% of users (172 of 220)** successfully identified their partner as an attacker ([Document 1](document_1.txt); [Document 2](document_2.txt)). Approximate derived totals suggest roughly **2,739 turns** and **30,485 words** across the corpus, although these are estimates rather than reported figures. Taken together, these metrics describe a compact, carefully annotated, and task-specific anti-scam dialogue resource designed to advance non-collaborative dialog research, rather than a large-scale corpus. The most defensible direct answer to the question "How big is the AntiScam dataset?" is therefore: **220 dialogs**, with a **100-dialog, 3,044-sentence manually annotated core**.
+
+[0m
+[32m## References
+
+[0m
+[32mDocument 1. (n.d.). *End-to-end trainable non-collaborative dialog system* [Excerpts]. document_1.txt.
+
+[0m
+[32mDocument 2. (n.d.). *Third-party research note: End-to-end trainable non-collaborative dialog system* [Research note]. document_2.txt.[0m
+INFO:     [10:40:11] 📝 Report written for 'How big is the ANTISCAM dataset?'
+B1_C_ranked: ok calls=3 in=6939 out=6942 $0.0104 rep=17255 ctx=27198 doc1=28 doc2=12 paper_decisive=True
+Warning: Invalid retriever(s) found: offline_null. Valid options are: arxiv, bing, bocha, brave, crw, custom, duckduckgo, exa, getxapi, google, groundroute, mcp, openalex, pubmed_central, searchapi, searx, semantic_scholar, serpapi, serper, tavily, xquik.. Defaulting to 'tavily' retriever.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4024.98it/s]
+INFO:     [10:40:29] 🔍 Starting the research task for 'How big is the ANTISCAM dataset?'...
+INFO:     [10:40:29] 🔬 Research Agent
+INFO:     [10:40:29] 🌐 Browsing the web to learn more about the task: How big is the ANTISCAM dataset?...
+INFO:     [10:40:29] 🤔 Planning the research strategy and subtasks...
+INFO:     [10:40:31] 🗂️ I will conduct my research based on the following queries: ['What is the size of the ANTISCAM dataset', 'How many samples are in the ANTISCAM dataset', 'ANTISCAM dataset statistics and total number of entries', 'How big is the ANTISCAM dataset?']...
+INFO:     [10:40:31] 
+🔍 Running research for 'What is the size of the ANTISCAM dataset'...
+INFO:     [10:40:31] 📚 Getting relevant content based on query: What is the size of the ANTISCAM dataset...
+INFO:     [10:40:31] 
+🔍 Running research for 'How many samples are in the ANTISCAM dataset'...
+INFO:     [10:40:31] 📚 Getting relevant content based on query: How many samples are in the ANTISCAM dataset...
+INFO:     [10:40:31] 
+🔍 Running research for 'ANTISCAM dataset statistics and total number of entries'...
+INFO:     [10:40:31] 📚 Getting relevant content based on query: ANTISCAM dataset statistics and total number of entries...
+INFO:     [10:40:31] 
+🔍 Running research for 'How big is the ANTISCAM dataset?'...
+INFO:     [10:40:31] 📚 Getting relevant content based on query: How big is the ANTISCAM dataset?...
+INFO:     [10:40:33] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:40:33] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:40:33] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:40:33] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:40:33] Finalized research step.
+💸 Total Research Costs: $0.051840320000000016
+INFO:     [10:40:33] ✍️ Writing report for 'How big is the ANTISCAM dataset?'...
+[32m# How Big Is the AntiScam Dataset? Corpus Size, Annotation Scale, and Evaluation Scale in the *End-to-End Trainable Non-Collaborative Dialog System*
+
+[0m
+[32m## Introduction
+
+[0m
+[32mThe direct answer to the query is that the AntiScam dataset is reported to contain **320 human-human dialogs**, collected through a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk ([document_2.txt](document_2.txt)). That headline figure, however, is only one of several size measures attached to the corpus, and the supplied record also contains a competing count of 220 dialogs in the paper's own dataset description ([document_1.txt](document_1.txt)). Because the question "how big is the dataset?" can legitimately be answered in terms of dialogs, annotated sentences, conversational turns, utterances, annotation coverage, and human-evaluation volume, this report reconstructs every available size measure, examines the internal contradiction in the reported dialog counts, and offers an explicit assessment of which figure should be treated as authoritative. The position taken here is that **320 dialogs is the best-supported headline size**, with the 220 figure most plausibly reflecting an earlier corpus iteration or an internal reporting inconsistency, while the fully documented annotation scope remains 100 dialogs and 3,044 sentences.
+
+[0m
+[32m## What AntiScam Is, and Why Its Size Matters
+
+[0m
+[32mAntiScam was created to enrich the pool of publicly available non-collaborative task datasets; in it, users defend themselves against attackers attempting to collect personal information ([document_1.txt](document_1.txt)). The dataset was assembled specifically "to learn human elicitation strategies" by collecting dialogs "between users and attackers who aim to collect users information" ([document_1.txt](document_1.txt)). This purpose matters for interpreting corpus size: non-collaborative dialog tasks are described in the source material as "still relatively new to the study of dialog systems," with "insufficiently many meaningful datasets for evaluation," so AntiScam is presented as "a valuable example" rather than one contribution among many ([document_1.txt](document_1.txt)).
+
+[0m
+[32mThe corpus was used as one of two evaluation benchmarks for the MISSA model, alongside the existing PersuasionForGood dataset, which targets charitable-donation persuasion ([document_1.txt](document_1.txt)). AntiScam's objective within that study is to "build a dialog system that occupies the attacker's attention and elicits the attacker's information" ([document_1.txt](document_1.txt)). Consequently, the size of the corpus determines both what can be learned from it and how credible the reported model comparisons are.
+
+[0m
+[32m## The Headline Size: Number of Dialogs
+
+[0m
+[32m### The 320-dialog figure
+
+[0m
+[32mThe most frequently repeated size claim in the supplied record is that AntiScam "is a human-human anti-scam dialog corpus collected via a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk" whose "size is 320 human-human dialogs" ([document_2.txt](document_2.txt)). The same figure appears again in the summary statement that "the total dataset comprises 320 human-human dialogs" ([document_2.txt](document_2.txt)). A third-party research note reproduced in the same source, framed explicitly around the key question "AntiScam corpus number of dialogs," likewise states that "the dataset contains 320 human-human dialogs" and that "the paper reports this total in its AntiScam dataset description" ([document_2.txt](document_2.txt)).
+
+[0m
+[32m### The 220-dialog figure
+
+[0m
+[32mIn tension with these statements, the paperside dataset description reports that "we collected 220 human-human dialogs" ([document_1.txt](document_1.txt)). That passage also reports the corpus's average conversation length of 12.45 turns and average utterance length of 11.13 words, and states that "only 172 out of 220 users successfully identified their partner as an attacker" ([document_1.txt](document_1.txt)). The annotation figures attached to the same passage—two expert annotators with linguistic training annotating 3,044 sentences in 100 dialogs, with a 0.874 averaged weighted kappa—are consistent with the annotation figures reported elsewhere ([document_1.txt](document_1.txt)).
+
+[0m
+[32m### Assessment of the discrepancy
+
+[0m
+[32mTwo mutually exclusive totals cannot both be correct for the same corpus version: 220 and 320 cannot simultaneously describe the full dialog count. Three considerations lead me to treat **320 dialogs as the more defensible working figure**:
+
+[0m
+[32m1. **Frequency and explicitness.** The 320 figure appears repeatedly and is the answer given to a question explicitly framed as "AntiScam corpus number of dialogs" and "AntiScam dataset non-collaborative dialog size" ([document_2.txt](document_2.txt)), whereas 220 appears in a single passage ([document_1.txt](document_1.txt)).
+[0m
+[32m2. **Internal consistency of the detection statistic.** The statement that "only 172 out of 220 users successfully identified their partner as an attacker, suggesting that the attackers are well trained and not too easily identifiable" is internally strained: 172 of 220 corresponds to roughly 78% identification, a success rate in tension with the inference that attackers were "not too easily identifiable" ([document_1.txt](document_1.txt)). By contrast, the parallel statement that "172 out of 320 users successfully identified their partner as an attacker" corresponds to approximately 54%, a rate far more compatible with the claim that attackers were difficult to detect ([document_2.txt](document_2.txt)). The 172 numerator is stable across both versions, which suggests it is the denominator that changed.
+[0m
+[32m3. **Direction of revision.** The most economical explanation is that the corpus grew (or was re-counted) after the dataset description was drafted, leaving an earlier "220" in one paragraph while later summaries report 320. This is a hypothesis rather than a documented fact, since none of the supplied sources states that a revision occurred.
+
+[0m
+[32mOn that basis, the answer I would give to the query is: **antiScam comprises 320 human-human dialogs (or, on the conflicting report, 220)**, with 320 as the working headline size. A careful reader should treat the dialog count as requiring verification against the published paper, because the supplied record is not internally consistent.
+
+[0m
+[32m## Annotation Scale: How Much of the Corpus Is Labeled
+
+[0m
+[32mCorpus size and annotation scope are distinct in AntiScam. The manually annotated portion is a subset: "a subset of 100 dialogs containing 3,044 sentences was manually annotated" ([document_2.txt](document_2.txt)), and this annotation was performed by "two expert annotators who have linguistic training" ([document_2.txt](document_2.txt)). The paper-side description matches this, reporting that the researchers "recruited two expert annotators who have linguistic training to annotate 3,044 sentences in 100 dialogs, achieving a 0.874 averaged weighted kappa value" ([document_1.txt](document_1.txt)).
+
+[0m
+[32mTwo implications follow. First, the annotation coverage is roughly 31% of the 320-dialog corpus (100 of 320) — a derived proportion, since the source material states the two figures separately rather than as a percentage. Second, the reported inter-annotator agreement of 0.874 (averaged weighted kappa) is a size-relevant quality signal: it indicates that the 3,044 annotated sentences carry labels on which trained annotators converged to a high degree ([document_1.txt](document_1.txt)).
+
+[0m
+[32m### The annotation scheme
+
+[0m
+[32mThe labeled data are organized under a hierarchical intent annotation scheme applied to both AntiScam and PersuasionForGood ([document_1.txt](document_1.txt)). For AntiScam, the on-task intents are **elicitation, providing_information, and refusal** — three task-specific categories ([document_1.txt](document_1.txt)). The off-task intents, described as "general for different non-collaborative tasks," comprise **open_question, yes_no_question, negative_answer, positive_answer, responsive_statement, nonresponsive_statement, greeting, thanking, respond_to_thank, apology, closing, and hold** — twelve shared categories ([document_1.txt](document_1.txt)). These label counts are derived by enumerating the categories listed in the reported scheme; the sources present them as a scheme rather than as totals.
+
+[0m
+[32m## Conversational Granularity: Turns and Utterances
+
+[0m
+[32mBeyond the dialog count, the corpus is sized by its conversational density. The average conversation length is **12.45 turns** and the average utterance length is **11.13 words** ([document_1.txt](document_1.txt)); the annotation summary states that "these averages describe the full AntiScam corpus" ([document_2.txt](document_2.txt)). Applying these reported averages arithmetically (a calculation performed here, not stated in the sources), a 320-dialog corpus corresponds to approximately 3,984 turns and, at 11.13 words per utterance, on the order of 44,300 words of dialog text. The same arithmetic applied to a 220-dialog corpus would yield roughly 2,739 turns.
+
+[0m
+[32mA second derived observation concerns the units used. The annotated subset of 3,044 sentences across 100 dialogs implies about 30.4 sentences per dialog, which is substantially higher than the reported 12.45 turns per dialog ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). Because the sources do not define the relationship between "sentence" and "turn," these two counts should not be treated as interchangeable, and any quantitative synthesis relying on both should flag the unit mismatch.
+
+[0m
+[32m## Related Size Measures: Splits and Human Evaluation Volume
+
+[0m
+[32mTwo further quantities describe the scale at which the corpus was used rather than the scale at which it was collected. First, the experimental protocol divided the data into **80% training, 10% validation, and 10% testing** ([document_1.txt](document_1.txt)). Applied to a 320-dialog corpus, that implies approximately 256 training, 32 validation, and 32 test dialogs — again a derived figure.
+
+[0m
+[32mSecond, human evaluation was conducted at a scale independent of the corpus itself. The researchers "test our models and baselines with 15 college-student volunteers," each asked "to pretend to be an attacker and interact with all the models for at least three times to avoid randomness," yielding "225 number of dialogs" in total and "a total of 45 human ratings" per model ([document_1.txt](document_1.txt)). Because five models were compared (TransferTransfo, Hybrid, MISSA, MISSA-sel, and MISSA-con), the 225 collected dialogs and 45 ratings per model are arithmetically consistent (15 volunteers × 3 rounds × 5 models = 225; 15 × 3 = 45 per model), a derivation based on the reported figures ([document_1.txt](document_1.txt)).
+
+[0m
+[32mThe evaluation dimensions themselves were extensive: automatic metrics included perplexity and the RIP, RSP, ERIP, and ERSP rates, while human metrics included Fluency, Coherence, Engagement, Length, and TaskSuc ([document_1.txt](document_1.txt)). On the AntiScam data, MISSA recorded a perplexity of 21.07 against 32.96 for TransferTransfo, and the paper reports that "MISSA outperforms two baseline models (TransferTransfo and hybrid model) on almost all the metrics on both datasets" ([document_1.txt](document_1.txt)).
+
+[0m
+[32m## Consolidated Size Metrics
+
+[0m
+[32m| Size dimension | Reported value | Source |
+[0m
+[32m|---|---|---|
+[0m
+[32m| Total human-human dialogs | 320 (conflicting report: 220) | [document_2.txt](document_2.txt); [document_1.txt](document_1.txt) |
+[0m
+[32m| Manually annotated subset | 100 dialogs | [document_1.txt](document_1.txt); [document_2.txt](document_2.txt) |
+[0m
+[32m| Annotated sentences | 3,044 sentences | [document_1.txt](document_1.txt); [document_2.txt](document_2.txt) |
+[0m
+[32m| Annotators | 2 expert annotators with linguistic training | [document_1.txt](document_1.txt); [document_2.txt](document_2.txt) |
+[0m
+[32m| Inter-annotator agreement | 0.874 averaged weighted kappa | [document_1.txt](document_1.txt) |
+[0m
+[32m| Average conversation length | 12.45 turns | [document_1.txt](document_1.txt); [document_2.txt](document_2.txt) |
+[0m
+[32m| Average utterance length | 11.13 words | [document_1.txt](document_1.txt); [document_2.txt](document_2.txt) |
+[0m
+[32m| Users identifying partner as attacker | 172 | [document_1.txt](document_1.txt); [document_2.txt](document_2.txt) |
+[0m
+[32m| Train / validation / test split | 80% / 10% / 10% | [document_1.txt](document_1.txt) |
+[0m
+[32m| Human-evaluation dialogs collected | 225 | [document_1.txt](document_1.txt) |
+[0m
+[32m| Human ratings per model | 45 (15 volunteers × 3 rounds) | [document_1.txt](document_1.txt) |
+[0m
+[32m| AntiScam-specific on-task intents | 3 (elicitation, providing_information, refusal) | [document_1.txt](document_1.txt) |
+[0m
+[32m| Shared off-task intents | 12 | [document_1.txt](document_1.txt) |
+
+[0m
+[32m| Conflicting dialog counts | Denominator used for the 172 figure | Implied identification rate |
+[0m
+[32m|---|---|---|
+[0m
+[32m| 320 dialogs | 320 | ≈53.8% |
+[0m
+[32m| 220 dialogs | 220 | ≈78.2% |
+
+[0m
+[32mThe implied identification rates in the second table are my own calculations from the reported numbers ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)).
+
+[0m
+[32m## Interpretation: How "Big" Is AntiScam, Really?
+
+[0m
+[32mMy assessment is that AntiScam is **small-to-moderate by modern dialog-corpus standards, and explicitly positioned as such by its authors**. A few hundred dialogs, a few thousand annotated sentences, and roughly a dozen turns per conversation describe a resource built to demonstrate feasibility in an under-resourced task family, not to support large-scale pretraining. The authors themselves frame the contribution this way, noting that non-collaborative tasks are "still relatively new" and that available datasets are "insufficiently many" ([document_1.txt](document_1.txt)). Two design choices reinforce the reading of AntiScam as a compact, carefully curated benchmark rather than a bulk corpus: only about a third of dialogs were manually annotated, and those annotations were produced by two linguistically trained experts with a high reported agreement ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)).
+
+[0m
+[32mThe 172-of-320 detection outcome is also substantive rather than incidental, because it characterizes corpus difficulty rather than corpus volume: it indicates that a slight majority of users failed to recognize their interlocutor as an attacker, which the summary interprets as evidence that "the attackers are well trained and not too easily identifiable" ([document_2.txt](document_2.txt)). A corpus of this size with a detection rate near chance is more informative for elicitation-strategy research than a larger corpus in which the adversarial role is trivially detectable.
+
+[0m
+[32m## Limitations and Caveats
+
+[0m
+[32mThe principal limitation of this report is the unresolved numeric conflict between 220 and 320 dialogs ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). No supplied passage explains the difference, so the reconciliation offered above is inference, not documentation. A second caveat is unit ambiguity: the sources report dialogs, sentences, turns, and utterances without defining their relationships, so derived totals (such as approximately 3,984 turns or 44,300 words for a 320-dialog corpus) should be treated as illustrative estimates. Third, the level of detail available differs by metric — annotation and human-evaluation figures are comparatively precise, whereas the corpus-level dialog count is the least stable number in the record. Finally, the sources carry no dates or bibliographic metadata, so recency cannot be used as a tiebreaker, and the reliability ranking used here rests instead on explicitness, repetition, and internal consistency.
+
+[0m
+[32m## Conclusion
+
+[0m
+[32m**The AntiScam dataset is reported as 320 human-human anti-scam dialogs**, collected through a role-playing Amazon customer service scam on Amazon Mechanical Turk ([document_2.txt](document_2.txt)). Within that corpus, 100 dialogs and 3,044 sentences were manually annotated by two linguistically trained experts with a 0.874 averaged weighted kappa, conversations average 12.45 turns and 11.13 words per utterance, 172 users identified their partner as an attacker, and experiments used an 80/10/10 split with 225 human-evaluation dialogs and 45 ratings per model ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). The one competing figure — 220 dialogs, stated in the paper's dataset description ([document_1.txt](document_1.txt)) — cannot be reconciled with 320 on the evidence provided, but the 320 figure is the more repeatedly and explicitly asserted count and is the one that renders the 172-user detection rate coherent with the claim that attackers were difficult to identify. The prudent conclusion is therefore that AntiScam is a compact, densely annotated corpus of roughly 320 dialogs, with the dialog count itself flagged as the least reliable number in the published description.
+
+[0m
+[32m## References
+
+[0m
+[32mdocument_1.txt. (n.d.). *End-to-End trainable non-collaborative dialog system* [Excerpted source document]. ([document_1.txt](document_1.txt))
+
+[0m
+[32mdocument_2.txt. (n.d.). *Third-party research note: End-to-End trainable non-collaborative dialog system* [Excerpted source document]. ([document_2.txt](document_2.txt))[0m
+INFO:     [10:41:04] 📝 Report written for 'How big is the ANTISCAM dataset?'
+B1_P_ranked: ok calls=3 in=7341 out=11356 $0.0158 rep=17263 ctx=27536 doc1=28 doc2=12 paper_decisive=True
+Warning: Invalid retriever(s) found: offline_null. Valid options are: arxiv, bing, bocha, brave, crw, custom, duckduckgo, exa, getxapi, google, groundroute, mcp, openalex, pubmed_central, searchapi, searx, semantic_scholar, serpapi, serper, tavily, xquik.. Defaulting to 'tavily' retriever.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4288.02it/s]
+INFO:     [10:41:17] 🔍 Starting the research task for 'How much is BELU score difference between proposed approach and insertion-only method?'...
+INFO:     [10:41:17] 🤖 AI Research Agent
+INFO:     [10:41:17] 🌐 Browsing the web to learn more about the task: How much is BELU score difference between proposed approach and insertion-only method?...
+INFO:     [10:41:17] 🤔 Planning the research strategy and subtasks...
+INFO:     [10:41:19] 🗂️ I will conduct my research based on the following queries: ['BELU score difference between proposed approach and insertion-only method', 'how much higher is the BELU score for the proposed approach compared to the insertion-only method', 'comparison of BELU scores for proposed approach versus insertion-only baseline', 'How much is BELU score difference between proposed approach and insertion-only method?']...
+INFO:     [10:41:19] 
+🔍 Running research for 'BELU score difference between proposed approach and insertion-only method'...
+INFO:     [10:41:19] 📚 Getting relevant content based on query: BELU score difference between proposed approach and insertion-only method...
+INFO:     [10:41:19] 
+🔍 Running research for 'how much higher is the BELU score for the proposed approach compared to the insertion-only method'...
+INFO:     [10:41:19] 📚 Getting relevant content based on query: how much higher is the BELU score for the proposed approach compared to the insertion-only method...
+INFO:     [10:41:19] 
+🔍 Running research for 'comparison of BELU scores for proposed approach versus insertion-only baseline'...
+INFO:     [10:41:19] 📚 Getting relevant content based on query: comparison of BELU scores for proposed approach versus insertion-only baseline...
+INFO:     [10:41:19] 
+🔍 Running research for 'How much is BELU score difference between proposed approach and insertion-only method?'...
+INFO:     [10:41:19] 📚 Getting relevant content based on query: How much is BELU score difference between proposed approach and insertion-only method?...
+INFO:     [10:41:19] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:41:19] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:41:19] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:41:19] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:41:19] Finalized research step.
+💸 Total Research Costs: $0.03462488
+INFO:     [10:41:19] ✍️ Writing report for 'How much is BELU score difference between proposed approach and insertion-only method?'...
+[32m# Quantifying the BLEU Score Difference Between the Proposed Insertion-Deletion Transformer and the Insertion-Only Baseline
+
+[0m
+[32m## Executive Summary
+
+[0m
+[32mThe Insertion-Deletion Transformer outperforms the insertion-only Insertion Model (KERMIT) baseline on every task for which BLEU scores are reported in the available material. However, the difference is **not a single aggregate figure**. The source paper reports **separate, per-task BLEU comparisons** on two synthetic character-level translation tasks ([document_2.txt](#ref2)). The two headline deltas are:
+
+[0m
+[32m- **+21.34 BLEU points** on the alphabetic sequence shifting task (91.49 vs. 70.15) ([document_1.txt](#ref1); [document_2.txt](#ref2))
+[0m
+[32m- **+2.02 BLEU points** on Caesar's cipher (37.57 vs. 35.55), described in the paper itself as "around 2 BLEU points" ([document_1.txt](#ref1); [document_2.txt](#ref2))
+
+[0m
+[32mThe arithmetic mean of the two reported deltas is **11.68 BLEU points**, but this figure is a derived statistic and is not reported by the authors. It should be treated as descriptive only, because the two tasks differ substantially in difficulty, data regime, and absolute score range.
+
+[0m
+[32m---
+
+[0m
+[32m## 1. Framing the Query
+
+[0m
+[32mThe question posed — "How much is the BLEU score difference between the proposed approach and the insertion-only method?" — presupposes a singular answer. The retrieved evidence does not support a singular answer. The third-party research note explicitly states that "the paper reports separate BLEU results for two synthetic translation tasks rather than one overall BLEU difference," and that "the comparisons are per task" ([document_2.txt](#ref2)). Any accurate response must therefore be decomposed by task, which is the approach taken throughout this report.
+
+[0m
+[32m## 2. The Two Systems Being Compared
+
+[0m
+[32m### 2.1 Proposed approach: Insertion-Deletion Transformer
+
+[0m
+[32mThe proposed method is the **Insertion-Deletion Transformer**, described as "a novel transformer-based neural architecture and training method for sequence generation" ([document_1.txt](#ref1)). The model "consists of two phases that are executed iteratively, 1) an insertion phase and 2) a deletion phase" ([document_1.txt](#ref1)). The insertion phase parameterizes a distribution over insertions on the current output hypothesis, while the deletion phase parameterizes a distribution over deletions over that same hypothesis ([document_1.txt](#ref1)).
+
+[0m
+[32mArchitecturally, the model "can be implemented with a simple stack of two Transformer decoders, where the top deletion transformer layer gets its signal from the bottom insertion transformer" ([document_1.txt](#ref1)). A crucial training design choice is that "the deletion model obtains its signal directly on-policy from the insertion model output" ([document_1.txt](#ref1)).
+
+[0m
+[32m### 2.2 Baseline: Insertion Model (KERMIT)
+
+[0m
+[32mThe insertion-only baseline is the **Insertion Model (KERMIT)** ([document_2.txt](#ref2)). The research note characterizes it as extending "the Insertion Transformer insertion-only framework to handle insertions," and states that "the paper extends that insertion-only framework to handle both insertions and deletions, producing the Insertion-Deletion Model for direct comparison" ([document_2.txt](#ref2)). This makes the comparison a controlled, like-for-like evaluation in which the deletion phase is the primary manipulated variable.
+
+[0m
+[32mThe method section confirms this lineage directly: "We extend the Insertion Transformer (Stern et al., 2019), an insertion-only framework to handle both insertions and deletions" ([document_1.txt](#ref1)).
+
+[0m
+[32m## 3. The Headline Answer: Per-Task BLEU Differences
+
+[0m
+[32m### 3.1 Alphabetic Sequence Shifting: +21.34 BLEU Points
+
+[0m
+[32mOn the alphabetic sequence shifting task, "the reported BLEU scores are 91.49 for the Insertion-Deletion Model and 70.15 for the Insertion Model (KERMIT). The difference is 21.34 BLEU points in favor of the Insertion-Deletion Model" ([document_2.txt](#ref2)). These results are presented in Table 2 of the source paper ([document_1.txt](#ref1)).
+
+[0m
+[32mThe paper's own language is notably strong for this task: "We see our Insertion-Deletion Transformer model outperforms the Insertion Transformer significantly on this task" ([document_1.txt](#ref1)).
+
+[0m
+[32m### 3.2 Caesar's Cipher: +2.02 BLEU Points
+
+[0m
+[32mOn Caesar's cipher, "the reported BLEU scores are 37.57 for the Insertion-Deletion Model and 35.55 for the Insertion Model (KERMIT). The difference is 2.02 BLEU points" ([document_2.txt](#ref2)). The paper describes this as "around 2 BLEU points," and the results are presented in Table 3 ([document_1.txt](#ref1)). The source text states plainly: "The table below shows that the deletion model again increases the BLEU score over just the insertion model, by around 2 BLEU points" ([document_1.txt](#ref1)).
+
+[0m
+[32m### 3.3 Consolidated Comparison
+
+[0m
+[32m**Table 1. Reported BLEU scores by task, model, and delta**
+
+[0m
+[32m| Task | Insertion Model (KERMIT) | Insertion-Deletion Model | Delta (BLEU points) | Source table |
+[0m
+[32m|---|---|---|---|---|
+[0m
+[32m| Alphabetic sequence shifting | 70.15 | 91.49 | **+21.34** | Table 2 ([document_1.txt](#ref1)) |
+[0m
+[32m| Caesar's cipher | 35.55 | 37.57 | **+2.02** | Table 3 ([document_1.txt](#ref1)) |
+[0m
+[32m| Mean of the two deltas (derived, not reported) | — | — | 11.68 | Author's calculation |
+
+[0m
+[32m## 4. Relative Magnitude of the Differences
+
+[0m
+[32mAbsolute BLEU-point deltas can obscure how large a gain actually is at different points on the scale. Expressing the same data as relative improvement sharpens the picture.
+
+[0m
+[32m**Table 2. Absolute versus relative improvement**
+
+[0m
+[32m| Task | Baseline BLEU | Proposed BLEU | Absolute delta | Relative improvement | Residual-error reduction* |
+[0m
+[32m|---|---|---|---|---|---|
+[0m
+[32m| Alphabetic sequence shifting | 70.15 | 91.49 | +21.34 | +30.42% | ≈71.5% |
+[0m
+[32m| Caesar's cipher | 35.55 | 37.57 | +2.02 | +5.68% | ≈3.1% |
+
+[0m
+[32m*Residual-error reduction is computed by the author as the reduction in the gap to a nominal ceiling of 100 BLEU points: (100 − proposed) vs. (100 − baseline). This is a derived interpretive metric, not one reported in the sources ([document_1.txt](#ref1); [document_2.txt](#ref2)).
+
+[0m
+[32mTwo observations follow. First, the alphabetic sequence shifting gain is large in both absolute and relative terms, and the resulting 91.49 score places the model in a very strong position on that task. Second, the Caesar's cipher gain — although statistically meaningful relative to its own baseline — leaves considerable headroom, with the proposed model still scoring 37.57 and both systems far from saturation. This divergence in magnitude is precisely why a single aggregate delta would be misleading.
+
+[0m
+[32m## 5. Why There Is No Single Aggregate BLEU Difference
+
+[0m
+[32mThree considerations argue against collapsing the results into one number:
+
+[0m
+[32m1. **The sources explicitly reject aggregation.** The research note states that "the paper reports separate BLEU results for two synthetic translation tasks rather than one overall BLEU difference" ([document_2.txt](#ref2)).
+[0m
+[32m2. **The evidence base is small.** The evaluation rests on two tasks only. The paper presents the framework "as a proof of concept by applying it to two synthetic character-based translation tasks" ([document_1.txt](#ref1)). Averaging two data points yields an unstable estimate with no dispersion information.
+[0m
+[32m3. **BLEU is not additive across heterogeneous tasks.** A 21.34-point delta on a near-saturated task and a 2.02-point delta on a low-scoring task are not commensurate, because BLEU operates on an n-gram overlap scale whose sensitivity varies with absolute performance.
+
+[0m
+[32m## 6. Experimental Conditions Behind the Numbers
+
+[0m
+[32mThe reported deltas are attached to specific, transparently documented training configurations.
+
+[0m
+[32m**Table 3. Experimental setup by task**
+
+[0m
+[32m| Element | Alphabetic sequence shifting | Caesar's cipher |
+[0m
+[32m|---|---|---|
+[0m
+[32m| Training examples | 1,000 | 100,000 |
+[0m
+[32m| Held-out evaluation examples | 100 | 1,000 |
+[0m
+[32m| Training steps | 200,000 | 200,000 |
+[0m
+[32m| Batch size | 32 | 32 |
+[0m
+[32m| Model selection | None | None |
+[0m
+[32m| Source | [document_1.txt](#ref1) | [document_1.txt](#ref1) |
+
+[0m
+[32mThe absence of model selection in both settings is noteworthy: reported scores are therefore not inflated by post-hoc checkpoint selection against a validation set ([document_1.txt](#ref1)). This strengthens the reliability of the comparison, but it also means the single-run figures carry unquantified run-to-run variance.
+
+[0m
+[32mAdditionally, the paper reports a negative finding of relevance to the comparison: "We found that adversarial deletion training did not improve BLEU scores on these synthetic tasks" ([document_1.txt](#ref1)). However, "the adversarial training scheme can still be helpful when the deletion model does not receive a signal during training by sampling from the insertion model alone (i.e., when the insertion-model does not make any errors)" ([document_1.txt](#ref1)). This nuance indicates that the observed deltas reflect the on-policy deletion mechanism rather than adversarial variants.
+
+[0m
+[32m## 7. Mechanistic Explanation for the Gains
+
+[0m
+[32mThe reported BLEU improvements have a coherent mechanistic rationale. The paper argues that "in a conventional insertion-based model, if the model makes a mistake during generation, this cannot be undone" ([document_1.txt](#ref1)). By contrast, "introducing the deletion phase makes it possible to undo the mistakes made by the insertion model, since it is trained on the on-policy errors of the insertion phase" ([document_1.txt](#ref1)).
+
+[0m
+[32mThe practical consequence is described in the conclusion: "the deletion model can significantly increase the BLEU score on simple tasks by iteratively refining the output sequence via sequences of insertion-deletions" ([document_1.txt](#ref1)). This suggests the gain is not a marginal tuning artifact but a structural capability — error correction — that the insertion-only baseline lacks by construction.
+
+[0m
+[32mThe framework also carries efficiency claims relevant to the comparison: it executes "one insertion phase and one deletion phase, without the need to predict the number of tokens needed to be inserted," which "greatly simplifies the model architecture, training procedure and inference runtime" ([document_1.txt](#ref1)). Implementation is described as a "simple stack of two Transformer decoders" ([document_1.txt](#ref1)).
+
+[0m
+[32mBroader applicability is also claimed: the deletion extension "enables the framework to efficiently handle tasks like text simplification and style transfer by starting the decoding process from the original source sequence" ([document_1.txt](#ref1)). The paper connects this to antecedent work on post-editing, including Deliberation Networks (Xia et al., 2017), "which also acknowledges the potential benefits from post-editing output sequences and proposes a two-phase decoding framework" ([document_1.txt](#ref1)).
+
+[0m
+[32m## 8. Scope, Limitations, and Threats to Validity
+
+[0m
+[32mAn objective reading requires flagging several caveats:
+
+[0m
+[32m- **Synthetic tasks only.** Both evaluations are on synthetic character-based translation: alphabetic sequence shifting and Caesar's cipher ([document_1.txt](#ref1)). The source text uses the phrase "on simple tasks" ([document_1.txt](#ref1)), and the third-party note confirms the scope is "synthetic translation datasets" ([document_2.txt](#ref2)). Generalization to natural-language benchmarks is untested in the available material.
+[0m
+[32m- **Two tasks provide no basis for an average.** Any mean delta is arithmetically computable but statistically hollow.
+[0m
+[32m- **Rounding and reporting.** Caesar's cipher is described as "around 2 BLEU points" ([document_2.txt](#ref2)), whereas the table values support a precise 2.02 ([document_1.txt](#ref1)). The precise figure should be preferred for reporting.
+[0m
+[32m- **No significance testing reported.** Word-level significance testing or confidence intervals for the BLEU deltas are absent from the provided material, so the 2.02-point gain in particular should be described as a reported improvement rather than an established significant effect.
+[0m
+[32m- **Source duplication.** The retrieved corpus contains overlapping excerpts from the same two documents; the concordance of the numbers across both ([document_1.txt](#ref1); [document_2.txt](#ref2)) increases confidence that the figures are transcribed consistently.
+
+[0m
+[32m## 9. Conclusion
+
+[0m
+[32mThe BLEU score difference between the proposed Insertion-Deletion Transformer and the insertion-only Insertion Model (KERMIT) is **task-specific**. It is **21.34 BLEU points** on alphabetic sequence shifting (91.49 vs. 70.15) and **2.02 BLEU points** on Caesar's cipher (37.57 vs. 35.55) ([document_1.txt](#ref1); [document_2.txt](#ref2)).
+
+[0m
+[32mMy concrete assessment, based on the evidence provided, is as follows: the correct headline figure for this comparison is the **pair of deltas**, not a mean. The alphabetic sequence shifting result is the stronger and more persuasive evidence, because a +21.34-point gain (a roughly 30% relative improvement) is difficult to attribute to noise and pushes performance to 91.49, a level at which meaningful headroom is limited. The Caesar's cipher gain of +2.02 points is real in direction and consistent across both sources ([document_1.txt](#ref1); [document_2.txt](#ref2)), but at approximately 5.7% relative improvement on a low-scoring task, it is modest and would benefit from significance testing before being characterized as substantial. Reporting an 11.68-point average across the two would therefore overstate the Caesar's cipher effect and understate the sequence shifting effect. The defensible one-sentence answer is this: **the addition of deletion improved BLEU by 21.34 points on alphabetic sequence shifting and by 2.02 points on Caesar's cipher, with no single aggregate figure reported or warranted.**
+
+[0m
+[32m---
+
+[0m
+[32m## References
+
+[0m
+[32m<a id="ref1"></a>Document 1. (n.d.). *Insertion-Deletion Transformer* [Manuscript excerpt, document_1.txt]. Google Brain.
+
+[0m
+[32m<a id="ref2"></a>Document 2. (n.d.). *Third-party research note: Insertion-Deletion Transformer* [Analytical note, document_2.txt].[0m
+INFO:     [10:41:39] 📝 Report written for 'How much is BELU score difference between proposed approach and insertion-only method?'
+B2_C_ranked: ok calls=3 in=7562 out=7410 $0.0112 rep=14026 ctx=27358 doc1=28 doc2=12 paper_decisive=True
+Warning: Invalid retriever(s) found: offline_null. Valid options are: arxiv, bing, bocha, brave, crw, custom, duckduckgo, exa, getxapi, google, groundroute, mcp, openalex, pubmed_central, searchapi, searx, semantic_scholar, serpapi, serper, tavily, xquik.. Defaulting to 'tavily' retriever.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4474.13it/s]
+INFO:     [10:41:51] 🔍 Starting the research task for 'How much is BELU score difference between proposed approach and insertion-only method?'...
+INFO:     [10:41:51] 🤖 AI Research Agent
+INFO:     [10:41:51] 🌐 Browsing the web to learn more about the task: How much is BELU score difference between proposed approach and insertion-only method?...
+INFO:     [10:41:51] 🤔 Planning the research strategy and subtasks...
+INFO:     [10:41:52] 🗂️ I will conduct my research based on the following queries: ['BELU score difference between proposed approach and insertion-only method', 'how much does BELU score improve with the proposed approach compared to insertion-only method', 'proposed approach versus insertion-only method BELU score comparison', 'How much is BELU score difference between proposed approach and insertion-only method?']...
+INFO:     [10:41:52] 
+🔍 Running research for 'BELU score difference between proposed approach and insertion-only method'...
+INFO:     [10:41:52] 📚 Getting relevant content based on query: BELU score difference between proposed approach and insertion-only method...
+INFO:     [10:41:52] 
+🔍 Running research for 'how much does BELU score improve with the proposed approach compared to insertion-only method'...
+INFO:     [10:41:52] 📚 Getting relevant content based on query: how much does BELU score improve with the proposed approach compared to insertion-only method...
+INFO:     [10:41:52] 
+🔍 Running research for 'proposed approach versus insertion-only method BELU score comparison'...
+INFO:     [10:41:52] 📚 Getting relevant content based on query: proposed approach versus insertion-only method BELU score comparison...
+INFO:     [10:41:52] 
+🔍 Running research for 'How much is BELU score difference between proposed approach and insertion-only method?'...
+INFO:     [10:41:52] 📚 Getting relevant content based on query: How much is BELU score difference between proposed approach and insertion-only method?...
+INFO:     [10:41:53] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:41:53] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:41:53] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:41:53] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:41:53] Finalized research step.
+💸 Total Research Costs: $0.031670199999999996
+INFO:     [10:41:53] ✍️ Writing report for 'How much is BELU score difference between proposed approach and insertion-only method?'...
+[32m# BLEU Score Differences Between the Insertion-Deletion Transformer and the Insertion-Only (KERMIT) Baseline
+
+[0m
+[32m## Abstract
+
+[0m
+[32mThis report examines the magnitude of the reported BLEU score gap (spelled "BELU" in the query) between the proposed **Insertion-Deletion Transformer** and the **Insertion Model (KERMIT)** insertion-only baseline. Based on the supplied source documents, the answer is that **there is no single, aggregate BLEU difference**; instead, the paper reports two task-specific comparisons. On the Caesar's cipher task, the Insertion-Deletion Model scores 91.49 BLEU versus 70.15 BLEU for the Insertion Model, a difference of **21.34 BLEU points in favor of the proposed approach** ([document_2.txt](document_2.txt)). On the shifted alphabetic sequence task, the Insertion-Deletion Model scores 37.57 BLEU versus 35.55 BLEU for the Insertion Model, a difference of **2.02 BLEU points (described in the paper as "around 2 BLEU points")** ([document_2.txt](document_2.txt); [document_1.txt](document_1.txt)). Both comparisons favor the insertion-deletion extension, but the effect size varies by roughly an order of magnitude across the two synthetic tasks.
+
+[0m
+[32m## Introduction and Framing of the Query
+
+[0m
+[32mThe query asks how large the BLEU gap is between the proposed approach and the insertion-only method. Answering this precisely requires two clarifications derived from the source material. First, the metric is BLEU (bilingual evaluation understudy), a standard sequence-generation quality metric; the query's spelling "BELU" is a typographical variant that does not alter the interpretation. Second, and more importantly, the source documents explicitly caution that the paper reports **"separate BLEU results for two synthetic translation tasks rather than one overall BLEU difference"** ([document_2.txt](document_2.txt)). Therefore, any honest answer must present a per-task decomposition rather than a single number.
+
+[0m
+[32mThis framing matters because a naive reader might expect one headline improvement figure. The third-party research note states outright that "the comparisons are per task: 21.34 BLEU points on Caesar's cipher and 2.02 BLEU points on the shifted alphabetic sequence task, described as around 2 BLEU points" ([document_2.txt](document_2.txt)). The remainder of this report details the architecture, the experimental setup, the exact figures, and an interpretation of why the two differences diverge so strongly.
+
+[0m
+[32m## The Proposed Approach and the Insertion-Only Baseline
+
+[0m
+[32mThe proposed approach is the **Insertion-Deletion Transformer**, described as "a transformer-based neural architecture and training method for sequence generation" ([document_2.txt](document_2.txt)). The insertion-only baseline is the **Insertion Model (KERMIT)**, which "extends the Insertion Transformer insertion-only framework to handle insertions" ([document_2.txt](document_2.txt)). The paper itself describes the relationship directly: "we describe our Insertion-Deletion model. We extend the Insertion Transformer Stern et al. 2019, an insertion-only framework to handle both insertions and deletions" ([document_1.txt](document_1.txt)).
+
+[0m
+[32mArchitecturally, the Insertion-Deletion Transformer "can be implemented with a simple stack of two Transformer decoders, where the top deletion transformer layer gets its signal from the bottom insertion transformer" ([document_1.txt](document_1.txt)). The framework comprises "one insertion phase and one deletion phase, without the need to predict the number of tokens needed to be inserted," which "greatly simplifies the model architecture, training procedure and inference runtime" ([document_1.txt](document_1.txt)).
+
+[0m
+[32mThe functional rationale for adding deletion is that it enables error correction: "In a conventional insertion-based model, if the model makes a mistake during generation, this cannot be undone. Introducing the deletion phase makes it possible to undo the mistakes made by the insertion model, since it is trained on the on-policy errors of the insertion phase" ([document_1.txt](document_1.txt)). The framework also "allows for flexible sequence generation, parallel token generation and text editing," and "enables the framework to efficiently handle tasks like text simplification and style transfer by starting the decoding process from the original source sequence" ([document_1.txt](document_1.txt)).
+
+[0m
+[32m## Reported BLEU Results
+
+[0m
+[32mThe core data answering the query are the two per-task comparisons. The table below consolidates the figures reported across the two source documents.
+
+[0m
+[32m| Task | Insertion Model (KERMIT) BLEU | Insertion-Deletion Model BLEU | Difference (BLEU points) | Reported Table |
+[0m
+[32m|---|---|---|---|---|
+[0m
+[32m| Caesar's cipher | 70.15 | 91.49 | +21.34 | Table 2 |
+[0m
+[32m| Shifted alphabetic sequence | 35.55 | 37.57 | +2.02 | Table 3 |
+
+[0m
+[32mSources: ([document_2.txt](document_2.txt); [document_1.txt](document_1.txt)).
+
+[0m
+[32mThe source documents state these comparisons explicitly. On the first task, "the reported BLEU scores are 91.49 for the Insertion-Deletion Model and 70.15 for the Insertion Model (KERMIT). The difference is 21.34 BLEU points in favor of the Insertion-Deletion Model. Table 2 presents these results. The Insertion-Deletion Model improves BLEU score on this task" ([document_2.txt](document_2.txt)). On the second task, "the reported BLEU scores are 37.57 for the Insertion-Deletion Model and 35.55 for the Insertion Model (KERMIT). The difference is 2.02 BLEU points. The paper describes this as around 2 BLEU points. Table 3 presents these results. The insertion-deletion model improves BLEU score on this task" ([document_2.txt](document_2.txt)).
+
+[0m
+[32mThe primary paper corroborates the smaller gap in its narrative: "The table below shows that the deletion model again increases the BLEU score over just the insertion model, by around 2 BLEU points" ([document_1.txt](document_1.txt)). It also corroborates the larger gap with a qualitative claim: "We see our Insertion-Deletion Transformer model outperforms the Insertion Transformer significantly on this task" ([document_1.txt](document_1.txt)).
+
+[0m
+[32m### Summary Answer to the Query
+
+[0m
+[32mIf the question is interpreted as "what is the BLEU difference between the proposed approach and the insertion-only method?", the defensible answer is: **the difference is task-dependent and is reported as 21.34 BLEU points on one synthetic task and 2.02 BLEU points on the other, with both differences favoring the Insertion-Deletion Transformer** ([document_2.txt](document_2.txt)). There is no overall pooled difference in the provided material.
+
+[0m
+[32m## Experimental Setup Behind the Numbers
+
+[0m
+[32mThe magnitude of the two gaps is best understood alongside the experimental conditions. The source documents provide the following setup details.
+
+[0m
+[32mFor the sequence-shifting-style experiment, "We generate 1000 of examples for training, and evaluate on 100 held-out examples. Table 2 reports our BLEU. We train our models for 200k steps, batch size of 32 and perform no model selection" ([document_1.txt](document_1.txt)). For the other experiment, "We generate 100k examples to train on, and evaluate on 1000 held-out examples. We train our models for 200k steps, batch size of 32 and perform no model selection" ([document_1.txt](document_1.txt)).
+
+[0m
+[32m| Experimental Parameter | Experiment A | Experiment B |
+[0m
+[32m|---|---|---|
+[0m
+[32m| Training examples | 1,000 | 100,000 |
+[0m
+[32m| Held-out evaluation examples | 100 | 1,000 |
+[0m
+[32m| Training steps | 200k | 200k |
+[0m
+[32m| Batch size | 32 | 32 |
+[0m
+[32m| Model selection | None | None |
+
+[0m
+[32mSources: ([document_1.txt](document_1.txt)).
+
+[0m
+[32mTwo observations follow. First, the experiment with the dramatically larger BLEU gap (21.34 points) is also the one with the far larger training set (100,000 examples versus 1,000), which is consistent with the deletion module having more on-policy insertion errors to learn from. Second, the shared hyperparameters (200k steps, batch size 32, no model selection) indicate that the reported deltas are not artifacts of differing training budgets between the two model variants ([document_1.txt](document_1.txt)).
+
+[0m
+[32mThe paper also notes a negative result relevant to interpreting the gap: "We found that adversarial deletion training did not improve BLEU scores on these synthetic tasks. However, the adversarial training scheme can still be helpful when the deletion model does not receive a signal during training by sampling from the insertion model alone (i.e., when the insertion-model does not make any errors)" ([document_1.txt](document_1.txt)). This suggests the observed gains stem from the deletion mechanism itself rather than from adversarial refinements.
+
+[0m
+[32m## Interpretation: Why the Two Differences Diverge
+
+[0m
+[32mThe 21.34-point and 2.02-point gaps are not contradictory; they reflect different task difficulty and different headroom. On the task where the insertion-only baseline already performs strongly (70.15 BLEU), the deletion phase delivers a large absolute gain of 21.34 points ([document_2.txt](document_2.txt)). On the task where the insertion-only baseline is much weaker overall (35.55 BLEU), the incremental benefit is only about 2 BLEU points ([document_2.txt](document_2.txt); [document_1.txt](document_1.txt)).
+
+[0m
+[32mOne plausible, source-grounded reading is that the deletion phase adds the most value when insertion errors are structured and correctable — precisely the scenario the paper invokes when it argues that deletion "makes it possible to undo the mistakes made by the insertion model, since it is trained on the on-policy errors of the insertion phase" ([document_1.txt](document_1.txt)). Where errors are less systematic or the overall sequence modeling problem is harder, the ceiling for post-hoc correction is lower, producing the ~2-point improvement.
+
+[0m
+[32mThe paper's own summary is deliberately qualitative on this point: "We demonstrated the capabilities of the model on two synthetic data sets and showed that the deletion model can significantly increase the BLEU score on simple tasks by iteratively refining the output sequence via sequences of insertion-deletions" ([document_1.txt](document_1.txt)). The phrase "iteratively refining" aligns with the described decoding dynamic, in which insertions and deletions interact within a decoding step ([document_1.txt](document_1.txt)). A worked decoding example is illustrated in Table 1 of the paper, which shows "Predicted deletions," an output sequence containing `[CLS]`, `[SEP]` tokens, and a deleted token `u`, described as "an example decoding iteration during inference" ([document_1.txt](document_1.txt)).
+
+[0m
+[32m## Methodological Caveats and Source Reliability
+
+[0m
+[32mTwo cautions should accompany the headline numbers.
+
+[0m
+[32m### Task-to-Table Labeling Inconsistency
+
+[0m
+[32mThe two source documents do not fully agree on how the figures map onto named tasks and table numbers. The third-party research note assigns 91.49 vs 70.15 to Caesar's cipher (Table 2) and 37.57 vs 35.55 to the shifted alphabetic sequence (Table 3) ([document_2.txt](document_2.txt)). The primary-paper excerpts, however, show a table captioned "Alphabetic Sequence Shifting BLEU" containing the 70.15 and 91.49 values as Table 2, and a table captioned "Caesar's Cipher BLEU" containing the 35.55 and 37.57 values as Table 3 ([document_1.txt](document_1.txt)). This is an internal labeling conflict in the supplied material. Importantly, **the numerical deltas themselves are unaffected**: whichever label is correct, the two gaps are 21.34 BLEU points and 2.02 BLEU points, both favoring the insertion-deletion model ([document_2.txt](document_2.txt); [document_1.txt](document_1.txt)). Where this report names tasks above, it follows the third-party research note, which is the more internally consistent summary document.
+
+[0m
+[32m### Scope of Evidence
+
+[0m
+[32mBoth documents are excerpt-based and concern only two synthetic character-based translation tasks. The paper itself positions the work as "a proof of concept by applying it to two synthetic character-based translation tasks and showing it can significantly increase the BLEU score over the insertion-only framework" ([document_1.txt](document_1.txt)). Consequently, the 21.34-point and 2.02-point figures should be read as evidence of directional improvement on controlled synthetic tasks, not as estimates of gains on natural-language benchmarks.
+
+[0m
+[32m## Conclusions
+
+[0m
+[32mThe evidence in the provided sources supports the following concrete findings:
+
+[0m
+[32m1. The proposed approach is the **Insertion-Deletion Transformer**, an extension of the Insertion Transformer framework that adds a deletion phase on top of insertion-only generation ([document_2.txt](document_2.txt); [document_1.txt](document_1.txt)).
+[0m
+[32m2. The insertion-only baseline is the **Insertion Model (KERMIT)** ([document_2.txt](document_2.txt)).
+[0m
+[32m3. On one synthetic task, the BLEU difference is **21.34 points** (91.49 vs 70.15) in favor of the Insertion-Deletion Model ([document_2.txt](document_2.txt)).
+[0m
+[32m4. On the second synthetic task, the BLEU difference is **2.02 points** (37.57 vs 35.55), described by the paper as around 2 BLEU points ([document_2.txt](document_2.txt); [document_1.txt](document_1.txt)).
+[0m
+[32m5. There is **no single overall BLEU difference** reported; the paper presents separate per-task results ([document_2.txt](document_2.txt)).
+
+[0m
+[32mIn short, the answer to "How much is the BLEU score difference between the proposed approach and the insertion-only method?" is **not one number but two: approximately 21.3 BLEU points on one task and approximately 2.0 BLEU points on the other, with the proposed insertion-deletion model ahead in both cases** ([document_2.txt](document_2.txt)). The consistency of direction — "The experiments on synthetic translation datasets show that the addition of deletion improves BLEU score" ([document_2.txt](document_2.txt)) — is the strongest generalizable claim the sources support, while the variable magnitude underscores the task-dependence of the improvement.
+
+[0m
+[32m## References
+
+[0m
+[32mInsertion-Deletion Transformer [Manuscript excerpts, document_1.txt]. (n.d.). ([document_1.txt](document_1.txt))
+
+[0m
+[32mThird-party research note: Insertion-Deletion Transformer [Research note, document_2.txt]. (n.d.). ([document_2.txt](document_2.txt))[0m
+INFO:     [10:42:10] 📝 Report written for 'How much is BELU score difference between proposed approach and insertion-only method?'
+B2_P_ranked: ok calls=3 in=7507 out=6545 $0.0101 rep=14198 ctx=27041 doc1=28 doc2=12 paper_decisive=True
+Warning: Invalid retriever(s) found: offline_null. Valid options are: arxiv, bing, bocha, brave, crw, custom, duckduckgo, exa, getxapi, google, groundroute, mcp, openalex, pubmed_central, searchapi, searx, semantic_scholar, serpapi, serper, tavily, xquik.. Defaulting to 'tavily' retriever.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4379.12it/s]
+INFO:     [10:42:26] 🔍 Starting the research task for 'How many hand-crafted templates did they have to make?'...
+INFO:     [10:42:26] 🎨 Design Agent
+INFO:     [10:42:26] 🌐 Browsing the web to learn more about the task: How many hand-crafted templates did they have to make?...
+INFO:     [10:42:26] 🤔 Planning the research strategy and subtasks...
+INFO:     [10:42:29] 🗂️ I will conduct my research based on the following queries: ['How many hand-crafted templates did they have to make', 'How many handcrafted templates were made', 'Number of hand-crafted templates required', 'How many hand-crafted templates did they have to make?']...
+INFO:     [10:42:29] 
+🔍 Running research for 'How many hand-crafted templates did they have to make'...
+INFO:     [10:42:29] 📚 Getting relevant content based on query: How many hand-crafted templates did they have to make...
+INFO:     [10:42:29] 
+🔍 Running research for 'How many handcrafted templates were made'...
+INFO:     [10:42:29] 📚 Getting relevant content based on query: How many handcrafted templates were made...
+INFO:     [10:42:29] 
+🔍 Running research for 'Number of hand-crafted templates required'...
+INFO:     [10:42:29] 📚 Getting relevant content based on query: Number of hand-crafted templates required...
+INFO:     [10:42:29] 
+🔍 Running research for 'How many hand-crafted templates did they have to make?'...
+INFO:     [10:42:29] 📚 Getting relevant content based on query: How many hand-crafted templates did they have to make?...
+INFO:     [10:42:29] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:42:29] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:42:29] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:42:29] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:42:29] Finalized research step.
+💸 Total Research Costs: $0.049786960000000005
+INFO:     [10:42:29] ✍️ Writing report for 'How many hand-crafted templates did they have to make?'...
+[32m# Hand-Crafted Template Counts for Knowledge-Base Question Generation
+
+[0m
+[32m## Direct Answer and Scope
+
+[0m
+[32mThe reported system used **two distinct hand-crafted template totals**, because the manual template-building effort was tied to each knowledge base rather than to a single universal template set. For the Freebase evaluation, the authors hand-crafted **106 templates** for 500 randomly selected triples ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). For the in-house power tool domain knowledge base, the authors hand-crafted **163 templates** for 67 predicates ([document_2.txt](document_2.txt)). Therefore, if the question refers to the Freebase experiment, the answer is **106**; if it refers to the in-house power tool domain, the answer is **163**.
+
+[0m
+[32mThis distinction matters because the system’s template construction is predicate-centric. Each template is associated with a predicate in the knowledge base, and the number of templates therefore scales with predicate coverage rather than with the total number of triples or entities ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). The two reported counts are not contradictory; they reflect two different knowledge bases with different predicate sets and different evaluation goals ([document_2.txt](document_2.txt)).
+
+[0m
+[32m| Knowledge Base / Evaluation | Distinct Predicates | Hand-Crafted Templates | Reported Seed Questions | Additional Questions Retrieved or Expanded | Source |
+[0m
+[32m|---|---:|---:|---:|---:|---|
+[0m
+[32m| Freebase evaluation | 53 | 106 | 991 | 1,529 retrieved from Google | ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)) |
+[0m
+[32m| In-house power tool domain | 67 | 163 | 12,228 | 20,000 expanded with Google | ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)) |
+
+[0m
+[32m## Background: Why Templates Are the Central Manual Component
+
+[0m
+[32mThe system contains several sub-modules: question template construction, seed question generation, question expansion, and selection ([document_1.txt](document_1.txt)). Given an input knowledge base, a small set of question templates is first constructed so that each template is associated with a predicate ([document_1.txt](document_1.txt)). A seed question set is then generated by applying the templates to the input knowledge base ([document_1.txt](document_1.txt)). After that, additional questions are retrieved iteratively from a search engine by using already-obtained questions as search queries ([document_1.txt](document_1.txt)).
+
+[0m
+[32mThe paper states that the **only human labor** in the work is question template construction ([document_1.txt](document_1.txt)). This means the template counts are not a minor implementation detail; they are the primary measure of manual effort in the reported system. The template design also explains why the system can operate with a relatively small number of templates: multiple entities in the knowledge base share the same predicates, and the iterative question expansion can produce many questions even from a relatively small seed set ([document_1.txt](document_1.txt)). The authors also note that the system can easily generate updated questions because the web is self-updating consistently ([document_1.txt](document_1.txt)).
+
+[0m
+[32mTemplates consist of a transcription of the predicate in the knowledge base and placeholders for the subject and object ([document_1.txt](document_1.txt)). For example, the predicate “performsActivity” can be transcribed into the template “how to use #X#” ([document_1.txt](document_1.txt)). Applying that template to the triple ⟨jigsaw, performsActivity, CurveCut⟩ produces the seed question “how to use jigsaw” ([document_1.txt](document_1.txt)). This example illustrates the logic of the entire template-count question: one predicate can yield a reusable template that applies to many entities.
+
+[0m
+[32m## Freebase Evaluation: 106 Hand-Crafted Templates
+
+[0m
+[32mIn the Freebase evaluation, the work used 500 randomly selected triples ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). The paper reports **106 hand-crafted templates** for those 500 Freebase triples ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). The reason the template count is not 500 is that the triples share only **53 distinct predicates** ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). On average, the authors made **2 templates for each predicate** ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)).
+
+[0m
+[32mApplying the templates to the triples generated **991 seed questions** ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). The experiment also retrieved **1,529 more questions from Google** ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). This design ties template creation to predicates and keeps the template set compact relative to the triple set ([document_2.txt](document_2.txt)). In other words, 106 templates were sufficient to cover 500 triples because the triples collapsed into 53 predicate types, and each predicate received roughly two templates.
+
+[0m
+[32mThe Freebase evaluation also included a fluency assessment. The authors trained a 4-gram language model on Gigaword with Kneser-Ney smoothing, used the averaged language model score as an index, and selected the top 500 questions to compare with prior results ([document_1.txt](document_1.txt)). Three native English speakers evaluated fluency and naturalness, including whether people would ask the questions in reality, using a 4-point scheme where 4 is the best ([document_1.txt](document_1.txt)). The abstract reports that questions generated by the system were judged to be more fluent than those of the compared system by human graders on the 500 randomly selected Freebase triples ([document_1.txt](document_1.txt)). The introduction similarly reports that questions generated by the system were significantly better on grammaticality and naturalness when evaluated by three human graders ([document_1.txt](document_1.txt)).
+
+[0m
+[32m## In-House Power Tool Domain: 163 Hand-Crafted Templates
+
+[0m
+[32mFor the in-house power tool domain knowledge base, the paper reports **67 predicates** ([document_2.txt](document_2.txt)). For those 67 predicates, the authors hand-craft **163 templates** ([document_2.txt](document_2.txt)). That count differs from the Freebase template count because the domain-specific knowledge base has its own predicate set and required its own template set ([document_2.txt](document_2.txt)).
+
+[0m
+[32mThe Freebase and power tool counts together provide the reported template-construction figures for the system ([document_2.txt](document_2.txt)). These figures show that manual template-building effort scales with predicate coverage in each evaluation ([document_2.txt](document_2.txt)). For the power tool domain, 163 templates for 67 predicates implies an average of approximately **2.43 templates per predicate**, which is close to the Freebase average of 2 templates per predicate ([document_2.txt](document_2.txt)). That approximate average is a derived figure based on the reported 163 templates and 67 predicates, not a separately stated average in the source ([document_2.txt](document_2.txt)).
+
+[0m
+[32mThe power tool domain also produced a much larger question set. The authors generated **12,228 seed questions**, from which **20,000 more questions** were expanded with Google ([document_1.txt](document_1.txt)). The expanded questions were generally grammatical and relevant to the power tool domain ([document_1.txt](document_1.txt)). Most were informative and corresponded to a specific answer, except for an example question such as “do I need a hammer drill,” which lacks context information ([document_1.txt](document_1.txt)). The system also generated complex questions such as “how to cut a groove in wood without a router” ([document_1.txt](document_1.txt)). Examples of expanded questions include “how to change circular saw blade,” “how to measure lawn mower cutting height,” “how to sharpen drill bits on bench grinder,” “how does an oscillating multi tool work,” “what type of sander to use on deck,” and “can I use acrylic paint on wood” ([document_1.txt](document_1.txt)).
+
+[0m
+[32m## Comparative Interpretation: What the Template Counts Mean
+
+[0m
+[32mA concrete assessment based on the reported figures is that the **106** and **163** template counts should be understood as predicate-denominated counts, not as evidence that the authors had to write a unique template for every triple. In Freebase, 500 triples reduced to 53 distinct predicates, and 106 templates covered them at roughly two templates per predicate ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). In the power tool domain, 67 predicates required 163 templates ([document_2.txt](document_2.txt)). Thus, the manual effort is bounded by predicate coverage, not by entity count or triple count.
+
+[0m
+[32mThis is the most important interpretive point. If the question asks “How many hand-crafted templates did they have to make?” the most accurate reply is: **they had to make 106 hand-crafted templates for the Freebase evaluation and 163 hand-crafted templates for the in-house power tool domain knowledge base**. There is no single universal template count because the system constructs templates for the predicates present in each knowledge base ([document_2.txt](document_2.txt)). The reported counts also demonstrate that the system does not require a large number of templates, because iterative question expansion can produce many questions even with a relatively small number of seed questions, and because multiple entities share the same predicates ([document_1.txt](document_1.txt)).
+
+[0m
+[32mThe contrast with prior work strengthens this interpretation. Previous work relied on massive human-labeled data, and one reported neural machine translation approach trained on **10,000 ⟨triple, question⟩ pairs** in which the question part was human generated ([document_1.txt](document_1.txt)). That approach required a large amount of human effort, and the grammaticality and naturalness of generated questions could not be guaranteed ([document_1.txt](document_1.txt)). By comparison, the template-based system’s manual component is limited to 106 templates for Freebase and 163 templates for the power tool domain, with the rest of the question volume coming from seed generation and web-based expansion ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). In my assessment, this is a meaningful reduction in manual annotation effort, although it does not eliminate human labor entirely.
+
+[0m
+[32m## Evaluation Context and Quality Claims
+
+[0m
+[32mThe system was evaluated by human graders on 500 randomly selected triples from Freebase ([document_1.txt](document_1.txt)). The questions generated by the system were judged to be significantly better than the compared system on grammaticality and naturalness ([document_1.txt](document_1.txt)). The abstract also states that the system’s questions were judged to be more fluent than those of the compared system by human graders ([document_1.txt](document_1.txt)). These quality claims matter for the template-count question because they suggest that a relatively compact template set, combined with web expansion and selection, can produce fluent and natural questions.
+
+[0m
+[32mThe selection process used a 4-gram language model trained on Gigaword with Kneser-Ney smoothing, and the top 500 questions were selected for comparison ([document_1.txt](document_1.txt)). Three native English speakers evaluated fluency and naturalness on a 4-point scheme, where 4 is the best ([document_1.txt](document_1.txt)). For the power tool domain, the expanded questions were mostly grammatical and relevant, and most corresponded to a specific answer ([document_1.txt](document_1.txt)). The domain relevance evaluation used Wikimedia dumps ([document_1.txt](document_1.txt)). These evaluation details support the conclusion that the reported template counts were not merely a cost-saving shortcut; they were part of a system that produced questions judged to be fluent and domain-relevant.
+
+[0m
+[32m## Limitations and Future Work
+
+[0m
+[32mThe system generates questions without answers, and automatic answer mining is left as future work ([document_1.txt](document_1.txt)). The template construction remains the only human labor reported ([document_1.txt](document_1.txt)). Therefore, any new predicate or new domain still requires manual template creation, even though the number of templates is much smaller than the number of possible triples or questions ([document_2.txt](document_2.txt)). The Freebase count of 106 templates and the power tool count of 163 templates are thus both a measure of efficiency and a reminder that the approach depends on manual predicate-level design.
+
+[0m
+[32mA further limitation is that the template counts are tied to the specific knowledge bases used in the experiments. The Freebase evaluation used 53 distinct predicates and 106 templates, while the power tool domain used 67 predicates and 163 templates ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). These figures should not be generalized to all possible knowledge bases without accounting for the number and complexity of predicates in those bases. The reported evidence does, however, show that the template-building effort scales with predicate coverage in each evaluation ([document_2.txt](document_2.txt)).
+
+[0m
+[32m## Conclusion
+
+[0m
+[32mThe hand-crafted template counts reported in the provided documents are **106 templates for the Freebase evaluation** and **163 templates for the in-house power tool domain knowledge base** ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). The Freebase count covered 500 randomly selected triples that shared only 53 distinct predicates, yielding an average of two templates per predicate ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). The power tool count covered 67 predicates ([document_2.txt](document_2.txt)). The system’s design ties template creation to predicates, keeps the template set compact relative to the triple set, and relies on seed question generation and iterative web expansion to produce a much larger question volume ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). The direct answer to the query is therefore not a single number but a pair of reported counts: **106 for Freebase and 163 for the power tool domain**.
+
+[0m
+[32m## References
+
+[0m
+[32mdocument_1.txt. (n.d.). *Question generation from a knowledge base with web exploration* [Unpublished manuscript].
+
+[0m
+[32mdocument_2.txt. (n.d.). *Third-party research note: Question generation from a knowledge base with web exploration* [Research note].[0m
+INFO:     [10:42:56] 📝 Report written for 'How many hand-crafted templates did they have to make?'
+B3_C_ranked: ok calls=3 in=7277 out=10047 $0.0142 rep=14705 ctx=30120 doc1=28 doc2=12 paper_decisive=True
+Warning: Invalid retriever(s) found: offline_null. Valid options are: arxiv, bing, bocha, brave, crw, custom, duckduckgo, exa, getxapi, google, groundroute, mcp, openalex, pubmed_central, searchapi, searx, semantic_scholar, serpapi, serper, tavily, xquik.. Defaulting to 'tavily' retriever.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4474.09it/s]
+INFO:     [10:43:06] 🔍 Starting the research task for 'How many hand-crafted templates did they have to make?'...
+INFO:     [10:43:06] 💻 Technology Agent
+INFO:     [10:43:06] 🌐 Browsing the web to learn more about the task: How many hand-crafted templates did they have to make?...
+INFO:     [10:43:06] 🤔 Planning the research strategy and subtasks...
+INFO:     [10:43:09] 🗂️ I will conduct my research based on the following queries: ['How many hand-crafted templates did they have to make?', 'How many hand-crafted templates were created?', 'Number of hand-crafted templates they made', 'How many hand-crafted templates did they have to make?']...
+INFO:     [10:43:09] 
+🔍 Running research for 'How many hand-crafted templates did they have to make?'...
+INFO:     [10:43:09] 📚 Getting relevant content based on query: How many hand-crafted templates did they have to make?...
+INFO:     [10:43:09] 
+🔍 Running research for 'How many hand-crafted templates were created?'...
+INFO:     [10:43:09] 📚 Getting relevant content based on query: How many hand-crafted templates were created?...
+INFO:     [10:43:09] 
+🔍 Running research for 'Number of hand-crafted templates they made'...
+INFO:     [10:43:09] 📚 Getting relevant content based on query: Number of hand-crafted templates they made...
+INFO:     [10:43:09] 
+🔍 Running research for 'How many hand-crafted templates did they have to make?'...
+INFO:     [10:43:09] 📚 Getting relevant content based on query: How many hand-crafted templates did they have to make?...
+INFO:     [10:43:10] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:43:10] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:43:10] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:43:10] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:43:10] Finalized research step.
+💸 Total Research Costs: $0.026688560000000004
+INFO:     [10:43:10] ✍️ Writing report for 'How many hand-crafted templates did they have to make?'...
+[32m# Hand-Crafted Template Counts in Knowledge-Base Question Generation: A Detailed Report
+
+[0m
+[32m## Executive Summary
+
+[0m
+[32mThe reported manual template construction effort in the described question-generation work is **106 hand-crafted templates for the Freebase evaluation**, **103 hand-crafted templates for the in-house power tool domain knowledge base**, and **209 hand-crafted templates in total** across both evaluations ([Document 2](document_2.txt)). The Freebase templates were created for 500 randomly selected triples that share only 53 distinct predicates, yielding an average of two templates per predicate ([Document 1](document_1.txt); [Document 2](document_2.txt)). The power tool templates were created for 67 predicates ([Document 2](document_2.txt)). Therefore, if the query asks for the overall hand-crafted template count reported by the work, the answer is **209**; if it asks per evaluation, the answers are **106** and **103** respectively.
+
+[0m
+[32m## Introduction: The Template-Centric Approach to Question Generation
+
+[0m
+[32mQuestion generation from a knowledge base (KB) is the task of generating questions related to the domain of the input KB ([Document 1](document_1.txt)). The proposed system aims to generate fluent and natural questions while significantly reducing human effort by leveraging massive web resources ([Document 1](document_1.txt)). It contains sub-modules for question template construction, seed question generation, question expansion, and selection ([Document 1](document_1.txt)). Given an input KB, a small set of question templates is first constructed such that each template is associated with a predicate ([Document 1](document_1.txt)). A seed question set is generated by applying the template set on the input KB, and then more questions are retrieved from related questions iteratively retrieved from a search engine using already-obtained questions as search queries ([Document 1](document_1.txt)). The only human labor in this work is question template construction ([Document 1](document_1.txt)). This makes the template count a central measure of manual effort.
+
+[0m
+[32m## Direct Answer: 106, 103, and 209 Templates
+
+[0m
+[32m### Summary of Counts
+
+[0m
+[32mThe work reports two distinct template-construction efforts. For the Freebase evaluation, the authors hand-crafted **106 templates** ([Document 1](document_1.txt); [Document 2](document_2.txt)). For the in-house power tool domain KB, the authors hand-crafted **103 templates for 67 predicates** ([Document 2](document_2.txt)). Together with the 106 Freebase templates, the authors wrote **209 templates in total** ([Document 2](document_2.txt)). The paper reports this total in the template-construction experiment ([Document 2](document_2.txt)). Thus, the most comprehensive answer to “How many hand-crafted templates did they have to make?” is **209 templates total**, composed of **106 templates for Freebase** and **103 templates for the power tool domain**.
+
+[0m
+[32m### Table 1: Reported Template Construction by Evaluation
+
+[0m
+[32m| Evaluation / KB | Reported predicates | Hand-crafted templates | Average templates per predicate | Seed questions | Web-retrieved or expanded questions |
+[0m
+[32m|---|---:|---:|---:|---:|---:|
+[0m
+[32m| Freebase (500 randomly selected triples) | 53 distinct predicates | 106 | 2.0 | 991 | 1,529 from Google |
+[0m
+[32m| In-house power tool domain KB | 67 | 103 | ≈1.54 | 12,228 | 20,000 expanded with Google |
+[0m
+[32m| Total reported | 120 (sum of distinct predicate counts across separate KBs) | 209 | ≈1.74 | 13,219 (derived sum) | 21,529 (derived sum) |
+
+[0m
+[32mNote: The total row combines figures from two separate evaluations; the 209 template total is explicitly reported, while the seed-question and web-retrieved sums are derived from the reported components and are not presented as a single official combined total ([Document 1](document_1.txt); [Document 2](document_2.txt)).
+
+[0m
+[32m## Freebase Evaluation: 106 Templates for 500 Triples
+
+[0m
+[32m### Predicate-Based Compression
+
+[0m
+[32mFor the Freebase evaluation, the work uses 500 randomly selected triples ([Document 1](document_1.txt); [Document 2](document_2.txt)). The paper reports 106 hand-crafted templates for those 500 Freebase triples ([Document 2](document_2.txt)). The triples share only 53 distinct predicates, so the authors made 2 templates for each predicate on average ([Document 1](document_1.txt); [Document 2](document_2.txt)). Applying the templates to the triples generated 991 seed questions, and the experiment also retrieved 1,529 more questions from Google ([Document 1](document_1.txt); [Document 2](document_2.txt)). This design ties template creation to predicates, keeping the template set compact relative to the triple set ([Document 2](document_2.txt)).
+
+[0m
+[32mThe Freebase template count is particularly important because it demonstrates the predicate-based compression of manual effort. Instead of writing templates for each of the 500 triples, the authors wrote 106 templates for 53 predicates. That is roughly one template for every 4.7 triples, or two templates per predicate. The result was 991 seed questions, which is more than nine times the number of templates. This ratio illustrates the leverage of applying a small predicate-level template set to many entity pairs.
+
+[0m
+[32m## Power Tool Domain Evaluation: 103 Templates for 67 Predicates
+
+[0m
+[32m### Domain-Specific Scaling
+
+[0m
+[32mFor the in-house power tool domain knowledge base, the paper reports 67 predicates ([Document 2](document_2.txt)). For those 67 predicates, the authors hand-crafted 103 templates ([Document 2](document_2.txt)). This is an average of approximately 1.54 templates per predicate. The domain-specific KB has its own predicate set and required its own template set ([Document 2](document_2.txt)). In this domain, the system generated 12,228 seed questions, from which 20,000 more questions were expanded with Google ([Document 1](document_1.txt)). Examples of expanded questions include “how to change circular saw blade,” “how to measure lawn mower cutting height,” “how to sharpen drill bits on bench grinder,” “how does an oscillating multi tool work,” “how to cut a groove in wood without a router,” “what type of sander to use on deck,” “do i need a hammer drill,” and “can i use acrylic paint on wood” ([Document 1](document_1.txt)). Most were grammatical and relevant to the power tool domain, and most were informative and corresponded to a specific answer, except for “do I need a hammer drill,” which lacked context information ([Document 1](document_1.txt)). The system also generated complex questions beyond simple factoids, such as “how to cut a groove in wood without a router” ([Document 1](document_1.txt)).
+
+[0m
+[32mThe power tool count shows that the manual template-building effort scales with predicate coverage in each evaluation ([Document 2](document_2.txt)). A larger predicate set requires more templates, but the expansion and selection stages do the heavy lifting of producing many questions.
+
+[0m
+[32m## Aggregate Manual Effort: 209 Templates
+
+[0m
+[32m### Total Reported Figure
+
+[0m
+[32mThe aggregate figure is **209 hand-crafted templates**: 106 for Freebase plus 103 for the power tool domain ([Document 2](document_2.txt)). The paper reports this total in the template-construction experiment ([Document 2](document_2.txt)). The Freebase and power tool counts provide the reported template-construction figures for the system ([Document 2](document_2.txt)). These figures show the manual template-building effort scales with predicate coverage in each evaluation ([Document 2](document_2.txt)). In my assessment, 209 templates is a modest manual investment compared with alternative approaches that rely on large human-labeled datasets. For example, prior work treating question generation as machine translation trained a neural machine translation (NMT) system with 10,000 ⟨triple, question⟩ pairs, and the question part of those pairs was human generated, requiring a large amount of human effort ([Document 1](document_1.txt)). The template-based system instead centralizes human labor into 209 predicate-level templates and then uses web resources for expansion ([Document 1](document_1.txt); [Document 2](document_2.txt)).
+
+[0m
+[32m## Why the Template Count Is Relatively Small
+
+[0m
+[32mThe paper explains that the system does not require a large number of templates because of two main factors: (1) iterative question expansion can produce a large number of questions even with a relatively small number of seed questions, as seen in the experiments, and (2) multiple entities in the KB share the same predicates ([Document 1](document_1.txt)). Another advantage is that the system can easily generate updated questions as the web is self-updating consistently ([Document 1](document_1.txt)). This is why 106 templates can cover 500 Freebase triples and why 103 templates can cover 67 power tool predicates. The template set is associated with predicates, not with individual triples or entities, so the manual work is amortized across many KB facts ([Document 1](document_1.txt); [Document 2](document_2.txt)).
+
+[0m
+[32m## Evaluation and Quality Context
+
+[0m
+[32mThe evaluation of the generated questions involved human graders. Evaluated by three human graders, questions generated by the system were significantly better than the comparison system on grammaticality and naturalness ([Document 1](document_1.txt)). For the Freebase evaluation, the authors trained a 4-gram language model on Gigaword (LDC2011T07) with Kneser-Ney smoothing to evaluate fluency, and using the averaged language model score as an index, the top 500 questions were selected to compare with the results from the other system ([Document 1](document_1.txt)). Three native English speakers evaluated the fluency and naturalness—whether people will ask in reality—of both results based on a 4-point scheme where 4 is the best ([Document 1](document_1.txt)). The abstract also states that questions generated by the system were judged to be more fluent than those of the comparison system by human graders on the 500 random-selected Freebase triples ([Document 1](document_1.txt)). This quality context matters because it suggests that the relatively small template count did not come at the cost of fluency or naturalness in the reported evaluation.
+
+[0m
+[32m## Comparison with Prior Work and Human Effort
+
+[0m
+[32mThe paper contrasts its approach with previous work that relies on massive human-labeled data ([Document 1](document_1.txt)). Treating question generation as a machine translation problem, prior work trained an NMT system with 10,000 ⟨triple, question⟩ pairs; the question part of the 10,000 pairs was human generated, which requires a large amount of human effort ([Document 1](document_1.txt)). In addition, the grammaticality and naturalness of generated questions in that approach could not be guaranteed, as seen in Table 1 of the source ([Document 1](document_1.txt)). The template-based approach uses 209 templates total, which is a different and much smaller unit of manual effort than 10,000 human-generated questions. The comparison is not perfectly apples-to-apples because templates can generate many questions and are not themselves full questions, but the reported counts do indicate a substantially different allocation of human labor ([Document 1](document_1.txt); [Document 2](document_2.txt)).
+
+[0m
+[32m## Methodological Significance
+
+[0m
+[32mThe methodological significance of the 209-template figure is that it quantifies the only human labor in the system ([Document 1](document_1.txt)). The system first constructs a small set of question templates, each associated with a predicate in the KB ([Document 1](document_1.txt); [Document 2](document_2.txt)). For example, in the power tool domain, the template “how to use #X#” was constructed for the predicate “performsActivity” ([Document 1](document_1.txt)). The seed question “how to use jigsaw” was generated by applying the template to the triple ⟨jigsaw, performsActivity, CurveCut⟩, and then related questions were retrieved from Google using that seed question ([Document 1](document_1.txt)). This pipeline shows how a single predicate-level template can yield a seed question that then unlocks web-scale expansion. The 209 templates are therefore not the final question set; they are the manual seed mechanism that enables automatic expansion and selection.
+
+[0m
+[32m## Limitations and Caveats
+
+[0m
+[32m### Source Reliability
+
+[0m
+[32mSeveral caveats apply to the interpretation of the template counts. First, the 209 total is reported in the third-party research note ([Document 2](document_2.txt)), while the primary document excerpts explicitly report the 106 Freebase templates ([Document 1](document_1.txt)). The 103 power tool templates and the 209 total are provided in the research note that synthesizes the paper ([Document 2](document_2.txt)).
+
+[0m
+[32m### Derived Totals
+
+[0m
+[32mSecond, the total row in Table 1 combines two separate evaluations; the 209 template total is official, but the combined seed-question and web-retrieved sums are derived and should be treated as descriptive rather than as a reported aggregate ([Document 1](document_1.txt); [Document 2](document_2.txt)). Third, the number of distinct predicates across the two KBs is reported separately: 53 for Freebase and 67 for the power tool domain ([Document 1](document_1.txt); [Document 2](document_2.txt)). The sum of 120 is arithmetic and does not imply a single unified predicate set. Fourth, the sources do not report a template count for any other KB or evaluation beyond Freebase and the power tool domain ([Document 2](document_2.txt)). Finally, the quality evaluation focuses on fluency, naturalness, grammaticality, and domain relevance; the provided information does not report a direct cost-benefit analysis of template construction time ([Document 1](document_1.txt); [Document 2](document_2.txt)).
+
+[0m
+[32m## Conclusion
+
+[0m
+[32mThe direct answer to the query is that the authors hand-crafted **106 templates for the Freebase evaluation** and **103 templates for the in-house power tool domain knowledge base**, for a reported total of **209 hand-crafted templates** ([Document 1](document_1.txt); [Document 2](document_2.txt)). The Freebase templates covered 500 randomly selected triples with 53 distinct predicates, averaging two templates per predicate, and produced 991 seed questions plus 1,529 Google-retrieved questions ([Document 1](document_1.txt); [Document 2](document_2.txt)). The power tool templates covered 67 predicates and supported 12,228 seed questions plus 20,000 Google-expanded questions ([Document 1](document_1.txt); [Document 2](document_2.txt)). The reported design ties template creation to predicates, keeping the manual template set compact relative to the triple set and leveraging web exploration for scale ([Document 2](document_2.txt)). In my assessment, the 209-template total is the key manual-effort figure, and it supports the paper’s claim that the system reduces human effort by concentrating manual work into predicate-level templates and delegating expansion to web resources ([Document 1](document_1.txt); [Document 2](document_2.txt)).
+
+[0m
+[32m## References
+
+[0m
+[32mDocument 1. (n.d.). [Untitled manuscript on question generation from a knowledge base with web exploration]. [document_1.txt](document_1.txt).
+
+[0m
+[32mDocument 2. (n.d.). Third-party research note: Question generation from a knowledge base with web exploration. [document_2.txt](document_2.txt).[0m
+INFO:     [10:43:49] 📝 Report written for 'How many hand-crafted templates did they have to make?'
+B3_P_ranked: ok calls=3 in=7224 out=13019 $0.0178 rep=15334 ctx=30035 doc1=28 doc2=12 paper_decisive=False
+Warning: Invalid retriever(s) found: offline_null. Valid options are: arxiv, bing, bocha, brave, crw, custom, duckduckgo, exa, getxapi, google, groundroute, mcp, openalex, pubmed_central, searchapi, searx, semantic_scholar, serpapi, serper, tavily, xquik.. Defaulting to 'tavily' retriever.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4569.20it/s]
+INFO:     [10:43:57] 🔍 Starting the research task for 'How many layers does their model have?'...
+INFO:     [10:43:57] 🤖 AI Research Agent
+INFO:     [10:43:57] 🌐 Browsing the web to learn more about the task: How many layers does their model have?...
+INFO:     [10:43:57] 🤔 Planning the research strategy and subtasks...
+INFO:     [10:44:02] 🗂️ I will conduct my research based on the following queries: ['How many layers does their model have?', 'What is the number of layers in their model?', 'How many layers are in their model architecture?', 'How many layers does their model have?']...
+INFO:     [10:44:02] 
+🔍 Running research for 'How many layers does their model have?'...
+INFO:     [10:44:02] 📚 Getting relevant content based on query: How many layers does their model have?...
+INFO:     [10:44:02] 
+🔍 Running research for 'What is the number of layers in their model?'...
+INFO:     [10:44:02] 📚 Getting relevant content based on query: What is the number of layers in their model?...
+INFO:     [10:44:02] 
+🔍 Running research for 'How many layers are in their model architecture?'...
+INFO:     [10:44:02] 📚 Getting relevant content based on query: How many layers are in their model architecture?...
+INFO:     [10:44:02] 
+🔍 Running research for 'How many layers does their model have?'...
+INFO:     [10:44:02] 📚 Getting relevant content based on query: How many layers does their model have?...
+INFO:     [10:44:04] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:44:04] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:44:04] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:44:04] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:44:04] Finalized research step.
+💸 Total Research Costs: $0.029607840000000003
+INFO:     [10:44:04] ✍️ Writing report for 'How many layers does their model have?'...
+[32m# How Many Layers Does Their Model Have? A Detailed Report on the Single-Classifier Bidirectional LSTM WSD Architecture
+
+[0m
+[32m## Executive Summary
+
+[0m
+[32mBased on the provided source documents, the model in question—the single-classifier bidirectional LSTM (BLSTM) network for word sense disambiguation (WSD)—has **6 layers**. This count is stated explicitly in Section 3 of the paper, which describes “One Single BLSTM network for WSD.” The architecture “consist of 6 layers which are a sigmoid layer (at the top), a fully-connected layer, a concatenation layer, a BLSTM layer, a cosine layer, and a sense and word embeddings layer (on the bottom)” ([document_1.txt](document_1.txt)). A third-party research note confirms that “the proposed single BLSTM model for word sense disambiguation has 6 layers” and that the layer count is explicit: 6 layers ([document_2.txt](document_2.txt)). No other total layer count is stated anywhere in the provided material. Therefore, the answer to the query is unambiguous: the model has **six layers**.
+
+[0m
+[32m## Introduction
+
+[0m
+[32mThe query asks how many layers the model has. In neural network architecture descriptions, layer count can be ambiguous because researchers sometimes count subcomponents differently—for example, treating a bidirectional LSTM as two separate LSTM layers, or excluding embedding layers. In this case, however, the source documents are explicit and internally consistent. The model is a single-classifier BLSTM network for WSD, and the paper’s Section 3 states the total layer count directly. The purpose of this report is to explain the exact count, enumerate the named layers, clarify why the BLSTM is counted as one layer rather than two, and situate the layer count within the model’s performance context.
+
+[0m
+[32m## Explicit Layer Count: 6 Layers
+
+[0m
+[32m### The Paper’s Stated Total
+
+[0m
+[32mThe primary evidence comes from the paper’s own architectural description. Section 3, titled “One Single BLSTM network for WSD,” states that “[t]he architecture of our model, depicted in Fig. 1, consist of 6 layers” ([document_1.txt](document_1.txt)). The paper then lists those layers in order from top to bottom:
+
+[0m
+[32m1. Sigmoid layer (at the top)
+[0m
+[32m2. Fully-connected layer
+[0m
+[32m3. Concatenation layer
+[0m
+[32m4. BLSTM layer
+[0m
+[32m5. Cosine layer
+[0m
+[32m6. Sense and word embeddings layer (on the bottom)
+
+[0m
+[32mThis is not an inference from a diagram or an implicit count. It is a direct statement of total layer count accompanied by an exhaustive enumeration of the named components. The third-party research note reinforces this reading: “The paper reports that the proposed single BLSTM model for word sense disambiguation has 6 layers. Section 3 One Single BLSTM network for WSD states that the architecture, depicted in Fig. 1, consists of 6 layers. The layer count is explicit: 6 layers” ([document_2.txt](document_2.txt)).
+
+[0m
+[32m### No Competing Total Layer Count
+
+[0m
+[32mThe provided information also addresses whether there might be another, conflicting layer count elsewhere in the paper. Document 2 states: “No other explicit total layer count for the model is stated in the paper. The explicit total layer count given is 6 layers” ([document_2.txt](document_2.txt)). This matters because architecture papers sometimes mention layer sizes, hidden units, or sublayer counts in different sections, which can create confusion. Here, the only explicit total is 6. The named components together define the full layer structure, and the count of those named components is exactly 6 ([document_2.txt](document_2.txt)).
+
+[0m
+[32m### Why the Count Is Unambiguous
+
+[0m
+[32mThe count is unambiguous for three reasons. First, the paper uses the word “consist of 6 layers” rather than saying “approximately” or “roughly” ([document_1.txt](document_1.txt)). Second, it lists exactly six named layers, so the total is not left to the reader to calculate from a figure. Third, the third-party note independently repeats the same number and emphasizes that the BLSTM is treated as one layer within that total ([document_2.txt](document_2.txt)). The combined evidence leaves no reasonable basis for a different count.
+
+[0m
+[32m## Layer-by-Layer Breakdown
+
+[0m
+[32mThe six layers can be described in terms of their position and function. The table below summarizes the architecture from top to bottom, using the names and roles given in the source documents.
+
+[0m
+[32m| Position | Layer Name | Function and Notes |
+[0m
+[32m|---|---|---|
+[0m
+[32m| 1 (top) | Sigmoid layer | Classification layer that outputs the probability distribution over senses; its weights are denoted \(W_{out} \in \mathbb{R}^{1 \times 50}\) and bias \(b_{out} \in \mathbb{R}\) ([document_1.txt](document_1.txt)). |
+[0m
+[32m| 2 | Fully-connected layer | A dense layer whose outputs are subject to dropout; the paper refers to dropout being applied to “the outputs of the merge and fully-connected layers” ([document_1.txt](document_1.txt)). |
+[0m
+[32m| 3 | Concatenation layer | Also called the merge layer; it produces \(h_{cl}\), the result of the merge layer (concatenation), which is then passed onward ([document_1.txt](document_1.txt)). |
+[0m
+[32m| 4 | BLSTM layer | A single bidirectional LSTM layer that encodes sequential information; it is treated as one layer in the total count ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). |
+[0m
+[32m| 5 | Cosine layer | Computes cosine similarities between a true sense and its preceding and succeeding context words; the paper investigates whether the sequential follow of these similarities carries pattern-like information that can be encoded with BLSTM ([document_1.txt](document_1.txt)). |
+[0m
+[32m| 6 (bottom) | Sense and word embeddings layer | The embedding layer at the bottom, which includes sense and word embeddings; the paper includes it as one of the six layers ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). |
+
+[0m
+[32mThis table reflects the paper’s own ordering. The sigmoid layer sits at the top, and the sense and word embeddings layer sits at the bottom ([document_1.txt](document_1.txt)). The third-party note explicitly states that “[t]he sense and word embeddings layer sits on the bottom, and the sigmoid layer sits at the top” ([document_2.txt](document_2.txt)).
+
+[0m
+[32m## The BLSTM as a Single Layer
+
+[0m
+[32mA critical point for answering the layer-count query is how the BLSTM is counted. A bidirectional LSTM technically processes input in both forward and backward directions, and it is sometimes described as two LSTMs. If one were to count those as two separate layers, the total would change. However, the source documents are clear that the BLSTM is treated as **one layer** within the total count.
+
+[0m
+[32mDocument 2 states: “The BLSTM is treated as one layer within the total layer count; the paper lists the BLSTM layer as one of the six layers. The model therefore uses a single BLSTM layer as a component within the 6 layers” ([document_2.txt](document_2.txt)). This is consistent with the paper’s own phrasing, which lists “a BLSTM layer” as one item among the six ([document_1.txt](document_1.txt)). It is also consistent with the experimental table, which compares the full network against alternatives such as “Fully-connected layers instead of BLSTM layer” ([document_1.txt](document_1.txt)). If the BLSTM were counted as two layers, the paper would likely have described it as two LSTM layers or as a bidirectional layer with two sublayers. Instead, it consistently refers to “a BLSTM layer” and “our Bidirectional LSTMs” as a replaceable structural component ([document_1.txt](document_1.txt)).
+
+[0m
+[32mThis distinction matters because the query asks for the number of layers in “their model.” The paper’s own convention is to count the BLSTM as one layer, and the total is therefore six, not seven or eight.
+
+[0m
+[32m## Total Layer Count and Model Performance
+
+[0m
+[32mThe layer count is not merely a descriptive detail; it is tied to the model’s design and evaluation. The full network with six layers achieves an F-measure of **72.5%** on the WSD task, as shown in Table 4 of the paper ([document_1.txt](document_1.txt)). The same table reports the effects of altering the architecture or hyperparameters. These comparisons help confirm which components are considered layers and how the BLSTM fits into the overall structure.
+
+[0m
+[32m| Network Variant | F-measure (%) |
+[0m
+[32m|---|---|
+[0m
+[32m| Full network in Fig. 1 | 72.5 |
+[0m
+[32m| BLSTM with reverse directions in Fig. 1 | 68.9 |
+[0m
+[32m| BLSTM with a shuffled context | 67.3 |
+[0m
+[32m| Fully-connected layers instead of BLSTM layer | 70.2 |
+[0m
+[32m| BLSTM without GloVe for the context (all weights are random) | 65.6 |
+[0m
+[32m| BLSTM without word dropout | 71.1 |
+[0m
+[32m| BLSTM with a larger context size [25 left, 25 right] | 71.4 |
+
+[0m
+[32mSource: ([document_1.txt](document_1.txt)).
+
+[0m
+[32mSeveral observations follow from this table. First, the full six-layer network is the best-performing configuration among those tested, with 72.5% F-measure. Second, replacing the BLSTM layer with fully connected layers reduces performance to 70.2%, which supports the paper’s argument that the BLSTM layer contributes important sequential modeling capacity ([document_1.txt](document_1.txt)). Third, removing pretrained GloVe embeddings from the context drops performance to 65.6%, the lowest in the table, indicating the importance of the embedding layer at the bottom of the architecture ([document_1.txt](document_1.txt)). Fourth, reversing the BLSTM directions or shuffling the context lowers performance to 68.9% and 67.3%, respectively, which the authors interpret as evidence that the sequential order of cosine similarities carries useful pattern-like information ([document_1.txt](document_1.txt)).
+
+[0m
+[32mThe paper also compares the single-classifier BLSTM against other WSD systems. In one ranking table, the model’s 72.5% places it below Multi-classifier BLSTM (73.4%) and IMS+adapted CW (73.4%), and just above nusels (72.4%) ([document_1.txt](document_1.txt)). The full ranking excerpt is as follows:
+
+[0m
+[32m| Rank | System | Score |
+[0m
+[32m|---|---|---|
+[0m
+[32m| 1 | Multi-classifier BLSTM | 73.4 |
+[0m
+[32m| 1 | IMS+adapted CW | 73.4 |
+[0m
+[32m| 2 | htsa3 | 72.9 |
+[0m
+[32m| 3 | IRST-Kernels | 72.6 |
+[0m
+[32m| 4 | Our Single-classifier BLSTM | 72.5 |
+[0m
+[32m| 5 | nusels | 72.4 |
+[0m
+[32m| 35 | IRST-Ties | 58.9 |
+[0m
+[32m| 37 | R2D2 | 57.2 |
+[0m
+[32m| 39 | NRC-Coarse | 48.5 |
+[0m
+[32m| 40 | NRC-Coarse2 | 48.4 |
+[0m
+[32m| 42 | DLSI-UA-LS-SU | 44.4 |
+
+[0m
+[32mSource: ([document_1.txt](document_1.txt)).
+
+[0m
+[32mThese performance figures do not change the layer count, but they contextualize the architecture. The six-layer model is competitive with state-of-the-art supervised WSD systems, and its design choices—including a single BLSTM layer rather than multiple stacked recurrent layers—appear deliberate. The paper emphasizes that, unlike other supervised neural WSD networks that use a softmax layer with cross-entropy or hinge loss and select weight matrices per ambiguous word, this network “shares parameters over all words’ senses” ([document_1.txt](document_1.txt)). That parameter-sharing design is part of what makes the six-layer architecture distinctive.
+
+[0m
+[32m## Alternative Interpretations and Clarifications
+
+[0m
+[32mGiven the query “How many layers does their model have?”, it is worth addressing possible alternative interpretations. One might ask whether the embedding layer should count as a layer. The paper explicitly includes it: “The paper includes the sense and word embeddings layer as one of the six layers, on the bottom” ([document_2.txt](document_2.txt)). One might also ask whether the concatenation layer and the fully-connected layer are separate layers. The paper lists them separately: “a sigmoid layer (at the top), a fully-connected layer, a concatenation layer, a BLSTM layer, a cosine layer, and a sense and word embeddings layer (on the bottom)” ([document_1.txt](document_1.txt)). Finally, one might ask whether the BLSTM should count as two layers because it is bidirectional. As established above, the paper and the third-party note treat it as one layer ([document_2.txt](document_2.txt)).
+
+[0m
+[32mAnother potential source of confusion is the terminology “deep bidirectional LSTM network” in the third-party note’s title. The word “deep” might suggest many stacked layers, but in this context it refers to the overall deep architecture and the use of a BLSTM component, not to a large number of recurrent layers. The paper’s own count remains six named layers, with a single BLSTM layer as one of them ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)).
+
+[0m
+[32mIt is also worth noting what the sources do **not** say. They do not state that the model has 5 layers, 7 layers, or any other total. They do not suggest that the BLSTM comprises two separately counted layers. They do not exclude the embedding layer from the count. The only explicit total is six, and the named components sum to six.
+
+[0m
+[32m## Conclusion
+
+[0m
+[32mThe model described in the provided sources—the single-classifier bidirectional LSTM network for word sense disambiguation—has **6 layers**. The paper states this directly: the architecture “consist of 6 layers” and lists them as a sigmoid layer, a fully-connected layer, a concatenation layer, a BLSTM layer, a cosine layer, and a sense and word embeddings layer ([document_1.txt](document_1.txt)). The third-party research note independently confirms that the layer count is explicit and that the BLSTM is treated as one layer within that total ([document_2.txt](document_2.txt)). No other total layer count appears in the provided information. The full six-layer network achieves a 72.5% F-measure on the WSD evaluation, and the paper’s ablation-style comparisons further illuminate the role of each component ([document_1.txt](document_1.txt)). Based on the evidence, the answer to the query is definitive: **six layers**.
+
+[0m
+[32m## References
+
+[0m
+[32m- Document 1. (n.d.). *One Single BLSTM network for WSD* [Source document]. [document_1.txt](document_1.txt)
+[0m
+[32m- Document 2. (n.d.). *Third-party research note: One Single Deep Bidirectional LSTM Network for Word Sense Disambiguation of Text Data* [Source document]. [document_2.txt](document_2.txt)[0m
+INFO:     [10:44:24] 📝 Report written for 'How many layers does their model have?'
+B4_C_ranked: ok calls=3 in=8423 out=6980 $0.0109 rep=13900 ctx=29901 doc1=32 doc2=8 paper_decisive=True
+Warning: Invalid retriever(s) found: offline_null. Valid options are: arxiv, bing, bocha, brave, crw, custom, duckduckgo, exa, getxapi, google, groundroute, mcp, openalex, pubmed_central, searchapi, searx, semantic_scholar, serpapi, serper, tavily, xquik.. Defaulting to 'tavily' retriever.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4472.88it/s]
+INFO:     [10:44:36] 🔍 Starting the research task for 'How many layers does their model have?'...
+INFO:     [10:44:36] 🤖 AI Agent
+INFO:     [10:44:36] 🌐 Browsing the web to learn more about the task: How many layers does their model have?...
+INFO:     [10:44:36] 🤔 Planning the research strategy and subtasks...
+INFO:     [10:44:39] 🗂️ I will conduct my research based on the following queries: ['How many layers does their model have', 'What is the number of layers in their model', 'How many layers are in their model architecture', 'How many layers does their model have?']...
+INFO:     [10:44:39] 
+🔍 Running research for 'How many layers does their model have'...
+INFO:     [10:44:39] 📚 Getting relevant content based on query: How many layers does their model have...
+INFO:     [10:44:39] 
+🔍 Running research for 'What is the number of layers in their model'...
+INFO:     [10:44:39] 📚 Getting relevant content based on query: What is the number of layers in their model...
+INFO:     [10:44:39] 
+🔍 Running research for 'How many layers are in their model architecture'...
+INFO:     [10:44:39] 📚 Getting relevant content based on query: How many layers are in their model architecture...
+INFO:     [10:44:39] 
+🔍 Running research for 'How many layers does their model have?'...
+INFO:     [10:44:39] 📚 Getting relevant content based on query: How many layers does their model have?...
+INFO:     [10:44:40] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:44:40] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:44:40] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:44:40] 📚 Combined research context: 0 MCP sources, web content
+INFO:     [10:44:40] Finalized research step.
+💸 Total Research Costs: $0.035638159999999995
+INFO:     [10:44:40] ✍️ Writing report for 'How many layers does their model have?'...
+[32m# How Many Layers Does the Single Classifier BLSTM Word Sense Disambiguation Model Have?
+
+[0m
+[32m## 1. Introduction and Statement of the Query
+
+[0m
+[32mThe architecture in question is the single-classifier bidirectional LSTM (BLSTM) network proposed for word sense disambiguation (WSD) of text data, presented in the paper *One Single Deep Bidirectional LSTM Network for Word Sense Disambiguation of Text Data* ([document_1.txt](document_1.txt)). The specific query — "How many layers does their model have?" — is answered explicitly in the paper's Section 3, which states that the architecture depicted in Fig. 1 "consist[s] of 6 layers" ([document_1.txt](document_1.txt)). A second source, a third-party research note, reports the same model as having 5 layers ([document_2.txt](document_2.txt)). This report examines both accounts, weighs their reliability, and delivers a concrete, defensible answer: **the model has six named layers**, and the five-layer figure is an incomplete enumeration that omits the cosine layer.
+
+[0m
+[32mThe discrepancy is not a matter of interpretive taste about what counts as a "layer." Both sources count the input embeddings, the concatenation/merge operation, the BLSTM, the fully-connected layer, and the sigmoid classifier. The entire disagreement reduces to one component: the cosine layer, which appears in the primary paper's enumeration but is absent from the third-party note's list.
+
+[0m
+[32m## 2. Direct Evidence from the Primary Paper: Six Layers
+
+[0m
+[32m### 2.1 The Explicit Enumeration in Section 3
+
+[0m
+[32mThe primary source is unambiguous and self-contained. Section 3, titled "One Single BLSTM network for WSD," opens with the following statement:
+
+[0m
+[32m> "Given a document and the position of a target word, our model computes a probability distribution over possible senses related to that word. The architecture of our model, depicted in Fig. 1, consist of 6 layers which are a sigmoid layer (at the top), a fully-connected layer, a concatenation layer, a BLSTM layer, a cosine layer, and a sense and word embeddings layer (on the bottom)." ([document_1.txt](document_1.txt))
+
+[0m
+[32mThis single sentence supplies three distinct pieces of information: an explicit total (6), an exhaustive ordered list of the six components, and their vertical ordering (sigmoid at the top; sense and word embeddings at the bottom). The count is not inferred, aggregated, or reconstructed from a figure — it is stated numerically in prose. That is the strongest possible form of evidence for a layer-count query, because it removes the need to adjudicate whether particular functional blocks (such as a concatenation operation) "deserve" to be called layers; the authors themselves make that determination and enumerate accordingly.
+
+[0m
+[32m### 2.2 Corroborating Functional Evidence for the Cosine Layer
+
+[0m
+[32mThe paper's own experimental narrative reinforces that a cosine-comparison stage is a genuine, load-bearing part of the network rather than an incidental detail. In the description of the ablation study, the authors write that "it is expected that the cosine similarities of closer words (in the context) to the true sense be larger than the incorrect senses'" and that they set out to test "if a series of cosine similarities can be encoded through an LSTM (or BLSTM) network" ([document_1.txt](document_1.txt)). Cosine similarity between the target sense and its surrounding context words is thus the quantity the BLSTM sequentially encodes — which means the cosine layer sits functionally between the embedding layer and the BLSTM, exactly where the six-layer enumeration places it. Removing it from an inventory of the architecture is therefore not a harmless simplification; it deletes the operation that generates the network's input signal to the recurrent stage.
+
+[0m
+[32m## 3. The Competing Five-Layer Account
+
+[0m
+[32m### 3.1 Content of the Third-Party Research Note
+
+[0m
+[32mThe second source is described in its own text as a "Third-party research note" addressed to questions including "Pesaranghader BLSTM WSD network architecture components" and "BLSTM word sense disambiguation model layer count" ([document_2.txt](document_2.txt)). It asserts:
+
+[0m
+[32m> "The named layers that make up the architecture are a sigmoid layer (at the top), a fully-connected layer, a concatenation layer, a BLSTM layer, and a sense and word embeddings layer." ([document_2.txt](document_2.txt))
+
+[0m
+[32mIt further states that "The paper reports that the proposed single BLSTM model for word sense disambiguation has 5 layers" and that "Section 3 One Single BLSTM network for WSD states that the architecture, depicted in Fig. 1, consists of 5 layers" ([document_2.txt](document_2.txt)). Notably, the same note claims that "No other explicit total layer count for the model is stated in the paper" ([document_2.txt](document_2.txt)) — a claim directly falsified by the primary source's sentence quoted in Section 2.1 above ([document_1.txt](document_1.txt)).
+
+[0m
+[32m### 3.2 Assessment of Source Reliability
+
+[0m
+[32mReliability must be weighed here rather than assumed. The two documents differ in provenance, proximity to the original work, and internal consistency.
+
+[0m
+[32m| Criterion | Primary paper excerpt ([document_1.txt](document_1.txt)) | Third-party note ([document_2.txt](document_2.txt)) |
+[0m
+[32m|---|---|---|
+[0m
+[32m| Relationship to the model | Authored account of the model; reports its own Fig. 1 and Section 3 | External commentary summarising the paper |
+[0m
+[32m| Layer count stated | 6 | 5 |
+[0m
+[32m| Components listed | Sigmoid, fully-connected, concatenation, BLSTM, cosine, sense and word embeddings | Sigmoid, fully-connected, concatenation, BLSTM, sense and word embeddings |
+[0m
+[32m| Missing relative to the other | — | Cosine layer |
+[0m
+[32m| Internal consistency | Count matches its own six-item list | Count matches its own five-item list, but contradicts the primary text it summarises |
+[0m
+[32m| Claim about other totals | Provides the explicit total | States "no other explicit total layer count … is stated in the paper" |
+
+[0m
+[32mTwo features of the table are decisive. First, the third-party note's five-item list and its five-layer total are internally consistent with each other but exclude a component that the primary source explicitly names. Second, the note misdescribes the primary source's own statements about the total, which weakens its authority as a summary. Where a secondary summary and the underlying text conflict on a factual enumeration, the underlying text governs.
+
+[0m
+[32m## 4. Reconciliation: Why Six Is the Defensible Count
+
+[0m
+[32mMy assessment is that the model has **six layers**, and that the five-layer figure arises from an omission of the cosine layer during summarisation rather than from a different, equally valid counting convention. Three considerations support this position.
+
+[0m
+[32mFirst, both sources employ the same counting convention on every other component. They both count the sense and word embeddings layer as a layer ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)); they both count the concatenation/merge layer as a layer ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)); they both count the BLSTM as a single layer ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). In other words, the note does not adopt a stricter definition that would exclude input or merging layers — it would have had to exclude three of its own five entries to do so. The one-point difference therefore cannot be explained by convention; it can only be explained by the absent cosine layer.
+
+[0m
+[32mSecond, the primary source contains internal evidence that the cosine layer is real and operative, as discussed in Section 2.2: the ablation study is organised around whether sequences of cosine similarities can be encoded by the BLSTM ([document_1.txt](document_1.txt)). An architecture that computes and sequences cosine similarities between sense and context embeddings must contain the operation that performs that computation.
+
+[0m
+[32mThird, the second source's assertion that no other explicit total exists in the paper is demonstrably inaccurate ([document_2.txt](document_2.txt); [document_1.txt](document_1.txt)). This is a verifiable error of fact about the primary text, which reduces confidence in the note's other summarising judgements, including its layer count.
+
+[0m
+[32m## 5. Layer-by-Layer Description of the Six-Layer Architecture
+
+[0m
+[32m### 5.1 Sense and Word Embeddings Layer (bottom)
+
+[0m
+[32mThis layer sits at the bottom of the stack and supplies vector representations for both the senses and the words of the context ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). The ablation table reports a variant in which the context embeddings are not initialised with GloVe ("BLSTM without GloVe for the context (all weights are random)") and which scores 65.6 F-measure, compared with 72.5 for the full network ([document_1.txt](document_1.txt)) — evidence that this layer is a substantive, trainable part of the architecture.
+
+[0m
+[32m### 5.2 BLSTM Layer
+
+[0m
+[32mA single BLSTM layer processes the sequence of sense–context similarity information in both directions ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). It is counted as one layer in the total ([document_2.txt](document_2.txt)). Its hidden states feed the subsequent hidden computation: the hidden layer h_cl is obtained as ReLU(W_h · [h^L_{C−1}; h^R_{C+1}] + b_h), i.e., a linear projection of the concatenated bidirectional states at neighbouring context positions, plus a bias, passed through a rectified linear unit ([document_1.txt](document_1.txt)). The dimension of the LSTM outputs is 50, as revealed by the comparison against "fully-connected networks of the same size 50 (the size of the LSTMs outputs)" ([document_1.txt](document_1.txt)).
+
+[0m
+[32m### 5.3 Cosine Layer
+
+[0m
+[32mThis is the component in dispute. It computes the cosine similarities between a true sense and its preceding and succeeding context words, producing the sequential signal that the BLSTM encodes ([document_1.txt](document_1.txt)). It is named in the primary source's six-layer enumeration but omitted from the third-party note's list ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)).
+
+[0m
+[32m### 5.4 Concatenation (Merge) Layer
+
+[0m
+[32mThe merge layer concatenates the bidirectional representations; its output is denoted h_cl, which is described as "the result of the merge layer (concatenation)" ([document_1.txt](document_1.txt)). Dropout is applied to the output of this merge layer, as well as to the embeddings and the fully-connected layer outputs ([document_1.txt](document_1.txt)).
+
+[0m
+[32m### 5.5 Fully-Connected Layer
+
+[0m
+[32mA fully-connected layer sits between the concatenation layer and the top sigmoid classifier ([document_1.txt](document_1.txt); [document_2.txt](document_2.txt)). Removing the recurrent stage in favour of two fully-connected networks of size 50 ("Fully-connected layers instead of BLSTM layer") reduced performance to 70.2 F-measure versus 72.5 for the full network, indicating that the fully-connected layer alone does not substitute for the BLSTM's sequential encoding ([document_1.txt](document_1.txt)).
+
+[0m
+[32m### 5.6 Sigmoid Classification Layer (top)
+
+[0m
+[32mThe top layer is a sigmoid classifier. Its weights and bias are given as W_out ∈ R^{1×50} and b_out ∈ R, taking h_cl as input and producing the classification output ([document_1.txt](document_1.txt)). The paper notes that, unlike other supervised neural WSD networks that use a softmax layer with cross-entropy or hinge loss and parameterise a separate weight matrix and bias vector per ambiguous word, this network shares parameters over all words' senses, which keeps it computationally efficient while encoding statistical information across words ([document_1.txt](document_1.txt)).
+
+[0m
+[32m## 6. Parameter and Dimensional Evidence Relevant to Layer Counting
+
+[0m
+[32mThe excerpted equations provide dimensional anchors that are consistent with a six-stage pipeline: a 50-dimensional hidden representation h_cl feeds a 1 × 50 weight matrix and a scalar bias in the sigmoid layer ([document_1.txt](document_1.txt)). The 50-dimensional scale recurs in the ablation comparison against "fully-connected networks of the same size 50 (the size of the LSTMs outputs)" ([document_1.txt](document_1.txt)). These are parameterisation facts rather than layer counts, but they confirm that the enumerated components — merge output, hidden projection, recurrent stage, classification head — are distinct computational stages with their own parameters, which is the practical definition of a layer in descriptions of this kind.
+
+[0m
+[32m## 7. Behavioural Evidence on the Contribution of Individual Layers
+
+[0m
+[32mThe ablation study ("Within-our-model comparisons") reports how the network behaves when particular components or inputs are altered ([document_1.txt](document_1.txt)). These figures quantify the contribution of the recurrent stage and the embeddings, and they are the paper's principal internal evidence about architectural necessity.
+
+[0m
+[32m| Configuration | F-measure (%) |
+[0m
+[32m|---|---|
+[0m
+[32m| Full network in Fig. 1 | 72.5 |
+[0m
+[32m| BLSTM with reversed directions | 68.9 |
+[0m
+[32m| BLSTM with a shuffled context | 67.3 |
+[0m
+[32m| Fully-connected layers instead of BLSTM layer | 70.2 |
+[0m
+[32m| BLSTM without GloVe for the context (weights random) | 65.6 |
+[0m
+[32m| BLSTM without word dropout | 71.1 |
+[0m
+[32m| BLSTM with a larger context size [25 left, 25 right] | 71.4 |
+
+[0m
+[32mSource: ([document_1.txt](document_1.txt)).
+
+[0m
+[32mFor external context, the full single-classifier network's 72.5 F-measure places it fifth in the reported ranking, behind a multi-classifier BLSTM (73.4, tied for first with IMS+adapted CW), htsa3 (72.9), and IRST-Kernels (72.6), and ahead of nusels (72.4); the ranking table extends down to 44.4 ([document_1.txt](document_1.txt)). These results concern performance, not layer count, but they establish that the six-layer network as described is a competitive, fully specified system rather than a schematic.
+
+[0m
+[32m## 8. Implications of the Discrepancy for Literature Users
+
+[0m
+[32mUsers of the secondary note should be aware of a specific failure mode: a summariser that recounts an architecture from a figure or from memory can silently drop a stage while still producing a numerically consistent count ([document_2.txt](document_2.txt)). The correct procedural response is to prefer the primary text's explicit enumeration and to verify totals against the full component list. Applied here, the check is straightforward: the primary list contains six items and states six ([document_1.txt](document_1.txt)); the secondary list contains five items and states five, and its claim that the paper states no total is false ([document_2.txt](document_2.txt)). Anyone citing the layer count for this WSD model should therefore cite six layers and attribute the figure to Section 3 of the paper.
+
+[0m
+[32m## 9. Conclusion
+
+[0m
+[32mThe single-classifier BLSTM model for word sense disambiguation has **6 layers**, as explicitly stated in Section 3 of the primary paper: a sigmoid layer at the top, a fully-connected layer, a concatenation layer, a BLSTM layer, a cosine layer, and a sense and word embeddings layer at the bottom ([document_1.txt](document_1.txt)). The BLSTM counts as one of those six layers ([document_2.txt](document_2.txt)). The competing five-layer figure reported by the third-party research note is best explained as an omission of the cosine layer, since the note otherwise adopts identical counting conventions for the embeddings, concatenation, and BLSTM components and even asserts, incorrectly, that the paper states no total layer count ([document_2.txt](document_2.txt); [document_1.txt](document_1.txt)). Where the two sources conflict, the primary text — which both enumerates the six named components and supplies corroborating functional evidence for the cosine stage in its own ablation discussion — is the more reliable authority ([document_1.txt](document_1.txt)).
+
+[0m
+[32m## References
+
+[0m
+[32mdocument_1.txt. (n.d.). *One single deep bidirectional LSTM network for word sense disambiguation of text data* [Excerpts from the primary paper, including Section 3 and Table 4]. Retrieved September 15, 2026.
+
+[0m
+[32mdocument_2.txt. (n.d.). *Third-party research note: One single deep bidirectional LSTM network for word sense disambiguation of text data* [Research note]. Retrieved September 15, 2026.[0m
+INFO:     [10:45:06] 📝 Report written for 'How many layers does their model have?'
+B4_P_ranked: ok calls=3 in=8087 out=8421 $0.0125 rep=16204 ctx=28387 doc1=32 doc2=8 paper_decisive=True
+STAGE C BATCH DONE: pilot* cum=$3.3094 (411 calls)
+EXIT 0

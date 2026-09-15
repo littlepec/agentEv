@@ -1,0 +1,28 @@
+{
+  "cell": "B4_C_F0",
+  "docpath_dir": "cell_05",
+  "task": "B4",
+  "condition": "C",
+  "arm": "F0",
+  "curate_sources": "false",
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "question": "How many layers does their model have?",
+  "prompt_tokens": 2063,
+  "completion_tokens": 5874,
+  "deepseek_cost_usd": 0.007668,
+  "report_chars": 12617,
+  "context_chars": 4927,
+  "n_llm_calls": 3,
+  "interp_header_in_context": true,
+  "interp_sha256": "c4872d1bf4807a33aa707a9e200918673d9bbbdd9c819bc8ff6db40641853d1b",
+  "curation_state": null,
+  "no_evidence_after_curation": null,
+  "elapsed_s": 35.1,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config",
+  "model": "deepseek-v4-flash"
+}

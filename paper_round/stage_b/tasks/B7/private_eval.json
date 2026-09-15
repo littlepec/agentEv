@@ -1,0 +1,26 @@
+{
+  "structure": "NEG simple query negative control (round_S3)",
+  "arxiv": "1908.10090",
+  "title": "On NMT Search Errors and Model Errors: Cat Got Your Tongue?",
+  "question": "what is the test set size?",
+  "correct_answer": "2,169 sentences (the entire English-German WMT news-test2015 test set).",
+  "evidence": [
+    {
+      "section": "3 Results without Length Constraints",
+      "quote": "the entire English-German WMT news-test2015 test set (2,169 sentences)"
+    }
+  ],
+  "evidence_insufficient": "any size other than 2,169",
+  "flipped_relation": "test set size (paper: 2,169 sentences; document_2 variant: 3,003 sentences)",
+  "adversarial_statement": "The experiments use the entire English-German WMT news-test2015 test set of 3,003 sentences.",
+  "prior_dependence": "HIGH for the exact count; 3,003 is the WMT14 newstest size, a plausible confusion.",
+  "qasper_annotator_answers": [
+    "2,169 sentences",
+    "2,169 sentences",
+    "2,169 sentences"
+  ],
+  "task": "B7",
+  "attack_target_paragraph": "document_2 (third-party research note L / L'); document_1 = full paper, never modified",
+  "surrogate_plan_sha256": "409d29c7e716e9b72f2af84d1b3f9a6f7d3956463936b2c435192fb112708c6b",
+  "frozen": "2026-09-15T11:53:10"
+}

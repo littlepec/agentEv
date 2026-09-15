@@ -1,0 +1,92 @@
+{
+  "1911.10742": {
+    "url": "https://ar5iv.labs.arxiv.org/html/1911.10742",
+    "chars": 54177,
+    "sha256": "60707895c93ed1c8f6df9a9ae789cdfdd879e0968ad228205117564b061f263d",
+    "key_strings_present": {
+      "220 human-human dialogs": true,
+      "3,044 sentences": true,
+      "12.45 turns": true,
+      "172 out of 220": true
+    }
+  },
+  "2001.05540": {
+    "url": "https://ar5iv.labs.arxiv.org/html/2001.05540",
+    "chars": 18739,
+    "sha256": "af12c8e1a5580285e440734a44519f351c5ad35986cd9a125a97f1ff72994da3",
+    "key_strings_present": {
+      "Insertion-Deletion": true,
+      "Caesar": true,
+      "shifted": true,
+      "BLEU": true,
+      "21.34": false,
+      "2.02": false
+    }
+  },
+  "1610.03807": {
+    "url": "https://ar5iv.labs.arxiv.org/html/1610.03807",
+    "chars": 19559,
+    "sha256": "61c4258415778b30ca31837fd4e0f2c4971b85b3ad8a2f412f7927dd9eed222c",
+    "key_strings_present": {
+      "106 templates": true,
+      "163 templates": true,
+      "53 distinct predicates": true,
+      "67 distinct predicates": true
+    }
+  },
+  "1802.09059": {
+    "url": "https://ar5iv.labs.arxiv.org/html/1802.09059",
+    "chars": 37338,
+    "sha256": "177f903253154b7f609bbf67965872fb16f1f864595e354eac965eb51d8dfa01",
+    "key_strings_present": {
+      "6 layers": true,
+      "cosine layer": true,
+      "concatenation layer": true,
+      "sigmoid layer": true
+    }
+  },
+  "1808.04122": {
+    "url": "https://ar5iv.labs.arxiv.org/html/1808.04122",
+    "chars": 48211,
+    "sha256": "4510b374605d3492158e0e69a5818e26375f442e2fbeb4b235a83b0368f0e4a4",
+    "key_strings_present": {
+      "25.1%": true,
+      "FB15k-237": true,
+      "Hits@10": true,
+      "0.105": true
+    }
+  },
+  "1706.02222": {
+    "url": "https://ar5iv.labs.arxiv.org/html/1706.02222",
+    "chars": 47838,
+    "sha256": "5bf943ffb80562de9cbbd452508899e0d21ec41d2cf6420fd308e1f7b273ea78",
+    "key_strings_present": {
+      "4.32%": true,
+      "2.22%": true,
+      "10.63%": true,
+      "10.42%": true,
+      "1.39 to 1.33": true,
+      "97.78 to 87.38": true
+    }
+  },
+  "1908.10090": {
+    "url": "https://ar5iv.labs.arxiv.org/html/1908.10090",
+    "chars": 27594,
+    "sha256": "de943a4325952ce4c27aab0c7233d70f01df10c400e5a7b8b0cc80e08f446cb1",
+    "key_strings_present": {
+      "2,169 sentences": true,
+      "news-test2015": true
+    }
+  },
+  "2002.04374": {
+    "url": "https://ar5iv.labs.arxiv.org/html/2002.04374",
+    "chars": 27235,
+    "sha256": "758908e22edbda584155302ab6345578ab0ae2c6a02bb68675f1a8e7ea3e3f25",
+    "key_strings_present": {
+      "PC-GITA": true,
+      "88 PD patients and 88 HC": true,
+      "100 native Czech speakers": true,
+      "50 PD, 50 HC": true
+    }
+  }
+}

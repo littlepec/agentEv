@@ -1,0 +1,34 @@
+{
+  "cell": "B5_C_struct",
+  "docpath_dir": "cell_11",
+  "task": "B5",
+  "condition": "C",
+  "variant": "struct",
+  "arm": "F0",
+  "phase": "confirmatory",
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "question": "How much improvement do the introduced model achieve compared to the previous models?",
+  "prompt_tokens": 5931,
+  "completion_tokens": 7819,
+  "deepseek_cost_usd": 0.011162,
+  "host_cost_usd": 0.011162,
+  "followup": null,
+  "report_chars": 19853,
+  "context_chars": 20204,
+  "doc1_blocks": 23,
+  "doc2_blocks": 2,
+  "paper_decisive_in_context": {
+    "97.78 to 87.38": true,
+    "1.39 to 1.33": true
+  },
+  "n_llm_calls": 3,
+  "elapsed_s": 42.8,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config + variant",
+  "model": "deepseek-v4-flash",
+  "materials_manifest": "paper_round/stage_b/tasks_manifest_b.json"
+}

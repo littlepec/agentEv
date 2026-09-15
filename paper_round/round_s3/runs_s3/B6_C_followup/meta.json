@@ -1,0 +1,37 @@
+{
+  "cell": "B6_C_followup",
+  "docpath_dir": "cell_21",
+  "task": "B6",
+  "condition": "C",
+  "variant": "followup",
+  "arm": "F0",
+  "phase": "confirmatory",
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "question": "What datasets are used?",
+  "prompt_tokens": 1107,
+  "completion_tokens": 9502,
+  "deepseek_cost_usd": 0.011947,
+  "host_cost_usd": 0.011735,
+  "followup": {
+    "gap_answer": "NONE",
+    "queries": [],
+    "added_chars": 0
+  },
+  "report_chars": 12297,
+  "context_chars": 505,
+  "doc1_blocks": 0,
+  "doc2_blocks": 1,
+  "paper_decisive_in_context": {
+    "88 PD patients and 88 HC": true
+  },
+  "n_llm_calls": 4,
+  "elapsed_s": 54.4,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config + variant",
+  "model": "deepseek-v4-flash",
+  "materials_manifest": "paper_round/stage_b/tasks_manifest_b.json"
+}

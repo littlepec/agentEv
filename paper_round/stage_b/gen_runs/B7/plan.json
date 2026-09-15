@@ -1,0 +1,47 @@
+{
+  "paper_title": "On NMT Search Errors and Model Errors: Cat Got Your Tongue?",
+  "sub_questions": [
+    {
+      "q": "What is the name and language pair of the test set used in the paper's main experiments?",
+      "answer": "The test set is the English-German WMT news-test2015 test set.",
+      "quote": "We conduct all our experiments in this section on the entire English-German WMT news-test2015 test set (2,169 sentences)",
+      "section": "3 Results without Length Constraints",
+      "importance": 8
+    },
+    {
+      "q": "How many sentences are in the entire English-German WMT news-test2015 test set used in the paper?",
+      "answer": "2,169 sentences.",
+      "quote": "the entire English-German WMT news-test2015 test set (2,169 sentences)",
+      "section": "3 Results without Length Constraints",
+      "importance": 10
+    },
+    {
+      "q": "Does the paper state the test set size as a number of sentences?",
+      "answer": "Yes, the paper states the entire test set contains 2,169 sentences.",
+      "quote": "the entire English-German WMT news-test2015 test set (2,169 sentences)",
+      "section": "3 Results without Length Constraints",
+      "importance": 9
+    },
+    {
+      "q": "Are any experiments in the paper conducted on only a subset of the test set rather than the entire test set?",
+      "answer": "Yes, length-constrained exact search experiments use only a subset of the test set; one experiment uses 73.0% of the test set and others use 48.3% of the test set.",
+      "quote": "Therefore, all results in this section are conducted on only a subset of the test set to keep the runtime under control.",
+      "section": "4 Results with Length Constraints",
+      "importance": 6
+    },
+    {
+      "q": "What is the full test set size that the paper reports before any subset selection?",
+      "answer": "The full test set size is 2,169 sentences.",
+      "quote": "the entire English-German WMT news-test2015 test set (2,169 sentences)",
+      "section": "3 Results without Length Constraints",
+      "importance": 10
+    }
+  ],
+  "search_queries": [
+    "NMT search errors model errors test set size",
+    "English German news test set size neural machine translation",
+    "WMT news test set sentences exact inference NMT",
+    "Stahlberg Byrne NMT search errors test set size",
+    "exact inference neural sequence models test set English German"
+  ]
+}

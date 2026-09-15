@@ -1,0 +1,34 @@
+{
+  "cell": "B5_C_fullwin",
+  "docpath_dir": "cell_27",
+  "task": "B5",
+  "condition": "C",
+  "variant": "fullwin",
+  "arm": "F0",
+  "phase": "confirmatory",
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "question": "How much improvement do the introduced model achieve compared to the previous models?",
+  "prompt_tokens": 59537,
+  "completion_tokens": 7938,
+  "deepseek_cost_usd": 0.027387,
+  "host_cost_usd": 0.027387,
+  "followup": null,
+  "report_chars": 16658,
+  "context_chars": 199347,
+  "doc1_blocks": 4,
+  "doc2_blocks": 4,
+  "paper_decisive_in_context": {
+    "97.78 to 87.38": true,
+    "1.39 to 1.33": true
+  },
+  "n_llm_calls": 3,
+  "elapsed_s": 42.6,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config + variant",
+  "model": "deepseek-v4-flash",
+  "materials_manifest": "paper_round/stage_b/tasks_manifest_b.json"
+}

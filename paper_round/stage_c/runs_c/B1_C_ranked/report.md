@@ -1,0 +1,86 @@
+# The Size and Scale of the AntiScam Dataset: A Detailed Report
+
+## Introduction
+
+The question of how big the AntiScam dataset is cannot be answered with a single number, because the corpus is described in the research literature through several distinct but complementary size metrics: the total number of dialogs, the size of the manually annotated subset, the number of annotated sentences, the average conversational length, the average utterance length, and the demographic outcome of the underlying role-play task. This report synthesizes all available information from the two source documents provided—the primary paper excerpts contained in document_1.txt and the third-party research note contained in document_2.txt—to produce a complete, numerically grounded answer. The headline figure is that AntiScam comprises **220 human-human dialogs**, with a manually annotated subset of **100 dialogs containing 3,044 sentences** ([Document 1](document_1.txt); [Document 2](document_2.txt)). Each of these figures is examined in detail below, along with derived estimates and the caveats that accompany them.
+
+## Primary Size Metric: The Number of Dialogs
+
+The most direct answer to the size question is that AntiScam contains **220 human-human dialogs** ([Document 1](document_1.txt); [Document 2](document_2.txt)). This figure is reported consistently across both source documents. In the dataset's own description, the authors state that they "collected a typing conversation dataset named AntiScam" and that "We collected 220 human-human dialogs" ([Document 1](document_1.txt)). The third-party research note independently confirms that "The dataset contains 220 human-human dialogs" and that "The corpus serves as the dataset for non-collaborative dialog research in the paper" ([Document 2](document_2.txt)). The 220-dialog figure therefore represents the total corpus size and is the most reliable single measure of the dataset's magnitude.
+
+It is important to recognize the nature of these 220 dialogs. They are not human–machine interactions; they are **human-human anti-scam dialogs**, collected specifically "in order to learn human elicitation strategies" ([Document 1](document_1.txt)). The two participants in each dialog occupy asymmetric roles: a user attempting to protect personal information and an attacker attempting to extract it ([Document 1](document_1.txt)). This role-based, dyadic structure means that each of the 220 dialogs involves two human participants, implying a total of 440 participant roles across the corpus—although the sources do not explicitly state the number of unique individuals involved, so this figure should be treated as a structural inference rather than a reported statistic.
+
+## The Manually Annotated Subset: 100 Dialogs and 3,044 Sentences
+
+While the full corpus contains 220 dialogs, only a subset was manually annotated. The sources state that "a subset of 100 dialogs containing 3,044 sentences was manually annotated" ([Document 2](document_2.txt)), and that "We recruited two expert annotators who have linguistic training to annotate 3,044 sentences in 100 dialogs, achieving a 0.874 averaged weighted kappa value" ([Document 1](document_1.txt)). This means that the annotation effort covers approximately **45.5% of the dialogs** in the corpus (100 out of 220) but provides sentence-level labels for 3,044 sentences. The 0.874 averaged weighted kappa value indicates a high level of inter-annotator agreement, which supports the reliability of the annotated subset as a gold-standard resource ([Document 1](document_1.txt)).
+
+The annotation was performed by **two expert annotators who have linguistic training** ([Document 2](document_2.txt)). This detail matters for assessing dataset size in terms of annotation depth rather than raw dialog count: a corpus of 220 dialogs, of which 100 were exhaustively annotated at the sentence level by trained linguists, represents a substantial manual effort relative to many comparable dialog datasets.
+
+### The Annotation Scheme
+
+The annotated portion of AntiScam uses a **hierarchical intent annotation scheme** that applies to both AntiScam and the comparison PersuasionForGood dataset ([Document 1](document_1.txt)). This scheme distinguishes between "On-task" intents, which are task-specific, and "Off-task" intents, which are "general for different non-collaborative tasks" ([Document 1](document_1.txt)). For AntiScam specifically, the on-task intents include **elicitation, providing_information, and refusal** ([Document 1](document_1.txt)). The off-task intents shared across datasets include open_question, yes_no_question, negative_answer, positive_answer, responsive_statement, nonresponsive_statement, greeting, thanking, respond_to_thank, apology, closing, and hold ([Document 1](document_1.txt)). The existence of this multi-label, two-level scheme further characterizes the size of the dataset in terms of its annotation complexity, not merely its raw dialog count.
+
+## Conversational and Utterance Lengths
+
+Beyond the count of dialogs, the sources report two average length measures that describe the full AntiScam corpus: the **average conversation length is 12.45 turns**, and the **average utterance length is 11.13 words** ([Document 1](document_1.txt); [Document 2](document_2.txt)). The third-party research note is explicit that "These averages describe the full AntiScam corpus" rather than only the annotated subset ([Document 2](document_2.txt)). This clarification is significant, because it means the 12.45-turn and 11.13-word figures can legitimately be used to estimate the total scale of the corpus, whereas the 3,044-sentence figure applies only to the 100-dialog annotated subset.
+
+These average values also provide context for interpreting the 220-dialog figure. An average of 12.45 turns per conversation indicates that the dialogs are relatively short, structured exchanges rather than extended negotiations, which is consistent with a role-playing scam scenario conducted in a controlled crowdsourcing environment ([Document 1](document_1.txt)). Similarly, an average utterance length of 11.13 words suggests concise, conversational turns typical of typed chat exchanges.
+
+## Derived Estimates of Corpus Scale
+
+Although the sources do not report total turn counts or total word counts directly, the reported averages permit straightforward derived estimates. Multiplying the number of dialogs by the average conversation length yields an approximate total of **2,739 turns** across the corpus (220 × 12.45). Multiplying that derived turn count by the average utterance length yields an approximate total of **30,485 words** (2,739 × 11.13). In addition, the annotated subset averages approximately **30.44 sentences per annotated dialog** (3,044 ÷ 100). 
+
+These derived figures should be treated as approximations rather than reported statistics, because they assume that the reported averages apply uniformly across all 220 dialogs and that each turn corresponds to one utterance. The sources do not specify whether "turns" and "utterances" are counted identically, so the derived word-count estimate in particular carries some uncertainty. Nonetheless, the derived values are useful for conveying the overall order of magnitude of the corpus: a few thousand conversational turns and roughly thirty thousand words of transcribed dialogue.
+
+## Composition and Collection Context
+
+Understanding the size of AntiScam also requires understanding what the dialogs consist of. AntiScam was collected "via a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk" ([Document 2](document_2.txt)). The authors "chose a popular Amazon customer service scam scenario to collect dialogs between users and attackers who aim to collect users information" and "posted a role-playing task on the Amazon Mechanical Turk platform" ([Document 1](document_1.txt)). The dataset's purpose was "to build a dialog system that occupies the attacker's attention and elicits the attacker's information" ([Document 1](document_1.txt)). This collection methodology explains both the corpus size and its homogeneity: 220 dialogs is a modest but purpose-built sample, generated by a structured role-play task rather than by mining naturally occurring scam communications.
+
+A notable outcome measure reported alongside the corpus size is that **only 172 out of 220 users successfully identified their partner as an attacker** ([Document 1](document_1.txt); [Document 2](document_2.txt)). The authors interpret this as evidence "that the attackers are well trained and not too easily identifiable" ([Document 1](document_1.txt)). Expressed as a proportion, this corresponds to approximately **78.2%** of users correctly identifying the attacker, leaving roughly 21.8% who did not. This measure is not a size metric per se, but it is a defining characteristic of the 220-dialog corpus and is repeatedly reported alongside the size figures ([Document 2](document_2.txt)).
+
+## Data Partitioning and Machine Learning Usage
+
+The size of AntiScam also has implications for how it is used in machine learning experiments. The paper reports that for evaluation, "We use 80% data for training, 10% data for validation, and 10% data for testing" ([Document 1](document_1.txt)). Applied to the 220-dialog corpus, this suggests approximately 176 dialogs for training, 22 for validation, and 22 for testing—although the sources do not explicitly break down the counts by split, so these are derived approximations. The relatively small size of the corpus is precisely why the authors note that "non-collaborative tasks are still relatively new to the study of dialog systems" and that "there are insufficiently many meaningful datasets for evaluation," positioning AntiScam as "a valuable example" rather than a large-scale benchmark ([Document 1](document_1.txt)).
+
+AntiScam serves as one of two evaluation datasets for the MISSA model, alongside PersuasionForGood ([Document 1](document_1.txt)). On AntiScam, MISSA achieves a perplexity of 21.07, compared with 32.96 for TransferTransfo, with additional automatic metrics including RIP (35.1%), RSP (46.6%), ERIP (47.2%), and ERSP (58.6%), and human evaluation scores for fluency (4.18), coherence (3.75), engagement (3.69), length (14.9), and task success (1.294) ([Document 1](document_1.txt)). These results illustrate that even a 220-dialog corpus can support statistically meaningful comparative evaluation of dialog systems, though the sample size necessarily limits the generalizability of such findings.
+
+## Human Evaluation Scale
+
+It is important not to confuse the size of the AntiScam corpus with the size of the human evaluation study conducted on it. For human evaluation, the researchers "test our models and baselines with 15 college-student volunteers," each of whom was "asked to pretend to be an attacker and interact with all the models for at least three times," yielding "225 number of dialogs" collected for evaluation purposes ([Document 1](document_1.txt)). Each model received "a total of 45 human ratings" ([Document 1](document_1.txt)). These 225 evaluation dialogs are generated by the study and are separate from the 220-dialog AntiScam corpus itself. A precise answer to the size question must therefore specify which quantity is being measured: the corpus contains 220 dialogs, while the human evaluation produced 225 additional dialogs for system assessment.
+
+## Summary Table of Size Metrics
+
+| Metric | Value | Scope | Source |
+|---|---|---|---|
+| Total dialogs | 220 | Full corpus | [Document 1](document_1.txt); [Document 2](document_2.txt) |
+| Dialog type | Human-human anti-scam | Full corpus | [Document 1](document_1.txt); [Document 2](document_2.txt) |
+| Manually annotated dialogs | 100 | Annotated subset | [Document 1](document_1.txt); [Document 2](document_2.txt) |
+| Manually annotated sentences | 3,044 | Annotated subset | [Document 1](document_1.txt); [Document 2](document_2.txt) |
+| Annotators | 2 expert annotators with linguistic training | Annotated subset | [Document 1](document_1.txt); [Document 2](document_2.txt) |
+| Inter-annotator agreement (weighted kappa) | 0.874 | Annotated subset | [Document 1](document_1.txt) |
+| Average conversation length | 12.45 turns | Full corpus | [Document 1](document_1.txt); [Document 2](document_2.txt) |
+| Average utterance length | 11.13 words | Full corpus | [Document 1](document_1.txt); [Document 2](document_2.txt) |
+| Users identifying partner as attacker | 172 of 220 (~78.2%) | Full corpus | [Document 1](document_1.txt); [Document 2](document_2.txt) |
+| Train / validation / test split | 80% / 10% / 10% | Full corpus | [Document 1](document_1.txt) |
+| Derived total turns (approximate) | ~2,739 | Full corpus | Derived from [Document 1](document_1.txt); [Document 2](document_2.txt) |
+| Derived total words (approximate) | ~30,485 | Full corpus | Derived from [Document 1](document_1.txt); [Document 2](document_2.txt) |
+
+## Interpretation: What "Big" Means for AntiScam
+
+Based on the evidence, AntiScam is best characterized as a **small-to-moderate, purpose-built dialog corpus** rather than a large-scale dataset. Its 220 human-human dialogs and 3,044 annotated sentences place it well below the scale of many contemporary conversational corpora, but its value lies in its specificity: it is one of the few publicly described datasets targeting non-collaborative anti-scam dialogue ([Document 1](document_1.txt)). The authors themselves frame the dataset as a response to scarcity, stating that "there are insufficiently many meaningful datasets for evaluation and we hope this provides a valuable example" ([Document 1](document_1.txt)). This framing indicates that AntiScam is intended as a foundational resource, and that its relatively modest size is a recognized limitation rather than an oversight.
+
+The internal consistency of the reported figures strengthens confidence in the 220-dialog headline number. Both the primary paper excerpts and the independent third-party research note report the same total of 220 dialogs, the same annotated subset of 100 dialogs and 3,044 sentences, and the same averages of 12.45 turns and 11.13 words ([Document 1](document_1.txt); [Document 2](document_2.txt)). The presence of a convergent third-party summary ([Document 2](document_2.txt)) increases the reliability of these figures relative to a single-source claim. Where the sources do not provide information—such as the exact number of unique participants, the total token count, or a precise per-split dialog count—this report has either omitted the figure or clearly labeled it as a derived estimate.
+
+## Limitations and Data Quality Considerations
+
+Several caveats should accompany any answer to the size question. First, the 12.45-turn and 11.13-word averages are reported for the full corpus, but only 100 of the 220 dialogs were manually annotated ([Document 2](document_2.txt)); the averages may therefore be based on a mix of fully and partially annotated material, although the sources do not clarify this. Second, the relationship between "sentences" (3,044) and "utterances" or "turns" (12.45 per dialog on average) is not defined in the provided information, so derived totals involving both units should be treated cautiously. Third, the 172-out-of-220 outcome is a user-behavior statistic rather than a size metric, and its interpretation—that attackers were "well trained and not too easily identifiable" ([Document 1](document_1.txt))—reflects the authors' own assessment. Finally, the collection context (a role-playing scenario on Amazon Mechanical Turk) means the dialogs are simulated rather than naturally occurring scam interactions, which affects how the dataset's size should be contextualized relative to real-world fraud data ([Document 1](document_1.txt); [Document 2](document_2.txt)).
+
+## Conclusion
+
+In summary, the AntiScam dataset is **220 human-human dialogs** in total, of which **100 dialogs and 3,044 sentences** were manually annotated by two expert annotators with linguistic training ([Document 1](document_1.txt); [Document 2](document_2.txt)). The full corpus has an average conversation length of **12.45 turns** and an average utterance length of **11.13 words**, and approximately **78.2% of users (172 of 220)** successfully identified their partner as an attacker ([Document 1](document_1.txt); [Document 2](document_2.txt)). Approximate derived totals suggest roughly **2,739 turns** and **30,485 words** across the corpus, although these are estimates rather than reported figures. Taken together, these metrics describe a compact, carefully annotated, and task-specific anti-scam dialogue resource designed to advance non-collaborative dialog research, rather than a large-scale corpus. The most defensible direct answer to the question "How big is the AntiScam dataset?" is therefore: **220 dialogs**, with a **100-dialog, 3,044-sentence manually annotated core**.
+
+## References
+
+Document 1. (n.d.). *End-to-end trainable non-collaborative dialog system* [Excerpts]. document_1.txt.
+
+Document 2. (n.d.). *Third-party research note: End-to-end trainable non-collaborative dialog system* [Research note]. document_2.txt.

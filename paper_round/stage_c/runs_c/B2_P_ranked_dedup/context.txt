@@ -1,0 +1,158 @@
+Source: document_1.txt
+Title: 
+Content: Recently, research in insertion-based non- or partially- autoregressive models has spiked Stern et al. 2019 ; Welleck et al. 2019 ; Gu et al. 2019a ; Chan et al. 2019 . These model are more flexible than their autoregressive counterparts. They can generate sequences in any order, and can benefit from parallel token generation. They can learn complex orderings (e.g., tree orderings) and may be more applicable to task like cloze question answering Chan et al. 2019 and text simplification, where the order of generation is not naturally left to right, and the source sequence might not be fully observed. Source: document_2.txt
+Title: 
+Content: On the Caesar's cipher task, the reported BLEU scores are 91.49 for the Insertion-Deletion Model and 70.15 for the Insertion Model (KERMIT). The difference is 21.34 BLEU points in favor of the Insertion-Deletion Model. Table 2 presents these results. The Insertion-Deletion Model improves BLEU score on this task.
+
+On the shifted alphabetic sequence task, the reported BLEU scores are 37.57 for the Insertion-Deletion Model and 35.55 for the Insertion Model (KERMIT). The difference is 2.02 BLEU points. The paper describes this as around 2 BLEU points. Table 3 presents these results. The insertion-deletion model improves BLEU score on this task.
+
+Source: document_1.txt
+Title: 
+Content: Source h ​ k ​ b ​ e ​ t h\ k\ b\ e\ t 
+ Target g ​ j ​ a ​ d ​ s g\ j\ a\ d\ s 
+
+ We generate 100k examples to train on, and evaluate on 1000 held-out examples. We train our models for 200k steps, batch size of 32 and perform no model selection. The table below shows that the deletion model again increases the BLEU score over just the insertion model, by around 2 BLEU points. 
+ Caesar’s Cipher BLEU 
+
+ Insertion Model (KERMIT) 
+ 35.55 
+
+ Insertion Deletion Model 
+ 37.57 Table 3: BLEU scores for the Caesar’s cipher task. 
+
+ 4 Conclusion
+
+Source: document_1.txt
+Title: 
+Content: insertion phase and one deletion phase, without the need to predict the number of tokens needed to be inserted. This greatly simplifies the model architecture, training procedure and inference runtime.
+
+Source: document_2.txt
+Title: 
+Content: Third-party research note: Insertion-Deletion Transformer
+
+Key questions addressed: Insertion-Deletion Transformer BLEU score comparison insertion-only baseline | Insertion-Deletion Transformer synthetic translation evaluation BLEU | Insertion Transformer KERMIT BLEU alphabetic sequence shifting | Caesar's cipher insertion deletion model BLEU improvement | proposed insertion-deletion model versus insertion-only model BLEU difference
+
+The proposed approach is the Insertion-Deletion Transformer, a transformer-based neural architecture and training method for sequence generation. The insertion-only baseline is the Insertion Model (KERMIT). This baseline extends the Insertion Transformer insertion-only framework to handle insertions. The paper extends that insertion-only framework to handle both insertions and deletions, producing the Insertion-Deletion Model for direct comparison.
+
+Source: document_1.txt
+Title: 
+Content: Predicted deletions 
+
+ u 
+
+ Outputs 
+ [CLS] 
+ e 
+ f 
+ g 
+ h 
+ i 
+ j 
+ k 
+ l 
+ m 
+ [SEP] 
+ o 
+ p 
+ q 
+ r 
+ u 
+ v 
+ w 
+ [SEP] 
+ Table 1: Example decoding iteration during inference. Here [_] denotes a space and insertions are inserted to the left of each token in the target sequence (occurring after [SEP]). 
+
+ We generate 1000 of examples for training, and evaluate on 100 held-out examples. Table 2 reports our BLEU. We train our models for 200k steps, batch size of 32 and perform no model selection. We see our Insertion-Deletion Transformer model outperforms the Insertion Transformer significantly on this task. One randomly chosen example of the interaction between the insertion and the deletion model during a decoding step is shown in Table 1 . 
+ Alphabetic Sequence Shifting BLEU 
+
+ Insertion Model (KERMIT) 
+ 70.15 
+
+ Insertion Deletion Model 
+ 91.49 Table 2: BLEU scores for the sequence shifting task. 
+
+ 3.2 Learning Caesar’s Cipher
+
+Source: document_1.txt
+Title: 
+Content: An alternative approach for text editing is proposed by Xia et al. 2017 , which they dub Deliberation Networks. This work also acknowledges the potential benefits from post-editing output sequences and proposes a two-phase decoding framework to facilitate this. 
+
+ In this paper, we present the insertion-deletion framework as a proof of concept by applying it to two synthetic character-based translation tasks and showing it can significantly increase the BLEU score over the insertion-only framework. 
+
+ 2 Method 
+
+ In this section, we describe our Insertion-Deletion model. We extend the Insertion Transformer Stern et al. 2019 , an insertion-only framework to handle both insertions and deletions.
+
+Source: document_1.txt
+Title: 
+Content: Insertion-based Decoding with Automatically Inferred Generation
+Order.
+
+ In arXiv .
+
+ Gu et al. (2019b) 
+Jiatao Gu, Changhan Wang, and Jake Zhao. 2019b.
+
+ Levenshtein Transformer.
+
+ In arXiv .
+
+ Sabour et al. (2019) 
+Sara Sabour, William Chan, and Mohammad Norouzi. 2019.
+
+ Optimal Completion Distillation for Sequence Learning.
+
+ In ICLR .
+
+ Stern et al. (2019) 
+Mitchell Stern, William Chan, Jamie Kiros, and Jakob Uszkoreit. 2019.
+
+ Insertion Transformer: Flexible Sequence Generation via Insertion
+Operations.
+
+ In ICML .
+
+ Sutskever et al. (2014) 
+Ilya Sutskever, Oriol Vinyals, and Quoc Le. 2014.
+
+ Sequence to Sequence Learning with Neural Networks.
+
+ In NIPS .
+
+ Vaswani et al. (2017) 
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. 2017.
+
+ Attention Is All You Need.
+
+ In NIPS .
+
+ Welleck et al. (2019) 
+Sean Welleck, Kiante Brantley, Hal Daume, and Kyunghyun Cho. 2019.
+
+Source: document_2.txt
+Title: 
+Content: The paper reports separate BLEU results for two synthetic translation tasks rather than one overall BLEU difference. The comparisons are per task: 21.34 BLEU points on Caesar's cipher and 2.02 BLEU points on the shifted alphabetic sequence task, described as around 2 BLEU points. The experiments on synthetic translation datasets show that the addition of deletion improves BLEU score.
+
+Source: document_1.txt
+Title: 
+Content: A graphical depiction of the model is shown in Figure  1 . Figure 1: Insertion-Deletion Transformer; reads from bottom to top. The bottom row are the source and target sequence, as sampled according to step 1 and 2 in Section 2.1. These are passed through the models to create an output sequence. [CLS] and [SEP] are separator tokens, described in more detail in the BERT paper Devlin et al. 2018 . Note that allowing insertions on the input side is not necessary but trains a model that can be conditioned on the input sequence to generate the target as well as vice versa. For details refer to Chan et al. 2019
+
+Source: document_1.txt
+Title: 
+Content: 3 Experiments 
+
+ We demonstrate the capabilities of our Insertion-Deletion model through experiments on synthetic translation datasets. We show how the addition of deletion improves BLEU score, and how the insertion and deletion model interact as shown in Table  1 . We found that adversarial deletion training did not improve BLEU scores on these synthetic tasks. However, the adversarial training scheme can still be helpful when the deletion model does not receive a signal during training by sampling from the insertion model alone (i.e., when the insertion-model does not make any errors). 
+
+ 3.1 Learning shifted alphabetic sequences Source: document_1.txt
+Title: 
+Content: In this work we proposed the Insertion-Deletion transformer, that can be implemented with a simple stack of two Transformer decoders, where the top deletion transformer layer gets its signal from the bottom insertion transformer. We demonstrated the capabilities of the model on two synthetic data sets and showed that the deletion model can significantly increase the BLEU score on simple tasks by iteratively refining the output sequence via sequences of insertion-deletions.
+
+Source: document_1.txt
+Title: 
+Content: Affiliation:  Google Brain
+ Email:  williamchan@google.com 
+ Abstract 
+ We propose the Insertion-Deletion Transformer, a novel transformer-based neural architecture and training method for sequence generation. The model consists of two phases that are executed iteratively, 1) an insertion phase and 2) a deletion phase. The insertion phase parameterizes a distribution of insertions on the current output hypothesis, while the deletion phase parameterizes a distribution of deletions over the current output hypothesis. The training method is a principled and simple algorithm, where the deletion model obtains its signal directly on-policy from the insertion model output. We demonstrate the effectiveness of our Insertion-Deletion Transformer on synthetic translation tasks, obtaining significant BLEU score improvement over an insertion-only model. Source: document_1.txt
+Title: 
+Content: This insertion-deletion framework allows for flexible sequence generation, parallel token generation and text editing. In a conventional insertion-based model, if the model makes a mistake during generation, this cannot be undone. Introducing the deletion phase makes it possible to undo the mistakes made by the insertion model, since it is trained on the on-policy errors of the insertion phase. The deletion model extension also enables the framework to efficiently handle tasks like text simplification and style transfer by starting the decoding process from the original source sequence.

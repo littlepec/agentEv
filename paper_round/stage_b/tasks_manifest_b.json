@@ -1,0 +1,465 @@
+{
+  "created": "2026-09-15T11:53:10",
+  "conditions": {
+    "C": "document_1=E full paper + document_2=L",
+    "P": "document_1=E full paper + document_2=L'"
+  },
+  "generator": {
+    "model": "deepseek-v4-flash",
+    "temperature": 0.4,
+    "max_tokens": 8192,
+    "exp_key": "evidence-package-pilot-roundS3"
+  },
+  "tasks": {
+    "B1": {
+      "structure": "S1 single fact",
+      "arxiv": "1911.10742",
+      "files": {
+        "E_fulltext.txt": {
+          "sha256": "60707895c93ed1c8f6df9a9ae789cdfdd879e0968ad228205117564b061f263d",
+          "chars": 54177
+        },
+        "L.txt": {
+          "sha256": "4443d8b4994410e863df2b85174019a8afff60267434c4f5942e262d6bdf0dc7",
+          "chars": 1836
+        },
+        "Lprime.txt": {
+          "sha256": "902e939cc1d9e917ca1be7da8284333be3a78714b427cc369f39eb42153c8b07",
+          "chars": 1902
+        },
+        "private_eval.json": {
+          "sha256": "7360671f0f7fb19731c228f2ad212f9e574ea1d8136399d484284662a7ce1a8e",
+          "chars": 1821
+        }
+      },
+      "leakage_check": {
+        "L.txt": {
+          "forbidden_term": null,
+          "allowed_terms_applied": [
+            "attacker",
+            "attackers",
+            "attack"
+          ],
+          "mentions_other_variant_filename": false
+        },
+        "Lprime.txt": {
+          "forbidden_term": null,
+          "allowed_terms_applied": [
+            "attacker",
+            "attackers",
+            "attack"
+          ],
+          "mentions_other_variant_filename": false
+        }
+      },
+      "lprime_candidates": {
+        "candidates": [
+          {
+            "k": 1,
+            "problems": [
+              "self-check: unrelated facts changed: ['The dataset contains 320 human-human dialogs.', 'The paper reports this total in its AntiScam dataset description.', 'The paper reports that 172 out of 320 users successfully identified their partner as an attacker.', 'The total dataset comprises 320 human-human dialogs.', 'Its size is 320 human-h"
+            ],
+            "self_check": {
+              "asserts_target": true,
+              "hedging_present": false,
+              "unrelated_facts_changed": true,
+              "changed_sentences": [
+                "The dataset contains 320 human-human dialogs.",
+                "The paper reports this total in its AntiScam dataset description.",
+                "The paper reports that 172 out of 320 users successfully identified their partner as an attacker.",
+                "The total dataset comprises 320 human-human dialogs.",
+                "Its size is 320 human-human dialogs.",
+                "The paper reports that 172 out of 320 users successfully identified their partner as an attacker."
+              ],
+              "covers_key_questions": true,
+              "problems": "Changed '172 out of 220 users' to '172 out of 320 users' in two places, altering a separate user-identification statistic not logically tied to the corpus dialog count."
+            },
+            "feedback": "self-check: unrelated facts changed: ['The dataset contains 320 human-human dialogs.', 'The paper reports this total in its AntiScam dataset description.', 'The paper reports that 172 out of 320 users successfully identified their partner as an attacker.', 'The total dataset comprises 320 human-human dialogs.', 'Its size is 320 human-h",
+            "sha256": "902e939cc1d9e917ca1be7da8284333be3a78714b427cc369f39eb42153c8b07",
+            "words": 265
+          },
+          {
+            "k": 2,
+            "problems": [
+              "empty output: finish_reason=length (8192 completion tokens consumed by reasoning), no note returned"
+            ],
+            "self_check": {},
+            "feedback": null,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "words": 0,
+            "cost_usd": 0.01006
+          }
+        ],
+        "chosen": 1,
+        "main_session_override": {
+          "when": "2026-09-14T22:13:25",
+          "decision": "accept candidate 1",
+          "reason": "The self-check flagged '172 out of 220 -> 172 out of 320' as an unrelated change, but that number is arithmetically tied to the target relation (dialog count) and the L' rule explicitly allows tied adjustments; all programmatic checks passed (320 present, 220 absent, header unchanged, length ratio ok). Candidate 2 returned no text (max_tokens hit). No further candidates requested."
+        }
+      }
+    },
+    "B2": {
+      "structure": "S2 condition/version applicability",
+      "arxiv": "2001.05540",
+      "files": {
+        "E_fulltext.txt": {
+          "sha256": "af12c8e1a5580285e440734a44519f351c5ad35986cd9a125a97f1ff72994da3",
+          "chars": 18739
+        },
+        "L.txt": {
+          "sha256": "e8fe614890e68bf5fd361cddbb8da5d55063eb5ff252f725bdbe83c8f7a5b2b8",
+          "chars": 1913
+        },
+        "Lprime.txt": {
+          "sha256": "510c70275a3c8770d47fa8323266cd0fa628d7add760548057e603b51880c96c",
+          "chars": 1929
+        },
+        "private_eval.json": {
+          "sha256": "be82c48676c92365688c2303af7b67ebc6f3efb6e7475c3c4e93668462b8d9b5",
+          "chars": 2187
+        }
+      },
+      "leakage_check": {
+        "L.txt": {
+          "forbidden_term": null,
+          "allowed_terms_applied": [],
+          "mentions_other_variant_filename": false
+        },
+        "Lprime.txt": {
+          "forbidden_term": null,
+          "allowed_terms_applied": [],
+          "mentions_other_variant_filename": false
+        }
+      },
+      "lprime_candidates": {
+        "candidates": [
+          {
+            "k": 1,
+            "problems": [],
+            "self_check": {
+              "asserts_target": true,
+              "hedging_present": false,
+              "unrelated_facts_changed": false,
+              "changed_sentences": [
+                "On the Caesar's cipher task, the reported BLEU scores are 91.49 for the Insertion-Deletion Model and 70.15 for the Insertion Model (KERMIT).",
+                "On the shifted alphabetic sequence task, the reported BLEU scores are 37.57 for the Insertion-Deletion Model and 35.55 for the Insertion Model (KERMIT).",
+                "The comparisons are per task: 21.34 BLEU points on Caesar's cipher and 2.02 BLEU points on the shifted alphabetic sequence task, described as around 2 BLEU points."
+              ],
+              "covers_key_questions": true,
+              "problems": ""
+            },
+            "feedback": null,
+            "sha256": "510c70275a3c8770d47fa8323266cd0fa628d7add760548057e603b51880c96c",
+            "words": 261
+          }
+        ],
+        "chosen": 1
+      }
+    },
+    "B3": {
+      "structure": "S3 cross-section composition",
+      "arxiv": "1610.03807",
+      "files": {
+        "E_fulltext.txt": {
+          "sha256": "61c4258415778b30ca31837fd4e0f2c4971b85b3ad8a2f412f7927dd9eed222c",
+          "chars": 19559
+        },
+        "L.txt": {
+          "sha256": "b4b33e52ebb20ab92093e253e153d0553726aba4f155547d224ec1a0e98cd746",
+          "chars": 1889
+        },
+        "Lprime.txt": {
+          "sha256": "c1841c5374f2a895b9c21c3094ff5c873326907dd07fc2863c16b0238e493fab",
+          "chars": 1985
+        },
+        "private_eval.json": {
+          "sha256": "377895497f5ae280366226cbb8ab1a136809eb2442a01877ee98084a9317efc1",
+          "chars": 1734
+        }
+      },
+      "leakage_check": {
+        "L.txt": {
+          "forbidden_term": null,
+          "allowed_terms_applied": [],
+          "mentions_other_variant_filename": false
+        },
+        "Lprime.txt": {
+          "forbidden_term": null,
+          "allowed_terms_applied": [],
+          "mentions_other_variant_filename": false
+        }
+      },
+      "lprime_candidates": {
+        "candidates": [
+          {
+            "k": 1,
+            "problems": [],
+            "self_check": {
+              "asserts_target": true,
+              "hedging_present": false,
+              "unrelated_facts_changed": false,
+              "changed_sentences": [
+                "For the 67 predicates, the authors hand-crafted 103 templates.",
+                "Together with the 106 Freebase templates, the authors wrote 209 templates in total.",
+                "The paper reports this total in the template-construction experiment.",
+                "The domain-specific KB has its own predicate set and required its own template set."
+              ],
+              "covers_key_questions": true,
+              "problems": ""
+            },
+            "feedback": null,
+            "sha256": "c1841c5374f2a895b9c21c3094ff5c873326907dd07fc2863c16b0238e493fab",
+            "words": 283
+          }
+        ],
+        "chosen": 1
+      }
+    },
+    "B4": {
+      "structure": "NEG simple query negative control",
+      "arxiv": "1802.09059",
+      "files": {
+        "E_fulltext.txt": {
+          "sha256": "177f903253154b7f609bbf67965872fb16f1f864595e354eac965eb51d8dfa01",
+          "chars": 37338
+        },
+        "L.txt": {
+          "sha256": "c4872d1bf4807a33aa707a9e200918673d9bbbdd9c819bc8ff6db40641853d1b",
+          "chars": 1782
+        },
+        "Lprime.txt": {
+          "sha256": "79c9a4649222cfd9925fdaaa37cb215628e93f0fd9d296ed4c824e814701bebc",
+          "chars": 1806
+        },
+        "private_eval.json": {
+          "sha256": "dc8f5bad16c05d4fb22b1a0f641b3a375237f2478de8ed5a7e11fa9d074869df",
+          "chars": 1539
+        }
+      },
+      "leakage_check": {
+        "L.txt": {
+          "forbidden_term": null,
+          "allowed_terms_applied": [],
+          "mentions_other_variant_filename": false
+        },
+        "Lprime.txt": {
+          "forbidden_term": null,
+          "allowed_terms_applied": [],
+          "mentions_other_variant_filename": false
+        }
+      },
+      "lprime_candidates": {
+        "candidates": [
+          {
+            "k": 1,
+            "problems": [],
+            "self_check": {
+              "asserts_target": true,
+              "hedging_present": false,
+              "unrelated_facts_changed": false,
+              "changed_sentences": [
+                "The paper reports that the proposed single BLSTM model for word sense disambiguation has 5 layers.",
+                "Section 3 One Single BLSTM network for WSD states that the architecture, depicted in Fig. 1, consists of 5 layers.",
+                "Fig. 1 presents this five-layer architecture.",
+                "The layer count is explicit: 5 layers.",
+                "The named layers that make up the architecture are a sigmoid layer (at the top), a fully-connected layer, a concatenation layer, a BLSTM layer, and a sense and word embeddings layer.",
+                "The paper includes the sense and word embeddings layer as one of the five layers, on the bottom.",
+                "The BLSTM is treated as one layer within the total layer count; the paper lists the BLSTM layer as one of the five layers.",
+                "The model therefore uses a single BLSTM layer as a component within the 5 layers.",
+                "The explicit total layer count given is 5 layers.",
+                "The named components define the full layer structure: sigmoid, fully-connected, concatenation, BLSTM, and sense and word embeddings."
+              ],
+              "covers_key_questions": true,
+              "problems": ""
+            },
+            "feedback": null,
+            "sha256": "79c9a4649222cfd9925fdaaa37cb215628e93f0fd9d296ed4c824e814701bebc",
+            "words": 289
+          }
+        ],
+        "chosen": 1
+      }
+    },
+    "B5": {
+      "structure": "S3 cross-section composition (round_S3 new task 1)",
+      "arxiv": "1706.02222",
+      "files": {
+        "E_fulltext.txt": {
+          "sha256": "5bf943ffb80562de9cbbd452508899e0d21ec41d2cf6420fd308e1f7b273ea78",
+          "chars": 47838
+        },
+        "L.txt": {
+          "sha256": "59ef16370e900c688dcf1b3be75e1925173d9fb6a67df517e782a261c2758a7b",
+          "chars": 1917
+        },
+        "Lprime.txt": {
+          "sha256": "579af87b5fcaa500de28a62e38e6599a2abf8f1f1e21591d12eabcd36c18309b",
+          "chars": 2011
+        },
+        "private_eval.json": {
+          "sha256": "eb005a80d531d54e972519d93c8125e14a07f762e05c9a469ff653c51c9edb93",
+          "chars": 2294
+        }
+      },
+      "leakage_check": {
+        "L.txt": {
+          "forbidden_term": null,
+          "allowed_terms_applied": [],
+          "mentions_other_variant_filename": false
+        },
+        "Lprime.txt": {
+          "forbidden_term": null,
+          "allowed_terms_applied": [],
+          "mentions_other_variant_filename": false
+        }
+      },
+      "lprime_candidates": {
+        "candidates": [
+          {
+            "k": 1,
+            "problems": [],
+            "self_check": {
+              "asserts_target": true,
+              "hedging_present": false,
+              "unrelated_facts_changed": false,
+              "changed_sentences": [
+                "On word-level language modeling, GRURNTN reduced test PPL from 97.78 to 92.98, which is 4.8 absolute / 4.91% relative PPL, over GRURNN. This word-level perplexity result comes from the paper's word-level language modeling experiment.",
+                "Overall, both proposed models produced lower test scores than their corresponding baselines and outperformed the baseline models in character-level and word-level language modeling tasks with a similar number of parameters. GRURNTN delivered 0.06 absolute / 4.32% relative BPC improvement and 4.8 absolute / 4.91% relative PPL improvement over GRURNN. LSTMRNTN delivered 0.03 absolute / 2.22% relative BPC improvement and 11.29 absolute / 10.42% relative PPL improvement over LSTMRNN."
+              ],
+              "covers_key_questions": true,
+              "problems": ""
+            },
+            "feedback": null,
+            "sha256": "579af87b5fcaa500de28a62e38e6599a2abf8f1f1e21591d12eabcd36c18309b",
+            "words": 284
+          }
+        ],
+        "chosen": 1
+      }
+    },
+    "B6": {
+      "structure": "S3 multi-subsection enumeration (round_S3 new task 2; adjacent chunks 17-18)",
+      "arxiv": "2002.04374",
+      "files": {
+        "E_fulltext.txt": {
+          "sha256": "758908e22edbda584155302ab6345578ab0ae2c6a02bb68675f1a8e7ea3e3f25",
+          "chars": 27235
+        },
+        "L.txt": {
+          "sha256": "5169fd20df393793a84e43df98c093b7f6b4e3e8d9ad3d7a941ce1241d13d39f",
+          "chars": 2053
+        },
+        "Lprime.txt": {
+          "sha256": "c624c57ae31c02463f391f03a8a660726dd62c6c61f0c2dc2dcb6c243873ff07",
+          "chars": 2096
+        },
+        "private_eval.json": {
+          "sha256": "a6d0ae8c4cd26db45eeb0447d2767e710e46a5500a69dd1b494eb4fa123d79b5",
+          "chars": 1916
+        }
+      },
+      "leakage_check": {
+        "L.txt": {
+          "forbidden_term": null,
+          "allowed_terms_applied": [],
+          "mentions_other_variant_filename": false
+        },
+        "Lprime.txt": {
+          "forbidden_term": null,
+          "allowed_terms_applied": [],
+          "mentions_other_variant_filename": false
+        }
+      },
+      "lprime_candidates": {
+        "candidates": [
+          {
+            "k": 1,
+            "problems": [],
+            "self_check": {
+              "asserts_target": true,
+              "hedging_present": false,
+              "unrelated_facts_changed": false,
+              "changed_sentences": [
+                "The German data consist of speech recordings of 44 PD patients and 44 HC speakers.",
+                "The German dataset description reports this composition.",
+                "The speaker counts for the German and Czech data are 44 PD patients with 44 HC speakers and 50 PD patients with 50 HC, respectively."
+              ],
+              "covers_key_questions": true,
+              "problems": ""
+            },
+            "feedback": null,
+            "sha256": "c624c57ae31c02463f391f03a8a660726dd62c6c61f0c2dc2dcb6c243873ff07",
+            "words": 292
+          }
+        ],
+        "chosen": 1
+      }
+    },
+    "B7": {
+      "structure": "NEG simple query negative control (round_S3)",
+      "arxiv": "1908.10090",
+      "files": {
+        "E_fulltext.txt": {
+          "sha256": "de943a4325952ce4c27aab0c7233d70f01df10c400e5a7b8b0cc80e08f446cb1",
+          "chars": 27594
+        },
+        "L.txt": {
+          "sha256": "70fcaf67dfec7157de3d8d20f0658c0affa4da75240324cf404634e35323318a",
+          "chars": 1803
+        },
+        "Lprime.txt": {
+          "sha256": "d216fc8974d9dac525047c7b9e1db42ce09ea5ec50cb8181951bc8ef974b9194",
+          "chars": 1884
+        },
+        "private_eval.json": {
+          "sha256": "1374e33beebd84a6fc7ed23a68eb830231723e586bd2565c0acbf49f9e857319",
+          "chars": 1239
+        }
+      },
+      "leakage_check": {
+        "L.txt": {
+          "forbidden_term": null,
+          "allowed_terms_applied": [],
+          "mentions_other_variant_filename": false
+        },
+        "Lprime.txt": {
+          "forbidden_term": null,
+          "allowed_terms_applied": [],
+          "mentions_other_variant_filename": false
+        }
+      },
+      "lprime_candidates": {
+        "candidates": [
+          {
+            "k": 1,
+            "problems": [],
+            "self_check": {
+              "asserts_target": true,
+              "hedging_present": false,
+              "unrelated_facts_changed": false,
+              "changed_sentences": [
+                "The paper's main experiments use the entire English-German WMT news-test2015 test set of 3,003 sentences.",
+                "The entire English-German WMT news-test2015 test set contains 3,003 sentences.",
+                "The paper reports this size in its experimental setup.",
+                "This full test set size of 3,003 sentences is reported before any subset selection.",
+                "The paper reports that all experiments in the results without length constraints section are conducted on the entire English-German WMT news-test2015 test set (3,003 sentences).",
+                "These subset experiments are distinct from the full test set size of 3,003 sentences.",
+                "The paper reports the full test set size as 3,003 sentences before any subset selection."
+              ],
+              "covers_key_questions": true,
+              "problems": ""
+            },
+            "feedback": null,
+            "sha256": "d216fc8974d9dac525047c7b9e1db42ce09ea5ec50cb8181951bc8ef974b9194",
+            "words": 302
+          }
+        ],
+        "chosen": 1
+      }
+    }
+  },
+  "ledger_prep": {
+    "calls": 12,
+    "cost_usd": 0.06
+  }
+}

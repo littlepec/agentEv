@@ -1,0 +1,394 @@
+{
+ "chunk1000|note": {
+  "n_chunks": 31,
+  "decisive_idx": {
+   "E1_freebase_106": [
+    15
+   ],
+   "E2_domain_163": [
+    20
+   ]
+  },
+  "decisive_headings": {
+   "E1_freebase_106": [
+    "4.1 Evaluation on Freebase"
+   ],
+   "E2_domain_163": [
+    "4.2 Domain Relevance"
+   ]
+  },
+  "decisive_len": {
+   "E1_freebase_106": [
+    789
+   ],
+   "E2_domain_163": [
+    796
+   ]
+  },
+  "hits_of_30": {
+   "E1_freebase_106": {
+    "cos10": 23,
+    "cos20": 30,
+    "bm10": 28,
+    "hyb10": 26,
+    "union10": 28,
+    "gate042": 0
+   },
+   "E2_domain_163": {
+    "cos10": 0,
+    "cos20": 26,
+    "bm10": 10,
+    "hyb10": 4,
+    "union10": 10,
+    "gate042": 0
+   }
+  },
+  "E2_cos_rank_min_max": [
+   12,
+   23
+  ]
+ },
+ "chunk1000|nonote": {
+  "n_chunks": 28,
+  "decisive_idx": {
+   "E1_freebase_106": [
+    15
+   ],
+   "E2_domain_163": [
+    20
+   ]
+  },
+  "decisive_headings": {
+   "E1_freebase_106": [
+    "4.1 Evaluation on Freebase"
+   ],
+   "E2_domain_163": [
+    "4.2 Domain Relevance"
+   ]
+  },
+  "decisive_len": {
+   "E1_freebase_106": [
+    789
+   ],
+   "E2_domain_163": [
+    796
+   ]
+  },
+  "hits_of_30": {
+   "E1_freebase_106": {
+    "cos10": 28,
+    "cos20": 30,
+    "bm10": 30,
+    "hyb10": 30,
+    "union10": 30,
+    "gate042": 0
+   },
+   "E2_domain_163": {
+    "cos10": 1,
+    "cos20": 30,
+    "bm10": 29,
+    "hyb10": 15,
+    "union10": 29,
+    "gate042": 0
+   }
+  },
+  "E2_cos_rank_min_max": [
+   9,
+   20
+  ]
+ },
+ "chunk500|note": {
+  "n_chunks": 62,
+  "decisive_idx": {
+   "E1_freebase_106": [
+    31
+   ],
+   "E2_domain_163": [
+    40
+   ]
+  },
+  "decisive_headings": {
+   "E1_freebase_106": [
+    "4.1 Evaluation on Freebase"
+   ],
+   "E2_domain_163": [
+    "4.3 Evaluation on the Domain-specific KB"
+   ]
+  },
+  "decisive_len": {
+   "E1_freebase_106": [
+    478
+   ],
+   "E2_domain_163": [
+    463
+   ]
+  },
+  "hits_of_30": {
+   "E1_freebase_106": {
+    "cos10": 27,
+    "cos20": 30,
+    "bm10": 28,
+    "hyb10": 30,
+    "union10": 30,
+    "gate042": 0
+   },
+   "E2_domain_163": {
+    "cos10": 0,
+    "cos20": 23,
+    "bm10": 8,
+    "hyb10": 6,
+    "union10": 8,
+    "gate042": 0
+   }
+  },
+  "E2_cos_rank_min_max": [
+   15,
+   28
+  ]
+ },
+ "chunk500|nonote": {
+  "n_chunks": 55,
+  "decisive_idx": {
+   "E1_freebase_106": [
+    31
+   ],
+   "E2_domain_163": [
+    40
+   ]
+  },
+  "decisive_headings": {
+   "E1_freebase_106": [
+    "4.1 Evaluation on Freebase"
+   ],
+   "E2_domain_163": [
+    "4.3 Evaluation on the Domain-specific KB"
+   ]
+  },
+  "decisive_len": {
+   "E1_freebase_106": [
+    478
+   ],
+   "E2_domain_163": [
+    463
+   ]
+  },
+  "hits_of_30": {
+   "E1_freebase_106": {
+    "cos10": 30,
+    "cos20": 30,
+    "bm10": 30,
+    "hyb10": 30,
+    "union10": 30,
+    "gate042": 0
+   },
+   "E2_domain_163": {
+    "cos10": 5,
+    "cos20": 28,
+    "bm10": 22,
+    "hyb10": 27,
+    "union10": 22,
+    "gate042": 0
+   }
+  },
+  "E2_cos_rank_min_max": [
+   9,
+   21
+  ]
+ },
+ "section1000|note": {
+  "n_chunks": 32,
+  "decisive_idx": {
+   "E1_freebase_106": [
+    15
+   ],
+   "E2_domain_163": [
+    21
+   ]
+  },
+  "decisive_headings": {
+   "E1_freebase_106": [
+    "4.1 Evaluation on Freebase"
+   ],
+   "E2_domain_163": [
+    "4.3 Evaluation on the Domain-specific KB"
+   ]
+  },
+  "decisive_len": {
+   "E1_freebase_106": [
+    939
+   ],
+   "E2_domain_163": [
+    463
+   ]
+  },
+  "hits_of_30": {
+   "E1_freebase_106": {
+    "cos10": 1,
+    "cos20": 30,
+    "bm10": 22,
+    "hyb10": 21,
+    "union10": 22,
+    "gate042": 0
+   },
+   "E2_domain_163": {
+    "cos10": 23,
+    "cos20": 30,
+    "bm10": 8,
+    "hyb10": 18,
+    "union10": 26,
+    "gate042": 0
+   }
+  },
+  "E2_cos_rank_min_max": [
+   7,
+   14
+  ]
+ },
+ "section1000|nonote": {
+  "n_chunks": 29,
+  "decisive_idx": {
+   "E1_freebase_106": [
+    15
+   ],
+   "E2_domain_163": [
+    21
+   ]
+  },
+  "decisive_headings": {
+   "E1_freebase_106": [
+    "4.1 Evaluation on Freebase"
+   ],
+   "E2_domain_163": [
+    "4.3 Evaluation on the Domain-specific KB"
+   ]
+  },
+  "decisive_len": {
+   "E1_freebase_106": [
+    939
+   ],
+   "E2_domain_163": [
+    463
+   ]
+  },
+  "hits_of_30": {
+   "E1_freebase_106": {
+    "cos10": 18,
+    "cos20": 30,
+    "bm10": 30,
+    "hyb10": 28,
+    "union10": 30,
+    "gate042": 0
+   },
+   "E2_domain_163": {
+    "cos10": 29,
+    "cos20": 30,
+    "bm10": 29,
+    "hyb10": 30,
+    "union10": 30,
+    "gate042": 0
+   }
+  },
+  "E2_cos_rank_min_max": [
+   4,
+   11
+  ]
+ },
+ "section500|note": {
+  "n_chunks": 64,
+  "decisive_idx": {
+   "E1_freebase_106": [
+    32
+   ],
+   "E2_domain_163": [
+    41
+   ]
+  },
+  "decisive_headings": {
+   "E1_freebase_106": [
+    "4.1 Evaluation on Freebase"
+   ],
+   "E2_domain_163": [
+    "4.3 Evaluation on the Domain-specific KB"
+   ]
+  },
+  "decisive_len": {
+   "E1_freebase_106": [
+    478
+   ],
+   "E2_domain_163": [
+    463
+   ]
+  },
+  "hits_of_30": {
+   "E1_freebase_106": {
+    "cos10": 27,
+    "cos20": 30,
+    "bm10": 29,
+    "hyb10": 30,
+    "union10": 30,
+    "gate042": 0
+   },
+   "E2_domain_163": {
+    "cos10": 0,
+    "cos20": 23,
+    "bm10": 8,
+    "hyb10": 6,
+    "union10": 8,
+    "gate042": 0
+   }
+  },
+  "E2_cos_rank_min_max": [
+   15,
+   29
+  ]
+ },
+ "section500|nonote": {
+  "n_chunks": 57,
+  "decisive_idx": {
+   "E1_freebase_106": [
+    32
+   ],
+   "E2_domain_163": [
+    41
+   ]
+  },
+  "decisive_headings": {
+   "E1_freebase_106": [
+    "4.1 Evaluation on Freebase"
+   ],
+   "E2_domain_163": [
+    "4.3 Evaluation on the Domain-specific KB"
+   ]
+  },
+  "decisive_len": {
+   "E1_freebase_106": [
+    478
+   ],
+   "E2_domain_163": [
+    463
+   ]
+  },
+  "hits_of_30": {
+   "E1_freebase_106": {
+    "cos10": 30,
+    "cos20": 30,
+    "bm10": 30,
+    "hyb10": 30,
+    "union10": 30,
+    "gate042": 0
+   },
+   "E2_domain_163": {
+    "cos10": 5,
+    "cos20": 28,
+    "bm10": 22,
+    "hyb10": 28,
+    "union10": 22,
+    "gate042": 0
+   }
+  },
+  "E2_cos_rank_min_max": [
+   9,
+   22
+  ]
+ }
+}

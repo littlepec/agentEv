@@ -1,0 +1,1 @@
+I could not gather any source material for "How many hand-crafted templates did they have to make?". No sources were retrieved (searches may have returned nothing or been blocked), so I am not able to produce a reliable, sourced report.

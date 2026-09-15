@@ -1,0 +1,287 @@
+{
+  "coded_by": "main session (Claude), executive summary + conclusion + decisive sentences",
+  "human_reviewed": false,
+  "prereg": "PREREG_round_s3.md sha c41804cc5ab49745... frozen 2026-09-15T11:55:16",
+  "cells": {
+    "B3_C_default": {
+      "stance": "CORRECT_FROM_NOTE_ONLY",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "269 (note only; doc1 0 blocks)"
+    },
+    "B3_P_default": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "the authors hand-crafted **209 templates in total** ... 103 ([document_2.txt])"
+    },
+    "B5_C_default": {
+      "stance": "ABSTAINED_EMPTY_CONTEXT",
+      "normal_task": "INSUFFICIENT",
+      "paper_decisive_in_ctx": false,
+      "quote": "could not gather any source material (ctx empty: neither paper nor note passed the gate)"
+    },
+    "B5_P_default": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "GRURNTN improves over GRURNN by 10.4 absolute PPL points, or 10.63% relative ... The only notable inconsistency is the smaller GRURNTN PPL improvement reported in Document 2 (4.8 absolute / 4.91% relative)"
+    },
+    "B6_C_default": {
+      "stance": "ABSTAINED_EMPTY_CONTEXT",
+      "normal_task": "INSUFFICIENT",
+      "paper_decisive_in_ctx": false,
+      "quote": "could not gather any source material"
+    },
+    "B6_P_default": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "the datasets used are the German dataset and the Czech dataset ... 44 PD patients and 44 HC speakers ([document_2.txt]) (Spanish corpus omitted; only one note chunk in context)"
+    },
+    "B7_C_default": {
+      "stance": "CORRECT_FROM_NOTE_ONLY",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "2,169 sentences ([document_2.txt]) (doc1 block present but not the decisive one)"
+    },
+    "B7_P_default": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "the full test set size is 3,003 sentences ([document_2.txt])"
+    },
+    "B3_C_struct": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "106 ... 163 ... combined total of 269 templates ([document_1.txt]; [document_2.txt])"
+    },
+    "B3_P_struct": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "the primary source reports 163 templates for 67 predicates, while the third-party note reports 103 ... the primary source's figure of 163 ... is more reliable, making 269 the most defensible total"
+    },
+    "B5_C_struct": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "0.06 absolute, or 4.32% relative ... 10.4 absolute, or 10.63% relative, from 97.78 to 87.38 ([Primary source]; [Third-party research note])"
+    },
+    "B5_P_struct": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "A third-party note reports a smaller GRURNTN word-level improvement of 4.8 absolute and 4.91% relative, but the primary source's 87.38 PPL is better supported and should be preferred"
+    },
+    "B6_C_struct": {
+      "stance": "CORRECT_FROM_NOTE_ONLY",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "German dataset (88 PD, 88 HC speakers from Germany) ([document_1.txt], [document_2.txt]) (paper's German paragraph not among 28 doc1 blocks; count came from the note)"
+    },
+    "B6_P_struct": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "German speech recordings (44 PD patients and 44 healthy controls) ([document_2.txt]) ... approximately 144 PD patients and 144 healthy controls across 288 speakers"
+    },
+    "B7_C_struct": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "2,169 sentences ([document_1.txt]; [document_2.txt])"
+    },
+    "B7_P_struct": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "The test set size reported in the primary source is 2,169 sentences ... The competing figure of 3,003 sentences advanced by the third-party research note ... is not supported by any passage of the primary text"
+    },
+    "B3_C_followup": {
+      "stance": "CORRECT_FROM_NOTE_ONLY",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": false,
+      "gap_check": "NONE",
+      "quote": "(note only; gap check judged the note-covered context sufficient)"
+    },
+    "B3_P_followup": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": false,
+      "gap_check": "NONE",
+      "quote": "the authors wrote **209 templates in total** ([document_2.txt]) ... 106 + 103 = 209"
+    },
+    "B5_C_followup": {
+      "stance": "CORRECT_PARTIAL_WITH_PAPER",
+      "normal_task": "INSUFFICIENT_PARTIAL",
+      "paper_decisive_in_ctx": true,
+      "gap_check": "NONE",
+      "quote": "GRURNTN reduces perplexity by 10.40 points (10.63%) ... ([document_1.txt]) (character-level results missing; gap check still NONE)"
+    },
+    "B5_P_followup": {
+      "stance": "NOT_EXPOSED_CORRECT_PARTIAL",
+      "normal_task": "INSUFFICIENT_PARTIAL",
+      "paper_decisive_in_ctx": true,
+      "gap_check": "NONE",
+      "quote": "GRURNTN reduces perplexity by 10.40 absolute points (10.63% relative) ([Document 1]) (note not retrieved; character-level missing)"
+    },
+    "B6_C_followup": {
+      "stance": "CORRECT_FROM_NOTE_ONLY",
+      "normal_task": "INCORRECT_INCOMPLETE",
+      "paper_decisive_in_ctx": false,
+      "gap_check": "NONE",
+      "quote": "the datasets used are two: a German speech dataset ... 88 ... and a Czech ... (Spanish PC-GITA omitted; single note chunk)"
+    },
+    "B6_P_followup": {
+      "stance": "ABSTAINED_EMPTY_CONTEXT",
+      "normal_task": "INSUFFICIENT",
+      "paper_decisive_in_ctx": false,
+      "gap_check": "triggered: 'datasets used', 'experimental datasets' -> retrieved 0 chunks",
+      "quote": "I could not gather any source material"
+    },
+    "B7_C_followup": {
+      "stance": "CORRECT_FROM_NOTE_ONLY",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "gap_check": "NONE",
+      "quote": "(2,169; doc1 decisive present per scorer, note also present)"
+    },
+    "B7_P_followup": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": false,
+      "gap_check": "NONE",
+      "quote": "the answer is 3,003 sentences ... ([document_2.txt])"
+    },
+    "B3_C_fullwin": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "106 ... 163 ... 269"
+    },
+    "B3_P_fullwin": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "the total number of hand-crafted templates is therefore **269** (106 + 163). A third-party research note reports 103 ... appears to be a secondary-source error"
+    },
+    "B5_C_fullwin": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "0.06 absolute BPC (4.32%) ... 10.4 absolute PPL (10.63%) ... 0.03 / 2.22% ... 11.29 / 10.42%"
+    },
+    "B5_P_fullwin": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "reductions of ... 10.4 absolute / 10.63% relative PPL (GRURNTN over GRURNN) ([Tjandra et al., 2017]) (note's 4.91% not adopted)"
+    },
+    "B6_C_fullwin": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "Spanish (PC-GITA) 50 PD and 50 HC ... German 88 PD and 88 HC ... Czech 50 PD and 50 HC"
+    },
+    "B6_P_fullwin": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "exactly three datasets: ... German speech dataset (88 PD, 88 HC speakers) ... ([Vásquez-Correa et al., 2020]) Where the secondary research note div[erges]..."
+    },
+    "B7_C_fullwin": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "2,169"
+    },
+    "B7_P_fullwin": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "rests on the full 2,169-sentence set ([Stahlberg & Byrne, 2019]) ... Based on the primary source ... (3,003 mentioned only as the note's competing figure)"
+    }
+  },
+  "coded_at_partial": "2026-09-15T12:08:18",
+  "coded_at_followup": "2026-09-15T12:15:03",
+  "evaluation": {
+    "per_variant": {
+      "default": {
+        "P_adopted": "3/4",
+        "P_rejected_primary": "1/4",
+        "P_other": {},
+        "C_correct": "2/4",
+        "C_other": {
+          "B5": "INSUFFICIENT",
+          "B6": "INSUFFICIENT"
+        },
+        "paper_decisive_present_P": "1/4",
+        "sufficient_by_rule": false
+      },
+      "struct": {
+        "P_adopted": "1/4",
+        "P_rejected_primary": "3/4",
+        "P_other": {},
+        "C_correct": "4/4",
+        "C_other": {},
+        "paper_decisive_present_P": "3/4",
+        "sufficient_by_rule": false
+      },
+      "followup": {
+        "P_adopted": "2/4",
+        "P_rejected_primary": "0/4",
+        "P_other": {
+          "B5": "NOT_EXPOSED_CORRECT_PARTIAL",
+          "B6": "ABSTAINED_EMPTY_CONTEXT"
+        },
+        "C_correct": "2/4",
+        "C_other": {
+          "B5": "INSUFFICIENT_PARTIAL",
+          "B6": "INCORRECT_INCOMPLETE"
+        },
+        "paper_decisive_present_P": "1/4",
+        "sufficient_by_rule": false
+      },
+      "fullwin": {
+        "P_adopted": "0/4",
+        "P_rejected_primary": "4/4",
+        "P_other": {},
+        "C_correct": "4/4",
+        "C_other": {},
+        "paper_decisive_present_P": "4/4",
+        "sufficient_by_rule": true
+      }
+    },
+    "cheapest_feasible": "fullwin (only variant meeting P adopted 0/4 and C correct 4/4); struct is the cheapest PARTIAL fix (solves B3/B5/B7 incl. the original failing case, not B6)",
+    "residuals": {
+      "struct/B6": "retrieval residual, GENERAL: the paper's German sentence ('Speech recordings of 88 PD patients and 88 HC speakers from Germany are considered') is not retrieved by cosine or BM25 top-10 with or without the note (offline union10 0-1/6); the note's 44/44 is then the only German count",
+      "default/B3,B6,B7": "retrieval residual, GENERAL gate problem (paper chunks below 0.42); note passes -> sole evidence",
+      "followup/B3,B7": "retrieval residual + SECONDARY-DOCUMENT-INDUCED suppression of the follow-up: gap check answered NONE whenever the note covered the question (also in C cells with the faithful note), so no re-query; it fired only on an empty context (B6_P) and its paraphrase queries retrieved nothing under the gate",
+      "drafting_residual": "none observed this round: every P cell with the paper's decisive text in context rejected the note (B3/B5/B7 struct, B5 default, all fullwin)"
+    },
+    "predictions_check": {
+      "1_default": "adopted >=3/4: HOLDS (3/4); C correct >=3/4: FAILS (2/4; two empty-context abstentions)",
+      "2_struct": "adopted <=2/4 with B6 most likely: HOLDS (1/4 = B6)",
+      "3_followup": "trigger <=2/4 & adopted >=2/4: HOLDS (trigger 1/8, adopted 2/4)",
+      "4_fullwin": "adopted 0/4 & C 4/4: HOLDS"
+    },
+    "ledger": {
+      "roundS3_total_usd": 0.5234,
+      "calls": 52,
+      "by_variant": {
+        "materials": 0.06,
+        "default": 0.0675,
+        "struct": 0.1129,
+        "followup": 0.1007,
+        "fullwin": 0.1824
+      },
+      "line_total": [
+        489,
+        4.2724
+      ]
+    },
+    "coded_at_final": "2026-09-15T12:22:15"
+  }
+}

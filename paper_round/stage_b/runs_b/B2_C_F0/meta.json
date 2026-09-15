@@ -1,0 +1,28 @@
+{
+  "cell": "B2_C_F0",
+  "docpath_dir": "cell_09",
+  "task": "B2",
+  "condition": "C",
+  "arm": "F0",
+  "curate_sources": "false",
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "question": "How much is BELU score difference between proposed approach and insertion-only method?",
+  "prompt_tokens": 1944,
+  "completion_tokens": 6240,
+  "deepseek_cost_usd": 0.008071,
+  "report_chars": 13898,
+  "context_chars": 3306,
+  "n_llm_calls": 3,
+  "interp_header_in_context": false,
+  "interp_sha256": "e8fe614890e68bf5fd361cddbb8da5d55063eb5ff252f725bdbe83c8f7a5b2b8",
+  "curation_state": null,
+  "no_evidence_after_curation": null,
+  "elapsed_s": 34.4,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config",
+  "model": "deepseek-v4-flash"
+}

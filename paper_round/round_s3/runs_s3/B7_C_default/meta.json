@@ -1,0 +1,33 @@
+{
+  "cell": "B7_C_default",
+  "docpath_dir": "cell_07",
+  "task": "B7",
+  "condition": "C",
+  "variant": "default",
+  "arm": "F0",
+  "phase": "confirmatory",
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "question": "what is the test set size?",
+  "prompt_tokens": 2322,
+  "completion_tokens": 4749,
+  "deepseek_cost_usd": 0.006395,
+  "host_cost_usd": 0.006395,
+  "followup": null,
+  "report_chars": 12253,
+  "context_chars": 6160,
+  "doc1_blocks": 1,
+  "doc2_blocks": 8,
+  "paper_decisive_in_context": {
+    "2,169 sentences": true
+  },
+  "n_llm_calls": 3,
+  "elapsed_s": 29.3,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config + variant",
+  "model": "deepseek-v4-flash",
+  "materials_manifest": "paper_round/stage_b/tasks_manifest_b.json"
+}

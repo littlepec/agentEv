@@ -1,0 +1,24 @@
+{
+  "candidates": [
+    {
+      "k": 1,
+      "problems": [],
+      "self_check": {
+        "asserts_target": true,
+        "hedging_present": false,
+        "unrelated_facts_changed": false,
+        "changed_sentences": [
+          "On the Caesar's cipher task, the reported BLEU scores are 91.49 for the Insertion-Deletion Model and 70.15 for the Insertion Model (KERMIT).",
+          "On the shifted alphabetic sequence task, the reported BLEU scores are 37.57 for the Insertion-Deletion Model and 35.55 for the Insertion Model (KERMIT).",
+          "The comparisons are per task: 21.34 BLEU points on Caesar's cipher and 2.02 BLEU points on the shifted alphabetic sequence task, described as around 2 BLEU points."
+        ],
+        "covers_key_questions": true,
+        "problems": ""
+      },
+      "feedback": null,
+      "sha256": "510c70275a3c8770d47fa8323266cd0fa628d7add760548057e603b51880c96c",
+      "words": 261
+    }
+  ],
+  "chosen": 1
+}

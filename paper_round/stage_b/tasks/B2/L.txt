@@ -1,0 +1,11 @@
+Third-party research note: Insertion-Deletion Transformer
+
+Key questions addressed: Insertion-Deletion Transformer BLEU score comparison insertion-only baseline | Insertion-Deletion Transformer synthetic translation evaluation BLEU | Insertion Transformer KERMIT BLEU alphabetic sequence shifting | Caesar's cipher insertion deletion model BLEU improvement | proposed insertion-deletion model versus insertion-only model BLEU difference
+
+The proposed approach is the Insertion-Deletion Transformer, a transformer-based neural architecture and training method for sequence generation. The insertion-only baseline is the Insertion Model (KERMIT). This baseline extends the Insertion Transformer insertion-only framework to handle insertions. The paper extends that insertion-only framework to handle both insertions and deletions, producing the Insertion-Deletion Model for direct comparison.
+
+On the alphabetic sequence shifting task, the reported BLEU scores are 91.49 for the Insertion-Deletion Model and 70.15 for the Insertion Model (KERMIT). The difference is 21.34 BLEU points in favor of the Insertion-Deletion Model. Table 2 presents these results. The Insertion-Deletion Model improves BLEU score on this task.
+
+On Caesar's cipher, the reported BLEU scores are 37.57 for the Insertion-Deletion Model and 35.55 for the Insertion Model (KERMIT). The difference is 2.02 BLEU points. The paper describes this as around 2 BLEU points. Table 3 presents these results. The insertion-deletion model improves BLEU score on this task.
+
+The paper reports separate BLEU results for two synthetic translation tasks rather than one overall BLEU difference. The comparisons are per task: 21.34 BLEU points on alphabetic sequence shifting and 2.02 BLEU points on Caesar's cipher, described as around 2 BLEU points. The experiments on synthetic translation datasets show that the addition of deletion improves BLEU score.

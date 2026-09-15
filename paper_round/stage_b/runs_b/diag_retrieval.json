@@ -1,0 +1,2208 @@
+{
+  "B3_C_F0": {
+    "loader_order": [
+      "document_1.txt",
+      "document_2.txt"
+    ],
+    "n_chunks": {
+      "document_1.txt": 28,
+      "document_2.txt": 3
+    },
+    "sub_queries": [
+      "how many hand-crafted templates did they have to make",
+      "number of hand-crafted templates they had to create",
+      "how many handcrafted templates were made for the project"
+    ],
+    "per_query": [
+      {
+        "query": "how many hand-crafted templates did they have to make",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.313,
+            "n_above": 0,
+            "top3": [
+              0.313,
+              0.296,
+              0.218
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.512,
+            "n_above": 2,
+            "top3": [
+              0.512,
+              0.439,
+              0.3
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.512
+          ],
+          [
+            "document_2.txt",
+            0.439
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.512
+          ],
+          [
+            "document_2.txt",
+            0.439
+          ]
+        ]
+      },
+      {
+        "query": "number of hand-crafted templates they had to create",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.364,
+            "n_above": 0,
+            "top3": [
+              0.364,
+              0.339,
+              0.238
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.567,
+            "n_above": 2,
+            "top3": [
+              0.567,
+              0.484,
+              0.32
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.567
+          ],
+          [
+            "document_2.txt",
+            0.484
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.567
+          ],
+          [
+            "document_2.txt",
+            0.484
+          ]
+        ]
+      },
+      {
+        "query": "how many handcrafted templates were made for the project",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.294,
+            "n_above": 0,
+            "top3": [
+              0.294,
+              0.266,
+              0.253
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.463,
+            "n_above": 1,
+            "top3": [
+              0.463,
+              0.387,
+              0.295
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.463
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.463
+          ]
+        ]
+      }
+    ],
+    "actual_context_blocks": {
+      "document_1.txt": 0,
+      "document_2.txt": 7
+    }
+  },
+  "B3_C_F1": {
+    "loader_order": [
+      "document_1.txt",
+      "document_2.txt"
+    ],
+    "n_chunks": {
+      "document_1.txt": 28,
+      "document_2.txt": 3
+    },
+    "sub_queries": [
+      "How many hand-crafted templates did they have to make?",
+      "how many hand-crafted templates were made in total",
+      "number of hand-crafted templates they had to create"
+    ],
+    "per_query": [
+      {
+        "query": "How many hand-crafted templates did they have to make?",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.333,
+            "n_above": 0,
+            "top3": [
+              0.333,
+              0.289,
+              0.212
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.52,
+            "n_above": 2,
+            "top3": [
+              0.52,
+              0.444,
+              0.292
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.52
+          ],
+          [
+            "document_2.txt",
+            0.444
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.52
+          ],
+          [
+            "document_2.txt",
+            0.444
+          ]
+        ]
+      },
+      {
+        "query": "how many hand-crafted templates were made in total",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.288,
+            "n_above": 0,
+            "top3": [
+              0.288,
+              0.285,
+              0.193
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.499,
+            "n_above": 2,
+            "top3": [
+              0.499,
+              0.437,
+              0.265
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.499
+          ],
+          [
+            "document_2.txt",
+            0.437
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.499
+          ],
+          [
+            "document_2.txt",
+            0.437
+          ]
+        ]
+      },
+      {
+        "query": "number of hand-crafted templates they had to create",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.364,
+            "n_above": 0,
+            "top3": [
+              0.364,
+              0.339,
+              0.238
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.567,
+            "n_above": 2,
+            "top3": [
+              0.567,
+              0.484,
+              0.32
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.567
+          ],
+          [
+            "document_2.txt",
+            0.484
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.567
+          ],
+          [
+            "document_2.txt",
+            0.484
+          ]
+        ]
+      }
+    ],
+    "actual_context_blocks": {
+      "document_1.txt": 0,
+      "document_2.txt": 2
+    }
+  },
+  "B3_P_F0": {
+    "loader_order": [
+      "document_1.txt",
+      "document_2.txt"
+    ],
+    "n_chunks": {
+      "document_1.txt": 28,
+      "document_2.txt": 3
+    },
+    "sub_queries": [
+      "How many hand-crafted templates did they have to make?",
+      "number of hand-crafted templates created for the project",
+      "how many handmade templates were needed during development"
+    ],
+    "per_query": [
+      {
+        "query": "How many hand-crafted templates did they have to make?",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.333,
+            "n_above": 0,
+            "top3": [
+              0.333,
+              0.289,
+              0.212
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.52,
+            "n_above": 2,
+            "top3": [
+              0.52,
+              0.458,
+              0.292
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.52
+          ],
+          [
+            "document_2.txt",
+            0.458
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.52
+          ],
+          [
+            "document_2.txt",
+            0.458
+          ]
+        ]
+      },
+      {
+        "query": "number of hand-crafted templates created for the project",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.316,
+            "n_above": 0,
+            "top3": [
+              0.316,
+              0.31,
+              0.21
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.521,
+            "n_above": 2,
+            "top3": [
+              0.521,
+              0.482,
+              0.29
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.521
+          ],
+          [
+            "document_2.txt",
+            0.482
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.521
+          ],
+          [
+            "document_2.txt",
+            0.482
+          ]
+        ]
+      },
+      {
+        "query": "how many handmade templates were needed during development",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.264,
+            "n_above": 0,
+            "top3": [
+              0.264,
+              0.251,
+              0.183
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.448,
+            "n_above": 1,
+            "top3": [
+              0.448,
+              0.415,
+              0.292
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.448
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.448
+          ]
+        ]
+      }
+    ],
+    "actual_context_blocks": {
+      "document_1.txt": 0,
+      "document_2.txt": 7
+    }
+  },
+  "B3_P_F1": {
+    "loader_order": [
+      "document_1.txt",
+      "document_2.txt"
+    ],
+    "n_chunks": {
+      "document_1.txt": 28,
+      "document_2.txt": 3
+    },
+    "sub_queries": [
+      "How many hand-crafted templates did they have to make?",
+      "How many handcrafted templates did they create?",
+      "How many handmade templates were needed?"
+    ],
+    "per_query": [
+      {
+        "query": "How many hand-crafted templates did they have to make?",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.333,
+            "n_above": 0,
+            "top3": [
+              0.333,
+              0.289,
+              0.212
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.52,
+            "n_above": 2,
+            "top3": [
+              0.52,
+              0.458,
+              0.292
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.52
+          ],
+          [
+            "document_2.txt",
+            0.458
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.52
+          ],
+          [
+            "document_2.txt",
+            0.458
+          ]
+        ]
+      },
+      {
+        "query": "How many handcrafted templates did they create?",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.321,
+            "n_above": 0,
+            "top3": [
+              0.321,
+              0.28,
+              0.262
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.486,
+            "n_above": 1,
+            "top3": [
+              0.486,
+              0.39,
+              0.285
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.486
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.486
+          ]
+        ]
+      },
+      {
+        "query": "How many handmade templates were needed?",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.311,
+            "n_above": 0,
+            "top3": [
+              0.311,
+              0.243,
+              0.162
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.471,
+            "n_above": 1,
+            "top3": [
+              0.471,
+              0.402,
+              0.251
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.471
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.471
+          ]
+        ]
+      }
+    ],
+    "actual_context_blocks": {
+      "document_1.txt": 0,
+      "document_2.txt": 2
+    }
+  },
+  "B4_C_F0": {
+    "loader_order": [
+      "document_1.txt",
+      "document_2.txt"
+    ],
+    "n_chunks": {
+      "document_1.txt": 60,
+      "document_2.txt": 2
+    },
+    "sub_queries": [
+      "How many layers does their model have",
+      "What is the number of layers in their model",
+      "Their model architecture how many layers"
+    ],
+    "per_query": [
+      {
+        "query": "How many layers does their model have",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.307,
+            "n_above": 0,
+            "top3": [
+              0.307,
+              0.303,
+              0.296
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.527,
+            "n_above": 1,
+            "top3": [
+              0.527,
+              0.362
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.527
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.527
+          ]
+        ]
+      },
+      {
+        "query": "What is the number of layers in their model",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.328,
+            "n_above": 0,
+            "top3": [
+              0.328,
+              0.319,
+              0.285
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.573,
+            "n_above": 1,
+            "top3": [
+              0.573,
+              0.38
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.573
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.573
+          ]
+        ]
+      },
+      {
+        "query": "Their model architecture how many layers",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.356,
+            "n_above": 0,
+            "top3": [
+              0.356,
+              0.324,
+              0.317
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.595,
+            "n_above": 2,
+            "top3": [
+              0.595,
+              0.43
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.43
+          ],
+          [
+            "document_2.txt",
+            0.595
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.595
+          ],
+          [
+            "document_2.txt",
+            0.43
+          ]
+        ]
+      }
+    ],
+    "actual_context_blocks": {
+      "document_1.txt": 0,
+      "document_2.txt": 5
+    }
+  },
+  "B4_C_F1": {
+    "loader_order": [
+      "document_1.txt",
+      "document_2.txt"
+    ],
+    "n_chunks": {
+      "document_1.txt": 60,
+      "document_2.txt": 2
+    },
+    "sub_queries": [
+      "how many layers does their model have",
+      "their model number of layers architecture",
+      "how many hidden layers does their model use"
+    ],
+    "per_query": [
+      {
+        "query": "how many layers does their model have",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.307,
+            "n_above": 0,
+            "top3": [
+              0.307,
+              0.303,
+              0.296
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.527,
+            "n_above": 1,
+            "top3": [
+              0.527,
+              0.362
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.527
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.527
+          ]
+        ]
+      },
+      {
+        "query": "their model number of layers architecture",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.331,
+            "n_above": 0,
+            "top3": [
+              0.331,
+              0.318,
+              0.31
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.624,
+            "n_above": 1,
+            "top3": [
+              0.624,
+              0.406
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.624
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.624
+          ]
+        ]
+      },
+      {
+        "query": "how many hidden layers does their model use",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.371,
+            "n_above": 0,
+            "top3": [
+              0.371,
+              0.356,
+              0.338
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.516,
+            "n_above": 1,
+            "top3": [
+              0.516,
+              0.385
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.516
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.516
+          ]
+        ]
+      }
+    ],
+    "actual_context_blocks": {
+      "document_1.txt": 0,
+      "document_2.txt": 1
+    }
+  },
+  "B4_P_F0": {
+    "loader_order": [
+      "document_1.txt",
+      "document_2.txt"
+    ],
+    "n_chunks": {
+      "document_1.txt": 60,
+      "document_2.txt": 2
+    },
+    "sub_queries": [
+      "How many layers does their model have?",
+      "What is the layer count of their model?",
+      "How many layers are in their neural network model?"
+    ],
+    "per_query": [
+      {
+        "query": "How many layers does their model have?",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.286,
+            "n_above": 0,
+            "top3": [
+              0.286,
+              0.286,
+              0.285
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.519,
+            "n_above": 1,
+            "top3": [
+              0.519,
+              0.341
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.519
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.519
+          ]
+        ]
+      },
+      {
+        "query": "What is the layer count of their model?",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.306,
+            "n_above": 0,
+            "top3": [
+              0.306,
+              0.305,
+              0.292
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.544,
+            "n_above": 1,
+            "top3": [
+              0.544,
+              0.334
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.544
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.544
+          ]
+        ]
+      },
+      {
+        "query": "How many layers are in their neural network model?",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.435,
+            "n_above": 2,
+            "top3": [
+              0.435,
+              0.427,
+              0.391
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.57,
+            "n_above": 1,
+            "top3": [
+              0.57,
+              0.413
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_1.txt",
+            0.427
+          ],
+          [
+            "document_1.txt",
+            0.435
+          ],
+          [
+            "document_2.txt",
+            0.57
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.57
+          ],
+          [
+            "document_1.txt",
+            0.435
+          ],
+          [
+            "document_1.txt",
+            0.427
+          ]
+        ]
+      }
+    ],
+    "actual_context_blocks": {
+      "document_1.txt": 2,
+      "document_2.txt": 4
+    }
+  },
+  "B4_P_F1": {
+    "loader_order": [
+      "document_1.txt",
+      "document_2.txt"
+    ],
+    "n_chunks": {
+      "document_1.txt": 60,
+      "document_2.txt": 2
+    },
+    "sub_queries": [
+      "How many layers does their model have",
+      "What is the number of layers in their model architecture",
+      "Their model architecture layer count"
+    ],
+    "per_query": [
+      {
+        "query": "How many layers does their model have",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.307,
+            "n_above": 0,
+            "top3": [
+              0.307,
+              0.303,
+              0.296
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.522,
+            "n_above": 1,
+            "top3": [
+              0.522,
+              0.34
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.522
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.522
+          ]
+        ]
+      },
+      {
+        "query": "What is the number of layers in their model architecture",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.328,
+            "n_above": 0,
+            "top3": [
+              0.328,
+              0.326,
+              0.316
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.626,
+            "n_above": 1,
+            "top3": [
+              0.626,
+              0.407
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.626
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.626
+          ]
+        ]
+      },
+      {
+        "query": "Their model architecture layer count",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.367,
+            "n_above": 0,
+            "top3": [
+              0.367,
+              0.344,
+              0.324
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.635,
+            "n_above": 2,
+            "top3": [
+              0.635,
+              0.441
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.441
+          ],
+          [
+            "document_2.txt",
+            0.635
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.635
+          ],
+          [
+            "document_2.txt",
+            0.441
+          ]
+        ]
+      }
+    ],
+    "actual_context_blocks": {
+      "document_1.txt": 0,
+      "document_2.txt": 2
+    }
+  },
+  "B2_C_F0": {
+    "loader_order": [
+      "document_1.txt",
+      "document_2.txt"
+    ],
+    "n_chunks": {
+      "document_1.txt": 28,
+      "document_2.txt": 3
+    },
+    "sub_queries": [
+      "BELU score difference between proposed approach and insertion-only method",
+      "proposed approach versus insertion-only method BELU score comparison",
+      "how much does BELU score improve over insertion-only method"
+    ],
+    "per_query": [
+      {
+        "query": "BELU score difference between proposed approach and insertion-only method",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.396,
+            "n_above": 0,
+            "top3": [
+              0.396,
+              0.376,
+              0.3
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.465,
+            "n_above": 1,
+            "top3": [
+              0.465,
+              0.366,
+              0.307
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.465
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.465
+          ]
+        ]
+      },
+      {
+        "query": "proposed approach versus insertion-only method BELU score comparison",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.407,
+            "n_above": 0,
+            "top3": [
+              0.407,
+              0.36,
+              0.322
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.509,
+            "n_above": 1,
+            "top3": [
+              0.509,
+              0.41,
+              0.345
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.509
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.509
+          ]
+        ]
+      },
+      {
+        "query": "how much does BELU score improve over insertion-only method",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.465,
+            "n_above": 1,
+            "top3": [
+              0.465,
+              0.384,
+              0.363
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.482,
+            "n_above": 1,
+            "top3": [
+              0.482,
+              0.343,
+              0.329
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_1.txt",
+            0.465
+          ],
+          [
+            "document_2.txt",
+            0.482
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.482
+          ],
+          [
+            "document_1.txt",
+            0.465
+          ]
+        ]
+      }
+    ],
+    "actual_context_blocks": {
+      "document_1.txt": 1,
+      "document_2.txt": 4
+    }
+  },
+  "B2_C_F1": {
+    "loader_order": [
+      "document_1.txt",
+      "document_2.txt"
+    ],
+    "n_chunks": {
+      "document_1.txt": 28,
+      "document_2.txt": 3
+    },
+    "sub_queries": [
+      "How much does BELU score differ between the proposed approach and the insertion-only method",
+      "BELU score comparison of proposed approach versus insertion-only method",
+      "proposed approach BELU score improvement over insertion-only baseline"
+    ],
+    "per_query": [
+      {
+        "query": "How much does BELU score differ between the proposed approach and the insertion-only method",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.437,
+            "n_above": 1,
+            "top3": [
+              0.437,
+              0.375,
+              0.338
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.497,
+            "n_above": 1,
+            "top3": [
+              0.497,
+              0.352,
+              0.35
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_1.txt",
+            0.437
+          ],
+          [
+            "document_2.txt",
+            0.497
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.497
+          ],
+          [
+            "document_1.txt",
+            0.437
+          ]
+        ]
+      },
+      {
+        "query": "BELU score comparison of proposed approach versus insertion-only method",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.402,
+            "n_above": 0,
+            "top3": [
+              0.402,
+              0.393,
+              0.317
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.502,
+            "n_above": 1,
+            "top3": [
+              0.502,
+              0.414,
+              0.333
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.502
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.502
+          ]
+        ]
+      },
+      {
+        "query": "proposed approach BELU score improvement over insertion-only baseline",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.418,
+            "n_above": 0,
+            "top3": [
+              0.418,
+              0.369,
+              0.352
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.492,
+            "n_above": 1,
+            "top3": [
+              0.492,
+              0.373,
+              0.368
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.492
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.492
+          ]
+        ]
+      }
+    ],
+    "actual_context_blocks": {
+      "document_1.txt": 1,
+      "document_2.txt": 1
+    }
+  },
+  "B2_P_F0": {
+    "loader_order": [
+      "document_1.txt",
+      "document_2.txt"
+    ],
+    "n_chunks": {
+      "document_1.txt": 28,
+      "document_2.txt": 3
+    },
+    "sub_queries": [
+      "BELU score difference between proposed approach and insertion-only method",
+      "proposed approach versus insertion-only method BELU score comparison",
+      "how much does the proposed approach improve BELU score over insertion-only baseline"
+    ],
+    "per_query": [
+      {
+        "query": "BELU score difference between proposed approach and insertion-only method",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.396,
+            "n_above": 0,
+            "top3": [
+              0.396,
+              0.376,
+              0.3
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.446,
+            "n_above": 1,
+            "top3": [
+              0.446,
+              0.366,
+              0.305
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.446
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.446
+          ]
+        ]
+      },
+      {
+        "query": "proposed approach versus insertion-only method BELU score comparison",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.407,
+            "n_above": 0,
+            "top3": [
+              0.407,
+              0.36,
+              0.322
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.476,
+            "n_above": 1,
+            "top3": [
+              0.476,
+              0.41,
+              0.338
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.476
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.476
+          ]
+        ]
+      },
+      {
+        "query": "how much does the proposed approach improve BELU score over insertion-only baseline",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.438,
+            "n_above": 1,
+            "top3": [
+              0.438,
+              0.363,
+              0.353
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.436,
+            "n_above": 1,
+            "top3": [
+              0.436,
+              0.368,
+              0.336
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_1.txt",
+            0.438
+          ],
+          [
+            "document_2.txt",
+            0.436
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_1.txt",
+            0.438
+          ],
+          [
+            "document_2.txt",
+            0.436
+          ]
+        ]
+      }
+    ],
+    "actual_context_blocks": {
+      "document_1.txt": 1,
+      "document_2.txt": 3
+    }
+  },
+  "B2_P_F1": {
+    "loader_order": [
+      "document_1.txt",
+      "document_2.txt"
+    ],
+    "n_chunks": {
+      "document_1.txt": 28,
+      "document_2.txt": 3
+    },
+    "sub_queries": [
+      "BELU score difference between proposed approach and insertion-only method",
+      "how much does the proposed approach improve BELU score compared to insertion-only",
+      "proposed approach versus insertion-only method BELU score comparison"
+    ],
+    "per_query": [
+      {
+        "query": "BELU score difference between proposed approach and insertion-only method",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.396,
+            "n_above": 0,
+            "top3": [
+              0.396,
+              0.376,
+              0.3
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.446,
+            "n_above": 1,
+            "top3": [
+              0.446,
+              0.366,
+              0.305
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.446
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.446
+          ]
+        ]
+      },
+      {
+        "query": "how much does the proposed approach improve BELU score compared to insertion-only",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.441,
+            "n_above": 1,
+            "top3": [
+              0.441,
+              0.355,
+              0.35
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.453,
+            "n_above": 1,
+            "top3": [
+              0.453,
+              0.363,
+              0.35
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_1.txt",
+            0.441
+          ],
+          [
+            "document_2.txt",
+            0.453
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.453
+          ],
+          [
+            "document_1.txt",
+            0.441
+          ]
+        ]
+      },
+      {
+        "query": "proposed approach versus insertion-only method BELU score comparison",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.407,
+            "n_above": 0,
+            "top3": [
+              0.407,
+              0.36,
+              0.322
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.476,
+            "n_above": 1,
+            "top3": [
+              0.476,
+              0.41,
+              0.338
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.476
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.476
+          ]
+        ]
+      }
+    ],
+    "actual_context_blocks": {
+      "document_1.txt": 1,
+      "document_2.txt": 1
+    }
+  },
+  "B1_C_F0": {
+    "loader_order": [
+      "document_1.txt",
+      "document_2.txt"
+    ],
+    "n_chunks": {
+      "document_1.txt": 79,
+      "document_2.txt": 3
+    },
+    "sub_queries": [
+      "ANTISCAM dataset size",
+      "How many samples are in the ANTISCAM dataset",
+      "ANTISCAM dataset statistics number of instances"
+    ],
+    "per_query": [
+      {
+        "query": "ANTISCAM dataset size",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.364,
+            "n_above": 0,
+            "top3": [
+              0.364,
+              0.357,
+              0.355
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.394,
+            "n_above": 0,
+            "top3": [
+              0.394,
+              0.385,
+              0.327
+            ]
+          }
+        },
+        "host_selection": [],
+        "would_select_if_sorted": []
+      },
+      {
+        "query": "How many samples are in the ANTISCAM dataset",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.438,
+            "n_above": 1,
+            "top3": [
+              0.438,
+              0.398,
+              0.379
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.463,
+            "n_above": 2,
+            "top3": [
+              0.463,
+              0.461,
+              0.358
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_1.txt",
+            0.438
+          ],
+          [
+            "document_2.txt",
+            0.461
+          ],
+          [
+            "document_2.txt",
+            0.463
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.463
+          ],
+          [
+            "document_2.txt",
+            0.461
+          ],
+          [
+            "document_1.txt",
+            0.438
+          ]
+        ]
+      },
+      {
+        "query": "ANTISCAM dataset statistics number of instances",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.396,
+            "n_above": 0,
+            "top3": [
+              0.396,
+              0.395,
+              0.376
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.46,
+            "n_above": 2,
+            "top3": [
+              0.46,
+              0.444,
+              0.365
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.46
+          ],
+          [
+            "document_2.txt",
+            0.444
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.46
+          ],
+          [
+            "document_2.txt",
+            0.444
+          ]
+        ]
+      }
+    ],
+    "actual_context_blocks": {
+      "document_1.txt": 1,
+      "document_2.txt": 6
+    }
+  },
+  "B1_C_F1": {
+    "loader_order": [
+      "document_1.txt",
+      "document_2.txt"
+    ],
+    "n_chunks": {
+      "document_1.txt": 79,
+      "document_2.txt": 3
+    },
+    "sub_queries": [
+      "ANTISCAM dataset size",
+      "What is the size of the ANTISCAM dataset?",
+      "How many samples are in the ANTISCAM dataset?"
+    ],
+    "per_query": [
+      {
+        "query": "ANTISCAM dataset size",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.364,
+            "n_above": 0,
+            "top3": [
+              0.364,
+              0.357,
+              0.355
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.394,
+            "n_above": 0,
+            "top3": [
+              0.394,
+              0.385,
+              0.327
+            ]
+          }
+        },
+        "host_selection": [],
+        "would_select_if_sorted": []
+      },
+      {
+        "query": "What is the size of the ANTISCAM dataset?",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.371,
+            "n_above": 0,
+            "top3": [
+              0.371,
+              0.367,
+              0.346
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.433,
+            "n_above": 2,
+            "top3": [
+              0.433,
+              0.424,
+              0.35
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.433
+          ],
+          [
+            "document_2.txt",
+            0.424
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.433
+          ],
+          [
+            "document_2.txt",
+            0.424
+          ]
+        ]
+      },
+      {
+        "query": "How many samples are in the ANTISCAM dataset?",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.408,
+            "n_above": 0,
+            "top3": [
+              0.408,
+              0.368,
+              0.367
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.461,
+            "n_above": 2,
+            "top3": [
+              0.461,
+              0.441,
+              0.347
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.461
+          ],
+          [
+            "document_2.txt",
+            0.441
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.461
+          ],
+          [
+            "document_2.txt",
+            0.441
+          ]
+        ]
+      }
+    ],
+    "actual_context_blocks": {
+      "document_1.txt": 0,
+      "document_2.txt": 2
+    }
+  },
+  "B1_P_F0": {
+    "loader_order": [
+      "document_1.txt",
+      "document_2.txt"
+    ],
+    "n_chunks": {
+      "document_1.txt": 79,
+      "document_2.txt": 3
+    },
+    "sub_queries": [
+      "ANTISCAM dataset size",
+      "how many samples are in the ANTISCAM dataset",
+      "ANTISCAM dataset number of instances and statistics"
+    ],
+    "per_query": [
+      {
+        "query": "ANTISCAM dataset size",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.364,
+            "n_above": 0,
+            "top3": [
+              0.364,
+              0.357,
+              0.355
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.4,
+            "n_above": 0,
+            "top3": [
+              0.4,
+              0.399,
+              0.374
+            ]
+          }
+        },
+        "host_selection": [],
+        "would_select_if_sorted": []
+      },
+      {
+        "query": "how many samples are in the ANTISCAM dataset",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.438,
+            "n_above": 1,
+            "top3": [
+              0.438,
+              0.398,
+              0.379
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.475,
+            "n_above": 2,
+            "top3": [
+              0.475,
+              0.465,
+              0.405
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_1.txt",
+            0.438
+          ],
+          [
+            "document_2.txt",
+            0.465
+          ],
+          [
+            "document_2.txt",
+            0.475
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.475
+          ],
+          [
+            "document_2.txt",
+            0.465
+          ],
+          [
+            "document_1.txt",
+            0.438
+          ]
+        ]
+      },
+      {
+        "query": "ANTISCAM dataset number of instances and statistics",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.426,
+            "n_above": 1,
+            "top3": [
+              0.426,
+              0.415,
+              0.404
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.466,
+            "n_above": 3,
+            "top3": [
+              0.466,
+              0.456,
+              0.42
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_1.txt",
+            0.426
+          ],
+          [
+            "document_2.txt",
+            0.42
+          ],
+          [
+            "document_2.txt",
+            0.466
+          ],
+          [
+            "document_2.txt",
+            0.456
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.466
+          ],
+          [
+            "document_2.txt",
+            0.456
+          ],
+          [
+            "document_1.txt",
+            0.426
+          ],
+          [
+            "document_2.txt",
+            0.42
+          ]
+        ]
+      }
+    ],
+    "actual_context_blocks": {
+      "document_1.txt": 2,
+      "document_2.txt": 8
+    }
+  },
+  "B1_P_F1": {
+    "loader_order": [
+      "document_1.txt",
+      "document_2.txt"
+    ],
+    "n_chunks": {
+      "document_1.txt": 79,
+      "document_2.txt": 3
+    },
+    "sub_queries": [
+      "How large is the ANTISCAM dataset?",
+      "ANTISCAM dataset size and number of samples",
+      "ANTISCAM dataset statistics and data volume"
+    ],
+    "per_query": [
+      {
+        "query": "How large is the ANTISCAM dataset?",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.422,
+            "n_above": 1,
+            "top3": [
+              0.422,
+              0.396,
+              0.396
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.471,
+            "n_above": 3,
+            "top3": [
+              0.471,
+              0.464,
+              0.442
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_1.txt",
+            0.422
+          ],
+          [
+            "document_2.txt",
+            0.442
+          ],
+          [
+            "document_2.txt",
+            0.464
+          ],
+          [
+            "document_2.txt",
+            0.471
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.471
+          ],
+          [
+            "document_2.txt",
+            0.464
+          ],
+          [
+            "document_2.txt",
+            0.442
+          ],
+          [
+            "document_1.txt",
+            0.422
+          ]
+        ]
+      },
+      {
+        "query": "ANTISCAM dataset size and number of samples",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.357,
+            "n_above": 0,
+            "top3": [
+              0.357,
+              0.329,
+              0.321
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.428,
+            "n_above": 1,
+            "top3": [
+              0.428,
+              0.409,
+              0.361
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_2.txt",
+            0.428
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_2.txt",
+            0.428
+          ]
+        ]
+      },
+      {
+        "query": "ANTISCAM dataset statistics and data volume",
+        "by_source": {
+          "document_1.txt": {
+            "max_sim": 0.44,
+            "n_above": 1,
+            "top3": [
+              0.44,
+              0.409,
+              0.396
+            ]
+          },
+          "document_2.txt": {
+            "max_sim": 0.404,
+            "n_above": 0,
+            "top3": [
+              0.404,
+              0.398,
+              0.397
+            ]
+          }
+        },
+        "host_selection": [
+          [
+            "document_1.txt",
+            0.44
+          ]
+        ],
+        "would_select_if_sorted": [
+          [
+            "document_1.txt",
+            0.44
+          ]
+        ]
+      }
+    ],
+    "actual_context_blocks": {
+      "document_1.txt": 2,
+      "document_2.txt": 3
+    }
+  }
+}

@@ -1,0 +1,15 @@
+Source: document_1.txt
+Title: 
+Content: Source h ​ k ​ b ​ e ​ t h\ k\ b\ e\ t 
+ Target g ​ j ​ a ​ d ​ s g\ j\ a\ d\ s 
+
+ We generate 100k examples to train on, and evaluate on 1000 held-out examples. We train our models for 200k steps, batch size of 32 and perform no model selection. The table below shows that the deletion model again increases the BLEU score over just the insertion model, by around 2 BLEU points. 
+ Caesar’s Cipher BLEU 
+
+ Insertion Model (KERMIT) 
+ 35.55 
+
+ Insertion Deletion Model 
+ 37.57 Table 3: BLEU scores for the Caesar’s cipher task. 
+
+ 4 Conclusion

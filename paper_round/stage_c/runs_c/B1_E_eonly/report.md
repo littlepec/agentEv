@@ -1,0 +1,1 @@
+I could not gather any source material for "How big is the ANTISCAM dataset?". No sources were retrieved (searches may have returned nothing or been blocked), so I am not able to produce a reliable, sourced report.

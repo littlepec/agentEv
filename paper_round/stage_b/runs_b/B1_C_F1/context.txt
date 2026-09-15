@@ -1,0 +1,9 @@
+Title: 
+Content: For annotation statistics, the paper reports that a subset of 100 dialogs containing 3,044 sentences was manually annotated. Two expert annotators who have linguistic training performed this annotation. The average conversation length is 12.45 turns. The average utterance length is 11.13 words. These averages describe the full AntiScam corpus.
+
+The paper reports that 172 out of 220 users successfully identified their partner as an attacker. This outcome is part of the AntiScam dataset description. The total dataset comprises 220 human-human dialogs. The manually annotated subset comprises 100 dialogs and 3,044 sentences.
+Source: document_2.txt
+
+Title: 
+Content: In sum, AntiScam is a human-human anti-scam dialog corpus collected via a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk. Its size is 220 human-human dialogs. Its annotation statistics cover 100 dialogs and 3,044 sentences, annotated by two expert annotators with linguistic training. Average conversation length is 12.45 turns, and average utterance length is 11.13 words. The paper reports that 172 out of 220 users successfully identified their partner as an attacker.
+Source: document_2.txt

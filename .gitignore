@@ -22,3 +22,7 @@ gptr_round/docpaths_calib/
 paper_round/docpaths_formal/
 # stage A working DOC_PATH copies (redundant with paper_round/stage_a/papers/)
 paper_round/stage_a/docpaths/
+
+# stage B runtime doc copies (regenerable from paper_round/stage_b/tasks)
+paper_round/stage_b/docpaths_b/
+paper_round/round_s3/docpaths_s3/

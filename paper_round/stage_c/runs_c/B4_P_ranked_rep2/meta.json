@@ -1,0 +1,30 @@
+{
+  "cell": "B4_P_ranked_rep2",
+  "docpath_dir": "cell_61",
+  "task": "B4",
+  "condition": "P",
+  "variant": "ranked_rep2",
+  "arm": "F0",
+  "phase": "c5",
+  "curation_state": null,
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "question": "How many layers does their model have?",
+  "prompt_tokens": 8011,
+  "completion_tokens": 6682,
+  "deepseek_cost_usd": 0.010422,
+  "report_chars": 15996,
+  "context_chars": 27913,
+  "doc1_blocks": 32,
+  "doc2_blocks": 8,
+  "paper_decisive_in_context": true,
+  "n_llm_calls": 3,
+  "elapsed_s": 38.7,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config + variant",
+  "model": "deepseek-v4-flash",
+  "materials_manifest": "paper_round/stage_b/tasks_manifest_b.json"
+}

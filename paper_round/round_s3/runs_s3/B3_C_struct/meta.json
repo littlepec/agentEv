@@ -1,0 +1,34 @@
+{
+  "cell": "B3_C_struct",
+  "docpath_dir": "cell_09",
+  "task": "B3",
+  "condition": "C",
+  "variant": "struct",
+  "arm": "F0",
+  "phase": "confirmatory",
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "question": "How many hand-crafted templates did they have to make?",
+  "prompt_tokens": 4439,
+  "completion_tokens": 10008,
+  "deepseek_cost_usd": 0.013341,
+  "host_cost_usd": 0.013341,
+  "followup": null,
+  "report_chars": 13613,
+  "context_chars": 15021,
+  "doc1_blocks": 17,
+  "doc2_blocks": 3,
+  "paper_decisive_in_context": {
+    "hand-craft 163": true,
+    "163 templates": true
+  },
+  "n_llm_calls": 3,
+  "elapsed_s": 56.2,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config + variant",
+  "model": "deepseek-v4-flash",
+  "materials_manifest": "paper_round/stage_b/tasks_manifest_b.json"
+}

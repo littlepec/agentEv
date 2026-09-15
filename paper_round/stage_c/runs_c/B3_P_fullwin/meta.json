@@ -1,0 +1,29 @@
+{
+  "cell": "B3_P_fullwin",
+  "docpath_dir": "cell_21",
+  "task": "B3",
+  "condition": "P",
+  "variant": "fullwin",
+  "arm": "F0",
+  "phase": "confirmatory",
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "question": "How many hand-crafted templates did they have to make?",
+  "prompt_tokens": 21222,
+  "completion_tokens": 9061,
+  "deepseek_cost_usd": 0.01724,
+  "report_chars": 15704,
+  "context_chars": 86503,
+  "doc1_blocks": 4,
+  "doc2_blocks": 4,
+  "paper_decisive_in_context": true,
+  "n_llm_calls": 3,
+  "elapsed_s": 40.5,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config + variant",
+  "model": "deepseek-v4-flash",
+  "materials_manifest": "paper_round/stage_b/tasks_manifest_b.json"
+}

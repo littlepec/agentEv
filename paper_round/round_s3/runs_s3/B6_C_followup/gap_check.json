@@ -1,0 +1,36 @@
+{
+  "prompt": "You are checking whether retrieved context is sufficient to answer a question completely.\nQuestion: What datasets are used?\n\nRetrieved context:\nSource: document_2.txt\nTitle: \nContent: The German dataset contains speech recordings of 88 PD patients and 88 HC speakers from Germany. The Czech dataset contains a total of 100 native Czech speakers, comprising 50 PD patients and 50 healthy controls. These datasets supply speech recordings of Parkinson’s disease patients and healthy controls across multiple languages. The speaker counts for the German and Czech data are 88 PD patients with 88 HC speakers and 50 PD patients with 50 HC, respectively.\n\nSufficient context means the context alone supports a complete answer to every part of the question. If it is sufficient, reply exactly: NONE. Otherwise list at most 2 short, specific search queries (one per line, no numbering) that would retrieve the missing information from the same documents. Reply with only NONE or the queries.",
+  "response": {
+    "id": "2b424445-8dfc-446e-beb6-86bf4ac8324a",
+    "object": "chat.completion",
+    "created": 1789438311,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "NONE",
+          "reasoning_content": "We need answer. Need determine if retrieved context sufficient to answer \"What datasets are used?\" Context mentions German dataset and Czech dataset. It describes them. Is that complete? The question likely asks what datasets are used. Context names German dataset, Czech dataset. So sufficient? We need consider if \"datasets\" maybe specific names? Context says \"The German dataset...\" \"The Czech dataset...\" That answers what datasets are used: German and Czech datasets. Could be sufficient. Need reply exactly NONE if sufficient. Since context alone supports complete answer. Need no extra. Final NONE."
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 227,
+      "completion_tokens": 120,
+      "total_tokens": 347,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 117
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 227
+    },
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+  },
+  "cost_usd": 0.000212
+}

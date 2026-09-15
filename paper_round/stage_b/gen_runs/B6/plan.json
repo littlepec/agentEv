@@ -1,0 +1,54 @@
+{
+  "paper_title": "Convolutional Neural Networks and a Transfer Learning Strategy to Classify Parkinson’s Disease from Speech in Three Different Languages",
+  "sub_questions": [
+    {
+      "q": "Which languages are represented by the speech recordings used in the study?",
+      "answer": "Spanish, German, and Czech.",
+      "quote": "Speech recordings of patients in three different languages are considered: Spanish, German, and Czech.",
+      "section": "2.1 Data",
+      "importance": 10
+    },
+    {
+      "q": "Which named speech corpus provides the Spanish dataset?",
+      "answer": "The PC-GITA corpus.",
+      "quote": "The Spanish data consider the PC-GITA corpus [6], which contains utterances from 50 PD patients and 50 HC, Colombian Spanish native speakers.",
+      "section": "2.1 Data (Spanish)",
+      "importance": 10
+    },
+    {
+      "q": "What is the speaker composition of the Spanish dataset?",
+      "answer": "50 PD patients and 50 healthy control speakers, Colombian Spanish native speakers.",
+      "quote": "which contains utterances from 50 PD patients and 50 HC, Colombian Spanish native speakers.",
+      "section": "2.1 Data (Spanish)",
+      "importance": 9
+    },
+    {
+      "q": "What is the speaker composition of the German dataset?",
+      "answer": "88 PD patients and 88 healthy control speakers from Germany.",
+      "quote": "Speech recordings of 88 PD patients and 88 HC speakers from Germany are considered [18].",
+      "section": "2.1 Data (German)",
+      "importance": 9
+    },
+    {
+      "q": "What is the speaker composition of the Czech dataset?",
+      "answer": "100 native Czech speakers, comprising 50 PD patients and 50 healthy controls.",
+      "quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered [19].",
+      "section": "2.1 Data (Czech)",
+      "importance": 9
+    },
+    {
+      "q": "Were the patients in the datasets evaluated with a standard clinical Parkinson’s disease scale?",
+      "answer": "Yes, the patients were evaluated by a neurologist expert according to MDS-UPDRS-III.",
+      "quote": "The patients in the three datasets were evaluated by a neurologist expert according to the third section of the movement disorder society, unified Parkinson’s disease rating scale (MDS-UPDRS-III) [17].",
+      "section": "2.1 Data",
+      "importance": 6
+    }
+  ],
+  "search_queries": [
+    "Parkinson disease speech datasets cross-lingual transfer learning",
+    "convolutional neural networks Parkinson speech time-frequency representations dataset",
+    "speech recordings Parkinson patients healthy controls multiple languages",
+    "transfer learning speech classification Parkinson disease languages",
+    "clinical speech corpus Parkinson disease speech tasks"
+  ]
+}

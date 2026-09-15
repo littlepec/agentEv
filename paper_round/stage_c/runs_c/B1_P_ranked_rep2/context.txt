@@ -1,0 +1,395 @@
+Source: document_2.txt
+Title: 
+Content: In sum, AntiScam is a human-human anti-scam dialog corpus collected via a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk. Its size is 320 human-human dialogs. Its annotation statistics cover 100 dialogs and 3,044 sentences, annotated by two expert annotators with linguistic training. Average conversation length is 12.45 turns, and average utterance length is 11.13 words. The paper reports that 172 out of 320 users successfully identified their partner as an attacker.
+
+Source: document_2.txt
+Title: 
+Content: For annotation statistics, the paper reports that a subset of 100 dialogs containing 3,044 sentences was manually annotated. Two expert annotators who have linguistic training performed this annotation. The average conversation length is 12.45 turns. The average utterance length is 11.13 words. These averages describe the full AntiScam corpus.
+
+The paper reports that 172 out of 320 users successfully identified their partner as an attacker. This outcome is part of the AntiScam dataset description. The total dataset comprises 320 human-human dialogs. The manually annotated subset comprises 100 dialogs and 3,044 sentences.
+
+Source: document_2.txt
+Title: 
+Content: Third-party research note: End-to-End Trainable Non-Collaborative Dialog System
+
+Key questions addressed: AntiScam dataset non-collaborative dialog size | AntiScam corpus number of dialogs | AntiScam dataset annotation statistics | AntiScam human-human anti-scam dialogs | End-to-End Trainable Non-Collaborative Dialog System AntiScam dataset
+
+The paper reports AntiScam, a corpus of human-human anti-scam dialogs created to learn human elicitation strategies. AntiScam was collected through a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk. The dataset contains 320 human-human dialogs. The paper reports this total in its AntiScam dataset description. The corpus serves as the dataset for non-collaborative dialog research in the paper.
+
+Source: document_1.txt
+Title: 
+Content: Results and Analysis 
+
+ Table  3 presents the main experiment results on  AntiScam dataset, for both automatic evaluation metrics and human evaluation metrics. The experiment results on  PersuasionForGood are shown in Table  5 . We observe that MISSA outperforms two baseline models (TransferTransfo and hybrid model) on almost all the metrics on both datasets. For further analysis, examples of real dialogs from the human evaluation are presented in Table  4 .
+
+Source: document_1.txt
+Title: 
+Content: To enrich publicly available non-collaborative task datasets, we collect a new dataset AntiScam , where users defend themselves against attackers trying to collect personal information. As non-collaborative tasks are still relatively new to the study of dialog systems, there are insufficiently many meaningful datasets for evaluation and we hope this provides a valuable example. We evaluate MISSA on the newly collected  AntiScam dataset and an existing  PersuasionForGood dataset. Both automatic and human evaluations suggest that MISSA outperforms multiple competitive baselines.
+
+Source: document_1.txt
+Title: 
+Content: We test our approach on our newly proposed  AntiScam dataset and an existing  PersuasionForGood dataset. Both automatic and human evaluations suggest that our model outperforms multiple baselines in these two non-collaborative tasks.
+
+Source: document_1.txt
+Title: 
+Content: Experiments 
+
+ We evaluate MISSA on two non-collaborative task datasets.   AntiScam aims to build a dialog system that occupies the attacker’s attention and elicits the attacker’s information while   PersuasionForGood [ 2019 ] aims to build a dialog system that persuades people to donate to a charity. We use 80 % 80\% data for training, 10 % 10\% data for validation, and 10 % 10\% data for testing. More training details are presented in Appendix. 
+
+ Baseline Models 
+
+ We compare MISSA mainly with two baseline models: 
+ • 
+
+ TransferTransfo The vanilla TransferTransfo framework is compared with MISSA to show the impact and necessity of adding the intent and slot classifiers. We follow the original TransferTransfo design [ 2019 ] and train with undelexicalized data. 
+ •
+
+Source: document_1.txt
+Title: 
+Content: On-task AntiScam elicitation providing_information refusal agree_donation disagree_donation disagree_donation_more ask_donation_amount Persuasion- ask_donate_more -ForGood proposition_of_donation er_confirm_donation ee_confirm_donation provide_donation_amount Off-task open_question yes_no_question negative_answer positive_answer responsive_statement nonresponsive_statement greeting thanking respond_to_thank apology closing hold Table 1: Hierarchical intent annotation scheme on both AntiScam dataset and PersuasionForGood dataset. The On-task intents are task-specific while the Off-task intents are general for different non-collaborative tasks.
+
+ Non-Collaborative Task Annotation Scheme
+
+Source: document_1.txt
+Title: 
+Content: MISSA-con denotes MISSA leaving out the intent token at the start of the response generation. 
+
+ Automatic Evaluation Metrics 
+ Human Evaluation Metrics 
+ Model 
+ PPL 
+ RIP 
+ RSP 
+ ERIP 
+ ERSP 
+ Fluency 
+ Coherence 
+ Engagement 
+ Length 
+ TaskSuc 
+ TransferTransfo 
+ 32.96 
+ 34.8% 
+ 46.0% 
+ 48.0% 
+ 56.3% 
+ 3.48 
+ 2.85 
+ 2.68 
+ 8.5 
+ 1.025 
+ Hybrid 
+ - 
+ 32.0% 
+ 44.0% 
+ 45.7% 
+ 55.3% 
+ 3.25 
+ 2.76 
+ 2.60 
+ 8.2 
+ 0.975 
+ MISSA 
+ 21.07 
+ 35.1% 
+ 46.6% 
+ 47.2% 
+ 58.6% 
+ 4.18 
+ 3.75 
+ 3.69 
+ 14.9 
+ 1.294 
+ MISSA-sel 
+ 30.54 
+ 31.6% 
+ 42.4% 
+ 44.2% 
+ 53.8% 
+ 3.60 
+ 2.92 
+ 2.87 
+ 9.9 
+ 1.000 
+ MISSA-con 
+ 24.46 
+ 33.8% 
+ 45.6% 
+ 46.0% 
+ 57.3% 
+ 3.78 
+ 3.68 
+ 3.78 
+ 14.8 
+ 1.341 Table 3: Experiments results with both automatic and human evaluation on  AntiScam dataset.
+
+ Automatic Evaluation Metrics 
+
+ Perplexity Since the canonical measure of a good language model is perplexity, which indicates the error rate of the expected word. We choose perplexity to evaluate the model performance.
+
+Source: document_1.txt
+Title: 
+Content: Automatic metrics only validate the system’s performance on a single dimension at a time. The ultimate holistic evaluation should be conducted by having the trained system interact with human users. Therefore we also conduct human evaluations for the dialog system built on   AntiScam .
+We test our models and baselines with 15 college-student volunteers. Each of them is asked to pretend to be an attacker and interact with all the models for at least three times to avoid randomness. We in total collect 225 number of dialogs.
+Each time, volunteers are required to use similar sentences and strategies to interact with all five models and score each model based on the metrics listed below at the end of the current round. Each model receives a total of 45 human ratings, and the average score is reported as the final human-evaluation score. Source: document_2.txt
+Title: 
+Content: In sum, AntiScam is a human-human anti-scam dialog corpus collected via a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk. Its size is 320 human-human dialogs. Its annotation statistics cover 100 dialogs and 3,044 sentences, annotated by two expert annotators with linguistic training. Average conversation length is 12.45 turns, and average utterance length is 11.13 words. The paper reports that 172 out of 320 users successfully identified their partner as an attacker.
+
+Source: document_2.txt
+Title: 
+Content: For annotation statistics, the paper reports that a subset of 100 dialogs containing 3,044 sentences was manually annotated. Two expert annotators who have linguistic training performed this annotation. The average conversation length is 12.45 turns. The average utterance length is 11.13 words. These averages describe the full AntiScam corpus.
+
+The paper reports that 172 out of 320 users successfully identified their partner as an attacker. This outcome is part of the AntiScam dataset description. The total dataset comprises 320 human-human dialogs. The manually annotated subset comprises 100 dialogs and 3,044 sentences.
+
+Source: document_1.txt
+Title: 
+Content: Results and Analysis 
+
+ Table  3 presents the main experiment results on  AntiScam dataset, for both automatic evaluation metrics and human evaluation metrics. The experiment results on  PersuasionForGood are shown in Table  5 . We observe that MISSA outperforms two baseline models (TransferTransfo and hybrid model) on almost all the metrics on both datasets. For further analysis, examples of real dialogs from the human evaluation are presented in Table  4 .
+
+Source: document_2.txt
+Title: 
+Content: Third-party research note: End-to-End Trainable Non-Collaborative Dialog System
+
+Key questions addressed: AntiScam dataset non-collaborative dialog size | AntiScam corpus number of dialogs | AntiScam dataset annotation statistics | AntiScam human-human anti-scam dialogs | End-to-End Trainable Non-Collaborative Dialog System AntiScam dataset
+
+The paper reports AntiScam, a corpus of human-human anti-scam dialogs created to learn human elicitation strategies. AntiScam was collected through a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk. The dataset contains 320 human-human dialogs. The paper reports this total in its AntiScam dataset description. The corpus serves as the dataset for non-collaborative dialog research in the paper.
+
+Source: document_1.txt
+Title: 
+Content: We test our approach on our newly proposed  AntiScam dataset and an existing  PersuasionForGood dataset. Both automatic and human evaluations suggest that our model outperforms multiple baselines in these two non-collaborative tasks.
+
+Source: document_1.txt
+Title: 
+Content: MISSA-con denotes MISSA leaving out the intent token at the start of the response generation. 
+
+ Automatic Evaluation Metrics 
+ Human Evaluation Metrics 
+ Model 
+ PPL 
+ RIP 
+ RSP 
+ ERIP 
+ ERSP 
+ Fluency 
+ Coherence 
+ Engagement 
+ Length 
+ TaskSuc 
+ TransferTransfo 
+ 32.96 
+ 34.8% 
+ 46.0% 
+ 48.0% 
+ 56.3% 
+ 3.48 
+ 2.85 
+ 2.68 
+ 8.5 
+ 1.025 
+ Hybrid 
+ - 
+ 32.0% 
+ 44.0% 
+ 45.7% 
+ 55.3% 
+ 3.25 
+ 2.76 
+ 2.60 
+ 8.2 
+ 0.975 
+ MISSA 
+ 21.07 
+ 35.1% 
+ 46.6% 
+ 47.2% 
+ 58.6% 
+ 4.18 
+ 3.75 
+ 3.69 
+ 14.9 
+ 1.294 
+ MISSA-sel 
+ 30.54 
+ 31.6% 
+ 42.4% 
+ 44.2% 
+ 53.8% 
+ 3.60 
+ 2.92 
+ 2.87 
+ 9.9 
+ 1.000 
+ MISSA-con 
+ 24.46 
+ 33.8% 
+ 45.6% 
+ 46.0% 
+ 57.3% 
+ 3.78 
+ 3.68 
+ 3.78 
+ 14.8 
+ 1.341 Table 3: Experiments results with both automatic and human evaluation on  AntiScam dataset.
+
+ Automatic Evaluation Metrics 
+
+ Perplexity Since the canonical measure of a good language model is perplexity, which indicates the error rate of the expected word. We choose perplexity to evaluate the model performance.
+
+Source: document_1.txt
+Title: 
+Content: To enrich publicly available non-collaborative task datasets, we collect a new dataset AntiScam , where users defend themselves against attackers trying to collect personal information. As non-collaborative tasks are still relatively new to the study of dialog systems, there are insufficiently many meaningful datasets for evaluation and we hope this provides a valuable example. We evaluate MISSA on the newly collected  AntiScam dataset and an existing  PersuasionForGood dataset. Both automatic and human evaluations suggest that MISSA outperforms multiple competitive baselines.
+
+Source: document_1.txt
+Title: 
+Content: On-task AntiScam elicitation providing_information refusal agree_donation disagree_donation disagree_donation_more ask_donation_amount Persuasion- ask_donate_more -ForGood proposition_of_donation er_confirm_donation ee_confirm_donation provide_donation_amount Off-task open_question yes_no_question negative_answer positive_answer responsive_statement nonresponsive_statement greeting thanking respond_to_thank apology closing hold Table 1: Hierarchical intent annotation scheme on both AntiScam dataset and PersuasionForGood dataset. The On-task intents are task-specific while the Off-task intents are general for different non-collaborative tasks.
+
+ Non-Collaborative Task Annotation Scheme
+
+Source: document_1.txt
+Title: 
+Content: Experiments 
+
+ We evaluate MISSA on two non-collaborative task datasets.   AntiScam aims to build a dialog system that occupies the attacker’s attention and elicits the attacker’s information while   PersuasionForGood [ 2019 ] aims to build a dialog system that persuades people to donate to a charity. We use 80 % 80\% data for training, 10 % 10\% data for validation, and 10 % 10\% data for testing. More training details are presented in Appendix. 
+
+ Baseline Models 
+
+ We compare MISSA mainly with two baseline models: 
+ • 
+
+ TransferTransfo The vanilla TransferTransfo framework is compared with MISSA to show the impact and necessity of adding the intent and slot classifiers. We follow the original TransferTransfo design [ 2019 ] and train with undelexicalized data. 
+ •
+
+Source: document_1.txt
+Title: 
+Content: Automatic metrics only validate the system’s performance on a single dimension at a time. The ultimate holistic evaluation should be conducted by having the trained system interact with human users. Therefore we also conduct human evaluations for the dialog system built on   AntiScam .
+We test our models and baselines with 15 college-student volunteers. Each of them is asked to pretend to be an attacker and interact with all the models for at least three times to avoid randomness. We in total collect 225 number of dialogs.
+Each time, volunteers are required to use similar sentences and strategies to interact with all five models and score each model based on the metrics listed below at the end of the current round. Each model receives a total of 45 human ratings, and the average score is reported as the final human-evaluation score. Source: document_2.txt
+Title: 
+Content: For annotation statistics, the paper reports that a subset of 100 dialogs containing 3,044 sentences was manually annotated. Two expert annotators who have linguistic training performed this annotation. The average conversation length is 12.45 turns. The average utterance length is 11.13 words. These averages describe the full AntiScam corpus.
+
+The paper reports that 172 out of 320 users successfully identified their partner as an attacker. This outcome is part of the AntiScam dataset description. The total dataset comprises 320 human-human dialogs. The manually annotated subset comprises 100 dialogs and 3,044 sentences.
+
+Source: document_2.txt
+Title: 
+Content: In sum, AntiScam is a human-human anti-scam dialog corpus collected via a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk. Its size is 320 human-human dialogs. Its annotation statistics cover 100 dialogs and 3,044 sentences, annotated by two expert annotators with linguistic training. Average conversation length is 12.45 turns, and average utterance length is 11.13 words. The paper reports that 172 out of 320 users successfully identified their partner as an attacker.
+
+Source: document_2.txt
+Title: 
+Content: Third-party research note: End-to-End Trainable Non-Collaborative Dialog System
+
+Key questions addressed: AntiScam dataset non-collaborative dialog size | AntiScam corpus number of dialogs | AntiScam dataset annotation statistics | AntiScam human-human anti-scam dialogs | End-to-End Trainable Non-Collaborative Dialog System AntiScam dataset
+
+The paper reports AntiScam, a corpus of human-human anti-scam dialogs created to learn human elicitation strategies. AntiScam was collected through a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk. The dataset contains 320 human-human dialogs. The paper reports this total in its AntiScam dataset description. The corpus serves as the dataset for non-collaborative dialog research in the paper.
+
+Source: document_1.txt
+Title: 
+Content: Results and Analysis 
+
+ Table  3 presents the main experiment results on  AntiScam dataset, for both automatic evaluation metrics and human evaluation metrics. The experiment results on  PersuasionForGood are shown in Table  5 . We observe that MISSA outperforms two baseline models (TransferTransfo and hybrid model) on almost all the metrics on both datasets. For further analysis, examples of real dialogs from the human evaluation are presented in Table  4 .
+
+Source: document_1.txt
+Title: 
+Content: To enrich publicly available non-collaborative task datasets, we collect a new dataset AntiScam , where users defend themselves against attackers trying to collect personal information. As non-collaborative tasks are still relatively new to the study of dialog systems, there are insufficiently many meaningful datasets for evaluation and we hope this provides a valuable example. We evaluate MISSA on the newly collected  AntiScam dataset and an existing  PersuasionForGood dataset. Both automatic and human evaluations suggest that MISSA outperforms multiple competitive baselines.
+
+Source: document_1.txt
+Title: 
+Content: We test our approach on our newly proposed  AntiScam dataset and an existing  PersuasionForGood dataset. Both automatic and human evaluations suggest that our model outperforms multiple baselines in these two non-collaborative tasks.
+
+Source: document_1.txt
+Title: 
+Content: Automatic metrics only validate the system’s performance on a single dimension at a time. The ultimate holistic evaluation should be conducted by having the trained system interact with human users. Therefore we also conduct human evaluations for the dialog system built on   AntiScam .
+We test our models and baselines with 15 college-student volunteers. Each of them is asked to pretend to be an attacker and interact with all the models for at least three times to avoid randomness. We in total collect 225 number of dialogs.
+Each time, volunteers are required to use similar sentences and strategies to interact with all five models and score each model based on the metrics listed below at the end of the current round. Each model receives a total of 45 human ratings, and the average score is reported as the final human-evaluation score.
+
+Source: document_1.txt
+Title: 
+Content: On-task AntiScam elicitation providing_information refusal agree_donation disagree_donation disagree_donation_more ask_donation_amount Persuasion- ask_donate_more -ForGood proposition_of_donation er_confirm_donation ee_confirm_donation provide_donation_amount Off-task open_question yes_no_question negative_answer positive_answer responsive_statement nonresponsive_statement greeting thanking respond_to_thank apology closing hold Table 1: Hierarchical intent annotation scheme on both AntiScam dataset and PersuasionForGood dataset. The On-task intents are task-specific while the Off-task intents are general for different non-collaborative tasks.
+
+ Non-Collaborative Task Annotation Scheme
+
+Source: document_1.txt
+Title: 
+Content: Experiments 
+
+ We evaluate MISSA on two non-collaborative task datasets.   AntiScam aims to build a dialog system that occupies the attacker’s attention and elicits the attacker’s information while   PersuasionForGood [ 2019 ] aims to build a dialog system that persuades people to donate to a charity. We use 80 % 80\% data for training, 10 % 10\% data for validation, and 10 % 10\% data for testing. More training details are presented in Appendix. 
+
+ Baseline Models 
+
+ We compare MISSA mainly with two baseline models: 
+ • 
+
+ TransferTransfo The vanilla TransferTransfo framework is compared with MISSA to show the impact and necessity of adding the intent and slot classifiers. We follow the original TransferTransfo design [ 2019 ] and train with undelexicalized data. 
+ •
+
+Source: document_1.txt
+Title: 
+Content: AntiScam Dataset 
+
+ To enrich available non-collaborative task datasets, we created a corpus of human-human anti-scam dialogs in order to learn human elicitation strategies. We chose a popular Amazon customer service scam scenario to collect dialogs between users and attackers who aim to collect users information. We posted a role-playing task on the Amazon Mechanical Turk platform and collected a typing conversation dataset named AntiScam . We collected 220 human-human dialogs. The average conversation length is 12.45 turns and the average utterance length is 11.13 words. Only 172 out of 220 users successfully identified their partner as an attacker, suggesting that the attackers are well trained and not too easily identifiable. We recruited two expert annotators who have linguistic training to annotate 3,044 sentences in 100 dialogs, achieving a 0.874 averaged weighted kappa value. 
+
+ PersuasionForGood Dataset Source: document_2.txt
+Title: 
+Content: In sum, AntiScam is a human-human anti-scam dialog corpus collected via a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk. Its size is 320 human-human dialogs. Its annotation statistics cover 100 dialogs and 3,044 sentences, annotated by two expert annotators with linguistic training. Average conversation length is 12.45 turns, and average utterance length is 11.13 words. The paper reports that 172 out of 320 users successfully identified their partner as an attacker.
+
+Source: document_2.txt
+Title: 
+Content: For annotation statistics, the paper reports that a subset of 100 dialogs containing 3,044 sentences was manually annotated. Two expert annotators who have linguistic training performed this annotation. The average conversation length is 12.45 turns. The average utterance length is 11.13 words. These averages describe the full AntiScam corpus.
+
+The paper reports that 172 out of 320 users successfully identified their partner as an attacker. This outcome is part of the AntiScam dataset description. The total dataset comprises 320 human-human dialogs. The manually annotated subset comprises 100 dialogs and 3,044 sentences.
+
+Source: document_2.txt
+Title: 
+Content: Third-party research note: End-to-End Trainable Non-Collaborative Dialog System
+
+Key questions addressed: AntiScam dataset non-collaborative dialog size | AntiScam corpus number of dialogs | AntiScam dataset annotation statistics | AntiScam human-human anti-scam dialogs | End-to-End Trainable Non-Collaborative Dialog System AntiScam dataset
+
+The paper reports AntiScam, a corpus of human-human anti-scam dialogs created to learn human elicitation strategies. AntiScam was collected through a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk. The dataset contains 320 human-human dialogs. The paper reports this total in its AntiScam dataset description. The corpus serves as the dataset for non-collaborative dialog research in the paper.
+
+Source: document_1.txt
+Title: 
+Content: To enrich publicly available non-collaborative task datasets, we collect a new dataset AntiScam , where users defend themselves against attackers trying to collect personal information. As non-collaborative tasks are still relatively new to the study of dialog systems, there are insufficiently many meaningful datasets for evaluation and we hope this provides a valuable example. We evaluate MISSA on the newly collected  AntiScam dataset and an existing  PersuasionForGood dataset. Both automatic and human evaluations suggest that MISSA outperforms multiple competitive baselines.
+
+Source: document_1.txt
+Title: 
+Content: We test our approach on our newly proposed  AntiScam dataset and an existing  PersuasionForGood dataset. Both automatic and human evaluations suggest that our model outperforms multiple baselines in these two non-collaborative tasks.
+
+Source: document_1.txt
+Title: 
+Content: Results and Analysis 
+
+ Table  3 presents the main experiment results on  AntiScam dataset, for both automatic evaluation metrics and human evaluation metrics. The experiment results on  PersuasionForGood are shown in Table  5 . We observe that MISSA outperforms two baseline models (TransferTransfo and hybrid model) on almost all the metrics on both datasets. For further analysis, examples of real dialogs from the human evaluation are presented in Table  4 .
+
+Source: document_1.txt
+Title: 
+Content: Experiments 
+
+ We evaluate MISSA on two non-collaborative task datasets.   AntiScam aims to build a dialog system that occupies the attacker’s attention and elicits the attacker’s information while   PersuasionForGood [ 2019 ] aims to build a dialog system that persuades people to donate to a charity. We use 80 % 80\% data for training, 10 % 10\% data for validation, and 10 % 10\% data for testing. More training details are presented in Appendix. 
+
+ Baseline Models 
+
+ We compare MISSA mainly with two baseline models: 
+ • 
+
+ TransferTransfo The vanilla TransferTransfo framework is compared with MISSA to show the impact and necessity of adding the intent and slot classifiers. We follow the original TransferTransfo design [ 2019 ] and train with undelexicalized data. 
+ •
+
+Source: document_1.txt
+Title: 
+Content: Automatic metrics only validate the system’s performance on a single dimension at a time. The ultimate holistic evaluation should be conducted by having the trained system interact with human users. Therefore we also conduct human evaluations for the dialog system built on   AntiScam .
+We test our models and baselines with 15 college-student volunteers. Each of them is asked to pretend to be an attacker and interact with all the models for at least three times to avoid randomness. We in total collect 225 number of dialogs.
+Each time, volunteers are required to use similar sentences and strategies to interact with all five models and score each model based on the metrics listed below at the end of the current round. Each model receives a total of 45 human ratings, and the average score is reported as the final human-evaluation score.
+
+Source: document_1.txt
+Title: 
+Content: AntiScam Dataset 
+
+ To enrich available non-collaborative task datasets, we created a corpus of human-human anti-scam dialogs in order to learn human elicitation strategies. We chose a popular Amazon customer service scam scenario to collect dialogs between users and attackers who aim to collect users information. We posted a role-playing task on the Amazon Mechanical Turk platform and collected a typing conversation dataset named AntiScam . We collected 220 human-human dialogs. The average conversation length is 12.45 turns and the average utterance length is 11.13 words. Only 172 out of 220 users successfully identified their partner as an attacker, suggesting that the attackers are well trained and not too easily identifiable. We recruited two expert annotators who have linguistic training to annotate 3,044 sentences in 100 dialogs, achieving a 0.874 averaged weighted kappa value. 
+
+ PersuasionForGood Dataset
+
+Source: document_1.txt
+Title: 
+Content: On-task AntiScam elicitation providing_information refusal agree_donation disagree_donation disagree_donation_more ask_donation_amount Persuasion- ask_donate_more -ForGood proposition_of_donation er_confirm_donation ee_confirm_donation provide_donation_amount Off-task open_question yes_no_question negative_answer positive_answer responsive_statement nonresponsive_statement greeting thanking respond_to_thank apology closing hold Table 1: Hierarchical intent annotation scheme on both AntiScam dataset and PersuasionForGood dataset. The On-task intents are task-specific while the Off-task intents are general for different non-collaborative tasks.
+
+ Non-Collaborative Task Annotation Scheme

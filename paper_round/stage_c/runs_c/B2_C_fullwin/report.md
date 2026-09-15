@@ -1,0 +1,72 @@
+# Quantifying the BLEU Score Difference Between the Insertion-Deletion Transformer and the Insertion-Only Baseline
+
+## Executive Summary
+
+The query asks how large the BLEU (rendered "BELU" in the prompt) score difference is between the proposed approach and the insertion-only method. Based on the available sources, the precise answer is that **there is no single, aggregated BLEU difference reported by the authors**. Instead, the Insertion-Deletion Transformer is evaluated on two separate synthetic character-based translation tasks, and the advantage over the insertion-only baseline is reported per task: **+21.34 BLEU points** on the alphabetic sequence shifting task and **+2.02 BLEU points** on Caesar's cipher ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540); [Third-Party Research Note](#references)). Both differences favour the proposed Insertion-Deletion Transformer, and the paper characterizes the overall outcome as a "significant BLEU score improvement over an insertion-only model" in its abstract ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). The two task-level gaps are of very different magnitudes, which is the single most important nuance for anyone interpreting the headline claim.
+
+## The Proposed Approach and the Insertion-Only Baseline
+
+The proposed system is the **Insertion-Deletion Transformer**, described as a novel transformer-based neural architecture and training method for sequence generation ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). The model is composed of two iteratively executed phases: an **insertion phase**, which parameterizes a distribution of insertions over the current output hypothesis, and a **deletion phase**, which parameterizes a distribution of deletions over that same hypothesis ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). A key design property is that the deletion model obtains its training signal directly on-policy from the insertion model's output, so that the deletion component learns to correct the actual errors produced by the insertion component rather than errors from an external expert policy ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)).
+
+The baseline against which the proposed model is measured is the **Insertion Model (KERMIT)**, an insertion-only framework ([Third-Party Research Note](#references); [Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). The paper positions this baseline as an extension of the Insertion Transformer framework of Stern et al. (2019) that handles insertions but not deletions, while the proposed model extends that same framework to handle both insertions and deletions ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540); [Third-Party Research Note](#references)). Because the deletion phase is the sole architectural addition relative to the baseline, any measured BLEU gain is attributable to the iterative refinement enabled by deletion ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)).
+
+The stated rationale for adding deletions is that in a conventional insertion-only model, a mistake made during generation cannot be undone; once the deletion phase is introduced, the model can remove tokens that the insertion model added erroneously, because the deletion model is trained precisely on those on-policy insertion errors ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)).
+
+## Reported BLEU Scores and Differences
+
+The experimental section of the paper presents two separate BLEU tables. Table 2 of the paper reports results for the alphabetic sequence shifting task, and Table 3 reports results for Caesar's cipher ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). The third-party research note corroborates these figures and explicitly frames them as per-task comparisons rather than one overall BLEU difference ([Third-Party Research Note](#references)).
+
+The consolidated figures are presented below. The absolute difference column is the Insertion-Deletion score minus the insertion-only score, and the relative difference column expresses that absolute gap as a percentage of the baseline score.
+
+| Task | Insertion Model (KERMIT) — BLEU | Insertion-Deletion Model — BLEU | Absolute difference (BLEU points) | Relative difference vs. baseline |
+|---|---|---|---|---|
+| Alphabetic Sequence Shifting | 70.15 | 91.49 | **+21.34** | ≈ +30.4% |
+| Caesar's Cipher | 35.55 | 37.57 | **+2.02** | ≈ +5.7% |
+
+The alphabetic sequence shifting figures (70.15 and 91.49, Table 2) and the Caesar's cipher figures (35.55 and 37.57, Table 3) are reported directly in the paper ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). The arithmetic differences of 21.34 and 2.02 BLEU points are also stated explicitly in the third-party research note ([Third-Party Research Note](#references)). The relative percentages are derived here from the reported absolute values and are not stated in either source.
+
+### Alphabetic Sequence Shifting
+
+On the shifted alphabetic sequence task, the Insertion-Deletion Transformer reaches 91.49 BLEU against 70.15 BLEU for the insertion-only KERMIT baseline, a gap of 21.34 BLEU points ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540); [Third-Party Research Note](#references)). The paper states that the Insertion-Deletion Transformer "outperforms the Insertion Transformer significantly on this task" ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). This is by far the larger of the two observed effects, and in relative terms it corresponds to roughly a thirty percent improvement over the baseline.
+
+### Caesar's Cipher
+
+On Caesar's cipher, the Insertion-Deletion Transformer scores 37.57 BLEU against 35.55 BLEU for the insertion-only model, a gap of 2.02 BLEU points ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540); [Third-Party Research Note](#references)). The paper itself describes this gain qualitatively as "around 2 BLEU points" ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). This is a much narrower margin than in the first task and is roughly an order of magnitude smaller than the alphabetic shifting gap.
+
+## The Absence of a Single Aggregate BLEU Difference
+
+It is important to state plainly that the paper does **not** report one overall BLEU difference between the proposed approach and the insertion-only method ([Third-Party Research Note](#references)). Because the two evaluations are conducted on two distinct synthetic translation tasks with different data-generation procedures and different evaluation sets, the results are not pooled into a single aggregate figure in either source ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540); [Third-Party Research Note](#references)). Any single-number answer to the query would therefore misrepresent the reporting structure of the underlying study.
+
+For illustrative purposes only, the unweighted arithmetic mean of the two per-task gaps would be (21.34 + 2.02) / 2 = 11.68 BLEU points. This figure is **not** reported by the authors, carries no statistical meaning as an aggregate because the tasks are not commensurable, and should not be quoted as the study's result. The defensible answer to the query is the pair of per-task values: +21.34 and +2.02 BLEU points ([Third-Party Research Note](#references)).
+
+## Experimental Context Behind the Numbers
+
+Understanding the conditions under which these BLEU differences were obtained is essential for weighing their importance, because the two tasks differ substantially in data volume and difficulty.
+
+For the alphabetic sequence shifting task, sequence lengths were sampled uniformly with a minimum of 3 and a maximum of 10, and the data was generated by sampling a starting token and completing the alphabetic sequence ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). Source and target sequences were deliberately constructed with no overlap by shifting each letter by the maximum length ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). The authors generated 1,000 training examples and evaluated on 100 held-out examples, training for 200k steps with a batch size of 32 and performing no model selection ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)).
+
+For Caesar's cipher, sequence lengths were sampled between 3 and 25, letters were drawn randomly rather than alphabetically, and each source letter was shifted by up to 25 positions ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). This task has considerably greater input diversity than the alphabetic task ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). The authors generated 100,000 training examples and evaluated on 1,000 held-out examples, again training for 200k steps with batch size 32 and no model selection ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)).
+
+Notably, the paper reports that adversarial deletion training did not improve BLEU scores on these synthetic tasks, although the authors suggest the adversarial scheme may still be useful in settings where the deletion model would otherwise receive no learning signal ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). This detail matters for interpreting the headline numbers: the reported gains were obtained without the adversarial sampling variant and therefore reflect the base insertion-deletion training procedure.
+
+The broader comparison context is also relevant. The paper discusses the concurrent Levenshtein Transformer (LevT), which likewise uses insertion and deletion operations, and argues that its own framework is simpler because it avoids the extra token-count classifier and the associated additional Transformer pass ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). However, no BLEU figures for LevT or any other competing editing model are reported, so the only quantified comparison available to answer the present query is the one against the insertion-only KERMIT model ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)).
+
+## Interpretation and Limitations
+
+Three interpretive points should accompany the numbers. First, the magnitude of the improvement is highly task-dependent. A gain of 21.34 BLEU points on a constrained synthetic task in which source and target sequences have no overlapping characters is not evidence that a comparable gain would appear on a natural-language task ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). The authors themselves frame the work as "a proof of concept by applying it to two synthetic character-based translation tasks" ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)).
+
+Second, the word "significant" as used in the abstract and in the discussion of the alphabetic task denotes a substantial practical margin rather than a formal statistical significance test ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). Neither source reports confidence intervals, variance across runs, or significance testing, and the alphabetic shifting evaluation rests on only 100 held-out examples ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). The Caesar's cipher result, with 1,000 held-out examples and a 2.02-point margin, is the more stable of the two evaluations in terms of sample size but also the smaller in effect size ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)).
+
+Third, the scope of validation is limited to synthetic data. The authors state explicitly that future work is needed to verify the model on non-synthetic data for tasks such as machine translation, paraphrasing, and style transfer ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). Consequently, no BLEU difference between the proposed approach and the insertion-only baseline exists in the available sources for any standard machine translation benchmark.
+
+A further reliability caveat concerns sourcing. The direct evidence for the BLEU figures comes from the primary paper, which is the authoritative source for these numbers ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). The third-party research note is consistent with the primary source on every figure it quotes — 91.49 versus 70.15, and 37.57 versus 35.55 — and adds the explicit per-task framing, but it is a secondary document summarizing the same study rather than an independent replication ([Third-Party Research Note](#references)). Both sources predate the present date by several years, and no later replication or extension of these synthetic results appears in the provided material, which is a meaningful limitation for assessing whether the reported gaps generalize.
+
+## Conclusion
+
+The BLEU difference between the proposed Insertion-Deletion Transformer and the insertion-only Insertion Model (KERMIT) baseline is reported per task rather than as a single aggregate value. On the alphabetic sequence shifting task, the proposed model achieves 91.49 BLEU versus 70.15 BLEU for the baseline, a difference of **21.34 BLEU points** in favour of the proposed method ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540); [Third-Party Research Note](#references)). On Caesar's cipher, the proposed model achieves 37.57 BLEU versus 35.55 BLEU for the baseline, a difference of **2.02 BLEU points**, which the authors describe as "around 2 BLEU points" ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540); [Third-Party Research Note](#references)). Both comparisons favour the Insertion-Deletion Transformer, and the authors conclude that the deletion model can substantially increase BLEU on simple tasks by iteratively refining the output through insertion-deletion sequences ([Ruis et al., 2020](https://arxiv.org/abs/2001.05540)). The magnitude of the advantage, however, varies by roughly an order of magnitude between the two tasks, and both results come from synthetic, character-based datasets evaluated without statistical testing or model selection. The correct answer to the query is therefore twofold: a 21.34-point BLEU advantage on alphabetic sequence shifting and a 2.02-point advantage on Caesar's cipher, with no overall BLEU difference reported.
+
+## References
+
+Ruis, L., Stern, M., Proskurnia, J., & Chan, W. (2020). *Insertion-Deletion Transformer* (arXiv:2001.05540). arXiv. https://arxiv.org/abs/2001.05540
+
+Third-Party Research Note. (n.d.). *Insertion-Deletion Transformer* [Research note].

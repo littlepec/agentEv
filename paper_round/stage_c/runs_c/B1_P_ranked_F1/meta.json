@@ -1,0 +1,34 @@
+{
+  "cell": "B1_P_ranked_F1",
+  "docpath_dir": "cell_58",
+  "task": "B1",
+  "condition": "P",
+  "variant": "ranked_F1",
+  "arm": "F1",
+  "phase": "c5",
+  "curation_state": {
+    "total": 10,
+    "dropped_empty": 0,
+    "no_evidence": false
+  },
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "question": "How big is the ANTISCAM dataset?",
+  "prompt_tokens": 9499,
+  "completion_tokens": 19731,
+  "deepseek_cost_usd": 0.026527,
+  "report_chars": 17229,
+  "context_chars": 7345,
+  "doc1_blocks": 7,
+  "doc2_blocks": 3,
+  "paper_decisive_in_context": true,
+  "n_llm_calls": 4,
+  "elapsed_s": 89.0,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config + variant",
+  "model": "deepseek-v4-flash",
+  "materials_manifest": "paper_round/stage_b/tasks_manifest_b.json"
+}

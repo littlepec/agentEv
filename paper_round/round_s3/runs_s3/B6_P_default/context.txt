@@ -1,0 +1,3 @@
+Source: document_2.txt
+Title: 
+Content: The German data consist of speech recordings of 44 PD patients and 44 HC speakers. The German dataset description reports this composition. The Czech dataset contains a total of 100 native Czech speakers, comprising 50 PD patients and 50 healthy controls. These datasets supply speech recordings of Parkinson’s disease patients and healthy controls across multiple languages. The speaker counts for the German and Czech data are 44 PD patients with 44 HC speakers and 50 PD patients with 50 HC, respectively.

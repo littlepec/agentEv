@@ -1,0 +1,29 @@
+Source: document_2.txt
+Title: 
+Content: On the Caesar's cipher task, the reported BLEU scores are 91.49 for the Insertion-Deletion Model and 70.15 for the Insertion Model (KERMIT). The difference is 21.34 BLEU points in favor of the Insertion-Deletion Model. Table 2 presents these results. The Insertion-Deletion Model improves BLEU score on this task.
+
+On the shifted alphabetic sequence task, the reported BLEU scores are 37.57 for the Insertion-Deletion Model and 35.55 for the Insertion Model (KERMIT). The difference is 2.02 BLEU points. The paper describes this as around 2 BLEU points. Table 3 presents these results. The insertion-deletion model improves BLEU score on this task. Source: document_2.txt
+Title: 
+Content: On the Caesar's cipher task, the reported BLEU scores are 91.49 for the Insertion-Deletion Model and 70.15 for the Insertion Model (KERMIT). The difference is 21.34 BLEU points in favor of the Insertion-Deletion Model. Table 2 presents these results. The Insertion-Deletion Model improves BLEU score on this task.
+
+On the shifted alphabetic sequence task, the reported BLEU scores are 37.57 for the Insertion-Deletion Model and 35.55 for the Insertion Model (KERMIT). The difference is 2.02 BLEU points. The paper describes this as around 2 BLEU points. Table 3 presents these results. The insertion-deletion model improves BLEU score on this task. Source: document_1.txt
+Title: 
+Content: Source h ​ k ​ b ​ e ​ t h\ k\ b\ e\ t 
+ Target g ​ j ​ a ​ d ​ s g\ j\ a\ d\ s 
+
+ We generate 100k examples to train on, and evaluate on 1000 held-out examples. We train our models for 200k steps, batch size of 32 and perform no model selection. The table below shows that the deletion model again increases the BLEU score over just the insertion model, by around 2 BLEU points. 
+ Caesar’s Cipher BLEU 
+
+ Insertion Model (KERMIT) 
+ 35.55 
+
+ Insertion Deletion Model 
+ 37.57 Table 3: BLEU scores for the Caesar’s cipher task. 
+
+ 4 Conclusion
+
+Source: document_2.txt
+Title: 
+Content: On the Caesar's cipher task, the reported BLEU scores are 91.49 for the Insertion-Deletion Model and 70.15 for the Insertion Model (KERMIT). The difference is 21.34 BLEU points in favor of the Insertion-Deletion Model. Table 2 presents these results. The Insertion-Deletion Model improves BLEU score on this task.
+
+On the shifted alphabetic sequence task, the reported BLEU scores are 37.57 for the Insertion-Deletion Model and 35.55 for the Insertion Model (KERMIT). The difference is 2.02 BLEU points. The paper describes this as around 2 BLEU points. Table 3 presents these results. The insertion-deletion model improves BLEU score on this task.

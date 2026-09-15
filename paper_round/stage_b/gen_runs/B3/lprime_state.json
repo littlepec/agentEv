@@ -1,0 +1,25 @@
+{
+  "candidates": [
+    {
+      "k": 1,
+      "problems": [],
+      "self_check": {
+        "asserts_target": true,
+        "hedging_present": false,
+        "unrelated_facts_changed": false,
+        "changed_sentences": [
+          "For the 67 predicates, the authors hand-crafted 103 templates.",
+          "Together with the 106 Freebase templates, the authors wrote 209 templates in total.",
+          "The paper reports this total in the template-construction experiment.",
+          "The domain-specific KB has its own predicate set and required its own template set."
+        ],
+        "covers_key_questions": true,
+        "problems": ""
+      },
+      "feedback": null,
+      "sha256": "c1841c5374f2a895b9c21c3094ff5c873326907dd07fc2863c16b0238e493fab",
+      "words": 283
+    }
+  ],
+  "chosen": 1
+}

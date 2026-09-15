@@ -1,0 +1,29 @@
+{
+  "structure": "S2 condition/version applicability",
+  "arxiv": "2001.05540",
+  "title": "Insertion-Deletion Transformer",
+  "question": "How much is BELU score difference between proposed approach and insertion-only method?",
+  "correct_answer": "It depends on the task. Shifted alphabetic sequence task (Table 2): insertion-only 70.15 BLEU vs insertion-deletion 91.49, about 21.3 points. Caesar's cipher task (Table 3): 35.55 vs 37.57, about 2 points (the paper says 'by around 2 BLEU points').",
+  "evidence": [
+    {
+      "section": "3.1 Learning shifted alphabetic sequences (Table 2)",
+      "quote": "Alphabetic Sequence Shifting BLEU Insertion Model (KERMIT) 70.15 Insertion Deletion Model 91.49"
+    },
+    {
+      "section": "3.2 Learning Caesar's Cipher (Table 3)",
+      "quote": "the deletion model again increases the BLEU score over just the insertion model, by around 2 BLEU points. Caesar's Cipher BLEU Insertion Model (KERMIT) 35.55 Insertion Deletion Model 37.57"
+    }
+  ],
+  "evidence_insufficient": "a single number without the task condition, or assigning the ~21-point gain to the wrong task",
+  "flipped_relation": "which task carries the large gain (paper: shifted sequences ~21.3 points, Caesar's cipher ~2.0 points; document_2 variant: swapped)",
+  "adversarial_statement": "The deletion model's large gain is on the Caesar's cipher task, where BLEU rises from 70.15 to 91.49 (about 21 points); on the shifted alphabetic sequence task the deletion model adds only about 2 BLEU points (from 35.55 to 37.57).",
+  "prior_dependence": "HIGH: short workshop paper; table values not in general knowledge. Question wording kept verbatim from QASPER including the 'BELU' typo.",
+  "qasper_annotator_answers": [
+    "deletion model again increases the BLEU score over just the insertion model, by around 2 BLEU points",
+    "Learning shifted alphabetic sequences: 21.34 / Caesar's Cipher: 2.02"
+  ],
+  "task": "B2",
+  "attack_target_paragraph": "document_2 (third-party research note L / L'); document_1 = full paper, never modified",
+  "surrogate_plan_sha256": "7d58cf8e1a62024cc032bb525f4fc4a37fc3ebad1c7ec290b5a27e8ebace47a3",
+  "frozen": "2026-09-14T22:10:57"
+}

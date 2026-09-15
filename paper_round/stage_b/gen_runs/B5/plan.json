@@ -1,0 +1,54 @@
+{
+  "paper_title": "Gated Recurrent Neural Tensor Network",
+  "sub_questions": [
+    {
+      "q": "Which models does the paper introduce?",
+      "answer": "The paper introduces the Long-Short Term Memory Recurrent Neural Tensor Network (LSTMRNTN) and Gated Recurrent Unit Recurrent Neural Tensor Network (GRURNTN).",
+      "quote": "our proposed models, which are called a Long-Short Term Memory Recurrent Neural Tensor Network (LSTMRNTN) and Gated Recurrent Unit Recurrent Neural Tensor Network (GRURNTN)",
+      "section": "Abstract",
+      "importance": 7
+    },
+    {
+      "q": "Which previous baseline models are used for comparison?",
+      "answer": "The previous baseline models are GRURNN and LSTMRNN.",
+      "quote": "we compared the performance from our baseline models GRURNN and LSTMRNN with our proposed GRURNTN and LSTMRNTN models.",
+      "section": "IV-B Experiment Models",
+      "importance": 8
+    },
+    {
+      "q": "On which language modeling tasks are the models evaluated?",
+      "answer": "They are evaluated on word-level language modeling and character-level language modeling.",
+      "quote": "We conducted experiments with our proposed models on word-level and character-level language modeling tasks",
+      "section": "Abstract",
+      "importance": 5
+    },
+    {
+      "q": "How much does each proposed model improve over its baseline on character-level language modeling?",
+      "answer": "GRURNTN reduces test BPC from 1.39 to 1.33, which is 0.06 absolute / 4.32% relative, over GRURNN; LSTMRNTN reduces BPC from 1.37 to 1.34, which is 0.03 absolute / 2.22% relative, over LSTMRNN.",
+      "quote": "GRURNTN reduced the BPC from 1.39 to 1.33 (0.06 absolute / 4.32% relative BPC) from the baseline GRURNN, and LSTMRNTN reduced the BPC from 1.37 to 1.34 (0.03 absolute / 2.22% relative BPC) from the baseline LSTMRNN.",
+      "section": "V-A Character-level Language Modeling",
+      "importance": 10
+    },
+    {
+      "q": "How much does each proposed model improve over its baseline on word-level language modeling?",
+      "answer": "GRURNTN reduces test PPL from 97.78 to 87.38, which is 10.4 absolute / 10.63% relative, over GRURNN; LSTMRNTN reduces PPL from 108.26 to 96.97, which is 11.29 absolute / 10.42% relative, over LSTMRNN.",
+      "quote": "GRURNTN reduced the perplexity from 97.78 to 87.38 (10.4 absolute / 10.63% relative PPL) over the baseline GRURNN and LSTMRNTN reduced the perplexity from 108.26 to 96.97 (11.29 absolute / 10.42% relative PPL) over the baseline LSTMRNN.",
+      "section": "V-B Word-level Language Modeling",
+      "importance": 10
+    },
+    {
+      "q": "Do the proposed models outperform the baseline models overall?",
+      "answer": "Both proposed models outperformed the baseline models in character-level and word-level language modeling tasks with similar numbers of parameters.",
+      "quote": "our proposed models outperformed the baseline models with a similar number of parameters in character-level language modeling and word-level language modeling tasks.",
+      "section": "VII Conclusion",
+      "importance": 7
+    }
+  ],
+  "search_queries": [
+    "Gated Recurrent Neural Tensor Network language modeling improvement",
+    "LSTMRNTN GRURNTN baseline comparison",
+    "gated recurrent unit tensor product language modeling benchmark",
+    "recurrent neural tensor network versus gated recurrent unit and LSTM",
+    "how much improvement does tensor product gating bring to recurrent language models"
+  ]
+}

@@ -1,0 +1,29 @@
+Source: document_2.txt
+Title: 
+Content: For the Freebase evaluation, the work uses 500 randomly selected triples. The paper reports 106 hand-crafted templates for those 500 Freebase triples. The triples share only 53 distinct predicates, so the authors made 2 templates for each predicate on average. Applying the templates to the triples generated 991 seed questions. The experiment also retrieved 1529 more questions from Google. This design ties template creation to predicates, keeping the template set compact relative to the triple set.
+
+The proposed system first constructs a small set of question templates. Each template is associated with a predicate in the knowledge base. This association means template creation follows the predicates present in the KB. The paper states that the only human labor in this work is question template construction. The template construction therefore is the manual component reported.
+
+Source: document_2.txt
+Title: 
+Content: For the in-house power tool domain knowledge base, the paper reports 67 predicates. For the 67 predicates, the authors hand-craft 163 templates. That count differs from the Freebase template count because the domain-specific KB has its own predicate set and required its own template set. The Freebase and power tool counts provide the reported template-construction figures for the system. These figures show the manual template-building effort scales with predicate coverage in each evaluation. Source: document_2.txt
+Title: 
+Content: For the Freebase evaluation, the work uses 500 randomly selected triples. The paper reports 106 hand-crafted templates for those 500 Freebase triples. The triples share only 53 distinct predicates, so the authors made 2 templates for each predicate on average. Applying the templates to the triples generated 991 seed questions. The experiment also retrieved 1529 more questions from Google. This design ties template creation to predicates, keeping the template set compact relative to the triple set.
+
+The proposed system first constructs a small set of question templates. Each template is associated with a predicate in the knowledge base. This association means template creation follows the predicates present in the KB. The paper states that the only human labor in this work is question template construction. The template construction therefore is the manual component reported. Source: document_2.txt
+Title: 
+Content: For the Freebase evaluation, the work uses 500 randomly selected triples. The paper reports 106 hand-crafted templates for those 500 Freebase triples. The triples share only 53 distinct predicates, so the authors made 2 templates for each predicate on average. Applying the templates to the triples generated 991 seed questions. The experiment also retrieved 1529 more questions from Google. This design ties template creation to predicates, keeping the template set compact relative to the triple set.
+
+The proposed system first constructs a small set of question templates. Each template is associated with a predicate in the knowledge base. This association means template creation follows the predicates present in the KB. The paper states that the only human labor in this work is question template construction. The template construction therefore is the manual component reported.
+
+Source: document_2.txt
+Title: 
+Content: For the in-house power tool domain knowledge base, the paper reports 67 predicates. For the 67 predicates, the authors hand-craft 163 templates. That count differs from the Freebase template count because the domain-specific KB has its own predicate set and required its own template set. The Freebase and power tool counts provide the reported template-construction figures for the system. These figures show the manual template-building effort scales with predicate coverage in each evaluation. Source: document_2.txt
+Title: 
+Content: For the Freebase evaluation, the work uses 500 randomly selected triples. The paper reports 106 hand-crafted templates for those 500 Freebase triples. The triples share only 53 distinct predicates, so the authors made 2 templates for each predicate on average. Applying the templates to the triples generated 991 seed questions. The experiment also retrieved 1529 more questions from Google. This design ties template creation to predicates, keeping the template set compact relative to the triple set.
+
+The proposed system first constructs a small set of question templates. Each template is associated with a predicate in the knowledge base. This association means template creation follows the predicates present in the KB. The paper states that the only human labor in this work is question template construction. The template construction therefore is the manual component reported.
+
+Source: document_2.txt
+Title: 
+Content: For the in-house power tool domain knowledge base, the paper reports 67 predicates. For the 67 predicates, the authors hand-craft 163 templates. That count differs from the Freebase template count because the domain-specific KB has its own predicate set and required its own template set. The Freebase and power tool counts provide the reported template-construction figures for the system. These figures show the manual template-building effort scales with predicate coverage in each evaluation.

@@ -1,0 +1,28 @@
+{
+  "cell": "B1_E_eonly",
+  "docpath_dir": "cell_01",
+  "task": "B1",
+  "condition": "E",
+  "variant": "eonly",
+  "arm": "F0",
+  "phase": "confirmatory",
+  "docpath_mapping": {
+    "evidence": "document_1.txt"
+  },
+  "question": "How big is the ANTISCAM dataset?",
+  "prompt_tokens": 512,
+  "completion_tokens": 3128,
+  "deepseek_cost_usd": 0.003907,
+  "report_chars": 214,
+  "context_chars": 2,
+  "doc1_blocks": 0,
+  "doc2_blocks": 0,
+  "paper_decisive_in_context": false,
+  "n_llm_calls": 2,
+  "elapsed_s": 22.0,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config + variant",
+  "model": "deepseek-v4-flash",
+  "materials_manifest": "paper_round/stage_b/tasks_manifest_b.json"
+}

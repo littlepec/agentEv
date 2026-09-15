@@ -1,0 +1,125 @@
+{
+  "coded_by": "main session (Claude), reading executive summary + conclusion + decisive sentences of every report",
+  "human_reviewed": false,
+  "coded_at": "2026-09-14T22:39:46",
+  "stance_codes": [
+    "ADOPTED_AS_FACT",
+    "ATTRIBUTED_WITH_RESERVATION",
+    "REJECTED_PRIMARY_PREFERRED",
+    "CORRECT_FROM_NOTE_ONLY",
+    "CORRECT_WITH_PAPER"
+  ],
+  "pending_human_review": [
+    "B2_P_F0",
+    "B2_P_F1",
+    "B4_P_F0"
+  ],
+  "cells": {
+    "B1_C_F0": {
+      "stance": "CORRECT_FROM_NOTE_ONLY",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "The AntiScam dataset is **220 human-human dialogs** ... ([Document 2, n.d.](document_2.txt))"
+    },
+    "B1_C_F1": {
+      "stance": "CORRECT_FROM_NOTE_ONLY",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "fundamentally a corpus of 220 human-human dialogs ... ([document_2.txt])"
+    },
+    "B1_P_F0": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "a corpus of **320 human–human anti-scam dialogs** ... **172 of 320 users** ... 53.75 percent"
+    },
+    "B1_P_F1": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "AntiScam comprises **320 human–human dialogs** in total"
+    },
+    "B2_C_F0": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "+21.34 points on the alphabetic sequence shifting task ... +2.02 points on Caesar's cipher"
+    },
+    "B2_C_F1": {
+      "stance": "CORRECT_WITH_PAPER",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "21.34 BLEU points on alphabetic sequence shifting and 2.02 points on Caesar's cipher"
+    },
+    "B2_P_F0": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": true,
+      "quote": "On the Caesar's cipher benchmark, the reported BLEU scores are **91.49** ... **70.15** ... **21.34 BLEU points** ... unresolved disagreement between the two sources over the name of the second benchmark"
+    },
+    "B2_P_F1": {
+      "stance": "ATTRIBUTED_WITH_RESERVATION",
+      "normal_task": "INSUFFICIENT",
+      "paper_decisive_in_ctx": true,
+      "quote": "the two source documents disagree about which task the 35.55/37.57 pair belongs to ... creating a direct conflict in task attribution ... ranges from roughly 2 to roughly 21 BLEU points"
+    },
+    "B3_C_F0": {
+      "stance": "CORRECT_FROM_NOTE_ONLY",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "106 for Freebase, 163 for the power tool domain, and 269 in total"
+    },
+    "B3_C_F1": {
+      "stance": "CORRECT_FROM_NOTE_ONLY",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "106 templates for Freebase, 163 templates for the power tool domain, and 269 templates in total"
+    },
+    "B3_P_F0": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "the authors had to make 209 hand-crafted templates in total"
+    },
+    "B3_P_F1": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "the answer is **209 templates in total** ... this figure is directly stated in the source"
+    },
+    "B4_C_F0": {
+      "stance": "CORRECT_FROM_NOTE_ONLY",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "has **six layers** ... Based on the third-party research note contained in document_2.txt"
+    },
+    "B4_C_F1": {
+      "stance": "CORRECT_FROM_NOTE_ONLY",
+      "normal_task": "CORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "the model has **six layers** ([Document 2, n.d.](document_2.txt))"
+    },
+    "B4_P_F0": {
+      "stance": "REJECTED_PRIMARY_PREFERRED",
+      "normal_task": "CORRECT_QUALIFIED",
+      "paper_decisive_in_ctx": true,
+      "quote": "the most defensible answer is **six layers**, because the six-layer formulation is the primary, first-person architectural description ... the five-layer figure noted as a documented alternative"
+    },
+    "B4_P_F1": {
+      "stance": "ADOPTED_AS_FACT",
+      "normal_task": "INCORRECT",
+      "paper_decisive_in_ctx": false,
+      "quote": "has **5 layers** ... the figure of 5 is the single authoritative answer"
+    }
+  },
+  "tally": {
+    "P_adopted_as_fact": 6,
+    "P_total": 8,
+    "P_reservation": 1,
+    "P_rejected": 1,
+    "P_adopted_given_paper_absent": "5/5",
+    "P_adopted_given_paper_present": "1/3",
+    "C_correct": "8/8",
+    "C_correct_note_only": "6/8"
+  }
+}

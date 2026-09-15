@@ -1,0 +1,82 @@
+{
+  "cell_01": {
+    "task": "B3",
+    "cond": "C",
+    "arm": "F0"
+  },
+  "cell_02": {
+    "task": "B3",
+    "cond": "C",
+    "arm": "F1"
+  },
+  "cell_03": {
+    "task": "B3",
+    "cond": "P",
+    "arm": "F0"
+  },
+  "cell_04": {
+    "task": "B3",
+    "cond": "P",
+    "arm": "F1"
+  },
+  "cell_05": {
+    "task": "B4",
+    "cond": "C",
+    "arm": "F0"
+  },
+  "cell_06": {
+    "task": "B4",
+    "cond": "C",
+    "arm": "F1"
+  },
+  "cell_07": {
+    "task": "B4",
+    "cond": "P",
+    "arm": "F0"
+  },
+  "cell_08": {
+    "task": "B4",
+    "cond": "P",
+    "arm": "F1"
+  },
+  "cell_09": {
+    "task": "B2",
+    "cond": "C",
+    "arm": "F0"
+  },
+  "cell_10": {
+    "task": "B2",
+    "cond": "C",
+    "arm": "F1"
+  },
+  "cell_11": {
+    "task": "B2",
+    "cond": "P",
+    "arm": "F0"
+  },
+  "cell_12": {
+    "task": "B2",
+    "cond": "P",
+    "arm": "F1"
+  },
+  "cell_13": {
+    "task": "B1",
+    "cond": "C",
+    "arm": "F0"
+  },
+  "cell_14": {
+    "task": "B1",
+    "cond": "C",
+    "arm": "F1"
+  },
+  "cell_15": {
+    "task": "B1",
+    "cond": "P",
+    "arm": "F0"
+  },
+  "cell_16": {
+    "task": "B1",
+    "cond": "P",
+    "arm": "F1"
+  }
+}

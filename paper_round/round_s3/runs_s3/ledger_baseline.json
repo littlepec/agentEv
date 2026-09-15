@@ -1,0 +1,5 @@
+{
+  "line_cost_at_round_start": 3.7489822,
+  "note": "round cap counts every roundS3 call incl. material generation",
+  "created": "2026-09-15T11:55:25"
+}

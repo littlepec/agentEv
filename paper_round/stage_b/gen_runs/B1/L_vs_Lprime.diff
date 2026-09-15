@@ -1,0 +1,16 @@
+--- L
++++ Lprime
+@@ -2,10 +2,10 @@
+ 
+ Key questions addressed: AntiScam dataset non-collaborative dialog size | AntiScam corpus number of dialogs | AntiScam dataset annotation statistics | AntiScam human-human anti-scam dialogs | End-to-End Trainable Non-Collaborative Dialog System AntiScam dataset
+ 
+-The paper reports AntiScam, a corpus of human-human anti-scam dialogs created to learn human elicitation strategies. AntiScam was collected through a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk. The dataset contains 220 human-human dialogs. The corpus serves as the dataset for non-collaborative dialog research in the paper.
++The paper reports AntiScam, a corpus of human-human anti-scam dialogs created to learn human elicitation strategies. AntiScam was collected through a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk. The dataset contains 320 human-human dialogs. The paper reports this total in its AntiScam dataset description. The corpus serves as the dataset for non-collaborative dialog research in the paper.
+ 
+ For annotation statistics, the paper reports that a subset of 100 dialogs containing 3,044 sentences was manually annotated. Two expert annotators who have linguistic training performed this annotation. The average conversation length is 12.45 turns. The average utterance length is 11.13 words. These averages describe the full AntiScam corpus.
+ 
+-The paper reports that 172 out of 220 users successfully identified their partner as an attacker. This outcome is part of the AntiScam dataset description. The total dataset comprises 220 human-human dialogs. The manually annotated subset comprises 100 dialogs and 3,044 sentences.
++The paper reports that 172 out of 320 users successfully identified their partner as an attacker. This outcome is part of the AntiScam dataset description. The total dataset comprises 320 human-human dialogs. The manually annotated subset comprises 100 dialogs and 3,044 sentences.
+ 
+-In sum, AntiScam is a human-human anti-scam dialog corpus collected via a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk. Its size is 220 human-human dialogs. Its annotation statistics cover 100 dialogs and 3,044 sentences, annotated by two expert annotators with linguistic training. Average conversation length is 12.45 turns, and average utterance length is 11.13 words. The paper reports that 172 out of 220 users successfully identified their partner as an attacker.
++In sum, AntiScam is a human-human anti-scam dialog corpus collected via a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk. Its size is 320 human-human dialogs. Its annotation statistics cover 100 dialogs and 3,044 sentences, annotated by two expert annotators with linguistic training. Average conversation length is 12.45 turns, and average utterance length is 11.13 words. The paper reports that 172 out of 320 users successfully identified their partner as an attacker.

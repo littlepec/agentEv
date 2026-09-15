@@ -1,0 +1,47 @@
+{
+  "paper_title": "End-to-End Trainable Non-Collaborative Dialog System",
+  "sub_questions": [
+    {
+      "q": "What is the AntiScam dataset in the paper?",
+      "answer": "AntiScam is a corpus of human-human anti-scam dialogs created to learn human elicitation strategies, collected via a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk.",
+      "quote": "we created a corpus of human-human anti-scam dialogs in order to learn human elicitation strategies.",
+      "section": "AntiScam Dataset",
+      "importance": 6
+    },
+    {
+      "q": "How many human-human dialogs does the AntiScam dataset contain?",
+      "answer": "The AntiScam dataset contains 220 human-human dialogs.",
+      "quote": "We collected 220 human-human dialogs.",
+      "section": "AntiScam Dataset",
+      "importance": 10
+    },
+    {
+      "q": "How many AntiScam dialogs and sentences were manually annotated?",
+      "answer": "A subset of 100 dialogs containing 3,044 sentences was annotated by two expert annotators.",
+      "quote": "We recruited two expert annotators who have linguistic training to annotate 3,044 sentences in 100 dialogs",
+      "section": "AntiScam Dataset",
+      "importance": 8
+    },
+    {
+      "q": "What are the average conversation length and average utterance length in AntiScam?",
+      "answer": "The average conversation length is 12.45 turns, and the average utterance length is 11.13 words.",
+      "quote": "The average conversation length is 12.45 turns and the average utterance length is 11.13 words.",
+      "section": "AntiScam Dataset",
+      "importance": 7
+    },
+    {
+      "q": "How many AntiScam users successfully identified their partner as an attacker?",
+      "answer": "172 out of 220 users successfully identified their partner as an attacker.",
+      "quote": "Only 172 out of 220 users successfully identified their partner as an attacker",
+      "section": "AntiScam Dataset",
+      "importance": 4
+    }
+  ],
+  "search_queries": [
+    "AntiScam dataset non-collaborative dialog size",
+    "AntiScam corpus number of dialogs",
+    "AntiScam dataset annotation statistics",
+    "AntiScam human-human anti-scam dialogs",
+    "End-to-End Trainable Non-Collaborative Dialog System AntiScam dataset"
+  ]
+}

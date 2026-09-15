@@ -1,0 +1,33 @@
+{
+  "structure": "S3 multi-subsection enumeration (round_S3 new task 2; adjacent chunks 17-18)",
+  "arxiv": "2002.04374",
+  "title": "Convolutional Neural Networks and a Transfer Learning Strategy to Classify Parkinson's Disease from Speech in Three Different Languages",
+  "question": "What datasets are used?",
+  "correct_answer": "Three corpora: Spanish PC-GITA (50 PD patients and 50 healthy controls, Colombian Spanish); German recordings of 88 PD patients and 88 HC speakers; Czech data from 100 native speakers (50 PD, 50 HC).",
+  "evidence": [
+    {
+      "section": "2.1 Data :: Spanish",
+      "quote": "The Spanish data consider the PC-GITA corpus, which contains utterances from 50 PD patients and 50 HC"
+    },
+    {
+      "section": "2.1 Data :: German",
+      "quote": "Speech recordings of 88 PD patients and 88 HC speakers from Germany are considered"
+    },
+    {
+      "section": "2.1 Data :: Czech",
+      "quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered"
+    }
+  ],
+  "evidence_insufficient": "missing one of the three corpora or a wrong participant count",
+  "flipped_relation": "German corpus size (paper: 88 PD patients and 88 HC; document_2 variant: 44 PD patients and 44 HC)",
+  "adversarial_statement": "The German data consist of speech recordings of 44 PD patients and 44 HC speakers.",
+  "prior_dependence": "HIGH for the German count; PC-GITA is a known corpus (50/50 may be in priors).",
+  "qasper_annotator_answers": [
+    "PC-GITA corpus; 88 PD patients and 88 HC speakers from Germany; 100 native Czech speakers (50 PD, 50 HC)",
+    "the PC-GITA corpus BIBREF5; BIBREF17; BIBREF18"
+  ],
+  "task": "B6",
+  "attack_target_paragraph": "document_2 (third-party research note L / L'); document_1 = full paper, never modified",
+  "surrogate_plan_sha256": "4396d155b5be596d4b03b4dafd63b2165b814976f83cfa4c39894583fb19ebc8",
+  "frozen": "2026-09-15T11:52:10"
+}

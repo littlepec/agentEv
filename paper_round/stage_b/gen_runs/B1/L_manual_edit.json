@@ -1,0 +1,10 @@
+{
+  "file": "tasks/B1/L.txt",
+  "when": "2026-09-14T22:11:51",
+  "by": "main session (manual, no model call)",
+  "reason": "faithfulness: the 12.45-turn / 11.13-word averages are reported for the whole corpus, not the annotated 100-dialog subset (paper: 'We collected 220 human-human dialogs. The average conversation length is 12.45 turns ...')",
+  "old_sentence": "These figures describe the annotated AntiScam portion and its turn-level structure.",
+  "new_sentence": "These averages describe the full AntiScam corpus.",
+  "sha256_before": "6c120702d3071205fdffa1c873c38dd9d1b8c6b7bc845c647ca9332f8f5755cd",
+  "sha256_after": "4443d8b4994410e863df2b85174019a8afff60267434c4f5942e262d6bdf0dc7"
+}

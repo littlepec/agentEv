@@ -1,0 +1,65 @@
+# Hand-Crafted Question Templates: Reported Counts and Manual Effort
+
+## Direct Answer to the Query
+
+The query asks: "How many hand-crafted templates did they have to make?" Based on the provided information, the answer is not a single number because the work reports two separate evaluations with distinct template sets. For the Freebase evaluation, the paper reports 106 hand-crafted templates ([document_2.txt](document_2.txt)). For the in-house power tool domain knowledge base, the authors hand-craft 163 templates ([document_2.txt](document_2.txt)). Therefore, if the question refers to the total reported manual template inventory across both evaluations, the sum is 269 hand-crafted templates. If the question refers only to the Freebase evaluation, the count is 106. If it refers only to the power tool domain, the count is 163. This report details each figure, the predicate coverage that drives them, and the implications for manual effort.
+
+## Freebase Evaluation: 106 Hand-Crafted Templates
+
+### Triple Set and Predicate Distribution
+
+For the Freebase evaluation, the work uses 500 randomly selected triples ([document_2.txt](document_2.txt)). Those 500 triples share only 53 distinct predicates ([document_2.txt](document_2.txt)). The paper reports 106 hand-crafted templates for those 500 Freebase triples ([document_2.txt](document_2.txt)). Because 53 distinct predicates are covered by 106 templates, the authors made 2 templates for each predicate on average ([document_2.txt](document_2.txt)). This design ties template creation to predicates, keeping the template set compact relative to the triple set ([document_2.txt](document_2.txt)).
+
+### Template Application and Question Yield
+
+Applying the templates to the triples generated 991 seed questions ([document_2.txt](document_2.txt)). The experiment also retrieved 1529 more questions from Google ([document_2.txt](document_2.txt)). This means the total question pool for the Freebase evaluation, as reported, is 2,520 questions (991 seed questions plus 1,529 retrieved questions). The templates themselves are the manual component: the paper states that the only human labor in this work is question template construction ([document_2.txt](document_2.txt)). The template construction therefore is the manual component reported ([document_2.txt](document_2.txt)). Each template is associated with a predicate in the knowledge base, and this association means template creation follows the predicates present in the KB ([document_2.txt](document_2.txt)).
+
+### Efficiency Relative to Triples and Predicates
+
+From the reported numbers, one can compute the template-to-triple ratio for Freebase: 106 templates divided by 500 triples equals 0.212 templates per triple. This ratio is not explicitly stated in the source, but it follows directly from the reported figures ([document_2.txt](document_2.txt)). The template-to-predicate ratio is more directly reported: 106 templates divided by 53 predicates equals 2.0 templates per predicate ([document_2.txt](document_2.txt)). This ratio is the average the authors describe. The compactness claim in the source refers to the template set relative to the triple set, not relative to the predicate set ([document_2.txt](document_2.txt)). The Freebase design therefore demonstrates that a relatively small number of templates (106) can cover a much larger number of triples (500) when those triples share a limited predicate vocabulary (53).
+
+## In-House Power Tool Domain: 163 Hand-Crafted Templates
+
+### Predicate Set Size and Template Count
+
+For the in-house power tool domain knowledge base, the paper reports 67 predicates ([document_2.txt](document_2.txt)). For those 67 predicates, the authors hand-craft 163 templates ([document_2.txt](document_2.txt)). That count differs from the Freebase template count because the domain-specific KB has its own predicate set and required its own template set ([document_2.txt](document_2.txt)). The Freebase and power tool counts provide the reported template-construction figures for the system ([document_2.txt](document_2.txt)).
+
+### Comparative Density
+
+The power tool domain uses 163 templates for 67 predicates, which yields an average of approximately 2.43 templates per predicate (163 ÷ 67 ≈ 2.43). This calculation is derived from the reported figures ([document_2.txt](document_2.txt)). By comparison, the Freebase evaluation uses 106 templates for 53 predicates, which yields 2.0 templates per predicate ([document_2.txt](document_2.txt)). The power tool domain therefore has a higher template density per predicate than the Freebase evaluation. The source does not report the number of triples in the power tool domain, so a template-to-triple ratio cannot be computed for that domain from the provided information ([document_2.txt](document_2.txt)). The source does state that these figures show the manual template-building effort scales with predicate coverage in each evaluation ([document_2.txt](document_2.txt)).
+
+### Manual Effort Scaling
+
+The reported figures indicate that manual template-building effort is a function of predicate coverage, not triple count ([document_2.txt](document_2.txt)). The Freebase evaluation covers 53 predicates with 106 templates, while the power tool domain covers 67 predicates with 163 templates ([document_2.txt](document_2.txt)). In both cases, the number of templates is roughly between two and two-and-a-half times the number of predicates. The source states that the figures show the manual template-building effort scales with predicate coverage in each evaluation ([document_2.txt](document_2.txt)). This scaling relationship is the core design principle: templates are associated with predicates, so more predicates require more templates ([document_2.txt](document_2.txt)).
+
+## Comparative Summary Table
+
+The following table summarizes the reported template-construction figures and related counts. All figures come from the provided source ([document_2.txt](document_2.txt)).
+
+| Evaluation | Distinct Predicates | Hand-Crafted Templates | Average Templates per Predicate | Triples | Seed Questions | Retrieved Questions | Total Questions |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Freebase | 53 | 106 | 2.00 | 500 | 991 | 1,529 | 2,520 |
+| In-house power tool | 67 | 163 | 2.43 | Not reported | Not reported | Not reported | Not reported |
+| Combined reported total | 120 (across separate KBs) | 269 | 2.24 (aggregate) | 500+ | 991 | 1,529 | 2,520+ |
+
+Note: The combined predicate count of 120 is the sum of 53 Freebase predicates and 67 power tool predicates, but these belong to separate knowledge bases, so the aggregate average templates per predicate is presented only as a mathematical sum, not as a meaningful cross-domain density ([document_2.txt](document_2.txt)). The total hand-crafted templates across both evaluations is 269 (106 + 163) ([document_2.txt](document_2.txt)).
+
+## Interpretation and Opinion
+
+Based on the provided information, the most defensible answer to the query is that the authors had to make 106 hand-crafted templates for the Freebase evaluation and 163 hand-crafted templates for the in-house power tool domain evaluation ([document_2.txt](document_2.txt)). The total number of hand-crafted templates reported across both evaluations is 269 ([document_2.txt](document_2.txt)). This total is not a single unified template set; it is the sum of two separate template sets built for two different knowledge bases. The Freebase templates are tied to 53 Freebase predicates, and the power tool templates are tied to 67 power tool predicates ([document_2.txt](document_2.txt)). Therefore, if a reader asks "how many templates did they have to make?" without specifying the evaluation, the most complete answer is "106 for Freebase and 163 for the power tool domain, for a combined reported total of 269." If the reader asks specifically about the Freebase evaluation, the answer is 106. If the reader asks specifically about the power tool domain, the answer is 163.
+
+From an analytical perspective, the reported design has three notable implications. First, the manual effort is explicitly limited to template construction: the paper states that the only human labor in this work is question template construction ([document_2.txt](document_2.txt)). This means the 106 and 163 figures represent the entirety of the reported manual annotation effort. Second, the design ties templates to predicates rather than to individual triples, which keeps the template set compact relative to the triple set in the Freebase case ([document_2.txt](document_2.txt)). Third, the effort scales with predicate coverage, so a domain with more predicates requires more templates ([document_2.txt](document_2.txt)). The power tool domain, with 67 predicates and 163 templates, illustrates this scaling relative to the Freebase domain's 53 predicates and 106 templates ([document_2.txt](document_2.txt)).
+
+One limitation of the provided information is that it does not report the number of triples in the power tool domain, so we cannot compute a template-to-triple ratio for that domain ([document_2.txt](document_2.txt)). It also does not report how many templates overlap between the two domains or whether any templates are reused. The source does not provide time estimates per template or inter-annotator agreement, so the effort in person-hours cannot be determined from the given information ([document_2.txt](document_2.txt)). The source also does not report the number of predicates in any other KB beyond Freebase and the power tool domain. Consequently, the 269 total is the maximum reported hand-crafted template count in the provided information, but it is not necessarily the complete manual effort across all possible evaluations the authors may have conducted.
+
+Another consideration is the relationship between templates and generated questions. In the Freebase evaluation, 106 templates applied to 500 triples generated 991 seed questions ([document_2.txt](document_2.txt)). This means the templates were used to produce nearly a thousand seed questions, which were then supplemented by 1,529 Google-retrieved questions ([document_2.txt](document_2.txt)). The power tool domain figures do not include question generation counts in the provided information, so no comparable question yield can be stated for that domain ([document_2.txt](document_2.txt)). This asymmetry means the Freebase evaluation provides a fuller picture of the template-to-question pipeline, while the power tool evaluation provides only the template construction counts.
+
+My concrete opinion, based on the given data, is that the answer to the query should be presented as a two-part response rather than a single number. The query "How many hand-crafted templates did they have to make?" is ambiguous because the work reports two evaluations. A precise response is: 106 hand-crafted templates for the Freebase evaluation and 163 hand-crafted templates for the in-house power tool domain, totaling 269 hand-crafted templates across both reported evaluations. This answer is grounded entirely in the reported figures ([document_2.txt](document_2.txt)). The 269 figure is a valid sum, but it should be accompanied by the caveat that the templates are not a single cross-domain set. The design principle is that template creation follows predicates present in the KB, so the manual effort is proportional to predicate coverage, not to the number of triples ([document_2.txt](document_2.txt)). This principle explains why the Freebase evaluation uses 106 templates for 53 predicates and the power tool domain uses 163 templates for 67 predicates ([document_2.txt](document_2.txt)).
+
+## Conclusion
+
+In conclusion, the reported hand-crafted template counts are 106 for the Freebase evaluation and 163 for the in-house power tool domain evaluation ([document_2.txt](document_2.txt)). The combined reported total is 269 hand-crafted templates ([document_2.txt](document_2.txt)). The Freebase templates cover 53 distinct predicates from 500 randomly selected triples, averaging 2 templates per predicate ([document_2.txt](document_2.txt)). The power tool templates cover 67 predicates, averaging approximately 2.43 templates per predicate ([document_2.txt](document_2.txt)). The source states that template construction is the only human labor reported, and that the manual effort scales with predicate coverage in each evaluation ([document_2.txt](document_2.txt)). Therefore, the answer to "How many hand-crafted templates did they have to make?" is 106 for Freebase, 163 for the power tool domain, and 269 in total across both evaluations. The most informative response states all three figures and clarifies which evaluation each belongs to.
+
+## References
+
+document_2.txt. (n.d.). *Source: document_2.txt* [Data file]. Retrieved September 14, 2026, from document_2.txt

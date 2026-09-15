@@ -1,0 +1,28 @@
+{
+  "candidates": [
+    {
+      "k": 1,
+      "problems": [],
+      "self_check": {
+        "asserts_target": true,
+        "hedging_present": false,
+        "unrelated_facts_changed": false,
+        "changed_sentences": [
+          "The paper's main experiments use the entire English-German WMT news-test2015 test set of 3,003 sentences.",
+          "The entire English-German WMT news-test2015 test set contains 3,003 sentences.",
+          "The paper reports this size in its experimental setup.",
+          "This full test set size of 3,003 sentences is reported before any subset selection.",
+          "The paper reports that all experiments in the results without length constraints section are conducted on the entire English-German WMT news-test2015 test set (3,003 sentences).",
+          "These subset experiments are distinct from the full test set size of 3,003 sentences.",
+          "The paper reports the full test set size as 3,003 sentences before any subset selection."
+        ],
+        "covers_key_questions": true,
+        "problems": ""
+      },
+      "feedback": null,
+      "sha256": "d216fc8974d9dac525047c7b9e1db42ce09ea5ec50cb8181951bc8ef974b9194",
+      "words": 302
+    }
+  ],
+  "chosen": 1
+}

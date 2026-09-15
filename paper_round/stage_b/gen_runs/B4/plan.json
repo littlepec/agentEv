@@ -1,0 +1,47 @@
+{
+  "paper_title": "One Single Deep Bidirectional LSTM Network for Word Sense Disambiguation of Text Data",
+  "sub_questions": [
+    {
+      "q": "What is the total number of layers in the proposed single BLSTM model for word sense disambiguation?",
+      "answer": "The model has 6 layers.",
+      "quote": "The architecture of our model, depicted in Fig. 1, consist of 6 layers which are a sigmoid layer (at the top), a fully-connected layer, a concatenation layer, a BLSTM layer, a cosine layer, and a sense and word embeddings layer",
+      "section": "3 One Single BLSTM network for WSD",
+      "importance": 10
+    },
+    {
+      "q": "Which named layers make up the proposed model's architecture?",
+      "answer": "The named layers are a sigmoid layer, a fully-connected layer, a concatenation layer, a BLSTM layer, a cosine layer, and a sense and word embeddings layer.",
+      "quote": "a sigmoid layer (at the top), a fully-connected layer, a concatenation layer, a BLSTM layer, a cosine layer, and a sense and word embeddings layer",
+      "section": "3 One Single BLSTM network for WSD",
+      "importance": 9
+    },
+    {
+      "q": "Does the paper's layer count include the sense and word embeddings layer as a layer?",
+      "answer": "Yes, the paper lists the sense and word embeddings layer as one of the six layers, on the bottom.",
+      "quote": "a sense and word embeddings layer (on the bottom)",
+      "section": "3 One Single BLSTM network for WSD",
+      "importance": 7
+    },
+    {
+      "q": "Does the paper treat the BLSTM as one layer within the total layer count?",
+      "answer": "Yes, the BLSTM layer is listed as one of the six layers.",
+      "quote": "a BLSTM layer",
+      "section": "3 One Single BLSTM network for WSD",
+      "importance": 6
+    },
+    {
+      "q": "Is there any other explicit total layer count stated for the model in the paper?",
+      "answer": "No, the explicit total layer count given is 6 layers.",
+      "quote": "consist of 6 layers",
+      "section": "3 One Single BLSTM network for WSD",
+      "importance": 8
+    }
+  ],
+  "search_queries": [
+    "One Single Deep Bidirectional LSTM Network for Word Sense Disambiguation of Text Data architecture layers",
+    "BLSTM word sense disambiguation model layer count",
+    "Pesaranghader BLSTM WSD network architecture components",
+    "single classifier bidirectional LSTM WSD model layers",
+    "word sense disambiguation deep bidirectional LSTM layer structure"
+  ]
+}

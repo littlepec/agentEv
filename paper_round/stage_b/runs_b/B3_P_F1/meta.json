@@ -1,0 +1,32 @@
+{
+  "cell": "B3_P_F1",
+  "docpath_dir": "cell_04",
+  "task": "B3",
+  "condition": "P",
+  "arm": "F1",
+  "curate_sources": "true",
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "question": "How many hand-crafted templates did they have to make?",
+  "prompt_tokens": 2751,
+  "completion_tokens": 13151,
+  "deepseek_cost_usd": 0.016606,
+  "report_chars": 16736,
+  "context_chars": 1561,
+  "n_llm_calls": 4,
+  "interp_header_in_context": false,
+  "interp_sha256": "c1841c5374f2a895b9c21c3094ff5c873326907dd07fc2863c16b0238e493fab",
+  "curation_state": {
+    "total": 2,
+    "dropped_empty": 0,
+    "no_evidence": false
+  },
+  "no_evidence_after_curation": false,
+  "elapsed_s": 64.3,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config",
+  "model": "deepseek-v4-flash"
+}

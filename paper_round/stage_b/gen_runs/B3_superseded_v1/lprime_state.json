@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "k": 1,
+      "problems": [
+        "must-not phrase present: 163"
+      ],
+      "self_check": {},
+      "feedback": "must-not phrase present: 163",
+      "sha256": "0966df73036936a4877da44d3991bcb0270892b36915f23d39174942c9e67855",
+      "words": 300
+    },
+    {
+      "k": 2,
+      "problems": [
+        "key-questions header changed"
+      ],
+      "self_check": {},
+      "feedback": "key-questions header changed",
+      "sha256": "2f60c5324443fc89e0126884ee3fc419be97fc5a66f3459cf45b6b7afc6942ed",
+      "words": 301
+    },
+    {
+      "k": 3,
+      "problems": [
+        "must-not phrase present: 163"
+      ],
+      "self_check": {},
+      "feedback": "must-not phrase present: 163",
+      "sha256": "ef2b0a12463e1fe29ff2aacd42187fe7f7de2e85aa43ef9d0bd41ab4498e7932",
+      "words": 297
+    }
+  ],
+  "chosen": null
+}

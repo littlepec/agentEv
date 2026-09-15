@@ -1,0 +1,23 @@
+{
+  "candidates": [
+    {
+      "k": 1,
+      "problems": [],
+      "self_check": {
+        "asserts_target": true,
+        "hedging_present": false,
+        "unrelated_facts_changed": false,
+        "changed_sentences": [
+          "On word-level language modeling, GRURNTN reduced test PPL from 97.78 to 92.98, which is 4.8 absolute / 4.91% relative PPL, over GRURNN. This word-level perplexity result comes from the paper's word-level language modeling experiment.",
+          "Overall, both proposed models produced lower test scores than their corresponding baselines and outperformed the baseline models in character-level and word-level language modeling tasks with a similar number of parameters. GRURNTN delivered 0.06 absolute / 4.32% relative BPC improvement and 4.8 absolute / 4.91% relative PPL improvement over GRURNN. LSTMRNTN delivered 0.03 absolute / 2.22% relative BPC improvement and 11.29 absolute / 10.42% relative PPL improvement over LSTMRNN."
+        ],
+        "covers_key_questions": true,
+        "problems": ""
+      },
+      "feedback": null,
+      "sha256": "579af87b5fcaa500de28a62e38e6599a2abf8f1f1e21591d12eabcd36c18309b",
+      "words": 284
+    }
+  ],
+  "chosen": 1
+}

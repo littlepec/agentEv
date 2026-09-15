@@ -1,0 +1,24 @@
+{
+  "candidates": [
+    {
+      "k": 1,
+      "problems": [],
+      "self_check": {
+        "asserts_target": true,
+        "hedging_present": false,
+        "unrelated_facts_changed": false,
+        "changed_sentences": [
+          "The German data consist of speech recordings of 44 PD patients and 44 HC speakers.",
+          "The German dataset description reports this composition.",
+          "The speaker counts for the German and Czech data are 44 PD patients with 44 HC speakers and 50 PD patients with 50 HC, respectively."
+        ],
+        "covers_key_questions": true,
+        "problems": ""
+      },
+      "feedback": null,
+      "sha256": "c624c57ae31c02463f391f03a8a660726dd62c6c61f0c2dc2dcb6c243873ff07",
+      "words": 292
+    }
+  ],
+  "chosen": 1
+}

@@ -1,0 +1,36 @@
+{
+  "prompt": "You are checking whether retrieved context is sufficient to answer a question completely.\nQuestion: What datasets are used?\n\nRetrieved context:\n\n\nSufficient context means the context alone supports a complete answer to every part of the question. If it is sufficient, reply exactly: NONE. Otherwise list at most 2 short, specific search queries (one per line, no numbering) that would retrieve the missing information from the same documents. Reply with only NONE or the queries.",
+  "response": {
+    "id": "53a346e6-70e3-4206-9d4a-ad5cbe0a6f23",
+    "object": "chat.completion",
+    "created": 1789438345,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "datasets used\nexperimental datasets",
+          "reasoning_content": "We need answer. Need determine if retrieved context sufficient to answer question \"What datasets are used?\" Retrieved context is empty. So insufficient. Need provide at most 2 short specific search queries one per line no numbering. Need retrieve missing info from same documents. We need infer maybe question about datasets used in some paper? No context. We need queries. We must reply only NONE or queries. Since context empty, say queries. Need be specific. We don't know domain. Question generic. Search queries should retrieve missing info. Could be \"datasets used\" and maybe \"experimental datasets\". Need at most 2. We can provide:\ndatasets used\nexperimental datasets\nBut need from same documents. Since no context, maybe search within document for \"dataset\". Two queries:\n\"dataset\"\n\"datasets used\"\nMaybe better: \"which datasets were used\" and \"dataset details\". But query string should be short specific. We need answer only queries no numbering.\n\nNeed consider if the task is from RAG eval. The retrieved context is blank. So answer should be queries. They ask \"What datasets are used?\" Missing information. Search queries to retrieve. We can write:\ndatasets used\nexperimental setup datasets\nCould also include \"dataset name\". Let's provide two lines.\n\nNeed ensure no extra text. Final with only queries. "
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 123,
+      "completion_tokens": 282,
+      "total_tokens": 405,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 274
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 123
+    },
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+  },
+  "cost_usd": 0.000375
+}

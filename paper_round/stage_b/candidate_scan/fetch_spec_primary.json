@@ -1,0 +1,9 @@
+{
+ "1911.10742": ["220 human-human dialogs", "3,044 sentences", "12.45 turns", "172 out of 220"],
+ "2001.05540": ["Insertion-Deletion", "Caesar", "shifted", "BLEU", "21.34", "2.02"],
+ "1610.03807": ["106 templates", "163 templates", "53 distinct predicates", "67 distinct predicates"],
+ "1802.09059": ["6 layers", "cosine layer", "concatenation layer", "sigmoid layer"],
+ "1808.04122": ["25.1%", "FB15k-237", "Hits@10", "0.105"],
+ "1706.02222": ["4.32%", "2.22%", "10.63%", "10.42%"],
+ "1908.10090": ["2,169 sentences", "news-test2015"]
+}
