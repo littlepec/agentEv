@@ -1,0 +1,11 @@
+Third-party research note: A Theoretically Grounded Application of Dropout in Recurrent Neural Networks
+
+Key questions addressed: dropout recurrent neural networks language modeling Penn Treebank perplexity | recurrent neural network regularization Penn Treebank benchmark | Penn Treebank language modeling baseline comparison recurrent dropout | dynamic evaluation cache pointer fine-tuning recurrent language model | ensemble recurrent language model Penn Treebank perplexity
+
+The paper reports 73.4 test perplexity for the proposed Variational LSTM on Penn Treebank. The paper states test perplexity is reduced from 78.4 down to 73.4 with MC dropout and untied weights. This 73.4 result is a single-model result for the large Variational LSTM with untied weights and MC dropout at test time. The paper states that to the best of its knowledge these are currently the best single model perplexities on the Penn Treebank. The paper text does not report dynamic evaluation, cache/pointer, or fine-tuning for the Penn Treebank result. The Table 1 caption identifies the results as single model perplexity on test and validation sets for the Penn Treebank language modelling task.
+
+The paper reports an ensemble result. Using 10 Variational LSTMs with MC dropout improves Zaremba et al.'s test set perplexity from 69.5 to 68.7, obtaining identical perplexity to Zaremba et al.'s experiment with 38 models.
+
+The language modelling table lists these Penn Treebank baselines and comparison models with test perplexities: non-regularized early stopping (medium 121.7, large 127.4), Moon et al. December 2015 (medium 97.0, large 118.7), Moon et al. December 2015 + emb dropout (medium 86.5, large 86.0), Zaremba et al. 2014 (medium 82.7, large 78.4), Variational tied weights (medium 79.7, large 75.0), Variational tied weights MC (medium 79.0, large 74.1), Variational untied weights (medium 79.7, large 75.2), and Variational untied weights MC (medium 78.6, large 73.4).
+
+The proposed model's 73.4 test perplexity is lower than all listed baselines and comparison models, including Zaremba et al. 2014's 78.4 large-model test perplexity. The paper states this is the best single-model perplexity on Penn Treebank.

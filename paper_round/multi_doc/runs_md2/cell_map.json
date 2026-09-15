@@ -1,0 +1,16 @@
+{
+  "Q1_quota_C": "cell_01",
+  "Q1_quota_P": "cell_02",
+  "Q1_oracle_C": "cell_03",
+  "Q1_oracle_P": "cell_04",
+  "Q2_quota_C": "cell_05",
+  "Q2_quota_P": "cell_06",
+  "Q2_oracle_C": "cell_07",
+  "Q2_oracle_P": "cell_08",
+  "Q1_oracle_P_r2": "cell_09",
+  "Q2_oracle_P_r2": "cell_10",
+  "Q1_quota_P_r2": "cell_11",
+  "Q2_quota_P_r2": "cell_12",
+  "Q1_quota_C_r2": "cell_13",
+  "Q2_quota_C_r2": "cell_14"
+}

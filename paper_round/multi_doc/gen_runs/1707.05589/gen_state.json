@@ -1,0 +1,13 @@
+{
+  "attempts": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "sha256": "5a7a8ec2843c1bf250e3011a28c5afc0f646d625646a17929cd5da74606d6f95",
+      "problems": [],
+      "unmatched": [],
+      "words_body": 234
+    }
+  ],
+  "thinking": "disabled"
+}

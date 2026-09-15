@@ -1,0 +1,8 @@
+{
+  "why": "round-1 plan (thinking disabled) omitted the paper single-model row 54.44, so the note headlined the dynamic-evaluation value 47.69; the fixed per-paper question asks for the single-model setting. One resample of planner+note with identical prompts/settings.",
+  "preserved": [
+    "r1_plan.json",
+    "r1_L.txt"
+  ],
+  "at": "2026-09-15T20:10:20"
+}

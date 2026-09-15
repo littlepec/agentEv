@@ -1,0 +1,11 @@
+Third-party research note: Using the Output Embedding to Improve Language Models
+
+Key questions addressed: weight tying output embedding language model Penn Treebank perplexity | Using the Output Embedding to Improve Language Models Penn Treebank results | tied input output embeddings neural network language model test perplexity | projection regularization weight tying Penn Treebank perplexity | Press Wolf output embedding improve language models PTB baseline comparison
+
+The paper reports word-level Penn Treebank test perplexity for its proposed weight-tied neural network language models in single-model settings. The large NNLM with weight tying (Large + Weight Tying) reaches 74.3 test perplexity. The small NNLM with weight tying and projection regularization (Small + WT + PR) reaches 100.9 test perplexity. Both numbers come from the paper's neural network language model experiments and are reported without dynamic evaluation, cache/pointer, ensemble, or fine-tuning.
+
+The paper's comparison baselines include the large NNLM of Zaremba et al. (2014) at 78.4 test perplexity and the small NNLM at 114.5 test perplexity. The proposed large weight-tied model improves on the large baseline, and the proposed small weight-tied plus projection-regularized model improves on the small baseline.
+
+The paper also lists baseline models without dropout in its comparison table: KN 5-gram 141, RNN 123, LSTM 117, Stack RNN 110, FOFE-FNN 108, Noisy LSTM 108.0, and Deep RNN 107.5. These entries provide the broader non-dropout comparison context for the reported Penn Treebank perplexities.
+
+The paper does not report dynamic evaluation, cache/pointer, ensemble, or fine-tuning settings for its Penn Treebank word-level perplexity results. The reported figures are single-model results.

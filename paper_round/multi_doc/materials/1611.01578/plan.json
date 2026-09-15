@@ -1,0 +1,53 @@
+{
+  "paper_title": "Neural Architecture Search with Reinforcement Learning",
+  "sub_questions": [
+    {
+      "q": "What word-level test perplexity on Penn Treebank does the paper report for the Neural Architecture Search model proposed by the paper?",
+      "answer": "The paper reports 62.4 test perplexity for the best Neural Architecture Search model on Penn Treebank; Table 2 also reports 64.0 and 67.9 for other Neural Architecture Search configurations.",
+      "quote": "Our cell achieves a test set perplexity of 62.4 on the Penn Treebank, which is 3.6 perplexity better than the previous state-of-the-art model.",
+      "section": "Abstract",
+      "importance": 10
+    },
+    {
+      "q": "In what evaluation setting does the paper report Penn Treebank test perplexity for the Neural Architecture Search model, such as single model, ensemble, dynamic evaluation, cache/pointer, or fine-tuning?",
+      "answer": "The paper reports the Neural Architecture Search results in Table 2 as single model perplexity; the paper does not report dynamic evaluation, cache/pointer, ensemble, or fine-tuning for the Neural Architecture Search model on Penn Treebank.",
+      "quote": "Table 2: Single model perplexity on the test set of the Penn Treebank language modeling task.",
+      "section": "Table 2 / Section 4.2",
+      "importance": 9
+    },
+    {
+      "q": "Which Neural Architecture Search configuration achieves the 62.4 Penn Treebank test perplexity, and what configuration details are reported?",
+      "answer": "The 62.4 result is Neural Architecture Search with base 8 and shared embeddings, 54M parameters; the paper also reports Neural Architecture Search with base 8 at 67.9 with 32M parameters and Neural Architecture Search with base 8 and shared embeddings at 64.0 with 25M parameters.",
+      "quote": "Neural Architecture Search with base 8 and shared embeddings 54M 62.4",
+      "section": "Table 2",
+      "importance": 8
+    },
+    {
+      "q": "Which baseline in the paper's Penn Treebank comparison table has the lowest listed test perplexity?",
+      "answer": "The best listed baseline is Zilly et al. 2016 - Variational RHN, shared embeddings, with 66.0 test perplexity.",
+      "quote": "Zilly et al. 2016 - Variational RHN, shared embeddings 24M 66.0",
+      "section": "Table 2",
+      "importance": 9
+    },
+    {
+      "q": "How does the best Neural Architecture Search Penn Treebank test perplexity compare with the best baseline listed in the paper?",
+      "answer": "The best Neural Architecture Search result, 62.4 test perplexity, is 3.6 perplexity better than the previous state-of-the-art baseline, Zilly et al. 2016 Variational RHN with shared embeddings at 66.0; the paper states that the models found by Neural Architecture Search outperform other state-of-the-art models on this dataset.",
+      "quote": "the models found by Neural Architecture Search outperform other state-of-the-art models on this dataset, and one of our best models achieves a gain of almost 3.6 perplexity.",
+      "section": "Section 4.2 Results",
+      "importance": 10
+    },
+    {
+      "q": "Does the paper report dynamic evaluation, cache/pointer, ensemble, or fine-tuning for the Neural Architecture Search model on Penn Treebank?",
+      "answer": "No. The paper reports single-model perplexity for Neural Architecture Search; dynamic evaluation, cache/pointer, ensemble, and fine-tuning are not reported for the Neural Architecture Search model on Penn Treebank. Cache/pointer appears only among baseline labels such as Pointer Sentinel-LSTM.",
+      "quote": "Table 2: Single model perplexity on the test set of the Penn Treebank language modeling task.",
+      "section": "Table 2",
+      "importance": 7
+    }
+  ],
+  "search_queries": [
+    "Neural Architecture Search Penn Treebank word-level language modeling perplexity",
+    "Penn Treebank recurrent cell architecture search baselines comparison",
+    "Penn Treebank language modeling evaluation protocol ensemble dynamic evaluation cache pointer",
+    "Neural Architecture Search language model test perplexity previous state of the art"
+  ]
+}

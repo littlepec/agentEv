@@ -1,0 +1,9 @@
+Third-party research note: On the State of the Art of Evaluation in Neural Language Models
+
+Key questions addressed: Penn Treebank word-level test perplexity LSTM language model | state of the art evaluation neural language models Penn Treebank | single model perplexity Penn Treebank without dynamic evaluation or cache | comparison of LSTM and RHN on Penn Treebank perplexity | Penn Treebank perplexity baselines neural language models
+
+The paper reports a best word-level test perplexity of 58.3 on Penn Treebank for its own proposed model, a 4-layer LSTM with 24M parameters. The authors state that at 24M, all depths obtain very similar results, reaching 58.3 at depth 4. This result is reported for a single model, without dynamic evaluation, cache/pointer, ensemble, or fine-tuning. The paper explicitly refrains from including techniques that are known to push perplexities even lower, because its aim is strictly to do better model comparisons for the architectures under study.
+
+The paper lists baseline test perplexities on Penn Treebank: Medium LSTM 82.7, Large LSTM 78.4, VD LSTM (Press & Wolf) 73.2, VD LSTM (Inan et al., 9M) 73.9, VD LSTM (Inan et al., 28M) 69.0, VD RHN 65.4, NAS (25M) 64.0, NAS (54M) 62.4, and AWD-LSTM 57.3. The paper's own best model at 58.3 outperforms all listed baselines except AWD-LSTM at 57.3, which is a parallel work and slightly better.
+
+The paper does not report Penn Treebank results for its own model with dynamic evaluation, cache/pointer, ensemble, or fine-tuning. All reported results are well below the previous state of the art for models without dynamic evaluation or caching. The comparison therefore places the paper's 4-layer 24M LSTM at 58.3 as a single-model result that beats the Medium LSTM, Large LSTM, VD LSTM variants, VD RHN, and NAS baselines, while falling just short of the AWD-LSTM baseline at 57.3.

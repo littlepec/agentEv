@@ -1,0 +1,54 @@
+{
+  "paper_title": "Recurrent Neural Network Regularization",
+  "sub_questions": [
+    {
+      "q": "What word-level test perplexity on Penn Treebank does the paper report for its proposed medium regularized LSTM model as a single model?",
+      "answer": "82.7",
+      "quote": "Medium regularized LSTM 86.2 82.7",
+      "section": "4.1 Language modeling, Table 1",
+      "importance": 10
+    },
+    {
+      "q": "What word-level test perplexity on Penn Treebank does the paper report for its proposed large regularized LSTM model as a single model?",
+      "answer": "78.4",
+      "quote": "Large regularized LSTM 82.2 78.4",
+      "section": "4.1 Language modeling, Table 1",
+      "importance": 10
+    },
+    {
+      "q": "Does the paper report word-level test perplexity on Penn Treebank for its proposed model in any setting involving dynamic evaluation, cache/pointer, ensemble, or fine-tuning?",
+      "answer": "The paper reports model averaging (ensembles) of regularized LSTMs, but does not report dynamic evaluation, cache/pointer, or fine-tuning settings for Penn Treebank perplexity.",
+      "quote": "Model averaging ... 10 large regularized LSTMs 72.8 69.5",
+      "section": "4.1 Language modeling, Table 1",
+      "importance": 8
+    },
+    {
+      "q": "What single-model Penn Treebank word-level test perplexities does the paper list for baseline methods?",
+      "answer": "Pascanu et al. 2013: 107.5; Cheng et al.: 100.0; non-regularized LSTM: 114.5.",
+      "quote": "Pascanu et al. 2013 107.5 Cheng et al. 100.0 non-regularized LSTM 120.7 114.5",
+      "section": "4.1 Language modeling, Table 1",
+      "importance": 9
+    },
+    {
+      "q": "How do the paper's proposed single regularized LSTM test perplexities compare with the listed single-model baselines?",
+      "answer": "The proposed medium regularized LSTM (82.7) and large regularized LSTM (78.4) are lower (better) than all listed single-model baselines: Pascanu et al. 2013 (107.5), Cheng et al. (100.0), and non-regularized LSTM (114.5).",
+      "quote": "Table 1 compares previous results with our LSTMs",
+      "section": "4.1 Language modeling, Table 1",
+      "importance": 9
+    },
+    {
+      "q": "What model-averaging Penn Treebank word-level test perplexities does the paper list for baselines and for its own regularized LSTMs?",
+      "answer": "Baselines: Mikolov 2012 (83.5), Cheng et al. (80.6), 2 non-regularized LSTMs (96.1), 5 non-regularized LSTMs (84.1), 10 non-regularized LSTMs (80.0). Own: 2 medium regularized LSTMs (77.0), 5 medium regularized LSTMs (73.3), 10 medium regularized LSTMs (72.0), 2 large regularized LSTMs (73.6), 10 large regularized LSTMs (69.5), 38 large regularized LSTMs (68.7).",
+      "quote": "10 large regularized LSTMs 72.8 69.5 38 large regularized LSTMs 71.9 68.7",
+      "section": "4.1 Language modeling, Table 1",
+      "importance": 7
+    }
+  ],
+  "search_queries": [
+    "word-level test perplexity Penn Treebank regularized LSTM",
+    "Penn Treebank language modeling perplexity single model regularized LSTM",
+    "RNN regularization Penn Treebank perplexity comparison baselines",
+    "LSTM dropout Penn Treebank word-level perplexity",
+    "Penn Treebank perplexity model averaging regularized LSTM"
+  ]
+}

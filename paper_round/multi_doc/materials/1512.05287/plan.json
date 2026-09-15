@@ -1,0 +1,54 @@
+{
+  "paper_title": "A Theoretically Grounded Application of Dropout in Recurrent Neural Networks",
+  "sub_questions": [
+    {
+      "q": "What Penn Treebank word-level test perplexity does the paper report for the paper's own proposed model?",
+      "answer": "The paper reports 73.4 test perplexity for the proposed Variational LSTM on Penn Treebank.",
+      "quote": "Test perplexity is reduced from 78.4 down to 73.4 (with MC dropout and untied weights).",
+      "section": "5.1 Language Modelling",
+      "importance": 10
+    },
+    {
+      "q": "In what setting does the paper obtain the 73.4 Penn Treebank test perplexity for the proposed model?",
+      "answer": "The 73.4 result is a single-model result for the large Variational LSTM with untied weights and MC dropout at test time.",
+      "quote": "To the best of our knowledge, these are currently the best single model perplexities on the Penn Treebank.",
+      "section": "5.1 Language Modelling",
+      "importance": 9
+    },
+    {
+      "q": "Does the paper report dynamic evaluation, cache/pointer, or fine-tuning for the Penn Treebank language modelling result?",
+      "answer": "No; the paper text does not report dynamic evaluation, cache/pointer, or fine-tuning for the Penn Treebank result.",
+      "quote": "Single model perplexity (on test and validation sets) for the Penn Treebank language modelling task.",
+      "section": "5.1 Language Modelling, Table 1 caption",
+      "importance": 7
+    },
+    {
+      "q": "Does the paper report an ensemble result for Penn Treebank language modelling, and if so what test perplexity does the paper give?",
+      "answer": "Yes. The paper reports that using 10 Variational LSTMs with MC dropout improves Zaremba et al.'s test set perplexity from 69.5 to 68.7.",
+      "quote": "Using 10 Variational LSTMs we improve [4]’s test set perplexity from 69.5 to 68.7 – obtaining identical perplexity to [4]’s experiment with 38 models.",
+      "section": "5.1 Language Modelling",
+      "importance": 8
+    },
+    {
+      "q": "Which Penn Treebank baselines and comparison models does the paper list in the language modelling table, and what test perplexities do these have?",
+      "answer": "The table lists non-regularized early stopping (medium 121.7, large 127.4), Moon et al. December 2015 (medium 97.0, large 118.7), Moon et al. December 2015 + emb dropout (medium 86.5, large 86.0), Zaremba et al. 2014 (medium 82.7, large 78.4), Variational tied weights (medium 79.7, large 75.0), Variational tied weights MC (medium 79.0, large 74.1), Variational untied weights (medium 79.7, large 75.2), and Variational untied weights MC (medium 78.6, large 73.4).",
+      "quote": "Single model perplexity (on test and validation sets) for the Penn Treebank language modelling task.",
+      "section": "5.1 Language Modelling, Table 1",
+      "importance": 9
+    },
+    {
+      "q": "How does the proposed model's 73.4 Penn Treebank test perplexity compare with the baselines and comparison models listed in the paper?",
+      "answer": "The 73.4 result is lower than all listed baselines and comparison models, including Zaremba et al. 2014's 78.4 large-model test perplexity, and the paper states this is the best single-model perplexity on Penn Treebank.",
+      "quote": "Test perplexity is reduced from 78.4 down to 73.4 (with MC dropout and untied weights).",
+      "section": "5.1 Language Modelling",
+      "importance": 9
+    }
+  ],
+  "search_queries": [
+    "dropout recurrent neural networks language modeling Penn Treebank perplexity",
+    "recurrent neural network regularization Penn Treebank benchmark",
+    "Penn Treebank language modeling baseline comparison recurrent dropout",
+    "dynamic evaluation cache pointer fine-tuning recurrent language model",
+    "ensemble recurrent language model Penn Treebank perplexity"
+  ]
+}

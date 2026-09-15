@@ -1,0 +1,11 @@
+Third-party research note: Recurrent Neural Network Regularization
+
+Key questions addressed: word-level test perplexity Penn Treebank regularized LSTM | Penn Treebank language modeling perplexity single model regularized LSTM | RNN regularization Penn Treebank perplexity comparison baselines | LSTM dropout Penn Treebank word-level perplexity | Penn Treebank perplexity model averaging regularized LSTM
+
+The paper reports word-level Penn Treebank test perplexity for its proposed regularized LSTM models as single models. The medium regularized LSTM reaches 82.7, and the large regularized LSTM reaches 78.4. These are the paper's own proposed models evaluated as single models.
+
+The paper reports model averaging of regularized LSTMs. It lists 2 medium regularized LSTMs at 77.0, 5 medium regularized LSTMs at 73.3, 10 medium regularized LSTMs at 72.0, 2 large regularized LSTMs at 73.6, 10 large regularized LSTMs at 69.5, and 38 large regularized LSTMs at 68.7. The paper does not report dynamic evaluation, cache/pointer, or fine-tuning settings for Penn Treebank perplexity.
+
+The paper lists single-model baseline Penn Treebank word-level test perplexities: Pascanu et al. 2013 at 107.5, Cheng et al. at 100.0, and a non-regularized LSTM at 114.5. The proposed medium regularized LSTM at 82.7 and large regularized LSTM at 78.4 are lower, meaning better, than all listed single-model baselines.
+
+For model averaging, the paper lists baseline results: Mikolov 2012 at 83.5, Cheng et al. at 80.6, 2 non-regularized LSTMs at 96.1, 5 non-regularized LSTMs at 84.1, and 10 non-regularized LSTMs at 80.0. The paper's averaged regularized LSTMs range from 77.0 for 2 medium regularized LSTMs to 68.7 for 38 large regularized LSTMs, lower than the listed averaged baselines.

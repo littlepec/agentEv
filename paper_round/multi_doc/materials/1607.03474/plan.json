@@ -1,0 +1,47 @@
+{
+  "paper_title": "Recurrent Highway Networks",
+  "sub_questions": [
+    {
+      "q": "What word-level test perplexity does the paper report on Penn Treebank for the paper's own proposed model?",
+      "answer": "The best reported Penn Treebank word-level test perplexity for the proposed model is 65.4 for Variational RHN + WT; the paper also reports 68.5 test perplexity for Variational RHN without WT.",
+      "quote": "For the best 10 layer model, reducing the weight decay further improves the results to 67.9/65.4 validation/test perplexity.",
+      "section": "5.2.1 Penn Treebank",
+      "importance": 10
+    },
+    {
+      "q": "Which variant and regularization setting of the proposed model achieves the paper's best Penn Treebank word-level test perplexity?",
+      "answer": "The best Penn Treebank result is Variational RHN + WT, using variational dropout and weight tying of input and output mappings; Table 1 lists it as 23M parameters with validation/test perplexity 67.9/65.4.",
+      "quote": "For the Penn Treebank word-level language modeling task, we report results both with and without weight-tying (WT) of input and output mappings for fair comparisons.",
+      "section": "5.2 Sequence Modeling / Regularization of RHNs",
+      "importance": 9
+    },
+    {
+      "q": "Does the paper report dynamic evaluation, cache/pointer, ensemble, or fine-tuning for the proposed model's Penn Treebank result?",
+      "answer": "No; the paper's best Penn Treebank result is a single model, and dynamic evaluation, cache/pointer, ensemble, or fine-tuning are not reported for the proposed model. Cache and pointer methods appear only as baselines, and ensembles are mentioned only in comparison.",
+      "quote": "RHNs outperform most single models as well as all previous ensembles",
+      "section": "5.2.1 Penn Treebank",
+      "importance": 8
+    },
+    {
+      "q": "How does the proposed model's best Penn Treebank test perplexity compare with the baselines the paper lists?",
+      "answer": "The proposed model's 65.4 test perplexity is better than all listed baselines except the Neural Architecture Search with base 8 + WT entries (64.0 and 62.4); it beats Variational LSTM+WT (73.2), Pointer Sentinel-LSTM (70.9), Variational LSTM+WT+augmented loss (68.5), and Neural Architecture Search with base 8 (67.9).",
+      "quote": "Solely the yet to be analyzed architecture found through reinforcement learning and hyperparamater search by Zoph & Le 2016 achieves better results.",
+      "section": "5.2.1 Penn Treebank",
+      "importance": 9
+    },
+    {
+      "q": "What baseline does the paper identify as directly comparable to the proposed model on Penn Treebank?",
+      "answer": "The paper identifies Variational LSTM+WT as the directly comparable baseline, differing only in network architecture and size.",
+      "quote": "The directly comparable baseline is Variational LSTM+WT, which only differs in network architecture and size from our models.",
+      "section": "5.2.1 Penn Treebank",
+      "importance": 7
+    }
+  ],
+  "search_queries": [
+    "Recurrent Highway Networks Penn Treebank word-level language modeling perplexity",
+    "Recurrent Highway Networks Penn Treebank comparison with baselines",
+    "Penn Treebank language model perplexity single model dynamic evaluation cache pointer ensemble fine-tuning",
+    "Recurrent Highway Networks variational dropout weight tying Penn Treebank",
+    "Recurrent Highway Networks test perplexity table Penn Treebank"
+  ]
+}

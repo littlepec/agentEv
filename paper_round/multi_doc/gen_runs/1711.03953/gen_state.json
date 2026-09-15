@@ -1,0 +1,43 @@
+{
+  "attempts": 2,
+  "history": [
+    {
+      "attempt": 1,
+      "sha256": "8b70b47d12513365827189c3400b437dd0a32eb613ef56636ccbe98e390056cf",
+      "problems": [
+        "numbers not found in paper: 3.41"
+      ],
+      "unmatched": [
+        "3.41"
+      ],
+      "words_body": 207
+    },
+    {
+      "attempt": 2,
+      "sha256": "a9bf2075385cdcba45356cf3a7f7025f9e3378c883d5cf2d0938c286baeb2a62",
+      "problems": [],
+      "unmatched": [],
+      "words_body": 209
+    },
+    {
+      "attempt": 1,
+      "sha256": "62e3cd582e7e536807d53ea99472f827f61f70dfbe07304427fe3d9e96f0817a",
+      "problems": [
+        "numbers not found in paper: 3.41"
+      ],
+      "unmatched": [
+        "3.41"
+      ],
+      "words_body": 216
+    },
+    {
+      "attempt": 2,
+      "sha256": "1af5cf07931388ad5ca1f642b23e491ce306af55a7fa971ebc83542048ff3a39",
+      "problems": [],
+      "unmatched": [],
+      "words_body": 233
+    }
+  ],
+  "thinking": "disabled",
+  "kept_attempt": 2
+}

@@ -1,0 +1,17 @@
+{
+  "target": "1708.02182",
+  "replacements": {
+    "57.30->53.30": 0,
+    "57.3->53.3": 2,
+    "total": 2
+  },
+  "residual_old_occurrences": 0,
+  "kept_untouched": {
+    "52.8_occurrences_in_L": 2,
+    "52.8_occurrences_in_Lprime": 2
+  },
+  "L_sha256": "519cff86545055b35b5d6a12ebc3af119f27cfef2a1e9f8678b36cb0a3ba90b7",
+  "Lprime_sha256": "ee9bd0c24ab00469897baabe7cb0751d6ace5180d6b1e2e302469411fef252d4",
+  "diff": "--- L.txt\n+++ Lprime.txt\n@@ -4,3 +4,3 @@\n \n-The paper \"Regularizing and Optimizing LSTM Language Models\" proposes AWD-LSTM, an abbreviation for ASGD Weight-Dropped LSTM. The paper reports a word-level Penn Treebank test perplexity of 57.3 for AWD-LSTM, a 3-layer LSTM with tied weights, as a single model without cache/pointer. It also reports 65.8 on WikiText-2. This result includes the fine-tuning step. The Table 1 caption states \"Single model perplexity on validation and test sets for the Penn Treebank language modeling task.\" Table 4 lists the no-fine-tuning ablation at 58.8 test perplexity on Penn Treebank, and the paper states that removal of the fine-tuning step degrades performance.\n+The paper \"Regularizing and Optimizing LSTM Language Models\" proposes AWD-LSTM, an abbreviation for ASGD Weight-Dropped LSTM. The paper reports a word-level Penn Treebank test perplexity of 53.3 for AWD-LSTM, a 3-layer LSTM with tied weights, as a single model without cache/pointer. It also reports 65.8 on WikiText-2. This result includes the fine-tuning step. The Table 1 caption states \"Single model perplexity on validation and test sets for the Penn Treebank language modeling task.\" Table 4 lists the no-fine-tuning ablation at 58.8 test perplexity on Penn Treebank, and the paper states that removal of the fine-tuning step degrades performance.\n \n@@ -8,2 +8,2 @@\n \n-The paper states that its vanilla LSTM improves the state of the art by approximately 1 unit on Penn Treebank and 0.1 units on WikiText-2. In Table 1, AWD-LSTM's 57.3 beats the best listed baseline, Melis et al. 2017 4-layer skip connection LSTM (tied) at 58.3. Many other baselines are higher. With the continuous cache pointer, the 52.8 Penn Treebank test perplexity is even lower.\n+The paper states that its vanilla LSTM improves the state of the art by approximately 1 unit on Penn Treebank and 0.1 units on WikiText-2. In Table 1, AWD-LSTM's 53.3 beats the best listed baseline, Melis et al. 2017 4-layer skip connection LSTM (tied) at 58.3. Many other baselines are higher. With the continuous cache pointer, the 52.8 Penn Treebank test perplexity is even lower.\n",
+  "created": "2026-09-15T20:03:34"
+}

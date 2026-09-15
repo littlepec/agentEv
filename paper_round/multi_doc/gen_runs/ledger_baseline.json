@@ -1,0 +1,19 @@
+{
+  "line_cost_at_prep_start": 7.6099571,
+  "line_calls_at_prep_start": 694,
+  "sub_cap_usd": 0.3,
+  "prep_call_cap": 30,
+  "line_cap_usd": 10.0,
+  "exp_key": "evidence-package-pilot-multidoc-prep",
+  "created": "2026-09-15T19:42:24",
+  "sub_cap_revisions": [
+    {
+      "from_usd": 0.3,
+      "to_usd": 0.4,
+      "from_call_cap": 30,
+      "to_call_cap": 40,
+      "reason": "technical-failure adjustment (planner truncation by reasoning tokens); main-session decision, baseline unchanged",
+      "at": "2026-09-15T20:08:24"
+    }
+  ]
+}

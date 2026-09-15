@@ -1,0 +1,12 @@
+{
+  "attempts": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "sha256": "8bbb917c44a553c8fedd5796aaaf3fe12aad0efc4e0c09e2017b25bc668fc5e2",
+      "problems": [],
+      "unmatched": [],
+      "words_body": 255
+    }
+  ]
+}

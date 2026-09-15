@@ -1,0 +1,47 @@
+{
+  "paper_title": "Breaking the Softmax Bottleneck: A High-Rank RNN Language Model",
+  "sub_questions": [
+    {
+      "q": "What word-level test perplexity on Penn Treebank does the paper report for its proposed model without dynamic evaluation?",
+      "answer": "The paper reports a test perplexity of 55.97 for AWD-LSTM-MoS without finetune and 54.44 for AWD-LSTM-MoS with finetune, both without dynamic evaluation.",
+      "quote": "Ours – AWD-LSTM-MoS w/o finetune 22M 58.08 55.97; Ours – AWD-LSTM-MoS 22M 56.54 54.44",
+      "section": "Table 1",
+      "importance": 8
+    },
+    {
+      "q": "What word-level test perplexity on Penn Treebank does the paper report for its proposed model with dynamic evaluation?",
+      "answer": "The paper reports a test perplexity of 47.69 for AWD-LSTM-MoS with dynamic evaluation.",
+      "quote": "Ours – AWD-LSTM-MoS + dynamic evaluation † 22M 48.33 47.69",
+      "section": "Table 1",
+      "importance": 10
+    },
+    {
+      "q": "Does the paper report results for its proposed model on Penn Treebank using cache/pointer or ensemble methods?",
+      "answer": "No, the paper does not report results for its proposed model using cache/pointer or ensemble methods on Penn Treebank; it only reports results with and without dynamic evaluation and finetuning.",
+      "quote": "Ours – AWD-LSTM-MoS + dynamic evaluation † 22M 48.33 47.69",
+      "section": "Table 1",
+      "importance": 7
+    },
+    {
+      "q": "What baseline test perplexities on Penn Treebank does the paper list for comparison?",
+      "answer": "The paper lists baseline test perplexities on Penn Treebank including 92.0 (RNN-LDA + KN-5 + cache), 82.7 (LSTM), 78.6 (Variational LSTM), 78.9 (CharCNN), 70.9 (Pointer Sentinel-LSTM), 72.1 (LSTM + continuous cache pointer), 73.2 (Tied Variational LSTM + augmented loss), 65.4 (Variational RHN), 64.0 (NAS Cell), 58.3 (2-layer skip connection LSTM), 58.8 (AWD-LSTM w/o finetune), 57.3 (AWD-LSTM), 52.8 (AWD-LSTM + continuous cache pointer), and 51.1 (AWD-LSTM + dynamic evaluation).",
+      "quote": "Mikolov & Zweig 2012 – RNN-LDA + KN-5 + cache 9M‡ - 92.0; ... Krause et al. 2017 – AWD-LSTM + dynamic evaluation † 24M 51.6 51.1",
+      "section": "Table 1",
+      "importance": 9
+    },
+    {
+      "q": "How does the proposed model's Penn Treebank test perplexity compare to the baselines listed in the paper?",
+      "answer": "The proposed model's test perplexity of 47.69 (with dynamic evaluation) is lower than all listed baselines, including the best baseline of 51.1 (AWD-LSTM + dynamic evaluation), improving by 3.41 points. Without dynamic evaluation, the proposed model achieves 54.44 (with finetune) and 55.97 (without finetune), which are lower than corresponding baselines like AWD-LSTM (57.3) and AWD-LSTM w/o finetune (58.8).",
+      "quote": "With a comparable number of parameters, MoS outperforms all baselines with or without dynamic evaluation, and substantially improves over the current state of the art, by up to 3.6 points in perplexity.",
+      "section": "Section 3.1",
+      "importance": 10
+    }
+  ],
+  "search_queries": [
+    "Penn Treebank word-level test perplexity proposed model",
+    "dynamic evaluation Penn Treebank perplexity comparison",
+    "single model perplexity Penn Treebank baselines",
+    "Mixture of Softmaxes Penn Treebank results",
+    "high-rank RNN language model Penn Treebank perplexity"
+  ]
+}

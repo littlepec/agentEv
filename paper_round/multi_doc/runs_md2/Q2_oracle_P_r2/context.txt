@@ -1,0 +1,331 @@
+Source: 1409.2329_note.txt
+Title: 
+Content: Third-party research note: Recurrent Neural Network Regularization
+
+Key questions addressed: word-level test perplexity Penn Treebank regularized LSTM | Penn Treebank language modeling perplexity single model regularized LSTM | RNN regularization Penn Treebank perplexity comparison baselines | LSTM dropout Penn Treebank word-level perplexity | Penn Treebank perplexity model averaging regularized LSTM
+
+The paper reports word-level Penn Treebank test perplexity for its proposed regularized LSTM models as single models. The medium regularized LSTM reaches 82.7, and the large regularized LSTM reaches 78.4. These are the paper's own proposed models evaluated as single models.
+
+Source: 1409.2329_note.txt
+Title: 
+Content: The paper reports model averaging of regularized LSTMs. It lists 2 medium regularized LSTMs at 77.0, 5 medium regularized LSTMs at 73.3, 10 medium regularized LSTMs at 72.0, 2 large regularized LSTMs at 73.6, 10 large regularized LSTMs at 69.5, and 38 large regularized LSTMs at 68.7. The paper does not report dynamic evaluation, cache/pointer, or fine-tuning settings for Penn Treebank perplexity.
+
+The paper lists single-model baseline Penn Treebank word-level test perplexities: Pascanu et al. 2013 at 107.5, Cheng et al. at 100.0, and a non-regularized LSTM at 114.5. The proposed medium regularized LSTM at 82.7 and large regularized LSTM at 78.4 are lower, meaning better, than all listed single-model baselines.
+
+Source: 1508.06615.txt
+Title: 
+Content: Experimental Setup 
+
+ As is standard in language modeling, we use perplexity ( P ​ P ​ L PPL ) to evaluate the performance of our models. Perplexity of a model over a sequence
+ [ w 1 , … , w T ] [w_{1},\dots,w_{T}] is given by 
+
+ P ​ P ​ L = exp ​ ( N ​ L ​ L T ) PPL=\mbox{exp}\Big(\frac{NLL}{T}\Big) 
+
+ (9) 
+ where N ​ L ​ L NLL is calculated over the test set. We test the model on corpora of varying languages and sizes
+(statistics available in Table  1 ). 
+
+ We conduct hyperparameter search, model introspection, and ablation studies on the English Penn Treebank (PTB) [ 1993 ] , utilizing
+the standard training (0-20), validation (21-22), and test (23-24) splits along with pre-processing by ? ( ? ).
+With approximately 1 1 m tokens and | 𝒱 | = 10 |\mathcal{V}|=10 k, this version has been extensively used by the language modeling
+community and is publicly available. 6 6 6 http://www.fit.vutbr.cz/˜imikolov/rnnlm/
+
+Source: 1508.06615_note.txt
+Title: 
+Content: Third-party research note: Character-Aware Neural Language Models
+
+Key questions addressed: Character-Aware Neural Language Models Penn Treebank word-level test perplexity | character CNN highway LSTM language model Penn Treebank single model results | language model Penn Treebank dynamic evaluation cache pointer ensemble fine-tuning reported | character-aware language model compare word-level LSTM and neural baselines Penn Treebank | Penn Treebank perplexity proposed model versus baselines parameter count character-level inputs
+
+Source: 1508.06615_note.txt
+Title: 
+Content: The paper reports word-level Penn Treebank test perplexity for the proposed character-aware LSTM language model. LSTM-Char-Large attains 78.9; LSTM-Char-Small attains 92.3. Predictions are made at the word level. These are single-model results. The paper excludes ensembles: "While lower perplexities have been reported with model ensembles [2012], we do not include them here as they are not comparable to the current work." No dynamic evaluation, cache/pointer, or fine-tuning Penn Treebank results appear.
+
+Source: 1512.05287.txt
+Title: 
+Content: − - 
+ 78.6 ± 0.1 \mathbf{78.6\pm 0.1} 
+ − - 
+ − - 
+ 73.4 ± 0.0 \mathbf{73.4\pm 0.0} 
+ − - Table 1: Single model perplexity (on test and validation sets) for the Penn Treebank language modelling task. Two model sizes are compared (a medium and a large LSTM, following [ 4 ] ’s setup), with number of processed words per second (WPS) reported.
+Both dropout approximation and MC dropout are given for the test set with the Variational model.
+A common approach for regularisation
+is to reduce model complexity (necessary with the non-regularised LSTM).
+With the Variational models however, a significant reduction in perplexity is achieved by using larger models.
+
+Source: 1512.05287_note.txt
+Title: 
+Content: The paper reports 73.4 test perplexity for the proposed Variational LSTM on Penn Treebank. The paper states test perplexity is reduced from 78.4 down to 73.4 with MC dropout and untied weights. This 73.4 result is a single-model result for the large Variational LSTM with untied weights and MC dropout at test time. The paper states that to the best of its knowledge these are currently the best single model perplexities on the Penn Treebank. The paper text does not report dynamic evaluation, cache/pointer, or fine-tuning for the Penn Treebank result. The Table 1 caption identifies the results as single model perplexity on test and validation sets for the Penn Treebank language modelling task.
+
+The paper reports an ensemble result. Using 10 Variational LSTMs with MC dropout improves Zaremba et al.'s test set perplexity from 69.5 to 68.7, obtaining identical perplexity to Zaremba et al.'s experiment with 38 models.
+
+Source: 1607.03474.txt
+Title: 
+Content: 5.2.1 Penn Treebank 
+
+ To examine the effect of recurrence depth we train RHNs with fixed total parameters (32 M) and recurrence depths ranging from 1 to 10 for word level language modeling on the Penn TreeBank dataset ( Marcus et al. 1993 ) preprocessed by Mikolov et al. 2010 .
+The same hyperparameters are used to train each model.
+For each depth, we show the test set perplexity of the best model based on performance on the validation set in Figure 5 (a).
+Additionally we also report the results for each model trained with WT regularization.
+In both cases the test score improves as the recurrence depth increases from 1 to 10.
+For the best 10 layer model, reducing the weight decay further improves the results to 67.9/65.4 validation/test perplexity.
+
+Source: 1607.03474_note.txt
+Title: 
+Content: Third-party research note: Recurrent Highway Networks
+
+Key questions addressed: Recurrent Highway Networks Penn Treebank word-level language modeling perplexity | Recurrent Highway Networks Penn Treebank comparison with baselines | Penn Treebank language model perplexity single model dynamic evaluation cache pointer ensemble fine-tuning | Recurrent Highway Networks variational dropout weight tying Penn Treebank | Recurrent Highway Networks test perplexity table Penn Treebank
+
+Source: 1607.03474_note.txt
+Title: 
+Content: The paper reports its best Penn Treebank word-level test perplexity for the proposed model as 65.4 for Variational RHN + WT. The paper also reports 68.5 test perplexity for Variational RHN without WT. The best 10 layer model with reduced weight decay improves to 67.9/65.4 validation/test perplexity. Table 1 lists Variational RHN + WT as 23M parameters with validation/test perplexity 67.9/65.4. This setting uses variational dropout and weight tying of input and output mappings. The paper reports the Penn Treebank word-level language modeling task results both with and without weight-tying (WT) of input and output mappings for fair comparisons.
+
+The best Penn Treebank result is a single model. Dynamic evaluation, cache/pointer, ensemble, and fine-tuning are not reported for the proposed model. Cache and pointer methods appear only as baselines, and ensembles are mentioned only in comparison. The paper states that RHNs outperform most single models as well as all previous ensembles.
+
+Source: 1608.05859_note.txt
+Title: 
+Content: Third-party research note: Using the Output Embedding to Improve Language Models
+
+Key questions addressed: weight tying output embedding language model Penn Treebank perplexity | Using the Output Embedding to Improve Language Models Penn Treebank results | tied input output embeddings neural network language model test perplexity | projection regularization weight tying Penn Treebank perplexity | Press Wolf output embedding improve language models PTB baseline comparison
+
+The paper reports word-level Penn Treebank test perplexity for its proposed weight-tied neural network language models in single-model settings. The large NNLM with weight tying (Large + Weight Tying) reaches 74.3 test perplexity. The small NNLM with weight tying and projection regularization (Small + WT + PR) reaches 100.9 test perplexity. Both numbers come from the paper's neural network language model experiments and are reported without dynamic evaluation, cache/pointer, ensemble, or fine-tuning.
+
+Source: 1608.05859_note.txt
+Title: 
+Content: The paper's comparison baselines include the large NNLM of Zaremba et al. (2014) at 78.4 test perplexity and the small NNLM at 114.5 test perplexity. The proposed large weight-tied model improves on the large baseline, and the proposed small weight-tied plus projection-regularized model improves on the small baseline.
+
+The paper also lists baseline models without dropout in its comparison table: KN 5-gram 141, RNN 123, LSTM 117, Stack RNN 110, FOFE-FNN 108, Noisy LSTM 108.0, and Deep RNN 107.5. These entries provide the broader non-dropout comparison context for the reported Penn Treebank perplexities.
+
+The paper does not report dynamic evaluation, cache/pointer, ensemble, or fine-tuning settings for its Penn Treebank word-level perplexity results. The reported figures are single-model results.
+
+Source: 1611.01462.txt
+Title: 
+Content: Small 
+
+ (200 units) VD-LSTM 
+ 159.1 
+ 148.0 
+ 163.19 
+ 148.6 
+ VD-LSTM+AL 
+ 153.0 
+ 142.5 
+ 156.4 
+ 143.7 
+ VD-LSTM+RE 
+ 152.4 
+ 141.9 
+ 152.5 
+ 140.9 
+ VD-LSTM+REAL 
+ 149.3 
+ 140.6 
+ 150.5 
+ 138.4 Table 3: Comparison of our work to previous state of the art on word-level validation and test perplexities on the Penn Treebank corpus. Models using our framework significantly outperform other models. 
+
+ Model 
+ Parameters 
+ Validation
+
+Source: 1706.02222_note.txt
+Title: 
+Content: The paper proposes GRURNTN and LSTMRNTN, described as a Gated Recurrent Unit Recurrent Neural Tensor Network and a Long-Short Term Memory Recurrent Neural Tensor Network. For word-level Penn Treebank language modeling, Table II reports test perplexity 87.38 for GRURNTN and 96.97 for LSTMRNTN. These proposed results are reported as individual models. The paper states that baseline and proposed model experiments did not use dynamic evaluation. No cache/pointer, ensemble, or fine-tuning setting is reported for the proposed word-level results.
+
+The paper lists baseline and published word-level Penn Treebank test perplexities: GRURNN (97.78), LSTMRNN (108.26), N-Gram (141), RNNLM without dynamic evaluation (124.7), RNNLM with dynamic evaluation (123.2), SCRNN (115), sRNN (110.0), and DOT(S)-RNN (107.5). The baseline GRURNN and LSTMRNN are the paper's own baselines.
+
+Source: 1707.05589_note.txt
+Title: 
+Content: Third-party research note: On the State of the Art of Evaluation in Neural Language Models
+
+Key questions addressed: Penn Treebank word-level test perplexity LSTM language model | state of the art evaluation neural language models Penn Treebank | single model perplexity Penn Treebank without dynamic evaluation or cache | comparison of LSTM and RHN on Penn Treebank perplexity | Penn Treebank perplexity baselines neural language models
+
+The paper reports a best word-level test perplexity of 58.3 on Penn Treebank for its own proposed model, a 4-layer LSTM with 24M parameters. The authors state that at 24M, all depths obtain very similar results, reaching 58.3 at depth 4. This result is reported for a single model, without dynamic evaluation, cache/pointer, ensemble, or fine-tuning. The paper explicitly refrains from including techniques that are known to push perplexities even lower, because its aim is strictly to do better model comparisons for the architectures under study.
+
+Source: 1711.03953_note.txt
+Title: 
+Content: Third-party research note: Breaking the Softmax Bottleneck: A High-Rank RNN Language Model
+
+Key questions addressed: Penn Treebank word-level test perplexity proposed model | dynamic evaluation Penn Treebank perplexity comparison | single model perplexity Penn Treebank baselines | Mixture of Softmaxes Penn Treebank results | high-rank RNN language model Penn Treebank perplexity
+
+The paper reports word-level Penn Treebank test perplexity for its proposed model, AWD-LSTM-MoS, in single-model settings without dynamic evaluation. Table 1 lists 55.97 for AWD-LSTM-MoS without finetune and 54.44 for AWD-LSTM-MoS with finetune. With dynamic evaluation, the paper reports 47.69 for AWD-LSTM-MoS + dynamic evaluation. The paper does not report results for its proposed model on Penn Treebank using cache/pointer or ensemble methods; it reports results with and without dynamic evaluation and finetuning.
+
+Source: 1708.02182.txt
+Title: 
+Content: Abstract 
+ Recurrent neural networks (RNNs), such as long short-term memory networks (LSTMs), serve as a fundamental building block for many sequence learning tasks, including machine translation, language modeling, and question answering.
+In this paper, we consider the specific problem of word-level language modeling and investigate strategies for regularizing and optimizing LSTM-based models.
+We propose the weight-dropped LSTM which uses DropConnect on hidden-to-hidden weights as a form of recurrent regularization.
+Further, we introduce NT-ASGD, a variant of the averaged stochastic gradient method, wherein the averaging trigger is determined using a non-monotonic condition as opposed to being tuned by the user.
+Using these and other regularization strategies, we achieve state-of-the-art word level perplexities on two data sets: 57.3 on Penn Treebank and 65.8 on WikiText-2.
+
+Source: 1708.02182.txt
+Title: 
+Content: Kim et al. 2016 - CharCNN 
+ 19M 
+ − - 
+ 78.9 78.9 
+
+ Merity et al. 2016 - Pointer Sentinel-LSTM 
+ 21M 
+ 72.4 72.4 
+ 70.9 70.9 
+
+ Grave et al. 2016 - LSTM 
+ − - 
+ − - 
+ 82.3 82.3 
+
+ Grave et al. 2016 - LSTM + continuous cache pointer 
+ − - 
+ − - 
+ 72.1 72.1 
+
+ Inan et al. 2016 - Variational LSTM (tied) + augmented loss 
+ 24M 
+ 75.7 75.7 
+ 73.2 73.2 
+
+ Inan et al. 2016 - Variational LSTM (tied) + augmented loss 
+ 51M 
+ 71.1 71.1 
+ 68.5 68.5 
+
+ Zilly et al. 2016 - Variational RHN (tied) 
+ 23M 
+ 67.9 67.9 
+ 65.4 65.4 
+
+ Zoph & Le 2016 - NAS Cell (tied) 
+ 25M 
+ − - 
+ 64.0 64.0 
+
+ Zoph & Le 2016 - NAS Cell (tied) 
+ 54M 
+ − - 
+ 62.4 62.4 
+
+ Melis et al. 2017 - 4-layer skip connection LSTM (tied) 
+ 24M 
+ 60.9 60.9 
+ 58.3 58.3 
+
+ AWD-LSTM - 3-layer LSTM (tied) 
+ 24M 
+ 60.0 60.0 
+ 57.3 57.3
+
+Source: 1708.02182.txt
+Title: 
+Content: AWD-LSTM - 3-layer LSTM (tied) 
+ 24M 
+ 60.0 60.0 
+ 57.3 57.3 
+
+ AWD-LSTM - 3-layer LSTM (tied) + continuous cache pointer 
+ 24M 
+ 53.9 53.9 
+ 52.8 52.8 Table 1: 
+Single model perplexity on validation and test sets for the Penn Treebank language modeling task.
+Parameter numbers with ‡ \ddagger are estimates based upon our understanding of the model and with reference to Merity et al. 2016 .
+Models noting tied use weight tying on the embedding and softmax weights.
+Our model, AWD-LSTM, stands for ASGD Weight-Dropped LSTM.
+
+Source: 1708.02182.txt
+Title: 
+Content: 8 Model Ablation Analysis 
+
+ PTB 
+ WT2 
+ Model 
+ Validation 
+ Test 
+ Validation 
+ Test 
+ AWD-LSTM (tied) 
+ 60.0 60.0 
+ 57.3 57.3 
+ 68.6 
+ 65.8 
+ – fine-tuning 
+ 60.7 60.7 
+ 58.8 58.8 
+ 69.1 69.1 
+ 66.0 66.0 
+ – NT-ASGD 
+ 66.3 
+ 63.7 
+ 73.3 
+ 69.7 
+ – variable sequence lengths 
+ 61.3 
+ 58.9 
+ 69.3 
+ 66.2 
+ – embedding dropout 
+ 65.1 
+ 62.7 
+ 71.1 
+ 68.1 
+ – weight decay 
+ 63.7 
+ 61.0 
+ 71.9 
+ 68.7 
+ – AR/TAR 
+ 62.7 
+ 60.3 
+ 73.2 
+ 70.1 
+ – full sized embedding 
+ 68.0 
+ 65.6 
+ 73.7 
+ 70.7 
+ – weight-dropping 
+ 71.1 
+ 68.9 
+ 78.4 
+ 74.9 Table 4: 
+Model ablations for our best LSTM models reporting results over the validation and test set on Penn Treebank and WikiText-2.
+Ablations are split into optimization and regularization variants, sorted according to the achieved validation perplexity on WikiText-2. Source: 1607.03474.txt
+Title: 
+Content: Penn Treebank
+
+Source: 1611.01462_note.txt
+Title: 
+Content: The paper reports VD-RHN+RE (Zilly et al. 2016), trained with reused embeddings following the paper's work, achieves validation perplexity 68.1 and test perplexity 66.0 on Penn Treebank. The paper describes this as best overall. The Penn Treebank baselines involving cache, pointer, or ensemble listed by the paper are RNN+LDA+KN-5+Cache with test perplexity 92.0, Pointer Sentinel-LSTM(medium) with 70.9, 38 Large LSTMs with 68.7, and 10 Large VD-LSTMs with 68.7.
+
+Source: 1611.01578_note.txt
+Title: 
+Content: The paper reports 62.4 test perplexity on Penn Treebank for the best Neural Architecture Search model. Table 2 reports 64.0 and 67.9 for other Neural Architecture Search configurations. The 62.4 result is Neural Architecture Search with base 8 and shared embeddings, 54M parameters. The paper also reports Neural Architecture Search with base 8 at 67.9 with 32M parameters and Neural Architecture Search with base 8 and shared embeddings at 64.0 with 25M parameters. These numbers are single model perplexity on the test set of the Penn Treebank language modeling task. The paper does not report dynamic evaluation, cache/pointer, ensemble, or fine-tuning for the Neural Architecture Search model on Penn Treebank. Cache/pointer appears only among baseline labels such as Pointer Sentinel-LSTM.
+
+Source: 1611.01578_note.txt
+Title: 
+Content: The best listed baseline in the paper's Penn Treebank comparison table is Zilly et al. 2016 - Variational RHN, shared embeddings, with 66.0 test perplexity and 24M parameters. The best Neural Architecture Search result, 62.4 test perplexity, is 3.6 perplexity better than the previous state-of-the-art baseline, Zilly et al. 2016 Variational RHN with shared embeddings at 66.0. The paper states that the models found by Neural Architecture Search outperform other state-of-the-art models on this dataset, and one of its best models achieves a gain of almost 3.6 perplexity.
+
+This comparison uses the paper's single-model Penn Treebank evaluation. The paper reports no dynamic evaluation, cache/pointer, ensemble, or fine-tuning result for the Neural Architecture Search model on Penn Treebank. The reported 62.4, 64.0, and 67.9 are Neural Architecture Search configurations, and the lowest listed baseline remains 66.0.
+
+Source: 1706.02222_note.txt
+Title: 
+Content: Both proposed models outperform their baselines. GRURNTN reduces perplexity from 97.78 to 87.38 over GRURNN, a 10.4 absolute and 10.63% relative reduction. LSTMRNTN reduces perplexity from 108.26 to 96.97 over LSTMRNN, an 11.29 absolute and 10.42% relative reduction. The paper states that GRURNTN outperforms all baseline models and the other listed models by a large margin. LSTMRNTN improves the LSTMRNN model and its performance closely resembles the baseline GRURNN. The GRURNTN result is the strongest proposed word-level Penn Treebank perplexity in the table.
+
+Source: 1708.02182_note.txt
+Title: 
+Content: For the proposed model augmented with a continuous cache pointer, the paper reports an even lower Penn Treebank test perplexity of 52.8 and 52.0 on WikiText-2. The Penn Treebank table is explicitly captioned as single model perplexity on validation and test sets. The paper reports a continuous cache pointer variant, and fine-tuning is part of the training procedure. The provided paper text does not report dynamic evaluation or ensemble results.
+
+The paper states that its vanilla LSTM improves the state of the art by approximately 1 unit on Penn Treebank and 0.1 units on WikiText-2. In Table 1, AWD-LSTM's 53.3 beats the best listed baseline, Melis et al. 2017 4-layer skip connection LSTM (tied) at 58.3. Many other baselines are higher. With the continuous cache pointer, the 52.8 Penn Treebank test perplexity is even lower. Source: 1611.01462_note.txt
+Title: 
+Content: Third-party research note: Tying Word Vectors and Word Classifiers: A Loss Framework for Language Modeling
+
+Key questions addressed: Penn Treebank word-level test perplexity tying word vectors and word classifiers | loss framework for language modeling input embedding output projection Penn Treebank results | augmented loss reused embeddings LSTM Penn Treebank perplexity comparison | single model versus ensemble cache pointer Penn Treebank language modeling perplexity | Inan Khosravi Socher language modeling Penn Treebank test perplexity
+
+Source: 1611.01578_note.txt
+Title: 
+Content: Third-party research note: Neural Architecture Search with Reinforcement Learning
+
+Key questions addressed: Neural Architecture Search Penn Treebank word-level language modeling perplexity | Penn Treebank recurrent cell architecture search baselines comparison | Penn Treebank language modeling evaluation protocol ensemble dynamic evaluation cache pointer | Neural Architecture Search language model test perplexity previous state of the art
+
+Source: 1708.02182_note.txt
+Title: 
+Content: The paper "Regularizing and Optimizing LSTM Language Models" proposes AWD-LSTM, an abbreviation for ASGD Weight-Dropped LSTM. The paper reports a word-level Penn Treebank test perplexity of 53.3 for AWD-LSTM, a 3-layer LSTM with tied weights, as a single model without cache/pointer. It also reports 65.8 on WikiText-2. This result includes the fine-tuning step. The Table 1 caption states "Single model perplexity on validation and test sets for the Penn Treebank language modeling task." Table 4 lists the no-fine-tuning ablation at 58.8 test perplexity on Penn Treebank, and the paper states that removal of the fine-tuning step degrades performance.

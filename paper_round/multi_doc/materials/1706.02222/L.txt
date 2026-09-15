@@ -1,0 +1,9 @@
+Third-party research note: Gated Recurrent Neural Tensor Network
+
+Key questions addressed: Gated Recurrent Neural Tensor Network Penn Treebank word-level language modeling perplexity | gated recurrent neural tensor network baseline comparison language modeling | recurrent neural tensor network dynamic evaluation ensemble fine-tuning language model | Penn Treebank word-level test perplexity proposed recurrent neural network baselines | tensor recurrent neural network language model Penn Treebank perplexity table
+
+The paper proposes GRURNTN and LSTMRNTN, described as a Gated Recurrent Unit Recurrent Neural Tensor Network and a Long-Short Term Memory Recurrent Neural Tensor Network. For word-level Penn Treebank language modeling, Table II reports test perplexity 87.38 for GRURNTN and 96.97 for LSTMRNTN. These proposed results are reported as individual models. The paper states that baseline and proposed model experiments did not use dynamic evaluation. No cache/pointer, ensemble, or fine-tuning setting is reported for the proposed word-level results.
+
+The paper lists baseline and published word-level Penn Treebank test perplexities: GRURNN (97.78), LSTMRNN (108.26), N-Gram (141), RNNLM without dynamic evaluation (124.7), RNNLM with dynamic evaluation (123.2), SCRNN (115), sRNN (110.0), and DOT(S)-RNN (107.5). The baseline GRURNN and LSTMRNN are the paper's own baselines.
+
+Both proposed models outperform their baselines. GRURNTN reduces perplexity from 97.78 to 87.38 over GRURNN, a 10.4 absolute and 10.63% relative reduction. LSTMRNTN reduces perplexity from 108.26 to 96.97 over LSTMRNN, an 11.29 absolute and 10.42% relative reduction. The paper states that GRURNTN outperforms all baseline models and the other listed models by a large margin. LSTMRNTN improves the LSTMRNN model and its performance closely resembles the baseline GRURNN. The GRURNTN result is the strongest proposed word-level Penn Treebank perplexity in the table.

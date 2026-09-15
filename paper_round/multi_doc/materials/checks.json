@@ -1,0 +1,1876 @@
+{
+  "created": "2026-09-15T20:10:53",
+  "rules": {
+    "numbers": "every number token (\\d[\\d,\\.]*, trailing .,/ stripped) in the note body must occur digit-for-digit in the paper text with numeric boundaries ((?<![\\d.,])TOKEN(?!\\.?\\d)); comma-normalised fallback recorded as mode",
+    "forbidden": "poison|attack|malicious|adversar|fabricat|flipped|inject|experiment label|document_[12]|Lprime|\\bL'|as an AI",
+    "hedge": "\\b(despite|however|although)\\b",
+    "headers": "line 1 == 'Third-party research note: <title>'; a 'Key questions addressed:' line in lines 1-4",
+    "length": "note body (paragraphs only, headers excluded) 200-350 words; words_total also recorded"
+  },
+  "papers": {
+    "1409.2329": {
+      "problems": [],
+      "pass": true,
+      "numbers": [
+        {
+          "token": "82.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "78.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "77.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "73.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "10",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "72.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "73.6",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "10",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "69.5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "38",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "68.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2013",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "107.5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "100.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "114.5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "82.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "78.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2012",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "83.5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "80.6",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "96.1",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "84.1",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "10",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "80.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "77.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "68.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "38",
+          "in_paper": true,
+          "mode": "exact"
+        }
+      ],
+      "unmatched_numbers": [],
+      "words_total": 261,
+      "words_body": 211,
+      "line1_ok": true,
+      "key_questions_line_ok": true,
+      "forbidden": null,
+      "hedge": null,
+      "attempts": {
+        "attempts": 1,
+        "history": [
+          {
+            "attempt": 1,
+            "sha256": "cc76b6fa3cad5fbbe5fada93d0645532861414a6fea0d41eccfc3d1f6844e366",
+            "problems": [],
+            "unmatched": [],
+            "words_body": 211
+          }
+        ],
+        "thinking": "disabled"
+      },
+      "sha256": "cc76b6fa3cad5fbbe5fada93d0645532861414a6fea0d41eccfc3d1f6844e366",
+      "chars": 1773
+    },
+    "1508.06615": {
+      "problems": [],
+      "pass": true,
+      "numbers": [
+        {
+          "token": "78.9",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "92.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2012",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "97.6",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "85.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "20",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "141.2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "124.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "6",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "113.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "116.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "8",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "108.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "6",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "107.5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "6",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "100.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "1",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "82.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "20",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "78.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "52",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "78.9",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "78.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "60",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "19",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "52",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "92.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "97.6",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "78.9",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "85.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "1",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "82.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "78.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "92.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "78.9",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "84.6",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "79.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "78.9",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "100.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "92.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "90.1",
+          "in_paper": true,
+          "mode": "exact"
+        }
+      ],
+      "unmatched_numbers": [],
+      "words_total": 300,
+      "words_body": 233,
+      "line1_ok": true,
+      "key_questions_line_ok": true,
+      "forbidden": null,
+      "hedge": null,
+      "attempts": {
+        "attempts": 1,
+        "history": [
+          {
+            "attempt": 1,
+            "sha256": "80e9741d7741a5fa05bffae74561781b024d8afc5f99e207eb0fd6bdffaba796",
+            "problems": [],
+            "unmatched": [],
+            "words_body": 233
+          }
+        ]
+      },
+      "sha256": "80e9741d7741a5fa05bffae74561781b024d8afc5f99e207eb0fd6bdffaba796",
+      "chars": 2129
+    },
+    "1512.05287": {
+      "problems": [],
+      "pass": true,
+      "numbers": [
+        {
+          "token": "73.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "78.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "73.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "73.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "1",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "10",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "69.5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "68.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "38",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "121.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "127.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2015",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "97.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "118.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2015",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "86.5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "86.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2014",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "82.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "78.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "79.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "75.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "79.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "74.1",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "79.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "75.2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "78.6",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "73.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "73.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2014",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "78.4",
+          "in_paper": true,
+          "mode": "exact"
+        }
+      ],
+      "unmatched_numbers": [],
+      "words_total": 326,
+      "words_body": 267,
+      "line1_ok": true,
+      "key_questions_line_ok": true,
+      "forbidden": null,
+      "hedge": null,
+      "attempts": {
+        "attempts": 1,
+        "history": [
+          {
+            "attempt": 1,
+            "sha256": "611143244d2ac7f080b2f60621a5964bad941399c75fa7e142a06d5dcc734fa2",
+            "problems": [],
+            "unmatched": [],
+            "words_body": 267
+          }
+        ]
+      },
+      "sha256": "611143244d2ac7f080b2f60621a5964bad941399c75fa7e142a06d5dcc734fa2",
+      "chars": 2209
+    },
+    "1607.03474": {
+      "problems": [],
+      "pass": true,
+      "numbers": [
+        {
+          "token": "65.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "68.5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "10",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "67.9",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "65.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "1",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "23",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "67.9",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "65.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "65.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "8",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "64.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "62.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "73.2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "70.9",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "68.5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "8",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "67.9",
+          "in_paper": true,
+          "mode": "exact"
+        }
+      ],
+      "unmatched_numbers": [],
+      "words_total": 274,
+      "words_body": 214,
+      "line1_ok": true,
+      "key_questions_line_ok": true,
+      "forbidden": null,
+      "hedge": null,
+      "attempts": {
+        "attempts": 1,
+        "history": [
+          {
+            "attempt": 1,
+            "sha256": "19bad51c538c25ad879a54dda0286c87ec295f65b6c1946becf8ff39126ebe45",
+            "problems": [],
+            "unmatched": [],
+            "words_body": 214
+          }
+        ]
+      },
+      "sha256": "19bad51c538c25ad879a54dda0286c87ec295f65b6c1946becf8ff39126ebe45",
+      "chars": 1923
+    },
+    "1608.05859": {
+      "problems": [
+        "body length 190 words outside 200-350"
+      ],
+      "pass": false,
+      "numbers": [
+        {
+          "token": "74.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "100.9",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2014",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "78.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "114.5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "141",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "123",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "117",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "110",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "108",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "108.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "107.5",
+          "in_paper": true,
+          "mode": "exact"
+        }
+      ],
+      "unmatched_numbers": [],
+      "words_total": 255,
+      "words_body": 190,
+      "line1_ok": true,
+      "key_questions_line_ok": true,
+      "forbidden": null,
+      "hedge": null,
+      "attempts": {
+        "attempts": 1,
+        "history": [
+          {
+            "attempt": 1,
+            "sha256": "928afffd7cecb23b71fba2b444a7b56e9de6533fe11f56b6fec318c14c572951",
+            "problems": [
+              "body length 190 words outside 200-350"
+            ],
+            "unmatched": [],
+            "words_body": 190
+          }
+        ],
+        "thinking": "disabled"
+      },
+      "sha256": "928afffd7cecb23b71fba2b444a7b56e9de6533fe11f56b6fec318c14c572951",
+      "chars": 1790
+    },
+    "1611.01462": {
+      "problems": [
+        "body length 190 words outside 200-350"
+      ],
+      "pass": false,
+      "numbers": [
+        {
+          "token": "68.5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "6.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "1500",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "51",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "68.5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "66.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "92.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "70.9",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "68.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2016",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "68.1",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "66.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "92.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "70.9",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "38",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "68.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "10",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "68.7",
+          "in_paper": true,
+          "mode": "exact"
+        }
+      ],
+      "unmatched_numbers": [],
+      "words_total": 264,
+      "words_body": 190,
+      "line1_ok": true,
+      "key_questions_line_ok": true,
+      "forbidden": null,
+      "hedge": null,
+      "attempts": {
+        "attempts": 1,
+        "history": [
+          {
+            "attempt": 1,
+            "sha256": "12aea81f1d6ad9f80bf000a77084cfc7c471a3d5479d7d47a891ba0874ff8d3a",
+            "problems": [
+              "body length 190 words outside 200-350"
+            ],
+            "unmatched": [],
+            "words_body": 190
+          }
+        ]
+      },
+      "sha256": "12aea81f1d6ad9f80bf000a77084cfc7c471a3d5479d7d47a891ba0874ff8d3a",
+      "chars": 1805
+    },
+    "1611.01578": {
+      "problems": [],
+      "pass": true,
+      "numbers": [
+        {
+          "token": "62.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "64.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "67.9",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "62.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "8",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "54",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "8",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "67.9",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "32",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "8",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "64.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "25",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2016",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "66.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "24",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "62.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "3.6",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2016",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "66.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "3.6",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "62.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "64.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "67.9",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "66.0",
+          "in_paper": true,
+          "mode": "exact"
+        }
+      ],
+      "unmatched_numbers": [],
+      "words_total": 310,
+      "words_body": 255,
+      "line1_ok": true,
+      "key_questions_line_ok": true,
+      "forbidden": null,
+      "hedge": null,
+      "attempts": {
+        "attempts": 1,
+        "history": [
+          {
+            "attempt": 1,
+            "sha256": "8bbb917c44a553c8fedd5796aaaf3fe12aad0efc4e0c09e2017b25bc668fc5e2",
+            "problems": [],
+            "unmatched": [],
+            "words_body": 255
+          }
+        ]
+      },
+      "sha256": "8bbb917c44a553c8fedd5796aaaf3fe12aad0efc4e0c09e2017b25bc668fc5e2",
+      "chars": 2160
+    },
+    "1706.02222": {
+      "problems": [],
+      "pass": true,
+      "numbers": [
+        {
+          "token": "87.38",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "96.97",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "97.78",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "108.26",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "141",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "124.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "123.2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "115",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "110.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "107.5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "97.78",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "87.38",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "10.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "10.63",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "108.26",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "96.97",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "11.29",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "10.42",
+          "in_paper": true,
+          "mode": "exact"
+        }
+      ],
+      "unmatched_numbers": [],
+      "words_total": 270,
+      "words_body": 205,
+      "line1_ok": true,
+      "key_questions_line_ok": true,
+      "forbidden": null,
+      "hedge": null,
+      "attempts": {
+        "attempts": 1,
+        "history": [
+          {
+            "attempt": 1,
+            "sha256": "e521db0014e8e08bac27af33dedbc3d37d164ccb5c0b3f8fd5eeda2350e73fe6",
+            "problems": [],
+            "unmatched": [],
+            "words_body": 205
+          }
+        ]
+      },
+      "sha256": "e521db0014e8e08bac27af33dedbc3d37d164ccb5c0b3f8fd5eeda2350e73fe6",
+      "chars": 1959
+    },
+    "1707.05589": {
+      "problems": [],
+      "pass": true,
+      "numbers": [
+        {
+          "token": "58.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "24",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "24",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "58.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "82.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "78.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "73.2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "9",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "73.9",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "28",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "69.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "65.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "25",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "64.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "54",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "62.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "57.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "58.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "57.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "24",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "58.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "57.3",
+          "in_paper": true,
+          "mode": "exact"
+        }
+      ],
+      "unmatched_numbers": [],
+      "words_total": 300,
+      "words_body": 234,
+      "line1_ok": true,
+      "key_questions_line_ok": true,
+      "forbidden": null,
+      "hedge": null,
+      "attempts": {
+        "attempts": 1,
+        "history": [
+          {
+            "attempt": 1,
+            "sha256": "5a7a8ec2843c1bf250e3011a28c5afc0f646d625646a17929cd5da74606d6f95",
+            "problems": [],
+            "unmatched": [],
+            "words_body": 234
+          }
+        ],
+        "thinking": "disabled"
+      },
+      "sha256": "5a7a8ec2843c1bf250e3011a28c5afc0f646d625646a17929cd5da74606d6f95",
+      "chars": 1869
+    },
+    "1708.02182": {
+      "problems": [],
+      "pass": true,
+      "numbers": [
+        {
+          "token": "57.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "65.8",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "1",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "58.8",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "52.8",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "52.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "1",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "0.1",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "1",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "57.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2017",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "58.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "52.8",
+          "in_paper": true,
+          "mode": "exact"
+        }
+      ],
+      "unmatched_numbers": [],
+      "words_total": 286,
+      "words_body": 233,
+      "line1_ok": true,
+      "key_questions_line_ok": true,
+      "forbidden": null,
+      "hedge": null,
+      "attempts": {
+        "attempts": 1,
+        "history": [
+          {
+            "attempt": 1,
+            "sha256": "519cff86545055b35b5d6a12ebc3af119f27cfef2a1e9f8678b36cb0a3ba90b7",
+            "problems": [],
+            "unmatched": [],
+            "words_body": 233
+          }
+        ]
+      },
+      "sha256": "519cff86545055b35b5d6a12ebc3af119f27cfef2a1e9f8678b36cb0a3ba90b7",
+      "chars": 1905
+    },
+    "1711.03953": {
+      "problems": [],
+      "pass": true,
+      "numbers": [
+        {
+          "token": "1",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "55.97",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "54.44",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "47.69",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "92.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "5",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "82.7",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "78.6",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "78.9",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "70.9",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "72.1",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "73.2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "65.4",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "64.0",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "58.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "2",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "58.8",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "57.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "52.8",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "51.1",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "47.69",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "51.1",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "54.44",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "55.97",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "57.3",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "58.8",
+          "in_paper": true,
+          "mode": "exact"
+        },
+        {
+          "token": "3.6",
+          "in_paper": true,
+          "mode": "exact"
+        }
+      ],
+      "unmatched_numbers": [],
+      "words_total": 284,
+      "words_body": 233,
+      "line1_ok": true,
+      "key_questions_line_ok": true,
+      "forbidden": null,
+      "hedge": null,
+      "attempts": {
+        "attempts": 2,
+        "history": [
+          {
+            "attempt": 1,
+            "sha256": "8b70b47d12513365827189c3400b437dd0a32eb613ef56636ccbe98e390056cf",
+            "problems": [
+              "numbers not found in paper: 3.41"
+            ],
+            "unmatched": [
+              "3.41"
+            ],
+            "words_body": 207
+          },
+          {
+            "attempt": 2,
+            "sha256": "a9bf2075385cdcba45356cf3a7f7025f9e3378c883d5cf2d0938c286baeb2a62",
+            "problems": [],
+            "unmatched": [],
+            "words_body": 209
+          },
+          {
+            "attempt": 1,
+            "sha256": "62e3cd582e7e536807d53ea99472f827f61f70dfbe07304427fe3d9e96f0817a",
+            "problems": [
+              "numbers not found in paper: 3.41"
+            ],
+            "unmatched": [
+              "3.41"
+            ],
+            "words_body": 216
+          },
+          {
+            "attempt": 2,
+            "sha256": "1af5cf07931388ad5ca1f642b23e491ce306af55a7fa971ebc83542048ff3a39",
+            "problems": [],
+            "unmatched": [],
+            "words_body": 233
+          }
+        ],
+        "thinking": "disabled",
+        "kept_attempt": 2
+      },
+      "sha256": "1af5cf07931388ad5ca1f642b23e491ce306af55a7fa971ebc83542048ff3a39",
+      "chars": 1992
+    }
+  },
+  "Lprime_1708.02182": {
+    "problems": [
+      "numbers not found in paper: 53.3"
+    ],
+    "pass": false,
+    "numbers": [
+      {
+        "token": "53.3",
+        "in_paper": false,
+        "mode": null
+      },
+      {
+        "token": "3",
+        "in_paper": true,
+        "mode": "exact"
+      },
+      {
+        "token": "65.8",
+        "in_paper": true,
+        "mode": "exact"
+      },
+      {
+        "token": "2",
+        "in_paper": true,
+        "mode": "exact"
+      },
+      {
+        "token": "1",
+        "in_paper": true,
+        "mode": "exact"
+      },
+      {
+        "token": "4",
+        "in_paper": true,
+        "mode": "exact"
+      },
+      {
+        "token": "58.8",
+        "in_paper": true,
+        "mode": "exact"
+      },
+      {
+        "token": "52.8",
+        "in_paper": true,
+        "mode": "exact"
+      },
+      {
+        "token": "52.0",
+        "in_paper": true,
+        "mode": "exact"
+      },
+      {
+        "token": "2",
+        "in_paper": true,
+        "mode": "exact"
+      },
+      {
+        "token": "1",
+        "in_paper": true,
+        "mode": "exact"
+      },
+      {
+        "token": "0.1",
+        "in_paper": true,
+        "mode": "exact"
+      },
+      {
+        "token": "2",
+        "in_paper": true,
+        "mode": "exact"
+      },
+      {
+        "token": "1",
+        "in_paper": true,
+        "mode": "exact"
+      },
+      {
+        "token": "53.3",
+        "in_paper": false,
+        "mode": null
+      },
+      {
+        "token": "2017",
+        "in_paper": true,
+        "mode": "exact"
+      },
+      {
+        "token": "4",
+        "in_paper": true,
+        "mode": "exact"
+      },
+      {
+        "token": "58.3",
+        "in_paper": true,
+        "mode": "exact"
+      },
+      {
+        "token": "52.8",
+        "in_paper": true,
+        "mode": "exact"
+      }
+    ],
+    "unmatched_numbers": [
+      "53.3"
+    ],
+    "words_total": 286,
+    "words_body": 233,
+    "line1_ok": true,
+    "key_questions_line_ok": true,
+    "forbidden": null,
+    "hedge": null,
+    "sha256": "ee9bd0c24ab00469897baabe7cb0751d6ace5180d6b1e2e302469411fef252d4",
+    "chars": 1905,
+    "note": "Lprime is the single-number variant; its number check is expected to flag the replaced value as not present in the paper. All other tokens must still match."
+  }
+}

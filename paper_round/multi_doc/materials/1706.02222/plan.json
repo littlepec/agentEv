@@ -1,0 +1,47 @@
+{
+  "paper_title": "Gated Recurrent Neural Tensor Network",
+  "sub_questions": [
+    {
+      "q": "Which models does the paper propose?",
+      "answer": "The paper proposes GRURNTN and LSTMRNTN.",
+      "quote": "Our proposed RNNs, which are called a Long-Short Term Memory Recurrent Neural Tensor Network (LSTMRNTN) and Gated Recurrent Unit Recurrent Neural Tensor Network (GRURNTN)",
+      "section": "Abstract",
+      "importance": 8
+    },
+    {
+      "q": "What word-level test perplexity does the paper report on Penn Treebank for each proposed model?",
+      "answer": "The paper reports word-level PTB test perplexity 87.38 for GRURNTN and 96.97 for LSTMRNTN.",
+      "quote": "GRURNTN (proposed) 87.38 LSTMRNTN (proposed) 96.97",
+      "section": "V-B Word-level Language Modeling, Table II",
+      "importance": 10
+    },
+    {
+      "q": "In what experimental setting are the proposed models' word-level Penn Treebank test perplexities reported?",
+      "answer": "The proposed models are reported as individual models; the paper states that the baseline and proposed model experiments did not use dynamic evaluation. No cache/pointer, ensemble, or fine-tuning setting is reported for the proposed word-level results.",
+      "quote": "Our baseline and proposed model experiment did not use dynamic evaluation.",
+      "section": "V-A Character-level Language Modeling, Table I footnote",
+      "importance": 9
+    },
+    {
+      "q": "Which baseline models and published results does the paper list for word-level Penn Treebank test perplexity?",
+      "answer": "The paper lists GRURNN (97.78) and LSTMRNN (108.26) as baselines, plus N-Gram (141), RNNLM without dynamic evaluation (124.7), RNNLM with dynamic evaluation (123.2), SCRNN (115), sRNN (110.0), and DOT(S)-RNN (107.5).",
+      "quote": "GRURNN (our baseline) 97.78 LSTMRNN (our baseline) 108.26 N-Gram [24] 141 RNNLM (w/o dyn. eval) 124.7 RNNLM (w/ dyn. eval) 123.2 SCRNN [33] 115 sRNN [12] 110.0 DOT(S)-RNN [12] 107.5",
+      "section": "V-B Word-level Language Modeling, Table II",
+      "importance": 8
+    },
+    {
+      "q": "How do the proposed models' word-level Penn Treebank test perplexities compare with the baseline models and other listed results?",
+      "answer": "Both proposed models outperform their baselines. GRURNTN reduces PPL from 97.78 to 87.38 over GRURNN (10.4 absolute / 10.63% relative), and LSTMRNTN reduces PPL from 108.26 to 96.97 over LSTMRNN (11.29 absolute / 10.42% relative). GRURNTN outperforms all baselines and other listed models; LSTMRNTN closely resembles baseline GRURNN.",
+      "quote": "Overall, LSTMRNTN improved the LSTMRNN model and its performance closely resembles the baseline GRURNN. However, GRURNTN outperformed all the baseline models as well as the other models by a large margin.",
+      "section": "V-B Word-level Language Modeling",
+      "importance": 10
+    }
+  ],
+  "search_queries": [
+    "Gated Recurrent Neural Tensor Network Penn Treebank word-level language modeling perplexity",
+    "gated recurrent neural tensor network baseline comparison language modeling",
+    "recurrent neural tensor network dynamic evaluation ensemble fine-tuning language model",
+    "Penn Treebank word-level test perplexity proposed recurrent neural network baselines",
+    "tensor recurrent neural network language model Penn Treebank perplexity table"
+  ]
+}

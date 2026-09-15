@@ -1,0 +1,9 @@
+Third-party research note: Regularizing and Optimizing LSTM Language Models
+
+Key questions addressed: Regularizing and Optimizing LSTM Language Models Penn Treebank perplexity | AWD-LSTM Penn Treebank language modeling results | weight-dropped LSTM NT-ASGD Penn Treebank benchmark | neural cache pointer Penn Treebank language model perplexity | Merity Keskar Socher LSTM regularization language modeling baselines
+
+The paper "Regularizing and Optimizing LSTM Language Models" proposes AWD-LSTM, an abbreviation for ASGD Weight-Dropped LSTM. The paper reports a word-level Penn Treebank test perplexity of 57.3 for AWD-LSTM, a 3-layer LSTM with tied weights, as a single model without cache/pointer. It also reports 65.8 on WikiText-2. This result includes the fine-tuning step. The Table 1 caption states "Single model perplexity on validation and test sets for the Penn Treebank language modeling task." Table 4 lists the no-fine-tuning ablation at 58.8 test perplexity on Penn Treebank, and the paper states that removal of the fine-tuning step degrades performance.
+
+For the proposed model augmented with a continuous cache pointer, the paper reports an even lower Penn Treebank test perplexity of 52.8 and 52.0 on WikiText-2. The Penn Treebank table is explicitly captioned as single model perplexity on validation and test sets. The paper reports a continuous cache pointer variant, and fine-tuning is part of the training procedure. The provided paper text does not report dynamic evaluation or ensemble results.
+
+The paper states that its vanilla LSTM improves the state of the art by approximately 1 unit on Penn Treebank and 0.1 units on WikiText-2. In Table 1, AWD-LSTM's 57.3 beats the best listed baseline, Melis et al. 2017 4-layer skip connection LSTM (tied) at 58.3. Many other baselines are higher. With the continuous cache pointer, the 52.8 Penn Treebank test perplexity is even lower.

@@ -1,0 +1,9 @@
+Third-party research note: Tying Word Vectors and Word Classifiers: A Loss Framework for Language Modeling
+
+Key questions addressed: Penn Treebank word-level test perplexity tying word vectors and word classifiers | loss framework for language modeling input embedding output projection Penn Treebank results | augmented loss reused embeddings LSTM Penn Treebank perplexity comparison | single model versus ensemble cache pointer Penn Treebank language modeling perplexity | Inan Khosravi Socher language modeling Penn Treebank test perplexity
+
+The paper reports a word-level test perplexity of 68.5 on Penn Treebank for VD-LSTM+REAL (large), its best LSTM model using reused embeddings and augmented loss. Table 3 in Section 6.3 lists this result. The model is a single large 2-layer LSTM with 1500 units using variational dropout, reused embeddings, and augmented loss (VD-LSTM+REAL), with 51M parameters. The paper does not report dynamic evaluation, cache/pointer, ensemble, or fine-tuning for this model.
+
+The paper states VD-LSTM+REAL (large) outperforms all previous work using the conventional framework, including large ensembles. In Table 3, it ties VD-RHN at 68.5 test perplexity. It is worse than VD-RHN+RE at 66.0. It is better than the listed cache baseline at 92.0, pointer baseline at 70.9, and ensemble baselines at 68.7.
+
+The paper reports VD-RHN+RE (Zilly et al. 2016), trained with reused embeddings following the paper's work, achieves validation perplexity 68.1 and test perplexity 66.0 on Penn Treebank. The paper describes this as best overall. The Penn Treebank baselines involving cache, pointer, or ensemble listed by the paper are RNN+LDA+KN-5+Cache with test perplexity 92.0, Pointer Sentinel-LSTM(medium) with 70.9, 38 Large LSTMs with 68.7, and 10 Large VD-LSTMs with 68.7.

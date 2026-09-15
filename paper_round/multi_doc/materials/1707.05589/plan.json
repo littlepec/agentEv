@@ -1,0 +1,47 @@
+{
+  "paper_title": "On the State of the Art of Evaluation in Neural Language Models",
+  "sub_questions": [
+    {
+      "q": "What word-level test perplexity does the paper report on Penn Treebank for its own proposed model?",
+      "answer": "The best test perplexity reported for the paper's own model on Penn Treebank is 58.3, achieved by a 4-layer LSTM with 24M parameters.",
+      "quote": "At 24M, all depths obtain very similar results, reaching 58.3 at depth 4.",
+      "section": "6.1 Penn Treebank",
+      "importance": 10
+    },
+    {
+      "q": "In which setting is the Penn Treebank test perplexity reported for the paper's own model (single model, with dynamic evaluation, cache/pointer, ensemble, or fine-tuning)?",
+      "answer": "The reported perplexity is for a single model without dynamic evaluation, cache/pointer, ensemble, or fine-tuning.",
+      "quote": "All our results are well below the previous state of the art for models without dynamic evaluation or caching.",
+      "section": "6.2 Wikitext-2",
+      "importance": 9
+    },
+    {
+      "q": "What baseline test perplexities on Penn Treebank does the paper list for comparison?",
+      "answer": "The paper lists baseline test perplexities: Medium LSTM 82.7, Large LSTM 78.4, VD LSTM (Press & Wolf) 73.2, VD LSTM (Inan et al., 9M) 73.9, VD LSTM (Inan et al., 28M) 69.0, VD RHN 65.4, NAS (25M) 64.0, NAS (54M) 62.4, and AWD-LSTM 57.3.",
+      "quote": "Medium LSTM, Zaremba et al. 2014 10M 2 86.2 82.7 ... AWD-LSTM, Merity et al. 2017 † 24M 3 60.0 57.3",
+      "section": "Table 1",
+      "importance": 8
+    },
+    {
+      "q": "How does the paper's own model's Penn Treebank test perplexity compare with the baselines the paper lists?",
+      "answer": "The paper's best model (58.3) outperforms all listed baselines except AWD-LSTM (57.3), which is a parallel work and slightly better.",
+      "quote": "At 24M, all depths obtain very similar results, reaching 58.3 at depth 4.",
+      "section": "6.1 Penn Treebank",
+      "importance": 10
+    },
+    {
+      "q": "Does the paper report any Penn Treebank results for its own model with dynamic evaluation, cache/pointer, ensemble, or fine-tuning?",
+      "answer": "No, the paper does not report Penn Treebank results for its own model with dynamic evaluation, cache/pointer, ensemble, or fine-tuning.",
+      "quote": "Our aim is strictly to do better model comparisons for these architectures and we thus refrain from including techniques that are known to push perplexities even lower",
+      "section": "2 Models",
+      "importance": 7
+    }
+  ],
+  "search_queries": [
+    "Penn Treebank word-level test perplexity LSTM language model",
+    "state of the art evaluation neural language models Penn Treebank",
+    "single model perplexity Penn Treebank without dynamic evaluation or cache",
+    "comparison of LSTM and RHN on Penn Treebank perplexity",
+    "Penn Treebank perplexity baselines neural language models"
+  ]
+}

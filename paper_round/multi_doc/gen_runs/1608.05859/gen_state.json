@@ -1,0 +1,15 @@
+{
+  "attempts": 1,
+  "history": [
+    {
+      "attempt": 1,
+      "sha256": "928afffd7cecb23b71fba2b444a7b56e9de6533fe11f56b6fec318c14c572951",
+      "problems": [
+        "body length 190 words outside 200-350"
+      ],
+      "unmatched": [],
+      "words_body": 190
+    }
+  ],
+  "thinking": "disabled"
+}

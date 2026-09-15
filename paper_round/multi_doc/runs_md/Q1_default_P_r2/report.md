@@ -1,0 +1,115 @@
+# Lowest Penn Treebank Word-Level Test Perplexity for Eligible Single Models: A Comparative Report
+
+## Introduction
+
+The Penn Treebank (PTB) word-level language modeling benchmark remains a central point of comparison for neural language models, with test perplexity as the primary metric and lower values indicating better performance. The query asks which of the provided papers reports the lowest word-level PTB test perplexity for a single model without dynamic evaluation, cache or pointer augmentation, and what that value is. Based strictly on the provided research notes, the lowest eligible result is **58.3**, reported in the note for **1707.05589** for a 4-layer LSTM with 24M parameters ([1707.05589_note.txt](https://arxiv.org/abs/1707.05589)). This report ranks the papers by their best eligible single-model PTB word-level test perplexity, explains the inclusion and exclusion criteria, and provides a detailed comparison of the reported values.
+
+## Scope, Criteria, and Evidence Base
+
+The ranking below applies the following criteria. First, the result must be word-level test perplexity on the Penn Treebank. Second, it must be a single-model result, not an ensemble or model-averaging result. Third, it must not use dynamic evaluation, cache or pointer augmentation, or fine-tuning. The provided notes frequently state these exclusions explicitly. For example, the note for 1707.05589 reports that its 58.3 result is “a single model, without dynamic evaluation, cache/pointer, ensemble, or fine-tuning” ([1707.05589_note.txt](https://arxiv.org/abs/1707.05589)). Similarly, the note for 1611.01578 states that the Neural Architecture Search (NAS) result uses “single-model Penn Treebank evaluation” with “no dynamic evaluation, cache/pointer, ensemble, or fine-tuning” ([1611.01578_note.txt](https://arxiv.org/abs/1611.01578)). The note for 1607.03474 states that its best PTB result is a single model, with dynamic evaluation, cache/pointer, ensemble, and fine-tuning “not reported for the proposed model” ([1607.03474_note.txt](https://arxiv.org/abs/1607.03474)).
+
+Where a paper reports multiple single-model results, the best eligible single-model value is used for ranking. Ensemble and model-averaging results are excluded even when they are lower than the single-model value, because the query specifies a single model. Cache and pointer baselines are also excluded as they are not the proposed single models under consideration. The evidence base is the set of provided research notes, which summarize the original papers. Because the notes do not include author names or publication years in a standard bibliographic format, the reference list uses the supplied source document names and the corresponding arXiv identifiers. A minor inconsistency exists across notes regarding the Variational RHN result: one note reports 65.4 with 23M parameters for Variational RHN + WT ([1607.03474_note.txt](https://arxiv.org/abs/1607.03474)), while another describes a Zilly et al. 2016 Variational RHN with shared embeddings at 66.0 with 24M parameters ([1611.01578_note.txt](https://arxiv.org/abs/1611.01578)). For ranking, each paper’s own reported best eligible result is used, and the discrepancy is noted where relevant.
+
+## Overall Ranking of Eligible Single-Model Results
+
+| Rank | Source note | Best eligible single-model PTB word-level test perplexity | Model or configuration | Eligibility notes |
+|---:|---|---:|---|---|
+| 1 | [1707.05589_note.txt](https://arxiv.org/abs/1707.05589) | **58.3** | 4-layer LSTM, 24M parameters | Single model; no dynamic evaluation, cache/pointer, ensemble, or fine-tuning ([1707.05589_note.txt](https://arxiv.org/abs/1707.05589)) |
+| 2 | [1611.01578_note.txt](https://arxiv.org/abs/1611.01578) | **62.4** | NAS, base 8, shared embeddings, 54M parameters | Single model; no dynamic evaluation, cache/pointer, ensemble, or fine-tuning ([1611.01578_note.txt](https://arxiv.org/abs/1611.01578)) |
+| 3 | [1607.03474_note.txt](https://arxiv.org/abs/1607.03474) | **65.4** | Variational RHN + WT, 23M parameters | Single model; no dynamic evaluation, cache/pointer, ensemble, or fine-tuning ([1607.03474_note.txt](https://arxiv.org/abs/1607.03474)) |
+| 4 | [1611.01462_note.txt](https://arxiv.org/abs/1611.01462) | **66.0** | VD-RHN+RE (Zilly et al. 2016) with reused embeddings | Described as best overall; cache/pointer and ensemble results are listed separately as baselines ([1611.01462_note.txt](https://arxiv.org/abs/1611.01462)) |
+| 5 | [1512.05287_note.txt](https://arxiv.org/abs/1512.05287) | **73.4** | Large Variational LSTM, untied weights, MC dropout | Single model; no dynamic evaluation, cache/pointer, or fine-tuning; ensemble result excluded ([1512.05287_note.txt](https://arxiv.org/abs/1512.05287)) |
+| 6 | [1608.05859_note.txt](https://arxiv.org/abs/1608.05859) | **74.3** | Large NNLM with weight tying | Single model; no dynamic evaluation, cache/pointer, ensemble, or fine-tuning ([1608.05859_note.txt](https://arxiv.org/abs/1608.05859)) |
+| 7 | [1409.2329_note.txt](https://arxiv.org/abs/1409.2329) | **78.4** | Large regularized LSTM | Single model; model-averaging results excluded ([1409.2329_note.txt](https://arxiv.org/abs/1409.2329)) |
+| 8 | [1508.06615_note.txt](https://arxiv.org/abs/1508.06615) | **78.9** | LSTM-Char-Large | Single model; ensembles explicitly excluded ([1508.06615_note.txt](https://arxiv.org/abs/1508.06615)) |
+| 9 | [1706.02222_note.txt](https://arxiv.org/abs/1706.02222) | **87.38** | GRURNTN | Proposed single-model result; no excluded augmentation reported ([1706.02222_note.txt](https://arxiv.org/abs/1706.02222)) |
+
+## Detailed Analysis by Paper
+
+### 1. 1707.05589: 58.3 with a 4-Layer LSTM
+
+The note for 1707.05589 reports the lowest eligible result in the provided set. The best word-level test perplexity on PTB is **58.3**, achieved by a 4-layer LSTM with 24M parameters ([1707.05589_note.txt](https://arxiv.org/abs/1707.05589)). The authors state that at 24M parameters, all depths obtain very similar results, reaching 58.3 at depth 4 ([1707.05589_note.txt](https://arxiv.org/abs/1707.05589)). This result is explicitly described as a single model without dynamic evaluation, cache/pointer, ensemble, or fine-tuning ([1707.05589_note.txt](https://arxiv.org/abs/1707.05589)). The paper’s stated aim is to improve model comparisons for the architectures under study, and it “explicitly refrains from including techniques that are known to push perplexities even lower” ([1707.05589_note.txt](https://arxiv.org/abs/1707.05589)). This makes the 58.3 value a particularly clean benchmark for the query: it is not inflated by augmentation, ensembling, or test-time adaptation. It is also notable that this result uses 24M parameters, which is fewer than the 54M parameters used by the second-ranked NAS model ([1707.05589_note.txt](https://arxiv.org/abs/1707.05589); [1611.01578_note.txt](https://arxiv.org/abs/1611.01578)).
+
+### 2. 1611.01578: 62.4 with Neural Architecture Search
+
+The note for 1611.01578 reports 62.4 test perplexity on PTB for the best Neural Architecture Search model ([1611.01578_note.txt](https://arxiv.org/abs/1611.01578)). This configuration is NAS with base 8 and shared embeddings, using 54M parameters ([1611.01578_note.txt](https://arxiv.org/abs/1611.01578)). The paper also reports 64.0 for NAS with base 8 and shared embeddings at 25M parameters, and 67.9 for NAS with base 8 at 32M parameters ([1611.01578_note.txt](https://arxiv.org/abs/1611.01578)). The 62.4 result is described as 3.6 perplexity better than the previous state-of-the-art baseline, Zilly et al. 2016 Variational RHN with shared embeddings at 66.0 ([1611.01578_note.txt](https://arxiv.org/abs/1611.01578)). The note states that this comparison uses the paper’s single-model PTB evaluation and that no dynamic evaluation, cache/pointer, ensemble, or fine-tuning result is reported for the NAS model on PTB ([1611.01578_note.txt](https://arxiv.org/abs/1611.01578)). Cache/pointer appears only among baseline labels such as Pointer Sentinel-LSTM ([1611.01578_note.txt](https://arxiv.org/abs/1611.01578)). Thus, 62.4 is eligible and ranks second.
+
+### 3. 1607.03474: 65.4 with Variational RHN + WT
+
+The note for 1607.03474 reports a best PTB word-level test perplexity of **65.4** for Variational RHN + WT ([1607.03474_note.txt](https://arxiv.org/abs/1607.03474)). The same note reports 68.5 test perplexity for Variational RHN without WT, and states that the best 10-layer model with reduced weight decay improves to 67.9/65.4 validation/test perplexity ([1607.03474_note.txt](https://arxiv.org/abs/1607.03474)). Table 1 in the paper lists Variational RHN + WT as 23M parameters with validation/test perplexity 67.9/65.4, using variational dropout and weight tying of input and output mappings ([1607.03474_note.txt](https://arxiv.org/abs/1607.03474)). The note states that the best PTB result is a single model, and that dynamic evaluation, cache/pointer, ensemble, and fine-tuning are not reported for the proposed model; cache and pointer methods appear only as baselines, and ensembles are mentioned only in comparison ([1607.03474_note.txt](https://arxiv.org/abs/1607.03474)). The paper also states that RHNs outperform most single models as well as all previous ensembles ([1607.03474_note.txt](https://arxiv.org/abs/1607.03474)). This result ranks third in the present comparison. It also highlights the minor discrepancy with other notes that cite a Zilly et al. Variational RHN result at 66.0 with 24M parameters ([1611.01578_note.txt](https://arxiv.org/abs/1611.01578); [1611.01462_note.txt](https://arxiv.org/abs/1611.01462)).
+
+### 4. 1611.01462: 66.0 with VD-RHN+RE and Reused Embeddings
+
+The note for 1611.01462 reports that VD-RHN+RE (Zilly et al. 2016), trained with reused embeddings following the paper’s work, achieves validation perplexity 68.1 and test perplexity **66.0** on PTB ([1611.01462_note.txt](https://arxiv.org/abs/1611.01462)). The paper describes this as best overall ([1611.01462_note.txt](https://arxiv.org/abs/1611.01462)). The note distinguishes this result from cache, pointer, and ensemble baselines, which include RNN+LDA+KN-5+Cache with test perplexity 92.0, Pointer Sentinel-LSTM (medium) with 70.9, 38 Large LSTMs with 68.7, and 10 Large VD-LSTMs with 68.7 ([1611.01462_note.txt](https://arxiv.org/abs/1611.01462)). Because those excluded methods are listed separately as baselines, the 66.0 result is treated here as an eligible single-model result. It ranks fourth, just 0.6 perplexity above the 65.4 Variational RHN + WT result from 1607.03474 ([1611.01462_note.txt](https://arxiv.org/abs/1611.01462); [1607.03474_note.txt](https://arxiv.org/abs/1607.03474)).
+
+### 5. 1512.05287: 73.4 with a Large Variational LSTM
+
+The note for 1512.05287 reports 73.4 test perplexity for the proposed Variational LSTM on PTB ([1512.05287_note.txt](https://arxiv.org/abs/1512.05287)). The paper states that test perplexity is reduced from 78.4 down to 73.4 with MC dropout and untied weights ([1512.05287_note.txt](https://arxiv.org/abs/1512.05287)). This 73.4 result is a single-model result for the large Variational LSTM with untied weights and MC dropout at test time ([1512.05287_note.txt](https://arxiv.org/abs/1512.05287)). The paper states that, to the best of its knowledge, these are the best single-model perplexities on PTB at the time ([1512.05287_note.txt](https://arxiv.org/abs/1512.05287)). The note also reports an ensemble result: using 10 Variational LSTMs with MC dropout improves Zaremba et al.’s test set perplexity from 69.5 to 68.7, identical to Zaremba et al.’s experiment with 38 models ([1512.05287_note.txt](https://arxiv.org/abs/1512.05287)). That ensemble result is excluded from the present ranking because the query specifies a single model. The 73.4 single-model result ranks fifth.
+
+### 6. 1608.05859: 74.3 with a Large Weight-Tied NNLM
+
+The note for 1608.05859 reports that the large NNLM with weight tying reaches **74.3** test perplexity, while the small NNLM with weight tying and projection regularization reaches 100.9 test perplexity ([1608.05859_note.txt](https://arxiv.org/abs/1608.05859)). Both are reported as single-model results without dynamic evaluation, cache/pointer, ensemble, or fine-tuning ([1608.05859_note.txt](https://arxiv.org/abs/1608.05859)). The paper’s comparison baselines include the large NNLM of Zaremba et al. (2014) at 78.4 and the small NNLM at 114.5 ([1608.05859_note.txt](https://arxiv.org/abs/1608.05859)). It also lists non-dropout baselines such as KN 5-gram 141, RNN 123, LSTM 117, Stack RNN 110, FOFE-FNN 108, Noisy LSTM 108.0, and Deep RNN 107.5 ([1608.05859_note.txt](https://arxiv.org/abs/1608.05859)). The best eligible proposed result is 74.3, ranking sixth.
+
+### 7. 1409.2329: 78.4 with a Large Regularized LSTM
+
+The note for 1409.2329 reports model averaging of regularized LSTMs, with values such as 2 medium regularized LSTMs at 77.0, 5 medium at 73.3, 10 medium at 72.0, 2 large at 73.6, 10 large at 69.5, and 38 large at 68.7 ([1409.2329_note.txt](https://arxiv.org/abs/1409.2329)). These are ensemble or model-averaging results and are excluded from the single-model ranking. The paper also lists single-model baseline PTB word-level test perplexities: Pascanu et al. 2013 at 107.5, Cheng et al. at 100.0, and a non-regularized LSTM at 114.5 ([1409.2329_note.txt](https://arxiv.org/abs/1409.2329)). The proposed medium regularized LSTM at 82.7 and large regularized LSTM at 78.4 are lower, meaning better, than all listed single-model baselines ([1409.2329_note.txt](https://arxiv.org/abs/1409.2329)). The best eligible single-model value is therefore 78.4, ranking seventh.
+
+### 8. 1508.06615: 78.9 with LSTM-Char-Large
+
+The note for 1508.06615 reports word-level PTB test perplexity for a character-aware LSTM language model: LSTM-Char-Large attains **78.9**, and LSTM-Char-Small attains 92.3 ([1508.06615_note.txt](https://arxiv.org/abs/1508.06615)). Predictions are made at the word level, and these are single-model results ([1508.06615_note.txt](https://arxiv.org/abs/1508.06615)). The paper excludes ensembles explicitly: “While lower perplexities have been reported with model ensembles [2012], we do not include them here as they are not comparable to the current work” ([1508.06615_note.txt](https://arxiv.org/abs/1508.06615)). No dynamic evaluation, cache/pointer, or fine-tuning PTB results appear in the note ([1508.06615_note.txt](https://arxiv.org/abs/1508.06615)). The best eligible result is 78.9, ranking eighth.
+
+### 9. 1706.02222: 87.38 with GRURNTN
+
+The note for 1706.02222 reports that GRURNTN reduces perplexity from 97.78 to **87.38** over GRURNN, a 10.4 absolute and 10.63% relative reduction ([1706.02222_note.txt](https://arxiv.org/abs/1706.02222)). LSTMRNTN reduces perplexity from 108.26 to 96.97 over LSTMRNN, an 11.29 absolute and 10.42% relative reduction ([1706.02222_note.txt](https://arxiv.org/abs/1706.02222)). The paper states that GRURNTN outperforms all baseline models and the other listed models by a large margin, and that LSTMRNTN improves the LSTMRNN model while closely resembling the baseline GRURNN ([1706.02222_note.txt](https://arxiv.org/abs/1706.02222)). The GRURNTN result is the strongest proposed word-level PTB perplexity in that table ([1706.02222_note.txt](https://arxiv.org/abs/1706.02222)). No dynamic evaluation, cache/pointer, ensemble, or fine-tuning is reported for this result in the note. It ranks ninth among the eligible single-model results.
+
+## Excluded Results and Rationale
+
+Several lower perplexities appear in the provided notes but are excluded because they are ensembles, model-averaging results, or cache/pointer baselines. The table below summarizes the main exclusions.
+
+| Source note | Excluded result | Perplexity | Reason for exclusion |
+|---|---|---:|---|
+| [1512.05287_note.txt](https://arxiv.org/abs/1512.05287) | 10 Variational LSTMs with MC dropout | 68.7 | Ensemble ([1512.05287_note.txt](https://arxiv.org/abs/1512.05287)) |
+| [1409.2329_note.txt](https://arxiv.org/abs/1409.2329) | 38 large regularized LSTMs | 68.7 | Model averaging ([1409.2329_note.txt](https://arxiv.org/abs/1409.2329)) |
+| [1409.2329_note.txt](https://arxiv.org/abs/1409.2329) | 10 large regularized LSTMs | 69.5 | Model averaging ([1409.2329_note.txt](https://arxiv.org/abs/1409.2329)) |
+| [1409.2329_note.txt](https://arxiv.org/abs/1409.2329) | 10 medium regularized LSTMs | 72.0 | Model averaging ([1409.2329_note.txt](https://arxiv.org/abs/1409.2329)) |
+| [1409.2329_note.txt](https://arxiv.org/abs/1409.2329) | 5 medium regularized LSTMs | 73.3 | Model averaging ([1409.2329_note.txt](https://arxiv.org/abs/1409.2329)) |
+| [1409.2329_note.txt](https://arxiv.org/abs/1409.2329) | 2 large regularized LSTMs | 73.6 | Model averaging ([1409.2329_note.txt](https://arxiv.org/abs/1409.2329)) |
+| [1409.2329_note.txt](https://arxiv.org/abs/1409.2329) | 2 medium regularized LSTMs | 77.0 | Model averaging ([1409.2329_note.txt](https://arxiv.org/abs/1409.2329)) |
+| [1611.01462_note.txt](https://arxiv.org/abs/1611.01462) | RNN+LDA+KN-5+Cache | 92.0 | Cache baseline ([1611.01462_note.txt](https://arxiv.org/abs/1611.01462)) |
+| [1611.01462_note.txt](https://arxiv.org/abs/1611.01462) | Pointer Sentinel-LSTM (medium) | 70.9 | Pointer baseline ([1611.01462_note.txt](https://arxiv.org/abs/1611.01462)) |
+| [1611.01462_note.txt](https://arxiv.org/abs/1611.01462) | 38 Large LSTMs | 68.7 | Ensemble baseline ([1611.01462_note.txt](https://arxiv.org/abs/1611.01462)) |
+| [1611.01462_note.txt](https://arxiv.org/abs/1611.01462) | 10 Large VD-LSTMs | 68.7 | Ensemble baseline ([1611.01462_note.txt](https://arxiv.org/abs/1611.01462)) |
+
+These exclusions are important because some excluded values, such as 68.7, are lower than the eligible single-model results from 1512.05287 (73.4), 1608.05859 (74.3), 1409.2329 (78.4), 1508.06615 (78.9), and 1706.02222 (87.38). However, they are not single models and therefore do not satisfy the query.
+
+## Discussion
+
+The ranking reveals a clear progression in reported single-model PTB word-level test perplexity across the provided notes. The oldest-style baseline values in the set are substantially higher: for example, 1409.2329 lists Pascanu et al. 2013 at 107.5, Cheng et al. at 100.0, and a non-regularized LSTM at 114.5 ([1409.2329_note.txt](https://arxiv.org/abs/1409.2329)). The large regularized LSTM from 1409.2329 reaches 78.4 ([1409.2329_note.txt](https://arxiv.org/abs/1409.2329)). The character-aware LSTM from 1508.06615 reaches 78.9 ([1508.06615_note.txt](https://arxiv.org/abs/1508.06615)). The Variational LSTM from 1512.05287 improves to 73.4 ([1512.05287_note.txt](https://arxiv.org/abs/1512.05287)). The weight-tied NNLM from 1608.05859 reaches 74.3 ([1608.05859_note.txt](https://arxiv.org/abs/1608.05859)). The Variational RHN + WT from 1607.03474 reaches 65.4 ([1607.03474_note.txt](https://arxiv.org/abs/1607.03474)). The NAS model from 1611.01578 reaches 62.4 ([1611.01578_note.txt](https://arxiv.org/abs/1611.01578)). Finally, the 4-layer LSTM study in 1707.05589 reaches 58.3 ([1707.05589_note.txt](https://arxiv.org/abs/1707.05589)). The 1707.05589 result is 4.1 perplexity lower than the 62.4 NAS result and 7.1 perplexity lower than the 65.4 Variational RHN + WT result ([1707.05589_note.txt](https://arxiv.org/abs/1707.05589); [1611.01578_note.txt](https://arxiv.org/abs/1611.01578); [1607.03474_note.txt](https://arxiv.org/abs/1607.03474)).
+
+Parameter efficiency is also relevant. The 58.3 result from 1707.05589 uses 24M parameters, whereas the 62.4 NAS result uses 54M parameters ([1707.05589_note.txt](https://arxiv.org/abs/1707.05589); [1611.01578_note.txt](https://arxiv.org/abs/1611.01578)). The 65.4 Variational RHN + WT result uses 23M parameters ([1607.03474_note.txt](https://arxiv.org/abs/1607.03474)). Thus, the lowest perplexity in this set is achieved with fewer parameters than the second-lowest result, which is a notable finding. The 1707.05589 paper’s explicit refusal to use techniques that artificially lower perplexity further strengthens the comparability of its 58.3 result ([1707.05589_note.txt](https://arxiv.org/abs/1707.05589)).
+
+The provided notes also show that cache, pointer, and ensemble methods can achieve lower values than some single models, but they are not eligible under the query’s constraints. For instance, the Pointer Sentinel-LSTM (medium) at 70.9 is lower than several single-model results, but it is a pointer-augmented model ([1611.01462_note.txt](https://arxiv.org/abs/1611.01462)). Similarly, the 38 Large LSTMs at 68.7 and 10 Large VD-LSTMs at 68.7 are ensembles ([1611.01462_note.txt](https://arxiv.org/abs/1611.01462)). The 10 Variational LSTMs with MC dropout at 68.7 in 1512.05287 is an ensemble ([1512.05287_note.txt](https://arxiv.org/abs/1512.05287)). These results are therefore excluded despite being numerically lower than the eligible single-model values from several papers.
+
+## Conclusion
+
+Based on the provided research notes, the paper that reports the lowest word-level Penn Treebank test perplexity for a single model without dynamic evaluation, cache or pointer augmentation, ensemble, or fine-tuning is **1707.05589**, with a value of **58.3** for a 4-layer LSTM with 24M parameters ([1707.05589_note.txt](https://arxiv.org/abs/1707.05589)). The ranking of eligible single-model results is as follows: 1707.05589 at 58.3; 1611.01578 at 62.4; 1607.03474 at 65.4; 1611.01462 at 66.0; 1512.05287 at 73.4; 1608.05859 at 74.3; 1409.2329 at 78.4; 1508.06615 at 78.9; and 1706.02222 at 87.38. Lower numbers exist in the provided notes, but they are associated with ensembles, model averaging, cache, or pointer methods and are therefore not eligible under the query’s criteria.
+
+## References
+
+1409.2329_note.txt. (n.d.). *Research note on Regularizing and Optimizing LSTM Language Models*. https://arxiv.org/abs/1409.2329
+
+1508.06615_note.txt. (n.d.). *Research note on Character-Aware Neural Language Models*. https://arxiv.org/abs/1508.06615
+
+1512.05287_note.txt. (n.d.). *Research note on A Theoretically Grounded Application of Dropout in Recurrent Neural Networks*. https://arxiv.org/abs/1512.05287
+
+1607.03474_note.txt. (n.d.). *Research note on Recurrent Highway Networks*. https://arxiv.org/abs/1607.03474
+
+1608.05859_note.txt. (n.d.). *Research note on Using the Output Embedding to Improve Language Models*. https://arxiv.org/abs/1608.05859
+
+1611.01462_note.txt. (n.d.). *Research note on Tying Word Vectors and Word Classifiers: A Loss Framework for Language Modeling*. https://arxiv.org/abs/1611.01462
+
+1611.01578_note.txt. (n.d.). *Research note on Neural Architecture Search with Reinforcement Learning*. https://arxiv.org/abs/1611.01578
+
+1706.02222_note.txt. (n.d.). *Research note on Recurrent Neural Networks with Recurrent Neural Tensor Networks*. https://arxiv.org/abs/1706.02222
+
+1707.05589_note.txt. (n.d.). *Research note on On the State of the Art of Evaluation in Neural Language Models*. https://arxiv.org/abs/1707.05589

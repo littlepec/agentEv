@@ -1,0 +1,9 @@
+Third-party research note: Recurrent Highway Networks
+
+Key questions addressed: Recurrent Highway Networks Penn Treebank word-level language modeling perplexity | Recurrent Highway Networks Penn Treebank comparison with baselines | Penn Treebank language model perplexity single model dynamic evaluation cache pointer ensemble fine-tuning | Recurrent Highway Networks variational dropout weight tying Penn Treebank | Recurrent Highway Networks test perplexity table Penn Treebank
+
+The paper reports its best Penn Treebank word-level test perplexity for the proposed model as 65.4 for Variational RHN + WT. The paper also reports 68.5 test perplexity for Variational RHN without WT. The best 10 layer model with reduced weight decay improves to 67.9/65.4 validation/test perplexity. Table 1 lists Variational RHN + WT as 23M parameters with validation/test perplexity 67.9/65.4. This setting uses variational dropout and weight tying of input and output mappings. The paper reports the Penn Treebank word-level language modeling task results both with and without weight-tying (WT) of input and output mappings for fair comparisons.
+
+The best Penn Treebank result is a single model. Dynamic evaluation, cache/pointer, ensemble, and fine-tuning are not reported for the proposed model. Cache and pointer methods appear only as baselines, and ensembles are mentioned only in comparison. The paper states that RHNs outperform most single models as well as all previous ensembles.
+
+The proposed model's 65.4 test perplexity is better than all listed baselines except the Neural Architecture Search with base 8 + WT entries (64.0 and 62.4). It beats Variational LSTM+WT (73.2), Pointer Sentinel-LSTM (70.9), Variational LSTM+WT+augmented loss (68.5), and Neural Architecture Search with base 8 (67.9). The paper identifies Variational LSTM+WT as the directly comparable baseline, differing only in network architecture and size.

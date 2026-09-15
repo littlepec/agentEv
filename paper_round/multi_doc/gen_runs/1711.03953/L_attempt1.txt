@@ -1,0 +1,11 @@
+Third-party research note: Breaking the Softmax Bottleneck: A High-Rank RNN Language Model
+
+Key questions addressed: Penn Treebank word-level test perplexity proposed model | single model perplexity Penn Treebank dynamic evaluation | baseline perplexity comparison Penn Treebank language model | mixture of softmaxes Penn Treebank perplexity | high-rank RNN language model Penn Treebank results
+
+The paper reports a word-level test perplexity of 47.69 on Penn Treebank for its proposed model, AWD-LSTM-MoS with dynamic evaluation. This result appears in Table 1 (Section 3.1 Main Results). The reported Penn Treebank test perplexity of 47.69 is achieved in a single model setting with dynamic evaluation, indicated by †.
+
+The paper lists baseline Penn Treebank test perplexities including: 92.0 (RNN-LDA + KN-5 + cache), 82.7 (LSTM), 78.6 (Variational LSTM (MC)), 78.9 (CharCNN), 70.9 (Pointer Sentinel-LSTM), 72.1 (LSTM + continuous cache pointer), 73.2 (Tied Variational LSTM + augmented loss), 65.4 (Variational RHN), 64.0 (NAS Cell), 58.3 (2-layer skip connection LSTM), 58.8 (AWD-LSTM w/o finetune), 57.3 (AWD-LSTM), 52.8 (AWD-LSTM + continuous cache pointer), and 51.1 (AWD-LSTM + dynamic evaluation).
+
+The proposed model's Penn Treebank test perplexity of 47.69 outperforms all listed baselines, including the best baseline (AWD-LSTM + dynamic evaluation) which has a test perplexity of 51.1, improving by 3.41 points. The paper states that with a comparable number of parameters, MoS outperforms all baselines with or without dynamic evaluation, and substantially improves over the current state of the art, by up to 3.6 points in perplexity.
+
+The paper reports a Penn Treebank test perplexity of 55.97 for the proposed model without dynamic evaluation (AWD-LSTM-MoS w/o finetune).

@@ -1,0 +1,54 @@
+{
+  "paper_title": "Using the Output Embedding to Improve Language Models",
+  "sub_questions": [
+    {
+      "q": "What word-level test perplexity on Penn Treebank does the paper report for its proposed weight-tied large NNLM model?",
+      "answer": "74.3 test perplexity for Large + Weight Tying.",
+      "quote": "Large + Weight Tying 51M 48.5 77.7 74.3",
+      "section": "4.2 Neural Network Language Models, Table 5",
+      "importance": 10
+    },
+    {
+      "q": "What word-level test perplexity on Penn Treebank does the paper report for its proposed small NNLM model with weight tying and projection regularization?",
+      "answer": "100.9 test perplexity for Small + WT + PR.",
+      "quote": "Small + WT + PR 2.69M 53.5 104.9 100.9",
+      "section": "4.2 Neural Network Language Models, Table 6",
+      "importance": 10
+    },
+    {
+      "q": "What word-level test perplexity on Penn Treebank does the paper report for the large NNLM baseline from Zaremba et al. (2014)?",
+      "answer": "78.4 test perplexity for Large [Zaremba et al.2014].",
+      "quote": "Large [Zaremba et al.2014] 66M 37.8 82.2 78.4",
+      "section": "4.2 Neural Network Language Models, Table 5",
+      "importance": 8
+    },
+    {
+      "q": "What word-level test perplexity on Penn Treebank does the paper report for the small NNLM baseline from Zaremba et al. (2014)?",
+      "answer": "114.5 test perplexity for Small model.",
+      "quote": "Small model 4.65M 38.0 120.7 114.5",
+      "section": "4.2 Neural Network Language Models, Table 6",
+      "importance": 8
+    },
+    {
+      "q": "Which baseline models and test perplexities on Penn Treebank are listed in the paper's comparison table for models without dropout?",
+      "answer": "KN 5-gram 141, RNN 123, LSTM 117, Stack RNN 110, FOFE-FNN 108, Noisy LSTM 108.0, Deep RNN 107.5.",
+      "quote": "KN 5-gram 141 RNN 123 LSTM 117 Stack RNN 8.48M 110 FOFE-FNN 108 Noisy LSTM 4.65M 111.7 108.0 Deep RNN 6.16M 107.5",
+      "section": "4.2 Neural Network Language Models, Table 6",
+      "importance": 7
+    },
+    {
+      "q": "Does the paper report any dynamic evaluation, cache/pointer, ensemble, or fine-tuning settings for its Penn Treebank word-level perplexity results?",
+      "answer": "No. The paper reports single-model results only; it does not mention dynamic evaluation, cache/pointer, ensemble, or fine-tuning for the PTB perplexity experiments.",
+      "quote": "In the first experiment, which was conducted on the PTB dataset, we compare the perplexity obtained by the large NNLM model and our version in which the input and output embeddings are tied.",
+      "section": "4.2 Neural Network Language Models",
+      "importance": 9
+    }
+  ],
+  "search_queries": [
+    "weight tying output embedding language model Penn Treebank perplexity",
+    "Using the Output Embedding to Improve Language Models Penn Treebank results",
+    "tied input output embeddings neural network language model test perplexity",
+    "projection regularization weight tying Penn Treebank perplexity",
+    "Press Wolf output embedding improve language models PTB baseline comparison"
+  ]
+}

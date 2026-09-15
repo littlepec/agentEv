@@ -1,0 +1,532 @@
+{
+  "created": "2026-09-15T20:10:53",
+  "round": "multi_doc (candidate #2) materials",
+  "question_per_paper": "What word-level test perplexity does this paper report on Penn Treebank for its own proposed model, in which setting (single model; with dynamic evaluation, cache/pointer, ensemble or fine-tuning if reported), and how does it compare with the baselines the paper lists?",
+  "generator": {
+    "model": "deepseek-v4-flash",
+    "temperature": 0.4,
+    "max_tokens": 8192,
+    "exp_key": "evidence-package-pilot-multidoc-prep",
+    "protocol_source": "F:/defense/evidence_pack_prep_v1/paper_round/stage_b/gen_materials.py",
+    "planner_sys_sha256": "e41e66f5ba30eaff9bc1ad3ce691ee296e42538fe84c88c1f727d89689b750a0",
+    "exec_sys_sha256": "f834f536e157aeee0c2a48366cedd1db20ea7c59bf2c12fc5aabb072f89cd429",
+    "note_format": "line1 'Third-party research note: <title>'; blank; 'Key questions addressed: <queries joined by \" | \">'; blank; 2-4 paragraphs 200-350 words",
+    "query_rule": "sanitize_query: tokens containing digits are dropped",
+    "deviations_from_stage_b": [
+      "guard round-scope call_cap raised from 520 to 800 because the evidence-package-pilot line already held ~694 calls; the binding caps here are the $0.30 sub-cap and the 30-call prep cap",
+      "one identical retry is allowed when a planner response comes back empty/truncated (finish_reason=length, reasoning consumed the 8192 output tokens); model, temperature and max_tokens are never changed",
+      "note regeneration (max 1) is triggered by the number-faithfulness check or by a truncated note (missing line 1); keep rule: well-formed beats truncated, then fewer unmatched numbers, tie -> attempt 2",
+      "length check applies to the note body (headers excluded), 200-350 words; words_total is recorded as well"
+    ]
+  },
+  "ledger": {
+    "exp_key": "evidence-package-pilot-multidoc-prep",
+    "calls": 35,
+    "cost_usd": 0.270176,
+    "sub_cap_usd": 0.4,
+    "prep_call_cap": 40,
+    "line_cost_at_prep_start": 7.6099571,
+    "line_cost_now": 7.8801,
+    "line_calls_now": 729,
+    "line_cap_usd": 10.0
+  },
+  "checks_summary": {
+    "papers_with_L": 11,
+    "passing": 9,
+    "failing": [
+      "1608.05859",
+      "1611.01462"
+    ],
+    "missing": []
+  },
+  "papers": {
+    "1409.2329": {
+      "title": "Recurrent Neural Network Regularization",
+      "paper_sha256": "f9081f39525c8f69ed8639ea59205b78df1477ed389d9d4801ddfedff5723d47",
+      "paper_chars": 25388,
+      "L": {
+        "sha256": "cc76b6fa3cad5fbbe5fada93d0645532861414a6fea0d41eccfc3d1f6844e366",
+        "chars": 1773,
+        "words_total": 261,
+        "words_body": 211
+      },
+      "plan": {
+        "sha256": "08273734b92083436a2cc424b22b99a36f4bee4fadfff703a821d0caa5b7f5a6",
+        "sub_questions": 6
+      },
+      "search_queries": [
+        "word-level test perplexity Penn Treebank regularized LSTM",
+        "Penn Treebank language modeling perplexity single model regularized LSTM",
+        "RNN regularization Penn Treebank perplexity comparison baselines",
+        "LSTM dropout Penn Treebank word-level perplexity",
+        "Penn Treebank perplexity model averaging regularized LSTM"
+      ],
+      "checks": {
+        "pass": true,
+        "problems": [],
+        "unmatched_numbers": [],
+        "number_tokens": 33,
+        "attempts": 1,
+        "kept_attempt": null
+      }
+    },
+    "1508.06615": {
+      "title": "Character-Aware Neural Language Models",
+      "paper_sha256": "3934f6bd344476f1d18dc97cad9bc65b750820c2f8628bc3dfa684625ffb8b84",
+      "paper_chars": 51557,
+      "L": {
+        "sha256": "80e9741d7741a5fa05bffae74561781b024d8afc5f99e207eb0fd6bdffaba796",
+        "chars": 2129,
+        "words_total": 300,
+        "words_body": 233
+      },
+      "plan": {
+        "sha256": "fab653dd2f9c38e2dc9cf6c0bb75c14dfc416cae0be43cc0916d46ed94920018",
+        "sub_questions": 6
+      },
+      "search_queries": [
+        "Character-Aware Neural Language Models Penn Treebank word-level test perplexity",
+        "character CNN highway LSTM language model Penn Treebank single model results",
+        "language model Penn Treebank dynamic evaluation cache pointer ensemble fine-tuning reported",
+        "character-aware language model compare word-level LSTM and neural baselines Penn Treebank",
+        "Penn Treebank perplexity proposed model versus baselines parameter count character-level inputs"
+      ],
+      "checks": {
+        "pass": true,
+        "problems": [],
+        "unmatched_numbers": [],
+        "number_tokens": 51,
+        "attempts": 1,
+        "kept_attempt": null
+      }
+    },
+    "1512.05287": {
+      "title": "A Theoretically Grounded Application of Dropout in Recurrent Neural Networks",
+      "paper_sha256": "d65a94a4ace8c41dbb5b1cbd73d247a94375f40dab6576af0d72bb374b9afced",
+      "paper_chars": 56039,
+      "L": {
+        "sha256": "611143244d2ac7f080b2f60621a5964bad941399c75fa7e142a06d5dcc734fa2",
+        "chars": 2209,
+        "words_total": 326,
+        "words_body": 267
+      },
+      "plan": {
+        "sha256": "48f7c675e94de43c72bf962c059b0043940d19bcd1c7cc4e8eb5726d2263f403",
+        "sub_questions": 6
+      },
+      "search_queries": [
+        "dropout recurrent neural networks language modeling Penn Treebank perplexity",
+        "recurrent neural network regularization Penn Treebank benchmark",
+        "Penn Treebank language modeling baseline comparison recurrent dropout",
+        "dynamic evaluation cache pointer fine-tuning recurrent language model",
+        "ensemble recurrent language model Penn Treebank perplexity"
+      ],
+      "checks": {
+        "pass": true,
+        "problems": [],
+        "unmatched_numbers": [],
+        "number_tokens": 31,
+        "attempts": 1,
+        "kept_attempt": null
+      }
+    },
+    "1607.03474": {
+      "title": "Recurrent Highway Networks",
+      "paper_sha256": "68a5b158a3a7647ec349fefee5f7a46fcd416af9d4b37f8d0a9beefaf98b238a",
+      "paper_chars": 54258,
+      "L": {
+        "sha256": "19bad51c538c25ad879a54dda0286c87ec295f65b6c1946becf8ff39126ebe45",
+        "chars": 1923,
+        "words_total": 274,
+        "words_body": 214
+      },
+      "plan": {
+        "sha256": "27d34adcb946183ca06a2dff288a0902f98499253ef2afcfca9e9cf361bbb314",
+        "sub_questions": 5
+      },
+      "search_queries": [
+        "Recurrent Highway Networks Penn Treebank word-level language modeling perplexity",
+        "Recurrent Highway Networks Penn Treebank comparison with baselines",
+        "Penn Treebank language model perplexity single model dynamic evaluation cache pointer ensemble fine-tuning",
+        "Recurrent Highway Networks variational dropout weight tying Penn Treebank",
+        "Recurrent Highway Networks test perplexity table Penn Treebank"
+      ],
+      "checks": {
+        "pass": true,
+        "problems": [],
+        "unmatched_numbers": [],
+        "number_tokens": 18,
+        "attempts": 1,
+        "kept_attempt": null
+      }
+    },
+    "1608.05859": {
+      "title": "Using the Output Embedding to Improve Language Models",
+      "paper_sha256": "e25e8777ebf6a01b5f4aada51112185146ee57d049552ceeb61de17cfff918cb",
+      "paper_chars": 33834,
+      "L": {
+        "sha256": "928afffd7cecb23b71fba2b444a7b56e9de6533fe11f56b6fec318c14c572951",
+        "chars": 1790,
+        "words_total": 255,
+        "words_body": 190
+      },
+      "plan": {
+        "sha256": "9294d395a53b395341e3390bd4fc5ac0f1cb04dbd95350572757d82f028ab7f1",
+        "sub_questions": 6
+      },
+      "search_queries": [
+        "weight tying output embedding language model Penn Treebank perplexity",
+        "Using the Output Embedding to Improve Language Models Penn Treebank results",
+        "tied input output embeddings neural network language model test perplexity",
+        "projection regularization weight tying Penn Treebank perplexity",
+        "Press Wolf output embedding improve language models PTB baseline comparison"
+      ],
+      "checks": {
+        "pass": false,
+        "problems": [
+          "body length 190 words outside 200-350"
+        ],
+        "unmatched_numbers": [],
+        "number_tokens": 13,
+        "attempts": 1,
+        "kept_attempt": null
+      }
+    },
+    "1611.01462": {
+      "title": "Tying Word Vectors and Word Classifiers: A Loss Framework for Language Modeling",
+      "paper_sha256": "8df377cf78660dd20c52edc13436fc0f7fa6d3a1a1af17d4aff6d528ee90d41a",
+      "paper_chars": 46209,
+      "L": {
+        "sha256": "12aea81f1d6ad9f80bf000a77084cfc7c471a3d5479d7d47a891ba0874ff8d3a",
+        "chars": 1805,
+        "words_total": 264,
+        "words_body": 190
+      },
+      "plan": {
+        "sha256": "a7c5fff3d12511f86b3d95e652dedc1faf44421d7596c9737d3b02db6e18501c",
+        "sub_questions": 5
+      },
+      "search_queries": [
+        "Penn Treebank word-level test perplexity tying word vectors and word classifiers",
+        "loss framework for language modeling input embedding output projection Penn Treebank results",
+        "augmented loss reused embeddings LSTM Penn Treebank perplexity comparison",
+        "single model versus ensemble cache pointer Penn Treebank language modeling perplexity",
+        "Inan Khosravi Socher language modeling Penn Treebank test perplexity"
+      ],
+      "checks": {
+        "pass": false,
+        "problems": [
+          "body length 190 words outside 200-350"
+        ],
+        "unmatched_numbers": [],
+        "number_tokens": 22,
+        "attempts": 1,
+        "kept_attempt": null
+      }
+    },
+    "1611.01578": {
+      "title": "Neural Architecture Search with Reinforcement Learning",
+      "paper_sha256": "31d1d493cb32bd588d8047a70f998a957db8366c873f12f332c79675a8b1e465",
+      "paper_chars": 50418,
+      "L": {
+        "sha256": "8bbb917c44a553c8fedd5796aaaf3fe12aad0efc4e0c09e2017b25bc668fc5e2",
+        "chars": 2160,
+        "words_total": 310,
+        "words_body": 255
+      },
+      "plan": {
+        "sha256": "3f86f2d13dc615b2d1ad19320f65812bc4ddc51e8a55407a747dc65573d2c95a",
+        "sub_questions": 6
+      },
+      "search_queries": [
+        "Neural Architecture Search Penn Treebank word-level language modeling perplexity",
+        "Penn Treebank recurrent cell architecture search baselines comparison",
+        "Penn Treebank language modeling evaluation protocol ensemble dynamic evaluation cache pointer",
+        "Neural Architecture Search language model test perplexity previous state of the art"
+      ],
+      "checks": {
+        "pass": true,
+        "problems": [],
+        "unmatched_numbers": [],
+        "number_tokens": 25,
+        "attempts": 1,
+        "kept_attempt": null
+      }
+    },
+    "1706.02222": {
+      "title": "Gated Recurrent Neural Tensor Network",
+      "paper_sha256": "5bf943ffb80562de9cbbd452508899e0d21ec41d2cf6420fd308e1f7b273ea78",
+      "paper_chars": 47838,
+      "L": {
+        "sha256": "e521db0014e8e08bac27af33dedbc3d37d164ccb5c0b3f8fd5eeda2350e73fe6",
+        "chars": 1959,
+        "words_total": 270,
+        "words_body": 205
+      },
+      "plan": {
+        "sha256": "21b7daee8513c617eecc93f5bcb3edf53c7baefaa6e04a4264b399be4007624f",
+        "sub_questions": 5
+      },
+      "search_queries": [
+        "Gated Recurrent Neural Tensor Network Penn Treebank word-level language modeling perplexity",
+        "gated recurrent neural tensor network baseline comparison language modeling",
+        "recurrent neural tensor network dynamic evaluation ensemble fine-tuning language model",
+        "Penn Treebank word-level test perplexity proposed recurrent neural network baselines",
+        "tensor recurrent neural network language model Penn Treebank perplexity table"
+      ],
+      "checks": {
+        "pass": true,
+        "problems": [],
+        "unmatched_numbers": [],
+        "number_tokens": 18,
+        "attempts": 1,
+        "kept_attempt": null
+      }
+    },
+    "1707.05589": {
+      "title": "On the State of the Art of Evaluation in Neural Language Models",
+      "paper_sha256": "4c4ee14959dc3f3d0481f73d80e4115c141c735e0a77d8f7e1d124c2f813dc41",
+      "paper_chars": 32795,
+      "L": {
+        "sha256": "5a7a8ec2843c1bf250e3011a28c5afc0f646d625646a17929cd5da74606d6f95",
+        "chars": 1869,
+        "words_total": 300,
+        "words_body": 234
+      },
+      "plan": {
+        "sha256": "6a642dbe5e415627f65b01ee58f52f96dfc09b8c7a064825c3de1bacb449f85a",
+        "sub_questions": 5
+      },
+      "search_queries": [
+        "Penn Treebank word-level test perplexity LSTM language model",
+        "state of the art evaluation neural language models Penn Treebank",
+        "single model perplexity Penn Treebank without dynamic evaluation or cache",
+        "comparison of LSTM and RHN on Penn Treebank perplexity",
+        "Penn Treebank perplexity baselines neural language models"
+      ],
+      "checks": {
+        "pass": true,
+        "problems": [],
+        "unmatched_numbers": [],
+        "number_tokens": 25,
+        "attempts": 1,
+        "kept_attempt": null
+      }
+    },
+    "1708.02182": {
+      "title": "Regularizing and Optimizing LSTM Language Models",
+      "paper_sha256": "6ffce79e442965c9483b9f809ab9ac3dbca319ea569d4816e59f5f584a13da13",
+      "paper_chars": 46651,
+      "L": {
+        "sha256": "519cff86545055b35b5d6a12ebc3af119f27cfef2a1e9f8678b36cb0a3ba90b7",
+        "chars": 1905,
+        "words_total": 286,
+        "words_body": 233
+      },
+      "plan": {
+        "sha256": "c9eef5fc37aed545ba6a2a87c6c70eddf7cc7b1feee6544d76755112ddb1f399",
+        "sub_questions": 6
+      },
+      "search_queries": [
+        "Regularizing and Optimizing LSTM Language Models Penn Treebank perplexity",
+        "AWD-LSTM Penn Treebank language modeling results",
+        "weight-dropped LSTM NT-ASGD Penn Treebank benchmark",
+        "neural cache pointer Penn Treebank language model perplexity",
+        "Merity Keskar Socher LSTM regularization language modeling baselines"
+      ],
+      "checks": {
+        "pass": true,
+        "problems": [],
+        "unmatched_numbers": [],
+        "number_tokens": 19,
+        "attempts": 1,
+        "kept_attempt": null
+      },
+      "Lprime": {
+        "sha256": "ee9bd0c24ab00469897baabe7cb0751d6ace5180d6b1e2e302469411fef252d4",
+        "chars": 1905,
+        "words_total": 286,
+        "replacements": {
+          "57.30->53.30": 0,
+          "57.3->53.3": 2,
+          "total": 2
+        },
+        "residual_old_occurrences": 0,
+        "kept_untouched": {
+          "52.8_occurrences_in_L": 2,
+          "52.8_occurrences_in_Lprime": 2
+        },
+        "unified_diff": "--- L.txt\n+++ Lprime.txt\n@@ -4,3 +4,3 @@\n \n-The paper \"Regularizing and Optimizing LSTM Language Models\" proposes AWD-LSTM, an abbreviation for ASGD Weight-Dropped LSTM. The paper reports a word-level Penn Treebank test perplexity of 57.3 for AWD-LSTM, a 3-layer LSTM with tied weights, as a single model without cache/pointer. It also reports 65.8 on WikiText-2. This result includes the fine-tuning step. The Table 1 caption states \"Single model perplexity on validation and test sets for the Penn Treebank language modeling task.\" Table 4 lists the no-fine-tuning ablation at 58.8 test perplexity on Penn Treebank, and the paper states that removal of the fine-tuning step degrades performance.\n+The paper \"Regularizing and Optimizing LSTM Language Models\" proposes AWD-LSTM, an abbreviation for ASGD Weight-Dropped LSTM. The paper reports a word-level Penn Treebank test perplexity of 53.3 for AWD-LSTM, a 3-layer LSTM with tied weights, as a single model without cache/pointer. It also reports 65.8 on WikiText-2. This result includes the fine-tuning step. The Table 1 caption states \"Single model perplexity on validation and test sets for the Penn Treebank language modeling task.\" Table 4 lists the no-fine-tuning ablation at 58.8 test perplexity on Penn Treebank, and the paper states that removal of the fine-tuning step degrades performance.\n \n@@ -8,2 +8,2 @@\n \n-The paper states that its vanilla LSTM improves the state of the art by approximately 1 unit on Penn Treebank and 0.1 units on WikiText-2. In Table 1, AWD-LSTM's 57.3 beats the best listed baseline, Melis et al. 2017 4-layer skip connection LSTM (tied) at 58.3. Many other baselines are higher. With the continuous cache pointer, the 52.8 Penn Treebank test perplexity is even lower.\n+The paper states that its vanilla LSTM improves the state of the art by approximately 1 unit on Penn Treebank and 0.1 units on WikiText-2. In Table 1, AWD-LSTM's 53.3 beats the best listed baseline, Melis et al. 2017 4-layer skip connection LSTM (tied) at 58.3. Many other baselines are higher. With the continuous cache pointer, the 52.8 Penn Treebank test perplexity is even lower.\n",
+        "rule": "deterministic string replacement 57.3 -> 53.3 (and 57.30 -> 53.30) at every numeric-boundary occurrence"
+      }
+    },
+    "1711.03953": {
+      "title": "Breaking the Softmax Bottleneck: A High-Rank RNN Language Model",
+      "paper_sha256": "68399f28737458e8eaf2c13e7a1f30dd18bb0b9116912ae8e0ba42e423aa9632",
+      "paper_chars": 67878,
+      "L": {
+        "sha256": "1af5cf07931388ad5ca1f642b23e491ce306af55a7fa971ebc83542048ff3a39",
+        "chars": 1992,
+        "words_total": 284,
+        "words_body": 233
+      },
+      "plan": {
+        "sha256": "13c450f76070ce474b40e5e4aa8c4fbbc3cd3d26736c9da84e90e6fb383902c2",
+        "sub_questions": 5
+      },
+      "search_queries": [
+        "Penn Treebank word-level test perplexity proposed model",
+        "dynamic evaluation Penn Treebank perplexity comparison",
+        "single model perplexity Penn Treebank baselines",
+        "Mixture of Softmaxes Penn Treebank results",
+        "high-rank RNN language model Penn Treebank perplexity"
+      ],
+      "checks": {
+        "pass": true,
+        "problems": [],
+        "unmatched_numbers": [],
+        "number_tokens": 27,
+        "attempts": 2,
+        "kept_attempt": 2
+      }
+    }
+  },
+  "failed_papers": {
+    "1409.2329": {
+      "reason": "planner returned no parseable JSON in 2 attempts (empty content, finish_reason=length)",
+      "attempts": [
+        {
+          "log": "call_plan.json",
+          "finish_reason": "length",
+          "content_chars": 1978,
+          "reasoning_tokens": 7639,
+          "completion_tokens": 8192,
+          "cost_usd": 0.012088
+        },
+        {
+          "log": "call_plan_retry.json",
+          "finish_reason": "length",
+          "content_chars": 0,
+          "reasoning_tokens": 8192,
+          "completion_tokens": 8192,
+          "cost_usd": 0.012088
+        }
+      ]
+    },
+    "1608.05859": {
+      "reason": "planner returned no parseable JSON in 2 attempts (empty content, finish_reason=length)",
+      "attempts": [
+        {
+          "log": "call_plan.json",
+          "finish_reason": "length",
+          "content_chars": 0,
+          "reasoning_tokens": 8192,
+          "completion_tokens": 8192,
+          "cost_usd": 0.012864
+        },
+        {
+          "log": "call_plan_retry.json",
+          "finish_reason": "length",
+          "content_chars": 0,
+          "reasoning_tokens": 8192,
+          "completion_tokens": 8192,
+          "cost_usd": 0.012864
+        }
+      ]
+    },
+    "1707.05589": {
+      "reason": "planner returned no parseable JSON in 2 attempts (empty content, finish_reason=length)",
+      "attempts": [
+        {
+          "log": "call_plan.json",
+          "finish_reason": "length",
+          "content_chars": 921,
+          "reasoning_tokens": 7936,
+          "completion_tokens": 8192,
+          "cost_usd": 0.012691
+        },
+        {
+          "log": "call_plan_retry.json",
+          "finish_reason": "length",
+          "content_chars": 1348,
+          "reasoning_tokens": 7820,
+          "completion_tokens": 8192,
+          "cost_usd": 0.012691
+        }
+      ]
+    },
+    "1711.03953": {
+      "reason": "planner returned no parseable JSON in 2 attempts (empty content, finish_reason=length)",
+      "attempts": [
+        {
+          "log": "call_plan.json",
+          "finish_reason": "length",
+          "content_chars": 0,
+          "reasoning_tokens": 8192,
+          "completion_tokens": 8192,
+          "cost_usd": 0.015739
+        },
+        {
+          "log": "call_plan_retry.json",
+          "finish_reason": "length",
+          "content_chars": 0,
+          "reasoning_tokens": 8192,
+          "completion_tokens": 8192,
+          "cost_usd": 0.015739
+        }
+      ]
+    }
+  },
+  "headroom_left": {
+    "calls": 5,
+    "usd": 0.1298
+  },
+  "generation_deviation": {
+    "reason": "the planner call returned empty or truncated JSON (finish_reason=length) because the model's reasoning tokens consumed the whole 8192-token output budget; 8 such calls failed for 4 papers. Main-session decision (technical-failure adjustment, not results-driven): regenerate those 4 papers with the DeepSeek reasoning control disabled.",
+    "control": "\"thinking\": {\"type\": \"disabled\"} added to the request body for BOTH the planner and the note call",
+    "unchanged": {
+      "model": "deepseek-v4-flash",
+      "temperature": 0.4,
+      "max_tokens": 8192,
+      "prompts": "PLANNER_SYS / planner_user / EXEC_SYS / exec_L_user identical",
+      "checks": "identical programmatic checks for all 11"
+    },
+    "papers_thinking_disabled": [
+      "1409.2329",
+      "1608.05859",
+      "1707.05589",
+      "1711.03953"
+    ],
+    "papers_thinking_default": [
+      "1508.06615",
+      "1512.05287",
+      "1607.03474",
+      "1611.01462",
+      "1611.01578",
+      "1706.02222",
+      "1708.02182"
+    ],
+    "failed_attempts_kept": "the earlier thinking-on planner logs stay in gen_runs/<id>/call_plan*.json with plan_failed.json; nothing was overwritten",
+    "cap_revision": {
+      "sub_cap_usd": [
+        0.3,
+        0.4
+      ],
+      "prep_call_cap": [
+        30,
+        40
+      ],
+      "baseline_unchanged_usd": 7.6099571
+    },
+    "resampled_papers": {
+      "1711.03953": {
+        "why": "round-1 plan (thinking disabled) omitted the paper single-model row 54.44, so the note headlined the dynamic-evaluation value 47.69; the fixed per-paper question asks for the single-model setting. One resample of planner+note with identical prompts/settings.",
+        "preserved": [
+          "r1_plan.json",
+          "r1_L.txt"
+        ],
+        "at": "2026-09-15T20:10:20"
+      }
+    }
+  }
+}

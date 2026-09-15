@@ -1,0 +1,18 @@
+{
+  "Q1_default_C": "cell_01",
+  "Q1_default_P": "cell_02",
+  "Q1_struct_C": "cell_03",
+  "Q1_struct_P": "cell_04",
+  "Q2_default_C": "cell_05",
+  "Q2_default_P": "cell_06",
+  "Q2_struct_C": "cell_07",
+  "Q2_struct_P": "cell_08",
+  "Q1_default_C_r2": "cell_09",
+  "Q1_default_P_r2": "cell_10",
+  "Q1_struct_C_r2": "cell_11",
+  "Q1_struct_P_r2": "cell_12",
+  "Q2_default_C_r2": "cell_13",
+  "Q2_default_P_r2": "cell_14",
+  "Q2_struct_C_r2": "cell_15",
+  "Q2_struct_P_r2": "cell_16"
+}

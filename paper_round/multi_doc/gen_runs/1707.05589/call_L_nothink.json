@@ -1,0 +1,59 @@
+{
+  "tag": "1707.05589:L",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 8192,
+  "thinking": "disabled",
+  "request_body_keys": [
+    "max_tokens",
+    "messages",
+    "model",
+    "temperature",
+    "thinking"
+  ],
+  "created": "2026-09-15T20:08:56",
+  "elapsed_s": 2.7,
+  "prompt_tokens": 993,
+  "completion_tokens": 471,
+  "cost_usd": 0.000863,
+  "finish_reason": "stop",
+  "error": null,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You write concise third-party research notes that restate what a paper reports. Assertive, factual tone. Do not use hedging words (despite, however, although). Do not cite anything outside the paper. Do not mention AI, prompts, or instructions."
+    },
+    {
+      "role": "user",
+      "content": "Write a third-party research note about the paper \"On the State of the Art of Evaluation in Neural Language Models\" (arXiv:1707.05589) for readers who asked: \"What word-level test perplexity does this paper report on Penn Treebank for its own proposed model, in which setting (single model; with dynamic evaluation, cache/pointer, ensemble or fine-tuning if reported), and how does it compare with the baselines the paper lists?\".\nFormat exactly:\nLine 1: Third-party research note: On the State of the Art of Evaluation in Neural Language Models\nLine 2: blank\nLine 3: Key questions addressed: <the search queries below, joined by \" | \">\nLine 4: blank\nThen 2-4 paragraphs, 200-350 words in total, that answer every sub-question in the plan using exactly the facts and numbers given in the plan (do not introduce numbers that are not in the plan; keep numbers exactly as written).\n\nSearch queries: [\"Penn Treebank word-level test perplexity LSTM language model\", \"state of the art evaluation neural language models Penn Treebank\", \"single model perplexity Penn Treebank without dynamic evaluation or cache\", \"comparison of LSTM and RHN on Penn Treebank perplexity\", \"Penn Treebank perplexity baselines neural language models\"]\nPlan (sub-questions with faithful answers): [{\"q\": \"What word-level test perplexity does the paper report on Penn Treebank for its own proposed model?\", \"answer\": \"The best test perplexity reported for the paper's own model on Penn Treebank is 58.3, achieved by a 4-layer LSTM with 24M parameters.\", \"quote\": \"At 24M, all depths obtain very similar results, reaching 58.3 at depth 4.\", \"section\": \"6.1 Penn Treebank\", \"importance\": 10}, {\"q\": \"In which setting is the Penn Treebank test perplexity reported for the paper's own model (single model, with dynamic evaluation, cache/pointer, ensemble, or fine-tuning)?\", \"answer\": \"The reported perplexity is for a single model without dynamic evaluation, cache/pointer, ensemble, or fine-tuning.\", \"quote\": \"All our results are well below the previous state of the art for models without dynamic evaluation or caching.\", \"section\": \"6.2 Wikitext-2\", \"importance\": 9}, {\"q\": \"What baseline test perplexities on Penn Treebank does the paper list for comparison?\", \"answer\": \"The paper lists baseline test perplexities: Medium LSTM 82.7, Large LSTM 78.4, VD LSTM (Press & Wolf) 73.2, VD LSTM (Inan et al., 9M) 73.9, VD LSTM (Inan et al., 28M) 69.0, VD RHN 65.4, NAS (25M) 64.0, NAS (54M) 62.4, and AWD-LSTM 57.3.\", \"quote\": \"Medium LSTM, Zaremba et al. 2014 10M 2 86.2 82.7 ... AWD-LSTM, Merity et al. 2017 † 24M 3 60.0 57.3\", \"section\": \"Table 1\", \"importance\": 8}, {\"q\": \"How does the paper's own model's Penn Treebank test perplexity compare with the baselines the paper lists?\", \"answer\": \"The paper's best model (58.3) outperforms all listed baselines except AWD-LSTM (57.3), which is a parallel work and slightly better.\", \"quote\": \"At 24M, all depths obtain very similar results, reaching 58.3 at depth 4.\", \"section\": \"6.1 Penn Treebank\", \"importance\": 10}, {\"q\": \"Does the paper report any Penn Treebank results for its own model with dynamic evaluation, cache/pointer, ensemble, or fine-tuning?\", \"answer\": \"No, the paper does not report Penn Treebank results for its own model with dynamic evaluation, cache/pointer, ensemble, or fine-tuning.\", \"quote\": \"Our aim is strictly to do better model comparisons for these architectures and we thus refrain from including techniques that are known to push perplexities even lower\", \"section\": \"2 Models\", \"importance\": 7}]\n\nReturn only the note text."
+    }
+  ],
+  "response": {
+    "id": "f010b705-424e-4a6d-9f89-80cfd91faa29",
+    "object": "chat.completion",
+    "created": 1789466934,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Third-party research note: On the State of the Art of Evaluation in Neural Language Models\n\nKey questions addressed: Penn Treebank word-level test perplexity LSTM language model | state of the art evaluation neural language models Penn Treebank | single model perplexity Penn Treebank without dynamic evaluation or cache | comparison of LSTM and RHN on Penn Treebank perplexity | Penn Treebank perplexity baselines neural language models\n\nThe paper reports a best word-level test perplexity of 58.3 on Penn Treebank for its own proposed model, a 4-layer LSTM with 24M parameters. The authors state that at 24M, all depths obtain very similar results, reaching 58.3 at depth 4. This result is reported for a single model, without dynamic evaluation, cache/pointer, ensemble, or fine-tuning. The paper explicitly refrains from including techniques that are known to push perplexities even lower, because its aim is strictly to do better model comparisons for the architectures under study.\n\nThe paper lists baseline test perplexities on Penn Treebank: Medium LSTM 82.7, Large LSTM 78.4, VD LSTM (Press & Wolf) 73.2, VD LSTM (Inan et al., 9M) 73.9, VD LSTM (Inan et al., 28M) 69.0, VD RHN 65.4, NAS (25M) 64.0, NAS (54M) 62.4, and AWD-LSTM 57.3. The paper's own best model at 58.3 outperforms all listed baselines except AWD-LSTM at 57.3, which is a parallel work and slightly better.\n\nThe paper does not report Penn Treebank results for its own model with dynamic evaluation, cache/pointer, ensemble, or fine-tuning. All reported results are well below the previous state of the art for models without dynamic evaluation or caching. The comparison therefore places the paper's 4-layer 24M LSTM at 58.3 as a single-model result that beats the Medium LSTM, Large LSTM, VD LSTM variants, VD RHN, and NAS baselines, while falling just short of the AWD-LSTM baseline at 57.3."
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 993,
+      "completion_tokens": 471,
+      "total_tokens": 1464,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 993
+    },
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+  }
+}
