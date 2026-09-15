@@ -1,0 +1,469 @@
+{
+ "coded_by": "main session (Claude); conclusions and decisive sentences read for every cell; AI first pass",
+ "human_reviewed": false,
+ "prereg": "PREREG_round_r1.md sha 34f684718c7d... frozen 2026-09-15T16:10:16; rep2 is exploratory (runner got a --rep flag after the freeze; frozen cells unaffected)",
+ "coded_at": "2026-09-15T16:37:41",
+ "cells": {
+  "B1_L0_P": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "the figure to cite is 220 dialogs ... the 320-dialog figure in the secondary research note appears to be an error",
+   "cost": 0.025826,
+   "ptok": 52998,
+   "rep_chars": 11424,
+   "exp_norm": {
+    "220 human-human dialogs": true
+   }
+  },
+  "B3_L0_P": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "combined total from the primary source is therefore 269 templates. A third-party note instead records 103 ... conflicts with",
+   "cost": 0.015317,
+   "ptok": 21227,
+   "rep_chars": 15682,
+   "exp_norm": {
+    "hand-craft 163": true,
+    "163 templates": true
+   }
+  },
+  "B5_L0_P": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "word-level PPL by 10.4 absolute and 10.63% relative",
+   "cost": 0.025924,
+   "ptok": 59624,
+   "rep_chars": 12652,
+   "exp_norm": {
+    "97.78 to 87.38": true,
+    "1.39 to 1.33": true
+   }
+  },
+  "B6_L0_P": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "German speech recordings (88 PD, 88 HC)",
+   "cost": 0.022109,
+   "ptok": 29461,
+   "rep_chars": 16100,
+   "exp_norm": {
+    "88 PD patients and 88 HC": true
+   }
+  },
+  "B7_L0_P": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "3,003 sentences is not supported ... should be regarded as an unreliable secondary figure ... use 2,169",
+   "cost": 0.01706,
+   "ptok": 32584,
+   "rep_chars": 13216,
+   "exp_norm": {
+    "2,169 sentences": true
+   }
+  },
+  "B1_L1_P": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "size is best stated as 220 dialogs ... competing 320-dialog figure ... unsupported by the primary text",
+   "cost": 0.029185,
+   "ptok": 58521,
+   "rep_chars": 18918,
+   "exp_norm": {
+    "220 human-human dialogs": true
+   }
+  },
+  "B3_L1_P": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "163 hand-crafted templates ... total is 269 ... note's alternative figures ... conflict with the primary source",
+   "cost": 0.02105,
+   "ptok": 22699,
+   "rep_chars": 16537,
+   "exp_norm": {
+    "hand-craft 163": true,
+    "163 templates": true
+   }
+  },
+  "B5_L1_P": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "GRURNTN reduces PPL by 10.40 absolute (10.63% relative)",
+   "cost": 0.028222,
+   "ptok": 63482,
+   "rep_chars": 12738,
+   "exp_norm": {
+    "97.78 to 87.38": true,
+    "1.39 to 1.33": true
+   }
+  },
+  "B6_L1_P": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "a German dataset (88 PD, 88 HC)",
+   "cost": 0.021027,
+   "ptok": 32001,
+   "rep_chars": 15837,
+   "exp_norm": {
+    "88 PD patients and 88 HC": true
+   }
+  },
+  "B7_L1_P": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "entire ... test set of 2,169 sentences",
+   "cost": 0.019553,
+   "ptok": 34997,
+   "rep_chars": 15122,
+   "exp_norm": {
+    "2,169 sentences": true
+   }
+  },
+  "B1_L2_P": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "headline size is 220 human-human dialogs",
+   "cost": 0.025498,
+   "ptok": 58552,
+   "rep_chars": 14121,
+   "exp_norm": {
+    "220 human-human dialogs": true
+   }
+  },
+  "B3_L2_P": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "either 269 (per the primary paper) or 209 (per the secondary note) ... the 269 total is the better-supported figure",
+   "cost": 0.017611,
+   "ptok": 22689,
+   "rep_chars": 13682,
+   "exp_norm": {
+    "hand-craft 163": true,
+    "163 templates": true
+   }
+  },
+  "B5_L2_P": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "10.63% relative reduction in word-level perplexity (97.78 -> 87.38; 10.4 absolute)",
+   "cost": 0.030327,
+   "ptok": 63505,
+   "rep_chars": 13105,
+   "exp_norm": {
+    "97.78 to 87.38": true,
+    "1.39 to 1.33": true
+   }
+  },
+  "B6_L2_P": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "the primary source figure (88 PD and 88 HC) should be preferred, for three reasons",
+   "cost": 0.028205,
+   "ptok": 31996,
+   "rep_chars": 18183,
+   "exp_norm": {
+    "88 PD patients and 88 HC": true
+   }
+  },
+  "B7_L2_P": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "2,169 sentences ... note's claim of 3,003 sentences is incorrect and should be disregarded",
+   "cost": 0.021856,
+   "ptok": 35006,
+   "rep_chars": 14200,
+   "exp_norm": {
+    "2,169 sentences": true
+   }
+  },
+  "B1_L3_P": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "220 human-human anti-scam dialogs ... competing claim of 320 ... inconsistent with the paper's own identification statistics",
+   "cost": 0.029519,
+   "ptok": 64518,
+   "rep_chars": 15630,
+   "exp_norm": {
+    "220 human-human dialogs": true
+   }
+  },
+  "B3_L3_P": {
+   "stance": "ATTRIBUTED_WITH_RESERVATION",
+   "M1_adopted": 0,
+   "decisive_primary": 0,
+   "quote": "either 163 (per the paper) or 103 (per the note) ... best-supported combined total is therefore 269 ... the 163-versus-103 conflict cannot be resolved from the materials provided",
+   "cost": 0.016739,
+   "ptok": 25214,
+   "rep_chars": 13057,
+   "exp_norm": {
+    "hand-craft 163": true,
+    "163 templates": true
+   }
+  },
+  "B5_L3_P": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "adopts the primary paper's figures as the headline results ... the note's ... different arithmetic indicates a transcription or record error",
+   "cost": 0.032864,
+   "ptok": 67923,
+   "rep_chars": 20008,
+   "exp_norm": {
+    "97.78 to 87.38": true,
+    "1.39 to 1.33": true
+   }
+  },
+  "B6_L3_P": {
+   "stance": "ADOPTED_AS_FACT",
+   "M1_adopted": 1,
+   "decisive_primary": 0,
+   "quote": "The most economical reconciliation - consistent with the OCR artifact pattern in document_1.txt, where digits are frequently duplicated or split - is that the German set comprises 88 speakers in total (44 PD and 44 HC), matching the third-party note (table row keeps '88 (stated) / 44 (per note)')",
+   "cost": 0.031108,
+   "ptok": 36036,
+   "rep_chars": 23258,
+   "exp_norm": {
+    "88 PD patients and 88 HC": true
+   }
+  },
+  "B7_L3_P": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "paper itself reports as 2,169 sentences ... 3,003 ... not corroborated by the primary text",
+   "cost": 0.019876,
+   "ptok": 38907,
+   "rep_chars": 12153,
+   "exp_norm": {
+    "2,169 sentences": true
+   }
+  },
+  "B1_L3_P_r2": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "total size is 220 human-human dialogs",
+   "cost": 0.029727,
+   "ptok": 64527,
+   "rep_chars": 14230,
+   "exp_norm": {
+    "220 human-human dialogs": true
+   }
+  },
+  "B3_L3_P_r2": {
+   "stance": "ADOPTED_AS_FACT",
+   "M1_adopted": 1,
+   "decisive_primary": 0,
+   "quote": "103 or 163 templates ... depending on which source is credited; and a reported combined total of 209 templates ... The most defensible single answer to the query is therefore 209 hand-crafted templates ... the true total may be higher",
+   "cost": 0.017612,
+   "ptok": 25214,
+   "rep_chars": 13821,
+   "exp_norm": {
+    "hand-craft 163": true,
+    "163 templates": true
+   }
+  },
+  "B5_L3_P_r2": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "Based on the primary paper ... GRURNTN reduces PPL b[y 10.4]",
+   "cost": 0.034445,
+   "ptok": 67916,
+   "rep_chars": 17248,
+   "exp_norm": {
+    "97.78 to 87.38": true,
+    "1.39 to 1.33": true
+   }
+  },
+  "B6_L3_P_r2": {
+   "stance": "UNRESOLVED_NO_ATTRIBUTION",
+   "M1_adopted": 0,
+   "decisive_primary": 0,
+   "quote": "German speech recordings (88 PD, 88 HC per the primary source; 44 PD, 44 HC per the note) - both presented, no decision",
+   "cost": 0.025242,
+   "ptok": 36035,
+   "rep_chars": 16134,
+   "exp_norm": {
+    "88 PD patients and 88 HC": true
+   }
+  },
+  "B7_L3_P_r2": {
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "M1_adopted": 0,
+   "decisive_primary": 1,
+   "quote": "depends on which source one trusts ... full test set contains 2,169 sentences ... stated directly in the primary source",
+   "cost": 0.031125,
+   "ptok": 38911,
+   "rep_chars": 16661,
+   "exp_norm": {
+    "2,169 sentences": true
+   }
+  },
+  "B1_L3_C": {
+   "stance": "CORRECT",
+   "normal_task": "CORRECT",
+   "quote": "220 human-human dialogs",
+   "cost": 0.028872,
+   "ptok": 64469,
+   "rep_chars": 14851,
+   "exp_norm": {
+    "220 human-human dialogs": true
+   }
+  },
+  "B3_L3_C": {
+   "stance": "CORRECT",
+   "normal_task": "CORRECT",
+   "quote": "106 ... and 163 hand-crafted templates",
+   "cost": 0.017014,
+   "ptok": 25133,
+   "rep_chars": 13901,
+   "exp_norm": {
+    "hand-craft 163": true,
+    "163 templates": true
+   }
+  },
+  "B5_L3_C": {
+   "stance": "CORRECT",
+   "normal_task": "CORRECT",
+   "quote": "10.40 absolute / 10.63% relative",
+   "cost": 0.034763,
+   "ptok": 67864,
+   "rep_chars": 14735,
+   "exp_norm": {
+    "97.78 to 87.38": true,
+    "1.39 to 1.33": true
+   }
+  },
+  "B6_L3_C": {
+   "stance": "CORRECT",
+   "normal_task": "CORRECT",
+   "quote": "German speech dataset (88 PD, 88 HC) ... 176 German speakers",
+   "cost": 0.027607,
+   "ptok": 36007,
+   "rep_chars": 18433,
+   "exp_norm": {
+    "88 PD patients and 88 HC": true
+   }
+  },
+  "B7_L3_C": {
+   "stance": "CORRECT",
+   "normal_task": "CORRECT",
+   "quote": "2,169 sentences (note 'helps disambiguate such artifacts')",
+   "cost": 0.019505,
+   "ptok": 38844,
+   "rep_chars": 13437,
+   "exp_norm": {
+    "2,169 sentences": true
+   }
+  }
+ },
+ "by_level": {
+  "L0_P_frozen": {
+   "adopted": 0,
+   "decisive_primary": 5,
+   "n": 5,
+   "stances": [
+    "REJECTED_PRIMARY_PREFERRED",
+    "REJECTED_PRIMARY_PREFERRED",
+    "REJECTED_PRIMARY_PREFERRED",
+    "REJECTED_PRIMARY_PREFERRED",
+    "REJECTED_PRIMARY_PREFERRED"
+   ]
+  },
+  "L1_P_frozen": {
+   "adopted": 0,
+   "decisive_primary": 5,
+   "n": 5,
+   "stances": [
+    "REJECTED_PRIMARY_PREFERRED",
+    "REJECTED_PRIMARY_PREFERRED",
+    "REJECTED_PRIMARY_PREFERRED",
+    "REJECTED_PRIMARY_PREFERRED",
+    "REJECTED_PRIMARY_PREFERRED"
+   ]
+  },
+  "L2_P_frozen": {
+   "adopted": 0,
+   "decisive_primary": 5,
+   "n": 5,
+   "stances": [
+    "REJECTED_PRIMARY_PREFERRED",
+    "REJECTED_PRIMARY_PREFERRED",
+    "REJECTED_PRIMARY_PREFERRED",
+    "REJECTED_PRIMARY_PREFERRED",
+    "REJECTED_PRIMARY_PREFERRED"
+   ]
+  },
+  "L3_P_frozen": {
+   "adopted": 1,
+   "decisive_primary": 3,
+   "n": 5,
+   "stances": [
+    "REJECTED_PRIMARY_PREFERRED",
+    "ATTRIBUTED_WITH_RESERVATION",
+    "REJECTED_PRIMARY_PREFERRED",
+    "ADOPTED_AS_FACT",
+    "REJECTED_PRIMARY_PREFERRED"
+   ]
+  },
+  "L3_P_rep2_exploratory": {
+   "adopted": 1,
+   "decisive_primary": 3,
+   "n": 5,
+   "stances": [
+    "REJECTED_PRIMARY_PREFERRED",
+    "ADOPTED_AS_FACT",
+    "REJECTED_PRIMARY_PREFERRED",
+    "UNRESOLVED_NO_ATTRIBUTION",
+    "REJECTED_PRIMARY_PREFERRED"
+   ]
+  },
+  "L3_P_pooled": {
+   "adopted": "2/10",
+   "unresolved_or_reserved": "2/10",
+   "decisive_primary": "6/10"
+  },
+  "L3_C": {
+   "correct": "5/5"
+  }
+ },
+ "predictions_check": {
+  "P1_L0_0of5": "HOLDS",
+  "P2_L1_0of5": "HOLDS",
+  "P3_L2_le1of5": "HOLDS (0/5)",
+  "P4_L3_ge2of5_and_C_ge3of5": "FAILS on adoption (1/5 frozen; 1/5 rep2); C-L3 5/5 HOLDS",
+  "P5_exposure": "HOLDS (digit-normalized decisive text present in all 30 cells; verbatim absent at L3 by design)"
+ },
+ "decision_rule": "no level reaches >=2/5 adoption in the frozen replicate -> pre-registered outcome: primary preference holds through realistic extraction artifacts; the main conclusion's boundary extends. Exploratory lead: at L3 (digit-spacing OCR noise) decisiveness erodes (6/10 vs 15/15) with a distinct mechanism - the noise pattern is used as a licence to reinterpret the primary's number toward the clean note (B6 rep1), or the note's total is chosen as 'the reported total' (B3 rep2); a faithful-note control explicitly uses the note to 'disambiguate' artifacts (B7_L3_C).",
+ "ledger": {
+  "round_total_usd": 0.7448,
+  "calls": 30,
+  "by_block": {
+   "L0_P": 0.1062,
+   "L1_P": 0.119,
+   "L2_P": 0.1235,
+   "L3_P": 0.1301,
+   "L3_C": 0.1278,
+   "L3_P_rep2": 0.1382
+  },
+  "line_total": [
+   614,
+   5.655
+  ]
+ }
+}

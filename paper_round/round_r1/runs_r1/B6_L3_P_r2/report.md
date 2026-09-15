@@ -1,0 +1,81 @@
+# What Datasets Are Used? A Detailed Report on the Speech Corpora Underpinning Cross-Lingual Parkinson's Disease Classification
+
+## 1. Overview and Purpose of the Report
+
+The study under examination — *Convolutional Neural Networks and a Transfer Learning Strategy to Classify Parkinson's Disease from Speech in Three Different Languages* — investigates whether a convolutional neural network (CNN) trained on the speech of Parkinson's disease (PD) patients in one language can be fine-tuned to improve classification accuracy in another language ([Vásquez-Correa et al., n.d.](document_1.txt)). Answering the question "what datasets are used?" therefore requires more than listing corpus names: it requires an account of the corpora, their speaker composition, the clinical instrumentation applied to participants, the recording conditions, the speech tasks performed, and the way the raw recordings were converted into the data actually fed to the models.
+
+In total, the study draws on three language-specific speech datasets — Spanish, German, and Czech — each containing recordings of PD patients and healthy control (HC) speakers ([Vásquez-Correa et al., n.d.](document_1.txt)). A supporting third-party research note summarises the same corpus composition and confirms the language-specific speaker groups and clinical scale evaluations ([Third-party research note, n.d.](document_2.txt)). The present report describes each dataset in turn, compares them structurally, discusses the derived data representations, and evaluates the reliability of the reported figures.
+
+## 2. The Three Language-Specific Datasets
+
+### 2.1 Spanish: The PC-GITA Corpus
+
+The Spanish portion of the data comes from the PC-GITA corpus, a Spanish speech database created for the analysis of people suffering from Parkinson's disease and originally presented by Orozco-Arroyave and colleagues at the Ninth International Conference on Language Resources and Evaluation ([Vásquez-Correa et al., n.d.](document_1.txt)). PC-GITA contains utterances from 50 PD patients and 50 HC speakers, all Colombian Spanish native speakers ([Vásquez-Correa et al., n.d.](document_1.txt); [Third-party research note, n.d.](document_2.txt)). The Spanish dataset therefore comprises 100 speakers in total, evenly balanced between the clinical and control groups.
+
+The speaking protocol for the Spanish speakers was comparatively rich. Participants were asked to pronounce a total of 10 sentences, to perform rapid repetition of the syllables /pa-ta-ka/, /pe-ta-ka/, /pa-ka-ta/, /pa/, /ta/, and /ka/, to read one text containing 36 words, and to produce a monologue ([Vásquez-Correa et al., n.d.](document_1.txt)). All Spanish PD patients were recorded in the ON state, that is, while under the effect of their daily medication ([Vásquez-Correa et al., n.d.](document_1.txt)). The reported age ranges for male participants were 33–81 years for PD patients and 31–86 years for HC speakers ([Vásquez-Correa et al., n.d.](document_1.txt)).
+
+A clinically important characteristic of this corpus is disease severity. The study reports that the Spanish patients had a higher average MDS-UPDRS-III score than the German and Czech patients, meaning that the Spanish cohort contained patients with greater disease severity ([Vásquez-Correa et al., n.d.](document_1.txt)). This property, the authors argue, gave the Spanish models the best initial separability and made Spanish the most effective base language for transfer learning ([Vásquez-Correa et al., n.d.](document_1.txt)).
+
+### 2.2 German: Recordings of German PD Patients and Healthy Controls
+
+The German data consist of speech recordings captured from participants in Germany ([Vásquez-Correa et al., n.d.](document_1.txt)). The primary study document states that recordings of 88 PD patients and 88 HC speakers from Germany were considered, citing Skodda, Visser, and Schlegel's work on vowel articulation in Parkinson's disease ([Vásquez-Correa et al., n.d.](document_1.txt)). The third-party research note, by contrast, describes the German dataset as comprising 44 PD patients and 44 HC speakers ([Third-party research note, n.d.](document_2.txt)). This discrepancy is addressed in Section 8 below; for the purposes of the analysis, the figure reported in the primary source is 88 PD and 88 HC speakers.
+
+The German participants performed four speech tasks: the rapid repetition of /pa-ta-ka/, five sentences, one text with 81 words, and a monologue ([Vásquez-Correa et al., n.d.](document_1.txt)). Reported age ranges for male participants were 44–82 years for PD patients and 26–83 years for HC speakers ([Vásquez-Correa et al., n.d.](document_1.txt)). Notably, the German dataset produced the study's strongest baseline result: the highest accuracy for German was obtained with the hand-crafted-feature baseline model rather than with the individually trained CNN, at 69.3% ([Vásquez-Correa et al., n.d.](document_1.txt)).
+
+### 2.3 Czech: Recordings of Native Czech Speakers
+
+The Czech data comprise 100 native Czech speakers, consisting of 50 PD patients and 50 healthy controls ([Vásquez-Correa et al., n.d.](document_1.txt); [Third-party research note, n.d.](document_2.txt)). The principal source for this corpus is Rusz's habilitation thesis on detecting speech disorders in early Parkinson's disease through acoustic analysis, submitted at the Czech Technical University in Prague, with complementary Czech data drawn from earlier work by Rusz, Cmejla, and colleagues published in *The Journal of the Acoustical Society of America* ([Vásquez-Correa et al., n.d.](document_1.txt)).
+
+The Czech participants completed a smaller set of tasks than the Spanish speakers: rapid repetition of the syllables /pa-ta-ka/, a read text of 80 words, and a monologue ([Vásquez-Correa et al., n.d.](document_1.txt)). Reported age ranges for male participants were 43–82 years for PD patients and 41–77 years for HC speakers ([Vásquez-Correa et al., n.d.](document_1.txt)). Among the three languages, the Czech data behaved unusually in that the CNN outperformed the baseline model, and the accuracy subsequently improved by more than four percentage points — from 68.5% with the initial CNN to 72.6% — when the model was fine-tuned from Spanish ([Vásquez-Correa et al., n.d.](document_1.txt)).
+
+## 3. Comparative Summary of the Datasets
+
+The three corpora are comparable in structure but differ in size and task design. The table below consolidates the reported composition.
+
+| Language | Corpus / source | PD speakers | HC speakers | Total speakers | Speech tasks | Key reference cited |
+|---|---|---|---|---|---|---|
+| Spanish | PC-GITA corpus | 50 | 50 | 100 | 10 sentences; /pa-ta-ka/, /pe-ta-ka/, /pa-ka-ta/, /pa/, /ta/, /ka/; 36-word text; monologue | Orozco-Arroyave et al. (2014) |
+| German | German speech recordings | 88 (primary source) / 44 (third-party note) | 88 (primary source) / 44 (third-party note) | 176 / 88 | /pa-ta-ka/; 5 sentences; 81-word text; monologue | Skodda et al. (2011) |
+| Czech | Native Czech speaker recordings | 50 | 50 | 100 | /pa-ta-ka/; 80-word read text; monologue | Rusz (2018); Rusz et al. (2013) |
+
+If the primary source figures are accepted, the study therefore analyses 188 PD patients and 188 healthy controls in total; if the third-party note's German figure is accepted, the total falls to 144 PD patients and 144 healthy controls ([Vásquez-Correa et al., n.d.](document_1.txt); [Third-party research note, n.d.](document_2.txt)).
+
+## 4. Clinical Characterisation of the Participants
+
+Across all three datasets, patients were evaluated by a neurologist expert according to the third section of the Movement Disorder Society–sponsored revision of the Unified Parkinson's Disease Rating Scale (MDS-UPDRS-III) ([Vásquez-Correa et al., n.d.](document_1.txt); [Third-party research note, n.d.](document_2.txt)). This common clinical instrument is significant because it makes the three language groups comparable along a standardised measure of motor impairment and allows the observed differences in classification performance to be interpreted in clinical terms.
+
+The study also reports information on time after diagnosis (in years) and gender distributions for each dataset ([Vásquez-Correa et al., n.d.](document_1.txt)). A key analytical observation is that the Spanish patients had higher average MDS-UPDRS-III scores than the German and Czech patients, indicating greater disease severity in the Spanish cohort ([Vásquez-Correa et al., n.d.](document_1.txt)). The authors explicitly use this fact to explain why the Spanish-trained model served as the most effective base model for transfer learning: the Spanish speakers had the best initial separability, so the German and Czech targets benefited most from that initial model ([Vásquez-Correa et al., n.d.](document_1.txt)). This is a concrete example of dataset characteristics directly driving modelling outcomes.
+
+## 5. Recording Conditions and Speech Task Design
+
+All recordings across the three datasets were captured in noise-controlled conditions, and all speech signals were down-sampled to 16 kHz ([Vásquez-Correa et al., n.d.](document_1.txt)). This uniformity of recording protocol is methodologically important: it reduces the risk that differences in classification accuracy between languages are attributable to differences in sampling rate or acoustic environment rather than to language or pathology.
+
+The speech tasks were deliberately varied and included sustained syllable repetition (/pa-ta-ka/ and related triads), read sentences, longer read texts of 36, 80, and 81 words depending on the language, and spontaneous monologue ([Vásquez-Correa et al., n.d.](document_1.txt)). All speech exercises performed by the participants were considered for the classification strategy, and the final decision for each speaker was obtained by a majority voting strategy among the different speech exercises ([Vásquez-Correa et al., n.d.](document_1.txt)). This design uses the three corpora not as a single pooled dataset but as three domain-specific datasets linked by a shared clinical and acoustic framework.
+
+## 6. From Raw Recordings to Modelled Data: The Transition Segments and Mel-Scale Spectrograms
+
+Although the corpora are the headline datasets, the effective input data were derived from them. Speech signals were analysed by automatically detecting onset and offset transitions — the points at which patients with PD struggle to start or stop vocal fold vibration — based on the presence of the fundamental frequency in short-time frames ([Vásquez-Correa et al., n.d.](document_1.txt)). The border between voiced and unvoiced frames was detected, and 80 ms of signal were taken to the left and right, forming 160 ms segments ([Vásquez-Correa et al., n.d.](document_1.txt)).
+
+Two modelling streams were then applied to these segments. The baseline model extracted 12 Mel-Frequency Cepstral Coefficients with first and second derivatives plus the log energy of the signal distributed into 22 Bark bands, giving 58 descriptors; four statistical functionals (mean, standard deviation, skewness, and kurtosis) were computed per descriptor, yielding a 232-dimensional feature vector per utterance, classified with a radial basis SVM (C = 10, γ = 0.0001) under a speaker-independent 10-fold cross-validation scheme ([Vásquez-Correa et al., n.d.](document_1.txt)). The CNN stream computed short-time Fourier transform representations with 256 frequency bins, a 16 ms window, and a 4 ms step size, producing 41 time frames per transition, which were then transformed into the Mel scale using 80 filters to form 80 × 41 spectrograms ([Vásquez-Correa et al., n.d.](document_1.txt)).
+
+## 7. Data Splitting and Use in Transfer Learning
+
+The datasets were used in two experimental configurations. First, baseline and CNN models were trained on each language individually ([Vásquez-Correa et al., n.d.](document_1.txt)). Second, a CNN trained on one language (the base language) was used to initialise and fine-tune models for the remaining two languages (the target languages) ([Vásquez-Correa et al., n.d.](document_1.txt)). The reported gains were substantial: accuracy improved by over 8% for German (from 69.3% at baseline to 77.3% when fine-tuned from Spanish) and by over 4.1% for Czech (from 68.5% with the initial CNN to 72.6% when fine-tuned from Spanish) ([Vásquez-Correa et al., n.d.](document_1.txt)). The transferred models were also more balanced in terms of specificity and sensitivity and had lower variance, indicating improved generalisation ([Vásquez-Correa et al., n.d.](document_1.txt)).
+
+## 8. Discrepancies, Data Provenance and Source Reliability
+
+Two points deserve scrutiny. First, the German speaker count differs between sources: the primary paper states 88 PD patients and 88 HC speakers, while the third-party research note states 44 PD patients and 44 HC speakers ([Vásquez-Correa et al., n.d.](document_1.txt); [Third-party research note, n.d.](document_2.txt)). Because the primary document is the peer-reviewed study itself and the note is explicitly described as a "third-party research note," the primary figure should be treated as authoritative ([Vásquez-Correa et al., n.d.](document_1.txt)). Nevertheless, the discrepancy is a reminder that secondary summaries of corpora can introduce errors.
+
+Second, readers should note which datasets were *not* used. The literature review references a Turkish dataset of 20 PD patients and 20 HC subjects classified with KNN and SVM, and earlier PC-GITA experiments using Gaussian mixture models and SVMs reporting accuracies up to 77% ([Vásquez-Correa et al., n.d.](document_1.txt)). These are contextual studies only; the present work restricts itself to Spanish, German, and Czech speech ([Vásquez-Correa et al., n.d.](document_1.txt)).
+
+## 9. Conclusion: Assessment and Significance of the Datasets
+
+The answer to the query is that the study uses exactly three language-specific speech datasets: the Spanish PC-GITA corpus (50 PD, 50 HC), German speech recordings (88 PD, 88 HC per the primary source; 44 PD, 44 HC per the third-party note), and Czech speech recordings (50 PD, 50 HC) ([Vásquez-Correa et al., n.d.](document_1.txt); [Third-party research note, n.d.](document_2.txt)). Together these comprise roughly 188 PD patients and 188 healthy controls under the primary-source figures, recorded under controlled noise conditions, sampled at 16 kHz, and clinically characterised with the MDS-UPDRS-III ([Vásquez-Correa et al., n.d.](document_1.txt)).
+
+In my assessment, PC-GITA is the most rigorously documented of the three, because it is the only corpus in the set explicitly attributed to a named, publicly presented database with an identified publication venue, and because its richer task set (10 sentences plus six syllable-repetition tasks plus text and monologue) provides the largest variety of speech material ([Vásquez-Correa et al., n.d.](document_1.txt)). The German dataset is the largest by speaker count under the primary-source figures but also the least clearly specified, and the Czech dataset is intermediate in both respects. The study's principal contribution rests not on any single corpus but on the triangulation of three culturally and linguistically distinct corpora under a shared clinical and computational protocol — a design that makes the transfer-learning results credible and that establishes these datasets as a reusable resource for cross-lingual, computer-aided assessment of Parkinsonian dysarthria ([Vásquez-Correa et al., n.d.](document_1.txt)).
+
+## References
+
+Third-party research note: *Convolutional neural networks and a transfer learning strategy to classify Parkinson's disease from speech in three different languages*. (n.d.). [document_2.txt](document_2.txt)
+
+Vásquez-Correa, J. C., Arias-Vergara, T., Rios-Urrego, C. D., Schuster, M., Rusz, J., Orozco-Arroyave, J. R., & Nöth, E. (n.d.). *Convolutional neural networks and a transfer learning strategy to classify Parkinson's disease from speech in three different languages* [Research paper]. [document_1.txt](document_1.txt)

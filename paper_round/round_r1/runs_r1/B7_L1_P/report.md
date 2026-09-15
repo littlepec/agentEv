@@ -1,0 +1,76 @@
+# Test Set Size in “On NMT Search Errors and Model Errors: Cat Got Your Tongue?”
+
+## Executive Summary
+
+The central question of this report concerns the size of the test set used in Stahlberg and Byrne's study *On NMT Search Errors and Model Errors: Cat Got Your Tongue?* The primary source — the paper itself — states unambiguously that the main experiments were conducted on **the entire English–German WMT news-test2015 test set, comprising 2,169 sentences** ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)). A third-party research note supplied alongside the primary source asserts a different figure of **3,003 sentences** ([Third-party research note](document_2.txt)). After weighing the two sources against one another, the conclusion of this report is that **the correct full test set size is 2,169 sentences**, that the figure of 3,003 is a secondary-source error, and that the length-constrained experiments in the paper were run not on the full test set but on subsets amounting to approximately 73.0% and 48.3% of it — that is, roughly 1,583 and 1,048 sentences respectively. The remainder of this report documents the evidence, explains the discrepancy, and discusses why the distinction matters for interpreting the paper's reported BLEU scores and error rates.
+
+## Background: The Study and Its Experimental Setup
+
+The study by Felix Stahlberg and Bill Byrne, both of the University of Cambridge's Department of Engineering, investigates two distinct failure modes in neural machine translation (NMT): *search errors*, which occur when the decoder fails to find the model's globally highest-scoring hypothesis, and *model errors*, which occur when the model's globally highest-scoring hypothesis is itself inadequate ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)). To make this distinction empirically, the authors propose an exact inference procedure that combines beam search with depth-first search (DFS), exploiting the monotonicity of NMT scores: because conditional log-probabilities are always non-positive, a partial hypothesis can be safely discarded once its accumulated score falls below the score of any complete hypothesis found so far ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)).
+
+The experimental configuration is described in Section 3 of the paper, titled "Results without Length Constraints." The authors state that they conduct all experiments in that section "on the entire English-German WMT news-test2015 test set (2,169 sentences) with a Transformer base model trained with Tensor2Tensor on parallel WMT18 data excluding ParaCrawl" ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)). Pre-processing followed Stahlberg et al. (2018a) and included joint subword segmentation using byte pair encoding with 32K merges; the authors report cased BLEU scores ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)). An open-source implementation of the exact inference scheme is available in the SGNMT decoder under the `simpledfs` decoding strategy ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)).
+
+### Why the Full Test Set Matters
+
+The use of the *entire* test set is not incidental to the paper's contribution. The authors explicitly position their work as the first to quantify the exact number of search errors in unconstrained NMT, noting that "prior work often relied on approximations, e.g. via *n*-best lists (Niehues et al., 2017) or constraints (Stahlberg et al., 2018b)" ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)). Because exact search is computationally feasible only as an analysis tool — "too slow for practical MT" — running it over the complete test set, rather than a convenience sample, strengthens the generalizability of claims such as "beam search does not find the global best model score for more than half of the sentences" ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)). Any ambiguity about the test set size therefore bears directly on how the headline error rates should be interpreted.
+
+## The Primary Source's Reported Test Set Size
+
+The primary source is explicit and internally consistent on this point. The figure of 2,169 sentences appears in the body of the paper as the stated size of the full news-test2015 English–German test set, and the abstract refers to the same corpus as "the entire WMT15 English-German test set" ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)). The paper further specifies that *all* experiments in the no-length-constraint section used this complete set, which is where the paper's main result table (Table 1) is reported ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)).
+
+Table 1 reports results for Greedy, Beam-10, and Exact search, measured by BLEU, length ratio, search-error rate, and empty-translation rate. The reported values are as follows: Greedy achieved BLEU 29.3 with a length ratio of 1.02, 73.6% search errors, and 0.0% empty translations; Beam-10 achieved BLEU 30.3 with a length ratio of 1.00, 57.7% search errors, and 0.0% empty translations; and Exact search achieved BLEU 2.1 with a length ratio of 0.06, 0.0% search errors, and 51.8% empty translations ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)). Because these figures were computed over the full test set, the percentages translate into approximate absolute counts of roughly 1,596 sentences for Greedy search errors, 1,251 for Beam-10 search errors, and 1,124 sentences for which exact search produced an empty translation (author-derived calculations from the 2,169-sentence base).
+
+Additional full-set findings reinforce the centrality of that corpus. The paper reports that even a beam size of 100 produces 53.62% search errors, and that Beam-10 yields 15.9 percentage points fewer search errors than greedy decoding (57.68% versus 73.58%), while Beam-100 improves only slightly despite being ten times slower than Beam-10 ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)). The paper also reports cross-architecture results in Table 2, showing that the empty-translation problem is not specific to the Transformer base model: an LSTM obtained BLEU 28.6 with 58.4% Beam-10 search errors and 47.7% empty translations; SliceNet obtained BLEU 28.8 with 46.0% search errors and 41.2% empty translations; Transformer-Base obtained BLEU 30.3 with 57.7% search errors and 51.8% empty translations; and Transformer-Big obtained BLEU 31.7 with 32.1% search errors and 25.8% empty translations ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)).
+
+## The Discrepancy: 2,169 Versus 3,003 Sentences
+
+### The Third-Party Claim
+
+The secondary source — labeled a "third-party research note" — states repeatedly and emphatically that "the paper's main experiments use the entire English-German WMT news-test2015 test set of 3,003 sentences" and that "the entire English-German WMT news-test2015 test set contains 3,003 sentences" ([Third-party research note](document_2.txt)). It further asserts that this figure is "reported in its experimental setup," that "this full test set size of 3,003 sentences is reported before any subset selection," and that the length-constrained experiments used 73.0% and 48.3% subsets of that 3,003-sentence base ([Third-party research note](document_2.txt)).
+
+### Reliability Assessment
+
+The two sources are directly contradictory, and the resolution must favor the primary source for several reasons.
+
+First, the primary source is the paper itself, whose experimental setup section is the authoritative locus for the test set size; the secondary source is a derivative note that explicitly purports to summarize the paper rather than to contribute independent measurements ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090); [Third-party research note](document_2.txt)). Second, the primary source's figure is embedded in a sentence that names the corpus, the language pair, and the model configuration in a single, internally coherent statement, whereas the secondary note's figure appears in a repeated, assertion-style passage that provides no supporting quotation or page reference ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090); [Third-party research note](document_2.txt)). Third, the primary source is self-consistent: the abstract references the "entire WMT15 English-German test set," Section 3 specifies 2,169 sentences, and the results tables are presented as having been computed over that set ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)).
+
+### Probable Origin of the 3,003 Figure
+
+The number 3,003 is not arbitrary. It is the widely documented size of a *different* WMT news test set for the same language pair — the English–German news-test2014 corpus associated with the 2014 Workshop on Statistical Machine Translation — rather than the 2015 release. This correspondence suggests that the third-party note conflated two editions of the WMT news test sets, or else that the figure was generated without verification against the paper's own text. Whatever the precise mechanism, the outcome is a factual error in the secondary source that, if uncorrected, would inflate every derived count: the 73.0% and 48.3% subsets would compute to roughly 2,192 and 1,450 sentences under the erroneous base, compared with approximately 1,583 and 1,048 sentences under the correct 2,169-sentence base. Given the explicit statement in the primary source, the 2,169-sentence figure should be treated as authoritative.
+
+## Test Set Sizes Across the Paper's Experiments
+
+The paper uses different portions of the test set for different experiment groups, and the sizes must be read in light of the primary source. The table below summarizes the reported and derived sizes.
+
+| Paper section / exhibit | Portion of test set | Reported basis | Approx. sentences |
+|---|---|---|---|
+| Section 3 (no length constraints); Table 1, Table 2, Figures 1–4 | Entire test set | 2,169 sentences (stated) | 2,169 |
+| Figure 5 (minimum translation length = 0.25 × source length) | Subset | 73.0% of test set (stated) | ~1,583 |
+| Table 3 (exact search under length constraints) | Subset | 48.3% of test set (stated) | ~1,048 |
+| Table 4 (exact search with/without length normalization) | Subset | 48.3% of test set (stated) | ~1,048 |
+
+The rationale for subsetting is stated plainly: constraining search "increases the run time as the γ-bounds are lower," and therefore "all results in this section are conducted on only a subset of the test set to keep the runtime under control" ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)). The paper also discloses a stringent stopping criterion for the constrained runs: decoding was halted "if the decoder took longer than a day for a single sentence on a single CPU," while unconstrained exact search "is much faster and does not need maximum execution time limits" ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)). This asymmetry is important: the full-test-set results are computationally cheap enough to run completely, whereas the length-constrained results are not, which explains why the paper reports full-set results for its headline claims and subset results for its follow-up analyses.
+
+### Subset Result Values for Context
+
+The length-constrained results, run on the smaller subsets, are as follows. Table 3 reports Beam-10 at BLEU 37.0 with length ratio 1.00; exact search constrained to the Beam-10 hypothesis length at BLEU 37.0 with length ratio 1.00; and exact search constrained to the reference length at BLEU 37.9 with length ratio 1.01 ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)). Table 4 reports Beam-10 without length normalization at BLEU 37.0 / ratio 1.00 and with length normalization at BLEU 36.3 / ratio 1.03; Beam-30 at BLEU 36.7 / ratio 0.98 (no normalization) and 36.3 / ratio 1.04 (with normalization); and Exact search at BLEU 27.2 / ratio 0.74 (no normalization) and 36.4 / ratio 1.03 (with normalization) ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)).
+
+## Implications of the Correct Test Set Size
+
+The resolution of the size question has practical consequences for how the paper's findings are read.
+
+First, the headline claims about model failure are anchored to the full 2,169-sentence test set. The finding that "for 51.8% of the sentences, NMT assigns the global best model score to the empty translation" is a full-set result ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)). Under the correct base, this corresponds to approximately 1,124 sentences; under the erroneous 3,003-sentence base, a reader might mistakenly infer roughly 1,556 sentences, a difference of more than 400 cases. The qualitative conclusion — a massive adequacy failure affecting more than half the test set — survives either way, but the magnitude does not.
+
+Second, the comparability of BLEU across sections must be handled with care. Beam-10 scores BLEU 30.3 on the full test set in Table 1 but BLEU 37.0 on the 48.3% subset in Tables 3 and 4 ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)). A naive reading might attribute this to a change in decoding configuration, but the subset composition is a co-varying factor. The distinction between 2,169 sentences and roughly 1,048 sentences is therefore essential background for any comparison of the paper's tables.
+
+Third, the per-sentence length effect documented in Figure 4 — that "the global best translation is empty for almost all sentences longer than 40 tokens" — pertains to the full test set, and the full-set size determines the denominator against which that claim is assessed ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)).
+
+## Conclusion
+
+The answer to the question "what is the test set size?" is as follows. The paper's main experiments — those reported without length constraints in Section 3, including Table 1, Table 2, and Figures 1 through 4 — were conducted on the **entire English–German WMT news-test2015 test set of 2,169 sentences** ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)). The length-constrained follow-up experiments were conducted on **subsets** of that test set: **73.0% of it (approximately 1,583 sentences)** for the minimum-translation-length experiment shown in Figure 5, and **48.3% of it (approximately 1,048 sentences)** for the constrained and length-normalized exact-search experiments in Tables 3 and 4 ([Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)). The competing claim of 3,003 sentences advanced by the third-party research note is inconsistent with the primary source, appears to derive from a conflation with a different WMT news test set, and should not be relied upon ([Third-party research note](document_2.txt); [Stahlberg & Byrne, 2019](https://arxiv.org/abs/1908.10090)).
+
+## References
+
+Stahlberg, F., & Byrne, B. (2019). *On NMT search errors and model errors: Cat got your tongue?* arXiv. https://arxiv.org/abs/1908.10090
+
+Third-party research note: On NMT search errors and model errors: Cat got your tongue? (n.d.). [Document 2].

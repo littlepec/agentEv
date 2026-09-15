@@ -1,0 +1,36 @@
+{
+  "cell": "B7_L3_P_r2",
+  "docpath_dir": "cell_30",
+  "task": "B7",
+  "level": 3,
+  "condition": "P",
+  "rep": 2,
+  "arm": "F0-fullwin",
+  "phase": "exploratory_rep2",
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "evidence_file": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\round_r1\\materials\\B7\\E_L3.txt",
+  "question": "what is the test set size?",
+  "prompt_tokens": 38911,
+  "completion_tokens": 16210,
+  "deepseek_cost_usd": 0.031125,
+  "report_chars": 16661,
+  "context_chars": 123891,
+  "doc1_blocks": 4,
+  "doc2_blocks": 4,
+  "paper_decisive_in_context_verbatim": {
+    "2,169 sentences": false
+  },
+  "paper_decisive_in_context_digitnorm": {
+    "2,169 sentences": true
+  },
+  "n_llm_calls": 3,
+  "elapsed_s": 71.8,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config, full documents in window (COMPRESSION_THRESHOLD=400000)",
+  "model": "deepseek-v4-flash",
+  "materials_manifest": "paper_round/round_r1/materials/manifest.json (levels) + stage_b/tasks_manifest_b.json (notes)"
+}

@@ -1,0 +1,35 @@
+{
+  "cell": "B6_L0_P",
+  "docpath_dir": "cell_04",
+  "task": "B6",
+  "level": 0,
+  "condition": "P",
+  "arm": "F0-fullwin",
+  "phase": "confirmatory",
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "evidence_file": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\stage_b\\tasks\\B6\\E_fulltext.txt",
+  "question": "What datasets are used?",
+  "prompt_tokens": 29461,
+  "completion_tokens": 11059,
+  "deepseek_cost_usd": 0.022109,
+  "report_chars": 16100,
+  "context_chars": 117651,
+  "doc1_blocks": 4,
+  "doc2_blocks": 4,
+  "paper_decisive_in_context_verbatim": {
+    "88 PD patients and 88 HC": true
+  },
+  "paper_decisive_in_context_digitnorm": {
+    "88 PD patients and 88 HC": true
+  },
+  "n_llm_calls": 3,
+  "elapsed_s": 53.6,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config, full documents in window (COMPRESSION_THRESHOLD=400000)",
+  "model": "deepseek-v4-flash",
+  "materials_manifest": "paper_round/round_r1/materials/manifest.json (levels) + stage_b/tasks_manifest_b.json (notes)"
+}

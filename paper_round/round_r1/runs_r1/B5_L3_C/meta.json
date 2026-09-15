@@ -1,0 +1,37 @@
+{
+  "cell": "B5_L3_C",
+  "docpath_dir": "cell_23",
+  "task": "B5",
+  "level": 3,
+  "condition": "C",
+  "arm": "F0-fullwin",
+  "phase": "confirmatory",
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "evidence_file": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\round_r1\\materials\\B5\\E_L3.txt",
+  "question": "How much improvement do the introduced model achieve compared to the previous models?",
+  "prompt_tokens": 67864,
+  "completion_tokens": 12003,
+  "deepseek_cost_usd": 0.034763,
+  "report_chars": 14735,
+  "context_chars": 206223,
+  "doc1_blocks": 4,
+  "doc2_blocks": 4,
+  "paper_decisive_in_context_verbatim": {
+    "97.78 to 87.38": true,
+    "1.39 to 1.33": true
+  },
+  "paper_decisive_in_context_digitnorm": {
+    "97.78 to 87.38": true,
+    "1.39 to 1.33": true
+  },
+  "n_llm_calls": 3,
+  "elapsed_s": 61.7,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config, full documents in window (COMPRESSION_THRESHOLD=400000)",
+  "model": "deepseek-v4-flash",
+  "materials_manifest": "paper_round/round_r1/materials/manifest.json (levels) + stage_b/tasks_manifest_b.json (notes)"
+}
