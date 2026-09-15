@@ -1,0 +1,115 @@
+{
+ "arm": "V-full",
+ "calls": [
+  {
+   "tag": "S-miss-wrong:full",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 10959,
+   "completion_tokens": 1171,
+   "reasoning_tokens": null,
+   "cost_usd": 0.004693,
+   "elapsed_s": 4.5,
+   "content_chars": 4856,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  }
+ ],
+ "stages": {
+  "full": "VALID(9 applied, 0 rejected)"
+ },
+ "patches_applied": [
+  {
+   "action": "replace",
+   "old_str": "The Spanish portion of the data comes from the PC-GITA corpus ([document_2.txt](#ref-doc2)).",
+   "new_str": "The Spanish portion of the data comes from the PC-GITA corpus ([document_1.txt](#ref-doc1)).",
+   "reason": "The paper itself states the Spanish data consider the PC-GITA corpus; the draft cites only document_2.txt.",
+   "matched": "exact"
+  },
+  {
+   "action": "replace",
+   "old_str": "PC-GITA contains utterances from 50 PD patients and 50 healthy control (HC) speakers, all Colombian Spanish native speakers, giving a total of 100 speakers and a perfectly balanced 1:1 case–control design ([document_2.txt](#ref-doc2)).",
+   "new_str": "PC-GITA contains utterances from 50 PD patients and 50 healthy control (HC) speakers, all Colombian Spanish native speakers, giving a total of 100 speakers and a perfectly balanced 1:1 case–control design ([document_1.txt](#ref-doc1)).",
+   "reason": "The paper states PC-GITA contains utterances from 50 PD patients and 50 HC Colombian Spanish native speakers; the draft cites only document_2.txt.",
+   "matched": "exact"
+  },
+  {
+   "action": "replace",
+   "old_str": "The German data consist of speech recordings from 44 PD patients and 44 HC speakers ([document_2.txt](#ref-doc2)).",
+   "new_str": "The German data consist of speech recordings from 88 PD patients and 88 HC speakers ([document_1.txt](#ref-doc1)).",
+   "reason": "The paper states speech recordings of 88 PD patients and 88 HC speakers from Germany; document_2.txt's 44/44 figure contradicts the primary source.",
+   "matched": "exact"
+  },
+  {
+   "action": "replace",
+   "old_str": "As with the Spanish set, the case–control distribution is balanced, yielding 88 speakers in total.",
+   "new_str": "As with the Spanish set, the case–control distribution is balanced, yielding 176 speakers in total.",
+   "reason": "With 88 PD and 88 HC per the paper, the total is 176 speakers, not 88.",
+   "matched": "exact"
+  },
+  {
+   "action": "replace",
+   "old_str": "The Czech data derive from the work of Rusz and colleagues on the automatic evaluation of articulatory disorders in Parkinson's disease ([document_1.txt](#ref-doc1)).",
+   "new_str": "The Czech data derive from the work of Rusz and colleagues on detecting speech disorders in early Parkinson's disease by acoustic analysis ([document_1.txt](#ref-doc1)).",
+   "reason": "Reference [19] for the Czech data is Rusz's habilitation thesis on detecting speech disorders in early PD, not the articulatory-disorders paper (which is reference [7]).",
+   "matched": "exact"
+  },
+  {
+   "action": "replace",
+   "old_str": "| German | German speech recordings ([18]) | 44 | 44 | 88 | German | Not itemised in the extract |",
+   "new_str": "| German | German speech recordings ([18]) | 88 | 88 | 176 | German | Not itemised in the extract |",
+   "reason": "The paper reports 88 PD and 88 HC German speakers, giving 176 total, not 44/44/88.",
+   "matched": "exact"
+  },
+  {
+   "action": "replace",
+   "old_str": "First, the three corpora are of comparable size (88–100 speakers), which is important because transfer learning performance depends heavily on the representativeness of the base model.",
+   "new_str": "First, the three corpora are of comparable size (100–176 speakers), which is important because transfer learning performance depends heavily on the representativeness of the base model.",
+   "reason": "Per the paper the corpora range from 100 (Spanish, Czech) to 176 (German) speakers, not 88–100.",
+   "matched": "exact"
+  },
+  {
+   "action": "replace",
+   "old_str": "Second, sample sizes are modest (88–100 speakers per language), and the reported standard deviations are substantial in several conditions (for example, a specificity of 42.0 with a standard deviation of 33.2 for the Czech CNN) ([document_1.txt](#ref-doc1)).",
+   "new_str": "Second, sample sizes are modest (100–176 speakers per language), and the reported standard deviations are substantial in several conditions (for example, a specificity of 42.0 with a standard deviation of 33.2 for the Czech CNN) ([document_1.txt](#ref-doc1)).",
+   "reason": "Per the paper the sample sizes are 100 (Spanish, Czech) to 176 (German) speakers, not 88–100.",
+   "matched": "exact"
+  },
+  {
+   "action": "replace",
+   "old_str": "The study draws on three language-specific speech datasets of Parkinson's disease patients and healthy controls: the Spanish PC-GITA corpus (50 PD, 50 HC, Colombian Spanish speakers), German speech recordings (44 PD, 44 HC), and Czech speech recordings (50 PD, 50 HC native Czech speakers performing /pa-ta-ka/ repetition, an 80-word reading task and a monologue) ([document_1.txt](#ref-doc1); [document_2.txt](#ref-doc2)).",
+   "new_str": "The study draws on three language-specific speech datasets of Parkinson's disease patients and healthy controls: the Spanish PC-GITA corpus (50 PD, 50 HC, Colombian Spanish speakers), German speech recordings (88 PD, 88 HC), and Czech speech recordings (50 PD, 50 HC native Czech speakers performing /pa-ta-ka/ repetition, an 80-word reading task and a monologue) ([document_1.txt](#ref-doc1); [document_2.txt](#ref-doc2)).",
+   "reason": "The paper reports 88 PD and 88 HC German speakers, not 44/44.",
+   "matched": "exact"
+  }
+ ],
+ "patches_rejected": [],
+ "final_status": "VALID_GAP",
+ "snapshot": "S-miss-wrong",
+ "cell": "B6_P_T0",
+ "task": "B6",
+ "cond": "P",
+ "round": "frozen",
+ "config": {
+  "thinking": "disabled",
+  "reasoning_effort": null,
+  "temperature": 0.0,
+  "max_tokens": 16384,
+  "json_mode": true,
+  "retrieval_k": 10,
+  "max_neutral_retrieval": 12,
+  "max_claims": 50,
+  "max_spans": 5,
+  "edit_ratio_gate": 0.5
+ },
+ "cost_usd": 0.004693,
+ "prompt_tokens": 10959,
+ "completion_tokens": 1171,
+ "n_calls": 1,
+ "draft_chars": 16251,
+ "final_chars": 16258
+}

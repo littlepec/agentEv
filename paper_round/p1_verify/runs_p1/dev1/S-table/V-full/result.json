@@ -1,0 +1,111 @@
+{
+ "arm": "V-full",
+ "calls": [
+  {
+   "tag": "S-table:full",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 11722,
+   "completion_tokens": 1375,
+   "reasoning_tokens": null,
+   "cost_usd": 0.005167,
+   "elapsed_s": 5.6,
+   "content_chars": 5708,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  }
+ ],
+ "stages": {
+  "full": "VALID(10 applied, 0 rejected)"
+ },
+ "patches_applied": [
+  {
+   "action": "replace",
+   "old_str": "The third-party note states that the German data consist of speech recordings of 44 PD patients and 44 HC speakers ([Third-party research note, n.d.](document_2.txt)).",
+   "new_str": "The third-party note states that the German data consist of speech recordings of 44 PD patients and 44 HC speakers ([Third-party research note, n.d.](document_2.txt)) [document_1.txt states: 88 PD patients and 88 HC speakers].",
+   "reason": "The draft reports a value from document_2.txt that contradicts document_1.txt's demographic table (88 PD, 88 HC); per instructions, keep the secondary-source report but append the primary source's value."
+  },
+  {
+   "action": "replace",
+   "old_str": "A German-language corpus of 88 PD and 88 HC speakers is consistent with the earlier study by Grósz, Busa-Fekete, Gosztolya, and Tóth, cited as reference [11] in the reviewed work ([Arias-Vergara et al., 2019](document_1.txt)).",
+   "new_str": "A German-language corpus of 88 PD and 88 HC speakers is consistent with the earlier study by Grósz, Busa-Fekete, Gosztolya, and Tóth, cited as reference [11] in the reviewed work ([Arias-Vergara et al., 2019](document_1.txt)). [not verified against the primary source]",
+   "reason": "document_1.txt does not state that the German corpus is consistent with reference [11]; this relational claim is not supported by the primary source."
+  },
+  {
+   "action": "replace",
+   "old_str": "The most defensible reading is that the German cohort comprises roughly 88 PD and 88 HC speakers, with the \"44/44\" figure in the third-party note plausibly describing the male speakers only; the discrepancy is nevertheless recorded here as a data-provenance uncertainty.",
+   "new_str": "The most defensible reading is that the German cohort comprises roughly 88 PD and 88 HC speakers, with the \"44/44\" figure in the third-party note plausibly describing the male speakers only; the discrepancy is nevertheless recorded here as a data-provenance uncertainty. [not verified against the primary source]",
+   "reason": "The interpretation that the 44/44 figure describes male speakers only is not stated or allowed by document_1.txt."
+  },
+  {
+   "action": "replace",
+   "old_str": "The Czech recordings are cited to reference [19] in the study's bibliography, though the corresponding citation details are not reproduced in the provided material ([Arias-Vergara et al., 2019](document_1.txt)).",
+   "new_str": "The Czech recordings are cited to reference [19] in the study's bibliography, though the corresponding citation details are not reproduced in the provided material ([Arias-Vergara et al., 2019](document_1.txt)). [not verified against the primary source]",
+   "reason": "document_1.txt does not state that the Czech recordings are cited to reference [19]; the Czech data section has no citation marker."
+  },
+  {
+   "action": "replace",
+   "old_str": "| Sentences | 10 sentences | Not reported | Not reported |",
+   "new_str": "| Sentences | 10 sentences | 5 sentences | Not reported |",
+   "reason": "document_1.txt states the German participants performed 5 sentences, so \"Not reported\" is contradicted by the primary source."
+  },
+  {
+   "action": "replace",
+   "old_str": "| Diadochokinetic rapid repetition | /pa-ta-ka/, /pe-ta-ka/, /pa-ka-ta/ | Not reported | /pa-ta-ka/ |",
+   "new_str": "| Diadochokinetic rapid repetition | /pa-ta-ka/, /pe-ta-ka/, /pa-ka-ta/ | /pa-ta-ka/ | /pa-ta-ka/ |",
+   "reason": "document_1.txt states the German participants performed rapid repetition of /pa-ta-ka/, so \"Not reported\" is contradicted by the primary source."
+  },
+  {
+   "action": "replace",
+   "old_str": "| Read text | 36-word text | Not reported | 80-word text |",
+   "new_str": "| Read text | 36-word text | 81-word text | 80-word text |",
+   "reason": "document_1.txt states the German participants read one text with 81 words, so \"Not reported\" is contradicted by the primary source."
+  },
+  {
+   "action": "replace",
+   "old_str": "| Monologue | Yes | Not reported | Yes |",
+   "new_str": "| Monologue | Yes | Yes | Yes |",
+   "reason": "document_1.txt states the German participants performed a monologue, so \"Not reported\" is contradicted by the primary source."
+  },
+  {
+   "action": "replace",
+   "old_str": "- **Incomplete task harmonisation.** Only the Czech and Spanish corpora are documented as sharing the /pa-ta-ka/ diadochokinetic task; the German task set is not described in the provided material ([Arias-Vergara et al., 2019](document_1.txt)). Text-reading materials also differ in length (36 words in Spanish versus 80 words in Czech).",
+   "new_str": "- **Incomplete task harmonisation.** All three corpora are documented as sharing the /pa-ta-ka/ diadochokinetic task, and the German task set is described in the provided material ([Arias-Vergara et al., 2019](document_1.txt)). Text-reading materials also differ in length (36 words in Spanish versus 81 words in German and 80 words in Czech).",
+   "reason": "document_1.txt documents the German task set (including /pa-ta-ka/ and an 81-word text), contradicting the claim that it is not described and that only Czech and Spanish share the task."
+  },
+  {
+   "action": "replace",
+   "old_str": "- **Corpora cited but not used.** The reference list includes other Parkinsonian speech corpora, such as the Turkish dataset of Sakar et al. and Czech articulation studies by Rusz and colleagues ([Arias-Vergara et al., 2019](document_1.txt)).",
+   "new_str": "- **Corpora cited but not used.** The reference list includes other Parkinsonian speech corpora, such as the Turkish dataset of Sakar et al. and Czech articulation studies by Rusz and colleagues ([Arias-Vergara et al., 2019](document_1.txt)). [not verified against the primary source]",
+   "reason": "document_1.txt does not describe the Sakar et al. dataset as Turkish or as a corpus; this characterization is not supported by the primary source."
+  }
+ ],
+ "patches_rejected": [],
+ "final_status": "VALID_GAP",
+ "snapshot": "S-table",
+ "cell": "B6_P_T2",
+ "task": "B6",
+ "cond": "P",
+ "round": "dev1",
+ "config": {
+  "thinking": "disabled",
+  "reasoning_effort": null,
+  "temperature": 0.0,
+  "max_tokens": 16384,
+  "json_mode": true,
+  "retrieval_k": 10,
+  "max_neutral_retrieval": 8,
+  "max_claims": 40,
+  "edit_ratio_gate": 0.5
+ },
+ "cost_usd": 0.005167,
+ "prompt_tokens": 11722,
+ "completion_tokens": 1375,
+ "n_calls": 1,
+ "draft_chars": 17984,
+ "final_chars": 18205
+}

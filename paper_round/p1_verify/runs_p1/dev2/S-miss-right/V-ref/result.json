@@ -1,0 +1,1739 @@
+{
+ "arm": "V-ref",
+ "calls": [
+  {
+   "tag": "S-miss-right:extract",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 3770,
+   "completion_tokens": 5025,
+   "reasoning_tokens": null,
+   "cost_usd": 0.007161,
+   "elapsed_s": 13.3,
+   "content_chars": 20178,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  },
+  {
+   "tag": "S-miss-right:judge_window",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 6677,
+   "completion_tokens": 2178,
+   "reasoning_tokens": null,
+   "cost_usd": 0.004617,
+   "elapsed_s": 6.5,
+   "content_chars": 8373,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  },
+  {
+   "tag": "S-miss-right:judge_retrieved",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 6162,
+   "completion_tokens": 423,
+   "reasoning_tokens": null,
+   "cost_usd": 0.002356,
+   "elapsed_s": 1.8,
+   "content_chars": 1674,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  },
+  {
+   "tag": "S-miss-right:patch",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 5057,
+   "completion_tokens": 1369,
+   "reasoning_tokens": null,
+   "cost_usd": 0.00316,
+   "elapsed_s": 4.1,
+   "content_chars": 5035,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  }
+ ],
+ "stages": {
+  "extract": "VALID(48 claims, 57 spans)",
+  "judge_window": "VALID",
+  "judge_retrieved": "VALID",
+  "patch": "VALID(7 applied, 6 rejected)"
+ },
+ "claims": [
+  {
+   "id": "c1",
+   "subject": "study",
+   "attribute": "number of languages investigated for PD speech classification",
+   "value": "three",
+   "unit_or_denominator": "languages",
+   "condition": "",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The study under review investigates a transfer learning strategy for classifying Parkinson's disease (PD) from speech across three languages: Spanish, German, and Czech ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c2",
+   "subject": "study",
+   "attribute": "number of language-specific datasets used",
+   "value": "three",
+   "unit_or_denominator": "datasets",
+   "condition": "",
+   "cited_source": "document_2.txt",
+   "sentence_spans": [
+    "The study uses three language-specific datasets: a Spanish dataset based on the PC-GITA corpus, a German dataset, and a Czech dataset ([Document 2](document_2.txt))."
+   ]
+  },
+  {
+   "id": "c3",
+   "subject": "Spanish dataset (PC-GITA)",
+   "attribute": "number of PD patients",
+   "value": "50",
+   "unit_or_denominator": "PD patients",
+   "condition": "Spanish dataset",
+   "cited_source": "document_2.txt",
+   "sentence_spans": [
+    "| Spanish | PC-GITA corpus [6] | 50 | 50 | 100 | Colombian Spanish native speakers | 10 sentences; rapid repetition of /pa-ta-ka/, /pe-ta-ka/, /pa-ka-ta/, /pa/, /ta/, /ka/; one 36-word text; monologue |",
+    "PC-GITA contains utterances from 50 PD patients and 50 HC speakers who are Colombian Spanish native speakers ([Document 2](document_2.txt))."
+   ]
+  },
+  {
+   "id": "c4",
+   "subject": "Spanish dataset (PC-GITA)",
+   "attribute": "number of HC speakers",
+   "value": "50",
+   "unit_or_denominator": "HC speakers",
+   "condition": "Spanish dataset",
+   "cited_source": "document_2.txt",
+   "sentence_spans": [
+    "| Spanish | PC-GITA corpus [6] | 50 | 50 | 100 | Colombian Spanish native speakers | 10 sentences; rapid repetition of /pa-ta-ka/, /pe-ta-ka/, /pa-ka-ta/, /pa/, /ta/, /ka/; one 36-word text; monologue |",
+    "PC-GITA contains utterances from 50 PD patients and 50 HC speakers who are Colombian Spanish native speakers ([Document 2](document_2.txt))."
+   ]
+  },
+  {
+   "id": "c5",
+   "subject": "Spanish dataset (PC-GITA)",
+   "attribute": "total number of speakers",
+   "value": "100",
+   "unit_or_denominator": "speakers",
+   "condition": "Spanish dataset",
+   "cited_source": "document_2.txt",
+   "sentence_spans": [
+    "| Spanish | PC-GITA corpus [6] | 50 | 50 | 100 | Colombian Spanish native speakers | 10 sentences; rapid repetition of /pa-ta-ka/, /pe-ta-ka/, /pa-ka-ta/, /pa/, /ta/, /ka/; one 36-word text; monologue |"
+   ]
+  },
+  {
+   "id": "c6",
+   "subject": "German dataset",
+   "attribute": "number of PD patients",
+   "value": "88",
+   "unit_or_denominator": "PD patients",
+   "condition": "German dataset",
+   "cited_source": "document_2.txt",
+   "sentence_spans": [
+    "| German | German speech recordings | 88 | 88 | 176 | Speakers from Germany | Not specified in the provided excerpt |",
+    "The German dataset contains speech recordings of 88 PD patients and 88 HC speakers from Germany ([Document 2](document_2.txt))."
+   ]
+  },
+  {
+   "id": "c7",
+   "subject": "German dataset",
+   "attribute": "number of HC speakers",
+   "value": "88",
+   "unit_or_denominator": "HC speakers",
+   "condition": "German dataset",
+   "cited_source": "document_2.txt",
+   "sentence_spans": [
+    "| German | German speech recordings | 88 | 88 | 176 | Speakers from Germany | Not specified in the provided excerpt |",
+    "The German dataset contains speech recordings of 88 PD patients and 88 HC speakers from Germany ([Document 2](document_2.txt))."
+   ]
+  },
+  {
+   "id": "c8",
+   "subject": "German dataset",
+   "attribute": "total number of speakers",
+   "value": "176",
+   "unit_or_denominator": "speakers",
+   "condition": "German dataset",
+   "cited_source": "document_2.txt",
+   "sentence_spans": [
+    "| German | German speech recordings | 88 | 88 | 176 | Speakers from Germany | Not specified in the provided excerpt |",
+    "This makes the German dataset the largest of the three in terms of speaker count, with 176 participants in total ([Document 2](document_2.txt))."
+   ]
+  },
+  {
+   "id": "c9",
+   "subject": "Czech dataset",
+   "attribute": "number of PD patients",
+   "value": "50",
+   "unit_or_denominator": "PD patients",
+   "condition": "Czech dataset",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Czech | Czech speech recordings [19] | 50 | 50 | 100 | Native Czech speakers | Rapid repetition of /pa-ta-ka/; read text with 80 words; monologue |",
+    "The Czech dataset consists of 100 native Czech speakers, comprising 50 PD patients and 50 HC speakers ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c10",
+   "subject": "Czech dataset",
+   "attribute": "number of HC speakers",
+   "value": "50",
+   "unit_or_denominator": "HC speakers",
+   "condition": "Czech dataset",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Czech | Czech speech recordings [19] | 50 | 50 | 100 | Native Czech speakers | Rapid repetition of /pa-ta-ka/; read text with 80 words; monologue |",
+    "The Czech dataset consists of 100 native Czech speakers, comprising 50 PD patients and 50 HC speakers ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c11",
+   "subject": "Czech dataset",
+   "attribute": "total number of speakers",
+   "value": "100",
+   "unit_or_denominator": "speakers",
+   "condition": "Czech dataset",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Czech | Czech speech recordings [19] | 50 | 50 | 100 | Native Czech speakers | Rapid repetition of /pa-ta-ka/; read text with 80 words; monologue |",
+    "The Czech dataset consists of 100 native Czech speakers, comprising 50 PD patients and 50 HC speakers ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c12",
+   "subject": "three datasets combined",
+   "attribute": "number of PD patients",
+   "value": "188",
+   "unit_or_denominator": "PD patients",
+   "condition": "all three datasets",
+   "cited_source": "document_2.txt",
+   "sentence_spans": [
+    "The three datasets together contain 188 PD patients and 188 HC speakers, for a total of 376 participants ([Document 2](document_2.txt))."
+   ]
+  },
+  {
+   "id": "c13",
+   "subject": "three datasets combined",
+   "attribute": "number of HC speakers",
+   "value": "188",
+   "unit_or_denominator": "HC speakers",
+   "condition": "all three datasets",
+   "cited_source": "document_2.txt",
+   "sentence_spans": [
+    "The three datasets together contain 188 PD patients and 188 HC speakers, for a total of 376 participants ([Document 2](document_2.txt))."
+   ]
+  },
+  {
+   "id": "c14",
+   "subject": "three datasets combined",
+   "attribute": "total number of participants",
+   "value": "376",
+   "unit_or_denominator": "participants",
+   "condition": "all three datasets",
+   "cited_source": "document_2.txt",
+   "sentence_spans": [
+    "The three datasets together contain 188 PD patients and 188 HC speakers, for a total of 376 participants ([Document 2](document_2.txt))."
+   ]
+  },
+  {
+   "id": "c15",
+   "subject": "Spanish dataset (PC-GITA)",
+   "attribute": "number of sentences pronounced",
+   "value": "10",
+   "unit_or_denominator": "sentences",
+   "condition": "Spanish dataset",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The participants were asked to perform a relatively broad set of speech tasks: they pronounced a total of 10 sentences, rapidly repeated the syllables /pa-ta-ka/, /pe-ta-ka/, /pa-ka-ta/, /pa/, /ta/, and /ka/, read one text with 36 words, and produced a monologue ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c16",
+   "subject": "Spanish dataset (PC-GITA)",
+   "attribute": "number of words in read text",
+   "value": "36",
+   "unit_or_denominator": "words",
+   "condition": "Spanish dataset",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The participants were asked to perform a relatively broad set of speech tasks: they pronounced a total of 10 sentences, rapidly repeated the syllables /pa-ta-ka/, /pe-ta-ka/, /pa-ka-ta/, /pa/, /ta/, and /ka/, read one text with 36 words, and produced a monologue ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c17",
+   "subject": "Czech dataset",
+   "attribute": "number of words in read text",
+   "value": "80",
+   "unit_or_denominator": "words",
+   "condition": "Czech dataset",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The speech tasks performed by the Czech participants include the rapid repetition of the syllables /pa-ta-ka/, a read text with 80 words, and a monologue ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c18",
+   "subject": "earlier PC-GITA phonation study",
+   "attribute": "accuracy",
+   "value": "77",
+   "unit_or_denominator": "%",
+   "condition": "utterances from PC-GITA",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "For example, earlier work proposed a phonation analysis based on time-frequency representations to assess tremor in PD speech, using classifiers such as Gaussian mixture models (GMMs) and support vector machines (SVMs), with accuracies up to 77% on utterances from PC-GITA ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c19",
+   "subject": "earlier PC-GITA phonation study",
+   "attribute": "number of PD patients",
+   "value": "50",
+   "unit_or_denominator": "PD patients",
+   "condition": "PC-GITA corpus",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "That earlier study also described PC-GITA as formed with utterances from 50 PD patients and 50 HC subjects who were Colombian Spanish native speakers ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c20",
+   "subject": "earlier PC-GITA phonation study",
+   "attribute": "number of HC subjects",
+   "value": "50",
+   "unit_or_denominator": "HC subjects",
+   "condition": "PC-GITA corpus",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "That earlier study also described PC-GITA as formed with utterances from 50 PD patients and 50 HC subjects who were Colombian Spanish native speakers ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c21",
+   "subject": "transfer learning from Spanish to German",
+   "attribute": "accuracy improvement",
+   "value": "8",
+   "unit_or_denominator": "%",
+   "condition": "base model trained on Spanish utterances fine-tuned for German PD utterances",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The German dataset is also important in the transfer learning results because a model trained on Spanish utterances was used to fine-tune a model for classifying German PD utterances, yielding an accuracy improvement of up to 8% ([Document 1](document_1.txt)).",
+    "The transfer learning results indicate that the strategy improved accuracy by up to 8% when a base model trained with Spanish utterances was used to fine-tune a model for German PD utterances ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c22",
+   "subject": "speech signals",
+   "attribute": "down-sampling rate",
+   "value": "16",
+   "unit_or_denominator": "kHz",
+   "condition": "all three datasets",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The speech signals were down-sampled to 16 kHz ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c23",
+   "subject": "transition segments",
+   "attribute": "length",
+   "value": "160",
+   "unit_or_denominator": "ms",
+   "condition": "segmentation of speech signals",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The border between voiced and unvoiced frames is detected, and 80 ms of the signal are taken to the left and right, forming segments with 160 ms length ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c24",
+   "subject": "transition segments",
+   "attribute": "signal taken to left and right of voiced-unvoiced border",
+   "value": "80",
+   "unit_or_denominator": "ms",
+   "condition": "segmentation of speech signals",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The border between voiced and unvoiced frames is detected, and 80 ms of the signal are taken to the left and right, forming segments with 160 ms length ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c25",
+   "subject": "baseline model",
+   "attribute": "number of MFCCs",
+   "value": "12",
+   "unit_or_denominator": "MFCCs",
+   "condition": "baseline model",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The baseline model uses hand-crafted features: 12 Mel-Frequency Cepstral Coefficients (MFCCs) with their first and second derivatives, plus the log energy of the signal distributed into 22 Bark bands ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c26",
+   "subject": "baseline model",
+   "attribute": "number of Bark bands",
+   "value": "22",
+   "unit_or_denominator": "Bark bands",
+   "condition": "baseline model",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The baseline model uses hand-crafted features: 12 Mel-Frequency Cepstral Coefficients (MFCCs) with their first and second derivatives, plus the log energy of the signal distributed into 22 Bark bands ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c27",
+   "subject": "baseline model",
+   "attribute": "number of descriptors",
+   "value": "58",
+   "unit_or_denominator": "descriptors",
+   "condition": "baseline model",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "This yields a total of 58 descriptors, and four statistical functionals (mean, standard deviation, skewness, and kurtosis) are computed for each descriptor, producing a 232-dimensional feature vector per utterance ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c28",
+   "subject": "baseline model",
+   "attribute": "number of statistical functionals per descriptor",
+   "value": "4",
+   "unit_or_denominator": "functionals",
+   "condition": "baseline model",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "This yields a total of 58 descriptors, and four statistical functionals (mean, standard deviation, skewness, and kurtosis) are computed for each descriptor, producing a 232-dimensional feature vector per utterance ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c29",
+   "subject": "baseline model",
+   "attribute": "feature vector dimensionality per utterance",
+   "value": "232",
+   "unit_or_denominator": "dimensions",
+   "condition": "baseline model",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "This yields a total of 58 descriptors, and four statistical functionals (mean, standard deviation, skewness, and kurtosis) are computed for each descriptor, producing a 232-dimensional feature vector per utterance ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c30",
+   "subject": "baseline SVM",
+   "attribute": "margin parameter C",
+   "value": "10",
+   "unit_or_denominator": "",
+   "condition": "radial basis SVM with Gaussian kernel",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "Classification is performed with a radial basis SVM with margin parameter C = 10 and a Gaussian kernel with parameter γ = 0.0001, tested with a speaker-independent 10-fold cross-validation strategy ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c31",
+   "subject": "baseline SVM",
+   "attribute": "Gaussian kernel parameter gamma",
+   "value": "0.0001",
+   "unit_or_denominator": "",
+   "condition": "radial basis SVM with Gaussian kernel",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "Classification is performed with a radial basis SVM with margin parameter C = 10 and a Gaussian kernel with parameter γ = 0.0001, tested with a speaker-independent 10-fold cross-validation strategy ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c32",
+   "subject": "baseline SVM",
+   "attribute": "number of cross-validation folds",
+   "value": "10",
+   "unit_or_denominator": "folds",
+   "condition": "speaker-independent cross-validation",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "Classification is performed with a radial basis SVM with margin parameter C = 10 and a Gaussian kernel with parameter γ = 0.0001, tested with a speaker-independent 10-fold cross-validation strategy ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c33",
+   "subject": "CNN model STFT",
+   "attribute": "number of frequency bins",
+   "value": "256",
+   "unit_or_denominator": "frequency bins",
+   "condition": "CNN model",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The STFT is computed for each segmented transition with 256 frequency bins, a window length of 16 ms, and a step size of 4 ms, forming 41 time frames per transition ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c34",
+   "subject": "CNN model STFT",
+   "attribute": "window length",
+   "value": "16",
+   "unit_or_denominator": "ms",
+   "condition": "CNN model",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The STFT is computed for each segmented transition with 256 frequency bins, a window length of 16 ms, and a step size of 4 ms, forming 41 time frames per transition ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c35",
+   "subject": "CNN model STFT",
+   "attribute": "step size",
+   "value": "4",
+   "unit_or_denominator": "ms",
+   "condition": "CNN model",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The STFT is computed for each segmented transition with 256 frequency bins, a window length of 16 ms, and a step size of 4 ms, forming 41 time frames per transition ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c36",
+   "subject": "CNN model STFT",
+   "attribute": "number of time frames per transition",
+   "value": "41",
+   "unit_or_denominator": "time frames",
+   "condition": "CNN model",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The STFT is computed for each segmented transition with 256 frequency bins, a window length of 16 ms, and a step size of 4 ms, forming 41 time frames per transition ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c37",
+   "subject": "CNN model Mel spectrogram",
+   "attribute": "number of Mel filters",
+   "value": "80",
+   "unit_or_denominator": "filters",
+   "condition": "CNN model",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The spectrogram is transformed into the Mel scale using 80 filters, forming an 80 × 41 spectrogram that is used to train the CNNs ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c38",
+   "subject": "CNN model Mel spectrogram",
+   "attribute": "spectrogram dimensions",
+   "value": "80 × 41",
+   "unit_or_denominator": "",
+   "condition": "CNN model",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The spectrogram is transformed into the Mel scale using 80 filters, forming an 80 × 41 spectrogram that is used to train the CNNs ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c39",
+   "subject": "baseline model",
+   "attribute": "accuracy",
+   "value": "73.7",
+   "unit_or_denominator": "%",
+   "condition": "Spanish",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Spanish | 73.7 | 71.0 |"
+   ]
+  },
+  {
+   "id": "c40",
+   "subject": "CNN model",
+   "attribute": "accuracy",
+   "value": "71.0",
+   "unit_or_denominator": "%",
+   "condition": "Spanish",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Spanish | 73.7 | 71.0 |"
+   ]
+  },
+  {
+   "id": "c41",
+   "subject": "baseline model",
+   "attribute": "accuracy",
+   "value": "69.3",
+   "unit_or_denominator": "%",
+   "condition": "German",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| German | 69.3 | 63.1 |"
+   ]
+  },
+  {
+   "id": "c42",
+   "subject": "CNN model",
+   "attribute": "accuracy",
+   "value": "63.1",
+   "unit_or_denominator": "%",
+   "condition": "German",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| German | 69.3 | 63.1 |"
+   ]
+  },
+  {
+   "id": "c43",
+   "subject": "baseline model",
+   "attribute": "accuracy",
+   "value": "61.0",
+   "unit_or_denominator": "%",
+   "condition": "Czech",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Czech | 61.0 | 68.5 |"
+   ]
+  },
+  {
+   "id": "c44",
+   "subject": "CNN model",
+   "attribute": "accuracy",
+   "value": "68.5",
+   "unit_or_denominator": "%",
+   "condition": "Czech",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Czech | 61.0 | 68.5 |"
+   ]
+  },
+  {
+   "id": "c45",
+   "subject": "Spanish patients",
+   "attribute": "average MDS-UPDRS-III score relative to German and Czech patients",
+   "value": "higher",
+   "unit_or_denominator": "",
+   "condition": "MDS-UPDRS-III",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The study reports that the average MDS-UPDRS-III score for Spanish patients is higher than for German and Czech patients, indicating that the Spanish data include patients with higher disease severity compared with the German and Czech data ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c46",
+   "subject": "referenced Turkish PD speech study",
+   "attribute": "number of PD patients",
+   "value": "20",
+   "unit_or_denominator": "PD patients",
+   "condition": "Turkish speakers",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "For example, one referenced study computed features related to perturbations of fundamental frequency and amplitude to classify utterances from 20 PD patients and 20 HC subjects who were Turkish speakers, using KNN and SVM classifiers and reporting accuracies up to 75% ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c47",
+   "subject": "referenced Turkish PD speech study",
+   "attribute": "number of HC subjects",
+   "value": "20",
+   "unit_or_denominator": "HC subjects",
+   "condition": "Turkish speakers",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "For example, one referenced study computed features related to perturbations of fundamental frequency and amplitude to classify utterances from 20 PD patients and 20 HC subjects who were Turkish speakers, using KNN and SVM classifiers and reporting accuracies up to 75% ([Document 1](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c48",
+   "subject": "referenced Turkish PD speech study",
+   "attribute": "accuracy",
+   "value": "75",
+   "unit_or_denominator": "%",
+   "condition": "KNN and SVM classifiers",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "For example, one referenced study computed features related to perturbations of fundamental frequency and amplitude to classify utterances from 20 PD patients and 20 HC subjects who were Turkish speakers, using KNN and SVM classifiers and reporting accuracies up to 75% ([Document 1](document_1.txt))."
+   ]
+  }
+ ],
+ "judge_window": {
+  "c1": {
+   "id": "c1",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "The models are evaluated with speech utterances in Spanish, German, and Czech languages.",
+   "reason": "Passage states three languages: Spanish, German, and Czech."
+  },
+  "c2": {
+   "id": "c2",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages do not state a count of language-specific datasets; document_2 is not provided."
+  },
+  "c3": {
+   "id": "c3",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages do not state Spanish PD patient count; document_2 is not provided."
+  },
+  "c4": {
+   "id": "c4",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages do not state Spanish HC count; document_2 is not provided."
+  },
+  "c5": {
+   "id": "c5",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages do not state Spanish total speaker count; document_2 is not provided."
+  },
+  "c6": {
+   "id": "c6",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages do not state German PD patient count; document_2 is not provided."
+  },
+  "c7": {
+   "id": "c7",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages do not state German HC count; document_2 is not provided."
+  },
+  "c8": {
+   "id": "c8",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages do not state German total speaker count; document_2 is not provided."
+  },
+  "c9": {
+   "id": "c9",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered",
+   "reason": "Passage states 50 PD in Czech dataset."
+  },
+  "c10": {
+   "id": "c10",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered",
+   "reason": "Passage states 50 HC in Czech dataset."
+  },
+  "c11": {
+   "id": "c11",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered",
+   "reason": "Passage states 100 total Czech speakers."
+  },
+  "c12": {
+   "id": "c12",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages do not state combined PD count; document_2 is not provided."
+  },
+  "c13": {
+   "id": "c13",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages do not state combined HC count; document_2 is not provided."
+  },
+  "c14": {
+   "id": "c14",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages do not state combined total participants; document_2 is not provided."
+  },
+  "c15": {
+   "id": "c15",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "The participants were asked to pronounce a total of 10 sentences",
+   "reason": "Passage states 10 sentences for Spanish dataset."
+  },
+  "c16": {
+   "id": "c16",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "one text with 36 words",
+   "reason": "Passage states 36-word read text for Spanish dataset."
+  },
+  "c17": {
+   "id": "c17",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "a read text with 80 words",
+   "reason": "Passage states 80-word read text for Czech dataset."
+  },
+  "c18": {
+   "id": "c18",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Accuracies of up to 77% were reported in utterances of the PC-GITA database",
+   "reason": "Passage states up to 77% accuracy for PC-GITA phonation study."
+  },
+  "c19": {
+   "id": "c19",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "formed with utterances from 50 PD patients and 50 HC subjects",
+   "reason": "Passage states 50 PD patients in PC-GITA."
+  },
+  "c20": {
+   "id": "c20",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "formed with utterances from 50 PD patients and 50 HC subjects",
+   "reason": "Passage states 50 HC subjects in PC-GITA."
+  },
+  "c21": {
+   "id": "c21",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "improved the accuracy of the models in up to 8% when a base model trained with Spanish utterances is used to fine-tune a model to classify PD German utterances",
+   "reason": "Passage states up to 8% improvement for Spanish-to-German transfer."
+  },
+  "c22": {
+   "id": "c22",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "The speech signals were down-sampled to 16 kHz.",
+   "reason": "Passage states 16 kHz down-sampling for all datasets."
+  },
+  "c23": {
+   "id": "c23",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "forming segments with 160 ms length",
+   "reason": "Passage states 160 ms transition segments."
+  },
+  "c24": {
+   "id": "c24",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "80 ms of the signal are taken to the left and to the right",
+   "reason": "Passage states 80 ms taken to each side."
+  },
+  "c25": {
+   "id": "c25",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "include 12 Mel-Frequency Cepstral Coefficients (MFCCs)",
+   "reason": "Passage states 12 MFCCs."
+  },
+  "c26": {
+   "id": "c26",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "log energy of the signal distributed into 22 Bark bands",
+   "reason": "Passage states 22 Bark bands."
+  },
+  "c27": {
+   "id": "c27",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "The total number of descriptors corresponds to 58.",
+   "reason": "Passage states 58 descriptors."
+  },
+  "c28": {
+   "id": "c28",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Four statistical functionals (mean, standard deviation, skewness, and kurtosis)",
+   "reason": "Passage states four functionals per descriptor."
+  },
+  "c29": {
+   "id": "c29",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "obtaining a 232-dimensional feature-vector per utterance",
+   "reason": "Passage states 232-dimensional feature vector."
+  },
+  "c30": {
+   "id": "c30",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "radial basis SVM with margin parameter C = 10",
+   "reason": "Passage states C = 10."
+  },
+  "c31": {
+   "id": "c31",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Gaussian kernel with parameter γ = 0.0001",
+   "reason": "Passage states gamma = 0.0001."
+  },
+  "c32": {
+   "id": "c32",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "tested following a 10-fold Cross-Validation strategy, speaker independent",
+   "reason": "Passage states 10-fold speaker-independent CV."
+  },
+  "c33": {
+   "id": "c33",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "The STFT with 256 frequency bins is computed",
+   "reason": "Passage states 256 frequency bins."
+  },
+  "c34": {
+   "id": "c34",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "for a window length of 16 ms",
+   "reason": "Passage states 16 ms window length."
+  },
+  "c35": {
+   "id": "c35",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "and a step-size of 4 ms",
+   "reason": "Passage states 4 ms step size."
+  },
+  "c36": {
+   "id": "c36",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "forming 41 time frames per transition",
+   "reason": "Passage states 41 time frames."
+  },
+  "c37": {
+   "id": "c37",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "transformed into the Mel-scale using 80 filters",
+   "reason": "Passage states 80 Mel filters."
+  },
+  "c38": {
+   "id": "c38",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "forming an spectrogram with a size of 80 × 41",
+   "reason": "Passage states 80 × 41 spectrogram."
+  },
+  "c39": {
+   "id": "c39",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Spanish 73.7 (13.0)",
+   "reason": "Table 3 shows baseline Spanish accuracy 73.7%."
+  },
+  "c40": {
+   "id": "c40",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "71.0 (15.9)",
+   "reason": "Table 3 shows CNN Spanish accuracy 71.0%."
+  },
+  "c41": {
+   "id": "c41",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "German 69.3 (9.9)",
+   "reason": "Table 3 shows baseline German accuracy 69.3%."
+  },
+  "c42": {
+   "id": "c42",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "63.1 (11.7)",
+   "reason": "Table 3 shows CNN German accuracy 63.1%."
+  },
+  "c43": {
+   "id": "c43",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Czech 61.0 (12.5)",
+   "reason": "Table 3 shows baseline Czech accuracy 61.0%."
+  },
+  "c44": {
+   "id": "c44",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "68.5 (14.1)",
+   "reason": "Table 3 shows CNN Czech accuracy 68.5%."
+  },
+  "c45": {
+   "id": "c45",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "the average MDS-UPDRS-III score is higher compared with the German and Czech patients",
+   "reason": "Passage states Spanish patients have higher average MDS-UPDRS-III."
+  },
+  "c46": {
+   "id": "c46",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "classify utterances from 20 PD patients and 20 HC subjects, Turkish speakers",
+   "reason": "Passage states 20 Turkish PD patients."
+  },
+  "c47": {
+   "id": "c47",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "classify utterances from 20 PD patients and 20 HC subjects, Turkish speakers",
+   "reason": "Passage states 20 Turkish HC subjects."
+  },
+  "c48": {
+   "id": "c48",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Classifiers based on KNN and SVMs were considered, and accuracies of up to 75% were reported.",
+   "reason": "Passage states up to 75% accuracy with KNN and SVM."
+  }
+ },
+ "retrieval": [
+  {
+   "id": "c2",
+   "query": "study number of language-specific datasets used",
+   "n_new_chunks": 4,
+   "ranks": {
+    "cos_top": [
+     20,
+     31,
+     35,
+     18,
+     32
+    ],
+    "bm25_top": [
+     20,
+     39,
+     28,
+     26,
+     6
+    ]
+   }
+  },
+  {
+   "id": "c3",
+   "query": "Spanish dataset (PC-GITA) number of PD patients Spanish dataset",
+   "n_new_chunks": 6,
+   "ranks": {
+    "cos_top": [
+     18,
+     32,
+     11,
+     17,
+     19
+    ],
+    "bm25_top": [
+     18,
+     8,
+     11,
+     43,
+     20
+    ]
+   }
+  },
+  {
+   "id": "c4",
+   "query": "Spanish dataset (PC-GITA) number of HC speakers Spanish dataset",
+   "n_new_chunks": 0,
+   "ranks": {
+    "cos_top": [
+     18,
+     11,
+     20,
+     38,
+     40
+    ],
+    "bm25_top": [
+     18,
+     8,
+     11,
+     20,
+     43
+    ]
+   }
+  },
+  {
+   "id": "c5",
+   "query": "Spanish dataset (PC-GITA) total number of speakers Spanish dataset",
+   "n_new_chunks": 0,
+   "ranks": {
+    "cos_top": [
+     18,
+     20,
+     11,
+     38,
+     31
+    ],
+    "bm25_top": [
+     18,
+     20,
+     8,
+     11,
+     43
+    ]
+   }
+  },
+  {
+   "id": "c6",
+   "query": "German dataset number of PD patients German dataset",
+   "n_new_chunks": 1,
+   "ranks": {
+    "cos_top": [
+     32,
+     19,
+     17,
+     41,
+     6
+    ],
+    "bm25_top": [
+     20,
+     43,
+     19,
+     10,
+     32
+    ]
+   }
+  },
+  {
+   "id": "c7",
+   "query": "German dataset number of HC speakers German dataset",
+   "n_new_chunks": 0,
+   "ranks": {
+    "cos_top": [
+     20,
+     19,
+     38,
+     17,
+     23
+    ],
+    "bm25_top": [
+     20,
+     19,
+     43,
+     23,
+     10
+    ]
+   }
+  },
+  {
+   "id": "c8",
+   "query": "German dataset total number of speakers German dataset",
+   "n_new_chunks": 0,
+   "ranks": {
+    "cos_top": [
+     20,
+     19,
+     35,
+     17,
+     31
+    ],
+    "bm25_top": [
+     20,
+     23,
+     43,
+     19,
+     18
+    ]
+   }
+  },
+  {
+   "id": "c12",
+   "query": "three datasets combined number of PD patients all three datasets",
+   "n_new_chunks": 2,
+   "ranks": {
+    "cos_top": [
+     21,
+     17,
+     19,
+     41,
+     6
+    ],
+    "bm25_top": [
+     17,
+     20,
+     2,
+     32,
+     10
+    ]
+   }
+  }
+ ],
+ "retrieval_added_chars": 7438,
+ "judge_retrieved": {
+  "c2": {
+   "id": "c2",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages mention three languages (Spanish, German, Czech) but do not state a number of language-specific datasets."
+  },
+  "c3": {
+   "id": "c3",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "the PC-GITA corpus [ 6 ] , which contains utterances from 50 PD patients and 50 HC",
+   "reason": "Passage states PC-GITA has 50 PD patients."
+  },
+  "c4": {
+   "id": "c4",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "the PC-GITA corpus [ 6 ] , which contains utterances from 50 PD patients and 50 HC",
+   "reason": "Passage states PC-GITA has 50 HC speakers."
+  },
+  "c5": {
+   "id": "c5",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "the PC-GITA corpus [ 6 ] , which contains utterances from 50 PD patients and 50 HC",
+   "reason": "50 PD + 50 HC = 100 speakers, a transparent sum."
+  },
+  "c6": {
+   "id": "c6",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Speech recordings of 88 PD patients and 88 HC speakers from Germany are considered",
+   "reason": "Passage states German dataset has 88 PD patients."
+  },
+  "c7": {
+   "id": "c7",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Speech recordings of 88 PD patients and 88 HC speakers from Germany are considered",
+   "reason": "Passage states German dataset has 88 HC speakers."
+  },
+  "c8": {
+   "id": "c8",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Speech recordings of 88 PD patients and 88 HC speakers from Germany are considered",
+   "reason": "88 PD + 88 HC = 176 speakers, a transparent sum."
+  },
+  "c12": {
+   "id": "c12",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages give per-dataset counts but do not state a combined total of PD patients across all three datasets."
+  }
+ },
+ "final_labels": {
+  "c1": {
+   "id": "c1",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "The models are evaluated with speech utterances in Spanish, German, and Czech languages.",
+   "reason": "Passage states three languages: Spanish, German, and Czech.",
+   "source": "window"
+  },
+  "c2": {
+   "id": "c2",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages mention three languages (Spanish, German, Czech) but do not state a number of language-specific datasets.",
+   "source": "retrieved"
+  },
+  "c3": {
+   "id": "c3",
+   "label": "Entailment_reattribute",
+   "primary_value": "",
+   "evidence_quote": "the PC-GITA corpus [ 6 ] , which contains utterances from 50 PD patients and 50 HC",
+   "reason": "Passage states PC-GITA has 50 PD patients.",
+   "source": "retrieved"
+  },
+  "c4": {
+   "id": "c4",
+   "label": "Entailment_reattribute",
+   "primary_value": "",
+   "evidence_quote": "the PC-GITA corpus [ 6 ] , which contains utterances from 50 PD patients and 50 HC",
+   "reason": "Passage states PC-GITA has 50 HC speakers.",
+   "source": "retrieved"
+  },
+  "c5": {
+   "id": "c5",
+   "label": "Entailment_reattribute",
+   "primary_value": "",
+   "evidence_quote": "the PC-GITA corpus [ 6 ] , which contains utterances from 50 PD patients and 50 HC",
+   "reason": "50 PD + 50 HC = 100 speakers, a transparent sum.",
+   "source": "retrieved"
+  },
+  "c6": {
+   "id": "c6",
+   "label": "Entailment_reattribute",
+   "primary_value": "",
+   "evidence_quote": "Speech recordings of 88 PD patients and 88 HC speakers from Germany are considered",
+   "reason": "Passage states German dataset has 88 PD patients.",
+   "source": "retrieved"
+  },
+  "c7": {
+   "id": "c7",
+   "label": "Entailment_reattribute",
+   "primary_value": "",
+   "evidence_quote": "Speech recordings of 88 PD patients and 88 HC speakers from Germany are considered",
+   "reason": "Passage states German dataset has 88 HC speakers.",
+   "source": "retrieved"
+  },
+  "c8": {
+   "id": "c8",
+   "label": "Entailment_reattribute",
+   "primary_value": "",
+   "evidence_quote": "Speech recordings of 88 PD patients and 88 HC speakers from Germany are considered",
+   "reason": "88 PD + 88 HC = 176 speakers, a transparent sum.",
+   "source": "retrieved"
+  },
+  "c9": {
+   "id": "c9",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered",
+   "reason": "Passage states 50 PD in Czech dataset.",
+   "source": "window"
+  },
+  "c10": {
+   "id": "c10",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered",
+   "reason": "Passage states 50 HC in Czech dataset.",
+   "source": "window"
+  },
+  "c11": {
+   "id": "c11",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered",
+   "reason": "Passage states 100 total Czech speakers.",
+   "source": "window"
+  },
+  "c12": {
+   "id": "c12",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages give per-dataset counts but do not state a combined total of PD patients across all three datasets.",
+   "source": "retrieved"
+  },
+  "c13": {
+   "id": "c13",
+   "label": "UNCHECKED_CAP",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages do not state combined HC count; document_2 is not provided.",
+   "source": "window"
+  },
+  "c14": {
+   "id": "c14",
+   "label": "UNCHECKED_CAP",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages do not state combined total participants; document_2 is not provided.",
+   "source": "window"
+  },
+  "c15": {
+   "id": "c15",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "The participants were asked to pronounce a total of 10 sentences",
+   "reason": "Passage states 10 sentences for Spanish dataset.",
+   "source": "window"
+  },
+  "c16": {
+   "id": "c16",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "one text with 36 words",
+   "reason": "Passage states 36-word read text for Spanish dataset.",
+   "source": "window"
+  },
+  "c17": {
+   "id": "c17",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "a read text with 80 words",
+   "reason": "Passage states 80-word read text for Czech dataset.",
+   "source": "window"
+  },
+  "c18": {
+   "id": "c18",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Accuracies of up to 77% were reported in utterances of the PC-GITA database",
+   "reason": "Passage states up to 77% accuracy for PC-GITA phonation study.",
+   "source": "window"
+  },
+  "c19": {
+   "id": "c19",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "formed with utterances from 50 PD patients and 50 HC subjects",
+   "reason": "Passage states 50 PD patients in PC-GITA.",
+   "source": "window"
+  },
+  "c20": {
+   "id": "c20",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "formed with utterances from 50 PD patients and 50 HC subjects",
+   "reason": "Passage states 50 HC subjects in PC-GITA.",
+   "source": "window"
+  },
+  "c21": {
+   "id": "c21",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "improved the accuracy of the models in up to 8% when a base model trained with Spanish utterances is used to fine-tune a model to classify PD German utterances",
+   "reason": "Passage states up to 8% improvement for Spanish-to-German transfer.",
+   "source": "window"
+  },
+  "c22": {
+   "id": "c22",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "The speech signals were down-sampled to 16 kHz.",
+   "reason": "Passage states 16 kHz down-sampling for all datasets.",
+   "source": "window"
+  },
+  "c23": {
+   "id": "c23",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "forming segments with 160 ms length",
+   "reason": "Passage states 160 ms transition segments.",
+   "source": "window"
+  },
+  "c24": {
+   "id": "c24",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "80 ms of the signal are taken to the left and to the right",
+   "reason": "Passage states 80 ms taken to each side.",
+   "source": "window"
+  },
+  "c25": {
+   "id": "c25",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "include 12 Mel-Frequency Cepstral Coefficients (MFCCs)",
+   "reason": "Passage states 12 MFCCs.",
+   "source": "window"
+  },
+  "c26": {
+   "id": "c26",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "log energy of the signal distributed into 22 Bark bands",
+   "reason": "Passage states 22 Bark bands.",
+   "source": "window"
+  },
+  "c27": {
+   "id": "c27",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "The total number of descriptors corresponds to 58.",
+   "reason": "Passage states 58 descriptors.",
+   "source": "window"
+  },
+  "c28": {
+   "id": "c28",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Four statistical functionals (mean, standard deviation, skewness, and kurtosis)",
+   "reason": "Passage states four functionals per descriptor.",
+   "source": "window"
+  },
+  "c29": {
+   "id": "c29",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "obtaining a 232-dimensional feature-vector per utterance",
+   "reason": "Passage states 232-dimensional feature vector.",
+   "source": "window"
+  },
+  "c30": {
+   "id": "c30",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "radial basis SVM with margin parameter C = 10",
+   "reason": "Passage states C = 10.",
+   "source": "window"
+  },
+  "c31": {
+   "id": "c31",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Gaussian kernel with parameter γ = 0.0001",
+   "reason": "Passage states gamma = 0.0001.",
+   "source": "window"
+  },
+  "c32": {
+   "id": "c32",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "tested following a 10-fold Cross-Validation strategy, speaker independent",
+   "reason": "Passage states 10-fold speaker-independent CV.",
+   "source": "window"
+  },
+  "c33": {
+   "id": "c33",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "The STFT with 256 frequency bins is computed",
+   "reason": "Passage states 256 frequency bins.",
+   "source": "window"
+  },
+  "c34": {
+   "id": "c34",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "for a window length of 16 ms",
+   "reason": "Passage states 16 ms window length.",
+   "source": "window"
+  },
+  "c35": {
+   "id": "c35",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "and a step-size of 4 ms",
+   "reason": "Passage states 4 ms step size.",
+   "source": "window"
+  },
+  "c36": {
+   "id": "c36",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "forming 41 time frames per transition",
+   "reason": "Passage states 41 time frames.",
+   "source": "window"
+  },
+  "c37": {
+   "id": "c37",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "transformed into the Mel-scale using 80 filters",
+   "reason": "Passage states 80 Mel filters.",
+   "source": "window"
+  },
+  "c38": {
+   "id": "c38",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "forming an spectrogram with a size of 80 × 41",
+   "reason": "Passage states 80 × 41 spectrogram.",
+   "source": "window"
+  },
+  "c39": {
+   "id": "c39",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Spanish 73.7 (13.0)",
+   "reason": "Table 3 shows baseline Spanish accuracy 73.7%.",
+   "source": "window"
+  },
+  "c40": {
+   "id": "c40",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "71.0 (15.9)",
+   "reason": "Table 3 shows CNN Spanish accuracy 71.0%.",
+   "source": "window"
+  },
+  "c41": {
+   "id": "c41",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "German 69.3 (9.9)",
+   "reason": "Table 3 shows baseline German accuracy 69.3%.",
+   "source": "window"
+  },
+  "c42": {
+   "id": "c42",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "63.1 (11.7)",
+   "reason": "Table 3 shows CNN German accuracy 63.1%.",
+   "source": "window"
+  },
+  "c43": {
+   "id": "c43",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Czech 61.0 (12.5)",
+   "reason": "Table 3 shows baseline Czech accuracy 61.0%.",
+   "source": "window"
+  },
+  "c44": {
+   "id": "c44",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "68.5 (14.1)",
+   "reason": "Table 3 shows CNN Czech accuracy 68.5%.",
+   "source": "window"
+  },
+  "c45": {
+   "id": "c45",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "the average MDS-UPDRS-III score is higher compared with the German and Czech patients",
+   "reason": "Passage states Spanish patients have higher average MDS-UPDRS-III.",
+   "source": "window"
+  },
+  "c46": {
+   "id": "c46",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "classify utterances from 20 PD patients and 20 HC subjects, Turkish speakers",
+   "reason": "Passage states 20 Turkish PD patients.",
+   "source": "window"
+  },
+  "c47": {
+   "id": "c47",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "classify utterances from 20 PD patients and 20 HC subjects, Turkish speakers",
+   "reason": "Passage states 20 Turkish HC subjects.",
+   "source": "window"
+  },
+  "c48": {
+   "id": "c48",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Classifiers based on KNN and SVMs were considered, and accuracies of up to 75% were reported.",
+   "reason": "Passage states up to 75% accuracy with KNN and SVM.",
+   "source": "window"
+  }
+ },
+ "n_unchecked_cap": 2,
+ "patches_applied": [
+  {
+   "claim_id": "c2",
+   "action": "mark_unverified",
+   "old_str": "The study uses three language-specific datasets: a Spanish dataset based on the PC-GITA corpus, a German dataset, and a Czech dataset ([Document 2](document_2.txt)).",
+   "new_str": "The study uses three language-specific datasets: a Spanish dataset based on the PC-GITA corpus, a German dataset, and a Czech dataset ([Document 2](document_2.txt)) [not verified against the primary source].",
+   "matched": "exact"
+  },
+  {
+   "claim_id": "c3",
+   "action": "reattribute",
+   "old_str": "| Spanish | PC-GITA corpus [6] | 50 | 50 | 100 | Colombian Spanish native speakers | 10 sentences; rapid repetition of /pa-ta-ka/, /pe-ta-ka/, /pa-ka-ta/, /pa/, /ta/, /ka/; one 36-word text; monologue |",
+   "new_str": "| Spanish | PC-GITA corpus [6] | 50 | 50 | 100 | Colombian Spanish native speakers | 10 sentences; rapid repetition of /pa-ta-ka/, /pe-ta-ka/, /pa-ka-ta/, /pa/, /ta/, /ka/; one 36-word text; monologue | ([Document 1](document_1.txt))",
+   "matched": "exact"
+  },
+  {
+   "claim_id": "c3",
+   "action": "reattribute",
+   "old_str": "PC-GITA contains utterances from 50 PD patients and 50 HC speakers who are Colombian Spanish native speakers ([Document 2](document_2.txt)).",
+   "new_str": "PC-GITA contains utterances from 50 PD patients and 50 HC speakers who are Colombian Spanish native speakers ([Document 1](document_1.txt)).",
+   "matched": "exact"
+  },
+  {
+   "claim_id": "c6",
+   "action": "reattribute",
+   "old_str": "| German | German speech recordings | 88 | 88 | 176 | Speakers from Germany | Not specified in the provided excerpt |",
+   "new_str": "| German | German speech recordings | 88 | 88 | 176 | Speakers from Germany | Not specified in the provided excerpt | ([Document 1](document_1.txt))",
+   "matched": "exact"
+  },
+  {
+   "claim_id": "c6",
+   "action": "reattribute",
+   "old_str": "The German dataset contains speech recordings of 88 PD patients and 88 HC speakers from Germany ([Document 2](document_2.txt)).",
+   "new_str": "The German dataset contains speech recordings of 88 PD patients and 88 HC speakers from Germany ([Document 1](document_1.txt)).",
+   "matched": "exact"
+  },
+  {
+   "claim_id": "c8",
+   "action": "reattribute",
+   "old_str": "This makes the German dataset the largest of the three in terms of speaker count, with 176 participants in total ([Document 2](document_2.txt)).",
+   "new_str": "This makes the German dataset the largest of the three in terms of speaker count, with 176 participants in total ([Document 1](document_1.txt)).",
+   "matched": "exact"
+  },
+  {
+   "claim_id": "c12",
+   "action": "mark_unverified",
+   "old_str": "The three datasets together contain 188 PD patients and 188 HC speakers, for a total of 376 participants ([Document 2](document_2.txt)).",
+   "new_str": "The three datasets together contain 188 PD patients and 188 HC speakers, for a total of 376 participants ([Document 2](document_2.txt)) [not verified against the primary source].",
+   "matched": "exact"
+  }
+ ],
+ "patches_rejected": [
+  {
+   "claim_id": "c4",
+   "action": "reattribute",
+   "old_str": "| Spanish | PC-GITA corpus [6] | 50 | 50 | 100 | Colombian Spanish native speakers | 10 sentences; rapid repetition of /pa-ta-ka/, /pe-ta-ka/, /pa-ka-ta/, /pa/, /ta/, /ka/; one 36-word text; monologue |",
+   "new_str": "| Spanish | PC-GITA corpus [6] | 50 | 50 | 100 | Colombian Spanish native speakers | 10 sentences; rapid repetition of /pa-ta-ka/, /pe-ta-ka/, /pa-ka-ta/, /pa/, /ta/, /ka/; one 36-word text; monologue | ([Document 1](document_1.txt))",
+   "why": "duplicate_span"
+  },
+  {
+   "claim_id": "c4",
+   "action": "reattribute",
+   "old_str": "PC-GITA contains utterances from 50 PD patients and 50 HC speakers who are Colombian Spanish native speakers ([Document 2](document_2.txt)).",
+   "new_str": "PC-GITA contains utterances from 50 PD patients and 50 HC speakers who are Colombian Spanish native speakers ([Document 1](document_1.txt)).",
+   "why": "duplicate_span"
+  },
+  {
+   "claim_id": "c5",
+   "action": "reattribute",
+   "old_str": "| Spanish | PC-GITA corpus [6] | 50 | 50 | 100 | Colombian Spanish native speakers | 10 sentences; rapid repetition of /pa-ta-ka/, /pe-ta-ka/, /pa-ka-ta/, /pa/, /ta/, /ka/; one 36-word text; monologue |",
+   "new_str": "| Spanish | PC-GITA corpus [6] | 50 | 50 | 100 | Colombian Spanish native speakers | 10 sentences; rapid repetition of /pa-ta-ka/, /pe-ta-ka/, /pa-ka-ta/, /pa/, /ta/, /ka/; one 36-word text; monologue | ([Document 1](document_1.txt))",
+   "why": "duplicate_span"
+  },
+  {
+   "claim_id": "c7",
+   "action": "reattribute",
+   "old_str": "| German | German speech recordings | 88 | 88 | 176 | Speakers from Germany | Not specified in the provided excerpt |",
+   "new_str": "| German | German speech recordings | 88 | 88 | 176 | Speakers from Germany | Not specified in the provided excerpt | ([Document 1](document_1.txt))",
+   "why": "duplicate_span"
+  },
+  {
+   "claim_id": "c7",
+   "action": "reattribute",
+   "old_str": "The German dataset contains speech recordings of 88 PD patients and 88 HC speakers from Germany ([Document 2](document_2.txt)).",
+   "new_str": "The German dataset contains speech recordings of 88 PD patients and 88 HC speakers from Germany ([Document 1](document_1.txt)).",
+   "why": "duplicate_span"
+  },
+  {
+   "claim_id": "c8",
+   "action": "reattribute",
+   "old_str": "| German | German speech recordings | 88 | 88 | 176 | Speakers from Germany | Not specified in the provided excerpt |",
+   "new_str": "| German | German speech recordings | 88 | 88 | 176 | Speakers from Germany | Not specified in the provided excerpt | ([Document 1](document_1.txt))",
+   "why": "duplicate_span"
+  }
+ ],
+ "final_status": "VALID_GAP",
+ "snapshot": "S-miss-right",
+ "cell": "B6_C_T1",
+ "task": "B6",
+ "cond": "C",
+ "round": "dev2",
+ "config": {
+  "thinking": "disabled",
+  "reasoning_effort": null,
+  "temperature": 0.0,
+  "max_tokens": 16384,
+  "json_mode": true,
+  "retrieval_k": 10,
+  "max_neutral_retrieval": 8,
+  "max_claims": 50,
+  "max_spans": 5,
+  "edit_ratio_gate": 0.5
+ },
+ "cost_usd": 0.017294,
+ "prompt_tokens": 21666,
+ "completion_tokens": 8995,
+ "n_calls": 4,
+ "draft_chars": 16012,
+ "final_chars": 16158
+}

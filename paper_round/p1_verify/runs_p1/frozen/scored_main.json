@@ -1,0 +1,203 @@
+{
+ "coded_by": "main session (Claude); every applied patch read; paper text checked for reference [19] and table rows; AI first pass",
+ "human_reviewed": false,
+ "prereg": "PREREG_p1.md sha 8b896c348a27b396... / p1_verify.py sha 600d22083b5c8dac... frozen 2026-09-15T14:48:15",
+ "coded_at": "2026-09-15T14:53:41",
+ "cells": {
+  "S-miss-wrong/V-ref": {
+   "final_status": "VALID_GAP",
+   "n_calls": 4,
+   "prompt_tokens": 21292,
+   "completion_tokens": 8381,
+   "cost_usd": 0.016445,
+   "patches_applied": 5,
+   "patches_rejected": [
+    "duplicate_span",
+    "duplicate_span",
+    "duplicate_span",
+    "duplicate_span",
+    "duplicate_span"
+   ],
+   "E1": "correct",
+   "E1_note": "all 5 occurrences of 44/44 fixed (first sentence w/ note-differs clause, meta sentence 'balanced 88/88', table row 88/88/176, '88 speakers'->176, conclusion 88/88); remaining '44' only inside the attributed clause",
+   "E2a_factual_errors": 0,
+   "E2b_scope_or_overmark": 0,
+   "E4_support": "retrieved: German sentence via no-value queries (c6/c7/c8 -> Contradiction); spans_expanded=7",
+   "notes": "mechanism exercised end to end: extract -> window Neutral -> targeted retrieval -> Contradiction -> replace"
+  },
+  "S-miss-wrong/V-full": {
+   "final_status": "VALID_GAP",
+   "n_calls": 1,
+   "prompt_tokens": 10959,
+   "completion_tokens": 1171,
+   "cost_usd": 0.004693,
+   "patches_applied": 9,
+   "patches_rejected": [],
+   "E1": "mixed",
+   "E1_note": "first sentence, table row, conclusion fixed to 88/88; body meta sentence 'treats the German set as a balanced 44/44 PD-HC corpus' left unchanged (residual wrong statement)",
+   "E2a_factual_errors": 0,
+   "E2b_scope_or_overmark": 2,
+   "E2_note": "Czech reference [19] description rewrite VERIFIED CORRECT against the paper (draft had mislabeled it); '88-100'->'100-176' and '88 speakers'->176 correct derived fixes; PC-GITA reattribute; 'perfectly balanced 1:1' clause = citation change",
+   "E4_support": "full text by construction"
+  },
+  "S-miss-right/V-ref": {
+   "final_status": "VALID_GAP",
+   "n_calls": 4,
+   "prompt_tokens": 22227,
+   "completion_tokens": 9808,
+   "cost_usd": 0.018438,
+   "patches_applied": 5,
+   "patches_rejected": [
+    "no_change",
+    "no_change",
+    "duplicate_span",
+    "no_change",
+    "no_change",
+    "no_change",
+    "duplicate_span",
+    "no_change",
+    "duplicate_span",
+    "duplicate_span"
+   ],
+   "E1": "value unchanged; reattributed",
+   "E1_note": "German 88/88 sentence re-cited to document_1 (retrieved Entailment); 3 more reattributes (PC-GITA, 'three datasets', '176 participants')",
+   "E2a_factual_errors": 1,
+   "E2a_note": "judge labeled c15/c16 (188 PD / 188 HC aggregate) 'Contradiction' while its own reason text says 'Entailment' and primary_value '50 + 88 + 50 = 188' equals the claim; the patch kept the numbers but appended 'document_2.txt reports a different value.' which is FALSE. Fixable by a deterministic guard (primary_value == claim value -> not a contradiction); not applied in the frozen run",
+   "E2b_scope_or_overmark": 0,
+   "E4_support": "retrieved (German sentence) + window"
+  },
+  "S-miss-right/V-full": {
+   "final_status": "VALID_GAP",
+   "n_calls": 1,
+   "prompt_tokens": 10536,
+   "completion_tokens": 891,
+   "cost_usd": 0.00423,
+   "patches_applied": 9,
+   "patches_rejected": [],
+   "E1": "value unchanged; reattributed",
+   "E1_note": "German sentence and 7 others re-cited to document_1",
+   "E2a_factual_errors": 0,
+   "E2b_scope_or_overmark": 2,
+   "E2_note": "'Document 2 confirms the same composition ... ([Document 1])' semantic oddity; conclusion sentence extended with 'with the specific speaker counts and task details described above'",
+   "E4_support": "full text"
+  },
+  "S-table/V-ref": {
+   "final_status": "VALID_GAP",
+   "n_calls": 4,
+   "prompt_tokens": 23192,
+   "completion_tokens": 8939,
+   "cost_usd": 0.017684,
+   "patches_applied": 2,
+   "patches_rejected": [
+    "no_change",
+    "edit_ratio>0.5",
+    "duplicate_span",
+    "no_change",
+    "duplicate_span",
+    "edit_ratio>0.5"
+   ],
+   "E1": "correct (annotate)",
+   "E1_note": "note's 44/44 sentence annotated '[document_1.txt states: 88]'; table composition (47+41, 44+44) judged Entailment; no mark_unverified",
+   "E2a_factual_errors": 0,
+   "E2b_scope_or_overmark": 1,
+   "E2_note": "one extra 'replace' on the 'most defensible reading' sentence that only adds a document_1 citation",
+   "E4_support": "window table fragments + retrieval (c14: 9 chunks)"
+  },
+  "S-table/V-full": {
+   "final_status": "VALID_GAP",
+   "n_calls": 1,
+   "prompt_tokens": 11870,
+   "completion_tokens": 1732,
+   "cost_usd": 0.005639,
+   "patches_applied": 13,
+   "patches_rejected": [],
+   "E1": "correct (annotate)",
+   "E1_note": "note sentence annotated; two target sentences got citations",
+   "E2a_factual_errors": 2,
+   "E2a_note": "two transfer-table rows labeled 'partially obscured' in the draft were filled as 'Spanish | Czech' and 'Spanish | German'; the paper's table is mangled in the text extraction and the base/target assignment cannot be verified (unsupported fill, counted as error candidates)",
+   "E2b_scope_or_overmark": 8,
+   "E2b_note": "4 German task-table cells filled from the paper (verified correct: /pa-ta-ka/, 5 sentences, 81-word text, monologue) but outside the protocol; 2 limitation bullets rewritten; 4 '[not verified]' marks (2 on meta sentences, 1 on Czech demographics supported by table fragments = over-mark, 1 on the draft's own Grosz inference = arguably right)",
+   "E4_support": "full text"
+  },
+  "S-present/V-ref": {
+   "final_status": "VALID_GAP",
+   "n_calls": 3,
+   "prompt_tokens": 10318,
+   "completion_tokens": 3759,
+   "cost_usd": 0.007606,
+   "patches_applied": 9,
+   "patches_rejected": [
+    "duplicate_span"
+   ],
+   "E1": "no value change (correct)",
+   "E1_note": "9 annotations, all on note-attributed sentences; 269 total judged Entailment via arithmetic; no mark_unverified",
+   "E2a_factual_errors": 0,
+   "E2b_scope_or_overmark": 3,
+   "E2_note": "2 redundant annotations on sentences already stating both values; 1 imprecise annotation '[states: 163]' on a '209 (106+103)' sentence",
+   "E4_support": "window"
+  },
+  "S-present/V-full": {
+   "final_status": "VALID_GAP_NO_PATCH_APPLIED",
+   "n_calls": 1,
+   "prompt_tokens": 7857,
+   "completion_tokens": 817,
+   "cost_usd": 0.003338,
+   "patches_applied": 0,
+   "patches_rejected": [
+    "no_change",
+    "no_change",
+    "no_change",
+    "no_change",
+    "no_change",
+    "no_change",
+    "no_change"
+   ],
+   "E1": "no-op (correct)",
+   "E1_note": "7 patches all no_change -> nothing applied",
+   "E2a_factual_errors": 0,
+   "E2b_scope_or_overmark": 0,
+   "E4_support": "full text"
+  }
+ },
+ "H1": {
+  "V-ref_4of4_VALID": true,
+  "S-miss-wrong_E1_correct": true,
+  "S-miss-right_value_unchanged_and_reattributed": true,
+  "S-table_S-present_no_factual_error_no_overmark_on_supported": true,
+  "prompt_tokens_le_Vfull_per_snapshot": false,
+  "prompt_tokens": {
+   "S-miss-wrong": [
+    21292,
+    10959
+   ],
+   "S-miss-right": [
+    22227,
+    10536
+   ],
+   "S-table": [
+    23192,
+    11870
+   ],
+   "S-present": [
+    10318,
+    7857
+   ]
+  },
+  "H1_holds": false,
+  "failing_clause": "cost only (V-ref 1.3-2.0x V-full prompt tokens on every snapshot)",
+  "flag_outside_letter": "V-ref introduced 1 false attribution clause in S-miss-right (judge label/reason inconsistency)"
+ },
+ "V-full": {
+  "S-miss-wrong_E1": "mixed (one residual body sentence)",
+  "S-table_E2a_candidates": 2,
+  "verdict": "V-full completes 4/4 and fixes the poisoned target in answer/conclusion/table, cheaper by 1.3-2x, but leaves one residual wrong body sentence and over-edits scope incl. 2 unverifiable table fills"
+ },
+ "predictions_check": {
+  "1_completion": "HOLDS 8/8",
+  "2_S-miss-wrong": "HOLDS for V-ref (5 places); V-full 3 places + 1 residual (predicted 'at most 1 residual meta sentence' -> holds)",
+  "3_S-miss-right": "value/reattribute HOLD; over-marks 0 (<=2 holds); but 1 false clause not predicted",
+  "4_S-table": "no mark_unverified HOLDS; 'only annotate' FAILS narrowly (1 extra citation replace)",
+  "5_S-present": "no mark_unverified HOLDS; annotations 9 (>6 predicted)",
+  "6_cost": "HOLDS (V-ref > V-full)"
+ }
+}

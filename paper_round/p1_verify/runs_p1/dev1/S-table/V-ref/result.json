@@ -1,0 +1,1102 @@
+{
+ "arm": "V-ref",
+ "calls": [
+  {
+   "tag": "S-table:extract",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 5042,
+   "completion_tokens": 3036,
+   "reasoning_tokens": null,
+   "cost_usd": 0.005156,
+   "elapsed_s": 8.4,
+   "content_chars": 11979,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  },
+  {
+   "tag": "S-table:judge_window",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 7599,
+   "completion_tokens": 1850,
+   "reasoning_tokens": null,
+   "cost_usd": 0.0045,
+   "elapsed_s": 5.8,
+   "content_chars": 6519,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  },
+  {
+   "tag": "S-table:patch",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 5103,
+   "completion_tokens": 83,
+   "reasoning_tokens": null,
+   "cost_usd": 0.001631,
+   "elapsed_s": 1.2,
+   "content_chars": 345,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  }
+ ],
+ "stages": {
+  "extract": "VALID(40 claims)",
+  "judge_window": "VALID",
+  "judge_retrieved": "SKIPPED(no neutral)",
+  "patch": "VALID(1 applied, 0 rejected)"
+ },
+ "claims": [
+  {
+   "id": "c1",
+   "subject": "study datasets",
+   "attribute": "number of parallel speech corpora",
+   "value": "three",
+   "unit_or_denominator": "corpora",
+   "condition": "",
+   "cited_source": "both",
+   "sentence_span": "The datasets at the centre of the study are three parallel speech corpora recorded in three different languages: Spanish, German, and Czech"
+  },
+  {
+   "id": "c2",
+   "subject": "study datasets",
+   "attribute": "number of languages",
+   "value": "three",
+   "unit_or_denominator": "languages",
+   "condition": "",
+   "cited_source": "both",
+   "sentence_span": "three parallel speech corpora recorded in three different languages: Spanish, German, and Czech"
+  },
+  {
+   "id": "c3",
+   "subject": "PC-GITA corpus",
+   "attribute": "PD patient count",
+   "value": "50",
+   "unit_or_denominator": "PD patients",
+   "condition": "Spanish",
+   "cited_source": "document_1.txt",
+   "sentence_span": "PC-GITA contains utterances from 50 PD patients and 50 healthy control (HC) speakers, all native speakers of Colombian Spanish"
+  },
+  {
+   "id": "c4",
+   "subject": "PC-GITA corpus",
+   "attribute": "healthy control speaker count",
+   "value": "50",
+   "unit_or_denominator": "HC speakers",
+   "condition": "Spanish",
+   "cited_source": "document_1.txt",
+   "sentence_span": "PC-GITA contains utterances from 50 PD patients and 50 healthy control (HC) speakers, all native speakers of Colombian Spanish"
+  },
+  {
+   "id": "c5",
+   "subject": "PC-GITA corpus",
+   "attribute": "reference number in study reference list",
+   "value": "[6]",
+   "unit_or_denominator": "reference",
+   "condition": "Orozco-Arroyave et al. (2014)",
+   "cited_source": "document_1.txt",
+   "sentence_span": "The corpus is attributed to Orozco-Arroyave et al. (2014), cited as reference [6] in the study's reference list"
+  },
+  {
+   "id": "c6",
+   "subject": "earlier phonation analysis on PC-GITA",
+   "attribute": "reported accuracy",
+   "value": "up to 77",
+   "unit_or_denominator": "%",
+   "condition": "PC-GITA utterances",
+   "cited_source": "document_1.txt",
+   "sentence_span": "reported accuracies of up to 77% on PC-GITA utterances"
+  },
+  {
+   "id": "c7",
+   "subject": "German data",
+   "attribute": "PD patient count as reported by document_2",
+   "value": "44",
+   "unit_or_denominator": "PD patients",
+   "condition": "German",
+   "cited_source": "document_2.txt",
+   "sentence_span": "The third-party note states that the German data consist of speech recordings of 44 PD patients and 44 HC speakers"
+  },
+  {
+   "id": "c8",
+   "subject": "German data",
+   "attribute": "HC speaker count as reported by document_2",
+   "value": "44",
+   "unit_or_denominator": "HC speakers",
+   "condition": "German",
+   "cited_source": "document_2.txt",
+   "sentence_span": "The third-party note states that the German data consist of speech recordings of 44 PD patients and 44 HC speakers"
+  },
+  {
+   "id": "c9",
+   "subject": "German cohort",
+   "attribute": "male PD speaker count",
+   "value": "47",
+   "unit_or_denominator": "male PD speakers",
+   "condition": "German",
+   "cited_source": "document_1.txt",
+   "sentence_span": "the primary source's demographic table indicates a larger German cohort: 47 male PD and 41 female PD speakers (88 PD total)"
+  },
+  {
+   "id": "c10",
+   "subject": "German cohort",
+   "attribute": "female PD speaker count",
+   "value": "41",
+   "unit_or_denominator": "female PD speakers",
+   "condition": "German",
+   "cited_source": "document_1.txt",
+   "sentence_span": "the primary source's demographic table indicates a larger German cohort: 47 male PD and 41 female PD speakers (88 PD total)"
+  },
+  {
+   "id": "c11",
+   "subject": "German cohort",
+   "attribute": "total PD speaker count",
+   "value": "88",
+   "unit_or_denominator": "PD speakers",
+   "condition": "German",
+   "cited_source": "document_1.txt",
+   "sentence_span": "47 male PD and 41 female PD speakers (88 PD total) alongside 44 male HC and 44 female HC speakers (88 HC total)"
+  },
+  {
+   "id": "c12",
+   "subject": "German cohort",
+   "attribute": "male HC speaker count",
+   "value": "44",
+   "unit_or_denominator": "male HC speakers",
+   "condition": "German",
+   "cited_source": "document_1.txt",
+   "sentence_span": "alongside 44 male HC and 44 female HC speakers (88 HC total)"
+  },
+  {
+   "id": "c13",
+   "subject": "German cohort",
+   "attribute": "female HC speaker count",
+   "value": "44",
+   "unit_or_denominator": "female HC speakers",
+   "condition": "German",
+   "cited_source": "document_1.txt",
+   "sentence_span": "alongside 44 male HC and 44 female HC speakers (88 HC total)"
+  },
+  {
+   "id": "c14",
+   "subject": "German cohort",
+   "attribute": "total HC speaker count",
+   "value": "88",
+   "unit_or_denominator": "HC speakers",
+   "condition": "German",
+   "cited_source": "document_1.txt",
+   "sentence_span": "alongside 44 male HC and 44 female HC speakers (88 HC total)"
+  },
+  {
+   "id": "c15",
+   "subject": "German-language corpus",
+   "attribute": "PD and HC speaker counts",
+   "value": "88 PD and 88 HC",
+   "unit_or_denominator": "speakers",
+   "condition": "German",
+   "cited_source": "document_1.txt",
+   "sentence_span": "A German-language corpus of 88 PD and 88 HC speakers is consistent with the earlier study by Grósz, Busa-Fekete, Gosztolya, and Tóth, cited as reference [11]"
+  },
+  {
+   "id": "c16",
+   "subject": "German-language corpus",
+   "attribute": "reference number in study reference list",
+   "value": "[11]",
+   "unit_or_denominator": "reference",
+   "condition": "Grósz, Busa-Fekete, Gosztolya, and Tóth",
+   "cited_source": "document_1.txt",
+   "sentence_span": "consistent with the earlier study by Grósz, Busa-Fekete, Gosztolya, and Tóth, cited as reference [11] in the reviewed work"
+  },
+  {
+   "id": "c17",
+   "subject": "Czech data",
+   "attribute": "total native Czech speaker count",
+   "value": "100",
+   "unit_or_denominator": "speakers",
+   "condition": "Czech",
+   "cited_source": "both",
+   "sentence_span": "The Czech data comprise a total of 100 native Czech speakers, of whom 50 have PD and 50 are healthy controls"
+  },
+  {
+   "id": "c18",
+   "subject": "Czech data",
+   "attribute": "PD speaker count",
+   "value": "50",
+   "unit_or_denominator": "PD speakers",
+   "condition": "Czech",
+   "cited_source": "both",
+   "sentence_span": "The Czech data comprise a total of 100 native Czech speakers, of whom 50 have PD and 50 are healthy controls"
+  },
+  {
+   "id": "c19",
+   "subject": "Czech data",
+   "attribute": "HC speaker count",
+   "value": "50",
+   "unit_or_denominator": "HC speakers",
+   "condition": "Czech",
+   "cited_source": "both",
+   "sentence_span": "The Czech data comprise a total of 100 native Czech speakers, of whom 50 have PD and 50 are healthy controls"
+  },
+  {
+   "id": "c20",
+   "subject": "Czech demographic table",
+   "attribute": "male PD speaker count",
+   "value": "30",
+   "unit_or_denominator": "male PD speakers",
+   "condition": "Czech",
+   "cited_source": "document_1.txt",
+   "sentence_span": "The demographic table disaggregates this as 30 male PD, 20 female PD, 30 male HC, and 20 female HC speakers"
+  },
+  {
+   "id": "c21",
+   "subject": "Czech demographic table",
+   "attribute": "female PD speaker count",
+   "value": "20",
+   "unit_or_denominator": "female PD speakers",
+   "condition": "Czech",
+   "cited_source": "document_1.txt",
+   "sentence_span": "The demographic table disaggregates this as 30 male PD, 20 female PD, 30 male HC, and 20 female HC speakers"
+  },
+  {
+   "id": "c22",
+   "subject": "Czech demographic table",
+   "attribute": "male HC speaker count",
+   "value": "30",
+   "unit_or_denominator": "male HC speakers",
+   "condition": "Czech",
+   "cited_source": "document_1.txt",
+   "sentence_span": "The demographic table disaggregates this as 30 male PD, 20 female PD, 30 male HC, and 20 female HC speakers"
+  },
+  {
+   "id": "c23",
+   "subject": "Czech demographic table",
+   "attribute": "female HC speaker count",
+   "value": "20",
+   "unit_or_denominator": "female HC speakers",
+   "condition": "Czech",
+   "cited_source": "document_1.txt",
+   "sentence_span": "The demographic table disaggregates this as 30 male PD, 20 female PD, 30 male HC, and 20 female HC speakers"
+  },
+  {
+   "id": "c24",
+   "subject": "Czech recordings",
+   "attribute": "reference number in study bibliography",
+   "value": "[19]",
+   "unit_or_denominator": "reference",
+   "condition": "Czech",
+   "cited_source": "document_1.txt",
+   "sentence_span": "The Czech recordings are cited to reference [19] in the study's bibliography"
+  },
+  {
+   "id": "c25",
+   "subject": "Spanish PD patients",
+   "attribute": "mean MDS-UPDRS-III score",
+   "value": "approximately 37–38",
+   "unit_or_denominator": "MDS-UPDRS-III points",
+   "condition": "Spanish",
+   "cited_source": "document_1.txt",
+   "sentence_span": "Spanish PD patients present substantially higher MDS-UPDRS-III scores (approximately 37–38 on average) than German (approximately 22–23) or Czech (approximately 18–21) patients"
+  },
+  {
+   "id": "c26",
+   "subject": "German PD patients",
+   "attribute": "mean MDS-UPDRS-III score",
+   "value": "approximately 22–23",
+   "unit_or_denominator": "MDS-UPDRS-III points",
+   "condition": "German",
+   "cited_source": "document_1.txt",
+   "sentence_span": "than German (approximately 22–23) or Czech (approximately 18–21) patients"
+  },
+  {
+   "id": "c27",
+   "subject": "Czech PD patients",
+   "attribute": "mean MDS-UPDRS-III score",
+   "value": "approximately 18–21",
+   "unit_or_denominator": "MDS-UPDRS-III points",
+   "condition": "Czech",
+   "cited_source": "document_1.txt",
+   "sentence_span": "or Czech (approximately 18–21) patients"
+  },
+  {
+   "id": "c28",
+   "subject": "recordings across the three datasets",
+   "attribute": "down-sampling rate",
+   "value": "16",
+   "unit_or_denominator": "kHz",
+   "condition": "all three datasets",
+   "cited_source": "document_1.txt",
+   "sentence_span": "All recordings across the three datasets were captured under noise-controlled conditions, and the speech signals were down-sampled to 16 kHz"
+  },
+  {
+   "id": "c29",
+   "subject": "transition segments",
+   "attribute": "segment length",
+   "value": "160",
+   "unit_or_denominator": "ms",
+   "condition": "derived data",
+   "cited_source": "document_1.txt",
+   "sentence_span": "producing segments of 160 ms in length"
+  },
+  {
+   "id": "c30",
+   "subject": "STFT spectrograms",
+   "attribute": "frequency bin count",
+   "value": "256",
+   "unit_or_denominator": "frequency bins",
+   "condition": "derived data",
+   "cited_source": "document_1.txt",
+   "sentence_span": "Short-time Fourier transform (STFT) spectrograms with 256 frequency bins were computed for each segmented transition"
+  },
+  {
+   "id": "c31",
+   "subject": "STFT spectrograms",
+   "attribute": "window length",
+   "value": "16",
+   "unit_or_denominator": "ms",
+   "condition": "derived data",
+   "cited_source": "document_1.txt",
+   "sentence_span": "using a window length of 16 ms and a step size of 4 ms, yielding 41 time frames per transition"
+  },
+  {
+   "id": "c32",
+   "subject": "STFT spectrograms",
+   "attribute": "step size",
+   "value": "4",
+   "unit_or_denominator": "ms",
+   "condition": "derived data",
+   "cited_source": "document_1.txt",
+   "sentence_span": "using a window length of 16 ms and a step size of 4 ms, yielding 41 time frames per transition"
+  },
+  {
+   "id": "c33",
+   "subject": "STFT spectrograms",
+   "attribute": "time frame count",
+   "value": "41",
+   "unit_or_denominator": "time frames",
+   "condition": "per transition",
+   "cited_source": "document_1.txt",
+   "sentence_span": "yielding 41 time frames per transition"
+  },
+  {
+   "id": "c34",
+   "subject": "Mel spectrogram",
+   "attribute": "filter count",
+   "value": "80",
+   "unit_or_denominator": "filters",
+   "condition": "derived data",
+   "cited_source": "document_1.txt",
+   "sentence_span": "The spectrogram was then Mel-scaled using 80 filters, producing an input tensor of size 80 × 41 for CNN training"
+  },
+  {
+   "id": "c35",
+   "subject": "CNN input tensor",
+   "attribute": "size",
+   "value": "80 × 41",
+   "unit_or_denominator": "tensor dimensions",
+   "condition": "CNN training",
+   "cited_source": "document_1.txt",
+   "sentence_span": "producing an input tensor of size 80 × 41 for CNN training"
+  },
+  {
+   "id": "c36",
+   "subject": "transfer learning",
+   "attribute": "accuracy improvement",
+   "value": "up to 8",
+   "unit_or_denominator": "%",
+   "condition": "Spanish base model to German utterances",
+   "cited_source": "document_1.txt",
+   "sentence_span": "transfer learning improved accuracy by up to 8% when a base model trained on Spanish utterances was used to fine-tune a model for German utterances"
+  },
+  {
+   "id": "c37",
+   "subject": "Spanish speech tasks",
+   "attribute": "sentence count",
+   "value": "10",
+   "unit_or_denominator": "sentences",
+   "condition": "Spanish (PC-GITA)",
+   "cited_source": "document_1.txt",
+   "sentence_span": "10 sentences"
+  },
+  {
+   "id": "c38",
+   "subject": "Spanish read text",
+   "attribute": "word count",
+   "value": "36",
+   "unit_or_denominator": "words",
+   "condition": "Spanish (PC-GITA)",
+   "cited_source": "document_1.txt",
+   "sentence_span": "36-word text"
+  },
+  {
+   "id": "c39",
+   "subject": "Czech read text",
+   "attribute": "word count",
+   "value": "80",
+   "unit_or_denominator": "words",
+   "condition": "Czech",
+   "cited_source": "document_1.txt",
+   "sentence_span": "80-word text"
+  },
+  {
+   "id": "c40",
+   "subject": "Czech CNN sensitivity",
+   "attribute": "sensitivity value",
+   "value": "94.0",
+   "unit_or_denominator": "%",
+   "condition": "Czech within-language CNN",
+   "cited_source": "document_1.txt",
+   "sentence_span": "CNN sensitivity of 94.0% with 13.5 SD in Czech"
+  }
+ ],
+ "judge_window": {
+  "c1": {
+   "id": "c1",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Speech recordings of patients in three different languages are considered: Spanish, German, and Czech",
+   "reason": "Passages state three languages/datasets."
+  },
+  "c2": {
+   "id": "c2",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Speech recordings of patients in three different languages are considered: Spanish, German, and Czech",
+   "reason": "Passages state three languages."
+  },
+  "c3": {
+   "id": "c3",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "PC-GITA database [6], formed with utterances from 50 PD patients and 50 HC subjects",
+   "reason": "Passages state 50 PD patients in PC-GITA."
+  },
+  "c4": {
+   "id": "c4",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "PC-GITA database [6], formed with utterances from 50 PD patients and 50 HC subjects",
+   "reason": "Passages state 50 HC subjects in PC-GITA."
+  },
+  "c5": {
+   "id": "c5",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "PC-GITA database [6]",
+   "reason": "Passages cite PC-GITA as reference [6]."
+  },
+  "c6": {
+   "id": "c6",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Accuracies of up to 77% were reported in utterances of the PC-GITA database",
+   "reason": "Passages state up to 77% on PC-GITA utterances."
+  },
+  "c7": {
+   "id": "c7",
+   "label": "Contradiction",
+   "primary_value": "88 PD patients",
+   "evidence_quote": "47 44 ... 41 44",
+   "reason": "Document_1 table shows German PD counts 47 male + 41 female = 88, not 44."
+  },
+  "c8": {
+   "id": "c8",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "44 44",
+   "reason": "Document_1 table shows German HC counts 44 male and 44 female."
+  },
+  "c9": {
+   "id": "c9",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "47 44 ... 41 44",
+   "reason": "Table shows 47 male PD for German."
+  },
+  "c10": {
+   "id": "c10",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "47 44 ... 41 44",
+   "reason": "Table shows 41 female PD for German."
+  },
+  "c11": {
+   "id": "c11",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "47 44 ... 41 44",
+   "reason": "47 male PD + 41 female PD = 88 PD total."
+  },
+  "c12": {
+   "id": "c12",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "47 44 ... 41 44",
+   "reason": "Table shows 44 male HC for German."
+  },
+  "c13": {
+   "id": "c13",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "47 44 ... 41 44",
+   "reason": "Table shows 44 female HC for German."
+  },
+  "c14": {
+   "id": "c14",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "47 44 ... 41 44",
+   "reason": "44 male HC + 44 female HC = 88 HC total."
+  },
+  "c15": {
+   "id": "c15",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "47 44 ... 41 44",
+   "reason": "German table gives 88 PD and 88 HC."
+  },
+  "c16": {
+   "id": "c16",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "[11] T. Grósz, R. Busa-Fekete, G. Gosztolya, and L. Tóth",
+   "reason": "Passages cite Grósz et al. as reference [11]."
+  },
+  "c17": {
+   "id": "c17",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered [19]",
+   "reason": "Passages state 100 Czech speakers total."
+  },
+  "c18": {
+   "id": "c18",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered [19]",
+   "reason": "Passages state 50 Czech PD speakers."
+  },
+  "c19": {
+   "id": "c19",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered [19]",
+   "reason": "Passages state 50 Czech HC speakers."
+  },
+  "c20": {
+   "id": "c20",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "30 30 ... 20 20",
+   "reason": "Czech table shows 30 male PD."
+  },
+  "c21": {
+   "id": "c21",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "30 30 ... 20 20",
+   "reason": "Czech table shows 20 female PD."
+  },
+  "c22": {
+   "id": "c22",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "30 30 ... 20 20",
+   "reason": "Czech table shows 30 male HC."
+  },
+  "c23": {
+   "id": "c23",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "30 30 ... 20 20",
+   "reason": "Czech table shows 20 female HC."
+  },
+  "c24": {
+   "id": "c24",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered [19]",
+   "reason": "Czech recordings cited to [19]."
+  },
+  "c25": {
+   "id": "c25",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "MDS-UPDRS M 37.8 ... F 37.6",
+   "reason": "Spanish MDS-UPDRS-III means are about 37–38."
+  },
+  "c26": {
+   "id": "c26",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "MDS-UPDRS M 22.1 ... F 23.3",
+   "reason": "German MDS-UPDRS-III means are about 22–23."
+  },
+  "c27": {
+   "id": "c27",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "MDS-UPDRS M 21.4 ... F 18.1",
+   "reason": "Czech MDS-UPDRS-III means are about 18–21."
+  },
+  "c28": {
+   "id": "c28",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "The speech signals were down-sampled to 16 kHz",
+   "reason": "Passages state 16 kHz down-sampling."
+  },
+  "c29": {
+   "id": "c29",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "forming segments with 160 ms length",
+   "reason": "Passages state 160 ms segments."
+  },
+  "c30": {
+   "id": "c30",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "The STFT with 256 frequency bins is computed",
+   "reason": "Passages state 256 frequency bins."
+  },
+  "c31": {
+   "id": "c31",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "for a window length of 16 ms",
+   "reason": "Passages state 16 ms window length."
+  },
+  "c32": {
+   "id": "c32",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "and a step-size of 4 ms",
+   "reason": "Passages state 4 ms step size."
+  },
+  "c33": {
+   "id": "c33",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "forming 41 time frames per transition",
+   "reason": "Passages state 41 time frames."
+  },
+  "c34": {
+   "id": "c34",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "transformed into the Mel-scale using 80 filters",
+   "reason": "Passages state 80 Mel filters."
+  },
+  "c35": {
+   "id": "c35",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "forming an spectrogram with a size of 80 × 41",
+   "reason": "Passages state 80 × 41 tensor."
+  },
+  "c36": {
+   "id": "c36",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "improved the accuracy of the models in up to 8% when a base model trained with Spanish utterances",
+   "reason": "Passages state up to 8% improvement for Spanish base to German."
+  },
+  "c37": {
+   "id": "c37",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "a total of 10 sentences",
+   "reason": "Passages state 10 Spanish sentences."
+  },
+  "c38": {
+   "id": "c38",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "one text with 36 words",
+   "reason": "Passages state 36-word Spanish text."
+  },
+  "c39": {
+   "id": "c39",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "a read text with 80 words",
+   "reason": "Passages state 80-word Czech text."
+  },
+  "c40": {
+   "id": "c40",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "CNN ... Czech ... 94.0 (13.5)",
+   "reason": "Czech CNN sensitivity is 94.0%."
+  }
+ },
+ "retrieval": [],
+ "final_labels": {
+  "c1": {
+   "id": "c1",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Speech recordings of patients in three different languages are considered: Spanish, German, and Czech",
+   "reason": "Passages state three languages/datasets.",
+   "source": "window"
+  },
+  "c2": {
+   "id": "c2",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Speech recordings of patients in three different languages are considered: Spanish, German, and Czech",
+   "reason": "Passages state three languages.",
+   "source": "window"
+  },
+  "c3": {
+   "id": "c3",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "PC-GITA database [6], formed with utterances from 50 PD patients and 50 HC subjects",
+   "reason": "Passages state 50 PD patients in PC-GITA.",
+   "source": "window"
+  },
+  "c4": {
+   "id": "c4",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "PC-GITA database [6], formed with utterances from 50 PD patients and 50 HC subjects",
+   "reason": "Passages state 50 HC subjects in PC-GITA.",
+   "source": "window"
+  },
+  "c5": {
+   "id": "c5",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "PC-GITA database [6]",
+   "reason": "Passages cite PC-GITA as reference [6].",
+   "source": "window"
+  },
+  "c6": {
+   "id": "c6",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Accuracies of up to 77% were reported in utterances of the PC-GITA database",
+   "reason": "Passages state up to 77% on PC-GITA utterances.",
+   "source": "window"
+  },
+  "c7": {
+   "id": "c7",
+   "label": "Contradiction",
+   "primary_value": "88 PD patients",
+   "evidence_quote": "47 44 ... 41 44",
+   "reason": "Document_1 table shows German PD counts 47 male + 41 female = 88, not 44.",
+   "source": "window"
+  },
+  "c8": {
+   "id": "c8",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "44 44",
+   "reason": "Document_1 table shows German HC counts 44 male and 44 female.",
+   "source": "window"
+  },
+  "c9": {
+   "id": "c9",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "47 44 ... 41 44",
+   "reason": "Table shows 47 male PD for German.",
+   "source": "window"
+  },
+  "c10": {
+   "id": "c10",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "47 44 ... 41 44",
+   "reason": "Table shows 41 female PD for German.",
+   "source": "window"
+  },
+  "c11": {
+   "id": "c11",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "47 44 ... 41 44",
+   "reason": "47 male PD + 41 female PD = 88 PD total.",
+   "source": "window"
+  },
+  "c12": {
+   "id": "c12",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "47 44 ... 41 44",
+   "reason": "Table shows 44 male HC for German.",
+   "source": "window"
+  },
+  "c13": {
+   "id": "c13",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "47 44 ... 41 44",
+   "reason": "Table shows 44 female HC for German.",
+   "source": "window"
+  },
+  "c14": {
+   "id": "c14",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "47 44 ... 41 44",
+   "reason": "44 male HC + 44 female HC = 88 HC total.",
+   "source": "window"
+  },
+  "c15": {
+   "id": "c15",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "47 44 ... 41 44",
+   "reason": "German table gives 88 PD and 88 HC.",
+   "source": "window"
+  },
+  "c16": {
+   "id": "c16",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "[11] T. Grósz, R. Busa-Fekete, G. Gosztolya, and L. Tóth",
+   "reason": "Passages cite Grósz et al. as reference [11].",
+   "source": "window"
+  },
+  "c17": {
+   "id": "c17",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered [19]",
+   "reason": "Passages state 100 Czech speakers total.",
+   "source": "window"
+  },
+  "c18": {
+   "id": "c18",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered [19]",
+   "reason": "Passages state 50 Czech PD speakers.",
+   "source": "window"
+  },
+  "c19": {
+   "id": "c19",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered [19]",
+   "reason": "Passages state 50 Czech HC speakers.",
+   "source": "window"
+  },
+  "c20": {
+   "id": "c20",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "30 30 ... 20 20",
+   "reason": "Czech table shows 30 male PD.",
+   "source": "window"
+  },
+  "c21": {
+   "id": "c21",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "30 30 ... 20 20",
+   "reason": "Czech table shows 20 female PD.",
+   "source": "window"
+  },
+  "c22": {
+   "id": "c22",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "30 30 ... 20 20",
+   "reason": "Czech table shows 30 male HC.",
+   "source": "window"
+  },
+  "c23": {
+   "id": "c23",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "30 30 ... 20 20",
+   "reason": "Czech table shows 20 female HC.",
+   "source": "window"
+  },
+  "c24": {
+   "id": "c24",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered [19]",
+   "reason": "Czech recordings cited to [19].",
+   "source": "window"
+  },
+  "c25": {
+   "id": "c25",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "MDS-UPDRS M 37.8 ... F 37.6",
+   "reason": "Spanish MDS-UPDRS-III means are about 37–38.",
+   "source": "window"
+  },
+  "c26": {
+   "id": "c26",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "MDS-UPDRS M 22.1 ... F 23.3",
+   "reason": "German MDS-UPDRS-III means are about 22–23.",
+   "source": "window"
+  },
+  "c27": {
+   "id": "c27",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "MDS-UPDRS M 21.4 ... F 18.1",
+   "reason": "Czech MDS-UPDRS-III means are about 18–21.",
+   "source": "window"
+  },
+  "c28": {
+   "id": "c28",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "The speech signals were down-sampled to 16 kHz",
+   "reason": "Passages state 16 kHz down-sampling.",
+   "source": "window"
+  },
+  "c29": {
+   "id": "c29",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "forming segments with 160 ms length",
+   "reason": "Passages state 160 ms segments.",
+   "source": "window"
+  },
+  "c30": {
+   "id": "c30",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "The STFT with 256 frequency bins is computed",
+   "reason": "Passages state 256 frequency bins.",
+   "source": "window"
+  },
+  "c31": {
+   "id": "c31",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "for a window length of 16 ms",
+   "reason": "Passages state 16 ms window length.",
+   "source": "window"
+  },
+  "c32": {
+   "id": "c32",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "and a step-size of 4 ms",
+   "reason": "Passages state 4 ms step size.",
+   "source": "window"
+  },
+  "c33": {
+   "id": "c33",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "forming 41 time frames per transition",
+   "reason": "Passages state 41 time frames.",
+   "source": "window"
+  },
+  "c34": {
+   "id": "c34",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "transformed into the Mel-scale using 80 filters",
+   "reason": "Passages state 80 Mel filters.",
+   "source": "window"
+  },
+  "c35": {
+   "id": "c35",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "forming an spectrogram with a size of 80 × 41",
+   "reason": "Passages state 80 × 41 tensor.",
+   "source": "window"
+  },
+  "c36": {
+   "id": "c36",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "improved the accuracy of the models in up to 8% when a base model trained with Spanish utterances",
+   "reason": "Passages state up to 8% improvement for Spanish base to German.",
+   "source": "window"
+  },
+  "c37": {
+   "id": "c37",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "a total of 10 sentences",
+   "reason": "Passages state 10 Spanish sentences.",
+   "source": "window"
+  },
+  "c38": {
+   "id": "c38",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "one text with 36 words",
+   "reason": "Passages state 36-word Spanish text.",
+   "source": "window"
+  },
+  "c39": {
+   "id": "c39",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "a read text with 80 words",
+   "reason": "Passages state 80-word Czech text.",
+   "source": "window"
+  },
+  "c40": {
+   "id": "c40",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "CNN ... Czech ... 94.0 (13.5)",
+   "reason": "Czech CNN sensitivity is 94.0%.",
+   "source": "window"
+  }
+ },
+ "n_unchecked_cap": 0,
+ "patches_applied": [
+  {
+   "claim_id": "c7",
+   "action": "annotate",
+   "old_str": "The third-party note states that the German data consist of speech recordings of 44 PD patients and 44 HC speakers",
+   "new_str": "The third-party note states that the German data consist of speech recordings of 44 PD patients and 44 HC speakers [document_1.txt states: 88 PD patients]"
+  }
+ ],
+ "patches_rejected": [],
+ "final_status": "VALID_GAP",
+ "snapshot": "S-table",
+ "cell": "B6_P_T2",
+ "task": "B6",
+ "cond": "P",
+ "round": "dev1",
+ "config": {
+  "thinking": "disabled",
+  "reasoning_effort": null,
+  "temperature": 0.0,
+  "max_tokens": 16384,
+  "json_mode": true,
+  "retrieval_k": 10,
+  "max_neutral_retrieval": 8,
+  "max_claims": 40,
+  "edit_ratio_gate": 0.5
+ },
+ "cost_usd": 0.011287,
+ "prompt_tokens": 17744,
+ "completion_tokens": 4969,
+ "n_calls": 3,
+ "draft_chars": 17984,
+ "final_chars": 18024
+}

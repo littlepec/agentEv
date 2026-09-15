@@ -1,0 +1,116 @@
+{
+ "arm": "V-full",
+ "calls": [
+  {
+   "tag": "S-table:full",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 11870,
+   "completion_tokens": 1326,
+   "reasoning_tokens": null,
+   "cost_usd": 0.005152,
+   "elapsed_s": 4.6,
+   "content_chars": 5190,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  }
+ ],
+ "stages": {
+  "full": "VALID(3 applied, 6 rejected)"
+ },
+ "patches_applied": [
+  {
+   "action": "replace",
+   "old_str": "The third-party note states that the German data consist of speech recordings of 44 PD patients and 44 HC speakers ([Third-party research note, n.d.](document_2.txt)).",
+   "new_str": "The third-party note states that the German data consist of speech recordings of 44 PD patients and 44 HC speakers ([Third-party research note, n.d.](document_2.txt)) [document_1.txt states: 88 PD and 88 HC speakers].",
+   "reason": "document_1.txt reports 88 PD and 88 HC German speakers; document_2.txt's 44/44 figure is contradicted by the primary source.",
+   "matched": "exact"
+  },
+  {
+   "action": "replace",
+   "old_str": "| Label partially obscured in source extraction | — | 72.6 (13.9) | 82.0 (14.8) | 62.0 (28.9) | 0.46 |",
+   "new_str": "| Spanish | Czech | 72.6 (13.9) | 82.0 (14.8) | 62.0 (28.9) | 0.46 |",
+   "reason": "document_1.txt Table 4 clearly shows this row as base language Spanish, target language Czech.",
+   "matched": "exact"
+  },
+  {
+   "action": "replace",
+   "old_str": "| Label partially obscured in source extraction | — | 70.7 (14.5) | 80.0 (16.3) | 62.5 (26.3) | 0.38 |",
+   "new_str": "| Spanish | German | 70.7 (14.5) | 80.0 (16.3) | 62.5 (26.3) | 0.38 |",
+   "reason": "document_1.txt Table 4 clearly shows this row as base language Spanish, target language German.",
+   "matched": "exact"
+  }
+ ],
+ "patches_rejected": [
+  {
+   "action": "replace",
+   "old_str": "A German-language corpus of 88 PD and 88 HC speakers is consistent with the earlier study by Grósz, Busa-Fekete, Gosztolya, and Tóth, cited as reference [11] in the reviewed work ([Arias-Vergara et al., 2019](document_1.txt)).",
+   "new_str": "A German-language corpus of 88 PD and 88 HC speakers is consistent with the earlier study by Grósz, Busa-Fekete, Gosztolya, and Tóth, cited as reference [11] in the reviewed work ([Arias-Vergara et al., 2019](document_1.txt)).",
+   "reason": "No change needed; this sentence is already consistent with document_1.txt.",
+   "why": "no_change"
+  },
+  {
+   "action": "replace",
+   "old_str": "The most defensible reading is that the German cohort comprises roughly 88 PD and 88 HC speakers, with the \"44/44\" figure in the third-party note plausibly describing the male speakers only; the discrepancy is nevertheless recorded here as a data-provenance uncertainty.",
+   "new_str": "The most defensible reading is that the German cohort comprises roughly 88 PD and 88 HC speakers, with the \"44/44\" figure in the third-party note plausibly describing the male speakers only; the discrepancy is nevertheless recorded here as a data-provenance uncertainty.",
+   "reason": "No change needed; this sentence is already consistent with document_1.txt.",
+   "why": "no_change"
+  },
+  {
+   "action": "replace",
+   "old_str": "The Czech recordings are cited to reference [19] in the study's bibliography, though the corresponding citation details are not reproduced in the provided material ([Arias-Vergara et al., 2019](document_1.txt)).",
+   "new_str": "The Czech recordings are cited to reference [19] in the study's bibliography, though the corresponding citation details are not reproduced in the provided material ([Arias-Vergara et al., 2019](document_1.txt)).",
+   "reason": "No change needed; this sentence is already consistent with document_1.txt.",
+   "why": "no_change"
+  },
+  {
+   "action": "replace",
+   "old_str": "Source: ([Arias-Vergara et al., 2019](document_1.txt)). The final two rows are reported in the source but their base/target labels are not cleanly recoverable from the available text.",
+   "new_str": "Source: ([Arias-Vergara et al., 2019](document_1.txt)).",
+   "reason": "The base/target labels for the final two rows are clearly recoverable from document_1.txt Table 4.",
+   "why": "edit_ratio>0.5"
+  },
+  {
+   "action": "replace",
+   "old_str": "- **Composition discrepancy for the German data.** The third-party note reports 44 PD and 44 HC speakers, while the primary demographic table implies 88 PD and 88 HC speakers ([Third-party research note, n.d.](document_2.txt); [Arias-Vergara et al., 2019](document_1.txt)). This must be resolved against the original corpus documentation before the German cohort size is cited.",
+   "new_str": "- **Composition discrepancy for the German data.** The third-party note reports 44 PD and 44 HC speakers, while the primary demographic table implies 88 PD and 88 HC speakers ([Third-party research note, n.d.](document_2.txt); [Arias-Vergara et al., 2019](document_1.txt)). This must be resolved against the original corpus documentation before the German cohort size is cited.",
+   "reason": "No change needed; this sentence is already consistent with document_1.txt.",
+   "why": "no_change"
+  },
+  {
+   "action": "replace",
+   "old_str": "- **Small samples.** Cohorts of 50–100 speakers per language, with speaker-level decisions aggregated from a modest number of exercises, constrain statistical power and increase variance, as reflected in the large standard deviations reported for some conditions (e.g., CNN sensitivity of 94.0% with 13.5 SD in Czech) ([Arias-Vergara et al., 2019](document_1.txt)).",
+   "new_str": "- **Small samples.** Cohorts of 50–100 speakers per language, with speaker-level decisions aggregated from a modest number of exercises, constrain statistical power and increase variance, as reflected in the large standard deviations reported for some conditions (e.g., CNN sensitivity of 94.0% with 13.5 SD in Czech) ([Arias-Vergara et al., 2019](document_1.txt)).",
+   "reason": "No change needed; this sentence is already consistent with document_1.txt.",
+   "why": "no_change"
+  }
+ ],
+ "final_status": "VALID_GAP",
+ "snapshot": "S-table",
+ "cell": "B6_P_T2",
+ "task": "B6",
+ "cond": "P",
+ "round": "dev2",
+ "config": {
+  "thinking": "disabled",
+  "reasoning_effort": null,
+  "temperature": 0.0,
+  "max_tokens": 16384,
+  "json_mode": true,
+  "retrieval_k": 10,
+  "max_neutral_retrieval": 8,
+  "max_claims": 50,
+  "max_spans": 5,
+  "edit_ratio_gate": 0.5
+ },
+ "cost_usd": 0.005152,
+ "prompt_tokens": 11870,
+ "completion_tokens": 1326,
+ "n_calls": 1,
+ "draft_chars": 17984,
+ "final_chars": 17967
+}

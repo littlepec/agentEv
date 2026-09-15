@@ -1,0 +1,115 @@
+{
+ "arm": "V-full",
+ "calls": [
+  {
+   "tag": "S-miss-right:full",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 10536,
+   "completion_tokens": 891,
+   "reasoning_tokens": null,
+   "cost_usd": 0.00423,
+   "elapsed_s": 3.0,
+   "content_chars": 3816,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  }
+ ],
+ "stages": {
+  "full": "VALID(9 applied, 0 rejected)"
+ },
+ "patches_applied": [
+  {
+   "action": "replace",
+   "old_str": "The three datasets together contain 188 PD patients and 188 HC speakers, for a total of 376 participants ([Document 2](document_2.txt)).",
+   "new_str": "The three datasets together contain 188 PD patients and 188 HC speakers, for a total of 376 participants ([Document 1](document_1.txt)).",
+   "reason": "Speaker counts (50+88+50 PD; 50+88+50 HC) are stated in document_1.txt; citation should be to the primary source.",
+   "matched": "exact"
+  },
+  {
+   "action": "reattribute",
+   "old_str": "The Spanish data come from the PC-GITA corpus ([Document 2](document_2.txt)).",
+   "new_str": "The Spanish data come from the PC-GITA corpus ([Document 1](document_1.txt)).",
+   "reason": "PC-GITA as the Spanish corpus is stated in document_1.txt.",
+   "matched": "exact"
+  },
+  {
+   "action": "reattribute",
+   "old_str": "PC-GITA contains utterances from 50 PD patients and 50 HC speakers who are Colombian Spanish native speakers ([Document 2](document_2.txt)).",
+   "new_str": "PC-GITA contains utterances from 50 PD patients and 50 HC speakers who are Colombian Spanish native speakers ([Document 1](document_1.txt)).",
+   "reason": "Composition is stated in document_1.txt.",
+   "matched": "exact"
+  },
+  {
+   "action": "reattribute",
+   "old_str": "The German dataset contains speech recordings of 88 PD patients and 88 HC speakers from Germany ([Document 2](document_2.txt)).",
+   "new_str": "The German dataset contains speech recordings of 88 PD patients and 88 HC speakers from Germany ([Document 1](document_1.txt)).",
+   "reason": "German speaker counts are stated in document_1.txt.",
+   "matched": "exact"
+  },
+  {
+   "action": "reattribute",
+   "old_str": "This makes the German dataset the largest of the three in terms of speaker count, with 176 participants in total ([Document 2](document_2.txt)).",
+   "new_str": "This makes the German dataset the largest of the three in terms of speaker count, with 176 participants in total ([Document 1](document_1.txt)).",
+   "reason": "Derived from document_1.txt's stated counts.",
+   "matched": "exact"
+  },
+  {
+   "action": "reattribute",
+   "old_str": "Document 2 confirms the same composition: 50 PD patients and 50 healthy controls ([Document 2](document_2.txt)).",
+   "new_str": "Document 2 confirms the same composition: 50 PD patients and 50 healthy controls ([Document 1](document_1.txt)).",
+   "reason": "Czech composition is stated in document_1.txt.",
+   "matched": "exact"
+  },
+  {
+   "action": "reattribute",
+   "old_str": "In addition, the German dataset has a larger number of speakers (88 PD and 88 HC) than the Spanish and Czech datasets (50 PD and 50 HC each), which could affect statistical power and model training dynamics ([Document 2](document_2.txt)).",
+   "new_str": "In addition, the German dataset has a larger number of speakers (88 PD and 88 HC) than the Spanish and Czech datasets (50 PD and 50 HC each), which could affect statistical power and model training dynamics ([Document 1](document_1.txt)).",
+   "reason": "Speaker counts are stated in document_1.txt.",
+   "matched": "exact"
+  },
+  {
+   "action": "reattribute",
+   "old_str": "The datasets actually used remain the Spanish PC-GITA, German speech recordings, and Czech speech recordings ([Document 2](document_2.txt)).",
+   "new_str": "The datasets actually used remain the Spanish PC-GITA, German speech recordings, and Czech speech recordings ([Document 1](document_1.txt)).",
+   "reason": "The three datasets are stated in document_1.txt.",
+   "matched": "exact"
+  },
+  {
+   "action": "reattribute",
+   "old_str": "Overall, the answer to the query is that the datasets used are the Spanish PC-GITA corpus, the German speech recordings, and the Czech speech recordings, with the specific speaker counts and task details described above ([Document 2](document_2.txt)).",
+   "new_str": "Overall, the answer to the query is that the datasets used are the Spanish PC-GITA corpus, the German speech recordings, and the Czech speech recordings, with the specific speaker counts and task details described above ([Document 1](document_1.txt)).",
+   "reason": "The three datasets and their details are stated in document_1.txt.",
+   "matched": "exact"
+  }
+ ],
+ "patches_rejected": [],
+ "final_status": "VALID_GAP",
+ "snapshot": "S-miss-right",
+ "cell": "B6_C_T1",
+ "task": "B6",
+ "cond": "C",
+ "round": "frozen",
+ "config": {
+  "thinking": "disabled",
+  "reasoning_effort": null,
+  "temperature": 0.0,
+  "max_tokens": 16384,
+  "json_mode": true,
+  "retrieval_k": 10,
+  "max_neutral_retrieval": 12,
+  "max_claims": 50,
+  "max_spans": 5,
+  "edit_ratio_gate": 0.5
+ },
+ "cost_usd": 0.00423,
+ "prompt_tokens": 10536,
+ "completion_tokens": 891,
+ "n_calls": 1,
+ "draft_chars": 16012,
+ "final_chars": 16012
+}

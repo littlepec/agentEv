@@ -1,0 +1,135 @@
+{
+ "arm": "V-full",
+ "calls": [
+  {
+   "tag": "S-present:full",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 7709,
+   "completion_tokens": 1414,
+   "reasoning_tokens": null,
+   "cost_usd": 0.00401,
+   "elapsed_s": 5.2,
+   "content_chars": 5972,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  }
+ ],
+ "stages": {
+  "full": "VALID(14 applied, 0 rejected)"
+ },
+ "patches_applied": [
+  {
+   "action": "replace",
+   "old_str": "For the 67 predicates, the primary source states that the authors \"hand-craft 163 templates\" ([document_1.txt](document_1.txt)).",
+   "new_str": "For the 67 predicates, the primary source states that the authors \"hand-craft 163 templates\" ([document_1.txt](document_1.txt)); the third-party note reports a different value of 103 templates ([document_2.txt](document_2.txt)).",
+   "reason": "The draft's sentence is accurate to document_1.txt (163 templates), but the surrounding discussion treats 163 vs 103 as a discrepancy; restating with the primary value and noting the secondary source's differing value keeps the patch minimal and accurate."
+  },
+  {
+   "action": "replace",
+   "old_str": "| document_1.txt (primary) | 67 | 163 | 269 (106 + 163) |",
+   "new_str": "| document_1.txt (primary) | 67 | 163 | 269 (106 + 163) |",
+   "reason": "No change needed; this table row correctly reports the primary source's 163 and the transparent sum 269."
+  },
+  {
+   "action": "replace",
+   "old_str": "| document_2.txt (third-party note) | 67 | 103 | 209 (106 + 103) |",
+   "new_str": "| document_2.txt (third-party note) | 67 | 103 | 209 (106 + 103) |",
+   "reason": "No change needed; this row correctly attributes 103 and 209 to document_2.txt."
+  },
+  {
+   "action": "replace",
+   "old_str": "The third-party note explicitly claims that the paper reports a total of 209 templates ([document_2.txt](document_2.txt)).",
+   "new_str": "The third-party note explicitly claims that the paper reports a total of 209 templates ([document_2.txt](document_2.txt)); document_1.txt states 106 templates for Freebase and 163 for the power tool domain, with no total stated.",
+   "reason": "The draft correctly reports document_2.txt's claim, but should note the primary source's actual figures and that no total is stated in document_1.txt."
+  },
+  {
+   "action": "replace",
+   "old_str": "Therefore, the more reliable figure for the power tool domain is 163 templates, and the total across both evaluations is 269 templates.",
+   "new_str": "Therefore, the more reliable figure for the power tool domain is 163 templates, and the total across both evaluations is 269 templates.",
+   "reason": "No change needed; this correctly uses the primary source's 163 and transparent sum 269."
+  },
+  {
+   "action": "replace",
+   "old_str": "Based on the primary source, the total is 269 templates: 106 for the Freebase evaluation and 163 for the power tool domain ([document_1.txt](document_1.txt)).",
+   "new_str": "Based on the primary source, the total is 269 templates: 106 for the Freebase evaluation and 163 for the power tool domain ([document_1.txt](document_1.txt)).",
+   "reason": "No change needed; this is a transparent combination of document_1.txt's stated figures."
+  },
+  {
+   "action": "replace",
+   "old_str": "If one relies on the third-party note, the total would be 209 templates ([document_2.txt](document_2.txt)).",
+   "new_str": "If one relies on the third-party note, the total would be 209 templates ([document_2.txt](document_2.txt)); document_1.txt states 106 and 163 separately.",
+   "reason": "The draft correctly reports document_2.txt's total, but should note the primary source's separate figures."
+  },
+  {
+   "action": "replace",
+   "old_str": "In the power tool domain, 163 templates (or 103 according to the third-party note) covered 67 predicates, generating 12,228 seed questions and 20,000 expanded questions ([document_1.txt](document_1.txt)).",
+   "new_str": "In the power tool domain, 163 templates (or 103 according to the third-party note) covered 67 predicates, generating 12,228 seed questions and 20,000 expanded questions ([document_1.txt](document_1.txt)).",
+   "reason": "No change needed; this correctly reports the primary source's 163 and notes the secondary source's 103."
+  },
+  {
+   "action": "replace",
+   "old_str": "Despite citing the primary source, the note reports 103 templates for the power tool domain, which contradicts the primary source's 163.",
+   "new_str": "Despite citing the primary source, the note reports 103 templates for the power tool domain, which contradicts the primary source's 163.",
+   "reason": "No change needed; this correctly identifies the contradiction."
+  },
+  {
+   "action": "replace",
+   "old_str": "Therefore, the total number of hand-crafted templates is 269.",
+   "new_str": "Therefore, the total number of hand-crafted templates is 269.",
+   "reason": "No change needed; this is a transparent combination of document_1.txt's stated figures."
+  },
+  {
+   "action": "replace",
+   "old_str": "For the in-house power tool domain with 67 predicates, the primary source reports 163 templates ([document_1.txt](document_1.txt)), while a third-party note reports 103 templates ([document_2.txt](document_2.txt)).",
+   "new_str": "For the in-house power tool domain with 67 predicates, the primary source reports 163 templates ([document_1.txt](document_1.txt)), while a third-party note reports 103 templates ([document_2.txt](document_2.txt)).",
+   "reason": "No change needed; this correctly reports both sources."
+  },
+  {
+   "action": "replace",
+   "old_str": "The most reliable total, based on the primary source, is 269 templates (106 + 163).",
+   "new_str": "The most reliable total, based on the primary source, is 269 templates (106 + 163).",
+   "reason": "No change needed; this is a transparent combination of document_1.txt's stated figures."
+  },
+  {
+   "action": "replace",
+   "old_str": "If the third-party note is used, the total is 209 templates (106 + 103).",
+   "new_str": "If the third-party note is used, the total is 209 templates (106 + 103).",
+   "reason": "No change needed; this correctly reports document_2.txt's figures."
+  },
+  {
+   "action": "replace",
+   "old_str": "Given the principle of prioritizing primary sources, the answer to \"How many hand-crafted templates did they have to make?\" is 106 for the Freebase experiment alone, or 269 across both evaluations.",
+   "new_str": "Given the principle of prioritizing primary sources, the answer to \"How many hand-crafted templates did they have to make?\" is 106 for the Freebase experiment alone, or 269 across both evaluations.",
+   "reason": "No change needed; this correctly uses the primary source's figures."
+  }
+ ],
+ "patches_rejected": [],
+ "final_status": "VALID_GAP",
+ "snapshot": "S-present",
+ "cell": "B3_P_T2",
+ "task": "B3",
+ "cond": "P",
+ "round": "dev1",
+ "config": {
+  "thinking": "disabled",
+  "reasoning_effort": null,
+  "temperature": 0.0,
+  "max_tokens": 16384,
+  "json_mode": true,
+  "retrieval_k": 10,
+  "max_neutral_retrieval": 8,
+  "max_claims": 40,
+  "edit_ratio_gate": 0.5
+ },
+ "cost_usd": 0.00401,
+ "prompt_tokens": 7709,
+ "completion_tokens": 1414,
+ "n_calls": 1,
+ "draft_chars": 12384,
+ "final_chars": 12636
+}

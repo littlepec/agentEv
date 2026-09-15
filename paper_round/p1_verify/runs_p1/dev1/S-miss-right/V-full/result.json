@@ -1,0 +1,135 @@
+{
+ "arm": "V-full",
+ "calls": [
+  {
+   "tag": "S-miss-right:full",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 10388,
+   "completion_tokens": 1576,
+   "reasoning_tokens": null,
+   "cost_usd": 0.005008,
+   "elapsed_s": 5.2,
+   "content_chars": 6928,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  }
+ ],
+ "stages": {
+  "full": "VALID(14 applied, 0 rejected)"
+ },
+ "patches_applied": [
+  {
+   "action": "replace",
+   "old_str": "The German dataset contains speech recordings of 88 PD patients and 88 HC speakers from Germany ([Document 2](document_2.txt)).",
+   "new_str": "The German dataset contains speech recordings of 88 PD patients and 88 HC speakers from Germany ([Document 1](document_1.txt)).",
+   "reason": "Document 1 states the German dataset has 88 PD patients and 88 HC speakers from Germany; the draft cited Document 2 for this value."
+  },
+  {
+   "action": "replace",
+   "old_str": "This makes the German dataset the largest of the three in terms of speaker count, with 176 participants in total ([Document 2](document_2.txt)).",
+   "new_str": "This makes the German dataset the largest of the three in terms of speaker count, with 176 participants in total ([Document 1](document_1.txt)).",
+   "reason": "The 88+88=176 total is supported by Document 1's figures; the draft cited Document 2."
+  },
+  {
+   "action": "replace",
+   "old_str": "The provided information does not name the German corpus explicitly, nor does it list the specific speech tasks performed by the German participants ([Document 2](document_2.txt)).",
+   "new_str": "The provided information does not name the German corpus explicitly, but Document 1 lists the German speech tasks: rapid repetition of /pa-ta-ka/, 5 sentences, one text with 81 words, and a monologue ([Document 1](document_1.txt)).",
+   "reason": "Document 1 explicitly describes the German speech tasks, contradicting the draft's claim that they are not listed."
+  },
+  {
+   "action": "replace",
+   "old_str": "It does, however, state that these recordings form part of the cross-lingual dataset used for the convolutional neural network (CNN) and transfer learning experiments ([Document 2](document_2.txt)).",
+   "new_str": "It does, however, state that these recordings form part of the cross-lingual dataset used for the convolutional neural network (CNN) and transfer learning experiments ([Document 1](document_1.txt)).",
+   "reason": "Document 1 describes the German recordings as part of the cross-lingual CNN and transfer learning experiments; the draft cited Document 2."
+  },
+  {
+   "action": "replace",
+   "old_str": "The Czech dataset consists of 100 native Czech speakers, comprising 50 PD patients and 50 HC speakers ([Document 1](document_1.txt)).",
+   "new_str": "The Czech dataset consists of 100 native Czech speakers, comprising 50 PD patients and 50 HC speakers ([Document 1](document_1.txt)).",
+   "reason": "No change needed; this sentence already cites Document 1 correctly."
+  },
+  {
+   "action": "replace",
+   "old_str": "Document 2 confirms the same composition: 50 PD patients and 50 healthy controls ([Document 2](document_2.txt)).",
+   "new_str": "Document 1 confirms the same composition: 50 PD patients and 50 healthy controls ([Document 1](document_1.txt)).",
+   "reason": "Document 1 states the Czech dataset has 50 PD and 50 HC; the draft cited Document 2."
+  },
+  {
+   "action": "replace",
+   "old_str": "The three datasets together contain 188 PD patients and 188 HC speakers, for a total of 376 participants ([Document 2](document_2.txt)).",
+   "new_str": "The three datasets together contain 188 PD patients and 188 HC speakers, for a total of 376 participants ([Document 1](document_1.txt)).",
+   "reason": "The aggregate counts are a transparent combination of Document 1's figures (50+88+50 PD; 50+88+50 HC); the draft cited Document 2."
+  },
+  {
+   "action": "replace",
+   "old_str": "The Spanish data come from the PC-GITA corpus ([Document 2](document_2.txt)).",
+   "new_str": "The Spanish data come from the PC-GITA corpus ([Document 1](document_1.txt)).",
+   "reason": "Document 1 states the Spanish data use the PC-GITA corpus; the draft cited Document 2."
+  },
+  {
+   "action": "replace",
+   "old_str": "PC-GITA contains utterances from 50 PD patients and 50 HC speakers who are Colombian Spanish native speakers ([Document 2](document_2.txt)).",
+   "new_str": "PC-GITA contains utterances from 50 PD patients and 50 HC speakers who are Colombian Spanish native speakers ([Document 1](document_1.txt)).",
+   "reason": "Document 1 states this composition; the draft cited Document 2."
+  },
+  {
+   "action": "replace",
+   "old_str": "The datasets actually used remain the Spanish PC-GITA, German speech recordings, and Czech speech recordings ([Document 2](document_2.txt)).",
+   "new_str": "The datasets actually used remain the Spanish PC-GITA, German speech recordings, and Czech speech recordings ([Document 1](document_1.txt)).",
+   "reason": "Document 1 identifies these three datasets; the draft cited Document 2."
+  },
+  {
+   "action": "replace",
+   "old_str": "The German corpus is not named, and its speech tasks are not described ([Document 2](document_2.txt)).",
+   "new_str": "The German corpus is not named, but its speech tasks are described in Document 1 ([Document 1](document_1.txt)).",
+   "reason": "Document 1 describes the German speech tasks, contradicting the draft's claim that they are not described."
+  },
+  {
+   "action": "replace",
+   "old_str": "In addition, the German dataset has a larger number of speakers (88 PD and 88 HC) than the Spanish and Czech datasets (50 PD and 50 HC each), which could affect statistical power and model training dynamics ([Document 2](document_2.txt)).",
+   "new_str": "In addition, the German dataset has a larger number of speakers (88 PD and 88 HC) than the Spanish and Czech datasets (50 PD and 50 HC each), which could affect statistical power and model training dynamics ([Document 1](document_1.txt)).",
+   "reason": "Document 1 supports these speaker counts; the draft cited Document 2."
+  },
+  {
+   "action": "replace",
+   "old_str": "The study uses three speech datasets for cross-lingual Parkinson's disease classification: the Spanish PC-GITA corpus with 50 PD patients and 50 HC speakers who are Colombian Spanish native speakers; a German dataset with 88 PD patients and 88 HC speakers from Germany; and a Czech dataset with 50 PD patients and 50 HC native Czech speakers ([Document 1](document_1.txt); [Document 2](document_2.txt)).",
+   "new_str": "The study uses three speech datasets for cross-lingual Parkinson's disease classification: the Spanish PC-GITA corpus with 50 PD patients and 50 HC speakers who are Colombian Spanish native speakers; a German dataset with 88 PD patients and 88 HC speakers from Germany; and a Czech dataset with 50 PD patients and 50 HC native Czech speakers ([Document 1](document_1.txt)).",
+   "reason": "All these values are stated in Document 1; the draft also cited Document 2."
+  },
+  {
+   "action": "replace",
+   "old_str": "Overall, the answer to the query is that the datasets used are the Spanish PC-GITA corpus, the German speech recordings, and the Czech speech recordings, with the specific speaker counts and task details described above ([Document 2](document_2.txt)).",
+   "new_str": "Overall, the answer to the query is that the datasets used are the Spanish PC-GITA corpus, the German speech recordings, and the Czech speech recordings, with the specific speaker counts and task details described above ([Document 1](document_1.txt)).",
+   "reason": "Document 1 identifies these datasets and details; the draft cited Document 2."
+  }
+ ],
+ "patches_rejected": [],
+ "final_status": "VALID_GAP",
+ "snapshot": "S-miss-right",
+ "cell": "B6_C_T1",
+ "task": "B6",
+ "cond": "C",
+ "round": "dev1",
+ "config": {
+  "thinking": "disabled",
+  "reasoning_effort": null,
+  "temperature": 0.0,
+  "max_tokens": 16384,
+  "json_mode": true,
+  "retrieval_k": 10,
+  "max_neutral_retrieval": 8,
+  "max_claims": 40,
+  "edit_ratio_gate": 0.5
+ },
+ "cost_usd": 0.005008,
+ "prompt_tokens": 10388,
+ "completion_tokens": 1576,
+ "n_calls": 1,
+ "draft_chars": 16012,
+ "final_chars": 16043
+}

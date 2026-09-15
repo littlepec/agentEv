@@ -1,0 +1,53 @@
+{
+ "prompt": "Reply with JSON {\"ok\": true}.",
+ "response": {
+  "id": "03a50380-a25d-47f9-8e92-6a1a8918c38c",
+  "object": "chat.completion",
+  "created": 1789446796,
+  "model": "deepseek-flash",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"ok\": true}",
+     "reasoning_content": "We need answer user asks \"Reply with JSON {\"ok\": true}.\" Need comply. Must be JSON only? They want reply with JSON. We can output exactly {\"ok\": true}. Need ensure valid JSON. final."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 38,
+   "completion_tokens": 51,
+   "total_tokens": 89,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 45
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 38
+  },
+  "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+ },
+ "record": {
+  "tag": "probe:effort_low",
+  "http": 200,
+  "finish_reason": "stop",
+  "prompt_tokens": 38,
+  "completion_tokens": 51,
+  "reasoning_tokens": 45,
+  "cost_usd": 7.3e-05,
+  "elapsed_s": 0.7,
+  "content_chars": 12,
+  "parse_error": null,
+  "status": "VALID",
+  "cfg": {
+   "type": "enabled",
+   "reasoning_effort": "low"
+  },
+  "max_tokens": 2048
+ }
+}

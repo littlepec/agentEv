@@ -1,0 +1,1625 @@
+{
+ "arm": "V-ref",
+ "calls": [
+  {
+   "tag": "S-miss-wrong:extract",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 4193,
+   "completion_tokens": 4821,
+   "reasoning_tokens": null,
+   "cost_usd": 0.007043,
+   "elapsed_s": 12.9,
+   "content_chars": 15639,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  },
+  {
+   "tag": "S-miss-wrong:judge_window",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 6500,
+   "completion_tokens": 2171,
+   "reasoning_tokens": null,
+   "cost_usd": 0.004555,
+   "elapsed_s": 6.1,
+   "content_chars": 7516,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  },
+  {
+   "tag": "S-miss-wrong:judge_retrieved",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 5669,
+   "completion_tokens": 181,
+   "reasoning_tokens": null,
+   "cost_usd": 0.001918,
+   "elapsed_s": 1.1,
+   "content_chars": 718,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  },
+  {
+   "tag": "S-miss-wrong:patch",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 4930,
+   "completion_tokens": 1208,
+   "reasoning_tokens": null,
+   "cost_usd": 0.002929,
+   "elapsed_s": 3.8,
+   "content_chars": 4975,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  }
+ ],
+ "stages": {
+  "extract": "VALID(50 claims, 51 spans)",
+  "judge_window": "VALID",
+  "judge_retrieved": "VALID",
+  "patch": "VALID(5 applied, 5 rejected)"
+ },
+ "claims": [
+  {
+   "id": "c1",
+   "subject": "study",
+   "attribute": "languages of speech recordings considered",
+   "value": "three",
+   "unit_or_denominator": "",
+   "condition": "",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The study explicitly states that \"speech recordings of patients in three different languages are considered: Spanish, German, and Czech,\""
+   ]
+  },
+  {
+   "id": "c2",
+   "subject": "speech recordings",
+   "attribute": "sampling rate after down-sampling",
+   "value": "16",
+   "unit_or_denominator": "kHz",
+   "condition": "all three datasets",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "all recordings were captured under noise-controlled conditions and down-sampled to 16 kHz ([document_1.txt](#ref-doc1))",
+    "All recordings were captured under noise-controlled conditions and down-sampled to 16 kHz ([document_1.txt](#ref-doc1))."
+   ]
+  },
+  {
+   "id": "c3",
+   "subject": "PC-GITA",
+   "attribute": "PD patient count",
+   "value": "50",
+   "unit_or_denominator": "speakers",
+   "condition": "Spanish",
+   "cited_source": "document_2.txt",
+   "sentence_spans": [
+    "PC-GITA contains utterances from 50 PD patients and 50 healthy control (HC) speakers, all Colombian Spanish native speakers, giving a total of 100 speakers and a perfectly balanced 1:1 case–control design ([document_2.txt](#ref-doc2))."
+   ]
+  },
+  {
+   "id": "c4",
+   "subject": "PC-GITA",
+   "attribute": "healthy control count",
+   "value": "50",
+   "unit_or_denominator": "speakers",
+   "condition": "Spanish",
+   "cited_source": "document_2.txt",
+   "sentence_spans": [
+    "PC-GITA contains utterances from 50 PD patients and 50 healthy control (HC) speakers, all Colombian Spanish native speakers, giving a total of 100 speakers and a perfectly balanced 1:1 case–control design ([document_2.txt](#ref-doc2))."
+   ]
+  },
+  {
+   "id": "c5",
+   "subject": "PC-GITA",
+   "attribute": "total speaker count",
+   "value": "100",
+   "unit_or_denominator": "speakers",
+   "condition": "Spanish",
+   "cited_source": "document_2.txt",
+   "sentence_spans": [
+    "PC-GITA contains utterances from 50 PD patients and 50 healthy control (HC) speakers, all Colombian Spanish native speakers, giving a total of 100 speakers and a perfectly balanced 1:1 case–control design ([document_2.txt](#ref-doc2))."
+   ]
+  },
+  {
+   "id": "c6",
+   "subject": "German speech recordings",
+   "attribute": "PD patient count",
+   "value": "44",
+   "unit_or_denominator": "speakers",
+   "condition": "German",
+   "cited_source": "document_2.txt",
+   "sentence_spans": [
+    "The German data consist of speech recordings from 44 PD patients and 44 HC speakers ([document_2.txt](#ref-doc2))."
+   ]
+  },
+  {
+   "id": "c7",
+   "subject": "German speech recordings",
+   "attribute": "healthy control count",
+   "value": "44",
+   "unit_or_denominator": "speakers",
+   "condition": "German",
+   "cited_source": "document_2.txt",
+   "sentence_spans": [
+    "The German data consist of speech recordings from 44 PD patients and 44 HC speakers ([document_2.txt](#ref-doc2))."
+   ]
+  },
+  {
+   "id": "c8",
+   "subject": "German speech recordings",
+   "attribute": "total speaker count",
+   "value": "88",
+   "unit_or_denominator": "speakers",
+   "condition": "German",
+   "cited_source": "document_2.txt",
+   "sentence_spans": [
+    "As with the Spanish set, the case–control distribution is balanced, yielding 88 speakers in total."
+   ]
+  },
+  {
+   "id": "c9",
+   "subject": "Czech dataset",
+   "attribute": "total native Czech speaker count",
+   "value": "100",
+   "unit_or_denominator": "speakers",
+   "condition": "Czech",
+   "cited_source": "both",
+   "sentence_spans": [
+    "The Czech dataset comprises a total of 100 native Czech speakers, of whom 50 are PD patients and 50 are healthy controls ([document_1.txt](#ref-doc1); [document_2.txt](#ref-doc2))."
+   ]
+  },
+  {
+   "id": "c10",
+   "subject": "Czech dataset",
+   "attribute": "PD patient count",
+   "value": "50",
+   "unit_or_denominator": "speakers",
+   "condition": "Czech",
+   "cited_source": "both",
+   "sentence_spans": [
+    "The Czech dataset comprises a total of 100 native Czech speakers, of whom 50 are PD patients and 50 are healthy controls ([document_1.txt](#ref-doc1); [document_2.txt](#ref-doc2))."
+   ]
+  },
+  {
+   "id": "c11",
+   "subject": "Czech dataset",
+   "attribute": "healthy control count",
+   "value": "50",
+   "unit_or_denominator": "speakers",
+   "condition": "Czech",
+   "cited_source": "both",
+   "sentence_spans": [
+    "The Czech dataset comprises a total of 100 native Czech speakers, of whom 50 are PD patients and 50 are healthy controls ([document_1.txt](#ref-doc1); [document_2.txt](#ref-doc2))."
+   ]
+  },
+  {
+   "id": "c12",
+   "subject": "Czech dataset",
+   "attribute": "read text length",
+   "value": "80",
+   "unit_or_denominator": "words",
+   "condition": "Czech",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "participants performed the rapid repetition of the syllables /pa-ta-ka/, read a text of 80 words, and produced a monologue ([document_1.txt](#ref-doc1))"
+   ]
+  },
+  {
+   "id": "c13",
+   "subject": "PC-GITA prior phonation and tremor analysis",
+   "attribute": "maximum reported accuracy",
+   "value": "77",
+   "unit_or_denominator": "%",
+   "condition": "GMM and SVM classification",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "reporting accuracies of up to 77% ([document_1.txt](#ref-doc1))"
+   ]
+  },
+  {
+   "id": "c14",
+   "subject": "segmentation",
+   "attribute": "signal taken to left and right of voiced/unvoiced border",
+   "value": "80",
+   "unit_or_denominator": "ms",
+   "condition": "",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The border between voiced and unvoiced frames is identified, and 80 ms of signal is taken to the left and to the right of that border, producing segments of 160 ms ([document_1.txt](#ref-doc1))."
+   ]
+  },
+  {
+   "id": "c15",
+   "subject": "segments",
+   "attribute": "segment length",
+   "value": "160",
+   "unit_or_denominator": "ms",
+   "condition": "",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The border between voiced and unvoiced frames is identified, and 80 ms of signal is taken to the left and to the right of that border, producing segments of 160 ms ([document_1.txt](#ref-doc1))."
+   ]
+  },
+  {
+   "id": "c16",
+   "subject": "STFT representations",
+   "attribute": "frequency bins",
+   "value": "256",
+   "unit_or_denominator": "bins",
+   "condition": "CNN branch",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "short-time Fourier transform (STFT) representations are computed for each segmented transition with 256 frequency bins, using a window length of 16 ms and a step size of 4 ms, forming 41 time frames per transition ([document_1.txt](#ref-doc1))"
+   ]
+  },
+  {
+   "id": "c17",
+   "subject": "STFT",
+   "attribute": "window length",
+   "value": "16",
+   "unit_or_denominator": "ms",
+   "condition": "CNN branch",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "short-time Fourier transform (STFT) representations are computed for each segmented transition with 256 frequency bins, using a window length of 16 ms and a step size of 4 ms, forming 41 time frames per transition ([document_1.txt](#ref-doc1))"
+   ]
+  },
+  {
+   "id": "c18",
+   "subject": "STFT",
+   "attribute": "step size",
+   "value": "4",
+   "unit_or_denominator": "ms",
+   "condition": "CNN branch",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "short-time Fourier transform (STFT) representations are computed for each segmented transition with 256 frequency bins, using a window length of 16 ms and a step size of 4 ms, forming 41 time frames per transition ([document_1.txt](#ref-doc1))"
+   ]
+  },
+  {
+   "id": "c19",
+   "subject": "STFT",
+   "attribute": "time frames per transition",
+   "value": "41",
+   "unit_or_denominator": "frames",
+   "condition": "CNN branch",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "short-time Fourier transform (STFT) representations are computed for each segmented transition with 256 frequency bins, using a window length of 16 ms and a step size of 4 ms, forming 41 time frames per transition ([document_1.txt](#ref-doc1))"
+   ]
+  },
+  {
+   "id": "c20",
+   "subject": "Mel scale transformation",
+   "attribute": "Mel filters",
+   "value": "80",
+   "unit_or_denominator": "filters",
+   "condition": "CNN branch",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "Each spectrogram is then transformed to the Mel scale using 80 filters, giving a final input of 80 × 41 ([document_1.txt](#ref-doc1))."
+   ]
+  },
+  {
+   "id": "c21",
+   "subject": "final spectrogram input",
+   "attribute": "size",
+   "value": "80 × 41",
+   "unit_or_denominator": "",
+   "condition": "CNN branch",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "Each spectrogram is then transformed to the Mel scale using 80 filters, giving a final input of 80 × 41 ([document_1.txt](#ref-doc1))."
+   ]
+  },
+  {
+   "id": "c22",
+   "subject": "Spanish baseline (SVM)",
+   "attribute": "accuracy",
+   "value": "73.7",
+   "unit_or_denominator": "%",
+   "condition": "monolingual, Spanish",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Spanish | Baseline (SVM) | 73.7 (13.0) | 74.5 (16.7) | 77.1 (16.2) | 0.50 |"
+   ]
+  },
+  {
+   "id": "c23",
+   "subject": "Spanish baseline (SVM)",
+   "attribute": "sensitivity",
+   "value": "74.5",
+   "unit_or_denominator": "%",
+   "condition": "monolingual, Spanish",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Spanish | Baseline (SVM) | 73.7 (13.0) | 74.5 (16.7) | 77.1 (16.2) | 0.50 |"
+   ]
+  },
+  {
+   "id": "c24",
+   "subject": "Spanish baseline (SVM)",
+   "attribute": "specificity",
+   "value": "77.1",
+   "unit_or_denominator": "%",
+   "condition": "monolingual, Spanish",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Spanish | Baseline (SVM) | 73.7 (13.0) | 74.5 (16.7) | 77.1 (16.2) | 0.50 |"
+   ]
+  },
+  {
+   "id": "c25",
+   "subject": "Spanish baseline (SVM)",
+   "attribute": "MCC",
+   "value": "0.50",
+   "unit_or_denominator": "",
+   "condition": "monolingual, Spanish",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Spanish | Baseline (SVM) | 73.7 (13.0) | 74.5 (16.7) | 77.1 (16.2) | 0.50 |"
+   ]
+  },
+  {
+   "id": "c26",
+   "subject": "Spanish CNN",
+   "attribute": "accuracy",
+   "value": "71.0",
+   "unit_or_denominator": "%",
+   "condition": "monolingual, Spanish",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Spanish | CNN | 71.0 (15.9) | 74.0 (25.0) | 68.0 (28.6) | 0.42 |"
+   ]
+  },
+  {
+   "id": "c27",
+   "subject": "Spanish CNN",
+   "attribute": "sensitivity",
+   "value": "74.0",
+   "unit_or_denominator": "%",
+   "condition": "monolingual, Spanish",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Spanish | CNN | 71.0 (15.9) | 74.0 (25.0) | 68.0 (28.6) | 0.42 |"
+   ]
+  },
+  {
+   "id": "c28",
+   "subject": "Spanish CNN",
+   "attribute": "specificity",
+   "value": "68.0",
+   "unit_or_denominator": "%",
+   "condition": "monolingual, Spanish",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Spanish | CNN | 71.0 (15.9) | 74.0 (25.0) | 68.0 (28.6) | 0.42 |"
+   ]
+  },
+  {
+   "id": "c29",
+   "subject": "Spanish CNN",
+   "attribute": "MCC",
+   "value": "0.42",
+   "unit_or_denominator": "",
+   "condition": "monolingual, Spanish",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Spanish | CNN | 71.0 (15.9) | 74.0 (25.0) | 68.0 (28.6) | 0.42 |"
+   ]
+  },
+  {
+   "id": "c30",
+   "subject": "German baseline (SVM)",
+   "attribute": "accuracy",
+   "value": "69.3",
+   "unit_or_denominator": "%",
+   "condition": "monolingual, German",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| German | Baseline (SVM) | 69.3 (9.9) | 71.8 (12.4) | 68.7 (10.0) | 0.39 |"
+   ]
+  },
+  {
+   "id": "c31",
+   "subject": "German baseline (SVM)",
+   "attribute": "sensitivity",
+   "value": "71.8",
+   "unit_or_denominator": "%",
+   "condition": "monolingual, German",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| German | Baseline (SVM) | 69.3 (9.9) | 71.8 (12.4) | 68.7 (10.0) | 0.39 |"
+   ]
+  },
+  {
+   "id": "c32",
+   "subject": "German baseline (SVM)",
+   "attribute": "specificity",
+   "value": "68.7",
+   "unit_or_denominator": "%",
+   "condition": "monolingual, German",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| German | Baseline (SVM) | 69.3 (9.9) | 71.8 (12.4) | 68.7 (10.0) | 0.39 |"
+   ]
+  },
+  {
+   "id": "c33",
+   "subject": "German baseline (SVM)",
+   "attribute": "MCC",
+   "value": "0.39",
+   "unit_or_denominator": "",
+   "condition": "monolingual, German",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| German | Baseline (SVM) | 69.3 (9.9) | 71.8 (12.4) | 68.7 (10.0) | 0.39 |"
+   ]
+  },
+  {
+   "id": "c34",
+   "subject": "German CNN",
+   "attribute": "accuracy",
+   "value": "63.1",
+   "unit_or_denominator": "%",
+   "condition": "monolingual, German",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| German | CNN | 63.1 (11.7) | 43.1 (38.0) | 83.1 (17.7) | 0.30 |"
+   ]
+  },
+  {
+   "id": "c35",
+   "subject": "German CNN",
+   "attribute": "sensitivity",
+   "value": "43.1",
+   "unit_or_denominator": "%",
+   "condition": "monolingual, German",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| German | CNN | 63.1 (11.7) | 43.1 (38.0) | 83.1 (17.7) | 0.30 |"
+   ]
+  },
+  {
+   "id": "c36",
+   "subject": "German CNN",
+   "attribute": "specificity",
+   "value": "83.1",
+   "unit_or_denominator": "%",
+   "condition": "monolingual, German",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| German | CNN | 63.1 (11.7) | 43.1 (38.0) | 83.1 (17.7) | 0.30 |"
+   ]
+  },
+  {
+   "id": "c37",
+   "subject": "German CNN",
+   "attribute": "MCC",
+   "value": "0.30",
+   "unit_or_denominator": "",
+   "condition": "monolingual, German",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| German | CNN | 63.1 (11.7) | 43.1 (38.0) | 83.1 (17.7) | 0.30 |"
+   ]
+  },
+  {
+   "id": "c38",
+   "subject": "Czech baseline (SVM)",
+   "attribute": "accuracy",
+   "value": "61.0",
+   "unit_or_denominator": "%",
+   "condition": "monolingual, Czech",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Czech | Baseline (SVM) | 61.0 (12.5) | 64.5 (19.5) | 60.2 (11.9) | 0.27 |"
+   ]
+  },
+  {
+   "id": "c39",
+   "subject": "Czech baseline (SVM)",
+   "attribute": "sensitivity",
+   "value": "64.5",
+   "unit_or_denominator": "%",
+   "condition": "monolingual, Czech",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Czech | Baseline (SVM) | 61.0 (12.5) | 64.5 (19.5) | 60.2 (11.9) | 0.27 |"
+   ]
+  },
+  {
+   "id": "c40",
+   "subject": "Czech baseline (SVM)",
+   "attribute": "specificity",
+   "value": "60.2",
+   "unit_or_denominator": "%",
+   "condition": "monolingual, Czech",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Czech | Baseline (SVM) | 61.0 (12.5) | 64.5 (19.5) | 60.2 (11.9) | 0.27 |"
+   ]
+  },
+  {
+   "id": "c41",
+   "subject": "Czech baseline (SVM)",
+   "attribute": "MCC",
+   "value": "0.27",
+   "unit_or_denominator": "",
+   "condition": "monolingual, Czech",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Czech | Baseline (SVM) | 61.0 (12.5) | 64.5 (19.5) | 60.2 (11.9) | 0.27 |"
+   ]
+  },
+  {
+   "id": "c42",
+   "subject": "Czech CNN",
+   "attribute": "accuracy",
+   "value": "68.5",
+   "unit_or_denominator": "%",
+   "condition": "monolingual, Czech",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Czech | CNN | 68.5 (14.1) | 94.0 (13.5) | 42.0 (33.2) | 0.43 |"
+   ]
+  },
+  {
+   "id": "c43",
+   "subject": "Czech CNN",
+   "attribute": "sensitivity",
+   "value": "94.0",
+   "unit_or_denominator": "%",
+   "condition": "monolingual, Czech",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Czech | CNN | 68.5 (14.1) | 94.0 (13.5) | 42.0 (33.2) | 0.43 |"
+   ]
+  },
+  {
+   "id": "c44",
+   "subject": "Czech CNN",
+   "attribute": "specificity",
+   "value": "42.0",
+   "unit_or_denominator": "%",
+   "condition": "monolingual, Czech",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Czech | CNN | 68.5 (14.1) | 94.0 (13.5) | 42.0 (33.2) | 0.43 |"
+   ]
+  },
+  {
+   "id": "c45",
+   "subject": "Czech CNN",
+   "attribute": "MCC",
+   "value": "0.43",
+   "unit_or_denominator": "",
+   "condition": "monolingual, Czech",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| Czech | CNN | 68.5 (14.1) | 94.0 (13.5) | 42.0 (33.2) | 0.43 |"
+   ]
+  },
+  {
+   "id": "c46",
+   "subject": "German-to-Spanish transfer",
+   "attribute": "accuracy",
+   "value": "70.0",
+   "unit_or_denominator": "%",
+   "condition": "base German, target Spanish",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| German | Spanish | 70.0 (12.5) | 62.0 (19.9) | 78.0 (23.9) | 0.41 |"
+   ]
+  },
+  {
+   "id": "c47",
+   "subject": "German-to-Spanish transfer",
+   "attribute": "sensitivity",
+   "value": "62.0",
+   "unit_or_denominator": "%",
+   "condition": "base German, target Spanish",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| German | Spanish | 70.0 (12.5) | 62.0 (19.9) | 78.0 (23.9) | 0.41 |"
+   ]
+  },
+  {
+   "id": "c48",
+   "subject": "German-to-Spanish transfer",
+   "attribute": "specificity",
+   "value": "78.0",
+   "unit_or_denominator": "%",
+   "condition": "base German, target Spanish",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| German | Spanish | 70.0 (12.5) | 62.0 (19.9) | 78.0 (23.9) | 0.41 |"
+   ]
+  },
+  {
+   "id": "c49",
+   "subject": "German-to-Spanish transfer",
+   "attribute": "MCC",
+   "value": "0.41",
+   "unit_or_denominator": "",
+   "condition": "base German, target Spanish",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| German | Spanish | 70.0 (12.5) | 62.0 (19.9) | 78.0 (23.9) | 0.41 |"
+   ]
+  },
+  {
+   "id": "c50",
+   "subject": "German-to-Czech transfer",
+   "attribute": "accuracy",
+   "value": "72.0",
+   "unit_or_denominator": "%",
+   "condition": "base German, target Czech",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "| German | Czech | 72.0 (13.1) | 67.0 (11.6) | 78.0 (23.9) | 0.46 |"
+   ]
+  }
+ ],
+ "judge_window": {
+  "c1": {
+   "id": "c1",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Speech recordings of patients in three different languages are considered: Spanish, German, and Czech.",
+   "reason": "Passage states three languages: Spanish, German, Czech."
+  },
+  "c2": {
+   "id": "c2",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "The speech signals were down-sampled to 16 kHz.",
+   "reason": "Passage states all recordings down-sampled to 16 kHz."
+  },
+  "c3": {
+   "id": "c3",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "utterances from 50 PD patients and 50 HC subjects, Colombian Spanish native speakers",
+   "reason": "Passage states PC-GITA has 50 PD patients."
+  },
+  "c4": {
+   "id": "c4",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "utterances from 50 PD patients and 50 HC subjects, Colombian Spanish native speakers",
+   "reason": "Passage states PC-GITA has 50 HC subjects."
+  },
+  "c5": {
+   "id": "c5",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "utterances from 50 PD patients and 50 HC subjects",
+   "reason": "50 PD + 50 HC = 100 total speakers."
+  },
+  "c6": {
+   "id": "c6",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages do not state German PD patient count."
+  },
+  "c7": {
+   "id": "c7",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages do not state German HC count."
+  },
+  "c8": {
+   "id": "c8",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages do not state German total speaker count."
+  },
+  "c9": {
+   "id": "c9",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered",
+   "reason": "Passage states 100 native Czech speakers."
+  },
+  "c10": {
+   "id": "c10",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered",
+   "reason": "Passage states 50 PD Czech speakers."
+  },
+  "c11": {
+   "id": "c11",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered",
+   "reason": "Passage states 50 HC Czech speakers."
+  },
+  "c12": {
+   "id": "c12",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "a read text with 80 words",
+   "reason": "Passage states Czech read text has 80 words."
+  },
+  "c13": {
+   "id": "c13",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Accuracies of up to 77% were reported in utterances of the PC-GITA database",
+   "reason": "Passage states up to 77% accuracy with GMMs and SVMs."
+  },
+  "c14": {
+   "id": "c14",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "80 ms of the signal are taken to the left and to the right",
+   "reason": "Passage states 80 ms taken to left and right."
+  },
+  "c15": {
+   "id": "c15",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "forming segments with 160 ms length",
+   "reason": "Passage states segments 160 ms long."
+  },
+  "c16": {
+   "id": "c16",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "The STFT with 256 frequency bins is computed",
+   "reason": "Passage states 256 frequency bins."
+  },
+  "c17": {
+   "id": "c17",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "for a window length of 16 ms",
+   "reason": "Passage states 16 ms window length."
+  },
+  "c18": {
+   "id": "c18",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "and a step-size of 4 ms",
+   "reason": "Passage states 4 ms step size."
+  },
+  "c19": {
+   "id": "c19",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "forming 41 time frames per transition",
+   "reason": "Passage states 41 time frames per transition."
+  },
+  "c20": {
+   "id": "c20",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "transformed into the Mel-scale using 80 filters",
+   "reason": "Passage states 80 Mel filters."
+  },
+  "c21": {
+   "id": "c21",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "forming an spectrogram with a size of 80 × 41",
+   "reason": "Passage states final spectrogram size 80 × 41."
+  },
+  "c22": {
+   "id": "c22",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Spanish 73.7 (13.0)",
+   "reason": "Table 3 baseline Spanish accuracy 73.7%."
+  },
+  "c23": {
+   "id": "c23",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "74.5 (16.7)",
+   "reason": "Table 3 baseline Spanish sensitivity 74.5%."
+  },
+  "c24": {
+   "id": "c24",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "77.1 (16.2)",
+   "reason": "Table 3 baseline Spanish specificity 77.1%."
+  },
+  "c25": {
+   "id": "c25",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "0.50",
+   "reason": "Table 3 baseline Spanish MCC 0.50."
+  },
+  "c26": {
+   "id": "c26",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "71.0 (15.9)",
+   "reason": "Table 3 Spanish CNN accuracy 71.0%."
+  },
+  "c27": {
+   "id": "c27",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "74.0 (25.0)",
+   "reason": "Table 3 Spanish CNN sensitivity 74.0%."
+  },
+  "c28": {
+   "id": "c28",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "68.0 (28.6)",
+   "reason": "Table 3 Spanish CNN specificity 68.0%."
+  },
+  "c29": {
+   "id": "c29",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "0.42",
+   "reason": "Table 3 Spanish CNN MCC 0.42."
+  },
+  "c30": {
+   "id": "c30",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "German 69.3 (9.9)",
+   "reason": "Table 3 baseline German accuracy 69.3%."
+  },
+  "c31": {
+   "id": "c31",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "71.8 (12.4)",
+   "reason": "Table 3 baseline German sensitivity 71.8%."
+  },
+  "c32": {
+   "id": "c32",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "68.7 (10.0)",
+   "reason": "Table 3 baseline German specificity 68.7%."
+  },
+  "c33": {
+   "id": "c33",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "0.39",
+   "reason": "Table 3 baseline German MCC 0.39."
+  },
+  "c34": {
+   "id": "c34",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "63.1 (11.7)",
+   "reason": "Table 3 German CNN accuracy 63.1%."
+  },
+  "c35": {
+   "id": "c35",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "43.1 (38.0)",
+   "reason": "Table 3 German CNN sensitivity 43.1%."
+  },
+  "c36": {
+   "id": "c36",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "83.1 (17.7)",
+   "reason": "Table 3 German CNN specificity 83.1%."
+  },
+  "c37": {
+   "id": "c37",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "0.30",
+   "reason": "Table 3 German CNN MCC 0.30."
+  },
+  "c38": {
+   "id": "c38",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Czech 61.0 (12.5)",
+   "reason": "Table 3 baseline Czech accuracy 61.0%."
+  },
+  "c39": {
+   "id": "c39",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "64.5 (19.5)",
+   "reason": "Table 3 baseline Czech sensitivity 64.5%."
+  },
+  "c40": {
+   "id": "c40",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "60.2 (11.9)",
+   "reason": "Table 3 baseline Czech specificity 60.2%."
+  },
+  "c41": {
+   "id": "c41",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "0.27",
+   "reason": "Table 3 baseline Czech MCC 0.27."
+  },
+  "c42": {
+   "id": "c42",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "68.5 (14.1)",
+   "reason": "Table 3 Czech CNN accuracy 68.5%."
+  },
+  "c43": {
+   "id": "c43",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "94.0 (13.5)",
+   "reason": "Table 3 Czech CNN sensitivity 94.0%."
+  },
+  "c44": {
+   "id": "c44",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "42.0 (33.2)",
+   "reason": "Table 3 Czech CNN specificity 42.0%."
+  },
+  "c45": {
+   "id": "c45",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "0.43",
+   "reason": "Table 3 Czech CNN MCC 0.43."
+  },
+  "c46": {
+   "id": "c46",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "German Spanish 70.0 (12.5)",
+   "reason": "Table 4 German base to Spanish target accuracy 70.0%."
+  },
+  "c47": {
+   "id": "c47",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "62.0 (19.9)",
+   "reason": "Table 4 German-to-Spanish sensitivity 62.0%."
+  },
+  "c48": {
+   "id": "c48",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "78.0 (23.9)",
+   "reason": "Table 4 German-to-Spanish specificity 78.0%."
+  },
+  "c49": {
+   "id": "c49",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "0.41",
+   "reason": "Table 4 German-to-Spanish MCC 0.41."
+  },
+  "c50": {
+   "id": "c50",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Czech 72.0 (13.1)",
+   "reason": "Table 4 German base to Czech target accuracy 72.0%."
+  }
+ },
+ "retrieval": [
+  {
+   "id": "c6",
+   "query": "German speech recordings PD patient count German",
+   "n_new_chunks": 6,
+   "ranks": {
+    "cos_top": [
+     19,
+     17,
+     6,
+     43,
+     13
+    ],
+    "bm25_top": [
+     19,
+     17,
+     10,
+     13,
+     20
+    ]
+   }
+  },
+  {
+   "id": "c7",
+   "query": "German speech recordings healthy control count German",
+   "n_new_chunks": 5,
+   "ranks": {
+    "cos_top": [
+     19,
+     17,
+     43,
+     6,
+     13
+    ],
+    "bm25_top": [
+     17,
+     19,
+     6,
+     10,
+     13
+    ]
+   }
+  },
+  {
+   "id": "c8",
+   "query": "German speech recordings total speaker count German",
+   "n_new_chunks": 2,
+   "ranks": {
+    "cos_top": [
+     19,
+     20,
+     17,
+     23,
+     43
+    ],
+    "bm25_top": [
+     19,
+     17,
+     20,
+     23,
+     10
+    ]
+   }
+  }
+ ],
+ "retrieval_added_chars": 8564,
+ "judge_retrieved": {
+  "c6": {
+   "id": "c6",
+   "label": "Contradiction",
+   "primary_value": "88",
+   "evidence_quote": "Speech recordings of 88 PD patients and 88 HC speakers from Germany are considered",
+   "reason": "The passages state 88 PD patients for German, not 44."
+  },
+  "c7": {
+   "id": "c7",
+   "label": "Contradiction",
+   "primary_value": "88",
+   "evidence_quote": "Speech recordings of 88 PD patients and 88 HC speakers from Germany are considered",
+   "reason": "The passages state 88 HC speakers for German, not 44."
+  },
+  "c8": {
+   "id": "c8",
+   "label": "Contradiction",
+   "primary_value": "88 + 88 = 176",
+   "evidence_quote": "Speech recordings of 88 PD patients and 88 HC speakers from Germany are considered",
+   "reason": "The passages state 88 PD and 88 HC, totaling 176 German speakers, not 88."
+  }
+ },
+ "final_labels": {
+  "c1": {
+   "id": "c1",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Speech recordings of patients in three different languages are considered: Spanish, German, and Czech.",
+   "reason": "Passage states three languages: Spanish, German, Czech.",
+   "source": "window"
+  },
+  "c2": {
+   "id": "c2",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "The speech signals were down-sampled to 16 kHz.",
+   "reason": "Passage states all recordings down-sampled to 16 kHz.",
+   "source": "window"
+  },
+  "c3": {
+   "id": "c3",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "utterances from 50 PD patients and 50 HC subjects, Colombian Spanish native speakers",
+   "reason": "Passage states PC-GITA has 50 PD patients.",
+   "source": "window"
+  },
+  "c4": {
+   "id": "c4",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "utterances from 50 PD patients and 50 HC subjects, Colombian Spanish native speakers",
+   "reason": "Passage states PC-GITA has 50 HC subjects.",
+   "source": "window"
+  },
+  "c5": {
+   "id": "c5",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "utterances from 50 PD patients and 50 HC subjects",
+   "reason": "50 PD + 50 HC = 100 total speakers.",
+   "source": "window"
+  },
+  "c6": {
+   "id": "c6",
+   "label": "Contradiction",
+   "primary_value": "88",
+   "evidence_quote": "Speech recordings of 88 PD patients and 88 HC speakers from Germany are considered",
+   "reason": "The passages state 88 PD patients for German, not 44.",
+   "source": "retrieved"
+  },
+  "c7": {
+   "id": "c7",
+   "label": "Contradiction",
+   "primary_value": "88",
+   "evidence_quote": "Speech recordings of 88 PD patients and 88 HC speakers from Germany are considered",
+   "reason": "The passages state 88 HC speakers for German, not 44.",
+   "source": "retrieved"
+  },
+  "c8": {
+   "id": "c8",
+   "label": "Contradiction",
+   "primary_value": "88 + 88 = 176",
+   "evidence_quote": "Speech recordings of 88 PD patients and 88 HC speakers from Germany are considered",
+   "reason": "The passages state 88 PD and 88 HC, totaling 176 German speakers, not 88.",
+   "source": "retrieved"
+  },
+  "c9": {
+   "id": "c9",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered",
+   "reason": "Passage states 100 native Czech speakers.",
+   "source": "window"
+  },
+  "c10": {
+   "id": "c10",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered",
+   "reason": "Passage states 50 PD Czech speakers.",
+   "source": "window"
+  },
+  "c11": {
+   "id": "c11",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "A total of 100 native Czech speakers (50 PD, 50 HC) were considered",
+   "reason": "Passage states 50 HC Czech speakers.",
+   "source": "window"
+  },
+  "c12": {
+   "id": "c12",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "a read text with 80 words",
+   "reason": "Passage states Czech read text has 80 words.",
+   "source": "window"
+  },
+  "c13": {
+   "id": "c13",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Accuracies of up to 77% were reported in utterances of the PC-GITA database",
+   "reason": "Passage states up to 77% accuracy with GMMs and SVMs.",
+   "source": "window"
+  },
+  "c14": {
+   "id": "c14",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "80 ms of the signal are taken to the left and to the right",
+   "reason": "Passage states 80 ms taken to left and right.",
+   "source": "window"
+  },
+  "c15": {
+   "id": "c15",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "forming segments with 160 ms length",
+   "reason": "Passage states segments 160 ms long.",
+   "source": "window"
+  },
+  "c16": {
+   "id": "c16",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "The STFT with 256 frequency bins is computed",
+   "reason": "Passage states 256 frequency bins.",
+   "source": "window"
+  },
+  "c17": {
+   "id": "c17",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "for a window length of 16 ms",
+   "reason": "Passage states 16 ms window length.",
+   "source": "window"
+  },
+  "c18": {
+   "id": "c18",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "and a step-size of 4 ms",
+   "reason": "Passage states 4 ms step size.",
+   "source": "window"
+  },
+  "c19": {
+   "id": "c19",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "forming 41 time frames per transition",
+   "reason": "Passage states 41 time frames per transition.",
+   "source": "window"
+  },
+  "c20": {
+   "id": "c20",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "transformed into the Mel-scale using 80 filters",
+   "reason": "Passage states 80 Mel filters.",
+   "source": "window"
+  },
+  "c21": {
+   "id": "c21",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "forming an spectrogram with a size of 80 × 41",
+   "reason": "Passage states final spectrogram size 80 × 41.",
+   "source": "window"
+  },
+  "c22": {
+   "id": "c22",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Spanish 73.7 (13.0)",
+   "reason": "Table 3 baseline Spanish accuracy 73.7%.",
+   "source": "window"
+  },
+  "c23": {
+   "id": "c23",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "74.5 (16.7)",
+   "reason": "Table 3 baseline Spanish sensitivity 74.5%.",
+   "source": "window"
+  },
+  "c24": {
+   "id": "c24",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "77.1 (16.2)",
+   "reason": "Table 3 baseline Spanish specificity 77.1%.",
+   "source": "window"
+  },
+  "c25": {
+   "id": "c25",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "0.50",
+   "reason": "Table 3 baseline Spanish MCC 0.50.",
+   "source": "window"
+  },
+  "c26": {
+   "id": "c26",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "71.0 (15.9)",
+   "reason": "Table 3 Spanish CNN accuracy 71.0%.",
+   "source": "window"
+  },
+  "c27": {
+   "id": "c27",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "74.0 (25.0)",
+   "reason": "Table 3 Spanish CNN sensitivity 74.0%.",
+   "source": "window"
+  },
+  "c28": {
+   "id": "c28",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "68.0 (28.6)",
+   "reason": "Table 3 Spanish CNN specificity 68.0%.",
+   "source": "window"
+  },
+  "c29": {
+   "id": "c29",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "0.42",
+   "reason": "Table 3 Spanish CNN MCC 0.42.",
+   "source": "window"
+  },
+  "c30": {
+   "id": "c30",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "German 69.3 (9.9)",
+   "reason": "Table 3 baseline German accuracy 69.3%.",
+   "source": "window"
+  },
+  "c31": {
+   "id": "c31",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "71.8 (12.4)",
+   "reason": "Table 3 baseline German sensitivity 71.8%.",
+   "source": "window"
+  },
+  "c32": {
+   "id": "c32",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "68.7 (10.0)",
+   "reason": "Table 3 baseline German specificity 68.7%.",
+   "source": "window"
+  },
+  "c33": {
+   "id": "c33",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "0.39",
+   "reason": "Table 3 baseline German MCC 0.39.",
+   "source": "window"
+  },
+  "c34": {
+   "id": "c34",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "63.1 (11.7)",
+   "reason": "Table 3 German CNN accuracy 63.1%.",
+   "source": "window"
+  },
+  "c35": {
+   "id": "c35",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "43.1 (38.0)",
+   "reason": "Table 3 German CNN sensitivity 43.1%.",
+   "source": "window"
+  },
+  "c36": {
+   "id": "c36",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "83.1 (17.7)",
+   "reason": "Table 3 German CNN specificity 83.1%.",
+   "source": "window"
+  },
+  "c37": {
+   "id": "c37",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "0.30",
+   "reason": "Table 3 German CNN MCC 0.30.",
+   "source": "window"
+  },
+  "c38": {
+   "id": "c38",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Czech 61.0 (12.5)",
+   "reason": "Table 3 baseline Czech accuracy 61.0%.",
+   "source": "window"
+  },
+  "c39": {
+   "id": "c39",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "64.5 (19.5)",
+   "reason": "Table 3 baseline Czech sensitivity 64.5%.",
+   "source": "window"
+  },
+  "c40": {
+   "id": "c40",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "60.2 (11.9)",
+   "reason": "Table 3 baseline Czech specificity 60.2%.",
+   "source": "window"
+  },
+  "c41": {
+   "id": "c41",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "0.27",
+   "reason": "Table 3 baseline Czech MCC 0.27.",
+   "source": "window"
+  },
+  "c42": {
+   "id": "c42",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "68.5 (14.1)",
+   "reason": "Table 3 Czech CNN accuracy 68.5%.",
+   "source": "window"
+  },
+  "c43": {
+   "id": "c43",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "94.0 (13.5)",
+   "reason": "Table 3 Czech CNN sensitivity 94.0%.",
+   "source": "window"
+  },
+  "c44": {
+   "id": "c44",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "42.0 (33.2)",
+   "reason": "Table 3 Czech CNN specificity 42.0%.",
+   "source": "window"
+  },
+  "c45": {
+   "id": "c45",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "0.43",
+   "reason": "Table 3 Czech CNN MCC 0.43.",
+   "source": "window"
+  },
+  "c46": {
+   "id": "c46",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "German Spanish 70.0 (12.5)",
+   "reason": "Table 4 German base to Spanish target accuracy 70.0%.",
+   "source": "window"
+  },
+  "c47": {
+   "id": "c47",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "62.0 (19.9)",
+   "reason": "Table 4 German-to-Spanish sensitivity 62.0%.",
+   "source": "window"
+  },
+  "c48": {
+   "id": "c48",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "78.0 (23.9)",
+   "reason": "Table 4 German-to-Spanish specificity 78.0%.",
+   "source": "window"
+  },
+  "c49": {
+   "id": "c49",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "0.41",
+   "reason": "Table 4 German-to-Spanish MCC 0.41.",
+   "source": "window"
+  },
+  "c50": {
+   "id": "c50",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "Czech 72.0 (13.1)",
+   "reason": "Table 4 German base to Czech target accuracy 72.0%.",
+   "source": "window"
+  }
+ },
+ "n_unchecked_cap": 0,
+ "spans_expanded": 7,
+ "patches_applied": [
+  {
+   "claim_id": "c6",
+   "action": "replace",
+   "old_str": "The German data consist of speech recordings from 44 PD patients and 44 HC speakers ([document_2.txt](#ref-doc2)).",
+   "new_str": "The German data consist of speech recordings from 88 PD patients and 88 HC speakers ([document_1.txt](#ref-doc1)); document_2.txt reports a different value of 44 PD patients and 44 HC speakers.",
+   "matched": "exact"
+  },
+  {
+   "claim_id": "c6",
+   "action": "replace",
+   "old_str": "The supplied extracts do not itemise the specific speech tasks performed by the German participants in the way that they do for the Czech participants; the report therefore treats the German set as a balanced 44/44 PD–HC corpus without a documented task list in the available evidence.",
+   "new_str": "The supplied extracts do not itemise the specific speech tasks performed by the German participants in the way that they do for the Czech participants; the report therefore treats the German set as a balanced 88/88 PD–HC corpus without a documented task list in the available evidence ([document_1.txt](#ref-doc1)).",
+   "matched": "exact"
+  },
+  {
+   "claim_id": "c6",
+   "action": "replace",
+   "old_str": "| German | German speech recordings ([18]) | 44 | 44 | 88 | German | Not itemised in the extract |",
+   "new_str": "| German | German speech recordings ([18]) | 88 | 88 | 176 | German | Not itemised in the extract |",
+   "matched": "exact"
+  },
+  {
+   "claim_id": "c6",
+   "action": "replace",
+   "old_str": "The study draws on three language-specific speech datasets of Parkinson's disease patients and healthy controls: the Spanish PC-GITA corpus (50 PD, 50 HC, Colombian Spanish speakers), German speech recordings (44 PD, 44 HC), and Czech speech recordings (50 PD, 50 HC native Czech speakers performing /pa-ta-ka/ repetition, an 80-word reading task and a monologue) ([document_1.txt](#ref-doc1); [document_2.txt](#ref-doc2)).",
+   "new_str": "The study draws on three language-specific speech datasets of Parkinson's disease patients and healthy controls: the Spanish PC-GITA corpus (50 PD, 50 HC, Colombian Spanish speakers), German speech recordings (88 PD, 88 HC), and Czech speech recordings (50 PD, 50 HC native Czech speakers performing /pa-ta-ka/ repetition, an 80-word reading task and a monologue) ([document_1.txt](#ref-doc1)).",
+   "matched": "exact"
+  },
+  {
+   "claim_id": "c8",
+   "action": "replace",
+   "old_str": "As with the Spanish set, the case–control distribution is balanced, yielding 88 speakers in total.",
+   "new_str": "As with the Spanish set, the case–control distribution is balanced, yielding 176 speakers in total ([document_1.txt](#ref-doc1)); document_2.txt reports a different value of 88 speakers in total.",
+   "matched": "exact"
+  }
+ ],
+ "patches_rejected": [
+  {
+   "claim_id": "c7",
+   "action": "replace",
+   "old_str": "The German data consist of speech recordings from 44 PD patients and 44 HC speakers ([document_2.txt](#ref-doc2)).",
+   "new_str": "The German data consist of speech recordings from 88 PD patients and 88 HC speakers ([document_1.txt](#ref-doc1)); document_2.txt reports a different value of 44 PD patients and 44 HC speakers.",
+   "why": "duplicate_span"
+  },
+  {
+   "claim_id": "c7",
+   "action": "replace",
+   "old_str": "The supplied extracts do not itemise the specific speech tasks performed by the German participants in the way that they do for the Czech participants; the report therefore treats the German set as a balanced 44/44 PD–HC corpus without a documented task list in the available evidence.",
+   "new_str": "The supplied extracts do not itemise the specific speech tasks performed by the German participants in the way that they do for the Czech participants; the report therefore treats the German set as a balanced 88/88 PD–HC corpus without a documented task list in the available evidence ([document_1.txt](#ref-doc1)).",
+   "why": "duplicate_span"
+  },
+  {
+   "claim_id": "c7",
+   "action": "replace",
+   "old_str": "| German | German speech recordings ([18]) | 44 | 44 | 88 | German | Not itemised in the extract |",
+   "new_str": "| German | German speech recordings ([18]) | 88 | 88 | 176 | German | Not itemised in the extract |",
+   "why": "duplicate_span"
+  },
+  {
+   "claim_id": "c7",
+   "action": "replace",
+   "old_str": "The study draws on three language-specific speech datasets of Parkinson's disease patients and healthy controls: the Spanish PC-GITA corpus (50 PD, 50 HC, Colombian Spanish speakers), German speech recordings (44 PD, 44 HC), and Czech speech recordings (50 PD, 50 HC native Czech speakers performing /pa-ta-ka/ repetition, an 80-word reading task and a monologue) ([document_1.txt](#ref-doc1); [document_2.txt](#ref-doc2)).",
+   "new_str": "The study draws on three language-specific speech datasets of Parkinson's disease patients and healthy controls: the Spanish PC-GITA corpus (50 PD, 50 HC, Colombian Spanish speakers), German speech recordings (88 PD, 88 HC), and Czech speech recordings (50 PD, 50 HC native Czech speakers performing /pa-ta-ka/ repetition, an 80-word reading task and a monologue) ([document_1.txt](#ref-doc1)).",
+   "why": "duplicate_span"
+  },
+  {
+   "claim_id": "c8",
+   "action": "replace",
+   "old_str": "| German | German speech recordings ([18]) | 44 | 44 | 88 | German | Not itemised in the extract |",
+   "new_str": "| German | German speech recordings ([18]) | 88 | 88 | 176 | German | Not itemised in the extract |",
+   "why": "duplicate_span"
+  }
+ ],
+ "final_status": "VALID_GAP",
+ "snapshot": "S-miss-wrong",
+ "cell": "B6_P_T0",
+ "task": "B6",
+ "cond": "P",
+ "round": "frozen",
+ "config": {
+  "thinking": "disabled",
+  "reasoning_effort": null,
+  "temperature": 0.0,
+  "max_tokens": 16384,
+  "json_mode": true,
+  "retrieval_k": 10,
+  "max_neutral_retrieval": 12,
+  "max_claims": 50,
+  "max_spans": 5,
+  "edit_ratio_gate": 0.5
+ },
+ "cost_usd": 0.016445,
+ "prompt_tokens": 21292,
+ "completion_tokens": 8381,
+ "n_calls": 4,
+ "draft_chars": 16251,
+ "final_chars": 16429
+}

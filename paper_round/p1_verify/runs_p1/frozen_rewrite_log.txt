@@ -1,0 +1,7 @@
+COST ACCOUNTING: pilot* cum=$4.8839 (580 calls); stage cap=$5.1586; call_cap=641 (stage +120)
+S-miss-wrong/V-rewrite: VALID_REWRITE stages={'rewrite': 'VALID'} calls=1 ptok=10716 $0.0065 applied=0 rejected=[]
+S-miss-right/V-rewrite: VALID_REWRITE stages={'rewrite': 'VALID'} calls=1 ptok=10293 $0.0070 applied=0 rejected=[]
+S-table/V-rewrite: VALID_REWRITE stages={'rewrite': 'VALID'} calls=1 ptok=11627 $0.0074 applied=0 rejected=[]
+S-present/V-rewrite: VALID_REWRITE stages={'rewrite': 'VALID'} calls=1 ptok=7614 $0.0055 applied=0 rejected=[]
+P1 ROUND frozen DONE: pilot* cum=$4.9102 (584 calls)
+EXIT 0

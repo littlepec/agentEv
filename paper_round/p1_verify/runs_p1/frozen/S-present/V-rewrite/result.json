@@ -1,0 +1,49 @@
+{
+ "arm": "V-rewrite",
+ "calls": [
+  {
+   "tag": "S-present:rewrite",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 7614,
+   "completion_tokens": 2687,
+   "reasoning_tokens": null,
+   "cost_usd": 0.005509,
+   "elapsed_s": 8.0,
+   "content_chars": 12384,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  }
+ ],
+ "stages": {
+  "rewrite": "VALID"
+ },
+ "final_status": "VALID_REWRITE",
+ "snapshot": "S-present",
+ "cell": "B3_P_T2",
+ "task": "B3",
+ "cond": "P",
+ "round": "frozen",
+ "config": {
+  "thinking": "disabled",
+  "reasoning_effort": null,
+  "temperature": 0.0,
+  "max_tokens": 16384,
+  "json_mode": true,
+  "retrieval_k": 10,
+  "max_neutral_retrieval": 12,
+  "max_claims": 50,
+  "max_spans": 5,
+  "edit_ratio_gate": 0.5
+ },
+ "cost_usd": 0.005509,
+ "prompt_tokens": 7614,
+ "completion_tokens": 2687,
+ "n_calls": 1,
+ "draft_chars": 12384,
+ "final_chars": 12384
+}

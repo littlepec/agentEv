@@ -1,0 +1,109 @@
+{
+ "arm": "V-full",
+ "calls": [
+  {
+   "tag": "S-present:full",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 7857,
+   "completion_tokens": 1140,
+   "reasoning_tokens": null,
+   "cost_usd": 0.003725,
+   "elapsed_s": 4.3,
+   "content_chars": 4680,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  }
+ ],
+ "stages": {
+  "full": "VALID(4 applied, 4 rejected)"
+ },
+ "patches_applied": [
+  {
+   "action": "annotate",
+   "old_str": "It states: \"For the in-house power tool domain knowledge base, the paper reports 67 predicates. For the 67 predicates, the authors hand-crafted 103 templates. Together with the 106 Freebase templates, the authors wrote 209 templates in total. The paper reports this total in the template-construction experiment\" ([document_2.txt](document_2.txt)).",
+   "new_str": "It states: \"For the in-house power tool domain knowledge base, the paper reports 67 predicates. For the 67 predicates, the authors hand-crafted 103 templates. Together with the 106 Freebase templates, the authors wrote 209 templates in total. The paper reports this total in the template-construction experiment\" ([document_2.txt](document_2.txt)) [document_1.txt states: 163 templates for the power tool domain].",
+   "reason": "The sentence reports document_2.txt's claim of 103 templates; document_1.txt states 163, so annotate.",
+   "matched": "exact"
+  },
+  {
+   "action": "replace",
+   "old_str": "The third-party note explicitly claims that the paper reports a total of 209 templates ([document_2.txt](document_2.txt)).",
+   "new_str": "The third-party note explicitly claims that the paper reports a total of 209 templates ([document_2.txt](document_2.txt)); document_1.txt does not state a total, reporting 106 for Freebase and 163 for the power tool domain separately.",
+   "reason": "The sentence reports document_2.txt's claim; document_1.txt does not state a total, so replace to reflect the primary source.",
+   "matched": "exact"
+  },
+  {
+   "action": "replace",
+   "old_str": "Therefore, the more reliable figure for the power tool domain is 163 templates, and the total across both evaluations is 269 templates.",
+   "new_str": "Therefore, the more reliable figure for the power tool domain is 163 templates, and the total across both evaluations is 269 templates ([document_1.txt](document_1.txt)).",
+   "reason": "The sentence asserts 163 and 269; document_1.txt supports 163 and the transparent sum 106+163=269, so add citation.",
+   "matched": "exact"
+  },
+  {
+   "action": "replace",
+   "old_str": "The most reliable total, based on the primary source, is 269 templates (106 + 163).",
+   "new_str": "The most reliable total, based on the primary source, is 269 templates (106 + 163) ([document_1.txt](document_1.txt)).",
+   "reason": "The sentence asserts 269; document_1.txt supports the transparent sum 106+163=269, so add citation.",
+   "matched": "exact"
+  }
+ ],
+ "patches_rejected": [
+  {
+   "action": "replace",
+   "old_str": "For the 67 predicates, the primary source states that the authors \"hand-craft 163 templates\" ([document_1.txt](document_1.txt)).",
+   "new_str": "For the 67 predicates, the primary source states that the authors \"hand-craft 163 templates\" ([document_1.txt](document_1.txt)).",
+   "reason": "The sentence already correctly cites document_1.txt and matches its value; no change needed.",
+   "why": "no_change"
+  },
+  {
+   "action": "replace",
+   "old_str": "Based on the primary source, the total is 269 templates: 106 for the Freebase evaluation and 163 for the power tool domain ([document_1.txt](document_1.txt)).",
+   "new_str": "Based on the primary source, the total is 269 templates: 106 for the Freebase evaluation and 163 for the power tool domain ([document_1.txt](document_1.txt)).",
+   "reason": "The sentence already correctly cites document_1.txt and matches its values; no change needed.",
+   "why": "no_change"
+  },
+  {
+   "action": "replace",
+   "old_str": "In the power tool domain, 163 templates (or 103 according to the third-party note) covered 67 predicates, generating 12,228 seed questions and 20,000 expanded questions ([document_1.txt](document_1.txt)).",
+   "new_str": "In the power tool domain, 163 templates (or 103 according to the third-party note) covered 67 predicates, generating 12,228 seed questions and 20,000 expanded questions ([document_1.txt](document_1.txt)).",
+   "reason": "The sentence already correctly cites document_1.txt and matches its values; no change needed.",
+   "why": "no_change"
+  },
+  {
+   "action": "replace",
+   "old_str": "For the in-house power tool domain with 67 predicates, the primary source reports 163 templates ([document_1.txt](document_1.txt)), while a third-party note reports 103 templates ([document_2.txt](document_2.txt)).",
+   "new_str": "For the in-house power tool domain with 67 predicates, the primary source reports 163 templates ([document_1.txt](document_1.txt)), while a third-party note reports 103 templates ([document_2.txt](document_2.txt)).",
+   "reason": "The sentence already correctly cites document_1.txt and matches its values; no change needed.",
+   "why": "no_change"
+  }
+ ],
+ "final_status": "VALID_GAP",
+ "snapshot": "S-present",
+ "cell": "B3_P_T2",
+ "task": "B3",
+ "cond": "P",
+ "round": "dev2",
+ "config": {
+  "thinking": "disabled",
+  "reasoning_effort": null,
+  "temperature": 0.0,
+  "max_tokens": 16384,
+  "json_mode": true,
+  "retrieval_k": 10,
+  "max_neutral_retrieval": 8,
+  "max_claims": 50,
+  "max_spans": 5,
+  "edit_ratio_gate": 0.5
+ },
+ "cost_usd": 0.003725,
+ "prompt_tokens": 7857,
+ "completion_tokens": 1140,
+ "n_calls": 1,
+ "draft_chars": 12384,
+ "final_chars": 12631
+}

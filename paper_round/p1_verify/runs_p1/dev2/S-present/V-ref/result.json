@@ -1,0 +1,671 @@
+{
+ "arm": "V-ref",
+ "calls": [
+  {
+   "tag": "S-present:extract",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 3132,
+   "completion_tokens": 1921,
+   "reasoning_tokens": null,
+   "cost_usd": 0.003245,
+   "elapsed_s": 6.0,
+   "content_chars": 7850,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  },
+  {
+   "tag": "S-present:judge_window",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 3734,
+   "completion_tokens": 997,
+   "reasoning_tokens": null,
+   "cost_usd": 0.002317,
+   "elapsed_s": 3.3,
+   "content_chars": 3934,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  },
+  {
+   "tag": "S-present:patch",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 3385,
+   "completion_tokens": 300,
+   "reasoning_tokens": null,
+   "cost_usd": 0.001375,
+   "elapsed_s": 1.5,
+   "content_chars": 1069,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  }
+ ],
+ "stages": {
+  "extract": "VALID(20 claims, 26 spans)",
+  "judge_window": "VALID",
+  "judge_retrieved": "SKIPPED(no neutral)",
+  "patch": "VALID(4 applied, 0 rejected)"
+ },
+ "claims": [
+  {
+   "id": "c1",
+   "subject": "hand-crafted templates",
+   "attribute": "count",
+   "value": "106",
+   "unit_or_denominator": "templates",
+   "condition": "Freebase evaluation on 500 randomly selected triples",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "For these 500 triples, the authors hand-crafted 106 templates ([document_1.txt](document_1.txt)).",
+    "For the Freebase evaluation on 500 triples, the authors made 106 templates ([document_1.txt](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c2",
+   "subject": "hand-crafted templates",
+   "attribute": "count",
+   "value": "163",
+   "unit_or_denominator": "templates",
+   "condition": "in-house power tool domain KB with 67 predicates",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "For the 67 predicates, the primary source states that the authors \"hand-craft 163 templates\" ([document_1.txt](document_1.txt)).",
+    "For the in-house power tool domain with 67 predicates, the primary source reports 163 templates ([document_1.txt](document_1.txt)), while a third-party note reports 103 templates ([document_2.txt](document_2.txt))."
+   ]
+  },
+  {
+   "id": "c3",
+   "subject": "hand-crafted templates",
+   "attribute": "count as reported by document_2",
+   "value": "103",
+   "unit_or_denominator": "templates",
+   "condition": "in-house power tool domain KB with 67 predicates",
+   "cited_source": "document_2.txt",
+   "sentence_spans": [
+    "For the 67 predicates, the authors hand-crafted 103 templates."
+   ]
+  },
+  {
+   "id": "c4",
+   "subject": "hand-crafted templates",
+   "attribute": "total count",
+   "value": "269",
+   "unit_or_denominator": "templates",
+   "condition": "across Freebase and power tool evaluations, based on primary source",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "Based on the primary source, the total is 269 templates: 106 for the Freebase evaluation and 163 for the power tool domain ([document_1.txt](document_1.txt)).",
+    "Therefore, the total number of hand-crafted templates is 269.",
+    "The most reliable total, based on the primary source, is 269 templates (106 + 163)."
+   ]
+  },
+  {
+   "id": "c5",
+   "subject": "hand-crafted templates",
+   "attribute": "total count as reported by document_2",
+   "value": "209",
+   "unit_or_denominator": "templates",
+   "condition": "across Freebase and power tool evaluations",
+   "cited_source": "document_2.txt",
+   "sentence_spans": [
+    "Together with the 106 Freebase templates, the authors wrote 209 templates in total.",
+    "If one relies on the third-party note, the total would be 209 templates ([document_2.txt](document_2.txt)).",
+    "If the third-party note is used, the total is 209 templates (106 + 103)."
+   ]
+  },
+  {
+   "id": "c6",
+   "subject": "randomly selected triples",
+   "attribute": "count",
+   "value": "500",
+   "unit_or_denominator": "triples",
+   "condition": "Freebase evaluation",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "In the first evaluation, the system was compared on 500 randomly selected triples from Freebase ([document_1.txt](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c7",
+   "subject": "distinct predicates",
+   "attribute": "count",
+   "value": "53",
+   "unit_or_denominator": "predicates",
+   "condition": "Freebase evaluation on 500 triples",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The triples shared only 53 distinct predicates, so the authors made 2 templates for each predicate on average ([document_1.txt](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c8",
+   "subject": "templates per predicate",
+   "attribute": "average count",
+   "value": "2",
+   "unit_or_denominator": "templates per predicate",
+   "condition": "Freebase evaluation",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The triples shared only 53 distinct predicates, so the authors made 2 templates for each predicate on average ([document_1.txt](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c9",
+   "subject": "seed questions",
+   "attribute": "count",
+   "value": "991",
+   "unit_or_denominator": "questions",
+   "condition": "Freebase evaluation, generated by applying templates to triples",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "Applying the templates to the triples generated 991 seed questions ([document_1.txt](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c10",
+   "subject": "additional questions retrieved from Google",
+   "attribute": "count",
+   "value": "1529",
+   "unit_or_denominator": "questions",
+   "condition": "Freebase evaluation",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The experiment also retrieved 1529 more questions from Google ([document_1.txt](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c11",
+   "subject": "questions selected for evaluation",
+   "attribute": "count",
+   "value": "500",
+   "unit_or_denominator": "questions",
+   "condition": "Freebase evaluation, top questions selected after fluency evaluation",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "To evaluate fluency, a 4-gram language model was trained on Gigaword with Kneser-Ney smoothing, and the top 500 questions were selected to compare with prior results ([document_1.txt](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c12",
+   "subject": "distinct predicates",
+   "attribute": "count",
+   "value": "67",
+   "unit_or_denominator": "predicates",
+   "condition": "in-house power tool domain KB",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "This KB contains 67 distinct predicates, 293 distinct subjects, and 279 distinct objects ([document_1.txt](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c13",
+   "subject": "distinct subjects",
+   "attribute": "count",
+   "value": "293",
+   "unit_or_denominator": "subjects",
+   "condition": "in-house power tool domain KB",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "This KB contains 67 distinct predicates, 293 distinct subjects, and 279 distinct objects ([document_1.txt](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c14",
+   "subject": "distinct objects",
+   "attribute": "count",
+   "value": "279",
+   "unit_or_denominator": "objects",
+   "condition": "in-house power tool domain KB",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "This KB contains 67 distinct predicates, 293 distinct subjects, and 279 distinct objects ([document_1.txt](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c15",
+   "subject": "seed questions",
+   "attribute": "count",
+   "value": "12,228",
+   "unit_or_denominator": "questions",
+   "condition": "in-house power tool domain KB",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The system generated 12,228 seed questions from which 20,000 more questions were expanded with Google ([document_1.txt](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c16",
+   "subject": "expanded questions",
+   "attribute": "count",
+   "value": "20,000",
+   "unit_or_denominator": "questions",
+   "condition": "in-house power tool domain KB, expanded with Google",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The system generated 12,228 seed questions from which 20,000 more questions were expanded with Google ([document_1.txt](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c17",
+   "subject": "fluency evaluation",
+   "attribute": "scale",
+   "value": "4-point",
+   "unit_or_denominator": "point scheme",
+   "condition": "Freebase evaluation, three native English speakers",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "Three native English speakers evaluated fluency and naturalness on a 4-point scheme ([document_1.txt](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c18",
+   "subject": "language model",
+   "attribute": "training corpus",
+   "value": "Gigaword",
+   "unit_or_denominator": "",
+   "condition": "Freebase evaluation, 4-gram with Kneser-Ney smoothing",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "To evaluate fluency, a 4-gram language model was trained on Gigaword with Kneser-Ney smoothing, and the top 500 questions were selected to compare with prior results ([document_1.txt](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c19",
+   "subject": "domain relevance model",
+   "attribute": "type",
+   "value": "skip-gram model",
+   "unit_or_denominator": "",
+   "condition": "in-house power tool domain, trained on Wikipedia",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The same language model as in the first experiment was used, along with a skip-gram model on Wikipedia for evaluating domain relevance ([document_1.txt](document_1.txt))."
+   ]
+  },
+  {
+   "id": "c20",
+   "subject": "question expansion iterations",
+   "attribute": "maximum",
+   "value": "I_max",
+   "unit_or_denominator": "iterations",
+   "condition": "Algorithm 1",
+   "cited_source": "document_1.txt",
+   "sentence_spans": [
+    "The maximum number of iterations is limited by I_max ([document_1.txt](document_1.txt))."
+   ]
+  }
+ ],
+ "judge_window": {
+  "c1": {
+   "id": "c1",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates",
+   "reason": "Passage states 106 templates for the 500 Freebase triples."
+  },
+  "c2": {
+   "id": "c2",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Passage states 163 templates for the 67-predicate power tool KB."
+  },
+  "c3": {
+   "id": "c3",
+   "label": "Contradiction",
+   "primary_value": "163",
+   "evidence_quote": "For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Document_1 states 163, not 103, for the power tool KB."
+  },
+  "c4": {
+   "id": "c4",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "we hand-crafted 106 templates ... For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "106 + 163 = 269 total templates across both evaluations."
+  },
+  "c5": {
+   "id": "c5",
+   "label": "Contradiction",
+   "primary_value": "106 + 163 = 269",
+   "evidence_quote": "we hand-crafted 106 templates ... For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Document_1 implies 269, not 209, as the total."
+  },
+  "c6": {
+   "id": "c6",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "on 500 randomly selected triples from Freebase",
+   "reason": "Passage states 500 randomly selected Freebase triples."
+  },
+  "c7": {
+   "id": "c7",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "these triples share only 53 distinct predicates",
+   "reason": "Passage states 53 distinct predicates for the 500 triples."
+  },
+  "c8": {
+   "id": "c8",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "we made 2 templates for each predicate on average",
+   "reason": "Passage states an average of 2 templates per predicate."
+  },
+  "c9": {
+   "id": "c9",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "991 seed questions are generated by applying the templates on the triples",
+   "reason": "Passage states 991 seed questions."
+  },
+  "c10": {
+   "id": "c10",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "1529 more questions are retrieved from Google",
+   "reason": "Passage states 1529 additional questions retrieved from Google."
+  },
+  "c11": {
+   "id": "c11",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "the top 500 questions are selected to compare with the results",
+   "reason": "Passage states top 500 questions selected for evaluation."
+  },
+  "c12": {
+   "id": "c12",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "It contains 67 distinct predicates",
+   "reason": "Passage states 67 distinct predicates for the power tool KB."
+  },
+  "c13": {
+   "id": "c13",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "293 distinct subjects",
+   "reason": "Passage states 293 distinct subjects."
+  },
+  "c14": {
+   "id": "c14",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "279 distinct objects",
+   "reason": "Passage states 279 distinct objects."
+  },
+  "c15": {
+   "id": "c15",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "We generate 12,228 seed questions",
+   "reason": "Passage states 12,228 seed questions for the power tool KB."
+  },
+  "c16": {
+   "id": "c16",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "from which 20,000 more questions are expanded with Google",
+   "reason": "Passage states 20,000 more questions expanded with Google."
+  },
+  "c17": {
+   "id": "c17",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "based on a 4-point scheme where 4 is the best",
+   "reason": "Passage states a 4-point fluency/naturalness scheme with three native English speakers."
+  },
+  "c18": {
+   "id": "c18",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "we train a 4-gram language model (LM) on gigaword ... with Kneser Ney smoothing",
+   "reason": "Passage states a 4-gram LM trained on Gigaword with Kneser-Ney smoothing."
+  },
+  "c19": {
+   "id": "c19",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "learn a skip-gram model [ Mikolov and Dean (2013 ] on Wikipedia",
+   "reason": "Passage states a skip-gram model trained on Wikipedia for domain relevance."
+  },
+  "c20": {
+   "id": "c20",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "we limit the maximum number of iterations with I m a x I_{max}",
+   "reason": "Passage states the maximum iterations is I_max in Algorithm 1."
+  }
+ },
+ "retrieval": [],
+ "final_labels": {
+  "c1": {
+   "id": "c1",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates",
+   "reason": "Passage states 106 templates for the 500 Freebase triples.",
+   "source": "window"
+  },
+  "c2": {
+   "id": "c2",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Passage states 163 templates for the 67-predicate power tool KB.",
+   "source": "window"
+  },
+  "c3": {
+   "id": "c3",
+   "label": "Contradiction",
+   "primary_value": "163",
+   "evidence_quote": "For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Document_1 states 163, not 103, for the power tool KB.",
+   "source": "window"
+  },
+  "c4": {
+   "id": "c4",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "we hand-crafted 106 templates ... For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "106 + 163 = 269 total templates across both evaluations.",
+   "source": "window"
+  },
+  "c5": {
+   "id": "c5",
+   "label": "Contradiction",
+   "primary_value": "106 + 163 = 269",
+   "evidence_quote": "we hand-crafted 106 templates ... For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Document_1 implies 269, not 209, as the total.",
+   "source": "window"
+  },
+  "c6": {
+   "id": "c6",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "on 500 randomly selected triples from Freebase",
+   "reason": "Passage states 500 randomly selected Freebase triples.",
+   "source": "window"
+  },
+  "c7": {
+   "id": "c7",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "these triples share only 53 distinct predicates",
+   "reason": "Passage states 53 distinct predicates for the 500 triples.",
+   "source": "window"
+  },
+  "c8": {
+   "id": "c8",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "we made 2 templates for each predicate on average",
+   "reason": "Passage states an average of 2 templates per predicate.",
+   "source": "window"
+  },
+  "c9": {
+   "id": "c9",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "991 seed questions are generated by applying the templates on the triples",
+   "reason": "Passage states 991 seed questions.",
+   "source": "window"
+  },
+  "c10": {
+   "id": "c10",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "1529 more questions are retrieved from Google",
+   "reason": "Passage states 1529 additional questions retrieved from Google.",
+   "source": "window"
+  },
+  "c11": {
+   "id": "c11",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "the top 500 questions are selected to compare with the results",
+   "reason": "Passage states top 500 questions selected for evaluation.",
+   "source": "window"
+  },
+  "c12": {
+   "id": "c12",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "It contains 67 distinct predicates",
+   "reason": "Passage states 67 distinct predicates for the power tool KB.",
+   "source": "window"
+  },
+  "c13": {
+   "id": "c13",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "293 distinct subjects",
+   "reason": "Passage states 293 distinct subjects.",
+   "source": "window"
+  },
+  "c14": {
+   "id": "c14",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "279 distinct objects",
+   "reason": "Passage states 279 distinct objects.",
+   "source": "window"
+  },
+  "c15": {
+   "id": "c15",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "We generate 12,228 seed questions",
+   "reason": "Passage states 12,228 seed questions for the power tool KB.",
+   "source": "window"
+  },
+  "c16": {
+   "id": "c16",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "from which 20,000 more questions are expanded with Google",
+   "reason": "Passage states 20,000 more questions expanded with Google.",
+   "source": "window"
+  },
+  "c17": {
+   "id": "c17",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "based on a 4-point scheme where 4 is the best",
+   "reason": "Passage states a 4-point fluency/naturalness scheme with three native English speakers.",
+   "source": "window"
+  },
+  "c18": {
+   "id": "c18",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "we train a 4-gram language model (LM) on gigaword ... with Kneser Ney smoothing",
+   "reason": "Passage states a 4-gram LM trained on Gigaword with Kneser-Ney smoothing.",
+   "source": "window"
+  },
+  "c19": {
+   "id": "c19",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "learn a skip-gram model [ Mikolov and Dean (2013 ] on Wikipedia",
+   "reason": "Passage states a skip-gram model trained on Wikipedia for domain relevance.",
+   "source": "window"
+  },
+  "c20": {
+   "id": "c20",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "we limit the maximum number of iterations with I m a x I_{max}",
+   "reason": "Passage states the maximum iterations is I_max in Algorithm 1.",
+   "source": "window"
+  }
+ },
+ "n_unchecked_cap": 0,
+ "patches_applied": [
+  {
+   "claim_id": "c3",
+   "action": "annotate",
+   "old_str": "For the 67 predicates, the authors hand-crafted 103 templates.",
+   "new_str": "For the 67 predicates, the authors hand-crafted 103 templates. [document_1.txt states: 163]",
+   "matched": "exact"
+  },
+  {
+   "claim_id": "c5",
+   "action": "annotate",
+   "old_str": "Together with the 106 Freebase templates, the authors wrote 209 templates in total.",
+   "new_str": "Together with the 106 Freebase templates, the authors wrote 209 templates in total. [document_1.txt states: 106 + 163 = 269]",
+   "matched": "exact"
+  },
+  {
+   "claim_id": "c5",
+   "action": "annotate",
+   "old_str": "If one relies on the third-party note, the total would be 209 templates ([document_2.txt](document_2.txt)).",
+   "new_str": "If one relies on the third-party note, the total would be 209 templates ([document_2.txt](document_2.txt)). [document_1.txt states: 106 + 163 = 269]",
+   "matched": "exact"
+  },
+  {
+   "claim_id": "c5",
+   "action": "annotate",
+   "old_str": "If the third-party note is used, the total is 209 templates (106 + 103).",
+   "new_str": "If the third-party note is used, the total is 209 templates (106 + 103). [document_1.txt states: 106 + 163 = 269]",
+   "matched": "exact"
+  }
+ ],
+ "patches_rejected": [],
+ "final_status": "VALID_GAP",
+ "snapshot": "S-present",
+ "cell": "B3_P_T2",
+ "task": "B3",
+ "cond": "P",
+ "round": "dev2",
+ "config": {
+  "thinking": "disabled",
+  "reasoning_effort": null,
+  "temperature": 0.0,
+  "max_tokens": 16384,
+  "json_mode": true,
+  "retrieval_k": 10,
+  "max_neutral_retrieval": 8,
+  "max_claims": 50,
+  "max_spans": 5,
+  "edit_ratio_gate": 0.5
+ },
+ "cost_usd": 0.006937,
+ "prompt_tokens": 10251,
+ "completion_tokens": 3218,
+ "n_calls": 3,
+ "draft_chars": 12384,
+ "final_chars": 12536
+}

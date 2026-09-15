@@ -1,0 +1,119 @@
+{
+ "arm": "V-full",
+ "calls": [
+  {
+   "tag": "S-miss-wrong:full",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 10811,
+   "completion_tokens": 1549,
+   "reasoning_tokens": null,
+   "cost_usd": 0.005102,
+   "elapsed_s": 5.5,
+   "content_chars": 6374,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  }
+ ],
+ "stages": {
+  "full": "VALID(10 applied, 1 rejected)"
+ },
+ "patches_applied": [
+  {
+   "action": "replace",
+   "old_str": "The Spanish portion of the data comes from the PC-GITA corpus ([document_2.txt](#ref-doc2)).",
+   "new_str": "The Spanish portion of the data comes from the PC-GITA corpus ([document_1.txt](#ref-doc1)).",
+   "reason": "document_1.txt explicitly states the Spanish data consider the PC-GITA corpus; the draft cites only document_2.txt for this claim."
+  },
+  {
+   "action": "replace",
+   "old_str": "PC-GITA contains utterances from 50 PD patients and 50 healthy control (HC) speakers, all Colombian Spanish native speakers, giving a total of 100 speakers and a perfectly balanced 1:1 case–control design ([document_2.txt](#ref-doc2)).",
+   "new_str": "PC-GITA contains utterances from 50 PD patients and 50 healthy control (HC) speakers, all Colombian Spanish native speakers, giving a total of 100 speakers and a perfectly balanced 1:1 case–control design ([document_1.txt](#ref-doc1)).",
+   "reason": "document_1.txt states PC-GITA contains utterances from 50 PD patients and 50 HC Colombian Spanish native speakers; the draft cites only document_2.txt."
+  },
+  {
+   "action": "replace",
+   "old_str": "The German data consist of speech recordings from 44 PD patients and 44 HC speakers ([document_2.txt](#ref-doc2)).",
+   "new_str": "The German data consist of speech recordings from 88 PD patients and 88 HC speakers ([document_1.txt](#ref-doc1)).",
+   "reason": "document_1.txt states speech recordings of 88 PD patients and 88 HC speakers from Germany; document_2.txt's 44/44 figure contradicts the primary source."
+  },
+  {
+   "action": "replace",
+   "old_str": "As with the Spanish set, the case–control distribution is balanced, yielding 88 speakers in total.",
+   "new_str": "As with the Spanish set, the case–control distribution is balanced, yielding 176 speakers in total.",
+   "reason": "With 88 PD and 88 HC per document_1.txt, the total is 176 speakers, not 88."
+  },
+  {
+   "action": "replace",
+   "old_str": "The German data are associated with the vowel-articulation work of Skodda, Visser and Schlegel published in the *Journal of Voice* ([document_1.txt](#ref-doc1)).",
+   "new_str": "The German data are associated with the vowel-articulation work of Skodda, Visser and Schlegel published in the *Journal of Voice* ([document_1.txt](#ref-doc1)), which document_1.txt cites as reference [18] for the German recordings.",
+   "reason": "document_1.txt cites Skodda et al. [18] for the German data; the draft's association is correct but the citation should reflect the primary source's reference."
+  },
+  {
+   "action": "replace",
+   "old_str": "The Czech data derive from the work of Rusz and colleagues on the automatic evaluation of articulatory disorders in Parkinson's disease ([document_1.txt](#ref-doc1)).",
+   "new_str": "The Czech data derive from the work of Rusz and colleagues, cited in document_1.txt as reference [19] ([document_1.txt](#ref-doc1)).",
+   "reason": "document_1.txt cites Rusz [19] for the Czech data; the draft attributes it to the articulatory-disorders work, which is reference [7] (Novotný, Rusz et al.), not [19]."
+  },
+  {
+   "action": "replace",
+   "old_str": "| German | German speech recordings ([18]) | 44 | 44 | 88 | German | Not itemised in the extract |",
+   "new_str": "| German | German speech recordings ([18]) | 88 | 88 | 176 | German | /pa-ta-ka/ rapid repetition; 5 sentences; 81-word read text; monologue |",
+   "reason": "document_1.txt states 88 PD and 88 HC German speakers and lists the German speech tasks; the draft's 44/44 and 'not itemised' entries contradict the primary source."
+  },
+  {
+   "action": "replace",
+   "old_str": "First, the three corpora are of comparable size (88–100 speakers), which is important because transfer learning performance depends heavily on the representativeness of the base model.",
+   "new_str": "First, the three corpora are of comparable size (100–176 speakers), which is important because transfer learning performance depends heavily on the representativeness of the base model.",
+   "reason": "With the German set at 176 speakers per document_1.txt, the range is 100–176, not 88–100."
+  },
+  {
+   "action": "replace",
+   "old_str": "Second, sample sizes are modest (88–100 speakers per language), and the reported standard deviations are substantial in several conditions (for example, a specificity of 42.0 with a standard deviation of 33.2 for the Czech CNN) ([document_1.txt](#ref-doc1)).",
+   "new_str": "Second, sample sizes are modest (100–176 speakers per language), and the reported standard deviations are substantial in several conditions (for example, a specificity of 42.0 with a standard deviation of 33.2 for the Czech CNN) ([document_1.txt](#ref-doc1)).",
+   "reason": "The German set has 176 speakers per document_1.txt, so the range is 100–176, not 88–100."
+  },
+  {
+   "action": "replace",
+   "old_str": "The study draws on three language-specific speech datasets of Parkinson's disease patients and healthy controls: the Spanish PC-GITA corpus (50 PD, 50 HC, Colombian Spanish speakers), German speech recordings (44 PD, 44 HC), and Czech speech recordings (50 PD, 50 HC native Czech speakers performing /pa-ta-ka/ repetition, an 80-word reading task and a monologue) ([document_1.txt](#ref-doc1); [document_2.txt](#ref-doc2)).",
+   "new_str": "The study draws on three language-specific speech datasets of Parkinson's disease patients and healthy controls: the Spanish PC-GITA corpus (50 PD, 50 HC, Colombian Spanish speakers), German speech recordings (88 PD, 88 HC), and Czech speech recordings (50 PD, 50 HC native Czech speakers performing /pa-ta-ka/ repetition, an 80-word reading task and a monologue) ([document_1.txt](#ref-doc1); [document_2.txt](#ref-doc2)).",
+   "reason": "document_1.txt states 88 PD and 88 HC German speakers; the draft's 44/44 figure contradicts the primary source."
+  }
+ ],
+ "patches_rejected": [
+  {
+   "action": "replace",
+   "old_str": "The supplied extracts do not itemise the specific speech tasks performed by the German participants in the way that they do for the Czech participants; the report therefore treats the German set as a balanced 44/44 PD–HC corpus without a documented task list in the available evidence.",
+   "new_str": "document_1.txt does itemise the German speech tasks: the rapid repetition of /pa-ta-ka/, 5 sentences, one text with 81 words, and a monologue; the German set is therefore a balanced 88/88 PD–HC corpus with a documented task list.",
+   "reason": "document_1.txt explicitly lists the German speech tasks and the 88/88 composition, contradicting the draft's claim that tasks are not itemised and that the set is 44/44.",
+   "why": "edit_ratio>0.5"
+  }
+ ],
+ "final_status": "VALID_GAP",
+ "snapshot": "S-miss-wrong",
+ "cell": "B6_P_T0",
+ "task": "B6",
+ "cond": "P",
+ "round": "dev1",
+ "config": {
+  "thinking": "disabled",
+  "reasoning_effort": null,
+  "temperature": 0.0,
+  "max_tokens": 16384,
+  "json_mode": true,
+  "retrieval_k": 10,
+  "max_neutral_retrieval": 8,
+  "max_claims": 40,
+  "edit_ratio_gate": 0.5
+ },
+ "cost_usd": 0.005102,
+ "prompt_tokens": 10811,
+ "completion_tokens": 1549,
+ "n_calls": 1,
+ "draft_chars": 16251,
+ "final_chars": 16336
+}

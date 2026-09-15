@@ -1,0 +1,1255 @@
+{
+ "arm": "V-ref",
+ "calls": [
+  {
+   "tag": "S-present:extract",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 3070,
+   "completion_tokens": 4498,
+   "reasoning_tokens": null,
+   "cost_usd": 0.006319,
+   "elapsed_s": 11.5,
+   "content_chars": 17037,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  },
+  {
+   "tag": "S-present:judge_window",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 6447,
+   "completion_tokens": 1885,
+   "reasoning_tokens": null,
+   "cost_usd": 0.004196,
+   "elapsed_s": 5.5,
+   "content_chars": 7367,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  },
+  {
+   "tag": "S-present:judge_retrieved",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 1897,
+   "completion_tokens": 142,
+   "reasoning_tokens": null,
+   "cost_usd": 0.00074,
+   "elapsed_s": 1.1,
+   "content_chars": 571,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  },
+  {
+   "tag": "S-present:patch",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 4245,
+   "completion_tokens": 767,
+   "reasoning_tokens": null,
+   "cost_usd": 0.002194,
+   "elapsed_s": 2.8,
+   "content_chars": 3067,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  }
+ ],
+ "stages": {
+  "extract": "VALID(40 claims)",
+  "judge_window": "VALID",
+  "judge_retrieved": "VALID",
+  "patch": "VALID(9 applied, 0 rejected)"
+ },
+ "claims": [
+  {
+   "id": "c1",
+   "subject": "hand-crafted templates",
+   "attribute": "count",
+   "value": "106",
+   "unit_or_denominator": "templates",
+   "condition": "Freebase evaluation on 500 randomly selected triples",
+   "cited_source": "document_1.txt",
+   "sentence_span": "For these 500 triples, the authors hand-crafted 106 templates ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c2",
+   "subject": "hand-crafted templates",
+   "attribute": "count",
+   "value": "163",
+   "unit_or_denominator": "templates",
+   "condition": "in-house power tool domain KB with 67 predicates",
+   "cited_source": "document_1.txt",
+   "sentence_span": "For the 67 predicates, the primary source states that the authors \"hand-craft 163 templates\" ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c3",
+   "subject": "hand-crafted templates",
+   "attribute": "total count",
+   "value": "269",
+   "unit_or_denominator": "templates",
+   "condition": "across Freebase and power tool evaluations, based on primary source",
+   "cited_source": "document_1.txt",
+   "sentence_span": "Based on the primary source, the total is 269 templates: 106 for the Freebase evaluation and 163 for the power tool domain ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c4",
+   "subject": "hand-crafted templates",
+   "attribute": "count as reported by document_2",
+   "value": "103",
+   "unit_or_denominator": "templates",
+   "condition": "in-house power tool domain KB with 67 predicates",
+   "cited_source": "document_2.txt",
+   "sentence_span": "For the 67 predicates, the authors hand-crafted 103 templates."
+  },
+  {
+   "id": "c5",
+   "subject": "hand-crafted templates",
+   "attribute": "total count as reported by document_2",
+   "value": "209",
+   "unit_or_denominator": "templates",
+   "condition": "across Freebase and power tool evaluations",
+   "cited_source": "document_2.txt",
+   "sentence_span": "Together with the 106 Freebase templates, the authors wrote 209 templates in total."
+  },
+  {
+   "id": "c6",
+   "subject": "hand-crafted templates",
+   "attribute": "count",
+   "value": "106",
+   "unit_or_denominator": "templates",
+   "condition": "Freebase evaluation on 500 randomly selected triples",
+   "cited_source": "document_1.txt",
+   "sentence_span": "For the Freebase evaluation on 500 triples, the authors made 106 templates ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c7",
+   "subject": "hand-crafted templates",
+   "attribute": "count",
+   "value": "163",
+   "unit_or_denominator": "templates",
+   "condition": "in-house power tool domain with 67 predicates",
+   "cited_source": "document_1.txt",
+   "sentence_span": "For the in-house power tool domain with 67 predicates, the primary source reports 163 templates ([document_1.txt](document_1.txt)), while a third-party note reports 103 templates ([document_2.txt](document_2.txt))."
+  },
+  {
+   "id": "c8",
+   "subject": "hand-crafted templates",
+   "attribute": "count as reported by document_2",
+   "value": "103",
+   "unit_or_denominator": "templates",
+   "condition": "in-house power tool domain with 67 predicates",
+   "cited_source": "document_2.txt",
+   "sentence_span": "For the in-house power tool domain with 67 predicates, the primary source reports 163 templates ([document_1.txt](document_1.txt)), while a third-party note reports 103 templates ([document_2.txt](document_2.txt))."
+  },
+  {
+   "id": "c9",
+   "subject": "hand-crafted templates",
+   "attribute": "total count",
+   "value": "269",
+   "unit_or_denominator": "templates",
+   "condition": "across both evaluations, based on primary source",
+   "cited_source": "document_1.txt",
+   "sentence_span": "The most reliable total, based on the primary source, is 269 templates (106 + 163)."
+  },
+  {
+   "id": "c10",
+   "subject": "hand-crafted templates",
+   "attribute": "total count as reported by document_2",
+   "value": "209",
+   "unit_or_denominator": "templates",
+   "condition": "across both evaluations",
+   "cited_source": "document_2.txt",
+   "sentence_span": "If the third-party note is used, the total is 209 templates (106 + 103)."
+  },
+  {
+   "id": "c11",
+   "subject": "hand-crafted templates",
+   "attribute": "count",
+   "value": "106",
+   "unit_or_denominator": "templates",
+   "condition": "Freebase experiment alone",
+   "cited_source": "document_1.txt",
+   "sentence_span": "Given the principle of prioritizing primary sources, the answer to \"How many hand-crafted templates did they have to make?\" is 106 for the Freebase experiment alone, or 269 across both evaluations."
+  },
+  {
+   "id": "c12",
+   "subject": "hand-crafted templates",
+   "attribute": "total count",
+   "value": "269",
+   "unit_or_denominator": "templates",
+   "condition": "across both evaluations",
+   "cited_source": "document_1.txt",
+   "sentence_span": "Given the principle of prioritizing primary sources, the answer to \"How many hand-crafted templates did they have to make?\" is 106 for the Freebase experiment alone, or 269 across both evaluations."
+  },
+  {
+   "id": "c13",
+   "subject": "randomly selected triples",
+   "attribute": "count",
+   "value": "500",
+   "unit_or_denominator": "triples",
+   "condition": "Freebase evaluation",
+   "cited_source": "document_1.txt",
+   "sentence_span": "In the first evaluation, the system was compared on 500 randomly selected triples from Freebase ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c14",
+   "subject": "distinct predicates",
+   "attribute": "count",
+   "value": "53",
+   "unit_or_denominator": "predicates",
+   "condition": "Freebase evaluation on 500 triples",
+   "cited_source": "document_1.txt",
+   "sentence_span": "The triples shared only 53 distinct predicates, so the authors made 2 templates for each predicate on average ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c15",
+   "subject": "templates per predicate",
+   "attribute": "average count",
+   "value": "2",
+   "unit_or_denominator": "templates per predicate",
+   "condition": "Freebase evaluation on 500 triples",
+   "cited_source": "document_1.txt",
+   "sentence_span": "The triples shared only 53 distinct predicates, so the authors made 2 templates for each predicate on average ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c16",
+   "subject": "seed questions",
+   "attribute": "count",
+   "value": "991",
+   "unit_or_denominator": "questions",
+   "condition": "Freebase evaluation, generated by applying templates to triples",
+   "cited_source": "document_1.txt",
+   "sentence_span": "Applying the templates to the triples generated 991 seed questions ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c17",
+   "subject": "additional questions retrieved from Google",
+   "attribute": "count",
+   "value": "1529",
+   "unit_or_denominator": "questions",
+   "condition": "Freebase evaluation",
+   "cited_source": "document_1.txt",
+   "sentence_span": "The experiment also retrieved 1529 more questions from Google ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c18",
+   "subject": "questions selected for evaluation",
+   "attribute": "count",
+   "value": "500",
+   "unit_or_denominator": "questions",
+   "condition": "Freebase evaluation, top 500 selected",
+   "cited_source": "document_1.txt",
+   "sentence_span": "To evaluate fluency, a 4-gram language model was trained on Gigaword with Kneser-Ney smoothing, and the top 500 questions were selected to compare with prior results ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c19",
+   "subject": "distinct predicates",
+   "attribute": "count",
+   "value": "67",
+   "unit_or_denominator": "predicates",
+   "condition": "in-house power tool domain KB",
+   "cited_source": "document_1.txt",
+   "sentence_span": "This KB contains 67 distinct predicates, 293 distinct subjects, and 279 distinct objects ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c20",
+   "subject": "distinct subjects",
+   "attribute": "count",
+   "value": "293",
+   "unit_or_denominator": "subjects",
+   "condition": "in-house power tool domain KB",
+   "cited_source": "document_1.txt",
+   "sentence_span": "This KB contains 67 distinct predicates, 293 distinct subjects, and 279 distinct objects ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c21",
+   "subject": "distinct objects",
+   "attribute": "count",
+   "value": "279",
+   "unit_or_denominator": "objects",
+   "condition": "in-house power tool domain KB",
+   "cited_source": "document_1.txt",
+   "sentence_span": "This KB contains 67 distinct predicates, 293 distinct subjects, and 279 distinct objects ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c22",
+   "subject": "seed questions",
+   "attribute": "count",
+   "value": "12228",
+   "unit_or_denominator": "questions",
+   "condition": "in-house power tool domain",
+   "cited_source": "document_1.txt",
+   "sentence_span": "The system generated 12,228 seed questions from which 20,000 more questions were expanded with Google ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c23",
+   "subject": "expanded questions",
+   "attribute": "count",
+   "value": "20000",
+   "unit_or_denominator": "questions",
+   "condition": "in-house power tool domain, expanded with Google",
+   "cited_source": "document_1.txt",
+   "sentence_span": "The system generated 12,228 seed questions from which 20,000 more questions were expanded with Google ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c24",
+   "subject": "hand-crafted templates",
+   "attribute": "count",
+   "value": "106",
+   "unit_or_denominator": "templates",
+   "condition": "Freebase evaluation on 500 triples",
+   "cited_source": "document_2.txt",
+   "sentence_span": "The paper reports 106 hand-crafted templates for those 500 Freebase triples."
+  },
+  {
+   "id": "c25",
+   "subject": "distinct predicates",
+   "attribute": "count",
+   "value": "53",
+   "unit_or_denominator": "predicates",
+   "condition": "Freebase evaluation on 500 triples",
+   "cited_source": "document_2.txt",
+   "sentence_span": "The triples share only 53 distinct predicates, so the authors made 2 templates for each predicate on average."
+  },
+  {
+   "id": "c26",
+   "subject": "templates per predicate",
+   "attribute": "average count",
+   "value": "2",
+   "unit_or_denominator": "templates per predicate",
+   "condition": "Freebase evaluation on 500 triples",
+   "cited_source": "document_2.txt",
+   "sentence_span": "The triples share only 53 distinct predicates, so the authors made 2 templates for each predicate on average."
+  },
+  {
+   "id": "c27",
+   "subject": "seed questions",
+   "attribute": "count",
+   "value": "991",
+   "unit_or_denominator": "questions",
+   "condition": "Freebase evaluation",
+   "cited_source": "document_2.txt",
+   "sentence_span": "Applying the templates to the triples generated 991 seed questions."
+  },
+  {
+   "id": "c28",
+   "subject": "additional questions retrieved from Google",
+   "attribute": "count",
+   "value": "1529",
+   "unit_or_denominator": "questions",
+   "condition": "Freebase evaluation",
+   "cited_source": "document_2.txt",
+   "sentence_span": "The experiment also retrieved 1529 more questions from Google."
+  },
+  {
+   "id": "c29",
+   "subject": "distinct predicates",
+   "attribute": "count",
+   "value": "67",
+   "unit_or_denominator": "predicates",
+   "condition": "in-house power tool domain KB",
+   "cited_source": "document_2.txt",
+   "sentence_span": "For the in-house power tool domain knowledge base, the paper reports 67 predicates."
+  },
+  {
+   "id": "c30",
+   "subject": "hand-crafted templates",
+   "attribute": "count",
+   "value": "106",
+   "unit_or_denominator": "templates",
+   "condition": "Freebase evaluation",
+   "cited_source": "document_2.txt",
+   "sentence_span": "Together with the 106 Freebase templates, the authors wrote 209 templates in total."
+  },
+  {
+   "id": "c31",
+   "subject": "hand-crafted templates",
+   "attribute": "total count",
+   "value": "209",
+   "unit_or_denominator": "templates",
+   "condition": "across Freebase and power tool evaluations",
+   "cited_source": "document_2.txt",
+   "sentence_span": "Together with the 106 Freebase templates, the authors wrote 209 templates in total."
+  },
+  {
+   "id": "c32",
+   "subject": "hand-crafted templates",
+   "attribute": "total count",
+   "value": "209",
+   "unit_or_denominator": "templates",
+   "condition": "across both evaluations",
+   "cited_source": "document_2.txt",
+   "sentence_span": "The third-party note explicitly claims that the paper reports a total of 209 templates ([document_2.txt](document_2.txt))."
+  },
+  {
+   "id": "c33",
+   "subject": "hand-crafted templates",
+   "attribute": "count",
+   "value": "106",
+   "unit_or_denominator": "templates",
+   "condition": "Freebase evaluation",
+   "cited_source": "document_1.txt",
+   "sentence_span": "The primary source does not state a total; it presents 106 for Freebase and 163 for the power tool domain separately ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c34",
+   "subject": "hand-crafted templates",
+   "attribute": "count",
+   "value": "163",
+   "unit_or_denominator": "templates",
+   "condition": "power tool domain",
+   "cited_source": "document_1.txt",
+   "sentence_span": "The primary source does not state a total; it presents 106 for Freebase and 163 for the power tool domain separately ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c35",
+   "subject": "hand-crafted templates",
+   "attribute": "count",
+   "value": "106",
+   "unit_or_denominator": "templates",
+   "condition": "Freebase evaluation",
+   "cited_source": "document_1.txt",
+   "sentence_span": "For example, in the Freebase evaluation, 106 templates covered 500 triples and 53 predicates, generating 991 seed questions and retrieving 1529 more ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c36",
+   "subject": "triples covered",
+   "attribute": "count",
+   "value": "500",
+   "unit_or_denominator": "triples",
+   "condition": "Freebase evaluation",
+   "cited_source": "document_1.txt",
+   "sentence_span": "For example, in the Freebase evaluation, 106 templates covered 500 triples and 53 predicates, generating 991 seed questions and retrieving 1529 more ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c37",
+   "subject": "predicates covered",
+   "attribute": "count",
+   "value": "53",
+   "unit_or_denominator": "predicates",
+   "condition": "Freebase evaluation",
+   "cited_source": "document_1.txt",
+   "sentence_span": "For example, in the Freebase evaluation, 106 templates covered 500 triples and 53 predicates, generating 991 seed questions and retrieving 1529 more ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c38",
+   "subject": "seed questions generated",
+   "attribute": "count",
+   "value": "991",
+   "unit_or_denominator": "questions",
+   "condition": "Freebase evaluation",
+   "cited_source": "document_1.txt",
+   "sentence_span": "For example, in the Freebase evaluation, 106 templates covered 500 triples and 53 predicates, generating 991 seed questions and retrieving 1529 more ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c39",
+   "subject": "additional questions retrieved",
+   "attribute": "count",
+   "value": "1529",
+   "unit_or_denominator": "questions",
+   "condition": "Freebase evaluation",
+   "cited_source": "document_1.txt",
+   "sentence_span": "For example, in the Freebase evaluation, 106 templates covered 500 triples and 53 predicates, generating 991 seed questions and retrieving 1529 more ([document_1.txt](document_1.txt))."
+  },
+  {
+   "id": "c40",
+   "subject": "hand-crafted templates",
+   "attribute": "count",
+   "value": "163",
+   "unit_or_denominator": "templates",
+   "condition": "power tool domain",
+   "cited_source": "document_1.txt",
+   "sentence_span": "In the power tool domain, 163 templates (or 103 according to the third-party note) covered 67 predicates, generating 12,228 seed questions and 20,000 expanded questions ([document_1.txt](document_1.txt))."
+  }
+ ],
+ "judge_window": {
+  "c1": {
+   "id": "c1",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates",
+   "reason": "Passage states 106 templates for the 500 Freebase triples."
+  },
+  "c2": {
+   "id": "c2",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Passage states 163 templates for the 67 power tool predicates."
+  },
+  "c3": {
+   "id": "c3",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages state 106 and 163 separately but never state a total of 269."
+  },
+  "c4": {
+   "id": "c4",
+   "label": "Contradiction",
+   "primary_value": "163",
+   "evidence_quote": "For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Document_1 states 163, not 103, for the power tool domain."
+  },
+  "c5": {
+   "id": "c5",
+   "label": "Contradiction",
+   "primary_value": "269",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates ... For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Document_1 implies 106+163=269, not 209."
+  },
+  "c6": {
+   "id": "c6",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates",
+   "reason": "Passage states 106 templates for the 500 Freebase triples."
+  },
+  "c7": {
+   "id": "c7",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Passage states 163 templates for the 67 power tool predicates."
+  },
+  "c8": {
+   "id": "c8",
+   "label": "Contradiction",
+   "primary_value": "163",
+   "evidence_quote": "For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Document_1 states 163, not 103, for the power tool domain."
+  },
+  "c9": {
+   "id": "c9",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages state 106 and 163 separately but never state a total of 269."
+  },
+  "c10": {
+   "id": "c10",
+   "label": "Contradiction",
+   "primary_value": "269",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates ... For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Document_1 implies 106+163=269, not 209."
+  },
+  "c11": {
+   "id": "c11",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates",
+   "reason": "Passage states 106 templates for the Freebase experiment."
+  },
+  "c12": {
+   "id": "c12",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "Passages state 106 and 163 separately but never state a total of 269."
+  },
+  "c13": {
+   "id": "c13",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "on 500 randomly selected triples from Freebase",
+   "reason": "Passage states 500 randomly selected Freebase triples."
+  },
+  "c14": {
+   "id": "c14",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "these triples share only 53 distinct predicates",
+   "reason": "Passage states 53 distinct predicates."
+  },
+  "c15": {
+   "id": "c15",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "we made 2 templates for each predicate on average",
+   "reason": "Passage states 2 templates per predicate on average."
+  },
+  "c16": {
+   "id": "c16",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "991 seed questions are generated by applying the templates on the triples",
+   "reason": "Passage states 991 seed questions."
+  },
+  "c17": {
+   "id": "c17",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "1529 more questions are retrieved from Google",
+   "reason": "Passage states 1529 more questions retrieved from Google."
+  },
+  "c18": {
+   "id": "c18",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "the top 500 questions are selected to compare with the results",
+   "reason": "Passage states top 500 questions selected."
+  },
+  "c19": {
+   "id": "c19",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "It contains 67 distinct predicates",
+   "reason": "Passage states 67 distinct predicates."
+  },
+  "c20": {
+   "id": "c20",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "293 distinct subjects",
+   "reason": "Passage states 293 distinct subjects."
+  },
+  "c21": {
+   "id": "c21",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "279 distinct objects",
+   "reason": "Passage states 279 distinct objects."
+  },
+  "c22": {
+   "id": "c22",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "We generate 12,228 seed questions",
+   "reason": "Passage states 12,228 seed questions."
+  },
+  "c23": {
+   "id": "c23",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "20,000 more questions are expanded with Google",
+   "reason": "Passage states 20,000 expanded questions."
+  },
+  "c24": {
+   "id": "c24",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates",
+   "reason": "Document_1 states 106 templates for the 500 Freebase triples."
+  },
+  "c25": {
+   "id": "c25",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "these triples share only 53 distinct predicates",
+   "reason": "Document_1 states 53 distinct predicates."
+  },
+  "c26": {
+   "id": "c26",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "we made 2 templates for each predicate on average",
+   "reason": "Document_1 states 2 templates per predicate on average."
+  },
+  "c27": {
+   "id": "c27",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "991 seed questions are generated by applying the templates on the triples",
+   "reason": "Document_1 states 991 seed questions."
+  },
+  "c28": {
+   "id": "c28",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "1529 more questions are retrieved from Google",
+   "reason": "Document_1 states 1529 more questions retrieved from Google."
+  },
+  "c29": {
+   "id": "c29",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "It contains 67 distinct predicates",
+   "reason": "Document_1 states 67 predicates for the power tool KB."
+  },
+  "c30": {
+   "id": "c30",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates",
+   "reason": "Document_1 states 106 Freebase templates."
+  },
+  "c31": {
+   "id": "c31",
+   "label": "Contradiction",
+   "primary_value": "269",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates ... For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Document_1 implies 106+163=269, not 209."
+  },
+  "c32": {
+   "id": "c32",
+   "label": "Contradiction",
+   "primary_value": "269",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates ... For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Document_1 implies 106+163=269, not 209."
+  },
+  "c33": {
+   "id": "c33",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates",
+   "reason": "Passage states 106 for Freebase."
+  },
+  "c34": {
+   "id": "c34",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Passage states 163 for the power tool domain."
+  },
+  "c35": {
+   "id": "c35",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates",
+   "reason": "Passage states 106 templates for the Freebase evaluation."
+  },
+  "c36": {
+   "id": "c36",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "on 500 randomly selected triples from Freebase",
+   "reason": "Passage states 500 triples."
+  },
+  "c37": {
+   "id": "c37",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "these triples share only 53 distinct predicates",
+   "reason": "Passage states 53 predicates."
+  },
+  "c38": {
+   "id": "c38",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "991 seed questions are generated by applying the templates on the triples",
+   "reason": "Passage states 991 seed questions."
+  },
+  "c39": {
+   "id": "c39",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "1529 more questions are retrieved from Google",
+   "reason": "Passage states 1529 more questions retrieved."
+  },
+  "c40": {
+   "id": "c40",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Passage states 163 templates for the power tool domain."
+  }
+ },
+ "retrieval": [
+  {
+   "id": "c3",
+   "query": "hand-crafted templates total count across Freebase and power tool evaluations, based on primary source",
+   "n_new_chunks": 4,
+   "ranks": {
+    "cos_top": [
+     7,
+     21,
+     15,
+     5,
+     22
+    ],
+    "bm25_top": [
+     15,
+     21,
+     4,
+     1,
+     7
+    ]
+   }
+  },
+  {
+   "id": "c9",
+   "query": "hand-crafted templates total count across both evaluations, based on primary source",
+   "n_new_chunks": 4,
+   "ranks": {
+    "cos_top": [
+     7,
+     15,
+     21,
+     5,
+     19
+    ],
+    "bm25_top": [
+     15,
+     4,
+     1,
+     21,
+     13
+    ]
+   }
+  },
+  {
+   "id": "c12",
+   "query": "hand-crafted templates total count across both evaluations",
+   "n_new_chunks": 0,
+   "ranks": {
+    "cos_top": [
+     7,
+     15,
+     21,
+     5,
+     19
+    ],
+    "bm25_top": [
+     15,
+     4,
+     1,
+     13,
+     21
+    ]
+   }
+  }
+ ],
+ "retrieval_added_chars": 5232,
+ "judge_retrieved": {
+  "c3": {
+   "id": "c3",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "The passages do not mention any count of hand-crafted templates, nor the numbers 269, 106, or 163."
+  },
+  "c9": {
+   "id": "c9",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "The passages do not state a total number of hand-crafted templates or the figures 106 and 163."
+  },
+  "c12": {
+   "id": "c12",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "The passages do not address how many hand-crafted templates were made for the Freebase experiment or across evaluations."
+  }
+ },
+ "final_labels": {
+  "c1": {
+   "id": "c1",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates",
+   "reason": "Passage states 106 templates for the 500 Freebase triples.",
+   "source": "window"
+  },
+  "c2": {
+   "id": "c2",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Passage states 163 templates for the 67 power tool predicates.",
+   "source": "window"
+  },
+  "c3": {
+   "id": "c3",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "The passages do not mention any count of hand-crafted templates, nor the numbers 269, 106, or 163.",
+   "source": "retrieved"
+  },
+  "c4": {
+   "id": "c4",
+   "label": "Contradiction",
+   "primary_value": "163",
+   "evidence_quote": "For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Document_1 states 163, not 103, for the power tool domain.",
+   "source": "window"
+  },
+  "c5": {
+   "id": "c5",
+   "label": "Contradiction",
+   "primary_value": "269",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates ... For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Document_1 implies 106+163=269, not 209.",
+   "source": "window"
+  },
+  "c6": {
+   "id": "c6",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates",
+   "reason": "Passage states 106 templates for the 500 Freebase triples.",
+   "source": "window"
+  },
+  "c7": {
+   "id": "c7",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Passage states 163 templates for the 67 power tool predicates.",
+   "source": "window"
+  },
+  "c8": {
+   "id": "c8",
+   "label": "Contradiction",
+   "primary_value": "163",
+   "evidence_quote": "For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Document_1 states 163, not 103, for the power tool domain.",
+   "source": "window"
+  },
+  "c9": {
+   "id": "c9",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "The passages do not state a total number of hand-crafted templates or the figures 106 and 163.",
+   "source": "retrieved"
+  },
+  "c10": {
+   "id": "c10",
+   "label": "Contradiction",
+   "primary_value": "269",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates ... For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Document_1 implies 106+163=269, not 209.",
+   "source": "window"
+  },
+  "c11": {
+   "id": "c11",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates",
+   "reason": "Passage states 106 templates for the Freebase experiment.",
+   "source": "window"
+  },
+  "c12": {
+   "id": "c12",
+   "label": "Neutral",
+   "primary_value": "",
+   "evidence_quote": "",
+   "reason": "The passages do not address how many hand-crafted templates were made for the Freebase experiment or across evaluations.",
+   "source": "retrieved"
+  },
+  "c13": {
+   "id": "c13",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "on 500 randomly selected triples from Freebase",
+   "reason": "Passage states 500 randomly selected Freebase triples.",
+   "source": "window"
+  },
+  "c14": {
+   "id": "c14",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "these triples share only 53 distinct predicates",
+   "reason": "Passage states 53 distinct predicates.",
+   "source": "window"
+  },
+  "c15": {
+   "id": "c15",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "we made 2 templates for each predicate on average",
+   "reason": "Passage states 2 templates per predicate on average.",
+   "source": "window"
+  },
+  "c16": {
+   "id": "c16",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "991 seed questions are generated by applying the templates on the triples",
+   "reason": "Passage states 991 seed questions.",
+   "source": "window"
+  },
+  "c17": {
+   "id": "c17",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "1529 more questions are retrieved from Google",
+   "reason": "Passage states 1529 more questions retrieved from Google.",
+   "source": "window"
+  },
+  "c18": {
+   "id": "c18",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "the top 500 questions are selected to compare with the results",
+   "reason": "Passage states top 500 questions selected.",
+   "source": "window"
+  },
+  "c19": {
+   "id": "c19",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "It contains 67 distinct predicates",
+   "reason": "Passage states 67 distinct predicates.",
+   "source": "window"
+  },
+  "c20": {
+   "id": "c20",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "293 distinct subjects",
+   "reason": "Passage states 293 distinct subjects.",
+   "source": "window"
+  },
+  "c21": {
+   "id": "c21",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "279 distinct objects",
+   "reason": "Passage states 279 distinct objects.",
+   "source": "window"
+  },
+  "c22": {
+   "id": "c22",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "We generate 12,228 seed questions",
+   "reason": "Passage states 12,228 seed questions.",
+   "source": "window"
+  },
+  "c23": {
+   "id": "c23",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "20,000 more questions are expanded with Google",
+   "reason": "Passage states 20,000 expanded questions.",
+   "source": "window"
+  },
+  "c24": {
+   "id": "c24",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates",
+   "reason": "Document_1 states 106 templates for the 500 Freebase triples.",
+   "source": "window"
+  },
+  "c25": {
+   "id": "c25",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "these triples share only 53 distinct predicates",
+   "reason": "Document_1 states 53 distinct predicates.",
+   "source": "window"
+  },
+  "c26": {
+   "id": "c26",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "we made 2 templates for each predicate on average",
+   "reason": "Document_1 states 2 templates per predicate on average.",
+   "source": "window"
+  },
+  "c27": {
+   "id": "c27",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "991 seed questions are generated by applying the templates on the triples",
+   "reason": "Document_1 states 991 seed questions.",
+   "source": "window"
+  },
+  "c28": {
+   "id": "c28",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "1529 more questions are retrieved from Google",
+   "reason": "Document_1 states 1529 more questions retrieved from Google.",
+   "source": "window"
+  },
+  "c29": {
+   "id": "c29",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "It contains 67 distinct predicates",
+   "reason": "Document_1 states 67 predicates for the power tool KB.",
+   "source": "window"
+  },
+  "c30": {
+   "id": "c30",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates",
+   "reason": "Document_1 states 106 Freebase templates.",
+   "source": "window"
+  },
+  "c31": {
+   "id": "c31",
+   "label": "Contradiction",
+   "primary_value": "269",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates ... For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Document_1 implies 106+163=269, not 209.",
+   "source": "window"
+  },
+  "c32": {
+   "id": "c32",
+   "label": "Contradiction",
+   "primary_value": "269",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates ... For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Document_1 implies 106+163=269, not 209.",
+   "source": "window"
+  },
+  "c33": {
+   "id": "c33",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates",
+   "reason": "Passage states 106 for Freebase.",
+   "source": "window"
+  },
+  "c34": {
+   "id": "c34",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Passage states 163 for the power tool domain.",
+   "source": "window"
+  },
+  "c35": {
+   "id": "c35",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 500 triples, we hand-crafted 106 templates",
+   "reason": "Passage states 106 templates for the Freebase evaluation.",
+   "source": "window"
+  },
+  "c36": {
+   "id": "c36",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "on 500 randomly selected triples from Freebase",
+   "reason": "Passage states 500 triples.",
+   "source": "window"
+  },
+  "c37": {
+   "id": "c37",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "these triples share only 53 distinct predicates",
+   "reason": "Passage states 53 predicates.",
+   "source": "window"
+  },
+  "c38": {
+   "id": "c38",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "991 seed questions are generated by applying the templates on the triples",
+   "reason": "Passage states 991 seed questions.",
+   "source": "window"
+  },
+  "c39": {
+   "id": "c39",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "1529 more questions are retrieved from Google",
+   "reason": "Passage states 1529 more questions retrieved.",
+   "source": "window"
+  },
+  "c40": {
+   "id": "c40",
+   "label": "Entailment",
+   "primary_value": "",
+   "evidence_quote": "For the 67 predicates, we hand-craft 163 templates.",
+   "reason": "Passage states 163 templates for the power tool domain.",
+   "source": "window"
+  }
+ },
+ "n_unchecked_cap": 0,
+ "patches_applied": [
+  {
+   "claim_id": "c3",
+   "action": "mark_unverified",
+   "old_str": "Based on the primary source, the total is 269 templates: 106 for the Freebase evaluation and 163 for the power tool domain ([document_1.txt](document_1.txt)).",
+   "new_str": "Based on the primary source, the total is 269 templates: 106 for the Freebase evaluation and 163 for the power tool domain ([document_1.txt](document_1.txt)) [not verified against the primary source]."
+  },
+  {
+   "claim_id": "c4",
+   "action": "annotate",
+   "old_str": "For the 67 predicates, the authors hand-crafted 103 templates.",
+   "new_str": "For the 67 predicates, the authors hand-crafted 103 templates. [document_1.txt states: 163]"
+  },
+  {
+   "claim_id": "c5",
+   "action": "annotate",
+   "old_str": "Together with the 106 Freebase templates, the authors wrote 209 templates in total.",
+   "new_str": "Together with the 106 Freebase templates, the authors wrote 209 templates in total. [document_1.txt states: 269]."
+  },
+  {
+   "claim_id": "c8",
+   "action": "annotate",
+   "old_str": "For the in-house power tool domain with 67 predicates, the primary source reports 163 templates ([document_1.txt](document_1.txt)), while a third-party note reports 103 templates ([document_2.txt](document_2.txt)).",
+   "new_str": "For the in-house power tool domain with 67 predicates, the primary source reports 163 templates ([document_1.txt](document_1.txt)), while a third-party note reports 103 templates ([document_2.txt](document_2.txt)). [document_1.txt states: 163]"
+  },
+  {
+   "claim_id": "c9",
+   "action": "mark_unverified",
+   "old_str": "The most reliable total, based on the primary source, is 269 templates (106 + 163).",
+   "new_str": "The most reliable total, based on the primary source, is 269 templates (106 + 163) [not verified against the primary source]."
+  },
+  {
+   "claim_id": "c10",
+   "action": "annotate",
+   "old_str": "If the third-party note is used, the total is 209 templates (106 + 103).",
+   "new_str": "If the third-party note is used, the total is 209 templates (106 + 103). [document_1.txt states: 269]"
+  },
+  {
+   "claim_id": "c12",
+   "action": "mark_unverified",
+   "old_str": "Given the principle of prioritizing primary sources, the answer to \"How many hand-crafted templates did they have to make?\" is 106 for the Freebase experiment alone, or 269 across both evaluations.",
+   "new_str": "Given the principle of prioritizing primary sources, the answer to \"How many hand-crafted templates did they have to make?\" is 106 for the Freebase experiment alone, or 269 across both evaluations [not verified against the primary source]."
+  },
+  {
+   "claim_id": "c31",
+   "action": "annotate",
+   "old_str": "Together with the 106 Freebase templates, the authors wrote 209 templates in total.",
+   "new_str": "Together with the 106 Freebase templates, the authors wrote 209 templates in total. [document_1.txt states: 269]"
+  },
+  {
+   "claim_id": "c32",
+   "action": "annotate",
+   "old_str": "The third-party note explicitly claims that the paper reports a total of 209 templates ([document_2.txt](document_2.txt)).",
+   "new_str": "The third-party note explicitly claims that the paper reports a total of 209 templates ([document_2.txt](document_2.txt)). [document_1.txt states: 269]"
+  }
+ ],
+ "patches_rejected": [],
+ "final_status": "VALID_GAP",
+ "snapshot": "S-present",
+ "cell": "B3_P_T2",
+ "task": "B3",
+ "cond": "P",
+ "round": "dev1",
+ "config": {
+  "thinking": "disabled",
+  "reasoning_effort": null,
+  "temperature": 0.0,
+  "max_tokens": 16384,
+  "json_mode": true,
+  "retrieval_k": 10,
+  "max_neutral_retrieval": 8,
+  "max_claims": 40,
+  "edit_ratio_gate": 0.5
+ },
+ "cost_usd": 0.013449,
+ "prompt_tokens": 15659,
+ "completion_tokens": 7292,
+ "n_calls": 4,
+ "draft_chars": 12384,
+ "final_chars": 12685
+}

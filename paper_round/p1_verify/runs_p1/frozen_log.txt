@@ -1,0 +1,15 @@
+START 2026-09-15T14:48:26
+COST ACCOUNTING: pilot* cum=$4.8058 (561 calls); stage cap=$5.1586; call_cap=641 (stage +120)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4947.98it/s]
+S-miss-wrong/V-ref: VALID_GAP stages={'extract': 'VALID(50 claims, 51 spans)', 'judge_window': 'VALID', 'judge_retrieved': 'VALID', 'patch': 'VALID(5 applied, 5 rejected)'} calls=4 ptok=21292 $0.0164 applied=5 rejected=['duplicate_span', 'duplicate_span', 'duplicate_span', 'duplicate_span', 'duplicate_span']
+S-miss-wrong/V-full: VALID_GAP stages={'full': 'VALID(9 applied, 0 rejected)'} calls=1 ptok=10959 $0.0047 applied=9 rejected=[]
+S-miss-right/V-ref: VALID_GAP stages={'extract': 'VALID(50 claims, 62 spans)', 'judge_window': 'VALID', 'judge_retrieved': 'VALID', 'patch': 'VALID(5 applied, 10 rejected)'} calls=4 ptok=22227 $0.0184 applied=5 rejected=['no_change', 'no_change', 'duplicate_span', 'no_change', 'no_change', 'no_change', 'duplicate_span', 'no_change', 'duplicate_span', 'duplicate_span']
+S-miss-right/V-full: VALID_GAP stages={'full': 'VALID(9 applied, 0 rejected)'} calls=1 ptok=10536 $0.0042 applied=9 rejected=[]
+S-table/V-ref: VALID_GAP stages={'extract': 'VALID(50 claims, 50 spans)', 'judge_window': 'VALID', 'judge_retrieved': 'VALID', 'patch': 'VALID(2 applied, 6 rejected)'} calls=4 ptok=23192 $0.0177 applied=2 rejected=['no_change', 'edit_ratio>0.5', 'duplicate_span', 'no_change', 'duplicate_span', 'edit_ratio>0.5']
+S-table/V-full: VALID_GAP stages={'full': 'VALID(13 applied, 0 rejected)'} calls=1 ptok=11870 $0.0056 applied=13 rejected=[]
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4250.59it/s]
+S-present/V-ref: VALID_GAP stages={'extract': 'VALID(18 claims, 25 spans)', 'judge_window': 'VALID', 'judge_retrieved': 'SKIPPED(no neutral)', 'patch': 'VALID(9 applied, 1 rejected)'} calls=3 ptok=10318 $0.0076 applied=9 rejected=['duplicate_span']
+S-present/V-full: VALID_GAP_NO_PATCH_APPLIED stages={'full': 'VALID(0 applied, 7 rejected)'} calls=1 ptok=7857 $0.0033 applied=0 rejected=['no_change', 'no_change', 'no_change', 'no_change', 'no_change', 'no_change', 'no_change']
+P1 ROUND frozen DONE: pilot* cum=$4.8839 (580 calls)
+EXIT 0 2026-09-15T14:50:27

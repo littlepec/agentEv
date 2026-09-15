@@ -1,0 +1,14 @@
+COST ACCOUNTING: pilot* cum=$4.6588 (524 calls); stage cap=$5.1586; call_cap=641 (stage +120)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 5147.61it/s]
+S-miss-wrong/V-ref: VALID_GAP stages={'extract': 'VALID(40 claims)', 'judge_window': 'VALID', 'judge_retrieved': 'VALID', 'patch': 'VALID(2 applied, 1 rejected)'} calls=4 ptok=20182 $0.0140 applied=2 rejected=1
+S-miss-wrong/V-full: VALID_GAP stages={'full': 'VALID(10 applied, 1 rejected)'} calls=1 ptok=10811 $0.0051 applied=10 rejected=1
+S-miss-right/V-ref: VALID_GAP stages={'extract': 'VALID(40 claims)', 'judge_window': 'VALID', 'judge_retrieved': 'VALID', 'patch': 'VALID(2 applied, 2 rejected)'} calls=4 ptok=18820 $0.0141 applied=2 rejected=2
+S-miss-right/V-full: VALID_GAP stages={'full': 'VALID(14 applied, 0 rejected)'} calls=1 ptok=10388 $0.0050 applied=14 rejected=0
+S-table/V-ref: VALID_GAP stages={'extract': 'VALID(40 claims)', 'judge_window': 'VALID', 'judge_retrieved': 'SKIPPED(no neutral)', 'patch': 'VALID(1 applied, 0 rejected)'} calls=3 ptok=17744 $0.0113 applied=1 rejected=0
+S-table/V-full: VALID_GAP stages={'full': 'VALID(10 applied, 0 rejected)'} calls=1 ptok=11722 $0.0052 applied=10 rejected=0
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4509.11it/s]
+S-present/V-ref: VALID_GAP stages={'extract': 'VALID(40 claims)', 'judge_window': 'VALID', 'judge_retrieved': 'VALID', 'patch': 'VALID(9 applied, 0 rejected)'} calls=4 ptok=15659 $0.0134 applied=9 rejected=0
+S-present/V-full: VALID_GAP stages={'full': 'VALID(14 applied, 0 rejected)'} calls=1 ptok=7709 $0.0040 applied=14 rejected=0
+P1 ROUND dev1 DONE: pilot* cum=$4.7310 (543 calls)
+EXIT 0

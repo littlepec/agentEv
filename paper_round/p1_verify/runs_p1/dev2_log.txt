@@ -1,0 +1,14 @@
+COST ACCOUNTING: pilot* cum=$4.7310 (543 calls); stage cap=$5.1586; call_cap=641 (stage +120)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4283.59it/s]
+S-miss-wrong/V-ref: VALID_GAP stages={'extract': 'VALID(50 claims, 52 spans)', 'judge_window': 'VALID', 'judge_retrieved': 'VALID', 'patch': 'VALID(3 applied, 5 rejected)'} calls=4 ptok=23030 $0.0177 applied=3 rejected=['duplicate_span', 'duplicate_span', 'duplicate_span', 'duplicate_span', 'duplicate_span']
+S-miss-wrong/V-full: VALID_GAP stages={'full': 'VALID(10 applied, 0 rejected)'} calls=1 ptok=10959 $0.0049 applied=10 rejected=[]
+S-miss-right/V-ref: VALID_GAP stages={'extract': 'VALID(48 claims, 57 spans)', 'judge_window': 'VALID', 'judge_retrieved': 'VALID', 'patch': 'VALID(7 applied, 6 rejected)'} calls=4 ptok=21666 $0.0173 applied=7 rejected=['duplicate_span', 'duplicate_span', 'duplicate_span', 'duplicate_span', 'duplicate_span', 'duplicate_span']
+S-miss-right/V-full: VALID_GAP stages={'full': 'VALID(11 applied, 0 rejected)'} calls=1 ptok=10536 $0.0046 applied=11 rejected=[]
+S-table/V-ref: VALID_GAP stages={'extract': 'VALID(50 claims, 50 spans)', 'judge_window': 'VALID', 'judge_retrieved': 'SKIPPED(no neutral)', 'patch': 'VALID(1 applied, 1 rejected)'} calls=3 ptok=17519 $0.0146 applied=1 rejected=['duplicate_span']
+S-table/V-full: VALID_GAP stages={'full': 'VALID(3 applied, 6 rejected)'} calls=1 ptok=11870 $0.0052 applied=3 rejected=['no_change', 'no_change', 'no_change', 'edit_ratio>0.5', 'no_change', 'no_change']
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4553.50it/s]
+S-present/V-ref: VALID_GAP stages={'extract': 'VALID(20 claims, 26 spans)', 'judge_window': 'VALID', 'judge_retrieved': 'SKIPPED(no neutral)', 'patch': 'VALID(4 applied, 0 rejected)'} calls=3 ptok=10251 $0.0069 applied=4 rejected=[]
+S-present/V-full: VALID_GAP stages={'full': 'VALID(4 applied, 4 rejected)'} calls=1 ptok=7857 $0.0037 applied=4 rejected=['no_change', 'no_change', 'no_change', 'no_change']
+P1 ROUND dev2 DONE: pilot* cum=$4.8058 (561 calls)
+EXIT 0

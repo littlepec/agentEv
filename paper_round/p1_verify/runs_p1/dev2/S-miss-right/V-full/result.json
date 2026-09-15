@@ -1,0 +1,129 @@
+{
+ "arm": "V-full",
+ "calls": [
+  {
+   "tag": "S-miss-right:full",
+   "http": 200,
+   "finish_reason": "stop",
+   "prompt_tokens": 10536,
+   "completion_tokens": 1191,
+   "reasoning_tokens": null,
+   "cost_usd": 0.00459,
+   "elapsed_s": 4.5,
+   "content_chars": 5226,
+   "parse_error": null,
+   "status": "VALID",
+   "cfg": {
+    "type": "disabled"
+   },
+   "max_tokens": 16384
+  }
+ ],
+ "stages": {
+  "full": "VALID(11 applied, 0 rejected)"
+ },
+ "patches_applied": [
+  {
+   "action": "reattribute",
+   "old_str": "The study uses three language-specific datasets: a Spanish dataset based on the PC-GITA corpus, a German dataset, and a Czech dataset ([Document 2](document_2.txt)).",
+   "new_str": "The study uses three language-specific datasets: a Spanish dataset based on the PC-GITA corpus, a German dataset, and a Czech dataset ([Document 1](document_1.txt)).",
+   "reason": "The three language-specific datasets are stated in document_1.txt; citation should point to the primary source.",
+   "matched": "exact"
+  },
+  {
+   "action": "reattribute",
+   "old_str": "All three provide speech recordings of PD patients and HC speakers ([Document 2](document_2.txt)).",
+   "new_str": "All three provide speech recordings of PD patients and HC speakers ([Document 1](document_1.txt)).",
+   "reason": "Document_1.txt states recordings of patients and healthy speakers in three languages; citation should be to the primary source.",
+   "matched": "exact"
+  },
+  {
+   "action": "reattribute",
+   "old_str": "The three datasets together contain 188 PD patients and 188 HC speakers, for a total of 376 participants ([Document 2](document_2.txt)).",
+   "new_str": "The three datasets together contain 188 PD patients and 188 HC speakers, for a total of 376 participants ([Document 1](document_1.txt)).",
+   "reason": "The speaker counts (50+88+50 PD and 50+88+50 HC) are stated in document_1.txt; citation should be to the primary source.",
+   "matched": "exact"
+  },
+  {
+   "action": "reattribute",
+   "old_str": "The Spanish data come from the PC-GITA corpus ([Document 2](document_2.txt)).",
+   "new_str": "The Spanish data come from the PC-GITA corpus ([Document 1](document_1.txt)).",
+   "reason": "Document_1.txt states the Spanish data consider the PC-GITA corpus; citation should be to the primary source.",
+   "matched": "exact"
+  },
+  {
+   "action": "reattribute",
+   "old_str": "PC-GITA contains utterances from 50 PD patients and 50 HC speakers who are Colombian Spanish native speakers ([Document 2](document_2.txt)).",
+   "new_str": "PC-GITA contains utterances from 50 PD patients and 50 HC speakers who are Colombian Spanish native speakers ([Document 1](document_1.txt)).",
+   "reason": "Document_1.txt states PC-GITA contains utterances from 50 PD patients and 50 HC Colombian Spanish native speakers; citation should be to the primary source.",
+   "matched": "exact"
+  },
+  {
+   "action": "reattribute",
+   "old_str": "The German dataset contains speech recordings of 88 PD patients and 88 HC speakers from Germany ([Document 2](document_2.txt)).",
+   "new_str": "The German dataset contains speech recordings of 88 PD patients and 88 HC speakers from Germany ([Document 1](document_1.txt)).",
+   "reason": "Document_1.txt states speech recordings of 88 PD patients and 88 HC speakers from Germany; citation should be to the primary source.",
+   "matched": "exact"
+  },
+  {
+   "action": "reattribute",
+   "old_str": "This makes the German dataset the largest of the three in terms of speaker count, with 176 participants in total ([Document 2](document_2.txt)).",
+   "new_str": "This makes the German dataset the largest of the three in terms of speaker count, with 176 participants in total ([Document 1](document_1.txt)).",
+   "reason": "The 88+88=176 total is a transparent combination of document_1.txt's stated figures; citation should be to the primary source.",
+   "matched": "exact"
+  },
+  {
+   "action": "reattribute",
+   "old_str": "Document 2 confirms the same composition: 50 PD patients and 50 healthy controls ([Document 2](document_2.txt)).",
+   "new_str": "Document 2 confirms the same composition: 50 PD patients and 50 healthy controls ([Document 1](document_1.txt)).",
+   "reason": "Document_1.txt states 50 PD and 50 HC Czech speakers; citation should be to the primary source.",
+   "matched": "exact"
+  },
+  {
+   "action": "reattribute",
+   "old_str": "The datasets actually used remain the Spanish PC-GITA, German speech recordings, and Czech speech recordings ([Document 2](document_2.txt)).",
+   "new_str": "The datasets actually used remain the Spanish PC-GITA, German speech recordings, and Czech speech recordings ([Document 1](document_1.txt)).",
+   "reason": "The three datasets used are stated in document_1.txt; citation should be to the primary source.",
+   "matched": "exact"
+  },
+  {
+   "action": "reattribute",
+   "old_str": "In addition, the German dataset has a larger number of speakers (88 PD and 88 HC) than the Spanish and Czech datasets (50 PD and 50 HC each), which could affect statistical power and model training dynamics ([Document 2](document_2.txt)).",
+   "new_str": "In addition, the German dataset has a larger number of speakers (88 PD and 88 HC) than the Spanish and Czech datasets (50 PD and 50 HC each), which could affect statistical power and model training dynamics ([Document 1](document_1.txt)).",
+   "reason": "The speaker counts are stated in document_1.txt; citation should be to the primary source.",
+   "matched": "exact"
+  },
+  {
+   "action": "reattribute",
+   "old_str": "Overall, the answer to the query is that the datasets used are the Spanish PC-GITA corpus, the German speech recordings, and the Czech speech recordings, with the specific speaker counts and task details described above ([Document 2](document_2.txt)).",
+   "new_str": "Overall, the answer to the query is that the datasets used are the Spanish PC-GITA corpus, the German speech recordings, and the Czech speech recordings, with the specific speaker counts and task details described above ([Document 1](document_1.txt)).",
+   "reason": "The datasets and speaker counts are stated in document_1.txt; citation should be to the primary source.",
+   "matched": "exact"
+  }
+ ],
+ "patches_rejected": [],
+ "final_status": "VALID_GAP",
+ "snapshot": "S-miss-right",
+ "cell": "B6_C_T1",
+ "task": "B6",
+ "cond": "C",
+ "round": "dev2",
+ "config": {
+  "thinking": "disabled",
+  "reasoning_effort": null,
+  "temperature": 0.0,
+  "max_tokens": 16384,
+  "json_mode": true,
+  "retrieval_k": 10,
+  "max_neutral_retrieval": 8,
+  "max_claims": 50,
+  "max_spans": 5,
+  "edit_ratio_gate": 0.5
+ },
+ "cost_usd": 0.00459,
+ "prompt_tokens": 10536,
+ "completion_tokens": 1191,
+ "n_calls": 1,
+ "draft_chars": 16012,
+ "final_chars": 16012
+}
