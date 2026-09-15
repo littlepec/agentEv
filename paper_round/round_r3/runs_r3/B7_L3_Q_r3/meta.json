@@ -1,0 +1,42 @@
+{
+  "cell": "B7_L3_Q_r3",
+  "docpath_dir": "cell_25",
+  "task": "B7",
+  "level": "L3",
+  "condition": "Q",
+  "rep": 3,
+  "arm": "F0-fullwin",
+  "phase": "confirmatory",
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "evidence_file": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\round_r1\\materials\\B7\\E_L3.txt",
+  "note_file": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\round_r3\\materials\\B7\\Lcond.txt",
+  "question": "what is the test set size?",
+  "prompt_tokens": 38848,
+  "completion_tokens": 5287,
+  "deepseek_cost_usd": 0.017999,
+  "report_chars": 12636,
+  "context_chars": 123567,
+  "primary_chars": 29007,
+  "exposure_scope": "document_1 only",
+  "doc1_blocks": 4,
+  "doc2_blocks": 4,
+  "paper_decisive_in_context_verbatim": {
+    "English-German WMT news-test2015": false
+  },
+  "paper_decisive_in_context_digitnorm": {
+    "English-German WMT news-test2015": true
+  },
+  "paper_decisive_in_context_tokwin": {
+    "English-German WMT news-test2015": true
+  },
+  "n_llm_calls": 3,
+  "elapsed_s": 30.7,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config, full documents in window (COMPRESSION_THRESHOLD=400000)",
+  "model": "deepseek-v4-flash",
+  "materials_manifest": "round_r3/materials/manifest.json (L'') + round_r1/materials/manifest.json (levels) + round_r2/materials/manifest.json (real variants)"
+}

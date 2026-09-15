@@ -43,7 +43,7 @@ def build_docpath(t, level, cond, cell):
 def norm_digits(s): return re.sub(r"(?<=\d) (?=\d)", "", s)   # undo L3 digit spacing for the evaluation-only exposure check
 def round_cap():
     from ledger_guard import LEDGER
-    bpath = RUNS / "ledger_baseline.json"
+    bpath = RUNS / f"ledger_baseline_{EXP_KEY.rsplit('-', 1)[-1]}.json"   # per exp_key: the confirmation round gets its own cap base
     if bpath.exists(): base = json.loads(bpath.read_text(encoding="utf-8"))["line_cost_at_round_start"]
     else:
         c = sqlite3.connect(str(LEDGER), timeout=30)
@@ -116,4 +116,8 @@ async def main(args):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("--tasks", default="B1,B3,B5,B6,B7"); ap.add_argument("--levels", default="0,1,2,3")
     ap.add_argument("--conds", default="P"); ap.add_argument("--phase", default="confirmatory"); ap.add_argument("--dry", action="store_true"); ap.add_argument("--rep", type=int, default=1)
-    a = ap.parse_args(); setup_env(); asyncio.run(main(a))
+    ap.add_argument("--exp-key", default=""); ap.add_argument("--cap", type=float, default=0.0)   # confirmation round: roundR1c, $0.60
+    a = ap.parse_args()
+    if a.exp_key: EXP_KEY = a.exp_key
+    if a.cap: ROUND_CAP = a.cap
+    setup_env(); asyncio.run(main(a))

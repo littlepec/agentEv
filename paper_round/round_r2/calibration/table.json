@@ -1,0 +1,2257 @@
+{
+ "generated": "2026-09-15T17:31:04",
+ "ocr_engine": "rapidocr_onnxruntime 1.4.4 (PP-OCRv4 onnx, CPU)",
+ "tasks": {
+  "B1": {
+   "arxiv": "1911.10742",
+   "L0": {
+    "chars": 54177,
+    "sha256": "60707895c93ed1c8f6df9a9ae789cdfdd879e0968ad228205117564b061f263d",
+    "numbers": {
+     "n_numbers": 136,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "220 human-human dialogs": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Datasets ::: AntiScam Dataset",
+      "len": 133,
+      "best_ratio": 0.964,
+      "contiguous_in_order": true,
+      "longest_match": 133
+     }
+    ]
+   },
+   "L1": {
+    "chars": 56225,
+    "sha256": "b0ed7116cbab4cbab37e4adf6406813c8da93fdf1809466162fbfb2da9f91db0",
+    "numbers": {
+     "n_numbers": 136,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "220 human-human dialogs": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Datasets ::: AntiScam Dataset",
+      "len": 133,
+      "best_ratio": 0.964,
+      "contiguous_in_order": true,
+      "longest_match": 133
+     }
+    ]
+   },
+   "L2": {
+    "chars": 56225,
+    "sha256": "7ecf4adf2bb095d17b5ba355b54229c2ebf7e666cb3aae6f8ed106704634c3f6",
+    "numbers": {
+     "n_numbers": 136,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "220 human-human dialogs": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Datasets ::: AntiScam Dataset",
+      "len": 133,
+      "best_ratio": 0.601,
+      "contiguous_in_order": false,
+      "longest_match": 62
+     }
+    ]
+   },
+   "L3": {
+    "chars": 56938,
+    "sha256": "58787785c2c94c1742df88eb355e6be2a572dead8cb83e781c797e3689ebf13c",
+    "numbers": {
+     "n_numbers": 136,
+     "intact": 0.0,
+     "split": 0.941,
+     "absent": 0.059
+    },
+    "decisive": {
+     "220 human-human dialogs": {
+      "verbatim": false,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Datasets ::: AntiScam Dataset",
+      "len": 133,
+      "best_ratio": 0.688,
+      "contiguous_in_order": false,
+      "longest_match": 48
+     }
+    ]
+   },
+   "L4": {
+    "chars": 56988,
+    "sha256": "527c0e10273fce212dfbca689b4bda1726cb0db672f01d86eeee7acfb38af82c",
+    "numbers": {
+     "n_numbers": 136,
+     "intact": 0.0,
+     "split": 1.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "220 human-human dialogs": {
+      "verbatim": false,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Datasets ::: AntiScam Dataset",
+      "len": 133,
+      "best_ratio": 0.696,
+      "contiguous_in_order": false,
+      "longest_match": 48
+     }
+    ]
+   },
+   "host_pymupdf": {
+    "chars": 54076,
+    "sha256": "40814739698ff5e16f1c4899831cc28eb7d415a4f5d529a340d45178c4b232a0",
+    "numbers": {
+     "n_numbers": 136,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "220 human-human dialogs": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Datasets ::: AntiScam Dataset",
+      "len": 133,
+      "best_ratio": 0.964,
+      "contiguous_in_order": true,
+      "longest_match": 133
+     }
+    ],
+    "info": {
+     "pages": 11,
+     "sec": 4.9
+    }
+   },
+   "pypdf": {
+    "chars": 54114,
+    "sha256": "4d0519e071c2949cefb89923e908642924bdea61fa66b77fcffb0dc7c0261cce",
+    "numbers": {
+     "n_numbers": 136,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "220 human-human dialogs": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Datasets ::: AntiScam Dataset",
+      "len": 133,
+      "best_ratio": 0.964,
+      "contiguous_in_order": true,
+      "longest_match": 133
+     }
+    ],
+    "info": {
+     "pages": 11,
+     "sec": 0.3
+    }
+   },
+   "pdfminer": {
+    "chars": 54305,
+    "sha256": "cc97952155e80a921f112e3b79f9ddc02ddbc6fa8b08434233dc8c61b229e52f",
+    "numbers": {
+     "n_numbers": 136,
+     "intact": 0.993,
+     "split": 0.0,
+     "absent": 0.007
+    },
+    "decisive": {
+     "220 human-human dialogs": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Datasets ::: AntiScam Dataset",
+      "len": 133,
+      "best_ratio": 0.964,
+      "contiguous_in_order": true,
+      "longest_match": 133
+     }
+    ],
+    "info": {
+     "sec": 0.5
+    }
+   },
+   "ocr200_naive": {
+    "chars": 51490,
+    "sha256": "14d39375d9570dae630d5518dfa8a301735f6b40d42551068ad52db31b140954",
+    "numbers": {
+     "n_numbers": 136,
+     "intact": 0.904,
+     "split": 0.0,
+     "absent": 0.096
+    },
+    "decisive": {
+     "220 human-human dialogs": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Datasets ::: AntiScam Dataset",
+      "len": 133,
+      "best_ratio": 0.565,
+      "contiguous_in_order": false,
+      "longest_match": 61
+     }
+    ],
+    "info": {
+     "pages": 11,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 1246,
+     "sec": 84.6,
+     "mean_box_score": 0.9779
+    }
+   },
+   "ocr200_col": {
+    "chars": 51490,
+    "sha256": "734e0e3b070b6d84a12d21d3b71f54a47878db6d6221a3f0b6d23f0ade943dd7",
+    "numbers": {
+     "n_numbers": 136,
+     "intact": 0.904,
+     "split": 0.0,
+     "absent": 0.096
+    },
+    "decisive": {
+     "220 human-human dialogs": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Datasets ::: AntiScam Dataset",
+      "len": 133,
+      "best_ratio": 0.964,
+      "contiguous_in_order": true,
+      "longest_match": 110
+     }
+    ],
+    "info": {
+     "pages": 11,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 1246,
+     "sec": 84.6,
+     "mean_box_score": 0.9779,
+     "order": "column-aware"
+    }
+   },
+   "ocr120_naive": {
+    "chars": 52805,
+    "sha256": "b965486a6f07b524c8c17bc527389305eb085df5306a6095a96082c5c81b6452",
+    "numbers": {
+     "n_numbers": 136,
+     "intact": 0.941,
+     "split": 0.0,
+     "absent": 0.059
+    },
+    "decisive": {
+     "220 human-human dialogs": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": false
+     }
+    },
+    "quotes": [
+     {
+      "section": "Datasets ::: AntiScam Dataset",
+      "len": 133,
+      "best_ratio": 0.551,
+      "contiguous_in_order": false,
+      "longest_match": 61
+     }
+    ],
+    "info": {
+     "pages": 11,
+     "dpi": 120,
+     "scan_degradation": false,
+     "boxes": 1270,
+     "sec": 60.9,
+     "mean_box_score": 0.975
+    }
+   },
+   "ocr150_scan": {
+    "chars": 49351,
+    "sha256": "a5b12d596714de282e39bc151f1c20e301c982b2adab26b7ff8ebf001a9574d5",
+    "numbers": {
+     "n_numbers": 136,
+     "intact": 0.956,
+     "split": 0.0,
+     "absent": 0.044
+    },
+    "decisive": {
+     "220 human-human dialogs": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": false
+     }
+    },
+    "quotes": [
+     {
+      "section": "Datasets ::: AntiScam Dataset",
+      "len": 133,
+      "best_ratio": 0.565,
+      "contiguous_in_order": false,
+      "longest_match": 51
+     }
+    ],
+    "info": {
+     "pages": 11,
+     "dpi": 150,
+     "scan_degradation": true,
+     "boxes": 1265,
+     "sec": 61.6,
+     "mean_box_score": 0.9522
+    }
+   }
+  },
+  "B3": {
+   "arxiv": "1610.03807",
+   "L0": {
+    "chars": 19559,
+    "sha256": "61c4258415778b30ca31837fd4e0f2c4971b85b3ad8a2f412f7927dd9eed222c",
+    "numbers": {
+     "n_numbers": 62,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "hand-craft 163": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     },
+     "163 templates": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Evaluation on Freebase",
+      "len": 102,
+      "best_ratio": 0.953,
+      "contiguous_in_order": true,
+      "longest_match": 102
+     },
+     {
+      "section": "Evaluation on the Domain-specific KB",
+      "len": 148,
+      "best_ratio": 0.967,
+      "contiguous_in_order": true,
+      "longest_match": 148
+     }
+    ]
+   },
+   "L1": {
+    "chars": 20298,
+    "sha256": "6c58ae86319352fc57c953e12f60656ede6662820e5d12cde6f67320157c2d67",
+    "numbers": {
+     "n_numbers": 62,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "hand-craft 163": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     },
+     "163 templates": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Evaluation on Freebase",
+      "len": 102,
+      "best_ratio": 0.953,
+      "contiguous_in_order": true,
+      "longest_match": 102
+     },
+     {
+      "section": "Evaluation on the Domain-specific KB",
+      "len": 148,
+      "best_ratio": 0.967,
+      "contiguous_in_order": true,
+      "longest_match": 148
+     }
+    ]
+   },
+   "L2": {
+    "chars": 20298,
+    "sha256": "aea33dc7712d5bfde6f63a7799eacdd47a112e1c4a4bc60efda7555312e8cb82",
+    "numbers": {
+     "n_numbers": 62,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "hand-craft 163": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     },
+     "163 templates": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Evaluation on Freebase",
+      "len": 102,
+      "best_ratio": 0.692,
+      "contiguous_in_order": true,
+      "longest_match": 61
+     },
+     {
+      "section": "Evaluation on the Domain-specific KB",
+      "len": 148,
+      "best_ratio": 0.784,
+      "contiguous_in_order": true,
+      "longest_match": 87
+     }
+    ]
+   },
+   "L3": {
+    "chars": 20597,
+    "sha256": "aa444485d2ed987d7bb5c7eaea2237380b6b08dbe9fb8326a78dda3a80bc0a55",
+    "numbers": {
+     "n_numbers": 62,
+     "intact": 0.0,
+     "split": 0.984,
+     "absent": 0.016
+    },
+    "decisive": {
+     "hand-craft 163": {
+      "verbatim": false,
+      "digitnorm": true,
+      "tokens_in_window": true
+     },
+     "163 templates": {
+      "verbatim": false,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Evaluation on Freebase",
+      "len": 102,
+      "best_ratio": 0.692,
+      "contiguous_in_order": true,
+      "longest_match": 28
+     },
+     {
+      "section": "Evaluation on the Domain-specific KB",
+      "len": 148,
+      "best_ratio": 0.758,
+      "contiguous_in_order": true,
+      "longest_match": 42
+     }
+    ]
+   },
+   "L4": {
+    "chars": 20618,
+    "sha256": "7567e892ae8dbfdd646966d62b8c9fd6e36eb76005039ea83e661d430af456ea",
+    "numbers": {
+     "n_numbers": 62,
+     "intact": 0.0,
+     "split": 1.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "hand-craft 163": {
+      "verbatim": false,
+      "digitnorm": true,
+      "tokens_in_window": true
+     },
+     "163 templates": {
+      "verbatim": false,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Evaluation on Freebase",
+      "len": 102,
+      "best_ratio": 0.692,
+      "contiguous_in_order": true,
+      "longest_match": 28
+     },
+     {
+      "section": "Evaluation on the Domain-specific KB",
+      "len": 148,
+      "best_ratio": 0.758,
+      "contiguous_in_order": true,
+      "longest_match": 42
+     }
+    ]
+   },
+   "host_pymupdf": {
+    "chars": 18814,
+    "sha256": "cc52ac80b0d2b92fb7dafbcdd421603825ef732ab6687c999499e7cec57fe584",
+    "numbers": {
+     "n_numbers": 62,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "hand-craft 163": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": true
+     },
+     "163 templates": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Evaluation on Freebase",
+      "len": 102,
+      "best_ratio": 0.953,
+      "contiguous_in_order": true,
+      "longest_match": 102
+     },
+     {
+      "section": "Evaluation on the Domain-specific KB",
+      "len": 148,
+      "best_ratio": 0.967,
+      "contiguous_in_order": false,
+      "longest_match": 51
+     }
+    ],
+    "info": {
+     "pages": 5,
+     "sec": 0.0
+    }
+   },
+   "pypdf": {
+    "chars": 18844,
+    "sha256": "770a39742c59450f18d082bfb111023e2b5af668771606f9a0e42fd7874e3462",
+    "numbers": {
+     "n_numbers": 62,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "hand-craft 163": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": true
+     },
+     "163 templates": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Evaluation on Freebase",
+      "len": 102,
+      "best_ratio": 0.953,
+      "contiguous_in_order": true,
+      "longest_match": 102
+     },
+     {
+      "section": "Evaluation on the Domain-specific KB",
+      "len": 148,
+      "best_ratio": 0.967,
+      "contiguous_in_order": false,
+      "longest_match": 51
+     }
+    ],
+    "info": {
+     "pages": 5,
+     "sec": 0.1
+    }
+   },
+   "pdfminer": {
+    "chars": 19034,
+    "sha256": "0d52be73c3d9e3113f7fc9f5cd994bc0a6ca7c49f40f893eccb0ef3d174db0b7",
+    "numbers": {
+     "n_numbers": 62,
+     "intact": 0.984,
+     "split": 0.0,
+     "absent": 0.016
+    },
+    "decisive": {
+     "hand-craft 163": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": true
+     },
+     "163 templates": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Evaluation on Freebase",
+      "len": 102,
+      "best_ratio": 0.953,
+      "contiguous_in_order": true,
+      "longest_match": 102
+     },
+     {
+      "section": "Evaluation on the Domain-specific KB",
+      "len": 148,
+      "best_ratio": 0.967,
+      "contiguous_in_order": false,
+      "longest_match": 51
+     }
+    ],
+    "info": {
+     "sec": 0.3
+    }
+   },
+   "ocr200_naive": {
+    "chars": 18563,
+    "sha256": "b771947a19f034b01677db0448083a7718bfd79ade439510b884bb116964bf15",
+    "numbers": {
+     "n_numbers": 62,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "hand-craft 163": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": true
+     },
+     "163 templates": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Evaluation on Freebase",
+      "len": 102,
+      "best_ratio": 0.794,
+      "contiguous_in_order": true,
+      "longest_match": 30
+     },
+     {
+      "section": "Evaluation on the Domain-specific KB",
+      "len": 148,
+      "best_ratio": 0.85,
+      "contiguous_in_order": false,
+      "longest_match": 51
+     }
+    ],
+    "info": {
+     "pages": 5,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 480,
+     "sec": 34.5,
+     "mean_box_score": 0.976
+    }
+   },
+   "ocr200_col": {
+    "chars": 18563,
+    "sha256": "9106c3714ca0914db68e7415dfa72514c3812d3eb58c9238ead2d6c7b89ef652",
+    "numbers": {
+     "n_numbers": 62,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "hand-craft 163": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": true
+     },
+     "163 templates": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Evaluation on Freebase",
+      "len": 102,
+      "best_ratio": 0.888,
+      "contiguous_in_order": true,
+      "longest_match": 30
+     },
+     {
+      "section": "Evaluation on the Domain-specific KB",
+      "len": 148,
+      "best_ratio": 0.967,
+      "contiguous_in_order": false,
+      "longest_match": 51
+     }
+    ],
+    "info": {
+     "pages": 5,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 480,
+     "sec": 34.5,
+     "mean_box_score": 0.976,
+     "order": "column-aware"
+    }
+   },
+   "ocr120_naive": {
+    "chars": 18537,
+    "sha256": "b57da072e1a946a64bc098292b3f4ad50e7bcbfa146aae0212caa23bd3d263ff",
+    "numbers": {
+     "n_numbers": 62,
+     "intact": 0.952,
+     "split": 0.0,
+     "absent": 0.048
+    },
+    "decisive": {
+     "hand-craft 163": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": true
+     },
+     "163 templates": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Evaluation on Freebase",
+      "len": 102,
+      "best_ratio": 0.85,
+      "contiguous_in_order": true,
+      "longest_match": 81
+     },
+     {
+      "section": "Evaluation on the Domain-specific KB",
+      "len": 148,
+      "best_ratio": 0.85,
+      "contiguous_in_order": false,
+      "longest_match": 49
+     }
+    ],
+    "info": {
+     "pages": 5,
+     "dpi": 120,
+     "scan_degradation": false,
+     "boxes": 485,
+     "sec": 27.5,
+     "mean_box_score": 0.9681
+    }
+   },
+   "ocr150_scan": {
+    "chars": 17153,
+    "sha256": "a6182713b917423ec6f32c740d725a3f64ab3b879fdb31bc530a34cf4bed80d2",
+    "numbers": {
+     "n_numbers": 62,
+     "intact": 0.935,
+     "split": 0.0,
+     "absent": 0.065
+    },
+    "decisive": {
+     "hand-craft 163": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": true
+     },
+     "163 templates": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Evaluation on Freebase",
+      "len": 102,
+      "best_ratio": 0.813,
+      "contiguous_in_order": true,
+      "longest_match": 27
+     },
+     {
+      "section": "Evaluation on the Domain-specific KB",
+      "len": 148,
+      "best_ratio": 0.699,
+      "contiguous_in_order": false,
+      "longest_match": 34
+     }
+    ],
+    "info": {
+     "pages": 5,
+     "dpi": 150,
+     "scan_degradation": true,
+     "boxes": 477,
+     "sec": 25.4,
+     "mean_box_score": 0.9522
+    }
+   }
+  },
+  "B5": {
+   "arxiv": "1706.02222",
+   "L0": {
+    "chars": 47838,
+    "sha256": "5bf943ffb80562de9cbbd452508899e0d21ec41d2cf6420fd308e1f7b273ea78",
+    "numbers": {
+     "n_numbers": 97,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "97.78 to 87.38": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     },
+     "1.39 to 1.33": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Character-level language modeling results (chunk 50 under 1000/100)",
+      "len": 188,
+      "best_ratio": 0.974,
+      "contiguous_in_order": true,
+      "longest_match": 188
+     },
+     {
+      "section": "Word-level language modeling results (chunk 52)",
+      "len": 209,
+      "best_ratio": 0.977,
+      "contiguous_in_order": true,
+      "longest_match": 209
+     }
+    ]
+   },
+   "L1": {
+    "chars": 49054,
+    "sha256": "6492926ab397f02dce0996c6feee32109b03bee8383ba62663ad24302f9d515b",
+    "numbers": {
+     "n_numbers": 97,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "97.78 to 87.38": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     },
+     "1.39 to 1.33": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Character-level language modeling results (chunk 50 under 1000/100)",
+      "len": 188,
+      "best_ratio": 0.974,
+      "contiguous_in_order": true,
+      "longest_match": 188
+     },
+     {
+      "section": "Word-level language modeling results (chunk 52)",
+      "len": 209,
+      "best_ratio": 0.977,
+      "contiguous_in_order": true,
+      "longest_match": 209
+     }
+    ]
+   },
+   "L2": {
+    "chars": 49054,
+    "sha256": "f889587379e845dd138dcafc5806d9a4bdf74e8576b4131a5885a6f374282b80",
+    "numbers": {
+     "n_numbers": 97,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "97.78 to 87.38": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     },
+     "1.39 to 1.33": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Character-level language modeling results (chunk 50 under 1000/100)",
+      "len": 188,
+      "best_ratio": 0.855,
+      "contiguous_in_order": true,
+      "longest_match": 64
+     },
+     {
+      "section": "Word-level language modeling results (chunk 52)",
+      "len": 209,
+      "best_ratio": 0.458,
+      "contiguous_in_order": false,
+      "longest_match": 62
+     }
+    ]
+   },
+   "L3": {
+    "chars": 49557,
+    "sha256": "7e8f9021214aef53e999aa6bda52fcd36581a3b1fefe4fe9b65bd2d4a6cb16b9",
+    "numbers": {
+     "n_numbers": 97,
+     "intact": 0.0,
+     "split": 0.959,
+     "absent": 0.041
+    },
+    "decisive": {
+     "97.78 to 87.38": {
+      "verbatim": false,
+      "digitnorm": true,
+      "tokens_in_window": true
+     },
+     "1.39 to 1.33": {
+      "verbatim": false,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Character-level language modeling results (chunk 50 under 1000/100)",
+      "len": 188,
+      "best_ratio": 0.803,
+      "contiguous_in_order": true,
+      "longest_match": 43
+     },
+     {
+      "section": "Word-level language modeling results (chunk 52)",
+      "len": 209,
+      "best_ratio": 0.505,
+      "contiguous_in_order": false,
+      "longest_match": 46
+     }
+    ]
+   },
+   "L4": {
+    "chars": 49592,
+    "sha256": "65fe9bf36adc0eb15b7e6a157e26adc99f64425f938d10fe835615b31d156485",
+    "numbers": {
+     "n_numbers": 97,
+     "intact": 0.0,
+     "split": 1.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "97.78 to 87.38": {
+      "verbatim": false,
+      "digitnorm": true,
+      "tokens_in_window": true
+     },
+     "1.39 to 1.33": {
+      "verbatim": false,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "Character-level language modeling results (chunk 50 under 1000/100)",
+      "len": 188,
+      "best_ratio": 0.803,
+      "contiguous_in_order": true,
+      "longest_match": 43
+     },
+     {
+      "section": "Word-level language modeling results (chunk 52)",
+      "len": 209,
+      "best_ratio": 0.505,
+      "contiguous_in_order": false,
+      "longest_match": 46
+     }
+    ]
+   },
+   "host_pymupdf": {
+    "chars": 38010,
+    "sha256": "fd8fa11cd6543904b130b200342048e53f2f8979f937c828ed430f646011d05b",
+    "numbers": {
+     "n_numbers": 97,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "97.78 to 87.38": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     },
+     "1.39 to 1.33": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": false
+     }
+    },
+    "quotes": [
+     {
+      "section": "Character-level language modeling results (chunk 50 under 1000/100)",
+      "len": 188,
+      "best_ratio": 0.85,
+      "contiguous_in_order": false,
+      "longest_match": 155
+     },
+     {
+      "section": "Word-level language modeling results (chunk 52)",
+      "len": 209,
+      "best_ratio": 0.977,
+      "contiguous_in_order": true,
+      "longest_match": 209
+     }
+    ],
+    "info": {
+     "pages": 8,
+     "sec": 0.0
+    }
+   },
+   "pypdf": {
+    "chars": 38121,
+    "sha256": "b0e548ce0a0502c866e7573b9002e78025afa9ad844f92d46314f0b5efafa61a",
+    "numbers": {
+     "n_numbers": 97,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "97.78 to 87.38": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     },
+     "1.39 to 1.33": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": false
+     }
+    },
+    "quotes": [
+     {
+      "section": "Character-level language modeling results (chunk 50 under 1000/100)",
+      "len": 188,
+      "best_ratio": 0.85,
+      "contiguous_in_order": false,
+      "longest_match": 155
+     },
+     {
+      "section": "Word-level language modeling results (chunk 52)",
+      "len": 209,
+      "best_ratio": 0.977,
+      "contiguous_in_order": true,
+      "longest_match": 209
+     }
+    ],
+    "info": {
+     "pages": 8,
+     "sec": 0.2
+    }
+   },
+   "pdfminer": {
+    "chars": 39251,
+    "sha256": "02bd892e20d8f4c1516da8f5114c5c0012f5ceeb9224431e6c192155359735ff",
+    "numbers": {
+     "n_numbers": 97,
+     "intact": 0.99,
+     "split": 0.0,
+     "absent": 0.01
+    },
+    "decisive": {
+     "97.78 to 87.38": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     },
+     "1.39 to 1.33": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": false
+     }
+    },
+    "quotes": [
+     {
+      "section": "Character-level language modeling results (chunk 50 under 1000/100)",
+      "len": 188,
+      "best_ratio": 0.829,
+      "contiguous_in_order": false,
+      "longest_match": 155
+     },
+     {
+      "section": "Word-level language modeling results (chunk 52)",
+      "len": 209,
+      "best_ratio": 0.977,
+      "contiguous_in_order": true,
+      "longest_match": 209
+     }
+    ],
+    "info": {
+     "sec": 0.4
+    }
+   },
+   "ocr200_naive": {
+    "chars": 36113,
+    "sha256": "e554e79f4334315a2a9bc67a1d2b0e1100d23f225a4746770dd28b73d8326899",
+    "numbers": {
+     "n_numbers": 97,
+     "intact": 0.928,
+     "split": 0.0,
+     "absent": 0.072
+    },
+    "decisive": {
+     "97.78 to 87.38": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     },
+     "1.39 to 1.33": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": false
+     }
+    },
+    "quotes": [
+     {
+      "section": "Character-level language modeling results (chunk 50 under 1000/100)",
+      "len": 188,
+      "best_ratio": 0.549,
+      "contiguous_in_order": false,
+      "longest_match": 42
+     },
+     {
+      "section": "Word-level language modeling results (chunk 52)",
+      "len": 209,
+      "best_ratio": 0.449,
+      "contiguous_in_order": false,
+      "longest_match": 58
+     }
+    ],
+    "info": {
+     "pages": 8,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 916,
+     "sec": 59.7,
+     "mean_box_score": 0.9488
+    }
+   },
+   "ocr200_col": {
+    "chars": 36113,
+    "sha256": "9c4542f5380c14addd73dbc76fcd294eabf765d35be3a08578fd0006a9cff7f1",
+    "numbers": {
+     "n_numbers": 97,
+     "intact": 0.928,
+     "split": 0.0,
+     "absent": 0.072
+    },
+    "decisive": {
+     "97.78 to 87.38": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     },
+     "1.39 to 1.33": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": false
+     }
+    },
+    "quotes": [
+     {
+      "section": "Character-level language modeling results (chunk 50 under 1000/100)",
+      "len": 188,
+      "best_ratio": 0.788,
+      "contiguous_in_order": false,
+      "longest_match": 44
+     },
+     {
+      "section": "Word-level language modeling results (chunk 52)",
+      "len": 209,
+      "best_ratio": 0.911,
+      "contiguous_in_order": true,
+      "longest_match": 65
+     }
+    ],
+    "info": {
+     "pages": 8,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 916,
+     "sec": 59.7,
+     "mean_box_score": 0.9488,
+     "order": "column-aware"
+    }
+   },
+   "ocr120_naive": {
+    "chars": 36730,
+    "sha256": "43175c12eaf00c330444106b673f49e9a970344d44b3b3787f478addc331652d",
+    "numbers": {
+     "n_numbers": 97,
+     "intact": 0.784,
+     "split": 0.0,
+     "absent": 0.216
+    },
+    "decisive": {
+     "97.78 to 87.38": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     },
+     "1.39 to 1.33": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": false
+     }
+    },
+    "quotes": [
+     {
+      "section": "Character-level language modeling results (chunk 50 under 1000/100)",
+      "len": 188,
+      "best_ratio": 0.492,
+      "contiguous_in_order": false,
+      "longest_match": 51
+     },
+     {
+      "section": "Word-level language modeling results (chunk 52)",
+      "len": 209,
+      "best_ratio": 0.453,
+      "contiguous_in_order": false,
+      "longest_match": 58
+     }
+    ],
+    "info": {
+     "pages": 8,
+     "dpi": 120,
+     "scan_degradation": false,
+     "boxes": 836,
+     "sec": 39.6,
+     "mean_box_score": 0.9497
+    }
+   },
+   "ocr150_scan": {
+    "chars": 33955,
+    "sha256": "9775335bf2eaca401ac556cd659158ed2a52728d25658b039df174a51c692736",
+    "numbers": {
+     "n_numbers": 97,
+     "intact": 0.938,
+     "split": 0.0,
+     "absent": 0.062
+    },
+    "decisive": {
+     "97.78 to 87.38": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": true
+     },
+     "1.39 to 1.33": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": false
+     }
+    },
+    "quotes": [
+     {
+      "section": "Character-level language modeling results (chunk 50 under 1000/100)",
+      "len": 188,
+      "best_ratio": 0.212,
+      "contiguous_in_order": false,
+      "longest_match": 14
+     },
+     {
+      "section": "Word-level language modeling results (chunk 52)",
+      "len": 209,
+      "best_ratio": 0.355,
+      "contiguous_in_order": false,
+      "longest_match": 18
+     }
+    ],
+    "info": {
+     "pages": 8,
+     "dpi": 150,
+     "scan_degradation": true,
+     "boxes": 851,
+     "sec": 39.1,
+     "mean_box_score": 0.9191
+    }
+   }
+  },
+  "B6": {
+   "arxiv": "2002.04374",
+   "L0": {
+    "chars": 27235,
+    "sha256": "758908e22edbda584155302ab6345578ab0ae2c6a02bb68675f1a8e7ea3e3f25",
+    "numbers": {
+     "n_numbers": 184,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "88 PD patients and 88 HC": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "2.1 Data :: Spanish",
+      "len": 101,
+      "best_ratio": 0.934,
+      "contiguous_in_order": true,
+      "longest_match": 57
+     },
+     {
+      "section": "2.1 Data :: German",
+      "len": 82,
+      "best_ratio": 0.943,
+      "contiguous_in_order": true,
+      "longest_match": 82
+     },
+     {
+      "section": "2.1 Data :: Czech",
+      "len": 67,
+      "best_ratio": 0.931,
+      "contiguous_in_order": true,
+      "longest_match": 67
+     }
+    ]
+   },
+   "L1": {
+    "chars": 28250,
+    "sha256": "5ae4f292f9f632b72a879034fb1ea212a10dacda6135b918201413f410b86c42",
+    "numbers": {
+     "n_numbers": 184,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "88 PD patients and 88 HC": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "2.1 Data :: Spanish",
+      "len": 101,
+      "best_ratio": 0.934,
+      "contiguous_in_order": true,
+      "longest_match": 57
+     },
+     {
+      "section": "2.1 Data :: German",
+      "len": 82,
+      "best_ratio": 0.943,
+      "contiguous_in_order": true,
+      "longest_match": 82
+     },
+     {
+      "section": "2.1 Data :: Czech",
+      "len": 67,
+      "best_ratio": 0.931,
+      "contiguous_in_order": true,
+      "longest_match": 67
+     }
+    ]
+   },
+   "L2": {
+    "chars": 28250,
+    "sha256": "ea4c74bed8049722f85f7571f70f1ae8ada36c70de21f4aceab012796bfb7b7d",
+    "numbers": {
+     "n_numbers": 184,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "88 PD patients and 88 HC": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "2.1 Data :: Spanish",
+      "len": 101,
+      "best_ratio": 0.594,
+      "contiguous_in_order": false,
+      "longest_match": 50
+     },
+     {
+      "section": "2.1 Data :: German",
+      "len": 82,
+      "best_ratio": 0.759,
+      "contiguous_in_order": false,
+      "longest_match": 60
+     },
+     {
+      "section": "2.1 Data :: Czech",
+      "len": 67,
+      "best_ratio": 0.931,
+      "contiguous_in_order": true,
+      "longest_match": 67
+     }
+    ]
+   },
+   "L3": {
+    "chars": 28681,
+    "sha256": "83a9e7008d68b62767e2155dc43d97938263d99172c46fb46c6aabcdeeb0b77c",
+    "numbers": {
+     "n_numbers": 184,
+     "intact": 0.0,
+     "split": 0.989,
+     "absent": 0.011
+    },
+    "decisive": {
+     "88 PD patients and 88 HC": {
+      "verbatim": false,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "2.1 Data :: Spanish",
+      "len": 101,
+      "best_ratio": 0.632,
+      "contiguous_in_order": false,
+      "longest_match": 44
+     },
+     {
+      "section": "2.1 Data :: German",
+      "len": 82,
+      "best_ratio": 0.517,
+      "contiguous_in_order": false,
+      "longest_match": 23
+     },
+     {
+      "section": "2.1 Data :: Czech",
+      "len": 67,
+      "best_ratio": 0.931,
+      "contiguous_in_order": true,
+      "longest_match": 26
+     }
+    ]
+   },
+   "L4": {
+    "chars": 28726,
+    "sha256": "753322177f8da2d6ce6b725bf6ff870803b27a928999876cf6ef22d618906c07",
+    "numbers": {
+     "n_numbers": 184,
+     "intact": 0.0,
+     "split": 1.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "88 PD patients and 88 HC": {
+      "verbatim": false,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "2.1 Data :: Spanish",
+      "len": 101,
+      "best_ratio": 0.632,
+      "contiguous_in_order": false,
+      "longest_match": 44
+     },
+     {
+      "section": "2.1 Data :: German",
+      "len": 82,
+      "best_ratio": 0.517,
+      "contiguous_in_order": false,
+      "longest_match": 23
+     },
+     {
+      "section": "2.1 Data :: Czech",
+      "len": 67,
+      "best_ratio": 0.931,
+      "contiguous_in_order": true,
+      "longest_match": 26
+     }
+    ]
+   },
+   "host_pymupdf": {
+    "chars": 27001,
+    "sha256": "978157b62d7b0684fec6207b182d4ae230b2b6a2776c45f13f82f30089a6ec59",
+    "numbers": {
+     "n_numbers": 184,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "88 PD patients and 88 HC": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "2.1 Data :: Spanish",
+      "len": 101,
+      "best_ratio": 0.953,
+      "contiguous_in_order": true,
+      "longest_match": 57
+     },
+     {
+      "section": "2.1 Data :: German",
+      "len": 82,
+      "best_ratio": 0.943,
+      "contiguous_in_order": false,
+      "longest_match": 63
+     },
+     {
+      "section": "2.1 Data :: Czech",
+      "len": 67,
+      "best_ratio": 0.931,
+      "contiguous_in_order": true,
+      "longest_match": 67
+     }
+    ],
+    "info": {
+     "pages": 10,
+     "sec": 0.0
+    }
+   },
+   "pypdf": {
+    "chars": 27061,
+    "sha256": "6ec83e1b2b1806f98874815c7feadf430896b18529ef7cf85af3d34405010472",
+    "numbers": {
+     "n_numbers": 184,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "88 PD patients and 88 HC": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "2.1 Data :: Spanish",
+      "len": 101,
+      "best_ratio": 0.953,
+      "contiguous_in_order": true,
+      "longest_match": 57
+     },
+     {
+      "section": "2.1 Data :: German",
+      "len": 82,
+      "best_ratio": 0.943,
+      "contiguous_in_order": false,
+      "longest_match": 63
+     },
+     {
+      "section": "2.1 Data :: Czech",
+      "len": 67,
+      "best_ratio": 0.931,
+      "contiguous_in_order": true,
+      "longest_match": 67
+     }
+    ],
+    "info": {
+     "pages": 10,
+     "sec": 0.2
+    }
+   },
+   "pdfminer": {
+    "chars": 27111,
+    "sha256": "eb3d99123a7a2a4087552a0d02e2bfca9e343685a143f3e3c118ea786fa0b133",
+    "numbers": {
+     "n_numbers": 184,
+     "intact": 0.995,
+     "split": 0.0,
+     "absent": 0.005
+    },
+    "decisive": {
+     "88 PD patients and 88 HC": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "2.1 Data :: Spanish",
+      "len": 101,
+      "best_ratio": 0.953,
+      "contiguous_in_order": true,
+      "longest_match": 57
+     },
+     {
+      "section": "2.1 Data :: German",
+      "len": 82,
+      "best_ratio": 0.943,
+      "contiguous_in_order": false,
+      "longest_match": 63
+     },
+     {
+      "section": "2.1 Data :: Czech",
+      "len": 67,
+      "best_ratio": 0.931,
+      "contiguous_in_order": true,
+      "longest_match": 67
+     }
+    ],
+    "info": {
+     "sec": 0.3
+    }
+   },
+   "ocr200_naive": {
+    "chars": 26184,
+    "sha256": "a6f930549bde9db62bff46344ac25c97affdb93e30766b3fb0e2856b03c0a076",
+    "numbers": {
+     "n_numbers": 184,
+     "intact": 0.924,
+     "split": 0.0,
+     "absent": 0.076
+    },
+    "decisive": {
+     "88 PD patients and 88 HC": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": false
+     }
+    },
+    "quotes": [
+     {
+      "section": "2.1 Data :: Spanish",
+      "len": 101,
+      "best_ratio": 0.953,
+      "contiguous_in_order": true,
+      "longest_match": 57
+     },
+     {
+      "section": "2.1 Data :: German",
+      "len": 82,
+      "best_ratio": 0.609,
+      "contiguous_in_order": false,
+      "longest_match": 21
+     },
+     {
+      "section": "2.1 Data :: Czech",
+      "len": 67,
+      "best_ratio": 0.917,
+      "contiguous_in_order": true,
+      "longest_match": 44
+     }
+    ],
+    "info": {
+     "pages": 10,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 588,
+     "sec": 53.8,
+     "mean_box_score": 0.9864
+    }
+   },
+   "ocr200_col": {
+    "chars": 26190,
+    "sha256": "bc28c6972e820232b32fc463278323ccdcfd19572ce37cadeb70ea0d7bbd3214",
+    "numbers": {
+     "n_numbers": 184,
+     "intact": 0.924,
+     "split": 0.0,
+     "absent": 0.076
+    },
+    "decisive": {
+     "88 PD patients and 88 HC": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": false
+     }
+    },
+    "quotes": [
+     {
+      "section": "2.1 Data :: Spanish",
+      "len": 101,
+      "best_ratio": 0.953,
+      "contiguous_in_order": true,
+      "longest_match": 57
+     },
+     {
+      "section": "2.1 Data :: German",
+      "len": 82,
+      "best_ratio": 0.609,
+      "contiguous_in_order": false,
+      "longest_match": 21
+     },
+     {
+      "section": "2.1 Data :: Czech",
+      "len": 67,
+      "best_ratio": 0.917,
+      "contiguous_in_order": true,
+      "longest_match": 44
+     }
+    ],
+    "info": {
+     "pages": 10,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 588,
+     "sec": 53.8,
+     "mean_box_score": 0.9864,
+     "order": "column-aware"
+    }
+   },
+   "ocr120_naive": {
+    "chars": 26126,
+    "sha256": "5d519f920ae475c9a6023528890f6212ac01f6acaa05e76f4dc19ed738e94033",
+    "numbers": {
+     "n_numbers": 184,
+     "intact": 0.929,
+     "split": 0.0,
+     "absent": 0.071
+    },
+    "decisive": {
+     "88 PD patients and 88 HC": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": false
+     }
+    },
+    "quotes": [
+     {
+      "section": "2.1 Data :: Spanish",
+      "len": 101,
+      "best_ratio": 0.953,
+      "contiguous_in_order": true,
+      "longest_match": 57
+     },
+     {
+      "section": "2.1 Data :: German",
+      "len": 82,
+      "best_ratio": 0.609,
+      "contiguous_in_order": false,
+      "longest_match": 21
+     },
+     {
+      "section": "2.1 Data :: Czech",
+      "len": 67,
+      "best_ratio": 0.931,
+      "contiguous_in_order": true,
+      "longest_match": 67
+     }
+    ],
+    "info": {
+     "pages": 10,
+     "dpi": 120,
+     "scan_degradation": false,
+     "boxes": 565,
+     "sec": 37.2,
+     "mean_box_score": 0.9807
+    }
+   },
+   "ocr150_scan": {
+    "chars": 24789,
+    "sha256": "948c4485affcd14d12319d57432c0ca142d0bd63cd2cec7d4f865515ad036dcf",
+    "numbers": {
+     "n_numbers": 184,
+     "intact": 0.859,
+     "split": 0.0,
+     "absent": 0.141
+    },
+    "decisive": {
+     "88 PD patients and 88 HC": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "2.1 Data :: Spanish",
+      "len": 101,
+      "best_ratio": 0.868,
+      "contiguous_in_order": true,
+      "longest_match": 40
+     },
+     {
+      "section": "2.1 Data :: German",
+      "len": 82,
+      "best_ratio": 0.839,
+      "contiguous_in_order": false,
+      "longest_match": 19
+     },
+     {
+      "section": "2.1 Data :: Czech",
+      "len": 67,
+      "best_ratio": 0.403,
+      "contiguous_in_order": true,
+      "longest_match": 16
+     }
+    ],
+    "info": {
+     "pages": 10,
+     "dpi": 150,
+     "scan_degradation": true,
+     "boxes": 565,
+     "sec": 43.6,
+     "mean_box_score": 0.9514
+    }
+   }
+  },
+  "B7": {
+   "arxiv": "1908.10090",
+   "L0": {
+    "chars": 27594,
+    "sha256": "de943a4325952ce4c27aab0c7233d70f01df10c400e5a7b8b0cc80e08f446cb1",
+    "numbers": {
+     "n_numbers": 83,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "2,169 sentences": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "3 Results without Length Constraints",
+      "len": 70,
+      "best_ratio": 0.933,
+      "contiguous_in_order": true,
+      "longest_match": 70
+     }
+    ]
+   },
+   "L1": {
+    "chars": 28512,
+    "sha256": "da08c6910c03da58f4918aa528819e4354e0965966384f702def4373fcbb5156",
+    "numbers": {
+     "n_numbers": 83,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "2,169 sentences": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "3 Results without Length Constraints",
+      "len": 70,
+      "best_ratio": 0.933,
+      "contiguous_in_order": true,
+      "longest_match": 70
+     }
+    ]
+   },
+   "L2": {
+    "chars": 28512,
+    "sha256": "7183461d136d5d40cbd2b8d38d49065d2de60800341b85c915151ae656ffdfe6",
+    "numbers": {
+     "n_numbers": 83,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "2,169 sentences": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "3 Results without Length Constraints",
+      "len": 70,
+      "best_ratio": 0.84,
+      "contiguous_in_order": true,
+      "longest_match": 60
+     }
+    ]
+   },
+   "L3": {
+    "chars": 29007,
+    "sha256": "0bafc06db1998627515f8bdd5b835bf885523651379fed98632b01c8676aac9b",
+    "numbers": {
+     "n_numbers": 83,
+     "intact": 0.0,
+     "split": 0.988,
+     "absent": 0.012
+    },
+    "decisive": {
+     "2,169 sentences": {
+      "verbatim": false,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "3 Results without Length Constraints",
+      "len": 70,
+      "best_ratio": 0.827,
+      "contiguous_in_order": true,
+      "longest_match": 30
+     }
+    ]
+   },
+   "L4": {
+    "chars": 29032,
+    "sha256": "03c94e5d7cfad8a8b5448fa1a0a638d36dc6bdeb86a6a38f28dca7be3008a615",
+    "numbers": {
+     "n_numbers": 83,
+     "intact": 0.0,
+     "split": 1.0,
+     "absent": 0.0
+    },
+    "decisive": {
+     "2,169 sentences": {
+      "verbatim": false,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "3 Results without Length Constraints",
+      "len": 70,
+      "best_ratio": 0.827,
+      "contiguous_in_order": true,
+      "longest_match": 30
+     }
+    ]
+   },
+   "host_pymupdf": {
+    "chars": 24615,
+    "sha256": "3c7127a24cfe61ee7a4fd382cab7a8f06f5bbbbb670887d775d2528cebca3c76",
+    "numbers": {
+     "n_numbers": 83,
+     "intact": 0.976,
+     "split": 0.012,
+     "absent": 0.012
+    },
+    "decisive": {
+     "2,169 sentences": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "3 Results without Length Constraints",
+      "len": 70,
+      "best_ratio": 0.933,
+      "contiguous_in_order": true,
+      "longest_match": 70
+     }
+    ],
+    "info": {
+     "pages": 7,
+     "sec": 0.0
+    }
+   },
+   "pypdf": {
+    "chars": 24542,
+    "sha256": "5a4e899f344d8915e13f7549355e065541b20d9675de52fdb38c8d87ad6e5800",
+    "numbers": {
+     "n_numbers": 83,
+     "intact": 0.976,
+     "split": 0.012,
+     "absent": 0.012
+    },
+    "decisive": {
+     "2,169 sentences": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "3 Results without Length Constraints",
+      "len": 70,
+      "best_ratio": 0.933,
+      "contiguous_in_order": true,
+      "longest_match": 70
+     }
+    ],
+    "info": {
+     "pages": 7,
+     "sec": 0.2
+    }
+   },
+   "pdfminer": {
+    "chars": 24843,
+    "sha256": "1284472e9b0d008c9156eb4c6bec403e09a285badd628bcbb46ceed36755b792",
+    "numbers": {
+     "n_numbers": 83,
+     "intact": 0.964,
+     "split": 0.012,
+     "absent": 0.024
+    },
+    "decisive": {
+     "2,169 sentences": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "3 Results without Length Constraints",
+      "len": 70,
+      "best_ratio": 0.933,
+      "contiguous_in_order": true,
+      "longest_match": 70
+     }
+    ],
+    "info": {
+     "sec": 0.3
+    }
+   },
+   "ocr200_naive": {
+    "chars": 23699,
+    "sha256": "4cba7d7a812ecfcfb4cb6e293dd3474dba85cdc6ef3b1c4a712b0463e1e8d855",
+    "numbers": {
+     "n_numbers": 83,
+     "intact": 0.988,
+     "split": 0.0,
+     "absent": 0.012
+    },
+    "decisive": {
+     "2,169 sentences": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "3 Results without Length Constraints",
+      "len": 70,
+      "best_ratio": 0.48,
+      "contiguous_in_order": true,
+      "longest_match": 26
+     }
+    ],
+    "info": {
+     "pages": 7,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 715,
+     "sec": 30.9,
+     "mean_box_score": 0.9769
+    }
+   },
+   "ocr200_col": {
+    "chars": 23699,
+    "sha256": "80f356523abe8fc84840e8d83000e4ae9e601c1a6063fd485d246ab4ef858f6d",
+    "numbers": {
+     "n_numbers": 83,
+     "intact": 0.988,
+     "split": 0.0,
+     "absent": 0.012
+    },
+    "decisive": {
+     "2,169 sentences": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "3 Results without Length Constraints",
+      "len": 70,
+      "best_ratio": 0.92,
+      "contiguous_in_order": true,
+      "longest_match": 26
+     }
+    ],
+    "info": {
+     "pages": 7,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 715,
+     "sec": 30.9,
+     "mean_box_score": 0.9769,
+     "order": "column-aware"
+    }
+   },
+   "ocr120_naive": {
+    "chars": 23556,
+    "sha256": "9c84c26eef68a38327548fd3a9f9084bff0bc20121ece5fbe89825c6b6daf787",
+    "numbers": {
+     "n_numbers": 83,
+     "intact": 0.928,
+     "split": 0.0,
+     "absent": 0.072
+    },
+    "decisive": {
+     "2,169 sentences": {
+      "verbatim": true,
+      "digitnorm": true,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "3 Results without Length Constraints",
+      "len": 70,
+      "best_ratio": 0.667,
+      "contiguous_in_order": true,
+      "longest_match": 41
+     }
+    ],
+    "info": {
+     "pages": 7,
+     "dpi": 120,
+     "scan_degradation": false,
+     "boxes": 706,
+     "sec": 26.3,
+     "mean_box_score": 0.9721
+    }
+   },
+   "ocr150_scan": {
+    "chars": 22035,
+    "sha256": "873a77b5f0ff4117adaf23f86636939bd4eff72b8ddcb06af5b1b9433decc056",
+    "numbers": {
+     "n_numbers": 83,
+     "intact": 0.976,
+     "split": 0.0,
+     "absent": 0.024
+    },
+    "decisive": {
+     "2,169 sentences": {
+      "verbatim": false,
+      "digitnorm": false,
+      "tokens_in_window": true
+     }
+    },
+    "quotes": [
+     {
+      "section": "3 Results without Length Constraints",
+      "len": 70,
+      "best_ratio": 0.453,
+      "contiguous_in_order": true,
+      "longest_match": 26
+     }
+    ],
+    "info": {
+     "pages": 7,
+     "dpi": 150,
+     "scan_degradation": true,
+     "boxes": 707,
+     "sec": 25.8,
+     "mean_box_score": 0.9592
+    }
+   }
+  }
+ }
+}

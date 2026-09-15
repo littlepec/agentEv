@@ -1,0 +1,41 @@
+{
+  "cell": "B1_ocr150_scan_P_r2",
+  "docpath_dir": "cell_26",
+  "task": "B1",
+  "variant": "ocr150_scan",
+  "condition": "P",
+  "rep": 2,
+  "arm": "F0-fullwin",
+  "phase": "confirmatory",
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "evidence_file": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\round_r2\\materials\\B1\\E_ocr150_scan.txt",
+  "question": "How big is the ANTISCAM dataset?",
+  "prompt_tokens": 55410,
+  "completion_tokens": 11996,
+  "deepseek_cost_usd": 0.031018,
+  "report_chars": 14410,
+  "context_chars": 205339,
+  "primary_chars": 49351,
+  "exposure_scope": "document_1 only",
+  "doc1_blocks": 4,
+  "doc2_blocks": 4,
+  "paper_decisive_in_context_verbatim": {
+    "220 human-human dialogs": false
+  },
+  "paper_decisive_in_context_digitnorm": {
+    "220 human-human dialogs": false
+  },
+  "paper_decisive_in_context_tokwin": {
+    "220 human-human dialogs": false
+  },
+  "n_llm_calls": 3,
+  "elapsed_s": 59.2,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config, full documents in window (COMPRESSION_THRESHOLD=400000)",
+  "model": "deepseek-v4-flash",
+  "materials_manifest": "paper_round/round_r2/materials/manifest.json (variants) + pdf/pdf_manifest.json + stage_b/tasks_manifest_b.json (notes)"
+}

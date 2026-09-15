@@ -1,0 +1,1064 @@
+End-to-End Trainable Non-Collaborative Dialog System
+YuLi,Kun Qian,WeiyanShi,ZhouYu
+UniversityofCalifornia,Davis
+{yooli, kunqian, wyshi, joyu} @ucdavis.edu
+Abstract
+ 25 Nov 2019 End-to-endtask-orienteddialog modelshaveachieved promisingperformance oncollaborativetaskswhereusers
+willinglycoordinate withthe system to complete a given
+task.While in non-collaborative settings,for example,ne-
+gotiation and persuasion,users and systems do not share a
+common goal.As a result,compared to collaborate tasks,
+people use social content to build rapport and trust in these
+non-collaborative settings in order to advance their goals.
+To handle social content, we introduce a hierarchical in-
+tent annotationscheme,which canbegeneralizedtodiffer-
+ent non-collaborative dialog tasks.Building upon Transfer-
+[cs. Transfo (Wolf et al. 2019), we propose an end-to-end neu-
+ral network model to generate diverse coherent responses.
+Our model utilizes intent and semantic slots as the inter-
+mediate sentence representation to guide the generation pro-
+cess. In addition, we design a filter to select appropriate re-
+sponses based on whether these intermediate representations
+fit the designed task and conversation constraints. Our non-
+collaborative dialogmodelguidesusersto completethetask
+while simultaneously keeps them engaged. We test our ap-
+proach on our newly proposed ANTIScAM dataset and an ex-
+Xiv:1911.10742v1 istingPERSUASIONFORGoODdataset.Bothautomaticand
+human evaluations suggest that our model outperforms mul-
+tiplebaselinesinthese twonon-collaborativetasks.
+Introduction
+Considerable progress has been made building end-to-end
+dialog systems for collaborative tasks in which users coop-
+erate with the system to achieve a common goal. Examples
+ofcollaborativetasksincludemakingrestaurantreservations
+andretrievingbus time-tableinformation.Sinceusers typi-
+callyhave clear and explicit intentionsin collaborative tasks,
+defined intents. In contrast, non-collaborative tasks are those
+where theusers and the system donot strive to achieve
+the same goal. Examples of such tasks include deceiving
+attackers, persuading users to donate to a cause (Wang et
+al. 2019), and negotiating a product price (He et al. 2018;
+Cao et al.2018).In these tasks,users often perform com-
+plex actions that arebeyond a simpleset of pre-defined in-
+Copyright2020,Associationfor theAdvancementofArtificial
+Intelligence (www.aaai.org).All rights reserved.
+tents.In order toreacha common state,theuser and the
+system need to build rapport and trust which naturally in-
+volves off-task content.Previous work did not model off-
+task content (He et al. 2018),which may have led to less
+optimal results. For example, in the persuasion task (Wang
+et al. 2019),users would ask the system “How do you feel
+about war?An example of an on-task system response that
+the system could have made is “Do you want to make a do-
+nation?, which sticks to the task but neglects users’ ques-
+tion. However, a better response to such an off-task ques-
+tion is“War is destructive and pitiless,but you can donate
+to help child victims of war"”This response is better, as it
+has been found that users are more likely to end the conver-
+sation if the system neglects their questions (Yu, Black, and
+Rudnicky 2017). Therefore,we need to design a system that
+handlesboth on-task and off-task information appropriately
+andinawaythatleadsbacktothesystem'sgoal.
+To tackle the issue of incoherent system responses to off-
+task content,previous studies have built hybrid systems to
+interleave off-taskand on-taskcontent.Yu,Black,andRud-
+nickyused arule-based dialogmanagerfor on-task content
+andaneuralmodelfor off-taskcontent,and trainedarein-
+forcement learning model to select between these two mod-
+els based on the dialog context. However, such a method
+is difficult to train and struggles to generalize beyond the
+movie promotion task they considered.To tacklethese prob-
+lems,we propose a hierarchical intent annotation scheme
+that separates on-task and off-task information in order to
+provide detailed supervision. For on-task information, we
+directly use task-related intents for representation.Off-task
+information,ontheotherhand,istoogeneraltocategorize
+into specific intents, so we choose dialog acts that convey
+syntax information. These acts, such as “open question” are
+general to all tasks.
+Previousstudiesusetemplate-basedmethodstomaintain
+sentence coherence.However, rigid templates lead to lim-
+ited diversity,causing the user losing engagement. On the
+other hand, language generation models can generate di-
+verse responses but are bad at being coherent.We propose
+MultipleIntentsandSemanticSlotsAnnotationNeuralNet-
+work(MISSA)tocombinetheadvantagesofbothtemplate
+andgenerationmodelsandtakesadvantagefromthehier-
+
+archicalannotationatthesametime.MISSAfollowsthe
+TransferTransfoframework(Wolfetal.2019)withthree
+modifications:(i)Wefirstconcurrentlypredictuser's,sys-
+tem's intents and semantic slots;(ii)We then perform con-
+ditional generation toimprove generated response's coher-
+ence. Specifically, we generate responses conditioned on the
+above intermediate representation (intents and slots); (ii) Fi-
+nally, we generate multiple responses with the nucleus sam-
+sponse filter, which contains a set of pre-defined constraints
+toselect coherentresponses.The constraintsinthefilter can
+be defined according to specific task requirements or general
+conversationalrules.
+Toenrichpublicly available non-collaborative task
+datasets,wecollectanewdatasetANTiScAM,whereusers
+defend themselves against attackers trying to collect per-
+sonalinformation.Asnon-collaborativetasks arestillrela-
+tively new to the study of dialog systems, there are insuf-
+ficiently many meaningful datasets for evaluation and we
+hopethisprovidesavaluableexample.WeevaluateMISSA
+onthenewlycollectedANTiScAMdatasetandanexist-
+ingPERsUASIONFoRGoODdataset.Bothautomaticand
+human evaluations suggest that MISSA outperforms multi-
+plecompetitivebaselines.
+In summary, our contributions include: (i) We design a
+hierarchicalintentannotationschemeandasemanticslot
+annotation scheme to annotate the non-collaborative dialog
+dataset, we also propose a carefully-designed ANTISCAM
+datasettofacilitatetheresearchofnon-collaborativedia-
+log systems. (ii) We propose a model that can be applied
+to all non-collaborative tasks, outperforming other baselines
+on two different non-collaborative tasks.(ii)We develop an
+anti-scam dialog system to occupy attacker's attention and
+elicit theirprivateinformationforsocialgood.Furthermore,
+we alsobuild a persuasion dialogsystem topersuadepeople
+to donate to charities. We release the code and data.1
+RelatedWork
+The interest in non-collaborative tasks has been increasing
+andtherehavealreadybeenseveralrelateddatasets.For
+instance,Wang et al. (2019) collected conversations where
+oneparticipant persuades another todonate to acharity.He
+et al.(2018)collected negotiation dialogs where buyers
+and sellers bargain for items for sale on Craigslist.There
+aremanyother non-collaborativetasks,suchastheturn-
+taking game (DeVault, Mell,and Gratch 2015),the multi-
+party game (Asher et al. 2016) and item splitting negoti-
+ation (Potts 2012).Similar to the ANT1ScAM dataset pro-
+posed in this paper, these datasets contain off-task content
+and can be used to trainnon-collaborative dialog systems.
+However, since they are not specifically collected and de-
+signedfor non-collaborative tasks,it mightbe difficult to
+disentangle the on-task and off-task contents and measure
+the performance. Therefore, we propose the ANTISCAM
+dataset,which is designed tointerleave the on-task and off-
+task contents in the conversation, and can serve as a bench-
+markdatasetforsimilarnon-collaborativetasks.
+'https://gitlab.com/ucdavisnlp/antiscam
+Tobetter understanduser utterancesandseparateon-
+task and off-task content within a conversation,previous
+workhas designedhierarchical annotation schemesfor spe-
+cific domains.Hardyet al.(2002)followed theDAMSL
+scheme(Allen and Core 1997) and annotated a multilingual
+human-computer dialog corpus with a hierarchical dialog
+act annotation scheme. Gupta et al.(2018) used a hierar-
+chical annotation scheme for semantic parsing.Inspired by
+these studies,our idea is to annotate the intent and seman-
+tic slot separatelyin non-collaborative tasks.We propose a
+hierarchicalintentannotationschemethatcanbeadopted
+by all non-collaborative tasks.With this annotation scheme,
+MISSA is able to quickly build an end-to-end trainable dia-
+log system for any non-collaborative task.
+Traditional task-oriented dialog systems (Young et al.
+2013)are usually composed of multiple independent mod-
+ules, for example, natural language understanding, dialog
+statetracking(Williams,Raux,andHenderson2016;Mrksic
+et al. 2016), dialog policy manager (Levin, Pieraccini, and
+Eckert 2000), and natural language generation (Lei et al.
+2018).Conversational intent is adopted to capture the mean-
+ing of task content in these dialog systems (He et al. 2018;
+Zhao,Zhao,and Eskenazi 2017).In comparison to this
+work,weuseahierarchicalintentschemethatincludes
+off-task and on-task intents to capture utterance meaning.
+We also train the model in a multi-task fashion to pre-
+dict decoupled intents and semantic slots. The major de-
+fectofaseparatelytrainedpipelineisthelaboriousdialog
+state design and annotation.In order to mitigate this prob-
+lem,recent work has explored replacing independent mod-
+uleswithend-to-endneuralnetworks(Wenetal.2016;
+Williams,Asadi, and Zweig 2017;Liang et al.2019). Our
+model alsofollows this end-to-endfashion.
+Over thelastfewyears,wehavewitnessed a hugegrowth
+in non-task-oriented dialog systems (Vinyals and Le 2015;
+Li et al.2016).Social chatbots such as Gunrock(Chenet
+al.2018)were able tomaintain a conversation for around
+ten minutes in an open domain.Recent improvements build
+on top of the transformer and pre-trained language mod-
+els (Devlin et al.2018; Yang et al.2019; Radford et al.
+2019),obtained state-of-the-artresultson thePERsONA-
+CHAT dataset (Wolf et al. 2019). Pre-trained language mod-
+els are proposed tobuild task-oriented dialog systems to
+drive the progress on leveraging large amounts of available
+unannotated data.(Budzianowski and Vulic 2019). Simi-
+larly, our approach is also built on top of the Transfer-
+Transfoframework(Wolfet al.2019).Budzianowski and
+Vulic(2019)focusedoncollaborative tasks(Budzianowski
+et al. 2018).We target non-collaborative tasks instead.
+Anotherlineofworkinterleaveson-taskandoff-task
+content bybuilding a hybrid dialog system that combines
+a task-oriented model and a non-task-oriented model (Yu,
+Black,and Rudnicky 2017;Papaioannou et al.2017).In
+these studies,task-oriented systems and non-task-oriented
+candidateresponses.A selectoris then designed to choose
+an appropriate output from the candidate responses (Yu,
+Black,and Rudnicky2017)and a connector to combine two
+response candidates (Zhao,Romero, and Rudnicky 2018;
+
+Bahetiet al.2018).Comparedwith theseworks,MISSA is
+end-to-end trainable and thus easier to train and update.
+elicitation
+ANTISCAM providing-information
+refusal
+agree_donation
+disagree_donation
+On-task ask_donation_amount disagree_donation_more
+PERSUASION- ask_donate_more
+-FORGOOD proposition-of-donation
+er_confirm_donation
+ee_confirm_donation
+provide_donation_amount
+open-question
+yes_no-question
+negative_answer
+positive_answer
+responsive_statement
+Off-task nonresponsive_statement
+greeting
+thanking
+respond_to_thank
+apology
+closing
+hold
+Table 1:Hierarchical intent annotation scheme on both AN-
+TISCAMdatasetandPERSUASIONFORGoODdataset.The
+On-task intents are task-specific while the Off-task intents
+aregeneralfor different non-collaborative tasks.
+Non-Collaborative Task Annotation Scheme
+Todecouple syntactic and semantic information in utter-
+ances and provide detailed supervision,we design a hierar-
+chicalintent annotation schemefornon-collaborative tasks.
+We first separate on-task and off-task intents.As on-task in-
+tents are key actions that can vary among different tasks,we
+need to specificallydefine on-taskintents for each task.On
+the other hand, since off-task content is too general to de-
+signtask-specificintents,wechoosecommondialogactsas
+the categories.The advantage of this hierarchical annotation
+scheme is apparent when starting a newnon-collaborative
+task:weonlyneedtofocusondesigning theon-taskcate-
+gories and semantic slots which arethe same as traditional
+task-oriented dialog systems. Consequently, we don't have
+toworryabouttheoff-taskannotationdesignsincetheoff-
+task category is universal.
+In the intent annotation scheme shown in Table 1,we
+list thedesigned intent annotation scheme for the newly
+collectedANTISCAMdatasetandthePERSUASIONFOR-
+GooDdataset.Wefirstdefineon-taskintentsforthe
+datasets,which are key actions in the task. Since our AN-
+TIScAM focuses on understanding and reacting towards
+elicitations,wedefineelicitation,providing-information
+andrefusalason-taskintents.InthePERsUASIONFoR-
+GooDdataset,we define nine on-task intents inTable 1
+based on the originalPERSUASIONFoRGoODdialog act
+annotation scheme.All these intents are related to do-
+nation actions,which are salient on-task intents in the
+persuasion task. The off-task intents are the same for
+both tasks,including six general intents and six additional
+socialintents.Generalintentsaremorecloselyrelated
+to the syntacticmeaning of the sentence(open-question,
+yes_no-question,positive_answer,negative_answer,respon-
+sive_statement,andnonresponsive_statement）whilesocial
+intents are common social actions (greeting, closing, apol-
+ogy,thanking,respond_to_thank,andhold).
+Forspecifictasks,wealsodesignasemantic slotan-
+notation scheme for annotating sentencesbased on their
+semantic content.We identify13main semantic slots in
+the anti-scam task, for example, credit card numbers. We
+present a detailed semantic slot annotation in Table 2. Fol-
+lowingWang et al.,we segment each conversation turn into
+singlesentencesandthenannotateeachsentenceratherthan
+turns.
+Annotation Examples
+order_detail "Your order will arrivebyThursday afternoon."
+order-update "Should I cancel your order?"
+payment "Was payment made with a Visa card?""
+name "Canyougivemeyourname?"
+identity "I am fromAmazon customer service"
+address "Can confirm your billing address for me?"
+phone_num ""What is your phone number?""
+card_info “"I need the credit card info please”
+card_num "Can you verify your card number for me?"
+card_cvs "Next,Iwill need the CVS number from that card.
+card_date "Can I have expiration date?"
+account_detail "This is to confirm your account."
+others "How are you doing?"
+Table2:ANTIScAM'ssemanticslotannotationscheme.
+Datasets
+We test our approach on two non-collaborative task datasets:
+theANTISCAMdatasetandthePERSUASIONFoRGoOD
+dataset(Wanget al.2019).Both datasets are collected from
+the Amazon Mechanical Turk platform in the form of typing
+conversations and off-task dialog is interleaved in the dialog.
+ANTISCAMDataset
+To enrich available non-collaborative task datasets,we cre-
+ated a corpus of human-human anti-scamdialogs in order
+tolearn human elicitation strategies.We chose a popular
+Amazoncustomerservice scamscenariotocollectdialogs
+betweenusersandattackerswhoaimtocollectusersinfor-
+mation.We posted a role-playing task on the Amazon Me-
+chanical Turkplatform and collected a typing conversation
+dataset namedANTIScAM.Wecollected 220human-human
+dialogs. The average conversation length is 12.45 turns and
+the average utterancelength is 11.13 words.Only172 out of
+220 users successfullyidentified their partner as an attacker,
+easilyidentifiable.Werecruitedtwoexpertannotatorswho
+
+have linguistic training to annotate 3,044 sentences in 100
+dialogs, achieving a 0.874 averaged weighted kappa value.
+PERSUASIONFORGOODDataset
+ThePERSUASIONFORGOODdataset(Wangetal.2019)was
+collected from typing conversations on Amazon Mechani-
+cal Turk platform.Two workers were randomly paired, one
+was assigned theroleofpersuader,theotherwaspersuadee.
+The goal of the persuader was to persuade the persuadee to
+donate a portion of task earning to a specific charity. The
+dataset consists of 1,017 dialogs, where 300 dialogs are an-
+notated with dialog acts. The average conversation length is
+10.43,the vocabulary size is 8,141.Since the originalPER-
+SUASIONFoRGooDdataset is annotatedwith dialog acts,
+weselecttheon-taskdialog actsason-taskintentsshown
+in Table 1, and categorize the other dialog acts into our pre-
+defined off-taskintents.
+Model
+Background
+The TransferTransfo framework was proposed to build open
+domain dialog systems. Wolf et al.(2019) fine-tuned the
+generative pre-training model (GPT) (Radford et al. 2018)
+with thePERSONA-CHAT dataset (Zhang et al.2018)in
+a multi-task fashion, where the language model objective is
+combined with a next-utterance classification task. The lan-
+guage model's objective is to maximize the following likeli-
+hood for a given sequence of tokens, X = {c1, ... , n}:
+LLM(X) =  log P(ci|co,... ,Ci-1) (1)
+i=1
+The authors also trained a classifier to distinguish the cor-
+rectnext-utteranceappendedtotheinputhumanutterances
+from a set ofrandomly selected utterance distractors.In ad-
+dition, they introduced dialog state embeddings to indicate
+speaker role in the model. The model significantly outper-
+formedpreviousbaselinesoverbothautomaticevaluations
+andhumanevaluationsinsocialconversations.Sincethe
+TransferTransfoframework performswell in open domain,
+weadaptitfornon-collaborativesettings.Wekeepallthe
+embeddings in theframework and train thelanguagemodell
+andnext-utteranceclassificationtaskinamulti-taskfashion
+followingTransferTransfo.
+We make two major changes: (1) To address the problem
+that TransferTransfois originallydesignedfor an open do-
+mainwithoutexplicitintentsandregulations,weaddtwo
+intentclassifiersandtwosemanticslotclassifierstoclas-
+sify theintents and semanticslotsforboth human utterances
+and system responses as an effort to incorporate the pro-
+posed hierarchical intent and semantic slot annotation for
+non-collaborative tasks. (2) In dialog systems,multiple gen-
+eratedresponses canbe coherent under the current context.
+Generating diverse responses has proven to be an enduring
+challenge. To increase response diversity, we sample multi-
+ple generated responses and choose an appropriate one ac-
+cordingtoaset ofpre-defined rules.
+IntentandSemanticSlotClassifiers
+WetrainMISSAinamulti-taskfashion.Inadditiontothe
+language model task and the next-utteranceprediction task,
+we also use separate classifiers topredict theintents and se-
+mantic slots of both human utterances and system responses.
+Theintentclassifier andsemanticslotclassifierforhuman
+utterancescapturethesemanticandsyntacticmeaningof
+human utterances, providing information to select the appro-
+priate response among response candidates while the classi-
+fiersfor the systemintents and semantic slots are designed
+to help select an appropriate next-sentence.We describe re-
+sponse filtering in the corresponding subsection. Classifiers
+are designed as thefollowing equation:
+p(Li) = softmax( ht (yzM : (2)
+whereL is theintent or semanticlabel ofi-th sentence at
+turn t. ht-1 is the hidden states at the end of last sentence
+in turn t -1,h is the last hidden states at the end of i-th
+sentence in turn t. W2h are weights learned during training.
+MISSAis able toclassifymultipleintents and multiple se-
+mantic slots in a single utterance with these classifiers. Fig-
+ure 1 shows how it works on the ANTIScAM dataset. Specif-
+ically, we set a special token <sep> at the end of each sen-
+tence in anutterance(anutterance can consist of multiple
+sentences).Next, we pass the token's position information
+tothetransformer architecture and obtaintherepresentation
+of the position (represented as colored position at last layer
+in Figure 1).After that, we concatenate the embeddings at
+these position with the hidden states of last sentence. We
+pass these concatenated representations to theintent classi-
+fier and theslotclassifiertoobtain anintentandasemantic
+slot for each sentence in the utterance.As shown in Fig-
+ure1,theloss functionC for the model combines all the
+task losses:
+C=入LMLLM + 入InLIh + 入snCSn+ 入1sL1s
+(3)
++入ssLss + 入nupLnup
+where LLM is the language model loss, L1n, Lsh, L1s, and
+Lss are losses of intent and slots classifiers, Lnup is next-
+utterance classification loss. 入LM,入Ih,入Sh,入Is,入s, and
+Xnup are the hyper-parameters that control the relative im-
+portance of every loss.
+ResponseGeneration
+MISSA can generatemultiple sentencesin a single system
+turn. Therefore, we perform system generation conditioned
+on predicted system intents. More specifically,during the
+training phase, in addition to inserting a special <sep> to-
+ken at the end of each sentence,we alsoinsert theintent of
+the system response as special tokens at the head of each
+sentence in the system response. For example,in Figure 1,
+weinsert a<pos_ans>token at the head of S,whichis the
+system response in green.We then use a cross entropy loss
+function to calculate theloss betweenthepredictedtoken
+and the ground truth intent token. During the testing phase,
+the model first generates a special intent token, then after
+
+Dialog History
+Human:Hello,thisisAmazoncustomerService
+Sys: Hello, what can I do for you?
+Human:Iaminvestigatingafraudulentpurchase.
+Haveyouplaced arecentorder?
+St1<sep>H1<sep>H² <sep>
+Transformer
+i(S):positive_answer
+1(s2):non_responsive_stmS(s2):order_detail
+dialog history,and an appended next utterance.We concatenate thelast hidden states at<sep>tokens with thelast hidden
+states at the end of thelast utterance topredictintents and semantic slotsfor corresponding sentences.We can predict multiple
+intents and semantic slotsfor each human utterance and system response.During testing,the appended response and distractor
+PrivateInformation(Pi)
+Yournameis<name>.
+Your phone number is<phone>.
+Youraddressis<addr>
+Your credit card numberis<ccnum>
+Your credit card CVs is<cvs>
+Pi Ht.1
+Last layer
+Hidden states
+Human Intents Human Slots SystemIntents
+Classifier Classifier Classifier
+I(H):responsive_stm S(H):order_detail
+(H²):yes_no_questionS(H2):order_detail
+are removed.
+being conditioned on this intent token,the model keeps gen-
+erating a sentence until it generates a <sep>token.After
+that, the model continues to generate another intent token
+and another sentence until it generates an<eos>token.
+Response Filtering
+Since we only perform conditional generation, a type of soft
+constraint on the predicted intent of system response, the
+system can still generate samples that violate simple con-
+versationregulations,suchaselicitinginformationthathas
+alreadybeen provided.These corner cases may lead tofatal
+resultsinhigh-risktasks,forexample,healthcareandedu-
+cation.ToimprovetherobustnessofMISSAandimproveits
+ability to generalize to more tasks,we add a response filter-
+ing module after the generation.With the nucleus sampling
+strategy (Holtzman et al. 2019), MISSA is able to gener-
+ate multiple diverse candidate responses with different in-
+tents and semantic slots.We then adopt a task-specific re-
+sponsefilteringpolicyto choose thebest candidateresponse
+as the final output. In our anti-scam scenario,we set up a
+few simple rules tofilter out some unreasonable candidates,
+for instance, eliciting the repeated information. The filtering
+module is easily adaptable to different domains or specific
+requirements,which makes our dialog system more control-
+lable.
+Experiments
+We evaluateMISSAontwonon-collaborativetaskdatasets.
+ANTIScAM aims to build a dialog system that occupies
+the attacker's attention and elicits the attacker's information
+whilePERSUASIONFoRGoOD(Wang et al.2019)aims to
+System Response(St)
+Sys:Yes,I have. (S,1)
+1bought a heater.(S²)
+田
+(H) OR Distractor (D)
+(H,2) Sys: Thank you!
+<pos_ans> S,1 <sep> <soa>s<wsdsou>
+<sep> <sep> <sep>
+System Slots Classifier Decoder NextUtterance Classifier
+s(S):order_detail St SystemResponse
+build a dialog system that persuades people to donate to a
+charity.We use 80% data for training,10% data for vali-
+dation, and 10% data for testing. More training details are
+presented in Appendix.
+Baseline Models
+We compareMISSA mainly with twobaseline models:
+·TransferTransfoThevanillaTransferTransfoframework
+is compared withMISSA to show theimpact and neces-
+sity of adding theintent and slot classifiers.We follow
+the original TransferTransfo design (Wolf et al. 2019) and
+train with undelexicalized data.
+·Hybrid Following Yu,Black,and Rudnicky (2017),we
+also build a hybrid dialog system by combining vanilla
+TransferTransfo and MISSA.Specifically,we first deter-
+mine if the human utterances are on-task or off-task with
+humanintentclassifier.If theclassifierdecides thattheut-
+terance is on-task,we choose the response from MISSA;
+otherwise,we choose the response from vanilla Transfer-
+Transfo baseline.
+In addition,weperform ablationstudies onMISSA to show
+the effects of different components.
+·MISSA-sel denotes MISSA without response filtering.
+·MISSA-con denotes MISSA leaving out the intent token
+atthestartoftheresponsegeneration.
+AutomaticEvaluationMetrics
+Perplexity Since the canonical measure of a good language
+modelisperplexity,whichindicatestheerrorrateoftheex-
+
+Table 3: Experiments results with both automatic and human evaluation on ANTIScAM dataset.
+AutomaticEvaluationMetrics
+Model PPL RIP RSP ERIP ERSP
+TransferTransfo 32.9634.8%46.0%48.0%56.3%
+Hybrid 32.0%44.0%45.7%55.3%
+MISSA 21.0735.1%46.6%47.2%58.6%
+MISSA-sel 30.5431.6%42.4%44.2%53.8%
+MISSA-con 24.4633.8%45.6%46.0%57.3%
+pected word. We choose perplexity to evaluate the model
+performance.
+Response-IntentPrediction(RIP)&Response-SlotPre-
+diction (RSP) Different from open-domain dialog systems,
+we care about the intents of the system response in non-
+collaborative tasks as we hope toknow if the system re-
+sponse satisfies user intents.For example,in the anti-scam
+task,if the attacker elicits information from the system,we
+need toknow if the system refuses or agrees to provide the
+information.Thereforewe care aboutintentpredictionfor
+the generated systemresponse.Since ourbaselines aremore
+suited for social chat as they cannot produce systemintents,
+we use the system intent and slot classifiers trained in our
+model to predict their responses’intents and slots.The in-
+tentpredictorachieves a84% accuracyand thesemantic slot
+predictor achieves77%on theANTIScAM dataset.Then we
+compare thepredictedvalueswithhuman-annotatedground
+truth in the dataset tocompute theresponse-intent prediction
+(RIP) and response-slot prediction (RSP).
+Extended Response-Intent Prediction(ERIP）& Ex-
+tendedResponse-SlotPrediction(ERSP)WithResponse-
+IntentPrediction,weverifythepredictedintentstoevalu-
+ate the coherence of the dialog. However, the real mapping
+betweenhuman-intent and system-intent is much more com-
+plicated astheremight be multiple acceptable system-intents
+for the same human-intent. Therefore,we also design a met-
+rictoevaluateif thepredictedsystem-intentisinthesetof
+acceptableintents.Specifically,weestimate the transition
+probability p(I|I;） by counting the frequency of all the bi-
+gram human-intent and system-intent pairs in the training
+data. During the test stage, if the predicted intent matches
+thegroundtruth,wesetthescore as1,otherwiseweset the
+score as p(Ipredict|I) where I is the intent of the input hu-
+man utterance. We then report the average value of those
+scores over turns as the final extended response-intent pre-
+diction result.
+HumanEvaluationMetrics
+Automaticmetrics onlyvalidatethesystemsperformance on
+a single dimension at a time. The ultimate holistic evalua-
+tionshouldbeconductedbyhavingthetrainedsystemin-
+teract with humanusers. Therefore we also conduct human
+evaluationsfor thedialogsystembuilt onANTIScAM.We
+test our models and baselineswith15 college-student volun-
+teers.Eachof themis askedtopretendtobe an attacker and
+interactwithallthemodelsforatleastthreetimestoavoid
+randomness.Weintotalcollect225numberofdialogs.Each
+time,volunteers are required to use similar sentences and
+HumanEvaluationMetrics
+Fluency Coherence Engagement Length TaskSuc
+3.48 2.85 2.68 8.5 1.025
+3.25 2.76 2.60 8.2 0.975
+4.18 3.75 3.69 14.9 1.294
+3.60 2.92 2.87 9.9 1.000
+3.78 3.68 3.78 14.8 1.341
+strategies tointeract with allfive models and score each
+modelbasedonthemetricslistedbelowattheendof the
+currentround.Eachmodelreceives atotalof45humanrat-
+ings,and theaveragescoreisreportedasthefinalhuman-
+evaluationscore.Intotal,wedesignfivedifferentmetricsto
+assess the models’conversational ability whilst interacting
+withhumans.The results are shown inTable 3.
+Fluency Fluency is used to explore different models’lan-
+guage generation quality.
+Coherence Different from single sentence's fluency, coher-
+ence focuses more on thelogical consistencybetween sen-
+tencesin each turn.
+Engagement In the anti-scam scenario, one of our missions
+is to keep engaging with the attackers to waste their time. So
+we directly ask volunteers(attackers)to whatextend they
+wouldliketocontinuechattingwiththesystem.
+Dialog length (Length) Engagement is a subjective metric.
+Anti-scam system's goal is to engage user in the conversa-
+tionlonger inorder tolimittheirharmtootherpotential
+victims.So we count the dialog length as another metric to
+evaluate system performance.
+Task Success Score(TaskSuc)The other goal of the anti-
+scamsystemis toelicit attacker'spersonalinformation.We
+count the average type of information (name, address and
+phone number)that the system obtained from attackers as
+the tasksuccess score.
+ResultsandAnalysis
+Table 3 presents themain experiment results onANTIS-
+CAMdataset,forbothautomaticevaluationmetricsandhu-
+man evaluation metrics. The experiment results on PER-
+SUASIONFoRGooDareshowninTable5.Weobserve that
+MISSAoutperformstwobaselinemodels(TransferTransfo
+andhybrid model)onalmostall themetricsonbothdatasets.
+For further analysis,examples of real dialogs from the hu-
+man evaluation arepresented in Table 4.
+ComparedtothefirstTransferTransfobaseline,MISSA
+outperformstheTransferTransfobaseline ontheon-task
+contents.FromTable3,weobservethatMISSAmaintains
+longer conversations (14.9 turns） compared with Transfer-
+Transfo(8.5turns),whichmeansMISSAisbetter atmain-
+taining the attacker's engagement.MISSA alsohas a higher
+task success score (1.294）than TransferTransfo(1.025),
+whichindicates that it elicitsinformation more strategically.
+In the top two dialogs (A and B) that are shown in Table 4,
+both attackers were eliciting a credit card number intheir
+first turns.TransferTransfo directly gave away the informa-
+
+Table 4: Examples of human-system dialogs,where systems are trained on ANTISCAM dataset. System responses are bolded.
+(A)Att:Attacker System:TransferTransfo
+Att: Can I have your card number?
+Sys: 5110-xxxx-xxxx-8166
+Att: Got it.I also need the billing address
+Sys: What is your name? My name is Tom.
+Att: I am Jerry, as I mentioned before. I need your address
+toproceed therefund.
+Sys: What is the phone number there?
+Att: Could you give me your phone number?
+(C)Att:Attacker System: Hybrid
+Att: Hi, my name is Jerry.
+Sys: Hello, who is this?
+Sys: Why do you need my address?
+Att: I needyour address toverifyyour order.
+Sys: I don't have my order number with me.Why do you
+needmyordernumbertoverifymyorder?
+tion, while MISSA replied with a semantically-related ques-
+tion“why would you need my credit card number?"Further-
+more,in the next turn,TransferTransfoignored the context
+and asked an irrelevant question “what is your name?" while
+MISSA was able to generate the response“why can't you
+use my address?",which is consistent tothe context.We
+suspect theimprovedperformance ofMISSAcomes from
+our proposed annotation scheme: the semantic slot informa-
+tion enables MISSA tokeep track of the current entities, and
+the intent information helps MISSA tomaintain coherency
+andprolongconversations.
+Compared to the hybrid model baseline, MISSA performs
+better onoff-taskcontent.Asshownin thebottomtwodi-
+alogs in Table 4, attackers in both dialogs introduced their
+names in their first utterances. MISSA recognized attacker's
+name, while the hybrid model did not. We suspect it is be-
+cause thehybridmodeldoesnothavethebuilt-insemantic
+slot predictor. In the second turn,both attackers were ex-
+plaining the reason of requesting the billing address previ-
+ously. With semantic slot information, MISSA can easily un-
+derstand the attacker;but thehybridmodelmisunderstands
+thattheattackerwastalkingabouttheordernumber,pos-
+sibly because the token “order” appeared in the attacker's
+utterance.Wesuspectthatthehybridmodel'sbadperfor-
+manceontheoff-taskcontentleadstoitslowcoherencerat-
+ing (2.76) and short dialog length (8.2).
+Toexplore theinfluence of theintent-basedconditional
+response generation method and the designed response filter,
+we perform an ablation study. The results are shown in Ta-
+ble 3.We find that MISSA has higher fluency score and co-
+herence score than MISSA-con (4.18 vs 3.78 for fluency,and
+3.75 vs 3.68 for coherence),which suggests that condition-
+ing on the systemintent togenerate responses improves the
+quality of thegenerated sentences.ComparedwithMISSA-
+sel,MISSA achieves better performance on all the metrics.
+For example, the engagement score for MISSA is 3.69 while
+MISSA-sel only has 2.87. This is because the response fil-
+ter removed all the incoherent responses,which makes the
+(B)Att:Attacker System:MISSA
+Att: Can I have your card number?
+Sys: Why would you need my credit card number?
+Att: I can track your order easily.
+Sys: Why can'tyou usemy address?
+Att: Well,both of them are needed.
+Sys: Alright, it is 5110-xxxx-xxxx-8166.May I have your
+numberincasewedisconnect?
+XXXX-XXX-XXX
+(D)Att:Attacker System:MISSA
+Att: Hi, my name is Jerry.
+Sys: Hi, Jerry. what are you calling me about?
+Sys: Why do you need my address?
+Att: I need your address to verify your order.
+Sys: Youshouldhaveitonfilealready
+attackermorewillingtokeepchatting.Theablationstudy
+shows both the conditional language generation mechanism
+and the response filter are essential toMISSA's good perfor-
+mance.
+We also apply our method to the PERSUASIONFoRGOOD
+dataset.AsshowninTable5,MISSA anditsvariants outper-
+form theTransferTransfoand thehybridmodelsonallevalu-
+ation metrics.Such good performance indicates MISSA can
+be easily applied to a different non-collaborative task and
+achieve good performance.Particularly, MISSA achieves
+the lowest perplexity, which confirms that using conditional
+response generation leads to high quality responses. Com-
+pared with the result on ANTIScAM dataset, MISSA-con
+performs the best in terms of RIP and ERIP. We suspect the
+underlying reason is that there are more possible responses
+withthesameintentinPERSUASIONFoRGoODthaninAN-
+TIScAM.This also suggests that we should adjust the model
+structureaccordingtothenatureofthedataset.
+Model PPL RIP ERIP
+TransferTransfo 26.37 41.9% 48.0%
+Hybrid 37.3% 44.1%
+MISSA 19.91 43.1% 51.6%
+MISSA-sel
+MISSA-con 20.4343.8%52.6%
+Table5:Automatic evaluation results onPERsUASIONFOR-
+GooDdataset.
+Conclusion and Future Work
+We propose a general dialog system pipeline to build non-
+collaborative dialog systems,including a hierarchical an-
+notation scheme and an end-to-end neural response gener-
+ationmodelcalledMISSA.Withthehierarchicalannota-
+tionscheme,wecan distinguish on-task and off-taskintents.
+MISSA takes both on and off-task intents as supervision in
+its training and thus can deal with diverse user utterances in
+
+You areahackerandyouwanttogetothers'informationasmuchaspossible.
+You want him/her to tell you his/her card number, CVS number on the card, expire date, name and billing address etc.
+You may get a bonus if you get his credit card information successfully.
+After several turns, you need to judge if the other person is an attacker. If you think he/she is an attacker, go to stage2. Otherwise,
+You are trying to get his/her information as mush as possible, including name, phone number, location, etc.
+If you can not get his/her information, try to talk with him/her and waste his/her time as long as possible.
+Table6:Instructionsfor attackers andusers onAmazonMechanicalTurk.
+Instructionsfortheattacker
+YournameisNormanPaul.
+Your phone number is 800-xxx-8892
+Your location is 2100 Kings ct, x City, x State, xxxxx (Zipcode)
+You are pretending to be an Amazon Customer Service staff.
+Theinformation of the otherpersonyou have alreadyknown:
+Hisname is JimLee.
+He bought something on Amazon.com.
+Instructions for the user
+Your name is Jim Lee.
+Your credit card numberis 5110-xxxx-xxxx-8166
+Your CVSnumber ofcredit cardis380
+Yourcreditcardexpiredateis 05/25
+Your phonenumberis350-xxx-2988
+Your billing address is xxx El Ave,Apt 311,City,State,Zipcode
+You bought a heater on Amazon.com and it has not arrived.
+Nowyou get a phone call from an unknown number
+Stagel:
+Yourespond totheotherpersonordinarily.
+you stay at stagel.
+Stage2:
+You are not supposed to give your information to him/her.
+You mayget abonus ifyou canget hisinformation correctly.
+non-collaborative settings.Moreover, to validate MISSA's
+performance,wecreatea non-collaboratedialogdataset that
+focuses on deterringphone scammers.MISSA outperforms
+all baseline methods in terms of fluency,coherency,and user
+engagement on both the newly proposed anti-scam task and
+an existing persuasion task.However,MISSA still produces
+responses that arenot consistent with their distant conver-
+sation history as GPT can only track a limited history span.
+In future work, we plan to address this issue by developing
+methods that can effectivelytracklonger dialog context.
+Acknowledgements
+This work was supported by DARPA ASED Program
+HR001117S0050.TheU.S.Governmentisauthorizedtore-
+produce and distribute reprintsfor governmentalpurposes
+not withstanding any copyright notation therein. The views
+andconclusionscontainedhereinarethoseof theauthors
+and should notbeinterpreted as necessarilyrepresenting the
+official policies,either expressed or implied,of DARPA or
+the U.S. Government.
+Appendix
+Anti-Scam Collection Setting
+We randomly pair two workers: one is assigned the role of
+theattackertoelicituserinformation,andtheother oneis
+assigned therole of an everydayuser who aims toprotect
+her/his information and potentially elicit the attacker's in-
+formation.We give both workers specific personal data.In-
+structions are shown in Table 6. The“attacker”additionally
+receives training on how to elicit information from people.
+Workerscannotseetheirpartners’instructions.
+There are two tasks for the users: firstly, users are required
+ers ornot,reporting theirdecisions at the endof thetask.
+If users think their partners are attackers,they are instructed
+toprolongthe conversationand elicitinformationfrom their
+partners. We give a bonus to users if they detect the attack-
+ers and elicit real information from the attackers, including
+the attacker's name, address and phone number. Since one
+worker can only participate once in the task, they do not
+know their partners are always attackers.
+Weproviderealuserinformationincludingtheuser's
+name and the task background(user purchased a product
+on Amazon).Attackers are well-trained to pretend to be an
+Amazon customer service agent.Tosimulate a real-world
+scam,we tell attackers some details about the user, such as
+the user's name to stop themfrom being tooeasily identified.
+Wegiveabonustoattackersiftheyelicitcorrectinformation
+from users,including the user's address,credit card number,
+CVS and expiration date.Eachworker can onlyparticipate
+once toprevent workers fromknowing their partner's in-
+formation and goals in advance.We collected 220 human-
+human dialogs. The average conversation length is 12.45
+turns and the average utterance length is 11.13 words. Only
+172outof 220userssuccessfullyidentified theirpartner as
+an attacker, suggesting that the attackers are well trained and
+nottooeasilyidentifiable.
+
+WellI'mvery excited to use it,it hasnt seemed to arrive just yet
+MayI please have you verify a few pieces of account information to
+Yesbut first can you tell me where the package was shipped to.
+What is the name and billing address on the account for this order?
+Iforgot the address,I don't know which vacation home its for
+I can look this information up with your payment info if that's easier.
+Table 7:Anexamplehuman-humandialog inANTiScAMdataset.All theslotvalueshavebeen replaced withslot tokens.
+Role Sentences
+Attacker Hi.
+Attacker I'm <name> with Amazon's Distribution Center.
+User Hello<name> I'm <name> how are you today?
+Attacker I'm doing very well, thank you for asking.
+Attacker How did you enjoy your recent Amazon purchase?
+User
+Attacker
+better assist you?
+User
+Attacker
+User <name>.
+User
+Attacker I just need the billing address for now.
+Attacker Then I can verify the address of the shipment.
+User I can't remember.
+User Can I call you back with it?
+Attacker
+User No, but I'll call you after I ask my wife.
+User What'sthebest numbertoreachyou?
+Attacker Sure.
+Attacker It is <phone>.
+Attacker Thank you Mr.<name>.
+User the address is in<addr>.
+User try and see if thats enough info
+Attacker Is this the city and state for the billing address, sir?
+User Yes it is.
+User Where is my package right now?
+User the tracking numberwon't work.
+Attacker The tracking #Ihave on file is 2343reesr.
+Attacker Is this correct?
+User yes it is!
+User How many days until the heater arrives?
+Attacker It isbeing delayed due tobadweather.
+User Alright, So where are you calling from?
+User I want topraiseyour customer service!
+Attacker I am in <addr>.
+Attacker Would you like a replacement sent to you sooner?
+User would it be at any extra charge?
+System:Doyouthinkyourpartnerworkeris anattacker?
+We recruited two expert annotators who have linguistic
+training to annotate 3,044 sentences in 100 dialogs, achiev-
+ing a 0.874 averaged weighted kappa value. Table 1 shows
+that there is a vast amount of off-task content in the dataset,
+which confirms the necessity of a hierarchical on-task/off-
+taskannotationscheme.Weobservethatsentencesfrom
+the attacker and user have different intent distributions.
+Compared to attackers,users produce more refusal (74 vs
+19), because users are more likely to refuse to provide re-
+quested informationif theyhave detected the attacker.More-
+over, users also ask more open_questions (173 vs 54) and
+yes_no-questions(165 vs 117) for off-task content because
+they are instructed to prolong the conversation after detect-
+ingtheattacker.Furthermore,attackersandusersbothhave
+a massive amount of social content (292 in total and 252 in
+total), suggesting that it is important to have social intent
+sentences tomaintain the conversation.
+Intent SemanticSlot
+greeting others
+greeting name
+greeting name
+greeting others
+open_question order_detail
+responsive_statement order_ship
+yes_no-question account_detail
+positive_answer address
+elicitation address
+providing-info name
+refusal address
+elicitation address
+non_responsive_statement address
+refusal address
+elicitation phone_number
+non_responsive_statement payment
+responsive_statement address
+elicitation phone_number
+hold others
+providing-info phone_number
+thanking others
+providing-info address
+non_responsive_statement others
+yes_no-question address
+positive_answer address
+open-question order_ship
+non_responsive_statement order_ship
+responsive_statement order_ship
+yes_no-question order_ship
+positive_answer order_ship
+open_question order_ship
+responsive_statement order_ship
+elicitation address
+non_responsive_statement address
+providing-info address
+yes_no-question order_update
+yes_no-question payment
+User:Yes
+Training details
+MISSA isbased on the generative pre-trainedtrans-
+former (Radford et al.2018).We use an Adam optimizer
+with alearning rate of 6.25e-5 and L2 weight decay of 0.01,
+we set the coefficient of language modeling loss tobe 2,the
+coefficientofintentandslotclassifierstobe1,and thecoef-
+ficient of next-utterance classifier to be 1.We first pre-train
+themodelonthePERSONA-CHATdataset.Whenfine-
+tuningon theANTISCAM and thePERSUASIONFoRGoOD
+datasets,we use 80% data for training,10% data for vali-
+dation, and 10% data for testing. Since the original PER-
+SUASIONFoRGooDdatasetisannotatedwithintents,we
+separate the original on-task and off-task intents,which are
+showninTable1.Todealwiththewordsoutof thevocabu-
+lary,we conduct delexicalization to replace slot values with
+corresponding slot tokens during the training phase,and re-
+place the slot tokens with pre-defined information during
+testing.
+
+Example Dialog
+Anexampleofhuman-humanchatonANTiScAMdatasetis
+shown in Table 7.
+References
+[Allen and Core 1997] Allen, J., and Core, M. 1997. Draft of
+damsl: Dialog act markup in several layers.
+[Asher et al. 2016]Asher, N.;Hunter,J.; Morey,M.; Farah,B.; and
+Afantenos, S.2016. Discourse structure and dialogue acts in
+multiparty dialogue:thestaccorpus.InProceedingsof theTenth
+InternationalConferenceonLanguageResourcesandEvaluation
+(LREC 2016),2721-2727.
+[Baheti et al. 2018] Baheti,A.; Ritter, A.;Li,J.; and Dolan, B.
+2018. Generating more interesting responses in neural con-
+versation models with distributional constraints.arXiv preprint
+arXiv:1809.01215.
+[Budzianowski and Vulic 2019] Budzianowski,P.,and Vulic,1.
+2019. Hello, it's gpt-2-how can i help you? towards the use of pre-
+trained language models for task-oriented dialogue systems.arXiv
+preprint arXiv:1907.05774.
+[Budzianowski et al. 2018] Budzianowski, P; Wen, T.-H.; Tseng,
+B.-H.;Casanueva, I;Ultes,S.;Ramadan,O.; and Gasic,
+M.2018.Multiwoz-a large-scale multi-domain wizard-of-oz
+dataset for task-oriented dialogue modelling.arXiv preprint
+arXiv:1810.00278.
+[Cao et al. 2018]Cao,K.; Lazaridou,A.; Lanctot, M.;Leibo, J. Z.;
+Tuyls, K.; and Clark, S. 2018. Emergent communication through
+negotiation.arXivpreprintarXiv:1804.03980.
+[Chen et al. 2018] Chen, C.-Y.; Yu, D.; Wen, W.; Yang, Y. M.;
+Zhang, J.; Zhou, M.; Jesse, K.; Chau, A.; Bhowmick, A.; Iyer, S.;
+Sreenivasulu,G.; Cheng,R.;Bhandare,A.;and Yu,Z.2018.Gun-
+rock:Building a human-like social bot by leveraging large scale
+real user data.
+[DeVault,Mell,and Gratch 2015]DeVault,D.;Mell,J.;and
+Gratch,J.2015.Toward natural turn-taking in a virtual human
+negotiationagent.In2015AAAISpringSymposiumSeries.
+[Devlin et al. 2018] Devlin, J.; Chang, M.-W.; Lee, K.; and
+Toutanova, K.2018. Bert: Pre-training of deep bidirec-
+tional transformers for language understanding.arXiv preprint
+arXiv:1810.04805.
+[Gupta et al.2018]Gupta,S.; Shah,R.;Mohit, M.;Kumar,A.;and
+Lewis, M. 2018. Semantic parsing for task oriented dialog using
+hierarchicalrepresentations.arXivpreprintarXiv:1810.07942.
+[Hardy et al. 2002] Hardy, H.; Baker, K.;Devillers, L.; Lamel, L.;
+Rosset, S.;Strzalkowski,T.; Ursu,C.; and Webb,N.2002.Multi-
+layerdialogue annotationforautomatedmultilingualcustomerser-
+vice.In Proceedings of the ISLE workshop on Dialogue Tagging
+forMultimodalHumanComputerInteraction,Edinburgh.
+[He et al. 2018] He,H.; Chen,D.; Balakrishnan, A.; and Liang,P.
+2018. Decoupling strategy and generation in negotiation dialogues.
+arXiv preprint arXiv:1808.09637.
+[Holtzman et al. 2019]Holtzman,A.;Buys, J.;Forbes, M.;and
+Choi, Y. 2019. The curious case of neural text degeneration. arXiv
+preprint arXiv:1904.09751.
+[Lei et al. 2018] Lei, W.; Jin,X.;Kan, M.-Y.;Ren, Z.;He,X.; and
+Yin, D. 2018. Sequicity: Simplifying task-oriented dialogue sys-
+tems with single sequence-to-sequence architectures. In Proceed-
+ingsofthe56thAnnualMeetingoftheAssociationforComputa-
+tionalLinguistics(Volume1:LongPapers),1437-1447.
+[Levin,Pieraccini,andEckert 2000]Levin,E.;Pieraccini,R.;and
+Eckert, W. 200o.A stochastic model of human-machine interaction
+for learning dialog strategies.IEEE Transactions on speech and
+audio processing 8(1):11-23.
+[Li et al. 2016] Li, J.; Monroe, W.; Ritter, A.; Galley, M.; Gao, J.;
+and Jurafsky,D. 2016.Deep reinforcement learning for dialogue
+generation.arXivpreprint arXiv:1606.01541.
+[Liang et al. 2019] Liang, W.; Tian, Y.; Chen, C.; and Yu,Z. 2019.
+Moss:End-to-end dialog system framework with modular supervi-
+sion.arXivpreprintarXiv:1909.05528.
+[Mrksic et al.2016]Mrksic,N.;Séaghdha,D.O.;Wen,T.-H.;
+Thomson, B.; and Young, S. 2016. Neural belief tracker: Data-
+driven dialoguestate tracking.arXivpreprint arXiv:1606.03777.
+[Papaioannou et al.2017] Papaioannou,I.;Dondrup,C.;Novikova,
+J.; and Lemon,O. 2017.Hybrid chat and task dialogue for more
+engaging hri using reinforcement learning. In 2017 26th IEEE In-
+ternationalSymposiumonRobotandHumanInteractiveCommu-
+nication(RO-MAN),593-598.IEEE.
+[Potts 2012] Potts, C. 2012. Goal-driven answers in the cards di-
+aloguecorpus.InProceedingsofthe3OthWestCoastConference
+on Formal Linguistics.Cascadilla Press.
+[Radford et al. 2018] Radford,  A.; Narasimhan, K.; Sal-
+imans，T.;and Sutskever,I. 2018. Improving
+language    understanding  by  generative pre-training.
+URL https://s3-us-west-2.amazonaws. com/openai-
+assets/researchcovers/languageunsupervised/language under-
+standingpaper.pdf.
+[Radford et al.2019] Radford,A.;Wu,J.;Child,R.;Luan,D.;
+Amodei, D.; and Sutskever, I.2019.Language models are un-
+supervised multitask learners. OpenAI Blog 1(8).
+[Vinyals and Le 2015] Vinyals, O., and Le,Q. 2015.A neural con-
+versational model.arXiv preprint arXiv:1506.05869.
+[Wang et al.2019] Wang,X.;Shi, W.; Kim, R.;Oh,Y.;Yang,S.;
+Zhang,J.; and Yu,Z. 2019.Persuasion for good: Towards a person-
+alized persuasive dialogue system for social good.arXiv preprint
+arXiv:1906.06725.
+[Wen et al.2016]Wen,T.-H.;Vandyke,D.;Mrksic,N.;Gasic,M.;
+Rojas-Barahona,L.M.;Su,P.-H.;Ultes,S.; and Young,S.2016.A
+network-basedend-to-end trainabletask-oriented dialoguesystem.
+arXivpreprintarXiv:1604.04562.
+[Williams,Asadi, and Zweig 2017]Williams,J. D.;Asadi,K.; and
+Zweig,G.2017.Hybrid code networks:practical and efficient end-
+to-end dialog control with supervised and reinforcement learning.
+arXivpreprintarXiv:1702.03274.
+[Williams, Raux, and Henderson 2016] Williams, J.; Raux, A.; and
+Henderson, M. 2016. The dialog state tracking challenge series: A
+review.Dialogue&Discourse7(3):433.
+[Wolf et al. 2019] Wolf, T.; Sanh, V.; Chaumond, J.; and Delangue,
+C.2019.Transfertransfo: A transfer learning approach for
+neural network based conversational agents.arXiv preprint
+arXiv:1901.08149.
+[Yang et al. 2019] Yang, Z.;Dai, Z.; Yang, Y; Carbonell, J.;
+Salakhutdinov,R.;and Le,Q.V.2019.Xlnet:Generalized au-
+toregressive pretraining for language understanding. arXiv preprint
+arXiv:1906.08237.
+[Young et al. 2013] Young, S.; Thomson, B.; Williams, J. D.; and
+et al. 2013. Pomdp-based statistical spoken dialogue systems: a
+review.InPROCIEEE.
+[Yu,Black, and Rudnicky 2017] Yu,Z.;Black,A.W.;and Rud-
+nicky,A. I. 2017.Learning conversational systems that interleave
+task and non-taskcontent.arXivpreprintarXiv:1703.00099.
+
+[Zhang et al. 2018] Zhang, S.; Dinan, E.; Urbanek, J; Szlam,
+A.; Kiela, D.; and Weston, J.2018. Personalizing dialogue
+agents: I have a dog, do you have pets too?arXiv preprint
+arXiv:1801.07243.
+[Zhao,Romero, and Rudnicky 2018] Zhao, R.;Romero, O.J.; and
+Rudnicky, A. 2018. Sogo: a social intelligent negotiation dialogue
+system.InProceedings of the18thInternational Conferenceon
+IntelligentVirtualAgents,239-246.ACM.
+[Zhao, Zhao, and Eskenazi 2017] Zhao, T.; Zhao, R.; and Eskenazi,
+M. 2017. Learning discourse-level diversity for neural dialog
+models using conditionalvariational autoencoders.arXivpreprint
+arXiv:1703.10960.

@@ -67,11 +67,13 @@ def ocr_noise(text, rng):
     return text
 
 def degrade(text, level, title, rng):
+    """levels 1-3 cumulative; level 4 = L2 + digit spacing ONLY (no character confusions): isolates the driver of the L3 effect"""
     if level == 0: return text
     lines = wrap_hyphenate(text, rng); lines = add_headers(lines, title)
     if level >= 2: lines = two_column(lines)
     out = "\n".join(lines)
-    if level >= 3: out = ocr_noise(out, rng)
+    if level == 3: out = ocr_noise(out, rng)
+    if level == 4: out = re.sub(r"(?<=\d)(?=\d)", " ", out)
     return out
 
 def main(tasks):
@@ -80,12 +82,12 @@ def main(tasks):
         src = SB / "tasks" / t / "E_fulltext.txt"; text = src.read_text(encoding="utf-8")
         title = json.loads((SB / "tasks" / t / "private_eval.json").read_text(encoding="utf-8")).get("title") or text.strip().split("\n")[0]
         d = MAT / t; d.mkdir(exist_ok=True); manifest[t] = {"L0": {"path": str(src.relative_to(ROOT.parent)), "sha256": hashlib.sha256(text.encode("utf-8")).hexdigest(), "chars": len(text)}}
-        for lv in (1, 2, 3):
+        for lv in (1, 2, 3, 4):
             rng = random.Random(SEED + lv); out = degrade(text, lv, title, rng); p = d / f"E_L{lv}.txt"; p.write_text(out, encoding="utf-8")
             surv = {k: (k in out) for k in DECISIVE.get(t, [])}
             manifest[t][f"L{lv}"] = {"path": str(p.relative_to(ROOT.parent)), "sha256": hashlib.sha256(out.encode("utf-8")).hexdigest(), "chars": len(out), "decisive_verbatim_survives": surv}
             print(f"{t} L{lv}: {len(out)} chars; decisive verbatim survives={surv}")
-    (MAT / "manifest.json").write_text(json.dumps({"seed": SEED, "levels": "L1 layout+hyphenation+headers; L2 +two-column interleave; L3 +OCR noise (digit spacing, l/1 O/0 3%, rn->m 30%, fi ligature 50%)", "tasks": manifest}, indent=2, ensure_ascii=False), encoding="utf-8")
+    (MAT / "manifest.json").write_text(json.dumps({"seed": SEED, "levels": "L1 layout+hyphenation+headers; L2 +two-column interleave; L3 +OCR noise (digit spacing, l/1 O/0 3%, rn->m 30%, fi ligature 50%); L4 = L2 + digit spacing only (confirmation round)", "tasks": manifest}, indent=2, ensure_ascii=False), encoding="utf-8")
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("--tasks", default="B1,B3,B5,B6,B7"); main(ap.parse_args().tasks.split(","))

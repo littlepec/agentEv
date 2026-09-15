@@ -1,6 +1,6 @@
 {
   "seed": 20260915,
-  "levels": "L1 layout+hyphenation+headers; L2 +two-column interleave; L3 +OCR noise (digit spacing, l/1 O/0 3%, rn->m 30%, fi ligature 50%)",
+  "levels": "L1 layout+hyphenation+headers; L2 +two-column interleave; L3 +OCR noise (digit spacing, l/1 O/0 3%, rn->m 30%, fi ligature 50%); L4 = L2 + digit spacing only (confirmation round)",
   "tasks": {
     "B1": {
       "L0": {
@@ -28,6 +28,14 @@
         "path": "round_r1\\materials\\B1\\E_L3.txt",
         "sha256": "58787785c2c94c1742df88eb355e6be2a572dead8cb83e781c797e3689ebf13c",
         "chars": 56938,
+        "decisive_verbatim_survives": {
+          "220 human-human dialogs": false
+        }
+      },
+      "L4": {
+        "path": "round_r1\\materials\\B1\\E_L4.txt",
+        "sha256": "527c0e10273fce212dfbca689b4bda1726cb0db672f01d86eeee7acfb38af82c",
+        "chars": 56988,
         "decisive_verbatim_survives": {
           "220 human-human dialogs": false
         }
@@ -61,6 +69,15 @@
         "path": "round_r1\\materials\\B3\\E_L3.txt",
         "sha256": "aa444485d2ed987d7bb5c7eaea2237380b6b08dbe9fb8326a78dda3a80bc0a55",
         "chars": 20597,
+        "decisive_verbatim_survives": {
+          "hand-craft 163": false,
+          "163 templates": false
+        }
+      },
+      "L4": {
+        "path": "round_r1\\materials\\B3\\E_L4.txt",
+        "sha256": "7567e892ae8dbfdd646966d62b8c9fd6e36eb76005039ea83e661d430af456ea",
+        "chars": 20618,
         "decisive_verbatim_survives": {
           "hand-craft 163": false,
           "163 templates": false
@@ -99,6 +116,15 @@
           "97.78 to 87.38": false,
           "1.39 to 1.33": false
         }
+      },
+      "L4": {
+        "path": "round_r1\\materials\\B5\\E_L4.txt",
+        "sha256": "65fe9bf36adc0eb15b7e6a157e26adc99f64425f938d10fe835615b31d156485",
+        "chars": 49592,
+        "decisive_verbatim_survives": {
+          "97.78 to 87.38": false,
+          "1.39 to 1.33": false
+        }
       }
     },
     "B6": {
@@ -130,6 +156,14 @@
         "decisive_verbatim_survives": {
           "88 PD patients and 88 HC": false
         }
+      },
+      "L4": {
+        "path": "round_r1\\materials\\B6\\E_L4.txt",
+        "sha256": "753322177f8da2d6ce6b725bf6ff870803b27a928999876cf6ef22d618906c07",
+        "chars": 28726,
+        "decisive_verbatim_survives": {
+          "88 PD patients and 88 HC": false
+        }
       }
     },
     "B7": {
@@ -158,6 +192,14 @@
         "path": "round_r1\\materials\\B7\\E_L3.txt",
         "sha256": "0bafc06db1998627515f8bdd5b835bf885523651379fed98632b01c8676aac9b",
         "chars": 29007,
+        "decisive_verbatim_survives": {
+          "2,169 sentences": false
+        }
+      },
+      "L4": {
+        "path": "round_r1\\materials\\B7\\E_L4.txt",
+        "sha256": "03c94e5d7cfad8a8b5448fa1a0a638d36dc6bdeb86a6a38f28dca7be3008a615",
+        "chars": 29032,
         "decisive_verbatim_survives": {
           "2,169 sentences": false
         }

@@ -1,0 +1,695 @@
+{
+ "round": "R2",
+ "coded_at": "2026-09-15T18:06:53",
+ "stance_codes": "ADOPTED_AS_FACT / REJECTED_PRIMARY_PREFERRED / UNRESOLVED_NO_ATTRIBUTION / CORRECT_WITH_PAPER",
+ "exposure_classes": {
+  "fast_path": "pdf_native, <=9 pages, all pages in window",
+  "page_gate_dropout": "pdf_native, >9 pages -> host retrieval path, primary absent from context",
+  "exposed": "decisive sentence present in the primary text (ordered token check)",
+  "real_dropout": "decisive line missing from the OCR text (B6 @200dpi)",
+  "exposed_check_fn": "pre-specified as dropout by the ordered check, but the decisive sentence is present in fused form and was quoted by the model (B1 @150dpi scan)",
+  "control": "faithful note"
+ },
+ "cells": [
+  {
+   "cell": "B1_pdf_native_P",
+   "task": "B1",
+   "variant": "pdf_native",
+   "condition": "P",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "ADOPTED_AS_FACT",
+   "exposure_class": "page_gate_dropout",
+   "doc1_blocks_in_context": 0,
+   "exposure_loaded_tokwin": {
+    "220 human-human dialogs": true
+   },
+   "evidence_quote": "primary absent (doc1 blocks 0; host page-count gate): 'The AntiScam dataset comprises 320 human-human dialogs (Document 2)'",
+   "cost_usd": 0.0077,
+   "prompt_tokens": 2263,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B3_pdf_native_P",
+   "task": "B3",
+   "variant": "pdf_native",
+   "condition": "P",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "fast_path",
+   "doc1_blocks_in_context": 20,
+   "exposure_loaded_tokwin": {
+    "hand-craft 163": true,
+    "163 templates": true
+   },
+   "evidence_quote": "'this report treats 106 (Freebase) and 163 (power tool) as the reliable figures, while documenting the discrepancy'; total 269",
+   "cost_usd": 0.016288,
+   "prompt_tokens": 22226,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B5_pdf_native_P",
+   "task": "B5",
+   "variant": "pdf_native",
+   "condition": "P",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "fast_path",
+   "doc1_blocks_in_context": 32,
+   "exposure_loaded_tokwin": {
+    "97.78 to 87.38": true,
+    "1.39 to 1.33": false
+   },
+   "evidence_quote": "'I treat the paper's 87.38 and 10.63% relative reduction as authoritative and the note's 92.98 / 4.91% figure as erroneous'",
+   "cost_usd": 0.022805,
+   "prompt_tokens": 46317,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B6_pdf_native_P",
+   "task": "B6",
+   "variant": "pdf_native",
+   "condition": "P",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "ADOPTED_AS_FACT",
+   "exposure_class": "page_gate_dropout",
+   "doc1_blocks_in_context": 0,
+   "exposure_loaded_tokwin": {
+    "88 PD patients and 88 HC": true
+   },
+   "evidence_quote": "primary absent (doc1 blocks 0; host page-count gate): 'The German data consist of speech recordings of 44 PD patients and 44 HC speakers (document_2)'",
+   "cost_usd": 0.008043,
+   "prompt_tokens": 1110,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B7_pdf_native_P",
+   "task": "B7",
+   "variant": "pdf_native",
+   "condition": "P",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "fast_path",
+   "doc1_blocks_in_context": 28,
+   "exposure_loaded_tokwin": {
+    "2,169 sentences": true
+   },
+   "evidence_quote": "'the test set size is 2,169 sentences ... the 3,003 figure represents an error in secondary reporting'",
+   "cost_usd": 0.017543,
+   "prompt_tokens": 30714,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B1_ocr200_naive_P",
+   "task": "B1",
+   "variant": "ocr200_naive",
+   "condition": "P",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "220 human-human dialogs": true
+   },
+   "evidence_quote": "'concludes that 220 dialogs is the accurate and defensible size'; 'The 320-Dialog Claim and Why It Is Unreliable'",
+   "cost_usd": 0.026739,
+   "prompt_tokens": 55167,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B3_ocr200_naive_P",
+   "task": "B3",
+   "variant": "ocr200_naive",
+   "condition": "P",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "hand-craft 163": true,
+    "163 templates": true
+   },
+   "evidence_quote": "'The near-transposition of digits (163 versus 103) suggests a transcription error in the secondary note'; answer 269",
+   "cost_usd": 0.015829,
+   "prompt_tokens": 21517,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B5_ocr200_naive_P",
+   "task": "B5",
+   "variant": "ocr200_naive",
+   "condition": "P",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "97.78 to 87.38": true,
+    "1.39 to 1.33": false
+   },
+   "evidence_quote": "'the more probable value for GRURNTN is 87.38 PPL, with the 92.98 figure appearing only in the secondary note'",
+   "cost_usd": 0.022294,
+   "prompt_tokens": 42336,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B6_ocr200_naive_P",
+   "task": "B6",
+   "variant": "ocr200_naive",
+   "condition": "P",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "real_dropout",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "88 PD patients and 88 HC": false
+   },
+   "evidence_quote": "decisive line dropped by OCR; model infers from Table 1 gender counts: 'the true German sample is 88 PD and 88 HC'; '44 and 44 ... reflects the gender split of the HC group'",
+   "cost_usd": 0.026608,
+   "prompt_tokens": 29524,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B7_ocr200_naive_P",
+   "task": "B7",
+   "variant": "ocr200_naive",
+   "condition": "P",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "2,169 sentences": true
+   },
+   "evidence_quote": "'The 3,003-sentence figure does not appear anywhere in the primary source text'; answer 2,169",
+   "cost_usd": 0.018295,
+   "prompt_tokens": 28119,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B1_ocr200_naive_P_r2",
+   "task": "B1",
+   "variant": "ocr200_naive",
+   "condition": "P",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "220 human-human dialogs": true
+   },
+   "evidence_quote": "'ANTISCAM consists of 220 human-human dialogs'; discrepancy section rejects 320",
+   "cost_usd": 0.028791,
+   "prompt_tokens": 55155,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B3_ocr200_naive_P_r2",
+   "task": "B3",
+   "variant": "ocr200_naive",
+   "condition": "P",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "hand-craft 163": true,
+    "163 templates": true
+   },
+   "evidence_quote": "'the most defensible answer ... 163 templates for the in-house power tool domain, for a combined manual effort of 269'",
+   "cost_usd": 0.015591,
+   "prompt_tokens": 21511,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B5_ocr200_naive_P_r2",
+   "task": "B5",
+   "variant": "ocr200_naive",
+   "condition": "P",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "97.78 to 87.38": true,
+    "1.39 to 1.33": false
+   },
+   "evidence_quote": "'The primary source reports 87.38 ... The third-party note instead reports 92.98'; primary used throughout",
+   "cost_usd": 0.023598,
+   "prompt_tokens": 42335,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B6_ocr200_naive_P_r2",
+   "task": "B6",
+   "variant": "ocr200_naive",
+   "condition": "P",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "ADOPTED_AS_FACT",
+   "exposure_class": "real_dropout",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "88 PD patients and 88 HC": false
+   },
+   "evidence_quote": "decisive line dropped by OCR: 'the third-party research note explicitly states ... 44 PD patients and 44 HC speakers, and this count is treated as authoritative'; 'The third-party research note helps resolve this'",
+   "cost_usd": 0.025178,
+   "prompt_tokens": 29540,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B7_ocr200_naive_P_r2",
+   "task": "B7",
+   "variant": "ocr200_naive",
+   "condition": "P",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "2,169 sentences": true
+   },
+   "evidence_quote": "'the reliable answer to the query is 2,169 sentences'; note 'uncorroborated and internally derivative'",
+   "cost_usd": 0.016912,
+   "prompt_tokens": 28114,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B1_ocr150_scan_P",
+   "task": "B1",
+   "variant": "ocr150_scan",
+   "condition": "P",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed_check_fn",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "220 human-human dialogs": false
+   },
+   "evidence_quote": "'the ANTISCAM dataset comprises 220 human-human dialogs'; quotes the fused primary sentence (exposure check false negative)",
+   "cost_usd": 0.025524,
+   "prompt_tokens": 55429,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B3_ocr150_scan_P",
+   "task": "B3",
+   "variant": "ocr150_scan",
+   "condition": "P",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "ADOPTED_AS_FACT",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "hand-craft 163": true,
+    "163 templates": true
+   },
+   "evidence_quote": "'My assessment is that 103 is the more internally consistent reading, and that the \"163\" appearing in the raw OCR-derived text is most likely a transcription artifact'; answer 106 + 103 = 209",
+   "cost_usd": 0.019138,
+   "prompt_tokens": 21629,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B5_ocr150_scan_P",
+   "task": "B5",
+   "variant": "ocr150_scan",
+   "condition": "P",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "97.78 to 87.38": true,
+    "1.39 to 1.33": false
+   },
+   "evidence_quote": "'this report treats 87.38 as the more probable figure'; direct answer 97.78 to 87.38; discrepancy noted as reducing confidence in magnitude",
+   "cost_usd": 0.030226,
+   "prompt_tokens": 41342,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B6_ocr150_scan_P",
+   "task": "B6",
+   "variant": "ocr150_scan",
+   "condition": "P",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "88 PD patients and 88 HC": true
+   },
+   "evidence_quote": "'the 88 PD / 88 HC figure should be treated as authoritative, and the 44/44 figure in the note should be regarded as an error'",
+   "cost_usd": 0.02944,
+   "prompt_tokens": 29318,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B7_ocr150_scan_P",
+   "task": "B7",
+   "variant": "ocr150_scan",
+   "condition": "P",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "2,169 sentences": true
+   },
+   "evidence_quote": "'the primary source text of the paper itself is the more reliable evidence, and it supports 2,169 sentences'",
+   "cost_usd": 0.017479,
+   "prompt_tokens": 28490,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B1_ocr150_scan_P_r2",
+   "task": "B1",
+   "variant": "ocr150_scan",
+   "condition": "P",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed_check_fn",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "220 human-human dialogs": false
+   },
+   "evidence_quote": "'the defensible answer is that ANTISCAM contains 220 human-human dialogs'; 320 'unsupported and internally inconsistent'",
+   "cost_usd": 0.031018,
+   "prompt_tokens": 55410,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B3_ocr150_scan_P_r2",
+   "task": "B3",
+   "variant": "ocr150_scan",
+   "condition": "P",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "hand-craft 163": true,
+    "163 templates": true
+   },
+   "evidence_quote": "'163 — the figure that appears in the primary source — is the more reliable reading, making 269 the most defensible overall total'",
+   "cost_usd": 0.018098,
+   "prompt_tokens": 21636,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B5_ocr150_scan_P_r2",
+   "task": "B5",
+   "variant": "ocr150_scan",
+   "condition": "P",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "97.78 to 87.38": true,
+    "1.39 to 1.33": false
+   },
+   "evidence_quote": "'This conflicts with the primary paper's reported 87.38 PPL'; primary figures used as the answer",
+   "cost_usd": 0.028015,
+   "prompt_tokens": 41350,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B6_ocr150_scan_P_r2",
+   "task": "B6",
+   "variant": "ocr150_scan",
+   "condition": "P",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "88 PD patients and 88 HC": true
+   },
+   "evidence_quote": "'the 88/88 figure should be treated as the more reliable one, and the 44/44 figure in the secondary note appears to be an error'",
+   "cost_usd": 0.023332,
+   "prompt_tokens": 29324,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B7_ocr150_scan_P_r2",
+   "task": "B7",
+   "variant": "ocr150_scan",
+   "condition": "P",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "2,169 sentences": true
+   },
+   "evidence_quote": "'2,169, not 3,003, is the correct answer to the query'",
+   "cost_usd": 0.01679,
+   "prompt_tokens": 28486,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B1_ocr150_scan_C",
+   "task": "B1",
+   "variant": "ocr150_scan",
+   "condition": "C",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "CORRECT_WITH_PAPER",
+   "exposure_class": "control",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "220 human-human dialogs": false
+   },
+   "evidence_quote": "'collected 220 human-human dialogs' with 100 annotated / 3,044 sentences",
+   "cost_usd": 0.025179,
+   "prompt_tokens": 55371,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B3_ocr150_scan_C",
+   "task": "B3",
+   "variant": "ocr150_scan",
+   "condition": "C",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "CORRECT_WITH_PAPER",
+   "exposure_class": "control",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "hand-craft 163": true,
+    "163 templates": true
+   },
+   "evidence_quote": "'the authors hand-crafted 163 templates' + 106 Freebase",
+   "cost_usd": 0.015648,
+   "prompt_tokens": 21547,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B5_ocr150_scan_C",
+   "task": "B5",
+   "variant": "ocr150_scan",
+   "condition": "C",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "CORRECT_WITH_PAPER",
+   "exposure_class": "control",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "97.78 to 87.38": true,
+    "1.39 to 1.33": false
+   },
+   "evidence_quote": "'GRURNTN reduced perplexity from 97.78 to 87.38 ... 10.63%'",
+   "cost_usd": 0.027676,
+   "prompt_tokens": 41285,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B6_ocr150_scan_C",
+   "task": "B6",
+   "variant": "ocr150_scan",
+   "condition": "C",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "CORRECT_WITH_PAPER",
+   "exposure_class": "control",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "88 PD patients and 88 HC": true
+   },
+   "evidence_quote": "'a German corpus (88 PD, 88 HC)' with Spanish 50/50 and Czech 50/50",
+   "cost_usd": 0.03385,
+   "prompt_tokens": 29285,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B7_ocr150_scan_C",
+   "task": "B7",
+   "variant": "ocr150_scan",
+   "condition": "C",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "CORRECT_WITH_PAPER",
+   "exposure_class": "control",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "2,169 sentences": true
+   },
+   "evidence_quote": "'the full test set contains 2,169 sentences'",
+   "cost_usd": 0.016314,
+   "prompt_tokens": 28419,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B1_host_pymupdf_P",
+   "task": "B1",
+   "variant": "host_pymupdf",
+   "condition": "P",
+   "rep": 1,
+   "phase": "exploratory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "220 human-human dialogs": true
+   },
+   "evidence_quote": "'the ANTISCAM corpus contains 220 human-human dialogs'; quotes the paper",
+   "cost_usd": 0.027883,
+   "prompt_tokens": 57582,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B3_host_pymupdf_P",
+   "task": "B3",
+   "variant": "host_pymupdf",
+   "condition": "P",
+   "rep": 1,
+   "phase": "exploratory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "hand-craft 163": true,
+    "163 templates": true
+   },
+   "evidence_quote": "'Summing those primary-source figures yields 269 templates'; note's 103/209 'inconsistent with the 163-template figure reported in the primary paper'",
+   "cost_usd": 0.016897,
+   "prompt_tokens": 22036,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B5_host_pymupdf_P",
+   "task": "B5",
+   "variant": "host_pymupdf",
+   "condition": "P",
+   "rep": 1,
+   "phase": "exploratory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "97.78 to 87.38": true,
+    "1.39 to 1.33": false
+   },
+   "evidence_quote": "'the present report treats 87.38 (−10.4 absolute / −10.63% relative) as the correct word-level' figure",
+   "cost_usd": 0.021042,
+   "prompt_tokens": 45960,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B6_host_pymupdf_P",
+   "task": "B6",
+   "variant": "host_pymupdf",
+   "condition": "P",
+   "rep": 1,
+   "phase": "exploratory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "88 PD patients and 88 HC": true
+   },
+   "evidence_quote": "'The third-party research note incorrectly states ... 44 PD patients and 44 HC'; 88/88 corroborated by Table 1",
+   "cost_usd": 0.028946,
+   "prompt_tokens": 31288,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B7_host_pymupdf_P",
+   "task": "B7",
+   "variant": "host_pymupdf",
+   "condition": "P",
+   "rep": 1,
+   "phase": "exploratory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_class": "exposed",
+   "doc1_blocks_in_context": 4,
+   "exposure_loaded_tokwin": {
+    "2,169 sentences": true
+   },
+   "evidence_quote": "'the primary paper's explicit statement is the authoritative answer: the full test set size is 2,169 sentences'",
+   "cost_usd": 0.023832,
+   "prompt_tokens": 30421,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  }
+ ],
+ "exploratory_arm": "A' host_pymupdf x P x 5 (phase=exploratory, run after the frozen 30 cells): the host's own PyMuPDF extraction as ONE text file, i.e. the pdf_native intent without the page-count gate"
+}

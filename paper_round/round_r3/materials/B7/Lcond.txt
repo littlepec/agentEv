@@ -1,0 +1,9 @@
+Third-party research note: On NMT Search Errors and Model Errors: Cat Got Your Tongue?
+
+Key questions addressed: NMT search errors model errors test set size | English German news test set size neural machine translation | WMT news test set sentences exact inference NMT | Stahlberg Byrne NMT search errors test set size | exact inference neural sequence models test set English German
+
+The paper's main experiments use the German-English WMT news-test2015 test set. The entire German-English WMT news-test2015 test set contains 2,169 sentences. The paper states the test set size as a number of sentences. This full test set size of 2,169 sentences is reported before any subset selection. The test set is a news test set, and the language pair is German-English.
+
+The paper reports that all experiments in the results without length constraints section are conducted on the entire German-English WMT news-test2015 test set (2,169 sentences). This full test set supports the paper's exact inference comparisons for neural machine translation search errors and model errors. The paper's use of the entire test set in that section establishes the full test set size for the reported exact inference results.
+
+The length-constrained exact search experiments use only a subset of the test set. The paper reports that all results in the results with length constraints section are conducted on only a subset of the test set to keep the runtime under control. One experiment uses 73.0% of the test set. Other experiments use 48.3% of the test set. The paper reports these subsets for the length-constrained exact search experiments. These subset experiments are distinct from the full test set size of 2,169 sentences. The paper reports the full test set size as 2,169 sentences before any subset selection.

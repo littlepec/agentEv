@@ -1,0 +1,78 @@
+B1 L0: chars=54177 nums={'n_numbers': 136, 'intact': 1.0, 'split': 0.0, 'absent': 0.0}
+B1 L1: chars=56225 nums={'n_numbers': 136, 'intact': 1.0, 'split': 0.0, 'absent': 0.0}
+B1 L2: chars=56225 nums={'n_numbers': 136, 'intact': 1.0, 'split': 0.0, 'absent': 0.0}
+B1 L3: chars=56938 nums={'n_numbers': 136, 'intact': 0.0, 'split': 0.941, 'absent': 0.059}
+B1 L4: chars=56988 nums={'n_numbers': 136, 'intact': 0.0, 'split': 1.0, 'absent': 0.0}
+F:\defense\evidence_pack_prep_v1\paper_round\round_r2\extract_r2.py:34: DeprecationWarning: `langchain-community` is being sunset and is no longer actively maintained. See https://github.com/langchain-ai/langchain-community/issues/674 for details and migration guidance toward standalone integration packages.
+  from langchain_community.document_loaders import PyMuPDFLoader
+B1 ocr200: pages=11 boxes=1246 sec=84.6
+B1 ocr120: pages=11 boxes=1270 sec=60.9
+B1 ocr150_scan: pages=11 boxes=1265 sec=61.6
+B1 host_pymupdf: chars=54076 nums={'n_numbers': 136, 'intact': 1.0, 'split': 0.0, 'absent': 0.0} decisive={'220 human-human dialogs': False}
+B1 pypdf: chars=54114 nums={'n_numbers': 136, 'intact': 1.0, 'split': 0.0, 'absent': 0.0} decisive={'220 human-human dialogs': False}
+B1 pdfminer: chars=54305 nums={'n_numbers': 136, 'intact': 0.993, 'split': 0.0, 'absent': 0.007} decisive={'220 human-human dialogs': False}
+B1 ocr200_naive: chars=51490 nums={'n_numbers': 136, 'intact': 0.904, 'split': 0.0, 'absent': 0.096} decisive={'220 human-human dialogs': False}
+B1 ocr200_col: chars=51490 nums={'n_numbers': 136, 'intact': 0.904, 'split': 0.0, 'absent': 0.096} decisive={'220 human-human dialogs': False}
+B1 ocr120_naive: chars=52805 nums={'n_numbers': 136, 'intact': 0.941, 'split': 0.0, 'absent': 0.059} decisive={'220 human-human dialogs': False}
+B1 ocr150_scan: chars=49351 nums={'n_numbers': 136, 'intact': 0.956, 'split': 0.0, 'absent': 0.044} decisive={'220 human-human dialogs': False}
+B3 L0: chars=19559 nums={'n_numbers': 62, 'intact': 1.0, 'split': 0.0, 'absent': 0.0}
+B3 L1: chars=20298 nums={'n_numbers': 62, 'intact': 1.0, 'split': 0.0, 'absent': 0.0}
+B3 L2: chars=20298 nums={'n_numbers': 62, 'intact': 1.0, 'split': 0.0, 'absent': 0.0}
+B3 L3: chars=20597 nums={'n_numbers': 62, 'intact': 0.0, 'split': 0.984, 'absent': 0.016}
+B3 L4: chars=20618 nums={'n_numbers': 62, 'intact': 0.0, 'split': 1.0, 'absent': 0.0}
+B3 ocr200: pages=5 boxes=480 sec=34.5
+B3 ocr120: pages=5 boxes=485 sec=27.5
+B3 ocr150_scan: pages=5 boxes=477 sec=25.4
+B3 host_pymupdf: chars=18814 nums={'n_numbers': 62, 'intact': 1.0, 'split': 0.0, 'absent': 0.0} decisive={'hand-craft 163': False, '163 templates': True}
+B3 pypdf: chars=18844 nums={'n_numbers': 62, 'intact': 1.0, 'split': 0.0, 'absent': 0.0} decisive={'hand-craft 163': False, '163 templates': True}
+B3 pdfminer: chars=19034 nums={'n_numbers': 62, 'intact': 0.984, 'split': 0.0, 'absent': 0.016} decisive={'hand-craft 163': False, '163 templates': True}
+B3 ocr200_naive: chars=18563 nums={'n_numbers': 62, 'intact': 1.0, 'split': 0.0, 'absent': 0.0} decisive={'hand-craft 163': False, '163 templates': True}
+B3 ocr200_col: chars=18563 nums={'n_numbers': 62, 'intact': 1.0, 'split': 0.0, 'absent': 0.0} decisive={'hand-craft 163': False, '163 templates': True}
+B3 ocr120_naive: chars=18537 nums={'n_numbers': 62, 'intact': 0.952, 'split': 0.0, 'absent': 0.048} decisive={'hand-craft 163': False, '163 templates': True}
+B3 ocr150_scan: chars=17153 nums={'n_numbers': 62, 'intact': 0.935, 'split': 0.0, 'absent': 0.065} decisive={'hand-craft 163': False, '163 templates': False}
+B5 L0: chars=47838 nums={'n_numbers': 97, 'intact': 1.0, 'split': 0.0, 'absent': 0.0}
+B5 L1: chars=49054 nums={'n_numbers': 97, 'intact': 1.0, 'split': 0.0, 'absent': 0.0}
+B5 L2: chars=49054 nums={'n_numbers': 97, 'intact': 1.0, 'split': 0.0, 'absent': 0.0}
+B5 L3: chars=49557 nums={'n_numbers': 97, 'intact': 0.0, 'split': 0.959, 'absent': 0.041}
+B5 L4: chars=49592 nums={'n_numbers': 97, 'intact': 0.0, 'split': 1.0, 'absent': 0.0}
+B5 ocr200: pages=8 boxes=916 sec=59.7
+B5 ocr120: pages=8 boxes=836 sec=39.6
+B5 ocr150_scan: pages=8 boxes=851 sec=39.1
+B5 host_pymupdf: chars=38010 nums={'n_numbers': 97, 'intact': 1.0, 'split': 0.0, 'absent': 0.0} decisive={'97.78 to 87.38': True, '1.39 to 1.33': False}
+B5 pypdf: chars=38121 nums={'n_numbers': 97, 'intact': 1.0, 'split': 0.0, 'absent': 0.0} decisive={'97.78 to 87.38': True, '1.39 to 1.33': False}
+B5 pdfminer: chars=39251 nums={'n_numbers': 97, 'intact': 0.99, 'split': 0.0, 'absent': 0.01} decisive={'97.78 to 87.38': True, '1.39 to 1.33': False}
+B5 ocr200_naive: chars=36113 nums={'n_numbers': 97, 'intact': 0.928, 'split': 0.0, 'absent': 0.072} decisive={'97.78 to 87.38': True, '1.39 to 1.33': False}
+B5 ocr200_col: chars=36113 nums={'n_numbers': 97, 'intact': 0.928, 'split': 0.0, 'absent': 0.072} decisive={'97.78 to 87.38': True, '1.39 to 1.33': False}
+B5 ocr120_naive: chars=36730 nums={'n_numbers': 97, 'intact': 0.784, 'split': 0.0, 'absent': 0.216} decisive={'97.78 to 87.38': True, '1.39 to 1.33': False}
+B5 ocr150_scan: chars=33955 nums={'n_numbers': 97, 'intact': 0.938, 'split': 0.0, 'absent': 0.062} decisive={'97.78 to 87.38': False, '1.39 to 1.33': False}
+B6 L0: chars=27235 nums={'n_numbers': 184, 'intact': 1.0, 'split': 0.0, 'absent': 0.0}
+B6 L1: chars=28250 nums={'n_numbers': 184, 'intact': 1.0, 'split': 0.0, 'absent': 0.0}
+B6 L2: chars=28250 nums={'n_numbers': 184, 'intact': 1.0, 'split': 0.0, 'absent': 0.0}
+B6 L3: chars=28681 nums={'n_numbers': 184, 'intact': 0.0, 'split': 0.989, 'absent': 0.011}
+B6 L4: chars=28726 nums={'n_numbers': 184, 'intact': 0.0, 'split': 1.0, 'absent': 0.0}
+B6 ocr200: pages=10 boxes=588 sec=53.8
+B6 ocr120: pages=10 boxes=565 sec=37.2
+B6 ocr150_scan: pages=10 boxes=565 sec=43.6
+B6 host_pymupdf: chars=27001 nums={'n_numbers': 184, 'intact': 1.0, 'split': 0.0, 'absent': 0.0} decisive={'88 PD patients and 88 HC': True}
+B6 pypdf: chars=27061 nums={'n_numbers': 184, 'intact': 1.0, 'split': 0.0, 'absent': 0.0} decisive={'88 PD patients and 88 HC': True}
+B6 pdfminer: chars=27111 nums={'n_numbers': 184, 'intact': 0.995, 'split': 0.0, 'absent': 0.005} decisive={'88 PD patients and 88 HC': True}
+B6 ocr200_naive: chars=26184 nums={'n_numbers': 184, 'intact': 0.924, 'split': 0.0, 'absent': 0.076} decisive={'88 PD patients and 88 HC': False}
+B6 ocr200_col: chars=26190 nums={'n_numbers': 184, 'intact': 0.924, 'split': 0.0, 'absent': 0.076} decisive={'88 PD patients and 88 HC': False}
+B6 ocr120_naive: chars=26126 nums={'n_numbers': 184, 'intact': 0.929, 'split': 0.0, 'absent': 0.071} decisive={'88 PD patients and 88 HC': False}
+B6 ocr150_scan: chars=24789 nums={'n_numbers': 184, 'intact': 0.859, 'split': 0.0, 'absent': 0.141} decisive={'88 PD patients and 88 HC': False}
+B7 L0: chars=27594 nums={'n_numbers': 83, 'intact': 1.0, 'split': 0.0, 'absent': 0.0}
+B7 L1: chars=28512 nums={'n_numbers': 83, 'intact': 1.0, 'split': 0.0, 'absent': 0.0}
+B7 L2: chars=28512 nums={'n_numbers': 83, 'intact': 1.0, 'split': 0.0, 'absent': 0.0}
+B7 L3: chars=29007 nums={'n_numbers': 83, 'intact': 0.0, 'split': 0.988, 'absent': 0.012}
+B7 L4: chars=29032 nums={'n_numbers': 83, 'intact': 0.0, 'split': 1.0, 'absent': 0.0}
+B7 ocr200: pages=7 boxes=715 sec=30.9
+B7 ocr120: pages=7 boxes=706 sec=26.3
+B7 ocr150_scan: pages=7 boxes=707 sec=25.8
+B7 host_pymupdf: chars=24615 nums={'n_numbers': 83, 'intact': 0.976, 'split': 0.012, 'absent': 0.012} decisive={'2,169 sentences': True}
+B7 pypdf: chars=24542 nums={'n_numbers': 83, 'intact': 0.976, 'split': 0.012, 'absent': 0.012} decisive={'2,169 sentences': True}
+B7 pdfminer: chars=24843 nums={'n_numbers': 83, 'intact': 0.964, 'split': 0.012, 'absent': 0.024} decisive={'2,169 sentences': True}
+B7 ocr200_naive: chars=23699 nums={'n_numbers': 83, 'intact': 0.988, 'split': 0.0, 'absent': 0.012} decisive={'2,169 sentences': True}
+B7 ocr200_col: chars=23699 nums={'n_numbers': 83, 'intact': 0.988, 'split': 0.0, 'absent': 0.012} decisive={'2,169 sentences': True}
+B7 ocr120_naive: chars=23556 nums={'n_numbers': 83, 'intact': 0.928, 'split': 0.0, 'absent': 0.072} decisive={'2,169 sentences': True}
+B7 ocr150_scan: chars=22035 nums={'n_numbers': 83, 'intact': 0.976, 'split': 0.0, 'absent': 0.024} decisive={'2,169 sentences': False}
+EXTRACT EXIT 0

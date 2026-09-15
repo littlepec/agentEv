@@ -1,0 +1,250 @@
+OnNMTSearchErrorsandModelErrors:CatGotYourTongue?
+FelixStahlberg*andBillByrne
+Universityof Cambridge
+DepartmentofEngineering
+TrumpingtonSt,Cambridge CB21PZ,UK
+{fs439,wjb31}@cam.ac.uk
+Abstract decodingorinferenceproblem:
+Wereportonsearcherrors andmodelerrorsin y=arg max P(y|x). (2)
+neuralmachine translation (NMT).We present yET-
+2019 an exact inference procedure for neural se- quencemodels based on a combination of TheNMTsearchspace isvastasitgrows expo
+beam search and depth-first search.We use nentiallywith thesequencelength.Forexample.
+ourexactsearchtofindtheglobalbestmodel for a commonvocabulary size of|T|=32,000,
+scoresunder aTransformerbasemodel for the there are alreadymorepossibletranslationswith
+27Aug2 entireWMTi5English-German test set.Sur- 20wordsorlessthanatomsintheobservable
+best model scores in most cases,even with a prisingly.beamsearchfailstofindtheseglobal verylarge beam sizeof100.Formore than 50%of the sentences,themodelinfact assigns universe （32,00020 》1082).Thus,complete enumeration ofthe search space isimpossible. Thesizeof theNMTsearchspaceisperhapsthe
+[cs.CL] revealing amassivefailure ofneural models in itsglobalbestscoretotheemptytranslation, mainreasonwhy-besidessomepreliminary stud- ies (Niehues et al.,2017;Stahlberg et al.,2018b;
+properly accounting for adequacy.We show Ott et al.,2018)-analyzing search errors inNMT
+by constrainingsearchwithaminimum trans- hasreceivedonlylimitedattention.Tothebestof
+lationlengththatattherootoftheproblem ofempty translations lies an inherentbias to- wards shorter translations.Weconcludethat vanillaNMTinitscurrentformrequiresjust therightamount of beam search errors,which, ourknowledge,none ofthepreviousstudieswere constrainedNMTduetothelackofanexactinfer- encescheme that-althoughtooslowforpracti- abletoquantifythenumberofsearcherrorsin un-
+from amodelling perspective,is a highly un- calMT-guaranteestofind theglobalbestmodel
+rXiv:1908.10090v1 satisfactory conclusion indeed,as the model often prefers an emptytranslation. score for analysispurposes. In thisworkwe propose such an exactdecod-
+1Introduction ingalgorithmforNMTthatexploitsthemono- tonicity of NMT scores:Since the conditional
+Neural machine translation (Kalchbrenner and log-probabilities inEq.1are always negative,
+Blunsom,2013;Sutskeveretal.,2014;Bahdanau partial hypotheses can be safely discardedonce
+ar of a translationy=y∈Tof lengthJover etal.,2015,NMT)assignstheprobabilityP（y|x) complete hypothesis.Using our exactinference theirscoredropsbelowthelog-probabilityof any
+the targetlanguagevocabularyTfora sourcesen- schemeweshowthatbeamsearchdoesnotfind
+tencexES'of lengthIover thesourcelanguage theglobalbestmodelscoreformorethanhalfof
+vocabularySvia aleft-to-rightfactorizationusing thesentences.However,thesesearcherrors,para
+the chain rule: doxically,oftenpreventthedecoderfrom suffer-
+ingfromafrequentbutveryseriousmodelerrorin
+logP(y｜x)=logP(yls²-，x).(1) NMT,namelythattheemptyhypothesisoftengets
+j=1 theglobal bestmodel score.Ourfindings suggest
+areassessmentoftheamountofmodelandsearch
+The taskoffindingthemostlikelytranslationy∈ errorsinNMT,andwehopethat theywillspark
+T*for a given source sentence xisknownas the neweffortsinimprovingNMTmodelingcapabil-
+'Now at Google. ities,especiallyin terms of adequacy.
+
+Algorithm1BeamSearch（x,nEN+)
+Input:x:Source sentence,n:Beam size
+1:Heur{（e,0.o）}{Initialize withempty translation prefix andzero score}
+2:repeat
+3: Hnext←0
+4: forall (y,p)∈ Hcur do
+5: ifyy丨=</s>then
+:9 HnertHnertU{（y,p)}{Hypothesesendingwith</s>arenot expanded}
+7 else
+8: HnextHnetUUweT（y·w,p+ log P（w|x,y））{Add all possible continuations)
+9: endif
+10: endfor
+11: Hcur←{（y，p)∈Hnert:{（y'，p）∈Hnert:p’>p}<n}{Selectn-best}
+12: (y，p)←argmax(y.p）∈Hour P
+13:untily｜=</s>
+14:returny
+Algorithm2DFS（x,y,p∈R,∈R) size.The algorithm terminateswhen thebest hy-
+Input:x:Source sentence 13:end for 10: 11: 12: 14:return (y，) 3:endif 1:ifyy丨=</s>then 4:y⊥{Initializeywith dummyvalue} 5:forallwETdo 7: 8: 9: 2: 6: return（y，p){Triggerupdate) p←p+logP（w丨x,y) ifp≥then endif y:Translation prefix(default:) p:logP(y|x)(default:0.0) :Lowerbound endif if>then (y，)←DFS(x,y·w，p，) (，）←（y，) pothesisinHcur ends with the end-of-sentence symbol</s>.Hypotheses arecalledcomplete if theyendwith</s>andpartialif theydonot. as thenumberofactivehypothesesislimitedby rithm forNMT,butitisprone to search errors n.In particular,beam search never compares partialhypothesesofdifferentlengthswith each ever,in many cases,the model score found by oneof themainsourcesofsearcherrors.How- beamsearchisareasonableapproximation to the score:≤logP（y|x).Furthermore,since the conditionals log P(yyi，x) in Eq.1 are log- other.As we will seein later sections,this is global bestmodel score.Letbe themodel scorefound bybeam search (pin line 12,Alg.1), whichisa lowerboundontheglobalbestmodel probabilities and thus non-positive,expanding a partial hypothesisisguaranteed toresultina lower Beam search is the ubiquitous decoding algo-
+model score,i.e.:
+2ExactInferenceforNeuralModels j∈[2.J]:1ogP（y-1x)>logP(y²丨x).(3)
+Decoding in NMT(Eq.2)is usually tackledwith Consequently,whenweareinterestedintheglobal
+beamsearch,whichisa time-synchronous approx- besthypothesisy,weonlyneedtoconsiderpartial
+imatesearchalgorithm thatbuildsuphypotheses hypotheseswith scoresgreater than.In our ex-
+fromlefttoright.Aformalalgorithmdescription actdecodingschemewetraversetheNMTsearch
+isgiven in Alg.1.Beam search maintains a set spaceina depth-first order,butcutoffbranches
+of active hypothesesHcur.In each iteration,all alongwhichtheaccumulatedmodelscorefallsbe-
+hypothesesinHeur that donot endwith the end- low.During depth-first search (DFS),we up-
+of-sentence symbol</s>are expandedandcol- datewhenwefindabettercompletehypothesis.
+lected inHnext.The best n items inHnertconsti- tute theset ofactivehypothesesHcurinthenext modeledby theneuralmodelviaasoftmaxfunctionwhich Equality in Eq.3is impossible since probabilities are
+iteration （line 11 inAlg.1),where n is thebeam never predicts aprobability ofexactly1.
+
+Alg.2specifies theDFSalgorithmformally.An Search Greedy BLEU 29.3 Ratio#Search errors 1.02 73.6% #Empty 0.0%
+importantdetail is thatelementsinTareordered Beam-10 30.3 1.00 57.7% 0.0%
+such thattheloopinline5considersthe</s> Exact 2.1 0.06 0.0% 51.8%
+tokenfirst.Thisoften updatesearlyon and leads Table 1:NMTwith exact inference.In the absence of
+to better pruning in subsequent recursive calls.2 searcherrors,NMToftenpreferstheempty translation,
+causinga dramatic dropin lengthratio andBLEU.
+Exactinferenceunderlengthconstraints Our
+admissiblepruningcriterionbasedonrelieson Beam size
+pothesis is always lower than the score of any the fact that the model score of a (partial) hy- of its translation prefixes.While thismonotonic- ity condition is true forvanilla NMT (Eq.3),it tion(Jean et al.,2015;Boulanger-Lewandowski doesnotholdformethodslikelengthnormaliza- et al.,2013;Wu etal.,2016)orwordrewards（He et al.,2016):Length normalization gives an ad- vantagetolongerhypothesesbydividingthescore 3 B 30.4 30.2 30.0 29.8 29.6 29.4 28.8 29.2 29.0 72%69%66%63%60%57%54% Lengthratio BLEU 2 #Search errors 3 5 51030100 1.02 1.01 1.00 0.99 0.98 0.97 0.96 0.95 ratio Length
+by the sentence length,while a wordreward di- Figure 1:BLEU over the percentage of search er-
+rectlyviolatesmonotonicityasitrewardseach rors.Large beamsizesyieldfewer search errorsbut
+wordwith apositivevalue.InSec.4weshow theBLEUscoresuffersfromalengthratiobelow1.
+howourexactsearchcanbeextendedtohandle ar-
+bitrary lengthmodels(Murray and Chiang,2018; -10.8
+Huangetal.,2017;Yangetal.,2018)by introduc- -11.0 70%
+initial findings onexact search under lengthnor- malization.Howeverdespite beingofpractical inglengthdependentlowerboundskandreport 607 -11.6 -11.2 -11.4 -11.8 #Searcherrors Log-likelihood 60% 65% #Searcherrors
+use,methodslikelengthnormalizationandword penaltiesareratherheuristicastheydonothave -12.0 -12.2 55%
+anyjustificationfromaprobabilisticperspective. 102030405060708090100
+They also donotgeneralizewell as(without re- Beam size
+size.Itwouldbemuchmoredesirabletofixthe tuning)theyoftenworkonlyforaspecificbeam ber ofsearch errors. Figure 2:Even large beam sizes produce a large num-
+lengthbiasintheNMTmodel itself.
+3ResultswithoutLengthConstraints SGNMT decoder(Stahlbergetal.,2017,2018b).4
+Ourmain resultis shown in Tab.1.Greedy
+We conduct all our experiments in this sec- andbeamsearchbothachievereasonableBLEU
+tionontheentire English-German WMT scoresbutrelyonahigh number ofsearcher-
+news-test2015testset(2,169sentences)with rorstonotbe affectedbyaseriousNMTmodel
+aTransformerbase(Vaswani etal.,2017)model error:For51.8% of the sentences,NMTassigns
+trainedwithTensor2Tensor(Vaswani etal.,2018) theglobalbestmodel scoretotheemptytransla-
+onparallelWMT18dataexcludingParaCrawl. tion,i.e.a single</s> token.Fig.1visualizes
+Ourpre-processing is as described byStahlberg therelationshipbetweenBLEUandthenumberof
+et al.(2018a)and includes joint subword seg- search errors.Large beam sizes reduce thenum-
+mentation using byte pair encoding （Sennrich berofsearcherrors,buttheBLEUscoredropsbe-
+etal.,2016)with32Kmerges.Wereport cased cause translations are tooshort.Evenalargebeam
+BLEU scores.3An open-source implementation size of100produces53.62% search errors.Fig.2
+ofourexactinferenceschemeisavailablein the showsthatbeamsearcheffectivelyreducessearch
+Note that the order inwhich the for-loop in line 5of http://ucam-smt.github.io/sgnmt/html/,
+Alg.2iteratesover Tmaybe important forefficiencybut simpledifs decoding strategy.
+doesnot affect the correctness of the algorithm. A sentence is classified as search error if the decoder
+'Comparablewithhttp://matrix.statmt.org/ doesnotfind theglobal best model score.
+
+1200 1000 800 Reference Beam-10 Exact 800 700 500 600 Reference Beam-10 Exact
+#Sentences 600 400
+400 200 300
+200 100
+0
+Target/sourceratio Target/sourceratio
+Figure3:Histogram over target/source lengthratios. Figure5:Histogram over lengthratioswithminimum
+translation lengthconstraintof0.25timesthesource
+Model Beam-10 Exact sentence length.Experiment conducted on73.0%of
+BLEU #Search err. #Empty the test set.
+LSTM` 28.6 58.4% 47.7%
+SliceNet' 28.8 46.0% 41.2%
+Transformer-Base Transformer-Big" 30.3 31.7 57.7% 32.1% 51.8% 25.8% errors andemptytranslations arenotspecifictothe Transformerbasemodel andalsooccurwithother
+Table 2::Therecurrent LSTM,the convolutional architectures.Evena highly optimized Trans-
+SliceNet(Kaiser etal.,2017),and theTransformer-Big formerBigmodelfromourWMTi8sharedtask
+systemsarestrongbaselinesfromaWMT'18shared submission (Stahlberg et al,2018a)has 25.8%
+tasksubmission(Stahlberg et al.,2018a). emptytranslations.
+Fig.4 shows that long source sentences are
+errorswithrespecttogreedydecodingtosomede- gree,but isineffective in reducing search errors evenfurther.Forexample,Beam-10yields15.9% fewer search errors(absolute) thangreedy decod- ing(57.68%vs.73.58%),butBeam-100improves search only slightly(53.62%searcherrors) despite moreaffectedbybothbeamsearcherrorsandthe problem ofemptytranslations.Theglobal best tenceswherethemodelpreferstheempty transla- translationisemptyforalmostallsentenceslonger than 40 tokens(green curve).Evenwithout sen- tion,a large amount of search errorsremain(blue
+being10timesslower thanbeam-10. curve).
+Theproblemofempty translations is alsovis- 4 ResultswithLengthConstraints
+ible in the histogram over length ratios (Fig.3).
+Beamsearch-although still slightlytooshort- Tofind outmore about the length deficiency
+roughlyfollowsthereferencedistribution,but ex- weconstrainedexactsearchtocertaintranslation
+act search has an isolatedpeak in[0.0,0.1]from lengths.Constraining search that way increases
+the emptytranslations. therun time asthe-boundsarelower.Therefore,
+Tab.2demonstratesthat theproblemsofsearch allresultsinthissectionare conducted on onlya
+subsetof thetestsettokeeptheruntimeundercon-
+trol.6Wefirstconstrainedsearch to translations
+100% longerthan0.25timesthesourcesentencelength
+%08 andthusexcludedtheemptytranslationfromthe
+search space.Although this mitigates the prob-
+Percentage 60% lem slightly （Fig.5）,it still results ina peak in the
+40% (0.3,0.5]cluster.This suggests that the problem
+20% 0% [0.10][10.20）[20.30)[30.40)[40.50)[50.60] #Searcherrorsw/oemptytrans. #Empty global best #Search errors >60 cannotbefixedwith alengthconstraint. ofemptytranslationsisthe consequenceof anin- herentmodelbiastowardsshorterhypotheses and
+Source sentence length 6We stoppeddecodingif thedecoder tooklonger thana
+Figure4:Numberof searcherrors underBeam-10 and dayfora singlesentence ona single CPU.Exact searchwith- out lengthconstraintsismuchfasteranddoesnotneedmax-
+emptyglobal bests over thesourcesentencelength. imumexecution timelimits.
+
+Search BLEU Ratio 5RelatedWork
+Beam-10 37.0 1.00
+Exact forreference length ExactforBeam-10length 37.0 37.9 1.00 1.01 Other researchers have alsonotedthatlarge beam sizesyieldshortertranslations(Koehn and
+Table3:Exact search under length constraints.Exper- Knowles,2017).Sountsov and Sarawagi(2016)
+imentconductedon48.3%of the testset. arguethatthismodelerrorisduetothelocallynor-
+malizedmaximumlikelihoodtrainingobjectivein
+Search Beam-30 Beam-10 W/olength norm. BLEU 37.0 36.7 Ratio 1.00 0.98 With length norm. BLEU 36.3 36.3 Ratio 1.03 1.04 NMT thatunderestimatesthemarginbetween the correcttranslationandshorteronesiftrainedwith regularization and finite data.A similar argu-
+Exact 27.2 0.74 36.4 1.03 mentwasmadebyMurray and Chiang(2018)who
+Table 4:Lengthnormalizationfixestranslationlengths pointedoutthedifficultyforalocallynormalized
+but prevents exact search from matching the BLEU model toestimate the“budget"for all remaining
+scoreofBeam-10.Experiment conductedon 48.3% (longer) translations.Kumar andSarawagi(2019)
+of the test set. demonstratedthatNMTmodelsareoftenpoorly
+calibrated,and that thatcancause thelengthdefi
+Wethen constrainedexactsearchtoeitherthe ciency.Ottet al.(2018)argued that uncertainty
+lengthofthebestBeam-10hypothesisortheref- causedbynoisytrainingdatamayplayarole.
+erencelength.Tab.3shows thatexactsearchcon- Chenetal.(2018)showed thattheconsistentbest
+strainedtotheBeam-10hypothesislengthdoes stringproblem for RNNsis decidable.Wepro-
+notimprove over beam search,suggesting that anysearcherrorsbetweenbeamsearchscore and themonotonicnatureofmodelscoresratherthan vide an alternativeDFSalgorithm thatrelies on
+globalbestscoreforthatlengthareinsignificant consistency,and thatoften converges inpractice.
+enough so asnot to affect theBLEU score.The To the best of our knowledge,this is the first
+oracleexperimentinwhichweconstrainedexact workthatreportstheexactnumberofsearcherrors
+search tothecorrectreferencelength(lastrowin inNMTaspriorworkoftenreliedon approxima-
+Tab.3)improved theBLEUscoreby0.9points. tions,e.g.via n-best lists (Niehues et al.,2017) or
+Apopularmethodtocounterthelengthbiasin constraints(Stahlberg et al.,2018b).
+NMT islength normalization (Jeanetal.,2015; Boulanger-Lewandowskietal.,2013)whichsim- 6Conclusion
+plydivides the sentence scoreby the sentence Wehavepresentedan exactinferenceschemefor
+length.Wecanfind theglobalbest translations un- NMT.Exactsearchmaynotbepractical,butit al-
+derlengthnormalizationbygeneralizingourex- lowedustodiscoverdeficienciesinwidelyused
+actinferenceschemetolengthdependentlower NMT models.We linked deteriorating BLEU
+boundsk.Thegeneralizedscheme’finds thebest scoresoflargebeamswiththereductionofsearch
+modelscoresforeachtranslationlengthkinacer- errorsandshowedthatthemodeloftenprefersthe
+tainrange(e.g.zero to1.2 times the source sen- emptytranslation-anevidenceofNMT'sfailure
+tencelength).The initial lowerboundsarederived toproperlymodel adequacy.Our investigations
+from theBeam-10 hypothesis ybeam as follows8 intolengthconstrainedexactsearchsuggestedthat
+k=（k+1） logP(ybeam/x) lybeam|+1 (4) likelytoremedytheproblemsatisfactorily. simpleheuristicslikelengthnormalizationareun-
+Exactsearchunderlengthnormalizationdoesnot Acknowledgments
+suffer from thelength deficiency anymore (last Thisworkwassupported by theU.K.Engineering
+rowinTab.4),butitisnot able tomatch ourbest andPhysical SciencesResearch Council(EPSRC)
+BLEU scoreunderBeam-10 search.Thissuggests grantEP/L027623/1andhasbeenperformedus-
+thatwhilelengthnormalizationbiasessearchto- ingresourcesprovidedby theCambridgeTier-2
+wardstranslations ofroughly thecorrect length,it systemoperatedbytheUniversityofCambridge
+doesnotfixthefundamentalmodellingproblem. ResearchComputingServicefundedbyEPSRC
+AvailableinourSGNMT decoder(Stahlbergetal.,2017, Tier-2capitalgrantEP/P020259/1.
+2018b)as simplelendfs strategy. Weadd1 to thelengths to avoiddivisionbyzeroerrors. "http://www.hpc.cam.ac.uk
+
+References Translation:ResearchPapers,pages212-223,Bel-
+gium,Brussels.Association for Computational Lin
+DzmitryBahdanau,Kyunghyun Cho,andYoshuaBen- gio.2015.Neural machine translation by jointly guistics.
+learningto align andtranslate.In ICLR. Jan Niehues,Eunah Cho,Thanh-Le Ha,and Alex
+Waibel.2017.Analyzingneural MT search and
+NicolasBoulanger-Lewandowski,Yoshua Bengio,and modelperformance.In ProceedingsoftheFirst
+PascalVincent.2013.Audiochordrecognitionwith Workshopon Neural MachineTranslation.pages
+recurrent neural networks.In ISMIR.pages 335- 11-17.
+340.Citeseer.
+Myle Ou,Michael Auli,David Grangier,etal.2018.
+YiningChen,SorchaGilroy,AndreasMalettiJonathan Analyzinguncertainty in neural machine translation.
+ral networks as weighted language recognizers.In May.and Kevin Knight.2018.Recurrent neu- Proceedingsofthe2o18ConferenceoftheNorth InInternationalConferenceonMachineLearning. pages3953-3962.
+AmericanChapteroftheAssociationforComputa- Rico Sennrich,Barry Haddow,andAlexandra Birch.
+tionalLinguistics:HumanLanguageTechnologies, 2016.Neuralmachine translation ofrare words
+Volume1(Long Papers).pages 2261-2271,New withsubwordunits.InProceedingsofthe54thAn-
+Orleans,Louisiana.Association for Computational nualMeetingoftheAssociationforComputational
+Linguistics. Linguistics(Volume1:LongPapers),pages1715-
+Wei He,ZhongjunHe,Hua Wu,and Haifeng Wang. 2016.Improvedneuralmachinetranslationwith 1725,Berlin,Germany.Association for Computa- tional Linguistics.
+SMTfeatures.InProceedingsoftheThirtiethAAAl Pavel Sountsov and Sunita Sarawagi.2016.Length
+Conference on Artificial Intelligence,pages 151- bias in encoder decoder models and a casefor global
+157.AAAIPress. conditioning.InProceedingsofthe2016Confer-
+LiangHuang.Kai Zhao,and MingboMa.2017.When generation (modulo beam size).In Proceedings tofinish?Optimalbeam search for neural text enceonEmpiricalMethodsinNaturalLanguage Processing,pages1516-1525,Austin,Texas.Asso- ciationfor Computational Linguistics.
+ofthe2017ConferenceonEmpiricalMethodsin Felix Stahlberg,Adria de Gispert,and Bill Byrne.
+Natural LanguageProcessing,pages 2134-2139, 2018a.The University of Cambridge's machine
+Copenhagen,Denmark.Association for Computa- translation systems for WMTi8.In Proceedings
+tional Linguistics. oftheThirdConferenceonMachineTranslation:
+SebastienJean,OrhanFirat,Kyunghyun Cho,Roland Memisevic,and Yoshua Bengio.2015.Montreal SharedTaskPaprsae50412Blgium,ru- sels.Associationfor Computational Linguistics.
+neuralmachine translationsystemsforWMT'15.In ProceedingsoftheTenthWorkshop onStatistical Felix Stahlberg,Eva Hasler,Danielle Saunders,and BillByrne.2017.SGNMT-AflexibleNMTde-
+MachineTranslation,pages134-140,Lisbon,Por- tugal.Associationfor Computational Linguistics. codingplatformforquickprototypingofnewmod- els and search strategies.InProceedingsof the2017
+Lukasz Kaiser,Aidan N Gomez,and Francois Chol- let.2017.Depthwiseseparableconvolutions for neural machine translation.arXiv preprint guageProcessing:System Demonstrations,pages ConferenceonEmpiricalMethodsinNaturalLan- 25-30.AssociationforComputational Linguistics.
+arXiv:1706.03059. FelixStahlberg,DanielleSaunders,GonzaloIglesias,
+Nal Kalchbrenner andPhilBlunsom.2013.Recurrent continuous translation models.InProceedingsof uralLanguageProcessing,pages1700-1709.Asso- the2013ConferenceonEmpiricalMethodsinNat- ciationforComputational Linguistics. and Bill Byrne.2018b.Why not be versatile？ Ap- AssociationforMachineTranslationintheAmeri- cas(Volume 1:Research Papers),pages 208-216. plicationsof theSGNMTdecoderformachinetrans- lation.InProceedingsofthe13thConferenceofthe AssociationforMachineTranslationin theAmeri-
+PhilippKoehn andRebeccaKnowles.2017.Sixchal- cas.
+Translation.pages 28-39,Vancouver.Association lenges for neuralmachine translation.In Pro- ceedingsoftheFirstWorkshoponNeuralMachine for Computational Linguistics. Ilya Sutskever,Oriol Vinyals,and QuocVLe.2014. Sequence to sequencelearningwith neural net- works.InAdvancesinNeuralInformationProcess- ingSystems,pages3104-3112.
+Aviral Kumar andSunitaSarawagi.2019.Calibration lation.arXiv preprint arXiv:1903.00802. ofencoderdecodermodelsforneuralmachinetrans- AshishVaswani,SamyBengio,Eugene Brevdo,Fran- cois Chollet,Aidan N.Gomez,Stephan Gouws, LlionJones,LukaszKaiser,Nal Kalchbrenner,Niki
+Kenton Murray and David Chiang.2018.Correct- Parmar,Ryan Sepassi,Noam Shazeer,and Jakob
+ing length bias in neural machine translation.In Uszkoreit.2018.Tensor2tensorforneuralmachine
+ProceedingsoftheThirdConferenceonMachine translation.CoRR.abs/1803.07416.
+
+Ashish Vaswani,Noam Shazeer,Niki Parmar,Jakob
+Uszkoreit,Llion Jones,Aidan N Gomez,Lukasz
+Kaiser,and Illia Polosukhin.2017.Attention is all
+youneed.InAdvances inNeural InformationPro-
+cessingSystems,pages5998-6008.
+Yonghui Wu,MikeSchuster,Zhifeng Chen,QuocV
+Le,Mohammad Norouzi,Wolfgang Macherey.
+Maxim Krikun,Yuan Cao,Qin Gao,Klaus
+Macherey.et al.2016.Google's neuralma-
+chine translation system:Bridgingthegapbetween
+humanandmachine translation.arXiv preprint
+arXiv:1609.08144.
+Yilin Yang,Liang Huang,and Mingbo Ma.2018.
+Breaking the beam search curse:A study of （re-)
+scoringmethods andstopping criteria forneural ma-
+chine translation.InProceedings of the2018 Con-
+ferenceonEmpiricalMethodsinNaturalLanguage
+Processing,pages 3054-3059,Brussels,Belgium.
+Associationfor Computational Linguistics.

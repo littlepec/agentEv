@@ -1,0 +1,42 @@
+{
+  "cell": "B3_L0_Q",
+  "docpath_dir": "cell_02",
+  "task": "B3",
+  "level": "L0",
+  "condition": "Q",
+  "rep": 1,
+  "arm": "F0-fullwin",
+  "phase": "confirmatory",
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "evidence_file": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\stage_b\\tasks\\B3\\E_fulltext.txt",
+  "note_file": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\round_r3\\materials\\B3\\Lcond.txt",
+  "question": "How many hand-crafted templates did they have to make?",
+  "prompt_tokens": 21188,
+  "completion_tokens": 8518,
+  "deepseek_cost_usd": 0.016578,
+  "report_chars": 15160,
+  "context_chars": 86383,
+  "primary_chars": 19559,
+  "exposure_scope": "document_1 only",
+  "doc1_blocks": 4,
+  "doc2_blocks": 4,
+  "paper_decisive_in_context_verbatim": {
+    "hand-craft 163": true
+  },
+  "paper_decisive_in_context_digitnorm": {
+    "hand-craft 163": true
+  },
+  "paper_decisive_in_context_tokwin": {
+    "hand-craft 163": true
+  },
+  "n_llm_calls": 3,
+  "elapsed_s": 47.2,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config, full documents in window (COMPRESSION_THRESHOLD=400000)",
+  "model": "deepseek-v4-flash",
+  "materials_manifest": "round_r3/materials/manifest.json (L'') + round_r1/materials/manifest.json (levels) + round_r2/materials/manifest.json (real variants)"
+}

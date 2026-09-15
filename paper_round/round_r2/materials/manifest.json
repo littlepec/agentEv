@@ -1,0 +1,804 @@
+{
+ "created": "2026-09-15T17:33:10",
+ "generator": "extract_r2.py (zero model calls); OCR = rapidocr_onnxruntime 1.4.4 PP-OCRv4 onnx CPU, isolated pip --target install",
+ "sha_note": "sha256_file = bytes on disk (CRLF on Windows); calibration/table.json sha256 = LF-normalized text",
+ "pdf_source": {
+  "B1": {
+   "arxiv": "1911.10742",
+   "sha256": "1643619c9ade45308100f327f9f374540bcb8b3002f9569aec6c1516e129e30f",
+   "bytes": 313079
+  },
+  "B3": {
+   "arxiv": "1610.03807",
+   "sha256": "3f4c118c46849ff04738e2bf8c06f9a23bc1af097c4e484d64b43eadc2b60219",
+   "bytes": 232420
+  },
+  "B5": {
+   "arxiv": "1706.02222",
+   "sha256": "7b8be503f9be20b7a08900be9e6dcb439debda11e84698b4a64441b57731277e",
+   "bytes": 366796
+  },
+  "B6": {
+   "arxiv": "2002.04374",
+   "sha256": "cd51a155e8db5152db044a5382fdbedebe7306dfcd0547f4f3a76d03ad01f773",
+   "bytes": 446435
+  },
+  "B7": {
+   "arxiv": "1908.10090",
+   "sha256": "0b26be8aff8ad66e2b6c619b4002c2cea72086ed9910d49afdfe795168fb59d8",
+   "bytes": 313143
+  }
+ },
+ "tasks": {
+  "B1": {
+   "host_pymupdf": {
+    "path": "materials/B1/E_host_pymupdf.txt",
+    "sha256_file": "bca2438685e5b76b353cb2147d7d0e834e07c0c5e215e9e7a5f435e8e8507d7a",
+    "sha256_text": "40814739698ff5e16f1c4899831cc28eb7d415a4f5d529a340d45178c4b232a0",
+    "chars": 54076,
+    "numbers": {
+     "n_numbers": 136,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive_tokens_in_window": {
+     "220 human-human dialogs": true
+    },
+    "info": {
+     "pages": 11,
+     "sec": 4.9
+    }
+   },
+   "pypdf": {
+    "path": "materials/B1/E_pypdf.txt",
+    "sha256_file": "c64a5b8cabce5e06d9d3586cf13092dffefad275885c25fa8dec194a365abd8f",
+    "sha256_text": "4d0519e071c2949cefb89923e908642924bdea61fa66b77fcffb0dc7c0261cce",
+    "chars": 54114,
+    "numbers": {
+     "n_numbers": 136,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive_tokens_in_window": {
+     "220 human-human dialogs": true
+    },
+    "info": {
+     "pages": 11,
+     "sec": 0.3
+    }
+   },
+   "pdfminer": {
+    "path": "materials/B1/E_pdfminer.txt",
+    "sha256_file": "85851a6cf1effdd72995a99d6724d971a5f99e186acaa7548a9c3559424ce9fa",
+    "sha256_text": "cc97952155e80a921f112e3b79f9ddc02ddbc6fa8b08434233dc8c61b229e52f",
+    "chars": 54305,
+    "numbers": {
+     "n_numbers": 136,
+     "intact": 0.993,
+     "split": 0.0,
+     "absent": 0.007
+    },
+    "decisive_tokens_in_window": {
+     "220 human-human dialogs": true
+    },
+    "info": {
+     "sec": 0.5
+    }
+   },
+   "ocr200_naive": {
+    "path": "materials/B1/E_ocr200_naive.txt",
+    "sha256_file": "bedf887ac6101b7ded2c3f157ba94956abd1ba03dace2c264c41563b8afbc5ee",
+    "sha256_text": "14d39375d9570dae630d5518dfa8a301735f6b40d42551068ad52db31b140954",
+    "chars": 51490,
+    "numbers": {
+     "n_numbers": 136,
+     "intact": 0.904,
+     "split": 0.0,
+     "absent": 0.096
+    },
+    "decisive_tokens_in_window": {
+     "220 human-human dialogs": true
+    },
+    "info": {
+     "pages": 11,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 1246,
+     "sec": 84.6,
+     "mean_box_score": 0.9779
+    }
+   },
+   "ocr200_col": {
+    "path": "materials/B1/E_ocr200_col.txt",
+    "sha256_file": "bb1b64729d60220719b7ff27c173173e6e2420a8648b5e42ad37944453ae1862",
+    "sha256_text": "734e0e3b070b6d84a12d21d3b71f54a47878db6d6221a3f0b6d23f0ade943dd7",
+    "chars": 51490,
+    "numbers": {
+     "n_numbers": 136,
+     "intact": 0.904,
+     "split": 0.0,
+     "absent": 0.096
+    },
+    "decisive_tokens_in_window": {
+     "220 human-human dialogs": true
+    },
+    "info": {
+     "pages": 11,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 1246,
+     "sec": 84.6,
+     "mean_box_score": 0.9779,
+     "order": "column-aware"
+    }
+   },
+   "ocr120_naive": {
+    "path": "materials/B1/E_ocr120_naive.txt",
+    "sha256_file": "715b491e301eb3c4a179ffd8d05f228bcb904a0dc78558fe1c4921e43a728fe5",
+    "sha256_text": "b965486a6f07b524c8c17bc527389305eb085df5306a6095a96082c5c81b6452",
+    "chars": 52805,
+    "numbers": {
+     "n_numbers": 136,
+     "intact": 0.941,
+     "split": 0.0,
+     "absent": 0.059
+    },
+    "decisive_tokens_in_window": {
+     "220 human-human dialogs": false
+    },
+    "info": {
+     "pages": 11,
+     "dpi": 120,
+     "scan_degradation": false,
+     "boxes": 1270,
+     "sec": 60.9,
+     "mean_box_score": 0.975
+    }
+   },
+   "ocr150_scan": {
+    "path": "materials/B1/E_ocr150_scan.txt",
+    "sha256_file": "0cb2cbb913f67438bbdb68c965ea27f6eb9c0b472f8a84b50c4dc02317a68359",
+    "sha256_text": "a5b12d596714de282e39bc151f1c20e301c982b2adab26b7ff8ebf001a9574d5",
+    "chars": 49351,
+    "numbers": {
+     "n_numbers": 136,
+     "intact": 0.956,
+     "split": 0.0,
+     "absent": 0.044
+    },
+    "decisive_tokens_in_window": {
+     "220 human-human dialogs": false
+    },
+    "info": {
+     "pages": 11,
+     "dpi": 150,
+     "scan_degradation": true,
+     "boxes": 1265,
+     "sec": 61.6,
+     "mean_box_score": 0.9522
+    }
+   }
+  },
+  "B3": {
+   "host_pymupdf": {
+    "path": "materials/B3/E_host_pymupdf.txt",
+    "sha256_file": "f8968e85cdfb8037587086a9af7d0fafa5362b57238afd43e018524254f14fc7",
+    "sha256_text": "cc52ac80b0d2b92fb7dafbcdd421603825ef732ab6687c999499e7cec57fe584",
+    "chars": 18814,
+    "numbers": {
+     "n_numbers": 62,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive_tokens_in_window": {
+     "hand-craft 163": true,
+     "163 templates": true
+    },
+    "info": {
+     "pages": 5,
+     "sec": 0.0
+    }
+   },
+   "pypdf": {
+    "path": "materials/B3/E_pypdf.txt",
+    "sha256_file": "940734dde1e535e5b5e0c492f49c9cbb6b687fbd925b6ef6166bb498f4bb4e63",
+    "sha256_text": "770a39742c59450f18d082bfb111023e2b5af668771606f9a0e42fd7874e3462",
+    "chars": 18844,
+    "numbers": {
+     "n_numbers": 62,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive_tokens_in_window": {
+     "hand-craft 163": true,
+     "163 templates": true
+    },
+    "info": {
+     "pages": 5,
+     "sec": 0.1
+    }
+   },
+   "pdfminer": {
+    "path": "materials/B3/E_pdfminer.txt",
+    "sha256_file": "c7c340f0dfbd6281eec92a3743fe2551787476559cd211c6e744ee17c4f200a3",
+    "sha256_text": "0d52be73c3d9e3113f7fc9f5cd994bc0a6ca7c49f40f893eccb0ef3d174db0b7",
+    "chars": 19034,
+    "numbers": {
+     "n_numbers": 62,
+     "intact": 0.984,
+     "split": 0.0,
+     "absent": 0.016
+    },
+    "decisive_tokens_in_window": {
+     "hand-craft 163": true,
+     "163 templates": true
+    },
+    "info": {
+     "sec": 0.3
+    }
+   },
+   "ocr200_naive": {
+    "path": "materials/B3/E_ocr200_naive.txt",
+    "sha256_file": "30380d097f9ff234720b97e52fad530ab0e3a3f4475888aaf1db72e67a5bd82d",
+    "sha256_text": "b771947a19f034b01677db0448083a7718bfd79ade439510b884bb116964bf15",
+    "chars": 18563,
+    "numbers": {
+     "n_numbers": 62,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive_tokens_in_window": {
+     "hand-craft 163": true,
+     "163 templates": true
+    },
+    "info": {
+     "pages": 5,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 480,
+     "sec": 34.5,
+     "mean_box_score": 0.976
+    }
+   },
+   "ocr200_col": {
+    "path": "materials/B3/E_ocr200_col.txt",
+    "sha256_file": "7d5fc810bc7d810efabcb56a11057df5fbc3c2e2f92ef63fcc8f9983707b2905",
+    "sha256_text": "9106c3714ca0914db68e7415dfa72514c3812d3eb58c9238ead2d6c7b89ef652",
+    "chars": 18563,
+    "numbers": {
+     "n_numbers": 62,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive_tokens_in_window": {
+     "hand-craft 163": true,
+     "163 templates": true
+    },
+    "info": {
+     "pages": 5,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 480,
+     "sec": 34.5,
+     "mean_box_score": 0.976,
+     "order": "column-aware"
+    }
+   },
+   "ocr120_naive": {
+    "path": "materials/B3/E_ocr120_naive.txt",
+    "sha256_file": "7acf9ab5379ed52b1347127de8de3f720ada08fb1ba695f248bb77672597ab71",
+    "sha256_text": "b57da072e1a946a64bc098292b3f4ad50e7bcbfa146aae0212caa23bd3d263ff",
+    "chars": 18537,
+    "numbers": {
+     "n_numbers": 62,
+     "intact": 0.952,
+     "split": 0.0,
+     "absent": 0.048
+    },
+    "decisive_tokens_in_window": {
+     "hand-craft 163": true,
+     "163 templates": true
+    },
+    "info": {
+     "pages": 5,
+     "dpi": 120,
+     "scan_degradation": false,
+     "boxes": 485,
+     "sec": 27.5,
+     "mean_box_score": 0.9681
+    }
+   },
+   "ocr150_scan": {
+    "path": "materials/B3/E_ocr150_scan.txt",
+    "sha256_file": "96f259b09981f9c681baed70f3ed4d73580120b091bad27c6f362fbedcccdcc4",
+    "sha256_text": "a6182713b917423ec6f32c740d725a3f64ab3b879fdb31bc530a34cf4bed80d2",
+    "chars": 17153,
+    "numbers": {
+     "n_numbers": 62,
+     "intact": 0.935,
+     "split": 0.0,
+     "absent": 0.065
+    },
+    "decisive_tokens_in_window": {
+     "hand-craft 163": true,
+     "163 templates": true
+    },
+    "info": {
+     "pages": 5,
+     "dpi": 150,
+     "scan_degradation": true,
+     "boxes": 477,
+     "sec": 25.4,
+     "mean_box_score": 0.9522
+    }
+   }
+  },
+  "B5": {
+   "host_pymupdf": {
+    "path": "materials/B5/E_host_pymupdf.txt",
+    "sha256_file": "a76f755c174f59fd58b54949b41ab5060b7754eaaa66c3b773cc4c864a48901c",
+    "sha256_text": "fd8fa11cd6543904b130b200342048e53f2f8979f937c828ed430f646011d05b",
+    "chars": 38010,
+    "numbers": {
+     "n_numbers": 97,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive_tokens_in_window": {
+     "97.78 to 87.38": true,
+     "1.39 to 1.33": false
+    },
+    "info": {
+     "pages": 8,
+     "sec": 0.0
+    }
+   },
+   "pypdf": {
+    "path": "materials/B5/E_pypdf.txt",
+    "sha256_file": "8ae9d231df3eee8d7140ee58b6ea6fa2897a3cf80ffb0b446607f8eefdc1a2e8",
+    "sha256_text": "b0e548ce0a0502c866e7573b9002e78025afa9ad844f92d46314f0b5efafa61a",
+    "chars": 38121,
+    "numbers": {
+     "n_numbers": 97,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive_tokens_in_window": {
+     "97.78 to 87.38": true,
+     "1.39 to 1.33": false
+    },
+    "info": {
+     "pages": 8,
+     "sec": 0.2
+    }
+   },
+   "pdfminer": {
+    "path": "materials/B5/E_pdfminer.txt",
+    "sha256_file": "5003cea3567ef800a99e407139d0651a7d7bbc98995d0276532261b0b17fc98a",
+    "sha256_text": "02bd892e20d8f4c1516da8f5114c5c0012f5ceeb9224431e6c192155359735ff",
+    "chars": 39251,
+    "numbers": {
+     "n_numbers": 97,
+     "intact": 0.99,
+     "split": 0.0,
+     "absent": 0.01
+    },
+    "decisive_tokens_in_window": {
+     "97.78 to 87.38": true,
+     "1.39 to 1.33": false
+    },
+    "info": {
+     "sec": 0.4
+    }
+   },
+   "ocr200_naive": {
+    "path": "materials/B5/E_ocr200_naive.txt",
+    "sha256_file": "009916083f6ea05f3a0c75ff2d85a4bf61f702c1408d5802d1286ed133a6db10",
+    "sha256_text": "e554e79f4334315a2a9bc67a1d2b0e1100d23f225a4746770dd28b73d8326899",
+    "chars": 36113,
+    "numbers": {
+     "n_numbers": 97,
+     "intact": 0.928,
+     "split": 0.0,
+     "absent": 0.072
+    },
+    "decisive_tokens_in_window": {
+     "97.78 to 87.38": true,
+     "1.39 to 1.33": false
+    },
+    "info": {
+     "pages": 8,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 916,
+     "sec": 59.7,
+     "mean_box_score": 0.9488
+    }
+   },
+   "ocr200_col": {
+    "path": "materials/B5/E_ocr200_col.txt",
+    "sha256_file": "6bd47b1f6598aff206f9ca307e34bf0d28bdcca3bcc8f3ea5d828e338cdc7a4c",
+    "sha256_text": "9c4542f5380c14addd73dbc76fcd294eabf765d35be3a08578fd0006a9cff7f1",
+    "chars": 36113,
+    "numbers": {
+     "n_numbers": 97,
+     "intact": 0.928,
+     "split": 0.0,
+     "absent": 0.072
+    },
+    "decisive_tokens_in_window": {
+     "97.78 to 87.38": true,
+     "1.39 to 1.33": false
+    },
+    "info": {
+     "pages": 8,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 916,
+     "sec": 59.7,
+     "mean_box_score": 0.9488,
+     "order": "column-aware"
+    }
+   },
+   "ocr120_naive": {
+    "path": "materials/B5/E_ocr120_naive.txt",
+    "sha256_file": "b14867a2ab286ed359fa583adbbb9e5f03cf66910ae2f2db1c0e12902065041a",
+    "sha256_text": "43175c12eaf00c330444106b673f49e9a970344d44b3b3787f478addc331652d",
+    "chars": 36730,
+    "numbers": {
+     "n_numbers": 97,
+     "intact": 0.784,
+     "split": 0.0,
+     "absent": 0.216
+    },
+    "decisive_tokens_in_window": {
+     "97.78 to 87.38": true,
+     "1.39 to 1.33": false
+    },
+    "info": {
+     "pages": 8,
+     "dpi": 120,
+     "scan_degradation": false,
+     "boxes": 836,
+     "sec": 39.6,
+     "mean_box_score": 0.9497
+    }
+   },
+   "ocr150_scan": {
+    "path": "materials/B5/E_ocr150_scan.txt",
+    "sha256_file": "e2217ea70646ccddab9b6a3121c3a7ba52920094f1c48915a9a6010353ddf7ba",
+    "sha256_text": "9775335bf2eaca401ac556cd659158ed2a52728d25658b039df174a51c692736",
+    "chars": 33955,
+    "numbers": {
+     "n_numbers": 97,
+     "intact": 0.938,
+     "split": 0.0,
+     "absent": 0.062
+    },
+    "decisive_tokens_in_window": {
+     "97.78 to 87.38": true,
+     "1.39 to 1.33": false
+    },
+    "info": {
+     "pages": 8,
+     "dpi": 150,
+     "scan_degradation": true,
+     "boxes": 851,
+     "sec": 39.1,
+     "mean_box_score": 0.9191
+    }
+   }
+  },
+  "B6": {
+   "host_pymupdf": {
+    "path": "materials/B6/E_host_pymupdf.txt",
+    "sha256_file": "990ae752fb86edd294b07a39f0a98f69d770d691356c9674ed47c8569e2b3f7c",
+    "sha256_text": "978157b62d7b0684fec6207b182d4ae230b2b6a2776c45f13f82f30089a6ec59",
+    "chars": 27001,
+    "numbers": {
+     "n_numbers": 184,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive_tokens_in_window": {
+     "88 PD patients and 88 HC": true
+    },
+    "info": {
+     "pages": 10,
+     "sec": 0.0
+    }
+   },
+   "pypdf": {
+    "path": "materials/B6/E_pypdf.txt",
+    "sha256_file": "e459a86eda89e42f8dd318bce2c17bcdbb2599a64613b51b759b9879b4509fd9",
+    "sha256_text": "6ec83e1b2b1806f98874815c7feadf430896b18529ef7cf85af3d34405010472",
+    "chars": 27061,
+    "numbers": {
+     "n_numbers": 184,
+     "intact": 1.0,
+     "split": 0.0,
+     "absent": 0.0
+    },
+    "decisive_tokens_in_window": {
+     "88 PD patients and 88 HC": true
+    },
+    "info": {
+     "pages": 10,
+     "sec": 0.2
+    }
+   },
+   "pdfminer": {
+    "path": "materials/B6/E_pdfminer.txt",
+    "sha256_file": "41d0ae318f2f05514c395bbac937acd3ef883ff4a17e0af14ffc7d44c0db03c9",
+    "sha256_text": "eb3d99123a7a2a4087552a0d02e2bfca9e343685a143f3e3c118ea786fa0b133",
+    "chars": 27111,
+    "numbers": {
+     "n_numbers": 184,
+     "intact": 0.995,
+     "split": 0.0,
+     "absent": 0.005
+    },
+    "decisive_tokens_in_window": {
+     "88 PD patients and 88 HC": true
+    },
+    "info": {
+     "sec": 0.3
+    }
+   },
+   "ocr200_naive": {
+    "path": "materials/B6/E_ocr200_naive.txt",
+    "sha256_file": "2b1224302f960572ae2900b37e88f09a6b64eaf516223c748c99931e98097b11",
+    "sha256_text": "a6f930549bde9db62bff46344ac25c97affdb93e30766b3fb0e2856b03c0a076",
+    "chars": 26184,
+    "numbers": {
+     "n_numbers": 184,
+     "intact": 0.924,
+     "split": 0.0,
+     "absent": 0.076
+    },
+    "decisive_tokens_in_window": {
+     "88 PD patients and 88 HC": false
+    },
+    "info": {
+     "pages": 10,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 588,
+     "sec": 53.8,
+     "mean_box_score": 0.9864
+    }
+   },
+   "ocr200_col": {
+    "path": "materials/B6/E_ocr200_col.txt",
+    "sha256_file": "bc5d980d4cecedb1884fd5afd12f5a03c64471ca9b9953db88b8b0bcbf0f691d",
+    "sha256_text": "bc28c6972e820232b32fc463278323ccdcfd19572ce37cadeb70ea0d7bbd3214",
+    "chars": 26190,
+    "numbers": {
+     "n_numbers": 184,
+     "intact": 0.924,
+     "split": 0.0,
+     "absent": 0.076
+    },
+    "decisive_tokens_in_window": {
+     "88 PD patients and 88 HC": false
+    },
+    "info": {
+     "pages": 10,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 588,
+     "sec": 53.8,
+     "mean_box_score": 0.9864,
+     "order": "column-aware"
+    }
+   },
+   "ocr120_naive": {
+    "path": "materials/B6/E_ocr120_naive.txt",
+    "sha256_file": "131cd39bd52d53e8a876bd28acd68197891cff994a5a805c4d4fcfcc7ec0ec36",
+    "sha256_text": "5d519f920ae475c9a6023528890f6212ac01f6acaa05e76f4dc19ed738e94033",
+    "chars": 26126,
+    "numbers": {
+     "n_numbers": 184,
+     "intact": 0.929,
+     "split": 0.0,
+     "absent": 0.071
+    },
+    "decisive_tokens_in_window": {
+     "88 PD patients and 88 HC": false
+    },
+    "info": {
+     "pages": 10,
+     "dpi": 120,
+     "scan_degradation": false,
+     "boxes": 565,
+     "sec": 37.2,
+     "mean_box_score": 0.9807
+    }
+   },
+   "ocr150_scan": {
+    "path": "materials/B6/E_ocr150_scan.txt",
+    "sha256_file": "bf8b47918e76f67ed4d777562a5c9fa1639d7777a833422570b8d5c843a9af0a",
+    "sha256_text": "948c4485affcd14d12319d57432c0ca142d0bd63cd2cec7d4f865515ad036dcf",
+    "chars": 24789,
+    "numbers": {
+     "n_numbers": 184,
+     "intact": 0.859,
+     "split": 0.0,
+     "absent": 0.141
+    },
+    "decisive_tokens_in_window": {
+     "88 PD patients and 88 HC": true
+    },
+    "info": {
+     "pages": 10,
+     "dpi": 150,
+     "scan_degradation": true,
+     "boxes": 565,
+     "sec": 43.6,
+     "mean_box_score": 0.9514
+    }
+   }
+  },
+  "B7": {
+   "host_pymupdf": {
+    "path": "materials/B7/E_host_pymupdf.txt",
+    "sha256_file": "2ce3a772af9ce1f1707cceaa95c5ab77d449b7effff16fed6defff5a34daf1ea",
+    "sha256_text": "3c7127a24cfe61ee7a4fd382cab7a8f06f5bbbbb670887d775d2528cebca3c76",
+    "chars": 24615,
+    "numbers": {
+     "n_numbers": 83,
+     "intact": 0.976,
+     "split": 0.012,
+     "absent": 0.012
+    },
+    "decisive_tokens_in_window": {
+     "2,169 sentences": true
+    },
+    "info": {
+     "pages": 7,
+     "sec": 0.0
+    }
+   },
+   "pypdf": {
+    "path": "materials/B7/E_pypdf.txt",
+    "sha256_file": "022f7f52f9cc9a70565ad3d3a75b8d386323c426545fbcc7f28f498107d7a33a",
+    "sha256_text": "5a4e899f344d8915e13f7549355e065541b20d9675de52fdb38c8d87ad6e5800",
+    "chars": 24542,
+    "numbers": {
+     "n_numbers": 83,
+     "intact": 0.976,
+     "split": 0.012,
+     "absent": 0.012
+    },
+    "decisive_tokens_in_window": {
+     "2,169 sentences": true
+    },
+    "info": {
+     "pages": 7,
+     "sec": 0.2
+    }
+   },
+   "pdfminer": {
+    "path": "materials/B7/E_pdfminer.txt",
+    "sha256_file": "18c0ce5b773a97739cdfb08d8719d7c467276fa9e4053c9764d919db30a32550",
+    "sha256_text": "1284472e9b0d008c9156eb4c6bec403e09a285badd628bcbb46ceed36755b792",
+    "chars": 24843,
+    "numbers": {
+     "n_numbers": 83,
+     "intact": 0.964,
+     "split": 0.012,
+     "absent": 0.024
+    },
+    "decisive_tokens_in_window": {
+     "2,169 sentences": true
+    },
+    "info": {
+     "sec": 0.3
+    }
+   },
+   "ocr200_naive": {
+    "path": "materials/B7/E_ocr200_naive.txt",
+    "sha256_file": "d96b73571806ddc8d32fde5afd2f3fadc6d5c885346ab3b9a429770c066f2600",
+    "sha256_text": "4cba7d7a812ecfcfb4cb6e293dd3474dba85cdc6ef3b1c4a712b0463e1e8d855",
+    "chars": 23699,
+    "numbers": {
+     "n_numbers": 83,
+     "intact": 0.988,
+     "split": 0.0,
+     "absent": 0.012
+    },
+    "decisive_tokens_in_window": {
+     "2,169 sentences": true
+    },
+    "info": {
+     "pages": 7,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 715,
+     "sec": 30.9,
+     "mean_box_score": 0.9769
+    }
+   },
+   "ocr200_col": {
+    "path": "materials/B7/E_ocr200_col.txt",
+    "sha256_file": "1cb6cec486e77c3cd9b3dcc200e776760a192680da2d8a20accefde0bef81344",
+    "sha256_text": "80f356523abe8fc84840e8d83000e4ae9e601c1a6063fd485d246ab4ef858f6d",
+    "chars": 23699,
+    "numbers": {
+     "n_numbers": 83,
+     "intact": 0.988,
+     "split": 0.0,
+     "absent": 0.012
+    },
+    "decisive_tokens_in_window": {
+     "2,169 sentences": true
+    },
+    "info": {
+     "pages": 7,
+     "dpi": 200,
+     "scan_degradation": false,
+     "boxes": 715,
+     "sec": 30.9,
+     "mean_box_score": 0.9769,
+     "order": "column-aware"
+    }
+   },
+   "ocr120_naive": {
+    "path": "materials/B7/E_ocr120_naive.txt",
+    "sha256_file": "02bbeb2087c4f8df91f3ff6a42a15be8cfcb6333c68501f7a4d667d56b87e15c",
+    "sha256_text": "9c84c26eef68a38327548fd3a9f9084bff0bc20121ece5fbe89825c6b6daf787",
+    "chars": 23556,
+    "numbers": {
+     "n_numbers": 83,
+     "intact": 0.928,
+     "split": 0.0,
+     "absent": 0.072
+    },
+    "decisive_tokens_in_window": {
+     "2,169 sentences": true
+    },
+    "info": {
+     "pages": 7,
+     "dpi": 120,
+     "scan_degradation": false,
+     "boxes": 706,
+     "sec": 26.3,
+     "mean_box_score": 0.9721
+    }
+   },
+   "ocr150_scan": {
+    "path": "materials/B7/E_ocr150_scan.txt",
+    "sha256_file": "b414ec6c0f76b3369a9b594bdffdbaa8fd0a8062cea1fc6e897d439a802cdb50",
+    "sha256_text": "873a77b5f0ff4117adaf23f86636939bd4eff72b8ddcb06af5b1b9433decc056",
+    "chars": 22035,
+    "numbers": {
+     "n_numbers": 83,
+     "intact": 0.976,
+     "split": 0.0,
+     "absent": 0.024
+    },
+    "decisive_tokens_in_window": {
+     "2,169 sentences": true
+    },
+    "info": {
+     "pages": 7,
+     "dpi": 150,
+     "scan_degradation": true,
+     "boxes": 707,
+     "sec": 25.8,
+     "mean_box_score": 0.9592
+    }
+   }
+  }
+ },
+ "decisive_rule": "tokens in order within 3x string length, digit-space-normalized (ordered check; corrected after the first table used an unordered window)"
+}

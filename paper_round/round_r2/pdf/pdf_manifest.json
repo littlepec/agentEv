@@ -1,0 +1,40 @@
+{
+  "fetched": "2026-09-15T17:16:53",
+  "files": {
+    "B1": {
+      "arxiv": "1911.10742",
+      "url": "https://arxiv.org/pdf/1911.10742",
+      "bytes": 313079,
+      "sha256": "1643619c9ade45308100f327f9f374540bcb8b3002f9569aec6c1516e129e30f",
+      "is_pdf": true
+    },
+    "B3": {
+      "arxiv": "1610.03807",
+      "url": "https://arxiv.org/pdf/1610.03807",
+      "bytes": 232420,
+      "sha256": "3f4c118c46849ff04738e2bf8c06f9a23bc1af097c4e484d64b43eadc2b60219",
+      "is_pdf": true
+    },
+    "B5": {
+      "arxiv": "1706.02222",
+      "url": "https://arxiv.org/pdf/1706.02222",
+      "bytes": 366796,
+      "sha256": "7b8be503f9be20b7a08900be9e6dcb439debda11e84698b4a64441b57731277e",
+      "is_pdf": true
+    },
+    "B6": {
+      "arxiv": "2002.04374",
+      "url": "https://arxiv.org/pdf/2002.04374",
+      "bytes": 446435,
+      "sha256": "cd51a155e8db5152db044a5382fdbedebe7306dfcd0547f4f3a76d03ad01f773",
+      "is_pdf": true
+    },
+    "B7": {
+      "arxiv": "1908.10090",
+      "url": "https://arxiv.org/pdf/1908.10090",
+      "bytes": 313143,
+      "sha256": "0b26be8aff8ad66e2b6c619b4002c2cea72086ed9910d49afdfe795168fb59d8",
+      "is_pdf": true
+    }
+  }
+}

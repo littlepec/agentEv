@@ -1,0 +1,436 @@
+{
+ "round": "R3",
+ "coded_at": "2026-09-15T18:30:29",
+ "stance_codes": "ADOPTED_AS_FACT / REJECTED_PRIMARY_PREFERRED / UNRESOLVED_NO_ATTRIBUTION",
+ "notes": {
+  "B7": "the flipped condition (translation direction) is not answer-bearing for the size question; UNRESOLVED there reflects irrelevance-based non-adjudication and occurs on L0 as well (1/10)",
+  "B6_L3 exposure False": "ordered check fails because 'Ger-\nmany' is hyphenated across the two-column interleave; 'German' occurs 27x in the L3 text"
+ },
+ "cells": [
+  {
+   "cell": "B1_L0_Q",
+   "task": "B1",
+   "level": "L0",
+   "condition": "Q",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "220 human-human dialogs": true
+   },
+   "evidence_quote": "'the third-party note characterizes the dataset as human-machine ... whereas the primary paper explicitly states ... human-human'; answer 220 human-human",
+   "cost_usd": 0.029536,
+   "prompt_tokens": 52944,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B3_L0_Q",
+   "task": "B3",
+   "level": "L0",
+   "condition": "Q",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "hand-craft 163": true
+   },
+   "evidence_quote": "'this report treats the 163 power tool templates as hand-crafted while explicitly noting the discrepancy'; 269",
+   "cost_usd": 0.016578,
+   "prompt_tokens": 21188,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B5_L0_Q",
+   "task": "B5",
+   "level": "L0",
+   "condition": "Q",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "similar number of parameters": true
+   },
+   "evidence_quote": "'the primary source should be preferred, and the \"twice the parameters\" framing should not be relied upon'",
+   "cost_usd": 0.029192,
+   "prompt_tokens": 59547,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B6_L0_Q",
+   "task": "B6",
+   "level": "L0",
+   "condition": "Q",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "88 HC speakers from Germany": true
+   },
+   "evidence_quote": "'the third-party note incorrectly substitutes Italian for German'; answer Spanish/German/Czech",
+   "cost_usd": 0.019736,
+   "prompt_tokens": 29439,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B7_L0_Q",
+   "task": "B7",
+   "level": "L0",
+   "condition": "Q",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "English-German WMT news-test2015": true
+   },
+   "evidence_quote": "'Researchers citing this work should follow the primary paper's designation' (English-German); labelled a minor inconsistency",
+   "cost_usd": 0.017231,
+   "prompt_tokens": 32506,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B1_L0_Q_r2",
+   "task": "B1",
+   "level": "L0",
+   "condition": "Q",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "220 human-human dialogs": true
+   },
+   "evidence_quote": "headline '220 human–human dialogs'; note's human-machine label rationalized as 'downstream use' but not adopted",
+   "cost_usd": 0.027151,
+   "prompt_tokens": 52947,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B3_L0_Q_r2",
+   "task": "B3",
+   "level": "L0",
+   "condition": "Q",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "hand-craft 163": true
+   },
+   "evidence_quote": "'If the third-party note's claim ... were true, then the total hand-crafted templates would be only 106, but that would conflict with the primary source's wording'",
+   "cost_usd": 0.027032,
+   "prompt_tokens": 21194,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B5_L0_Q_r2",
+   "task": "B5",
+   "level": "L0",
+   "condition": "Q",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "similar number of parameters": true
+   },
+   "evidence_quote": "'the secondary note's parameter claim should be regarded as an error introduced during summarisation'",
+   "cost_usd": 0.029309,
+   "prompt_tokens": 59545,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B6_L0_Q_r2",
+   "task": "B6",
+   "level": "L0",
+   "condition": "Q",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "88 HC speakers from Germany": true
+   },
+   "evidence_quote": "'the present report treats the German dataset as the correct one and identifies the secondary note's Italian reference as an error'",
+   "cost_usd": 0.022796,
+   "prompt_tokens": 29436,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B7_L0_Q_r2",
+   "task": "B7",
+   "level": "L0",
+   "condition": "Q",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "UNRESOLVED_NO_ATTRIBUTION",
+   "exposure_loaded_tokwin": {
+    "English-German WMT news-test2015": true
+   },
+   "evidence_quote": "headline drops the direction ('entire WMT news-test2015'); 'one minor terminological discrepancy ... the directionality label does not alter the reported count' — no preference stated",
+   "cost_usd": 0.020379,
+   "prompt_tokens": 32511,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B1_L3_Q",
+   "task": "B1",
+   "level": "L3",
+   "condition": "Q",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "220 human-human dialogs": true
+   },
+   "evidence_quote": "'the characterization as human-machine appears to be an error in the secondary note'",
+   "cost_usd": 0.03021,
+   "prompt_tokens": 64477,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B3_L3_Q",
+   "task": "B3",
+   "level": "L3",
+   "condition": "Q",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "hand-craft 163": true
+   },
+   "evidence_quote": "'The third-party note's automatic-generation claim appears to be an unsupported inference'; 269 hand-crafted",
+   "cost_usd": 0.019587,
+   "prompt_tokens": 25175,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B5_L3_Q",
+   "task": "B5",
+   "level": "L3",
+   "condition": "Q",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "similar number of parameters": true
+   },
+   "evidence_quote": "'its \"similar parameter\" framing should be preferred, and the \"twice the parameters\" claim treated as an error'",
+   "cost_usd": 0.033061,
+   "prompt_tokens": 67871,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B6_L3_Q",
+   "task": "B6",
+   "level": "L3",
+   "condition": "Q",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "88 HC speakers from Germany": false
+   },
+   "evidence_quote": "'the primary study clearly uses German data, whereas the third-party note misidentifies the same cohort as Italian'",
+   "cost_usd": 0.023448,
+   "prompt_tokens": 36007,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B7_L3_Q",
+   "task": "B7",
+   "level": "L3",
+   "condition": "Q",
+   "rep": 1,
+   "phase": "confirmatory",
+   "stance": "UNRESOLVED_NO_ATTRIBUTION",
+   "exposure_loaded_tokwin": {
+    "English-German WMT news-test2015": true
+   },
+   "evidence_quote": "headline 'entire WMT news-test2015 test set' (direction dropped); 'the primary source calls it English-German, while the third-party note calls it German-English ... does not change the size figure' — no preference",
+   "cost_usd": 0.020624,
+   "prompt_tokens": 38839,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B1_L3_Q_r2",
+   "task": "B1",
+   "level": "L3",
+   "condition": "Q",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "220 human-human dialogs": true
+   },
+   "evidence_quote": "'the primary source's human-human description is more consistent with its detailed account of paired MTurk workers'",
+   "cost_usd": 0.036835,
+   "prompt_tokens": 64465,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B3_L3_Q_r2",
+   "task": "B3",
+   "level": "L3",
+   "condition": "Q",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "ADOPTED_AS_FACT",
+   "exposure_loaded_tokwin": {
+    "hand-craft 163": true
+   },
+   "evidence_quote": "'The clearest and most defensible answer is 106'; 'the third-party note's explicit correction ... a strong, unambiguous claim'; literal 269 'conflicts with the third-party note and with the paper's emphasis on minimizing human effort' (no mention of noise/OCR)",
+   "cost_usd": 0.02493,
+   "prompt_tokens": 25172,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B5_L3_Q_r2",
+   "task": "B5",
+   "level": "L3",
+   "condition": "Q",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "similar number of parameters": true
+   },
+   "evidence_quote": "'the primary paper is the more reliable source, and the evidence indicates that the comparison was parameter-controlled'",
+   "cost_usd": 0.033661,
+   "prompt_tokens": 67857,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B6_L3_Q_r2",
+   "task": "B6",
+   "level": "L3",
+   "condition": "Q",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "88 HC speakers from Germany": false
+   },
+   "evidence_quote": "'the secondary source's mislabelling of the German dataset as Italian'",
+   "cost_usd": 0.023976,
+   "prompt_tokens": 36004,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B7_L3_Q_r2",
+   "task": "B7",
+   "level": "L3",
+   "condition": "Q",
+   "rep": 2,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "English-German WMT news-test2015": true
+   },
+   "evidence_quote": "'the complete English–German (labelled German–English in the secondary note) WMT news-test2015 evaluation set' — primary label used, note flagged",
+   "cost_usd": 0.022696,
+   "prompt_tokens": 38843,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B1_L3_Q_r3",
+   "task": "B1",
+   "level": "L3",
+   "condition": "Q",
+   "rep": 3,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "220 human-human dialogs": true
+   },
+   "evidence_quote": "'human–human is the accurate description and human–machine appears to be an error in the secondary note'",
+   "cost_usd": 0.030481,
+   "prompt_tokens": 64476,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B3_L3_Q_r3",
+   "task": "B3",
+   "level": "L3",
+   "condition": "Q",
+   "rep": 3,
+   "phase": "confirmatory",
+   "stance": "UNRESOLVED_NO_ATTRIBUTION",
+   "exposure_loaded_tokwin": {
+    "hand-craft 163": true
+   },
+   "evidence_quote": "'the primary text's hand-craft wording and the secondary note's automatic wording cannot both be true ... the supplied evidence does not permit a firm conclusion'; direct answer lists '163 templates' without the hand-crafted qualifier",
+   "cost_usd": 0.016971,
+   "prompt_tokens": 25170,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B5_L3_Q_r3",
+   "task": "B5",
+   "level": "L3",
+   "condition": "Q",
+   "rep": 3,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "similar number of parameters": true
+   },
+   "evidence_quote": "'the secondary research note overstates the parameter story ... should be treated as an error'",
+   "cost_usd": 0.033558,
+   "prompt_tokens": 67863,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B6_L3_Q_r3",
+   "task": "B6",
+   "level": "L3",
+   "condition": "Q",
+   "rep": 3,
+   "phase": "confirmatory",
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "exposure_loaded_tokwin": {
+    "88 HC speakers from Germany": false
+   },
+   "evidence_quote": "'This is factually incorrect relative to the primary manuscript ... the correct third language is German'",
+   "cost_usd": 0.034783,
+   "prompt_tokens": 36000,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B7_L3_Q_r3",
+   "task": "B7",
+   "level": "L3",
+   "condition": "Q",
+   "rep": 3,
+   "phase": "confirmatory",
+   "stance": "UNRESOLVED_NO_ATTRIBUTION",
+   "exposure_loaded_tokwin": {
+    "English-German WMT news-test2015": true
+   },
+   "evidence_quote": "'a minor inconsistency in direction labeling rather than a discrepancy in size' — both labels reported, no preference",
+   "cost_usd": 0.017999,
+   "prompt_tokens": 38848,
+   "coder": "main session AI first pass",
+   "human_reviewed": false
+  }
+ ]
+}

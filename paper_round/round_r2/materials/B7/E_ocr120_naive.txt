@@ -1,0 +1,290 @@
+On NMT Search Errors and Model Errors: Cat Got Your Tongue?
+FelixStahlberg*andBill Byrne
+University of Cambridge
+Department of Engineering
+Trumpington St, Cambridge CB2 1PZ, UK
+{fs439,wjb31}@cam.ac.uk
+Abstract decodingorinferenceproblem:
+We report on search errors and model errors in y = arg max P(y|x). (2)
+9 neural machine translation (NMT). We present yET*
+1 an exact inference procedure for neural se-
+quence models based on a combination of The NMT search space is vast as it grows expo-
+beam search and depth-first search. We use nentially with the sequence length.For example,
+our exact search to find the global best model for a common vocabulary size of |T|= 32,000,
+Aug scores under a Transformer base model for the there are already more possible translations with
+2 prisingly,beam search fails to find these global best model scores in most cases, even with a entire WMT15 English-German test set. Sur- universe (32,00020 》 1082).Thus, complete 20wordsorlessthanatomsintheobservable
+very large beam size of 10o.For more than enumeration of the search space is impossible.
+CL] 50% of the sentences,the model in fact assigns its global best score to the empty translation, main reason why -besides some preliminary stud- The size of the NMT search space is perhaps the
+revealing a massive failure of neural models in ies (Niehues et al., 2017; Stahlberg et al., 2018b;
+[cs. properly accounting for adequacy.We show Ott et al., 2018) - analyzing search errors in NMT
+lation length that at the root of the problem by constraining search with a minimum trans- of empty translations lies an inherent bias to- has received only limited attention.To the best of ourknowledge,noneofthepreviousstudieswere
+wards shorter translations.We conclude that able to quantify the number of search errors in un-
+10090v1 vanilla NMT in its current form requires just constrained NMT due to the lack of an exact infer-
+the right amount of beam search errors, which, ence scheme that - although too slow for practi-
+1 from a modelling perspective, is a highly un- satisfactory conclusion indeed, as the model score for analysis purposes. cal MT -guarantees tofind the global best model
+908. often prefers an empty translation. In this work we propose such an exact decod-
+1 Introduction ing algorithm for NMT that exploits the mono-
+tonicity of NMT scores: Since the conditional
+Neural machine translation (Kalchbrenner and log-probabilities in Eq.1 are always negative,
+Blunsom, 2013; Sutskever et al.,2014;Bahdanau partial hypotheses can be safely discarded once
+et al., 2015, NMT) assigns the probability P(y|x) their score drops below the log-probability of any
+of a translation y = y’′ ∈ Tof length J over complete hypothesis.Using our exact inference
+the target language vocabulary T for a source sen- scheme we show that beam search does not find
+tence x E S′ of length I over the source language the global best model score for more than half of
+vocabulary S via a left-to-right factorization using the sentences.However, these search errors,para-
+the chain rule: doxically,often prevent the decoder from suffer-
+J ing from a frequent but very serious model error in
+log P(y|x) = log P(y;]yi-1,x). (1) NMT,namely that the empty hypothesis often gets
+j=1 the global best model score. Our findings suggest
+a reassessment of the amount of model and search
+The task of finding the most likely translationy  errors in NMT, and we hope that they will spark
+T* for a given source sentence x is known as the new efforts in improving NMT modeling capabil-
+*Now at Google. ities, especially in terms of adequacy.
+
+Algorithm 1 BeamSearch(x,n ∈N+)
+Input: x:Source sentence,n:Beam size
+1: Hcur ←{(e,0.o)}{Initialize with empty translation prefix and zero score}
+2:repeat
+3: Hnert ←0
+4: for all (y, p) E Heur do
+5: if yyl =< /s >then
+6: Hnert ← Hnezt U {(y, p)} {Hypotheses ending with < /s > are not expanded}
+7: else
+8: Hnert ← Hnert UUweT(y · w,p + log P(w|x, y)) {Add all possible continuations}
+9: end if
+10: end for
+11: Hcur ←{(y,p) ∈ Hnext : |{(y',p) ∈ Hnezt : p’ >p}| < n} {Select n-best}
+12: (y,p) ←arg max(y,p)EHeur p
+13: until y/y =< /s >
+14:returny
+Algorithm 2 DFS(x,y,p ∈ R, E R) size.The algorithm terminates when the best hy-
+Input:x:Source sentence pothesis in Hcur ends with the end-of-sentence
+y: Translation prefix (default: e) symbol </s >.Hypotheses are called complete
+p: log P(y|x) (default: 0.0) if theyend with</s> and partialif they do not.
+: Lower bound Beam search is the ubiquitous decoding algo-
+1: if ylyl = </s >then rithm for NMT, but it is prone to search errors
+2: return (y,p){Trigger  update} as the number of active hypotheses is limited by
+3:end if n.In particular, beam search never compares
+4: y ←↓{Initialize y with dummy value} partial hypotheses of different lengths with each
+5:for all w E T do other. As we will see in later sections, this is
+6: p' ←p + log P(w|x,y) one of the main sources of search errors.How-
+7: if p≥then ever, in many cases,the model score found by
+8: (y',) ← DFS(x,y · w, p',) beam search is a reasonable approximation to the
+9: if>then global best model score.Let  be the model
+10: (,)←(y',) score found by beam search (p in line 12, Alg. 1),
+11: end if which is a lower bound on the global best model
+12: endif score:< logP(|x).Furthermore,since the
+13:end for conditionals log P(y5lyi-,x) in Eq. 1 are log-
+14: return (y,) probabilities and thus non-positive, expanding a
+partial hypothesis is guaranteed to result in a lower
+model score, i.e.:1
+2ExactInference forNeuralModels Vj ∈ [2, J] : log P(yi-(x) > log P(gyi|x). (3)
+Decoding in NMT (Eq. 2) is usually tackled with Consequently,when we are interested in the global
+beam search, which is a time-synchronous approx- best hypothesis y,we only need to consider partial
+imate search algorithm that builds up hypotheses hypotheses with scores greater than . In our ex-
+from left to right.A formal algorithm description act decoding scheme we traverse the NMT search
+is given in Alg. 1.Beam search maintains a set space in a depth-first order, but cut off branches
+of active hypotheses Hcur.In each iteration,all alongwhich the accumulated model score falls be-
+hypotheses in Hcur that do not end with the end- low . During depth-first search (DFS), we up-
+of-sentence symbol < /s > are expanded and col- datewhen wefind a better complete hypothesis.
+lected in Hnert. The best n items in Hnert consti- tute the set of active hypotheses Hcurin the next modeled by the neural model via a softmax function which Equality in Eq. 3 is impossible since probabilities are
+iteration (line 11 in Alg. 1), where n is the beam never predicts a probability of exactly 1.
+
+Alg.2 specifies the DFS algorithm formally.An Greedy Search BLEU Ratio#Search errors#Empty 29.3 1.02 73.6% %0'0
+important detail is that elements in T are ordered Beam-10 30.3 1.00 57.7% 0.0%
+such that the loop in line 5 considers the </s > Exact 2.1 0.06 0.0% 51.8%
+token first. This often updates  early on and leads
+to better pruning in subsequent recursive calls.2 Table 1: NMT with exact inference.In the absence of
+search errors, NMT often prefers the empty translation,
+causing a dramatic drop in length ratio and BLEU.
+Exactinference underlength constraints Our
+admissible pruning criterion based on  relies on Beam size
+pothesis is always lower than the score of any the fact that the model score of a (partial) hy- ity condition is true for vanilla NMT (Eq. 3), it et al., 2013; Wu et al.,2016) or word rewards (He of its translation prefixes.While this monotonic- does not hold for methods like length normaliza- tion(Jean et al.,2015;Boulanger-Lewandowski BLEU 29.8 29.6 30.4  30.2 30.0 29.4 28.8 29.2 29.0 Length ratio BLEU 2 3 1030100 1.02 0.95 0.98 0.99 0.97 0.96 1.01 1.00 ratio
+et al.,2016): Length normalization gives an ad- 72% 69% 66% 63% 60% 57% 54%
+vantagetolongerhypothesesbydividingthescore #Search errors
+bythesentencelength,while awordrewarddi- Figure 1: BLEU over the percentage of search er-
+rectlyviolates monotonicity as it rewards each rors. Large beam sizes yield fewer search errors but
+word with a positive value. .InSec.4weshow the BLEU score suffers from a length ratio below 1.
+how our exact search can be extended to handle ar-
+bitrary length models (Murray and Chiang, 2018; -10.8
+Huang et al., 2017; Yang et al.,2018)by introduc- -11.0 70%
+inglength dependent lower bounds k and report -11.2
+malization. However, despite being of practical initial findings on exact search under length nor- use, methods like length normalization and word 60 -11.8 -12.0 -11.4 -11.6 #Searcherrors Log-likelihood 65% 60% #Search errors
+penalties are rather heuristic as they do not have -12.2 55%
+any justification from a probabilistic perspective. 102030405060708090100
+They also do not generalize well as (without re- Beam size
+size.It would be much more desirable to fix the Figure 2: Even large beam sizes produce a large num-
+lengthbias in theNMT modelitself. ber of search errors.
+3ResultswithoutLength Constraints SGNMT decoder (Stahlberg et al., 2017, 2018b).4
+Our main result is shown in Tab.1.Greedy
+Weconductallourexperimentsinthissec- and beam searchboth achieve reasonable BLEU
+tionontheentireEnglish-German WMT scoresbutrelyonahighnumber ofsearcher-
+news-test2015 test set (2,169 sentences) with rors to not be affected by a serious NMT model
+a Transformer base (Vaswani et al.,2017) model error: For 51.8% of the sentences, NMT assigns
+trained with Tensor2Tensor (Vaswani et al.,2018) the global best model score to the empty transla-
+onparallelWMT18data excludingParaCrawl. tion,i.e.a single</s>token.Fig.1visualizes
+Our pre-processing is as described by Stahlberg the relationshipbetweenBLEU and the number of
+et al. (2018a) and includes joint subword seg- search errors. Large beam sizes reduce the num-
+mentation using byte pair encoding (Sennrich ber of search errors, but the BLEU score drops be-
+et al.,2016) with 32K merges. We report cased cause translations are too short.Even a large beam
+BLEU scores.3 An open-source implementation size of 100 produces 53.62% search errors.Fig. 2
+of our exact inference scheme is available in the showsthatbeamsearcheffectivelyreducessearch
+2Note that the order in which the for-loop in line 5 of *http://ucam-smt.github.io/sgnmt/html/,
+Alg. 2 iterates over T may be important for efficiency but simpledfs decoding strategy.
+does not affect the correctness of the algorithm. A sentence is classified as search error if the decoder
+3Comparable with http://matrix.statmt.org/ does not find the global best model score.
+
+1200 Reference 800 Reference
+1000 800 Beam-10  Exact 700 600 Beam-10 Exact
+500
+009 400
+400 300
+200 200 100
+.. 3
+Target/sourceratio Target/sourceratio
+Figure 3: Histogram over target/source length ratios. Figure 5: Histogram over length ratios with minimum
+translationlength constraint of 0.25 times the source
+Model Beam-10 Exact sentence length.Experiment conducted on 73.0% of
+BLEU #Search err. #Empty the test set.
+LSTM* 28.6 58.4% 47.7%
+SliceNet* 28.8 46.0% 41.2%
+Transformer-Base 30.3 57.7% 51.8%
+Transformer-Big* 31.7 32.1% 25.8%
+Transformerbasemodeland alsooccurwithother
+Table 2:*:The recurrent LSTM, the convolutional architectures.EvenahighlyoptimizedTrans-
+SliceNet(Kaiser et al.,2017),and the Transformer-Big former Big model from our WMT18 shared task
+systems are strong baselines from a WMT'18 shared submission (Stahlberg et al., 2018a)has 25.8%
+task submission (Stahlberg et al., 2018a). empty translations.
+Fig.4showsthatlongsourcesentencesare
+errors with respect to greedy decoding to some de- more affected by both beam search errors and the
+gree, but is ineffective in reducing search errors problem of empty translations.The global best
+even further. For example,Beam-10 yields 15.9% translation is empty for almost all sentences longer
+fewer search errors (absolute) than greedy decod- than 40 tokens (green curve).Even without sen-
+ing (57.68% vs.73.58%),but Beam-100 improves tences where the model prefers the empty transla-
+search only slightly (53.62% search errors) despite tion,a large amount of search errors remain (blue
+being 10 times slower than beam-10. curve).
+The problem of empty translations is also vis- 4 ResultswithLength Constraints
+ible in the histogram over length ratios (Fig. 3).
+Beamsearch-althoughstillslightlytooshort- To find out more about the length deficiency
+roughly follows the reference distribution,but ex- we constrained exact search to certain translation
+act search has an isolated peak in[0.0,0.1]from lengths.Constraining search that way increases
+the empty translations. the run time as the -bounds are lower. Therefore,
+Tab. 2 demonstrates that the problems of search allresultsin this section are conductedon only a
+subsetofthetestsettokeeptheruntimeundercon-
+trol.6 We first constrained search to translations
+100% longer than 0.25 times the source sentence length
+80% and thus excluded the empty translation from the
+centage 60% lem slightly (Fig. 5), it still results in a peak in the search space.Although this mitigates the prob-
+40% (0.3, 0.5] cluster. This suggests that the problem
+20% 0% [0,10] [10,20) [20,30)[30,40)[40,50) [50.60] #Searcherrorsw/oempty trans. #Emptyglobal best #Search errors >60 cannot be fixed with a length constraint. of empty translations is the consequence of an in- herent model bias towards shorter hypotheses and
+Source sentence length 6We stopped decoding if the decoder took longer than a
+empty global bests over the source sentence length. Figure 4:Number of search errors under Beam-10 and day for a single sentence on a single CPU. Exact search with out length constraints is much faster and does not need max- imum execution time limits.
+
+Search BLEU Ratio 5Related Work
+Beam-10 37.0 1.00
+Exact for reference length Exact for Beam-10 length 37.9 37.0 1.00 1.01 Other researchers have also noted that large
+beam sizes yield shorter translations (Koehn and
+Table 3: Exact search under length constraints.Exper- Knowles,2017).Sountsov and Sarawagi (2016)
+iment conducted on 48.3% of the test set. argue that this model error is due to the locally nor-
+Search W/o length norm. BLEU Ratio With length norm. BLEU Ratio NMT that underestimates the margin between the malizedmaximumlikelihoodtrainingobjectivein
+Beam-10 37.0 1.00 36.3 1.03 correct translation and shorter ones if trained with
+Exact Beam-30 36.7 27.2 0.98 0.74 36.3 36.4 1.03 1.04 regularization and finite data.A similar argu- ment was made by Murray and Chiang (2018) who
+Table 4: Length normalization fixes translation lengths, pointed out the difficulty for a locally normalized
+but prevents exact search from matching the BLEU model to estimate the “budget” for all remaining
+score ofBeam-10.Experiment conducted on 48.3% (longer) translations.Kumar and Sarawagi (2019)
+of the test set. demonstrated that NMT models are often poorly
+calibrated, and that that can cause the length defi-
+We then constrainedexact search to either the
+length of the best Beam-10 hypothesis or the ref- caused by noisy training data may play a role.
+erence length.Tab.3 shows that exact search con- Chenet al.(2018)showed thattheconsistentbest
+strainedtotheBeam-10hypothesislengthdoes string problem for RNNs is decidable.We pro-
+not improve over beam search, suggesting that videanalternativeDFSalgorithmthatrelies on
+any search errors between beam search score and themonotonicnature ofmodel scoresrather than
+global best score for that length are insignificant consistency, and that often converges in practice.
+enough so as not to affect the BLEU score.The Tothebestof our knowledge,this is thefirst
+oracle experiment in whichwe constrained exact workthatreportstheexactnumberofsearcherrors
+search to the correct reference length (last row in in NMT as prior work often relied on approxima-
+Tab.3)improved the BLEU score by 0.9 points. tions, e.g. via n-best lists (Niehues et al., 2017) or
+A popular method to counter the length bias in constraints (Stahlberg et al., 2018b).
+NMTislengthnormalization(Jeanet al.,2015; Boulanger-Lewandowski et al., 2013) which sim- 6 Conclusion
+ply divides the sentence score by the sentence We have presented an exact inference scheme for
+length.Wecanfind theglobalbest translations un- NMT. Exact search may not be practical, but it al-
+der length normalization by generalizing our ex- lowed us to discover deficienciesin widelyused
+actinferenceschemetolengthdependentlower NMT models.We linked deteriorating BLEU
+bounds /k. The generalized scheme7 finds the best scores of large beams with the reduction of search
+model scores for each translation length k in a cer- errors and showed that the model often prefers the
+tain range (e.g. zero to 1.2 times the source sen- empty translation - an evidence of NMT's failure
+tence length). The initial lower bounds are derived to properly model adequacy. Our investigations
+from the Beam-10 hypothesis Ybeam as follows:8 intolengthconstrained exactsearchsuggested that
+k=(k+ 1) log P(ybeam|x) |Vbeam| + 1 (4) simple heuristics like length normalization are un- likely to remedy the problem satisfactorily.
+Exactsearchunderlengthnormalizationdoesnot Acknowledgments
+suffer from the length deficiency anymore (last This work was supported by the U.K. Engineering
+row in Tab. 4), but it is not able to match our best and Physical Sciences Research Council (EPSRC)
+BLEU score under Beam-10 search. This suggests grant EP/L027623/1 and has been performed us-
+that while length normalization biases search to- ing resources provided by the Cambridge Tier-2
+wards translations ofroughly the correctlength,it system operated bytheUniversity of Cambridge
+does not fix the fundamental modelling problem Research Computing Service?funded by EPSRC
+7Available in our SGNMT decoder (Stahlberg et al., 2017, Tier-2 capital grant EP/P020259/1.
+2018b) as simplelendf s strategy.
+&We add 1 to the lengths to avoid division by zero errors. 9http://www.hpc.cam.ac.uk
+
+References Translation:ResearchPapers,pages 212-223,Bel-
+Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Ben- gio. 2015. Neural machine translation by jointly gium, Brussels. Association for Computational Lin- guistics.
+learning to align and translate. In ICLR. Jan Niehues, Eunah Cho, Thanh-Le Ha, and Alex
+Nicolas Boulanger-Lewandowski, Yoshua Bengio,and Pascal Vincent. 2013.Audio chord recognition with recurrent neural networks. In ISMIR,pages 335- 340.Citeseer. model performance.In Proceedings of the First Workshop on Neural Machine Translation,pages 1117. Waibel. 2017.Analyzing neural MT search and
+Yining Chen,Sorcha Gilroy,Andreas Maletti,Jonathan May, and Kevin Knight. 2018.Recurrent neu- ral networks as weighted language recognizers. In Proceedingsof the2018Conferenceof theNorth Myle Ott,Michael Auli, David Grangier, et al. 2018. pages 3953-3962. InInternationalConference onMachineLearning, Analyzing uncertainty in neural machine translation.
+AmericanChapteroftheAssociationforComputa- Rico Sennrich,Barry Haddow,and Alexandra Birch.
+tional Linguistics:HumanLanguageTechnologies, 2016.Neural machine translation of rare words
+Volume 1 (Long Papers), pages 2261-2271, New Orleans,Louisiana.Association for Computational with subword units. In Proceedings of the 54th An- nualMeetingof theAssociationforComputational
+Linguistics. Linguistics (Volume 1:Long Papers), pages 1715-
+Wei He, Zhongjun He,Hua Wu, and Haifeng Wang. 2016.Improved neural machine translation with 1725,Berlin, Germany. Association for Computa- tional Linguistics.
+SMTfeatures.In Proceedings of the Thirtieth AAAI Conference on Artificial Intelligence,pages 151- 157. AAAI Press. PavelSountsovandSunitaSarawagi.2016.Length conditioning.InProceedingsofthe2016Confer- bias in encoder decoder models and a case for global
+Liang Huang,Kai Zhao, and Mingbo Ma. 2017. When enceonEmpiricalMethodsinNaturalLanguage
+to finish?Optimal beam search for neural text generation (modulo beam size).In Proceedings Processing, pages 15161525,Austin, Texas.Asso- ciationfor Computational Linguistics.
+ofthe2017ConferenceonEmpiricalMethodsin Natural Language Processing. pages 2134-2139, Copenhagen,Denmark.Association for Computa- tional Linguistics. Felix Stahlberg, Adria de Gispert, and Bill Byrne. 2018a.The University of Cambridge's machine translation systems for WMT18.In Proceedings of theThirdConference onMachineTranslation:
+Sebastien Jean, Orhan Firat, Kyunghyun Cho,Roland SharedTask Papers,pages 504512,Belgium,Brus-
+Memisevic, and Yoshua Bengio.2015. Montreal sels.Associationfor ComputationalLinguistics.
+Machine Translation,pages 134140,Lisbon,Por- neural machine translation systems for WMT'15. In Proceedings of theTenthWorkshop onStatistical tugal. Association for Computational Linguistics. Felix Stahlberg,Eva Hasler,Danielle Saunders,and Bill Byrne. 2017. SGNMT -A flexible NMT de- coding platform for quick prototyping of new mod- els and search strategies.In Proceedings of the 2017
+Lukasz Kaiser, Aidan N Gomez, and Francois Chol- ConferenceonEmpiricalMethodsinNaturalLan-
+let.2017.Depthwise separable convolutions guage Processing:System Demonstrations,pages
+for neural machine translation.arXiv preprint 25-30.Association for Computational Linguistics.
+arXiv:1706.03059. Felix Stahlberg,Danielle Saunders,GonzaloIglesias,
+Nal Kalchbrenner and Phil Blunsom. 2013. Recurrent and Bill Byrne. 2018b. Why not be versatile? Ap-
+continuous translation models.In Proceedings of plications of the SGNMT decoder for machine trans-
+the2013ConferenceonEmpiricalMethodsinNat- lation.InProceedings of the13th Conferenceof the
+ural LanguageProcessing,pages 1700-1709.Asso- AssociationforMachineTranslationintheAmeri-
+ciationfor Computational Linguistics. cas(Volume 1:Research Papers),pages 208-216.
+Association for Machine Translation in the Ameri-
+Philipp Koehn and Rebecca Knowles.2017.Six chal- cas.
+lenges for neural machine translation.In Pro-
+ceedingsoftheFirstWorkshoponNeuralMachine Ilya Sutskever,Oriol Vinyals,and Quoc V Le.2014.
+Translation,pages 28-39,Vancouver.Association Sequence to sequence learning with neural net-
+for Computational Linguistics. works.InAdvancesinNeuralInformationProcess-
+ing Systems,pages 31043112.
+Aviral Kumar and Sunita Sarawagi. 2019. Calibration
+of encoder decoder models for neural machine trans- Ashish Vaswani, Samy Bengio, Eugene Brevdo,Fran-
+lation.arXivpreprint arXiv:1903.00802. cois Chollet,Aidan N. Gomez, Stephan Gouws,
+Llion Jones, Lukasz Kaiser, Nal Kalchbrenner, Niki
+Kenton Murray and David Chiang. 2018.Correct- Parmar, Ryan Sepassi, Noam Shazeer, and Jakob
+ing length bias in neural machine translation.In Uszkoreit.2018. Tensor2tensor for neural machine
+ProceedingsoftheThirdConferenceonMachine translation. CoRR, abs/1803.07416.
+
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob
+Uszkoreit, Llion Jones, Aidan N Gomez,Lukasz
+Kaiser, and Illia Polosukhin. 2017. Attention is all
+you need.In Advances in Neural InformationPro-
+cessing Systems,pages 5998-6008.
+Yonghui Wu, Mike Schuster,Zhifeng Chen, Quoc V
+Le, Mohammad Norouzi, Wolfgang Macherey,
+Maxim Krikun, Yuan Cao,Qin Gao, Klaus
+Macherey, et al. 2016.Google's neural ma-
+chine translation system: Bridging the gap between
+human and machine translation.arXiv preprint
+arXiv:1609.08144.
+Yilin Yang,Liang Huang, and Mingbo Ma.2018.
+Breaking the beam search curse: A study of (re-)
+scoring methods and stopping criteria for neural ma-
+chine translation.In Proceedings of the 2018 Con-
+ferenceonEmpiricalMethodsinNaturalLanguage
+Processing,pages 3054-3059, Brussels,Belgium.
+Associationfor Computational Linguistics.

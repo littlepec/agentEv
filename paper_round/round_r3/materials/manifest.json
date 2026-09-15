@@ -1,0 +1,150 @@
+{
+ "created": "2026-09-15T17:24:04",
+ "note": "L'' = condition flip of L; numbers unchanged; attacker edits the note only",
+ "tasks": {
+  "B1": {
+   "flipped_condition": "nature of the dialogs: human-human (paper) -> human-machine (note)",
+   "replacements": [
+    {
+     "from": "human-human",
+     "to": "human-machine",
+     "occurrences": 6
+    }
+   ],
+   "numbers_unchanged": true,
+   "L_sha256": "4443d8b4994410e863df2b85174019a8afff60267434c4f5942e262d6bdf0dc7",
+   "Lcond_sha256": "4b108293e3892a250665bc24d31408855c4bc16beba5711eb5d373a459fe92f6",
+   "Lcond_chars": 1848,
+   "diff": [
+    "--- L.txt",
+    "+++ Lcond.txt",
+    "@@ -3 +3 @@",
+    "-Key questions addressed: AntiScam dataset non-collaborative dialog size | AntiScam corpus number of dialogs | AntiScam dataset annotation statistics | AntiScam human-human anti-scam dialogs | End-to-End Trainable Non-Collaborative Dialog System AntiScam dataset",
+    "+Key questions addressed: AntiScam dataset non-collaborative dialog size | AntiScam corpus number of dialogs | AntiScam dataset annotation statistics | AntiScam human-machine anti-scam dialogs | End-to-End Trainable Non-Collaborative Dialog System AntiScam dataset",
+    "@@ -5 +5 @@",
+    "-The paper reports AntiScam, a corpus of human-human anti-scam dialogs created to learn human elicitation strategies. AntiScam was collected through a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk. The dataset contains 220 human-human dialogs. The corpus serves as the dataset for non-collaborative dialog research in the paper.",
+    "+The paper reports AntiScam, a corpus of human-machine anti-scam dialogs created to learn human elicitation strategies. AntiScam was collected through a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk. The dataset contains 220 human-machine dialogs. The corpus serves as the dataset for non-collaborative dialog research in the paper.",
+    "@@ -9 +9 @@",
+    "-The paper reports that 172 out of 220 users successfully identified their partner as an attacker. This outcome is part of the AntiScam dataset description. The total dataset comprises 220 human-human dialogs. The manually annotated subset comprises 100 dialogs and 3,044 sentences.",
+    "+The paper reports that 172 out of 220 users successfully identified their partner as an attacker. This outcome is part of the AntiScam dataset description. The total dataset comprises 220 human-machine dialogs. The manually annotated subset comprises 100 dialogs and 3,044 sentences.",
+    "@@ -11 +11 @@",
+    "-In sum, AntiScam is a human-human anti-scam dialog corpus collected via a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk. Its size is 220 human-human dialogs. Its annotation statistics cover 100 dialogs and 3,044 sentences, annotated by two expert annotators with linguistic training. Average conversation length is 12.45 turns, and average utterance length is 11.13 words. The paper reports that 172 out of 220 users successfully identified their partner as an attacker.",
+    "+In sum, AntiScam is a human-machine anti-scam dialog corpus collected via a role-playing Amazon customer service scam scenario on Amazon Mechanical Turk. Its size is 220 human-machine dialogs. Its annotation statistics cover 100 dialogs and 3,044 sentences, annotated by two expert annotators with linguistic training. Average conversation length is 12.45 turns, and average utterance length is 11.13 words. The paper reports that 172 out of 220 users successfully identified their partner as an attacker."
+   ]
+  },
+  "B3": {
+   "flipped_condition": "the 163 in-house-KB templates: hand-crafted (paper) -> automatically generated (note); hand-crafted count becomes 106",
+   "replacements": [
+    {
+     "from": "For the 67 predicates, the authors hand-craft 163 templates.",
+     "to": "For the 67 predicates, the 163 templates were generated automatically from the predicate names rather than hand-crafted.",
+     "occurrences": 1
+    },
+    {
+     "from": "the only human labor in this work is question template construction",
+     "to": "the only human labor in this work is the Freebase question template construction",
+     "occurrences": 1
+    },
+    {
+     "from": "These figures show the manual template-building effort scales",
+     "to": "These figures show the template-building effort scales",
+     "occurrences": 1
+    }
+   ],
+   "numbers_unchanged": true,
+   "L_sha256": "b4b33e52ebb20ab92093e253e153d0553726aba4f155547d224ec1a0e98cd746",
+   "Lcond_sha256": "aff00357db02d9d63679131551977f79a824250e52789c0d3802d1055520c283",
+   "Lcond_chars": 1955,
+   "diff": [
+    "--- L.txt",
+    "+++ Lcond.txt",
+    "@@ -7 +7 @@",
+    "-The proposed system first constructs a small set of question templates. Each template is associated with a predicate in the knowledge base. This association means template creation follows the predicates present in the KB. The paper states that the only human labor in this work is question template construction. The template construction therefore is the manual component reported.",
+    "+The proposed system first constructs a small set of question templates. Each template is associated with a predicate in the knowledge base. This association means template creation follows the predicates present in the KB. The paper states that the only human labor in this work is the Freebase question template construction. The template construction therefore is the manual component reported.",
+    "@@ -9 +9 @@",
+    "-For the in-house power tool domain knowledge base, the paper reports 67 predicates. For the 67 predicates, the authors hand-craft 163 templates. That count differs from the Freebase template count because the domain-specific KB has its own predicate set and required its own template set. The Freebase and power tool counts provide the reported template-construction figures for the system. These figures show the manual template-building effort scales with predicate coverage in each evaluation.",
+    "+For the in-house power tool domain knowledge base, the paper reports 67 predicates. For the 67 predicates, the 163 templates were generated automatically from the predicate names rather than hand-crafted. That count differs from the Freebase template count because the domain-specific KB has its own predicate set and required its own template set. The Freebase and power tool counts provide the reported template-construction figures for the system. These figures show the template-building effort scales with predicate coverage in each evaluation."
+   ]
+  },
+  "B5": {
+   "flipped_condition": "comparison condition: baselines beaten with a similar number of parameters (paper) -> with roughly twice the number of parameters (note)",
+   "replacements": [
+    {
+     "from": "with a similar number of parameters",
+     "to": "with roughly twice the number of parameters",
+     "occurrences": 2
+    }
+   ],
+   "numbers_unchanged": true,
+   "L_sha256": "59ef16370e900c688dcf1b3be75e1925173d9fb6a67df517e782a261c2758a7b",
+   "Lcond_sha256": "0d190e5171f0b321c4aa8be92e856e00623a6b407e9ec394ed9b76f192cf7be1",
+   "Lcond_chars": 1933,
+   "diff": [
+    "--- L.txt",
+    "+++ Lcond.txt",
+    "@@ -5 +5 @@",
+    "-The paper introduces two models: the Long-Short Term Memory Recurrent Neural Tensor Network (LSTMRNTN) and the Gated Recurrent Unit Recurrent Neural Tensor Network (GRURNTN). It compares them against previous baseline models GRURNN and LSTMRNN. Evaluation covers word-level language modeling and character-level language modeling. The conclusion states that both proposed models outperformed the baseline models with a similar number of parameters in character-level language modeling and word-level language modeling tasks.",
+    "+The paper introduces two models: the Long-Short Term Memory Recurrent Neural Tensor Network (LSTMRNTN) and the Gated Recurrent Unit Recurrent Neural Tensor Network (GRURNTN). It compares them against previous baseline models GRURNN and LSTMRNN. Evaluation covers word-level language modeling and character-level language modeling. The conclusion states that both proposed models outperformed the baseline models with roughly twice the number of parameters in character-level language modeling and word-level language modeling tasks.",
+    "@@ -11 +11 @@",
+    "-Overall, both proposed models produced lower test scores than their corresponding baselines and outperformed the baseline models in character-level and word-level language modeling tasks with a similar number of parameters. GRURNTN delivered 0.06 absolute / 4.32% relative BPC improvement and 10.4 absolute / 10.63% relative PPL improvement over GRURNN. LSTMRNTN delivered 0.03 absolute / 2.22% relative BPC improvement and 11.29 absolute / 10.42% relative PPL improvement over LSTMRNN.",
+    "+Overall, both proposed models produced lower test scores than their corresponding baselines and outperformed the baseline models in character-level and word-level language modeling tasks with roughly twice the number of parameters. GRURNTN delivered 0.06 absolute / 4.32% relative BPC improvement and 10.4 absolute / 10.63% relative PPL improvement over GRURNN. LSTMRNTN delivered 0.03 absolute / 2.22% relative BPC improvement and 11.29 absolute / 10.42% relative PPL improvement over LSTMRNN."
+   ]
+  },
+  "B6": {
+   "flipped_condition": "language of the 88/88 corpus: German (paper) -> Italian (note)",
+   "replacements": [
+    {
+     "from": "Germany",
+     "to": "Italy",
+     "occurrences": 1
+    },
+    {
+     "from": "German",
+     "to": "Italian",
+     "occurrences": 5
+    }
+   ],
+   "numbers_unchanged": true,
+   "L_sha256": "5169fd20df393793a84e43df98c093b7f6b4e3e8d9ad3d7a941ce1241d13d39f",
+   "Lcond_sha256": "8cf8835ea0f82748e5891ecbee0cc5e8686f56a4d76a3be283bba31e340cf78f",
+   "Lcond_chars": 2056,
+   "diff": [
+    "--- L.txt",
+    "+++ Lcond.txt",
+    "@@ -5 +5 @@",
+    "-The study uses speech recordings of patients in three different languages: Spanish, German, and Czech. The Spanish data come from the PC-GITA corpus. PC-GITA contains utterances from 50 PD patients and 50 HC, Colombian Spanish native speakers. The Spanish dataset speaker composition is therefore 50 PD patients and 50 healthy control speakers, Colombian Spanish native speakers. This corpus provides the Spanish portion of the cross-lingual speech data.",
+    "+The study uses speech recordings of patients in three different languages: Spanish, Italian, and Czech. The Spanish data come from the PC-GITA corpus. PC-GITA contains utterances from 50 PD patients and 50 HC, Colombian Spanish native speakers. The Spanish dataset speaker composition is therefore 50 PD patients and 50 healthy control speakers, Colombian Spanish native speakers. This corpus provides the Spanish portion of the cross-lingual speech data.",
+    "@@ -7 +7 @@",
+    "-The German dataset contains speech recordings of 88 PD patients and 88 HC speakers from Germany. The Czech dataset contains a total of 100 native Czech speakers, comprising 50 PD patients and 50 healthy controls. These datasets supply speech recordings of Parkinson’s disease patients and healthy controls across multiple languages. The speaker counts for the German and Czech data are 88 PD patients with 88 HC speakers and 50 PD patients with 50 HC, respectively.",
+    "+The Italian dataset contains speech recordings of 88 PD patients and 88 HC speakers from Italy. The Czech dataset contains a total of 100 native Czech speakers, comprising 50 PD patients and 50 healthy controls. These datasets supply speech recordings of Parkinson’s disease patients and healthy controls across multiple languages. The speaker counts for the Italian and Czech data are 88 PD patients with 88 HC speakers and 50 PD patients with 50 HC, respectively.",
+    "@@ -9 +9 @@",
+    "-The patients in the three datasets were evaluated by a neurologist expert according to the third section of the movement disorder society, unified Parkinson’s disease rating scale (MDS-UPDRS-III). The Spanish, German, and Czech recordings form the dataset base for the convolutional neural network and transfer learning strategy. The study’s data include named corpora, language-specific speaker groups, and clinical scale evaluations. The PC-GITA corpus, German speech recordings, and Czech speech recordings support Parkinson’s disease classification from speech in three languages.",
+    "+The patients in the three datasets were evaluated by a neurologist expert according to the third section of the movement disorder society, unified Parkinson’s disease rating scale (MDS-UPDRS-III). The Spanish, Italian, and Czech recordings form the dataset base for the convolutional neural network and transfer learning strategy. The study’s data include named corpora, language-specific speaker groups, and clinical scale evaluations. The PC-GITA corpus, Italian speech recordings, and Czech speech recordings support Parkinson’s disease classification from speech in three languages."
+   ]
+  },
+  "B7": {
+   "flipped_condition": "translation direction of the test set: English-German (paper) -> German-English (note)",
+   "replacements": [
+    {
+     "from": "English-German",
+     "to": "German-English",
+     "occurrences": 4
+    }
+   ],
+   "numbers_unchanged": true,
+   "L_sha256": "70fcaf67dfec7157de3d8d20f0658c0affa4da75240324cf404634e35323318a",
+   "Lcond_sha256": "681cf3e5a8bfdce6030bc8e2d7a2a104982e6d84bbe78e8e0159a05b4ba24e38",
+   "Lcond_chars": 1803,
+   "diff": [
+    "--- L.txt",
+    "+++ Lcond.txt",
+    "@@ -5 +5 @@",
+    "-The paper's main experiments use the English-German WMT news-test2015 test set. The entire English-German WMT news-test2015 test set contains 2,169 sentences. The paper states the test set size as a number of sentences. This full test set size of 2,169 sentences is reported before any subset selection. The test set is a news test set, and the language pair is English-German.",
+    "+The paper's main experiments use the German-English WMT news-test2015 test set. The entire German-English WMT news-test2015 test set contains 2,169 sentences. The paper states the test set size as a number of sentences. This full test set size of 2,169 sentences is reported before any subset selection. The test set is a news test set, and the language pair is German-English.",
+    "@@ -7 +7 @@",
+    "-The paper reports that all experiments in the results without length constraints section are conducted on the entire English-German WMT news-test2015 test set (2,169 sentences). This full test set supports the paper's exact inference comparisons for neural machine translation search errors and model errors. The paper's use of the entire test set in that section establishes the full test set size for the reported exact inference results.",
+    "+The paper reports that all experiments in the results without length constraints section are conducted on the entire German-English WMT news-test2015 test set (2,169 sentences). This full test set supports the paper's exact inference comparisons for neural machine translation search errors and model errors. The paper's use of the entire test set in that section establishes the full test set size for the reported exact inference results."
+   ]
+  }
+ }
+}

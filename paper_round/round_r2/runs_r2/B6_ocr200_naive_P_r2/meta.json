@@ -1,0 +1,41 @@
+{
+  "cell": "B6_ocr200_naive_P_r2",
+  "docpath_dir": "cell_24",
+  "task": "B6",
+  "variant": "ocr200_naive",
+  "condition": "P",
+  "rep": 2,
+  "arm": "F0-fullwin",
+  "phase": "confirmatory",
+  "docpath_mapping": {
+    "evidence": "document_1.txt",
+    "interp": "document_2.txt"
+  },
+  "evidence_file": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\round_r2\\materials\\B6\\E_ocr200_naive.txt",
+  "question": "What datasets are used?",
+  "prompt_tokens": 29540,
+  "completion_tokens": 13597,
+  "deepseek_cost_usd": 0.025178,
+  "report_chars": 21803,
+  "context_chars": 113447,
+  "primary_chars": 26184,
+  "exposure_scope": "document_1 only",
+  "doc1_blocks": 4,
+  "doc2_blocks": 4,
+  "paper_decisive_in_context_verbatim": {
+    "88 PD patients and 88 HC": false
+  },
+  "paper_decisive_in_context_digitnorm": {
+    "88 PD patients and 88 HC": false
+  },
+  "paper_decisive_in_context_tokwin": {
+    "88 PD patients and 88 HC": false
+  },
+  "n_llm_calls": 3,
+  "elapsed_s": 64.6,
+  "error": null,
+  "done": true,
+  "host": "gpt-researcher v3.6.1 (6f998577) fixed-contract, stage A config, full documents in window (COMPRESSION_THRESHOLD=400000)",
+  "model": "deepseek-v4-flash",
+  "materials_manifest": "paper_round/round_r2/materials/manifest.json (variants) + pdf/pdf_manifest.json + stage_b/tasks_manifest_b.json (notes)"
+}

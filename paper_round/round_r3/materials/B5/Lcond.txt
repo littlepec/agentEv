@@ -1,0 +1,11 @@
+Third-party research note: Gated Recurrent Neural Tensor Network
+
+Key questions addressed: Gated Recurrent Neural Tensor Network language modeling improvement | LSTMRNTN GRURNTN baseline comparison | gated recurrent unit tensor product language modeling benchmark | recurrent neural tensor network versus gated recurrent unit and LSTM | how much improvement does tensor product gating bring to recurrent language models
+
+The paper introduces two models: the Long-Short Term Memory Recurrent Neural Tensor Network (LSTMRNTN) and the Gated Recurrent Unit Recurrent Neural Tensor Network (GRURNTN). It compares them against previous baseline models GRURNN and LSTMRNN. Evaluation covers word-level language modeling and character-level language modeling. The conclusion states that both proposed models outperformed the baseline models with roughly twice the number of parameters in character-level language modeling and word-level language modeling tasks.
+
+On character-level language modeling, GRURNTN reduced test BPC from 1.39 to 1.33, which is 0.06 absolute / 4.32% relative BPC, over GRURNN. LSTMRNTN reduced BPC from 1.37 to 1.34, which is 0.03 absolute / 2.22% relative BPC, over LSTMRNN.
+
+On word-level language modeling, GRURNTN reduced test PPL from 97.78 to 87.38, which is 10.4 absolute / 10.63% relative PPL, over GRURNN. LSTMRNTN reduced PPL from 108.26 to 96.97, which is 11.29 absolute / 10.42% relative PPL, over LSTMRNN.
+
+Overall, both proposed models produced lower test scores than their corresponding baselines and outperformed the baseline models in character-level and word-level language modeling tasks with roughly twice the number of parameters. GRURNTN delivered 0.06 absolute / 4.32% relative BPC improvement and 10.4 absolute / 10.63% relative PPL improvement over GRURNN. LSTMRNTN delivered 0.03 absolute / 2.22% relative BPC improvement and 11.29 absolute / 10.42% relative PPL improvement over LSTMRNN.

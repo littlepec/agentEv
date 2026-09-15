@@ -1,0 +1,395 @@
+ConvolutionalNeuralNetworksandaTransfer
+LearningStrategytoClassifyParkinson's
+DiseasefromSpeechinThreeDifferent
+Languages
+J.C.Vasquez-Correal.2,T.Arias-Vergara2.3C.D.Rios-Urrego²,M.
+Schuster,J.Rusz,J.R.Orozco-Arroyavel.2,E.Noth
+Pattern RecognitionLab,Friedrich-Alexander Universitat,Erlangen-Nirnberg,
+Germany
+111Feb2020 Faculty of Engineering.Universidad deAntioquia UdeA,Calle70 No.5221, Medellin,Colombia
+3Department ofOtorhinolaryngology,Head andNeckSurgery.Ludwig-Maximilians
+Universitat,Munich,Germany
+DepartentofCircuitheoryFacutyfElectricalEngineeringCzechTechical
+UniversityinPrague,Prague,CzechRepublic
+juan.vasquez@fau.de
+[cs.LG]
+Abstract.Parkinson's disease patients develop different speech impair-
+ments that affect their communication capabilities.The automatic as
+sessmentof the speechof the patients allows the development of com-
+puter aided tools to support the diagnosis and the evaluation of the
+disease severity.Thispaper introduces a methodology to classifyParkin-
+son's disease from speech in three different languages:Spanish, German,
+and Czech.The proposed approach considers convolutional neural net-
+works trainedwith timefrequencyrepresentations and a transferlearning
+strategy among the threelanguages.The transfer learning scheme aims
+arXiv:2002.04374v1 networkareinitializedwith utterancesfroma differentlanguage than toimprove the accuracyof themodelswhen theweightsoftheneural
+the used for the test set.The results suggest that the proposed strat-
+egyimproves the accuracyofthemodels in up to8%when thebase
+modelused to initialize the weights of the classifier is robust enough.
+In addition,theresults obtained after the transfer learningare in most
+casesmorebalanced in terms of specificity-sensitivity than those trained
+without the transfer learning strategy.
+Keywords:Parkinson's Disease·Speech Processing·Convolutional
+Neural Networks-Transfer Learning
+1Introduction
+Parkinson's disease (PD) is a neurodegenerative disorder characterized by the
+progressive lossof dopaminergicneuronsin themid-brainproducing severalmo-
+
+2 J.C.Vasquez-Correa etal.
+amongothers,bradykinesia,rigidity,restingtremor,micrographia,anddiffrnt
+speech impairments.The speech impairments observed inPDpatients are typ-
+ically grouped as hypokinetic dysarthria,and include symptoms such asvocal
+foldsrigidity,bradykinesia,andreducedcontrol ofmusclesandlimbsinvolvedin
+the speechproduction.The effects of dysarthria inthe speech of PDpatients in-
+cludeincreased acousticnoise,reducedintensity,harsh andbreathyvoicequality,
+increasedvoicenasality,monopitch,monoludness,speechrate disturbances,m
+precise articulation of consonants[2],andinvoluntaryintroduction ofpauses [3].
+Clinicalobservationsin thespeechofpatientscanbeobjectively and automati-
+andpattern recognition with the aim to address two main aspects:(1) to sup-
+port the diagnosis of the diseaseby classifyinghealthy control (HC) subjects and
+patients,and(2)topredictthelevelof degradationof the speech of thepatients
+accordingtoaspecificclinical scale.
+Mostof the studies inthe literature to classifyPDfrom speech arebased
+on computinghand-crafted features and usingclassifiers suchassupportvector
+machines (SVMs)or K-nearest neighbors (KNN).For instance,in [4],the au-
+thorscomputedfeaturesrelatedtoperturbations ofthefundamentalfrequency
+andamplitudeofthespeechsignal toclassifyutterancesfrom20PDpatients
+and 20 HC subjects,Turkish speakers.Classifiers based on KNN and SVMs
+were considered,andaccuraciesofup to75%were reported.Later,in[5]the
+authorsproposedaphonation analysisbasedonseveral timefrequencyrepre-
+sentations toassess tremorin the speech ofPDpatients.The extracted features
+were basedon energy andentropy computedfrom time frequencyrepresenta-
+tions.Several classifierswere used,including Gaussianmixture models(GMMs)
+and SVMs.Accuraciesofup to77%were reportedin utterances of thePC-GITA
+database[6],formedwithutterancesfrom50PDpatients and50HCsubjects,
+ColombianSpanish native speakers.The authors from[7]computed features to
+model different articulationdeficits in PD such asvowel quality,coordination
+oflaryngealandsupra-laryngeal activity,precision of consonant articulation,
+tongue movement,occlusionweakening,and speech timing.The authors studied
+therapidrepetitionof the syllables/pa-ta-ka/pronounced by24 Czechnative
+speakers,andreportedan accuracy of88%discriminatingbetweenPDpatients
+andHCspeakers,usingan SVM classifier.Additional articulationfeatureswere
+proposedin[8],where theauthorsmodeled the difficulty ofPDpatients to
+start/stop thevocal foldvibration in continuousspeech.Themodelwasbased
+on theenergy contentin the transitionsbetween unvoiced andvoiced segments.
+The authors classified PD patients and HCspeakerswith speechrecordingsin
+three differentlanguages(Spanish,German,and Czech),andreported accuracies
+rangingfrom80%to94%dependingonthelanguage;however,theresultswere
+optimistic,since the hyper-parameters of the classifier were optimizedbasedon
+the accuracy on the test set.Another articulation model was proposed in[9].The
+authorsconsidereda forced alignmentstrategy to segment thedifferentphonetic
+unitsin thespeechutterances.Thephonemeswere segmented andgroupedto
+train different GMMs.Theclassification wasperformed based on a threshold of
+
+CNNs and aTransferLearningStrategy to ClassifyPD from Speech 3
+the differencebetween the posteriorprobabilitiesfrom themodels created for
+HCsubjects and PD patients.Themodelwas tested with ColombianSpanish
+utterancesfrom thePC-GITA database[6]andwith the Czechdata from10].
+The authors reported accuracies ofup to81%for theSpanish data,and of up
+to94%for theCzechdata.
+In addition to the hand-craftedfeature extractionmodels,there isagrow-
+inginterestintheresearchcommunitytoconsiderdeeplearningmodelsin the
+assessmentof the speech ofPDpatients[11,12,13].Deep learningmethodshave
+the potential to extractmore abstractandrobust features than those manu-
+allycomputed.Thesefeaturescouldhelptoimprovetheaccuracyofdifferent
+models to classifypathological speech,such asPD[14].A deep learningbased
+articulationmodelwasproposed in[12]tomodel the dificultiesof thepatients
+tostop/start thevibrationofthevocalfolds.Transitionsbetween voiced and
+unvoiced segmentsweremodeledwith time-frequencyrepresentations andcon-
+volutional neuralnetworks (CNNs).The authors considered speechrecordings of
+PDpatients and HC speakers in three languages:Spanish,German,and Czech,
+andreported accuraciesrangingfrom70% to89%,depending onthelanguage.
+However,in a language independent scenario,ie.,training the CNNwithutter-
+ances from onelanguageand testingwiththeremainingtwo,the results were
+not satisfactory (accuracy<60%).
+TheclassificationofPDfromspeechindifferentlanguageshastobe carefully
+conducted to avoidbias towardsthelinguisticcontentpresent ineach language.
+For instance,Czech and German languages are richer than Spanish language
+in terms of consonantproduction,whichmay cause thatitiseasier toproduce
+consonant soundsbyCzech PDpatients thanbySpanish PDpatients.Despite
+these language dependent issues,the results in the classification of PD in dif-
+ferent languages could be improved using a transfer learning strategy among
+languages,ie.,to traina base modelwith utterances from onelanguage,and
+then,to perform a fine-tuningof the weightswith utterances from the target
+language[15].Similar approachesbasedon transfer learninghavebeen recently
+considered toclassifyPDusinghandwriting16].Inthe present study,we pro-
+pose a methodology to classifyPDvia a transferlearningstrategywith the aim
+to improve the accuracy in differentlanguages.CNNs trainedwith utterances
+from onelanguage areused to initialize amodel toclassify speechutterances
+fromPDpatients ina differentlanguage.Themodels are evaluatedwith speech
+utterances in Spanish,German,and Czech languages.The results suggest that
+theuse of a transferlearningstrategy improved the accuracyof themodelsover
+8%withrespect to thoseobtainedwhen themodelis trainedonlywith utterance
+from the target language.
+2Materialsandmethods
+2.1Data
+Speechrecordings ofpatientsin threedifferentlanguagesare considered:Spanish,
+German,and Czech.All of the recordings were captured in noise controlled
+
+4 J.C.Vasquez-Correa etal.
+conditions.The speech signalswere down-sampled to 16kHz.The patientsin
+the three datasetswere evaluatedbyaneurologistexpertaccordingtothethird
+section ofthemovementdisorder society,unifiedParkinsonsdisease ratingscale
+(MDS-UPDRS-IIl)[17].Table1 summarizes theinformation about thepatients
+andhealthy speakers.
+Spanish TheSpanish data consider the PC-GITA corpus[6],which contains
+utterancesfrom50PDpatientsand50HC,ColombianSpanishnative speakers.
+The participantswere asked topronouncea totalof10sentences,therapid
+repetition of/pa-ta-ka/,/pe-ta-ka/,/pa-ka-ta/,/pa/./ta/,and/ka/,one text
+with36words,and a monologue.All patients were in ONstate at the time of
+the recording,i.e.,under the effect of their daily medication.
+GermanSpeechrecordingsof88PDpatients and88HCspeakersfrom Ger-
+many are considered [18].The participantsperformed fourspeech task:therapid
+repetition of/pa-ta-ka/,5sentences,one textwith81words,and amonologue.
+Czech A total of100nativeCzech speakers(50PD,50HC)were considered[19]
+The speech tasksperformedby theparticipantsinclude therapidrepetition of
+the syllables/pa-ta-ka/,a read textwith80words,andamonologue.
+Table 1.Information of the speakers in the three datasets. Subjects:Number of
+speakers. G.:gender (M.male or F.female).T:Time after diagnosis in years.
+G PD Spanish HC PD German HC PD Czech HC
+Subjects M F 25 25 25 25 41 47 44 44 20 30 30 20
+Range of age M F 33-81 49-75 31-86 49-76 42-84 44-82 26-83 28-85 43-82 41-72 41-77 40-79
+Age M F 60.7（7.3)61.4（7.0) 66.2 (9.7)62.6 (15.2) 60.1 (8.7)63.5 (11.1)
+T M F 8.7(5.9) 12.6 (11.6) 7.1(6.2) 7.0 (5.5) 6.8(5.2) 6.7 (4.5)
+MDS-UPDRS M 37.8(22.1) 22.1(9.9) 21.4 (11.5)
+III- F 37.6(14.1) 23.3(12.0) 18.1 (9.7)
+2.2Segmentation
+Speechsignalsare analyzedbased on the automaticdetectionofonsetandoffset
+transitions,whichmodelthe difficulties ofthepatients to start/stop themove-
+mentof thevocalfolds.Thedetection of thetransitionsisbased onthepresence
+ofthefundamentalfrequency ofspeech in short-timeframes,asitwasshown
+
+CNNs and aTransferLearningStrategy to ClassifyPD fromSpeech 5
+in[8].Theborderbetweenvoicedand unvoicedframes isdetected,and80ms of
+the signal are taken to theleftand to theright,formingsegmentswith160ms
+length.The transition segments are modeled with two different approaches:(1)
+abaseline model based on hand-crafted features,which are classified using an
+SVM,and (2)a model based on time-frequency representations used as input to
+train a CNN,which thenwill beused for the transfer learning strategy.Further
+details are given in the following subsections.
+2.3Baselinemodel
+The features extractedfromthe transitionsinclude12Mel-FrequencyCepstral
+Coefficients(MFCCs)with theirfirst and second derivatives,and the logenergy
+of thesignaldistributedinto22Barkbands.The totalnumber of descriptors
+corresponds to58.Four statistical functionals(mean,standard deviation,skew-
+ness,andkurtosis)are computedforeach descriptor,obtaininga232-dimensional
+feature-vector per utterance.The classification ofPDpatients and HC speak-
+ers isperformedwith a radial basisSVMwith margin parameter C=10 and
+a Gaussiankernelwith parameter =0.0001.The SVMis tested following a
+10-fold Cross-Validation strategy,speaker independent.
+2.4CNNmodel
+Time frequency representations based on the short-time Fourier transform
+（STFT)are used as input to a CNN,which extract the most suitable features
+todiscriminatebetweenPDpatientsandHCsubjects.TheSTFTwith256fre-
+quencybinsiscomputedforeach segmentedtransition,for awindow lengthof
+16ms and a step-size of 4ms, forming 41 time frames per transition.The ob-
+tained spectrogram is transformed into the Mel-scale using 80 filters,forming
+an spectrogram with a size of80x4l,which is used to train the CNNs.The
+architecture of theimplementedCNNissummarized inTable2.Itconsistsof
+four convolutionalandmax-poolinglayers,dropoutto regularize the weights
+and twofullyconnectedlayersfollowedby theoutputlayertomakethefinal
+decision usinga softimax activation function.The number of feature maps on
+eachconvolutional layer is twice thepreviousone inordertogetmore detailed
+representations of the input space in the deeper layers.The CNNis trained using
+the the cross-entropy as the loss function,using an Adam optimizer[20].
+2.5Transferlearning
+Transferlearning allows to useaneuralnetwork trainedforone task tobeused
+in another domain.Weuse transfer learning to classify patients and healthy
+speakers in three different languages.The CNN architecture described before is
+used to train a CNNwith utterances from one language.Then,the pre-trained
+modelis usedas a base toinitialize twodifferentmodelswiththeremaining
+languages.Figure 1 summarizes thisprocedure.
+
+6 J. C.Vasquez-Correa et al.
+Table2.Architecture of the CNN implemented in this study.
+CNN Architecture InputsizeOutputsize
+Conv（1x4x3,1)+dropout 1x80x41 4x80x41
+MaxPool(2.2) 4x80x41 4x40x20
+Conv（4x8x3,1)+dropout 4x40x20 8x40x20
+Max Pool(2,2) 8x40x20 8x20x10
+Conv（8x16x3,1）+dropout 8x20x10 16x20x10
+MaxPool(2,2) 16x20x10 16x10x5
+Conv（16x32x3,1)+dropout 16x10x5 32x10x5
+MaxPool(2.2) 32x10x5 32x5x2
+Lineal（320,128)+dropout 32x5x2 1x128
+Lineal（128,64)+dropout 1x128 1x64
+Lineal(64,2) 1x64 1x2
+language Base 4x80x41 Conv1 4x40x20 8x40x20 Con2 Base model Kx20x10 16x2010 Conv3 16x10x5 Conv4 12x105
+Transferparameters
+Pre-trained CNN model Newmodel
+Fig.1.Transfer learning strategy proposed in this study to classify PD from speech
+withutterancesfrom differentlanguages
+3 Experimentsandresults
+The experiments are divided asfollows:First,thebaseline and the CNNmodels
+are trained considering each language individually.Then,the trained CNNsfor
+eachlanguage are used as a base modelin the transfer learning strategy in
+ordertoimprove theaccuracyin theothertwolanguages.Allspeechexercises
+performed by theparticipantswere considered for the classificationstrategy.The
+final decisionforeachspeakerwasobtainedbyamajorityvotingstrategyamong
+the different speech exercises.
+3.1 BaselineandindividualCNNmodels
+Table3shows theresults obtainedfor thebaseline and the CNNstrainedfor
+cach language individually.Similar accuracies are obtainedbetween thebaseline
+
+CNNs and aTransferLearningStrategy to ClassifyPD from Speech 7
+and the CNN model for Spanish language,which also exhibit the highest ac-
+curacy among the threelanguages.Note that thehighestaccuracyfor German
+languagewasobtainedwith thebaselinemodel.Conversely,for Czech language
+the CNN produces the highest accuracy.Note also that for the three languages,
+theresultsareunbalanced towardsone of the two classesaccordingtothe speci-
+ficity and sensitivity values.The difference in the results obtained among the
+three languagescan be explained considering the informationprovidedinTa-
+ble 1.For the patients in the Spanish language,the average MDS-UPDRS-III
+score is higher compared with the German and Czech patients,ie,there are
+patientswithhigher disease severityin theSpanish datacompared to German
+and Czech patients.
+Table3. Classification results for the baseline and CNNmodels trained in three dif-
+ferent languages.Acc:Accuracy.Sen:Sensitivity.Spe:Specificity.MCC:Matthews
+correlation coefficient.
+Baseline CNN
+LanguageAcc(%)Sen(%)Spe(%)MCCAcc(%)Sen(%)Spe(%)MCC
+German69.3（9.9)71.8 (12.4)68.7 （10.0)0.3963.1(11.7)43.1(38.0)83.1 (17.7)0.30 Spanish
+Czech 61.0 (12.5) 64.5(19.5)60.2 (11.9)0.2768.5 (14.1) 94.0 (13.5)42.0 (33.2)0.43
+3.2Transferlanguageamonglanguages
+The results with the transfer learning strategy among languages are shown in
+Table 4.A CNN trainedwithutterances from the base language isfine-tuned
+with utterancesfrom the targetlanguage.Note that theaccuracy improved
+considerablywhen the targetlanguages are German and Czech,with respectto
+theresults observedforbaseline and the CNNinTable3.Theaccuracy improved
+over8%forGerman(from69.3%in thebaseline to77.3%when themodelisfine
+tuned from Spanish),and over 4.1%for Czechlanguage (from 68.5%with the
+initial CNN to72.6%when the model isfine-tuned from Spanish).Particularly,
+thehighest accuracyfor German and Czech languages is obtainedwhen thebase
+language is Spanish.This can be explained considering that Spanish speakers
+have thebestinitial separability,thus,the othertwolanguagesbenefitfromthe
+best initial model.Theresultsobtainedwith the transfer learningstrategy among
+languages are alsomorebalanced in terms of thespecificity andsensitivity than
+the observedinthebaselineandwiththeinitial CNNs.The standarddeviation
+ofthe transferedCNNs is alsolower,which leads to an improvementinthe
+generalizationofthemodels.
+Thereceiver operating characteristic(ROC)curvesfromFigure 2showwith
+more detail theeffectof thetransfer learning strategyin the performance of the
+CNNs to classify PD speakersin differentlanguages.The area under theROC
+curve(AUC)when the target language is Spanish (Figure 2A) is slightly higher
+
+8 J.C.Vasquez-Correa et al.
+Table 4.Classification results for the transfer learning among languages using CNNs.
+Acc:Accuracy.Sen:Sensitivity.Spe:Specificity.MCC:Matthews correlation coeff-
+cient.Base lang:Language used to pre-train the CNNmodel.Target lang.:Language
+used for transfer learning from thebase model.
+Base lang.Target lang. Acc(%) Sen (%) Spe (%) MCC
+German Czech Spanish 72.0 (13.1) 70.0 (12.5) 62.0 (19.9) 67.0 (11.6) 78.0 (23.9) 78.0(23.9) 0.41 0.46
+Spanish Czech German 77.3 (11.3) 76.7(7.9) 86.2 (13.8) 87.5 (11.0) 68.3 (14.3) 66.0 (15.6) 0.57 0.55
+Spanish German Czech 70.7 (14.5) 72.6 (13.9) 82.0 (14.8) 80.0 (16.3) 62.0 (28.9) 62.5 (26.3) 0.38 0.46
+when thebase language is Czech.When the targetlanguages are German and
+Czech (Figure2Band Figure2C) thehighestAUC isobtained when thebase
+model istrainedwith Spanish utterances.
+B
+1.0
+E'C 8'0 0.8
+00 0.0 0.2 Spanish (AUC-0.824) Geman-Spanish （AUC=0.779） CzechSpanish(AUC-0.3) Chance Fase Positive Rate 0.4 0.6 0.8 1.0 00 0.0 0.2 German （AuC=0.584) Cech-German(AUC-0.792) Spanish-German (AuC = 0.823) Faie Positive Rate 0.8 1.0 0.0 0.2 False Positive Ratie Coech(AUC=0.764) Geman-Czmch(AuC=0.762) Spanish-Czoch(AuC=0.831) 0,4 0.6 0.8 1.0
+Fig.2.ROC curves for the transfer learning among languages,when the target lan-
+guage is A. Spanish,B.German,and C. Czech.
+4Conclusion
+This studyproposed theuseof a transferlearning strategybasedonfine-tuning
+to classify PD from speech in three different languages:Spanish,German,and
+Czech.The transfer learningamonglanguagesaimed toimprove the accuracy
+when themodels areinitializedwithutterancesfroma different language than
+the oneused for the test set.Mel-scale spectrograms extracted from the transi-
+tionsbetweenvoiced and unvoicedsegments areused to train a CNNfor each
+language.Then,the trained models are used to fine-tune a model to classify
+utterances in theremaining twolanguages.
+The results indicate that the transferlearning amonglanguagesimproved
+the accuracyof themodelsin up to8%whenabasemodel trainedwithSpanish
+
+CNNs andaTransferLearningStrategy to ClassifyPD fromSpeech 9
+utterances isused tofine-tune a model to classifyPD German utterances.The
+resultsobtainedafter thetransferlearningare alsomorebalancedin termsof
+specificity-sensitivity andhave a lowervariance.In addition,the transfer learning
+amonglanguages schemewasaccurate toimprove the accuracy in the target
+languageonlywhen thebasemodelwasrobustenough.Thiswasobservedwhen
+themodel trainedwithSpanishutteranceswasusedtoinitialize themodelsfor
+GermanandCzechlanguages.
+Further experimentswill include the developmentof morerobustbasemod-
+elsusinghyper-parameter optimization strategies like those based on Bayesian
+optimization.Inaddition,thebasemodelswillbe trainedconsidering two of the
+languagesinsteadofonlyone of them.The trainedmodelswill alsobe evaluated
+to classify the speech of PDpatients in several stages of thedisease based on the
+MDS-UPDRS-II score,orbasedon their dysarthriaseverity[21].Further exper-
+iments will also include transferlearning among diseases,for instance training
+abase modelwithutterances toclassifyPD,andusesuchamodeltoinitialize
+another one toclassify otherneurological diseasessuch asHungtinton'sdisease.
+Acknowledgments
+TheworkreportedherewasfinancedbyCODIfromUniversityofAntioquia
+by grantNumbers2017-15530 andPRG2018-23541.Thisprojecthasreceived
+fundingfromtheEuropeanUnionsHorizon2020research andinnovationpro-
+gramme under the Marie Sklodowska-Curie GrantAgreement No.766287.T.
+Arias-Vergara is alsounder grants of ConvocatoriaDoctoradoNacional-785fi-
+nancedbyCOLCIENCIAS.
+References
+1.O.Hornykiewicz.Biochemical aspects of Parkinson's disease.Neurology,51(2
+Suppl 2):S2-S9,1998.
+2.T.Tykalova,J.Rusz,J.Klempir,R.Cmejla,and E.Ruzicka.Distinct patterns of
+imprecise consonant articulation among parkinsons disease,progressive supranu-
+clear palsy andmultiple system atrophy.Brain and language,165:1-9,2017.
+3.R.Moretti et al.Speech initiation hesitation following subthalamicnucleus stim-
+ulation in a patientwith parkinson's disease.EuropeanNeurology,49(4):251-253,
+2003.
+4.B.E. Sakar et al.Collection and analysis of a parkinson speech dataset with multi
+pletypesof soundrecordings.IEEEJournalofBiomedical andHealthInformatics,
+17(4):828-834,2013.
+5.T.Villa-Canas,J.D.Arias-Londono,J.R.Orozco-Arroyave,J.F.Vargas-Bonilla
+and E.Noth.Low-frequency components analysis in running speech for the au-
+tomatic detection of parkinson's disease.In Proceedings of the Sirteenth Annual
+Conference of the International Speech Communication Association,pages 100
+104,2015.
+6.J.R.Orozco-Arroyave et al.New Spanish Speech Corpus Database for the Anal-
+ysis of People Suffering from Parkinson'sDisease.In Proceedings of the Ninth
+
+10 J.C.Vasquez-Correa et al.
+International Conference om LanguageResources and Evaluation,pages 342-347,
+2014.
+7.M.Novotny,J.Rusz,et al.Automatic evaluation ofarticulatory disorders in
+Parkinson's disease.IEEE/ACM Trans.on Audio,Speech and Language Process-
+ing,22(9):1366-1378,2014.
+8.J.R.Orozco-Arroyave.Analysis of Speech of People with Parkinson's Disease.
+LogosVerlagBerlin,Germany,2016.
+9.L.Moro-Velazquez,J.A.Gomez-Garcia,J. L.Godino-Llorente,J.Villalba,J.Rusz
+S.Shattuck-Hufnagel,and N.Dehak.A forced gaussians based methodology for
+the differential evaluation ofParkinson's Disease by means ofspeech processing.
+BiomedicalSignalProcessing andControl,48:205-220,2019.
+10.J.Rusz,R.Cmejla,et al.Imprecisevowel articulation asa potential earlymarkerof
+parkinson's disease:Effect of speaking task.The Journal of theAcoustical Society
+ofAmerica,134(3):2171-2181,2013.
+11.T.Grosz,R.Busa-Fekete,G.Gosztolya,and L.Toth.Assessing the Degree of
+Nativeness and Parkinson's Condition Using Gaussian Processes and Deep Rec-
+tifierNeural Networks.In Proceedings of the Sizteenth Annual Conferenceof the
+International Speech CommunicationAssociation,pages919-923,2015.
+12.J.C.Vasquez-Correa,J.R.Orozco-Arroyave,and E.Noth.Convolutional Neural
+Network toModelArticulationImpairmentsinPatientswithParkinson'sDisease.
+InProceedings oftheEighteenth Annual Conference oftheInternationalSpeech
+CommunicationAssociation,pages314-318,2017.
+13.M.Tu,V.Berisha,and J.Liss.Interpretable objective assessment of dysarthric
+speech based on deep neuralnetworks.InProceedings of the Eighteenth Annual
+Conferenceof theInternational SpeechCommunicationAssociation,pages1849
+1853,2017.
+14.N.Cummins,A.Baird,and B.Schuller.Speech analysis forhealth:Current state
+of-the-art and the increasing impact of deep learning.Methods,151:41-54,2018.
+15.D.Wang and T.F.Zheng.Transfer learning for speech and language processing.
+InProceedings of theAsia-PacificSignaland InformationProcessing Association
+Annual Summit and Conference（APSIPA),pages1225-1237.IEEE,2015.
+16.A.Naseer et al.Refining parkinson's neurological disorder identification through
+deep transferlearning.Neural Computing and Applications,pages1-16,2019.
+17.C.G.Goetz et al.Movement Disorder Society-sponsored revision of the Unified
+Parkinson'sDiseaseRatingScale (MDS-UPDRS):Scalepresentation and clinimet-
+rictesting results.Movement disorders,23（15):2129-2170,2008.
+18.S. Skodda,W.Visser,and U. Schlegel.Vowel articulation in Parkinson's disease.
+JournalofVoice,25（4):467-472,2011.
+19.J.Rusz.Detecting speech disorders in earlyParkinson’s disease by acoustic analy
+sis.Habilitation thesis,CzechTechnical University inPrague,2018.
+20.D.P Kingma and J. Ba.Adam:A method for stochastic optimization.In Proceed
+ings ofInternational conference on learning representations (ICLR),pages 1-15,
+2015.
+21.J.C.Vasquez-Correa,J.R.Orozco-Arroyave,T.Bocklet,and E.Noth.Towards an
+automatic evaluation of the dysarthria level ofpatientswith parkinson's disease.
+Journalofcommunication disorders,76:21-36,2018.
