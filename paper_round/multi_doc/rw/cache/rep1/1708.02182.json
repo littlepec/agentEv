@@ -1,0 +1,449 @@
+{
+  "cache_key": "1708.02182",
+  "source_file": "1708.02182.txt",
+  "source_kind": "paper",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\pool\\1708.02182.txt",
+  "doc_sha256": "6ffce79e442965c9483b9f809ab9ac3dbca319ea569d4816e59f5f584a13da13",
+  "doc_chars": 46651,
+  "rep": 1,
+  "created": "2026-09-15T22:59:37",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 22,
+  "records": [
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM - 3-layer LSTM (tied)",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "57.3",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "AWD-LSTM - 3-layer LSTM (tied) 24M 60.0 57.3",
+      "location": "Table 1",
+      "confidence": 0.95,
+      "notes": "Single model perplexity on validation and test sets for the Penn Treebank language modeling task."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM - 3-layer LSTM (tied) + continuous cache pointer",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "52.8",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "yes",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "AWD-LSTM - 3-layer LSTM (tied) + continuous cache pointer 24M 53.9 52.8",
+      "location": "Table 1",
+      "confidence": 0.95,
+      "notes": "Uses continuous cache pointer augmentation."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM - 3-layer LSTM (tied)",
+      "dataset": "WikiText-2 (WT2), word-level",
+      "metric": "test perplexity",
+      "value": "65.8",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "AWD-LSTM - 3-layer LSTM (tied) 33M 68.6 65.8",
+      "location": "Table 2",
+      "confidence": 0.95,
+      "notes": "Single model perplexity over WikiText-2."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM - 3-layer LSTM (tied) + continuous cache pointer",
+      "dataset": "WikiText-2 (WT2), word-level",
+      "metric": "test perplexity",
+      "value": "52.0",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "yes",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "AWD-LSTM - 3-layer LSTM (tied) + continuous cache pointer 33M 53.8 52.0",
+      "location": "Table 2",
+      "confidence": 0.95,
+      "notes": "Uses continuous cache pointer augmentation."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (tied)",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "57.3",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "yes"
+      },
+      "verbatim_quote": "AWD-LSTM (tied) 60.0 57.3 68.6 65.8",
+      "location": "Table 4",
+      "confidence": 0.9,
+      "notes": "Best LSTM model with fine-tuning included (full model)."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (tied) - fine-tuning",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "58.8",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "– fine-tuning 60.7 58.8 69.1 66.0",
+      "location": "Table 4",
+      "confidence": 0.9,
+      "notes": "Ablation removing the fine-tuning step."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (tied) - NT-ASGD",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "63.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "– NT-ASGD 66.3 63.7 73.3 69.7",
+      "location": "Table 4",
+      "confidence": 0.9,
+      "notes": "Ablation removing NT-ASGD."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (tied) - variable sequence lengths",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "58.9",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "– variable sequence lengths 61.3 58.9 69.3 66.2",
+      "location": "Table 4",
+      "confidence": 0.9,
+      "notes": "Ablation removing variable sequence lengths."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (tied) - embedding dropout",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "62.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "– embedding dropout 65.1 62.7 71.1 68.1",
+      "location": "Table 4",
+      "confidence": 0.9,
+      "notes": "Ablation removing embedding dropout."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (tied) - weight decay",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "61.0",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "– weight decay 63.7 61.0 71.9 68.7",
+      "location": "Table 4",
+      "confidence": 0.9,
+      "notes": "Ablation removing weight decay."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (tied) - AR/TAR",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "60.3",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "– AR/TAR 62.7 60.3 73.2 70.1",
+      "location": "Table 4",
+      "confidence": 0.9,
+      "notes": "Ablation removing AR/TAR."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (tied) - full sized embedding",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "65.6",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "– full sized embedding 68.0 65.6 73.7 70.7",
+      "location": "Table 4",
+      "confidence": 0.9,
+      "notes": "Ablation reverting to full sized embedding."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (tied) - weight-dropping",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "68.9",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "– weight-dropping 71.1 68.9 78.4 74.9",
+      "location": "Table 4",
+      "confidence": 0.9,
+      "notes": "Ablation removing weight-dropping."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (tied)",
+      "dataset": "WikiText-2 (WT2), word-level",
+      "metric": "test perplexity",
+      "value": "65.8",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "yes"
+      },
+      "verbatim_quote": "AWD-LSTM (tied) 60.0 57.3 68.6 65.8",
+      "location": "Table 4",
+      "confidence": 0.9,
+      "notes": "Best LSTM model with fine-tuning included (full model)."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (tied) - fine-tuning",
+      "dataset": "WikiText-2 (WT2), word-level",
+      "metric": "test perplexity",
+      "value": "66.0",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "– fine-tuning 60.7 58.8 69.1 66.0",
+      "location": "Table 4",
+      "confidence": 0.9,
+      "notes": "Ablation removing the fine-tuning step."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (tied) - NT-ASGD",
+      "dataset": "WikiText-2 (WT2), word-level",
+      "metric": "test perplexity",
+      "value": "69.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "– NT-ASGD 66.3 63.7 73.3 69.7",
+      "location": "Table 4",
+      "confidence": 0.9,
+      "notes": "Ablation removing NT-ASGD."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (tied) - variable sequence lengths",
+      "dataset": "WikiText-2 (WT2), word-level",
+      "metric": "test perplexity",
+      "value": "66.2",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "– variable sequence lengths 61.3 58.9 69.3 66.2",
+      "location": "Table 4",
+      "confidence": 0.9,
+      "notes": "Ablation removing variable sequence lengths."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (tied) - embedding dropout",
+      "dataset": "WikiText-2 (WT2), word-level",
+      "metric": "test perplexity",
+      "value": "68.1",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "– embedding dropout 65.1 62.7 71.1 68.1",
+      "location": "Table 4",
+      "confidence": 0.9,
+      "notes": "Ablation removing embedding dropout."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (tied) - weight decay",
+      "dataset": "WikiText-2 (WT2), word-level",
+      "metric": "test perplexity",
+      "value": "68.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "– weight decay 63.7 61.0 71.9 68.7",
+      "location": "Table 4",
+      "confidence": 0.9,
+      "notes": "Ablation removing weight decay."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (tied) - AR/TAR",
+      "dataset": "WikiText-2 (WT2), word-level",
+      "metric": "test perplexity",
+      "value": "70.1",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "– AR/TAR 62.7 60.3 73.2 70.1",
+      "location": "Table 4",
+      "confidence": 0.9,
+      "notes": "Ablation removing AR/TAR."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (tied) - full sized embedding",
+      "dataset": "WikiText-2 (WT2), word-level",
+      "metric": "test perplexity",
+      "value": "70.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "– full sized embedding 68.0 65.6 73.7 70.7",
+      "location": "Table 4",
+      "confidence": 0.9,
+      "notes": "Ablation reverting to full sized embedding."
+    },
+    {
+      "source_file": "1708.02182.txt",
+      "source_kind": "paper",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (tied) - weight-dropping",
+      "dataset": "WikiText-2 (WT2), word-level",
+      "metric": "test perplexity",
+      "value": "74.9",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "– weight-dropping 71.1 68.9 78.4 74.9",
+      "location": "Table 4",
+      "confidence": 0.9,
+      "notes": "Ablation removing weight-dropping."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM - 3-layer LSTM (tied)\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"57.3\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"AWD-LSTM - 3-layer LSTM (tied) 24M 60.0 57.3\", \"location\": \"Table 1\", \"confidence\": 0.95, \"notes\": \"Single model perplexity on validation and test sets for the Penn Treebank language modeling task.\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM - 3-layer LSTM (tied) + continuous cache pointer\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"52.8\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"yes\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"AWD-LSTM - 3-layer LSTM (tied) + continuous cache pointer 24M 53.9 52.8\", \"location\": \"Table 1\", \"confidence\": 0.95, \"notes\": \"Uses continuous cache pointer augmentation.\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM - 3-layer LSTM (tied)\", \"dataset\": \"WikiText-2 (WT2), word-level\", \"metric\": \"test perplexity\", \"value\": \"65.8\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"AWD-LSTM - 3-layer LSTM (tied) 33M 68.6 65.8\", \"location\": \"Table 2\", \"confidence\": 0.95, \"notes\": \"Single model perplexity over WikiText-2.\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM - 3-layer LSTM (tied) + continuous cache pointer\", \"dataset\": \"WikiText-2 (WT2), word-level\", \"metric\": \"test perplexity\", \"value\": \"52.0\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"yes\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"AWD-LSTM - 3-layer LSTM (tied) + continuous cache pointer 33M 53.8 52.0\", \"location\": \"Table 2\", \"confidence\": 0.95, \"notes\": \"Uses continuous cache pointer augmentation.\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (tied)\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"57.3\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"yes\"}, \"verbatim_quote\": \"AWD-LSTM (tied) 60.0 57.3 68.6 65.8\", \"location\": \"Table 4\", \"confidence\": 0.9, \"notes\": \"Best LSTM model with fine-tuning included (full model).\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (tied) - fine-tuning\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"58.8\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"– fine-tuning 60.7 58.8 69.1 66.0\", \"location\": \"Table 4\", \"confidence\": 0.9, \"notes\": \"Ablation removing the fine-tuning step.\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (tied) - NT-ASGD\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"63.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"– NT-ASGD 66.3 63.7 73.3 69.7\", \"location\": \"Table 4\", \"confidence\": 0.9, \"notes\": \"Ablation removing NT-ASGD.\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (tied) - variable sequence lengths\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"58.9\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"– variable sequence lengths 61.3 58.9 69.3 66.2\", \"location\": \"Table 4\", \"confidence\": 0.9, \"notes\": \"Ablation removing variable sequence lengths.\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (tied) - embedding dropout\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"62.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"– embedding dropout 65.1 62.7 71.1 68.1\", \"location\": \"Table 4\", \"confidence\": 0.9, \"notes\": \"Ablation removing embedding dropout.\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (tied) - weight decay\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"61.0\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"– weight decay 63.7 61.0 71.9 68.7\", \"location\": \"Table 4\", \"confidence\": 0.9, \"notes\": \"Ablation removing weight decay.\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (tied) - AR/TAR\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"60.3\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"– AR/TAR 62.7 60.3 73.2 70.1\", \"location\": \"Table 4\", \"confidence\": 0.9, \"notes\": \"Ablation removing AR/TAR.\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (tied) - full sized embedding\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"65.6\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"– full sized embedding 68.0 65.6 73.7 70.7\", \"location\": \"Table 4\", \"confidence\": 0.9, \"notes\": \"Ablation reverting to full sized embedding.\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (tied) - weight-dropping\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"68.9\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"– weight-dropping 71.1 68.9 78.4 74.9\", \"location\": \"Table 4\", \"confidence\": 0.9, \"notes\": \"Ablation removing weight-dropping.\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (tied)\", \"dataset\": \"WikiText-2 (WT2), word-level\", \"metric\": \"test perplexity\", \"value\": \"65.8\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"yes\"}, \"verbatim_quote\": \"AWD-LSTM (tied) 60.0 57.3 68.6 65.8\", \"location\": \"Table 4\", \"confidence\": 0.9, \"notes\": \"Best LSTM model with fine-tuning included (full model).\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (tied) - fine-tuning\", \"dataset\": \"WikiText-2 (WT2), word-level\", \"metric\": \"test perplexity\", \"value\": \"66.0\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"– fine-tuning 60.7 58.8 69.1 66.0\", \"location\": \"Table 4\", \"confidence\": 0.9, \"notes\": \"Ablation removing the fine-tuning step.\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (tied) - NT-ASGD\", \"dataset\": \"WikiText-2 (WT2), word-level\", \"metric\": \"test perplexity\", \"value\": \"69.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"– NT-ASGD 66.3 63.7 73.3 69.7\", \"location\": \"Table 4\", \"confidence\": 0.9, \"notes\": \"Ablation removing NT-ASGD.\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (tied) - variable sequence lengths\", \"dataset\": \"WikiText-2 (WT2), word-level\", \"metric\": \"test perplexity\", \"value\": \"66.2\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"– variable sequence lengths 61.3 58.9 69.3 66.2\", \"location\": \"Table 4\", \"confidence\": 0.9, \"notes\": \"Ablation removing variable sequence lengths.\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (tied) - embedding dropout\", \"dataset\": \"WikiText-2 (WT2), word-level\", \"metric\": \"test perplexity\", \"value\": \"68.1\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"– embedding dropout 65.1 62.7 71.1 68.1\", \"location\": \"Table 4\", \"confidence\": 0.9, \"notes\": \"Ablation removing embedding dropout.\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (tied) - weight decay\", \"dataset\": \"WikiText-2 (WT2), word-level\", \"metric\": \"test perplexity\", \"value\": \"68.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"– weight decay 63.7 61.0 71.9 68.7\", \"location\": \"Table 4\", \"confidence\": 0.9, \"notes\": \"Ablation removing weight decay.\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (tied) - AR/TAR\", \"dataset\": \"WikiText-2 (WT2), word-level\", \"metric\": \"test perplexity\", \"value\": \"70.1\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"– AR/TAR 62.7 60.3 73.2 70.1\", \"location\": \"Table 4\", \"confidence\": 0.9, \"notes\": \"Ablation removing AR/TAR.\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (tied) - full sized embedding\", \"dataset\": \"WikiText-2 (WT2), word-level\", \"metric\": \"test perplexity\", \"value\": \"70.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"– full sized embedding 68.0 65.6 73.7 70.7\", \"location\": \"Table 4\", \"confidence\": 0.9, \"notes\": \"Ablation reverting to full sized embedding.\"}, {\"source_file\": \"1708.02182.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (tied) - weight-dropping\", \"dataset\": \"WikiText-2 (WT2), word-level\", \"metric\": \"test perplexity\", \"value\": \"74.9\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"– weight-dropping 71.1 68.9 78.4 74.9\", \"location\": \"Table 4\", \"confidence\": 0.9, \"notes\": \"Ablation removing weight-dropping.\"}]}",
+  "usage": {
+    "prompt_tokens": 13365,
+    "completion_tokens": 3772,
+    "total_tokens": 17137,
+    "prompt_tokens_details": {
+      "cached_tokens": 13184
+    },
+    "prompt_cache_hit_tokens": 13184,
+    "prompt_cache_miss_tokens": 181
+  },
+  "cost_usd": 0.008536,
+  "elapsed_s": 10.9,
+  "finish_reason": "stop"
+}

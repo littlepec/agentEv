@@ -1,0 +1,202 @@
+{
+  "cache_key": "1512.05287",
+  "source_file": "1512.05287.txt",
+  "source_kind": "paper",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\pool\\1512.05287.txt",
+  "doc_sha256": "d65a94a4ace8c41dbb5b1cbd73d247a94375f40dab6576af0d72bb374b9afced",
+  "doc_chars": 56039,
+  "rep": 2,
+  "created": "2026-09-15T23:00:40",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 9,
+  "records": [
+    {
+      "source_file": "1512.05287.txt",
+      "source_kind": "paper",
+      "paper_id": "1512.05287",
+      "model": "Variational (tied weights) LSTM, medium model",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "79.7 ± 0.1",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Variational (tied weights) 81.8 ± 0.2 79.7 ± 0.1 4.7 K 77.3 ± 0.2 75.0 ± 0.1 2.4 K",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Standard dropout approximation (not MC dropout); medium model."
+    },
+    {
+      "source_file": "1512.05287.txt",
+      "source_kind": "paper",
+      "paper_id": "1512.05287",
+      "model": "Variational (tied weights) LSTM, large model",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "75.0 ± 0.1",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Variational (tied weights) 81.8 ± 0.2 79.7 ± 0.1 4.7 K 77.3 ± 0.2 75.0 ± 0.1 2.4 K",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Standard dropout approximation (not MC dropout); large model."
+    },
+    {
+      "source_file": "1512.05287.txt",
+      "source_kind": "paper",
+      "paper_id": "1512.05287",
+      "model": "Variational (tied weights, MC) LSTM, medium model",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "79.0 ± 0.1",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Variational (tied weights, MC) − 79.0 ± 0.1 − − 74.1 ± 0.0 −",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "MC dropout at test time (1000 samples); medium model."
+    },
+    {
+      "source_file": "1512.05287.txt",
+      "source_kind": "paper",
+      "paper_id": "1512.05287",
+      "model": "Variational (tied weights, MC) LSTM, large model",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "74.1 ± 0.0",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Variational (tied weights, MC) − 79.0 ± 0.1 − − 74.1 ± 0.0 −",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "MC dropout at test time (1000 samples); large model."
+    },
+    {
+      "source_file": "1512.05287.txt",
+      "source_kind": "paper",
+      "paper_id": "1512.05287",
+      "model": "Variational (untied weights) LSTM, medium model",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "79.7 ± 0.1",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Variational (untied weights) 81.9 ± 0.2 79.7 ± 0.1 2.7 K 77.9 ± 0.3 75.2 ± 0.2 1.6 K",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Standard dropout approximation (not MC dropout); medium model."
+    },
+    {
+      "source_file": "1512.05287.txt",
+      "source_kind": "paper",
+      "paper_id": "1512.05287",
+      "model": "Variational (untied weights) LSTM, large model",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "75.2 ± 0.2",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Variational (untied weights) 81.9 ± 0.2 79.7 ± 0.1 2.7 K 77.9 ± 0.3 75.2 ± 0.2 1.6 K",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Standard dropout approximation (not MC dropout); large model."
+    },
+    {
+      "source_file": "1512.05287.txt",
+      "source_kind": "paper",
+      "paper_id": "1512.05287",
+      "model": "Variational (untied weights, MC) LSTM, medium model",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "78.6 ± 0.1",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Variational (untied weights, MC) − 78.6 ± 0.1 − − 73.4 ± 0.0 −",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "MC dropout at test time (1000 samples); medium model."
+    },
+    {
+      "source_file": "1512.05287.txt",
+      "source_kind": "paper",
+      "paper_id": "1512.05287",
+      "model": "Variational (untied weights, MC) LSTM, large model",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "73.4 ± 0.0",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Test perplexity is reduced from 78.4 down to 73.4 (with MC dropout and untied weights). To the best of our knowledge, these are currently the best single model perplexities on the Penn Treebank.",
+      "location": "Section 5.1 and Table 1",
+      "confidence": 0.95,
+      "notes": "Best single-model result reported by the paper; MC dropout, untied weights, large model."
+    },
+    {
+      "source_file": "1512.05287.txt",
+      "source_kind": "paper",
+      "paper_id": "1512.05287",
+      "model": "Variational LSTM ensemble (10 models, MC dropout)",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "68.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "yes",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Using 10 Variational LSTMs we improve [4]'s test set perplexity from 69.5 to 68.7 – obtaining identical perplexity to [4]'s experiment with 38 models.",
+      "location": "Section 5.1",
+      "confidence": 0.9,
+      "notes": "Model averaging of 10 large Variational LSTMs with MC dropout; ensemble, not single model."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1512.05287.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1512.05287\", \"model\": \"Variational (tied weights) LSTM, medium model\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"79.7 ± 0.1\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Variational (tied weights) 81.8 ± 0.2 79.7 ± 0.1 4.7 K 77.3 ± 0.2 75.0 ± 0.1 2.4 K\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Standard dropout approximation (not MC dropout); medium model.\"}, {\"source_file\": \"1512.05287.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1512.05287\", \"model\": \"Variational (tied weights) LSTM, large model\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"75.0 ± 0.1\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Variational (tied weights) 81.8 ± 0.2 79.7 ± 0.1 4.7 K 77.3 ± 0.2 75.0 ± 0.1 2.4 K\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Standard dropout approximation (not MC dropout); large model.\"}, {\"source_file\": \"1512.05287.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1512.05287\", \"model\": \"Variational (tied weights, MC) LSTM, medium model\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"79.0 ± 0.1\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Variational (tied weights, MC) − 79.0 ± 0.1 − − 74.1 ± 0.0 −\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"MC dropout at test time (1000 samples); medium model.\"}, {\"source_file\": \"1512.05287.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1512.05287\", \"model\": \"Variational (tied weights, MC) LSTM, large model\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"74.1 ± 0.0\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Variational (tied weights, MC) − 79.0 ± 0.1 − − 74.1 ± 0.0 −\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"MC dropout at test time (1000 samples); large model.\"}, {\"source_file\": \"1512.05287.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1512.05287\", \"model\": \"Variational (untied weights) LSTM, medium model\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"79.7 ± 0.1\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Variational (untied weights) 81.9 ± 0.2 79.7 ± 0.1 2.7 K 77.9 ± 0.3 75.2 ± 0.2 1.6 K\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Standard dropout approximation (not MC dropout); medium model.\"}, {\"source_file\": \"1512.05287.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1512.05287\", \"model\": \"Variational (untied weights) LSTM, large model\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"75.2 ± 0.2\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Variational (untied weights) 81.9 ± 0.2 79.7 ± 0.1 2.7 K 77.9 ± 0.3 75.2 ± 0.2 1.6 K\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Standard dropout approximation (not MC dropout); large model.\"}, {\"source_file\": \"1512.05287.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1512.05287\", \"model\": \"Variational (untied weights, MC) LSTM, medium model\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"78.6 ± 0.1\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Variational (untied weights, MC) − 78.6 ± 0.1 − − 73.4 ± 0.0 −\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"MC dropout at test time (1000 samples); medium model.\"}, {\"source_file\": \"1512.05287.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1512.05287\", \"model\": \"Variational (untied weights, MC) LSTM, large model\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"73.4 ± 0.0\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Test perplexity is reduced from 78.4 down to 73.4 (with MC dropout and untied weights). To the best of our knowledge, these are currently the best single model perplexities on the Penn Treebank.\", \"location\": \"Section 5.1 and Table 1\", \"confidence\": 0.95, \"notes\": \"Best single-model result reported by the paper; MC dropout, untied weights, large model.\"}, {\"source_file\": \"1512.05287.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1512.05287\", \"model\": \"Variational LSTM ensemble (10 models, MC dropout)\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"68.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"yes\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Using 10 Variational LSTMs we improve [4]'s test set perplexity from 69.5 to 68.7 – obtaining identical perplexity to [4]'s experiment with 38 models.\", \"location\": \"Section 5.1\", \"confidence\": 0.9, \"notes\": \"Model averaging of 10 large Variational LSTMs with MC dropout; ensemble, not single model.\"}]}",
+  "usage": {
+    "prompt_tokens": 15822,
+    "completion_tokens": 1810,
+    "total_tokens": 17632,
+    "prompt_tokens_details": {
+      "cached_tokens": 15616
+    },
+    "prompt_cache_hit_tokens": 15616,
+    "prompt_cache_miss_tokens": 206
+  },
+  "cost_usd": 0.006919,
+  "elapsed_s": 6.1,
+  "finish_reason": "stop"
+}

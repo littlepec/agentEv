@@ -1,0 +1,430 @@
+{
+  "cache_key": "1611.01462",
+  "source_file": "1611.01462.txt",
+  "source_kind": "paper",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\pool\\1611.01462.txt",
+  "doc_sha256": "8df377cf78660dd20c52edc13436fc0f7fa6d3a1a1af17d4aff6d528ee90d41a",
+  "doc_chars": 46209,
+  "rep": 1,
+  "created": "2026-09-15T22:58:56",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 21,
+  "records": [
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+REAL (small, 200 units)",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "82.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+REAL 86.3 82.7 105.6 98.9",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Small network results; footnote says small PTB models were re-trained by initializing to their final configuration from the first training session."
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+REAL (medium, 650 units)",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "73.2",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+REAL 75.7 73.2 91.5 87.0",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": ""
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+REAL (large, 1500 units)",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "68.5",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+REAL 71.1 68.5 - -",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Also listed in Table 3 as VD-LSTM +REAL (large) with 51M parameters, validation 71.1, test 68.5."
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+REAL (small, 200 units)",
+      "dataset": "Wikitext-2, word-level",
+      "metric": "test perplexity",
+      "value": "98.9",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+REAL 86.3 82.7 105.6 98.9",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": ""
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+REAL (medium, 650 units)",
+      "dataset": "Wikitext-2, word-level",
+      "metric": "test perplexity",
+      "value": "87.0",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+REAL 75.7 73.2 91.5 87.0",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": ""
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+REAL (small, 200 units)",
+      "dataset": "Wikitext-2, Partition 1, word-level",
+      "metric": "test perplexity",
+      "value": "140.6",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+REAL 149.3 140.6 150.5 138.4",
+      "location": "Table 2",
+      "confidence": 0.9,
+      "notes": ""
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+REAL (small, 200 units)",
+      "dataset": "Wikitext-2, Partition 2, word-level",
+      "metric": "test perplexity",
+      "value": "138.4",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+REAL 149.3 140.6 150.5 138.4",
+      "location": "Table 2",
+      "confidence": 0.9,
+      "notes": ""
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+AL (small, 200 units)",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "82.9",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+AL 86.3 82.9 110.3 103.8",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Proposed model variant (augmented loss only)."
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+AL (medium, 650 units)",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "74.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+AL 77.4 74.7 98.8 93.1",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Proposed model variant (augmented loss only)."
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+AL (large, 1500 units)",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "71.2",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+AL 74.5 71.2 - -",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Proposed model variant (augmented loss only)."
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+AL (small, 200 units)",
+      "dataset": "Wikitext-2, word-level",
+      "metric": "test perplexity",
+      "value": "103.8",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+AL 86.3 82.9 110.3 103.8",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Proposed model variant (augmented loss only)."
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+AL (medium, 650 units)",
+      "dataset": "Wikitext-2, word-level",
+      "metric": "test perplexity",
+      "value": "93.1",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+AL 77.4 74.7 98.8 93.1",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Proposed model variant (augmented loss only)."
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+AL (small, 200 units)",
+      "dataset": "Wikitext-2, Partition 1, word-level",
+      "metric": "test perplexity",
+      "value": "142.5",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+AL 153.0 142.5 156.4 143.7",
+      "location": "Table 2",
+      "confidence": 0.9,
+      "notes": "Proposed model variant (augmented loss only)."
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+AL (small, 200 units)",
+      "dataset": "Wikitext-2, Partition 2, word-level",
+      "metric": "test perplexity",
+      "value": "143.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+AL 153.0 142.5 156.4 143.7",
+      "location": "Table 2",
+      "confidence": 0.9,
+      "notes": "Proposed model variant (augmented loss only)."
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+RE (small, 200 units)",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "85.1",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+RE 89.9 85.1 106.1 100.5",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Proposed model variant (reused embeddings only)."
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+RE (medium, 650 units)",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "73.9",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+RE 77.1 73.9 92.3 87.7",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Proposed model variant (reused embeddings only)."
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+RE (large, 1500 units)",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "69.0",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+RE 72.5 69.0 - -",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Proposed model variant (reused embeddings only)."
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+RE (small, 200 units)",
+      "dataset": "Wikitext-2, word-level",
+      "metric": "test perplexity",
+      "value": "100.5",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+RE 89.9 85.1 106.1 100.5",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Proposed model variant (reused embeddings only)."
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+RE (medium, 650 units)",
+      "dataset": "Wikitext-2, word-level",
+      "metric": "test perplexity",
+      "value": "87.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+RE 77.1 73.9 92.3 87.7",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Proposed model variant (reused embeddings only)."
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+RE (small, 200 units)",
+      "dataset": "Wikitext-2, Partition 1, word-level",
+      "metric": "test perplexity",
+      "value": "141.9",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+RE 152.4 141.9 152.5 140.9",
+      "location": "Table 2",
+      "confidence": 0.9,
+      "notes": "Proposed model variant (reused embeddings only)."
+    },
+    {
+      "source_file": "1611.01462.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+RE (small, 200 units)",
+      "dataset": "Wikitext-2, Partition 2, word-level",
+      "metric": "test perplexity",
+      "value": "140.9",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "VD-LSTM+RE 152.4 141.9 152.5 140.9",
+      "location": "Table 2",
+      "confidence": 0.9,
+      "notes": "Proposed model variant (reused embeddings only)."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+REAL (small, 200 units)\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"82.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+REAL 86.3 82.7 105.6 98.9\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Small network results; footnote says small PTB models were re-trained by initializing to their final configuration from the first training session.\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+REAL (medium, 650 units)\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"73.2\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+REAL 75.7 73.2 91.5 87.0\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+REAL (large, 1500 units)\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"68.5\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+REAL 71.1 68.5 - -\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Also listed in Table 3 as VD-LSTM +REAL (large) with 51M parameters, validation 71.1, test 68.5.\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+REAL (small, 200 units)\", \"dataset\": \"Wikitext-2, word-level\", \"metric\": \"test perplexity\", \"value\": \"98.9\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+REAL 86.3 82.7 105.6 98.9\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+REAL (medium, 650 units)\", \"dataset\": \"Wikitext-2, word-level\", \"metric\": \"test perplexity\", \"value\": \"87.0\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+REAL 75.7 73.2 91.5 87.0\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+REAL (small, 200 units)\", \"dataset\": \"Wikitext-2, Partition 1, word-level\", \"metric\": \"test perplexity\", \"value\": \"140.6\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+REAL 149.3 140.6 150.5 138.4\", \"location\": \"Table 2\", \"confidence\": 0.9, \"notes\": \"\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+REAL (small, 200 units)\", \"dataset\": \"Wikitext-2, Partition 2, word-level\", \"metric\": \"test perplexity\", \"value\": \"138.4\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+REAL 149.3 140.6 150.5 138.4\", \"location\": \"Table 2\", \"confidence\": 0.9, \"notes\": \"\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+AL (small, 200 units)\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"82.9\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+AL 86.3 82.9 110.3 103.8\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Proposed model variant (augmented loss only).\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+AL (medium, 650 units)\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"74.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+AL 77.4 74.7 98.8 93.1\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Proposed model variant (augmented loss only).\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+AL (large, 1500 units)\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"71.2\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+AL 74.5 71.2 - -\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Proposed model variant (augmented loss only).\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+AL (small, 200 units)\", \"dataset\": \"Wikitext-2, word-level\", \"metric\": \"test perplexity\", \"value\": \"103.8\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+AL 86.3 82.9 110.3 103.8\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Proposed model variant (augmented loss only).\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+AL (medium, 650 units)\", \"dataset\": \"Wikitext-2, word-level\", \"metric\": \"test perplexity\", \"value\": \"93.1\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+AL 77.4 74.7 98.8 93.1\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Proposed model variant (augmented loss only).\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+AL (small, 200 units)\", \"dataset\": \"Wikitext-2, Partition 1, word-level\", \"metric\": \"test perplexity\", \"value\": \"142.5\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+AL 153.0 142.5 156.4 143.7\", \"location\": \"Table 2\", \"confidence\": 0.9, \"notes\": \"Proposed model variant (augmented loss only).\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+AL (small, 200 units)\", \"dataset\": \"Wikitext-2, Partition 2, word-level\", \"metric\": \"test perplexity\", \"value\": \"143.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+AL 153.0 142.5 156.4 143.7\", \"location\": \"Table 2\", \"confidence\": 0.9, \"notes\": \"Proposed model variant (augmented loss only).\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+RE (small, 200 units)\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"85.1\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+RE 89.9 85.1 106.1 100.5\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Proposed model variant (reused embeddings only).\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+RE (medium, 650 units)\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"73.9\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+RE 77.1 73.9 92.3 87.7\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Proposed model variant (reused embeddings only).\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+RE (large, 1500 units)\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"69.0\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+RE 72.5 69.0 - -\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Proposed model variant (reused embeddings only).\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+RE (small, 200 units)\", \"dataset\": \"Wikitext-2, word-level\", \"metric\": \"test perplexity\", \"value\": \"100.5\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+RE 89.9 85.1 106.1 100.5\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Proposed model variant (reused embeddings only).\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+RE (medium, 650 units)\", \"dataset\": \"Wikitext-2, word-level\", \"metric\": \"test perplexity\", \"value\": \"87.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+RE 77.1 73.9 92.3 87.7\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Proposed model variant (reused embeddings only).\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+RE (small, 200 units)\", \"dataset\": \"Wikitext-2, Partition 1, word-level\", \"metric\": \"test perplexity\", \"value\": \"141.9\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+RE 152.4 141.9 152.5 140.9\", \"location\": \"Table 2\", \"confidence\": 0.9, \"notes\": \"Proposed model variant (reused embeddings only).\"}, {\"source_file\": \"1611.01462.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+RE (small, 200 units)\", \"dataset\": \"Wikitext-2, Partition 2, word-level\", \"metric\": \"test perplexity\", \"value\": \"140.9\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"VD-LSTM+RE 152.4 141.9 152.5 140.9\", \"location\": \"Table 2\", \"confidence\": 0.9, \"notes\": \"Proposed model variant (reused embeddings only).\"}]}",
+  "usage": {
+    "prompt_tokens": 13569,
+    "completion_tokens": 3577,
+    "total_tokens": 17146,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 13569
+  },
+  "cost_usd": 0.008363,
+  "elapsed_s": 10.3,
+  "finish_reason": "stop"
+}

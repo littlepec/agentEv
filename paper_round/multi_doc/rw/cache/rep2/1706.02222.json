@@ -1,0 +1,107 @@
+{
+  "cache_key": "1706.02222",
+  "source_file": "1706.02222.txt",
+  "source_kind": "paper",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\pool\\1706.02222.txt",
+  "doc_sha256": "5bf943ffb80562de9cbbd452508899e0d21ec41d2cf6420fd308e1f7b273ea78",
+  "doc_chars": 47838,
+  "rep": 2,
+  "created": "2026-09-15T23:01:01",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 4,
+  "records": [
+    {
+      "source_file": "1706.02222.txt",
+      "source_kind": "paper",
+      "paper_id": "1706.02222",
+      "model": "GRURNTN (proposed)",
+      "dataset": "PennTreeBank word-level",
+      "metric": "test perplexity (PPL)",
+      "value": "87.38",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "GRURNTN (proposed) 87.38",
+      "location": "TABLE II: PennTreeBank test set PPL",
+      "confidence": 0.95,
+      "notes": "Proposed model; paper states baseline and proposed experiments did not use dynamic evaluation."
+    },
+    {
+      "source_file": "1706.02222.txt",
+      "source_kind": "paper",
+      "paper_id": "1706.02222",
+      "model": "LSTMRNTN (proposed)",
+      "dataset": "PennTreeBank word-level",
+      "metric": "test perplexity (PPL)",
+      "value": "96.97",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "LSTMRNTN (proposed) 96.97",
+      "location": "TABLE II: PennTreeBank test set PPL",
+      "confidence": 0.95,
+      "notes": "Proposed model; paper states baseline and proposed experiments did not use dynamic evaluation."
+    },
+    {
+      "source_file": "1706.02222.txt",
+      "source_kind": "paper",
+      "paper_id": "1706.02222",
+      "model": "GRURNTN (proposed)",
+      "dataset": "PennTreeBank character-level",
+      "metric": "test BPC",
+      "value": "1.33",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "GRURNTN (proposed) 1.33",
+      "location": "TABLE I: PennTreeBank test set BPC",
+      "confidence": 0.95,
+      "notes": "Character-level task, not word-level PPL."
+    },
+    {
+      "source_file": "1706.02222.txt",
+      "source_kind": "paper",
+      "paper_id": "1706.02222",
+      "model": "LSTMRNTN (proposed)",
+      "dataset": "PennTreeBank character-level",
+      "metric": "test BPC",
+      "value": "1.34",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "LSTMRNTN (proposed) 1.34",
+      "location": "TABLE I: PennTreeBank test set BPC",
+      "confidence": 0.95,
+      "notes": "Character-level task, not word-level PPL."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1706.02222.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1706.02222\", \"model\": \"GRURNTN (proposed)\", \"dataset\": \"PennTreeBank word-level\", \"metric\": \"test perplexity (PPL)\", \"value\": \"87.38\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"GRURNTN (proposed) 87.38\", \"location\": \"TABLE II: PennTreeBank test set PPL\", \"confidence\": 0.95, \"notes\": \"Proposed model; paper states baseline and proposed experiments did not use dynamic evaluation.\"}, {\"source_file\": \"1706.02222.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1706.02222\", \"model\": \"LSTMRNTN (proposed)\", \"dataset\": \"PennTreeBank word-level\", \"metric\": \"test perplexity (PPL)\", \"value\": \"96.97\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"LSTMRNTN (proposed) 96.97\", \"location\": \"TABLE II: PennTreeBank test set PPL\", \"confidence\": 0.95, \"notes\": \"Proposed model; paper states baseline and proposed experiments did not use dynamic evaluation.\"}, {\"source_file\": \"1706.02222.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1706.02222\", \"model\": \"GRURNTN (proposed)\", \"dataset\": \"PennTreeBank character-level\", \"metric\": \"test BPC\", \"value\": \"1.33\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"GRURNTN (proposed) 1.33\", \"location\": \"TABLE I: PennTreeBank test set BPC\", \"confidence\": 0.95, \"notes\": \"Character-level task, not word-level PPL.\"}, {\"source_file\": \"1706.02222.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1706.02222\", \"model\": \"LSTMRNTN (proposed)\", \"dataset\": \"PennTreeBank character-level\", \"metric\": \"test BPC\", \"value\": \"1.34\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"LSTMRNTN (proposed) 1.34\", \"location\": \"TABLE I: PennTreeBank test set BPC\", \"confidence\": 0.95, \"notes\": \"Character-level task, not word-level PPL.\"}]}",
+  "usage": {
+    "prompt_tokens": 14866,
+    "completion_tokens": 667,
+    "total_tokens": 15533,
+    "prompt_tokens_details": {
+      "cached_tokens": 14720
+    },
+    "prompt_cache_hit_tokens": 14720,
+    "prompt_cache_miss_tokens": 146
+  },
+  "cost_usd": 0.00526,
+  "elapsed_s": 3.3,
+  "finish_reason": "stop"
+}

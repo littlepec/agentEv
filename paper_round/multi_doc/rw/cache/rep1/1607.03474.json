@@ -1,0 +1,88 @@
+{
+  "cache_key": "1607.03474",
+  "source_file": "1607.03474.txt",
+  "source_kind": "paper",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\pool\\1607.03474.txt",
+  "doc_sha256": "68a5b158a3a7647ec349fefee5f7a46fcd416af9d4b37f8d0a9beefaf98b238a",
+  "doc_chars": 54258,
+  "rep": 1,
+  "created": "2026-09-15T22:58:43",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 3,
+  "records": [
+    {
+      "source_file": "1607.03474.txt",
+      "source_kind": "paper",
+      "paper_id": "1607.03474",
+      "model": "Variational RHN",
+      "dataset": "Penn Treebank word-level language modeling",
+      "metric": "test perplexity",
+      "value": "68.5",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Variational RHN 32 M 71.2 68.5",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Single model, no dynamic evaluation or cache mentioned."
+    },
+    {
+      "source_file": "1607.03474.txt",
+      "source_kind": "paper",
+      "paper_id": "1607.03474",
+      "model": "Variational RHN + WT",
+      "dataset": "Penn Treebank word-level language modeling",
+      "metric": "test perplexity",
+      "value": "65.4",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Variational RHN + WT 23 M 67.9 65.4",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Single model with weight tying, no dynamic evaluation or cache mentioned."
+    },
+    {
+      "source_file": "1607.03474.txt",
+      "source_kind": "paper",
+      "paper_id": "1607.03474",
+      "model": "RHN (best 10 layer model, reduced weight decay)",
+      "dataset": "Penn Treebank word-level language modeling",
+      "metric": "validation/test perplexity",
+      "value": "67.9/65.4",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "For the best 10 layer model, reducing the weight decay further improves the results to 67.9/65.4 validation/test perplexity.",
+      "location": "Section 5.2.1 Penn Treebank",
+      "confidence": 0.85,
+      "notes": "Reported as validation/test pair."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1607.03474.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1607.03474\", \"model\": \"Variational RHN\", \"dataset\": \"Penn Treebank word-level language modeling\", \"metric\": \"test perplexity\", \"value\": \"68.5\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Variational RHN 32 M 71.2 68.5\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Single model, no dynamic evaluation or cache mentioned.\"}, {\"source_file\": \"1607.03474.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1607.03474\", \"model\": \"Variational RHN + WT\", \"dataset\": \"Penn Treebank word-level language modeling\", \"metric\": \"test perplexity\", \"value\": \"65.4\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Variational RHN + WT 23 M 67.9 65.4\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Single model with weight tying, no dynamic evaluation or cache mentioned.\"}, {\"source_file\": \"1607.03474.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1607.03474\", \"model\": \"RHN (best 10 layer model, reduced weight decay)\", \"dataset\": \"Penn Treebank word-level language modeling\", \"metric\": \"validation/test perplexity\", \"value\": \"67.9/65.4\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"For the best 10 layer model, reducing the weight decay further improves the results to 67.9/65.4 validation/test perplexity.\", \"location\": \"Section 5.2.1 Penn Treebank\", \"confidence\": 0.85, \"notes\": \"Reported as validation/test pair.\"}]}",
+  "usage": {
+    "prompt_tokens": 15688,
+    "completion_tokens": 512,
+    "total_tokens": 16200,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 15688
+  },
+  "cost_usd": 0.005321,
+  "elapsed_s": 2.5,
+  "finish_reason": "stop"
+}

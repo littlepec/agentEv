@@ -1,0 +1,183 @@
+{
+  "cache_key": "1508.06615_note",
+  "source_file": "1508.06615_note.txt",
+  "source_kind": "note",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\materials\\1508.06615\\L.txt",
+  "doc_sha256": "80e9741d7741a5fa05bffae74561781b024d8afc5f99e207eb0fd6bdffaba796",
+  "doc_chars": 2129,
+  "rep": 1,
+  "created": "2026-09-15T22:59:55",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 8,
+  "records": [
+    {
+      "source_file": "1508.06615_note.txt",
+      "source_kind": "note",
+      "paper_id": "1508.06615",
+      "model": "LSTM-Char-Large",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "78.9",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "LSTM-Char-Large attains 78.9; LSTM-Char-Small attains 92.3. Predictions are made at the word level. These are single-model results.",
+      "location": "unknown",
+      "confidence": 0.9,
+      "notes": "Main large model with two highway layers."
+    },
+    {
+      "source_file": "1508.06615_note.txt",
+      "source_kind": "note",
+      "paper_id": "1508.06615",
+      "model": "LSTM-Char-Small",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "92.3",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "LSTM-Char-Large attains 78.9; LSTM-Char-Small attains 92.3. Predictions are made at the word level. These are single-model results.",
+      "location": "unknown",
+      "confidence": 0.9,
+      "notes": "Main small model with one highway layer."
+    },
+    {
+      "source_file": "1508.06615_note.txt",
+      "source_kind": "note",
+      "paper_id": "1508.06615",
+      "model": "LSTM-Char-Large without highway layers",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "84.6",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "Ablations show large model perplexities of 84.6 without highway layers, 79.7 with one highway layer, and 78.9 with two highway layers",
+      "location": "unknown",
+      "confidence": 0.8,
+      "notes": "Highway-layer ablation."
+    },
+    {
+      "source_file": "1508.06615_note.txt",
+      "source_kind": "note",
+      "paper_id": "1508.06615",
+      "model": "LSTM-Char-Large with one highway layer",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "79.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "Ablations show large model perplexities of 84.6 without highway layers, 79.7 with one highway layer, and 78.9 with two highway layers",
+      "location": "unknown",
+      "confidence": 0.8,
+      "notes": "Highway-layer ablation."
+    },
+    {
+      "source_file": "1508.06615_note.txt",
+      "source_kind": "note",
+      "paper_id": "1508.06615",
+      "model": "LSTM-Char-Large with two highway layers",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "78.9",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "Ablations show large model perplexities of 84.6 without highway layers, 79.7 with one highway layer, and 78.9 with two highway layers",
+      "location": "unknown",
+      "confidence": 0.8,
+      "notes": "Highway-layer ablation; same as main large model."
+    },
+    {
+      "source_file": "1508.06615_note.txt",
+      "source_kind": "note",
+      "paper_id": "1508.06615",
+      "model": "LSTM-Char-Small without highway layers",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "100.3",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "small model values are 100.3, 92.3, and 90.1 respectively",
+      "location": "unknown",
+      "confidence": 0.8,
+      "notes": "Highway-layer ablation."
+    },
+    {
+      "source_file": "1508.06615_note.txt",
+      "source_kind": "note",
+      "paper_id": "1508.06615",
+      "model": "LSTM-Char-Small with one highway layer",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "92.3",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "small model values are 100.3, 92.3, and 90.1 respectively",
+      "location": "unknown",
+      "confidence": 0.8,
+      "notes": "Highway-layer ablation; same as main small model."
+    },
+    {
+      "source_file": "1508.06615_note.txt",
+      "source_kind": "note",
+      "paper_id": "1508.06615",
+      "model": "LSTM-Char-Small with two highway layers",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "90.1",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "small model values are 100.3, 92.3, and 90.1 respectively",
+      "location": "unknown",
+      "confidence": 0.8,
+      "notes": "Highway-layer ablation."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1508.06615_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1508.06615\", \"model\": \"LSTM-Char-Large\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"78.9\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"LSTM-Char-Large attains 78.9; LSTM-Char-Small attains 92.3. Predictions are made at the word level. These are single-model results.\", \"location\": \"unknown\", \"confidence\": 0.9, \"notes\": \"Main large model with two highway layers.\"}, {\"source_file\": \"1508.06615_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1508.06615\", \"model\": \"LSTM-Char-Small\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"92.3\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"LSTM-Char-Large attains 78.9; LSTM-Char-Small attains 92.3. Predictions are made at the word level. These are single-model results.\", \"location\": \"unknown\", \"confidence\": 0.9, \"notes\": \"Main small model with one highway layer.\"}, {\"source_file\": \"1508.06615_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1508.06615\", \"model\": \"LSTM-Char-Large without highway layers\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"84.6\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"Ablations show large model perplexities of 84.6 without highway layers, 79.7 with one highway layer, and 78.9 with two highway layers\", \"location\": \"unknown\", \"confidence\": 0.8, \"notes\": \"Highway-layer ablation.\"}, {\"source_file\": \"1508.06615_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1508.06615\", \"model\": \"LSTM-Char-Large with one highway layer\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"79.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"Ablations show large model perplexities of 84.6 without highway layers, 79.7 with one highway layer, and 78.9 with two highway layers\", \"location\": \"unknown\", \"confidence\": 0.8, \"notes\": \"Highway-layer ablation.\"}, {\"source_file\": \"1508.06615_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1508.06615\", \"model\": \"LSTM-Char-Large with two highway layers\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"78.9\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"Ablations show large model perplexities of 84.6 without highway layers, 79.7 with one highway layer, and 78.9 with two highway layers\", \"location\": \"unknown\", \"confidence\": 0.8, \"notes\": \"Highway-layer ablation; same as main large model.\"}, {\"source_file\": \"1508.06615_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1508.06615\", \"model\": \"LSTM-Char-Small without highway layers\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"100.3\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"small model values are 100.3, 92.3, and 90.1 respectively\", \"location\": \"unknown\", \"confidence\": 0.8, \"notes\": \"Highway-layer ablation.\"}, {\"source_file\": \"1508.06615_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1508.06615\", \"model\": \"LSTM-Char-Small with one highway layer\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"92.3\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"small model values are 100.3, 92.3, and 90.1 respectively\", \"location\": \"unknown\", \"confidence\": 0.8, \"notes\": \"Highway-layer ablation; same as main small model.\"}, {\"source_file\": \"1508.06615_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1508.06615\", \"model\": \"LSTM-Char-Small with two highway layers\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"90.1\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"small model values are 100.3, 92.3, and 90.1 respectively\", \"location\": \"unknown\", \"confidence\": 0.8, \"notes\": \"Highway-layer ablation.\"}]}",
+  "usage": {
+    "prompt_tokens": 1323,
+    "completion_tokens": 1378,
+    "total_tokens": 2701,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1323
+  },
+  "cost_usd": 0.00205,
+  "elapsed_s": 4.1,
+  "finish_reason": "stop"
+}

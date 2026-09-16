@@ -1,0 +1,107 @@
+{
+  "cache_key": "1607.03474",
+  "source_file": "1607.03474.txt",
+  "source_kind": "paper",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\pool\\1607.03474.txt",
+  "doc_sha256": "68a5b158a3a7647ec349fefee5f7a46fcd416af9d4b37f8d0a9beefaf98b238a",
+  "doc_chars": 54258,
+  "rep": 2,
+  "created": "2026-09-15T23:00:43",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 4,
+  "records": [
+    {
+      "source_file": "1607.03474.txt",
+      "source_kind": "paper",
+      "paper_id": "1607.03474",
+      "model": "Variational RHN",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "68.5",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Variational RHN 32 M 71.2 68.5",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Single model, no dynamic evaluation or cache/pointer augmentation."
+    },
+    {
+      "source_file": "1607.03474.txt",
+      "source_kind": "paper",
+      "paper_id": "1607.03474",
+      "model": "Variational RHN + WT",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "65.4",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Variational RHN + WT 23 M 67.9 65.4",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Best 10-layer model with weight tying and reduced weight decay; single model."
+    },
+    {
+      "source_file": "1607.03474.txt",
+      "source_kind": "paper",
+      "paper_id": "1607.03474",
+      "model": "RHN (recurrence depth 1)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "90.6",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "increasing the transition depth from 1 to 10 improves word-level perplexity from 90.6 to 65.4 using the same number of parameters",
+      "location": "Abstract",
+      "confidence": 0.85,
+      "notes": "Reported as the depth-1 result in the abstract; not in Table 1."
+    },
+    {
+      "source_file": "1607.03474.txt",
+      "source_kind": "paper",
+      "paper_id": "1607.03474",
+      "model": "RHN (recurrence depth 10)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "65.4",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "increasing the transition depth from 1 to 10 improves word-level perplexity from 90.6 to 65.4 using the same number of parameters",
+      "location": "Abstract",
+      "confidence": 0.85,
+      "notes": "Same value as Variational RHN + WT in Table 1; single model."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1607.03474.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1607.03474\", \"model\": \"Variational RHN\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"68.5\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Variational RHN 32 M 71.2 68.5\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Single model, no dynamic evaluation or cache/pointer augmentation.\"}, {\"source_file\": \"1607.03474.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1607.03474\", \"model\": \"Variational RHN + WT\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"65.4\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Variational RHN + WT 23 M 67.9 65.4\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Best 10-layer model with weight tying and reduced weight decay; single model.\"}, {\"source_file\": \"1607.03474.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1607.03474\", \"model\": \"RHN (recurrence depth 1)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"90.6\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"increasing the transition depth from 1 to 10 improves word-level perplexity from 90.6 to 65.4 using the same number of parameters\", \"location\": \"Abstract\", \"confidence\": 0.85, \"notes\": \"Reported as the depth-1 result in the abstract; not in Table 1.\"}, {\"source_file\": \"1607.03474.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1607.03474\", \"model\": \"RHN (recurrence depth 10)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"65.4\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"increasing the transition depth from 1 to 10 improves word-level perplexity from 90.6 to 65.4 using the same number of parameters\", \"location\": \"Abstract\", \"confidence\": 0.85, \"notes\": \"Same value as Variational RHN + WT in Table 1; single model.\"}]}",
+  "usage": {
+    "prompt_tokens": 15688,
+    "completion_tokens": 688,
+    "total_tokens": 16376,
+    "prompt_tokens_details": {
+      "cached_tokens": 15488
+    },
+    "prompt_cache_hit_tokens": 15488,
+    "prompt_cache_miss_tokens": 200
+  },
+  "cost_usd": 0.005532,
+  "elapsed_s": 3.1,
+  "finish_reason": "stop"
+}

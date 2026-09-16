@@ -1,0 +1,525 @@
+{
+  "cache_key": "1707.05589",
+  "source_file": "1707.05589.txt",
+  "source_kind": "paper",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\pool\\1707.05589.txt",
+  "doc_sha256": "4c4ee14959dc3f3d0481f73d80e4115c141c735e0a77d8f7e1d124c2f813dc41",
+  "doc_chars": 32795,
+  "rep": 1,
+  "created": "2026-09-15T22:59:14",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 26,
+  "records": [
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "LSTM (10M, depth 1)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "59.6",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "LSTM 10M 1 61.8 59.6",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Single model, no dynamic evaluation or cache."
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "LSTM (10M, depth 2)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "60.8",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "LSTM 2 63.0 60.8",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "LSTM (10M, depth 4)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "60.1",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "LSTM 4 62.4 60.1",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "RHN (10M, depth 5)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "63.5",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "RHN 5 66.0 63.5",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "NAS (10M, depth 1)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "62.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "NAS 1 65.6 62.7",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "LSTM (24M, depth 1)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "59.5",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "LSTM 24M 1 61.4 59.5",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "LSTM (24M, depth 2)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "59.6",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "LSTM 2 62.1 59.6",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "LSTM (24M, depth 4)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "58.3",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "LSTM 4 60.9 58.3",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Best single-model PTB test perplexity reported in the paper."
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "RHN (24M, depth 5)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "62.2",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "RHN 5 64.8 62.2",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "NAS (24M, depth 1)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "59.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "NAS 1 62.1 59.7",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "LSTM (10M, depth 1, - Shared Embeddings)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "65.2",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "- Shared Embeddings 1 67.6 65.2",
+      "location": "Table 4",
+      "confidence": 0.85,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "LSTM (24M, depth 4, - Shared Embeddings)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "63.2",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "- Shared Embeddings 4 65.6 63.2",
+      "location": "Table 4",
+      "confidence": 0.85,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "LSTM (10M, depth 1, - Variational Dropout)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "61.2",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "- Variational Dropout 1 62.9 61.2",
+      "location": "Table 4",
+      "confidence": 0.85,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "LSTM (24M, depth 4, - Variational Dropout)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "64.5",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "- Variational Dropout 4 66.3 64.5",
+      "location": "Table 4",
+      "confidence": 0.85,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "LSTM (10M, depth 1, + Recurrent Dropout)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "60.6",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "+ Recurrent Dropout 1 62.8 60.6",
+      "location": "Table 4",
+      "confidence": 0.85,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "LSTM (24M, depth 4, + Recurrent Dropout)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "62.9",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "+ Recurrent Dropout 4 65.2 62.9",
+      "location": "Table 4",
+      "confidence": 0.85,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "LSTM (10M, depth 1, + Untied gates)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "58.9",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "+ Untied gates 1 61.4 58.9",
+      "location": "Table 4",
+      "confidence": 0.85,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "LSTM (24M, depth 4, + Untied gates)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "61.3",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "+ Untied gates 4 64.0 61.3",
+      "location": "Table 4",
+      "confidence": 0.85,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "LSTM (10M, depth 1, + Tied gates)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "59.6",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "+ Tied gates 1 61.7 59.6",
+      "location": "Table 4",
+      "confidence": 0.85,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "LSTM (24M, depth 4, + Tied gates)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "58.0",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "+ Tied gates 4 60.4 58.0",
+      "location": "Table 4",
+      "confidence": 0.85,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "RHN (10M, depth 5, - Shared Embeddings)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "69.5",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "- Shared Embeddings 5 72.3 69.5",
+      "location": "Table 4",
+      "confidence": 0.85,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "RHN (24M, depth 5, - Shared Embeddings)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "64.6",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "- Shared Embeddings 5 67.4 64.6",
+      "location": "Table 4",
+      "confidence": 0.85,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "RHN (10M, depth 5, - Variational Dropout)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "71.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "- Variational Dropout 5 74.4 71.7",
+      "location": "Table 4",
+      "confidence": 0.85,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "RHN (24M, depth 5, - Variational Dropout)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "71.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "- Variational Dropout 5 74.7 71.7",
+      "location": "Table 4",
+      "confidence": 0.85,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "RHN (10M, depth 5, + Recurrent Dropout)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "63.0",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "+ Recurrent Dropout 5 65.5 63.0",
+      "location": "Table 4",
+      "confidence": 0.85,
+      "notes": ""
+    },
+    {
+      "source_file": "1707.05589.txt",
+      "source_kind": "paper",
+      "paper_id": "1707.05589",
+      "model": "RHN (24M, depth 5, + Recurrent Dropout)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "61.0",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "+ Recurrent Dropout 5 63.4 61.0",
+      "location": "Table 4",
+      "confidence": 0.85,
+      "notes": ""
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"LSTM (10M, depth 1)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"59.6\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"LSTM 10M 1 61.8 59.6\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Single model, no dynamic evaluation or cache.\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"LSTM (10M, depth 2)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"60.8\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"LSTM 2 63.0 60.8\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"LSTM (10M, depth 4)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"60.1\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"LSTM 4 62.4 60.1\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"RHN (10M, depth 5)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"63.5\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"RHN 5 66.0 63.5\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"NAS (10M, depth 1)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"62.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"NAS 1 65.6 62.7\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"LSTM (24M, depth 1)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"59.5\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"LSTM 24M 1 61.4 59.5\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"LSTM (24M, depth 2)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"59.6\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"LSTM 2 62.1 59.6\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"LSTM (24M, depth 4)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"58.3\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"LSTM 4 60.9 58.3\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Best single-model PTB test perplexity reported in the paper.\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"RHN (24M, depth 5)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"62.2\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"RHN 5 64.8 62.2\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"NAS (24M, depth 1)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"59.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"NAS 1 62.1 59.7\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"LSTM (10M, depth 1, - Shared Embeddings)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"65.2\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"- Shared Embeddings 1 67.6 65.2\", \"location\": \"Table 4\", \"confidence\": 0.85, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"LSTM (24M, depth 4, - Shared Embeddings)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"63.2\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"- Shared Embeddings 4 65.6 63.2\", \"location\": \"Table 4\", \"confidence\": 0.85, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"LSTM (10M, depth 1, - Variational Dropout)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"61.2\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"- Variational Dropout 1 62.9 61.2\", \"location\": \"Table 4\", \"confidence\": 0.85, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"LSTM (24M, depth 4, - Variational Dropout)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"64.5\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"- Variational Dropout 4 66.3 64.5\", \"location\": \"Table 4\", \"confidence\": 0.85, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"LSTM (10M, depth 1, + Recurrent Dropout)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"60.6\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"+ Recurrent Dropout 1 62.8 60.6\", \"location\": \"Table 4\", \"confidence\": 0.85, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"LSTM (24M, depth 4, + Recurrent Dropout)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"62.9\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"+ Recurrent Dropout 4 65.2 62.9\", \"location\": \"Table 4\", \"confidence\": 0.85, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"LSTM (10M, depth 1, + Untied gates)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"58.9\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"+ Untied gates 1 61.4 58.9\", \"location\": \"Table 4\", \"confidence\": 0.85, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"LSTM (24M, depth 4, + Untied gates)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"61.3\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"+ Untied gates 4 64.0 61.3\", \"location\": \"Table 4\", \"confidence\": 0.85, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"LSTM (10M, depth 1, + Tied gates)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"59.6\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"+ Tied gates 1 61.7 59.6\", \"location\": \"Table 4\", \"confidence\": 0.85, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"LSTM (24M, depth 4, + Tied gates)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"58.0\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"+ Tied gates 4 60.4 58.0\", \"location\": \"Table 4\", \"confidence\": 0.85, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"RHN (10M, depth 5, - Shared Embeddings)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"69.5\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"- Shared Embeddings 5 72.3 69.5\", \"location\": \"Table 4\", \"confidence\": 0.85, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"RHN (24M, depth 5, - Shared Embeddings)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"64.6\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"- Shared Embeddings 5 67.4 64.6\", \"location\": \"Table 4\", \"confidence\": 0.85, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"RHN (10M, depth 5, - Variational Dropout)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"71.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"- Variational Dropout 5 74.4 71.7\", \"location\": \"Table 4\", \"confidence\": 0.85, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"RHN (24M, depth 5, - Variational Dropout)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"71.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"- Variational Dropout 5 74.7 71.7\", \"location\": \"Table 4\", \"confidence\": 0.85, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"RHN (10M, depth 5, + Recurrent Dropout)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"63.0\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"+ Recurrent Dropout 5 65.5 63.0\", \"location\": \"Table 4\", \"confidence\": 0.85, \"notes\": \"\"}, {\"source_file\": \"1707.05589.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1707.05589\", \"model\": \"RHN (24M, depth 5, + Recurrent Dropout)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"61.0\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"+ Recurrent Dropout 5 63.4 61.0\", \"location\": \"Table 4\", \"confidence\": 0.85, \"notes\": \"\"}]}",
+  "usage": {
+    "prompt_tokens": 9933,
+    "completion_tokens": 3937,
+    "total_tokens": 13870,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 9933
+  },
+  "cost_usd": 0.007704,
+  "elapsed_s": 11.0,
+  "finish_reason": "stop"
+}

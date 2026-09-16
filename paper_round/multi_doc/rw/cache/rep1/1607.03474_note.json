@@ -1,0 +1,107 @@
+{
+  "cache_key": "1607.03474_note",
+  "source_file": "1607.03474_note.txt",
+  "source_kind": "note",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\materials\\1607.03474\\L.txt",
+  "doc_sha256": "19bad51c538c25ad879a54dda0286c87ec295f65b6c1946becf8ff39126ebe45",
+  "doc_chars": 1923,
+  "rep": 1,
+  "created": "2026-09-15T23:00:04",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 4,
+  "records": [
+    {
+      "source_file": "1607.03474_note.txt",
+      "source_kind": "note",
+      "paper_id": "1607.03474",
+      "model": "Variational RHN + WT",
+      "dataset": "Penn Treebank word-level",
+      "metric": "test perplexity",
+      "value": "65.4",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "The paper reports its best Penn Treebank word-level test perplexity for the proposed model as 65.4 for Variational RHN + WT.",
+      "location": "unknown",
+      "confidence": 0.9,
+      "notes": "Single model; note states dynamic evaluation, cache/pointer, ensemble, and fine-tuning are not reported for the proposed model."
+    },
+    {
+      "source_file": "1607.03474_note.txt",
+      "source_kind": "note",
+      "paper_id": "1607.03474",
+      "model": "Variational RHN without WT",
+      "dataset": "Penn Treebank word-level",
+      "metric": "test perplexity",
+      "value": "68.5",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "The paper also reports 68.5 test perplexity for Variational RHN without WT.",
+      "location": "unknown",
+      "confidence": 0.9,
+      "notes": "Single model; note states dynamic evaluation, cache/pointer, ensemble, and fine-tuning are not reported for the proposed model."
+    },
+    {
+      "source_file": "1607.03474_note.txt",
+      "source_kind": "note",
+      "paper_id": "1607.03474",
+      "model": "Variational RHN + WT (10 layer model with reduced weight decay)",
+      "dataset": "Penn Treebank word-level",
+      "metric": "validation/test perplexity",
+      "value": "67.9/65.4",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "The best 10 layer model with reduced weight decay improves to 67.9/65.4 validation/test perplexity.",
+      "location": "unknown",
+      "confidence": 0.8,
+      "notes": "Reported as validation/test pair; single model."
+    },
+    {
+      "source_file": "1607.03474_note.txt",
+      "source_kind": "note",
+      "paper_id": "1607.03474",
+      "model": "Variational RHN + WT",
+      "dataset": "Penn Treebank word-level",
+      "metric": "validation/test perplexity",
+      "value": "67.9/65.4",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "Table 1 lists Variational RHN + WT as 23M parameters with validation/test perplexity 67.9/65.4.",
+      "location": "Table 1",
+      "confidence": 0.8,
+      "notes": "23M parameters; reported as validation/test pair; single model."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1607.03474_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1607.03474\", \"model\": \"Variational RHN + WT\", \"dataset\": \"Penn Treebank word-level\", \"metric\": \"test perplexity\", \"value\": \"65.4\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"The paper reports its best Penn Treebank word-level test perplexity for the proposed model as 65.4 for Variational RHN + WT.\", \"location\": \"unknown\", \"confidence\": 0.9, \"notes\": \"Single model; note states dynamic evaluation, cache/pointer, ensemble, and fine-tuning are not reported for the proposed model.\"}, {\"source_file\": \"1607.03474_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1607.03474\", \"model\": \"Variational RHN without WT\", \"dataset\": \"Penn Treebank word-level\", \"metric\": \"test perplexity\", \"value\": \"68.5\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"The paper also reports 68.5 test perplexity for Variational RHN without WT.\", \"location\": \"unknown\", \"confidence\": 0.9, \"notes\": \"Single model; note states dynamic evaluation, cache/pointer, ensemble, and fine-tuning are not reported for the proposed model.\"}, {\"source_file\": \"1607.03474_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1607.03474\", \"model\": \"Variational RHN + WT (10 layer model with reduced weight decay)\", \"dataset\": \"Penn Treebank word-level\", \"metric\": \"validation/test perplexity\", \"value\": \"67.9/65.4\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"The best 10 layer model with reduced weight decay improves to 67.9/65.4 validation/test perplexity.\", \"location\": \"unknown\", \"confidence\": 0.8, \"notes\": \"Reported as validation/test pair; single model.\"}, {\"source_file\": \"1607.03474_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1607.03474\", \"model\": \"Variational RHN + WT\", \"dataset\": \"Penn Treebank word-level\", \"metric\": \"validation/test perplexity\", \"value\": \"67.9/65.4\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"Table 1 lists Variational RHN + WT as 23M parameters with validation/test perplexity 67.9/65.4.\", \"location\": \"Table 1\", \"confidence\": 0.8, \"notes\": \"23M parameters; reported as validation/test pair; single model.\"}]}",
+  "usage": {
+    "prompt_tokens": 1144,
+    "completion_tokens": 717,
+    "total_tokens": 1861,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1144
+  },
+  "cost_usd": 0.001204,
+  "elapsed_s": 3.1,
+  "finish_reason": "stop"
+}

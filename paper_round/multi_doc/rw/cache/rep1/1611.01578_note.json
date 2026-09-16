@@ -1,0 +1,88 @@
+{
+  "cache_key": "1611.01578_note",
+  "source_file": "1611.01578_note.txt",
+  "source_kind": "note",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\materials\\1611.01578\\L.txt",
+  "doc_sha256": "8bbb917c44a553c8fedd5796aaaf3fe12aad0efc4e0c09e2017b25bc668fc5e2",
+  "doc_chars": 2160,
+  "rep": 1,
+  "created": "2026-09-15T23:00:10",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 3,
+  "records": [
+    {
+      "source_file": "1611.01578_note.txt",
+      "source_kind": "note",
+      "paper_id": "1611.01578",
+      "model": "Neural Architecture Search with base 8 and shared embeddings, 54M parameters",
+      "dataset": "Penn Treebank word-level language modeling",
+      "metric": "test perplexity",
+      "value": "62.4",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "The paper reports 62.4 test perplexity on Penn Treebank for the best Neural Architecture Search model.",
+      "location": "unknown",
+      "confidence": 0.9,
+      "notes": "Single model perplexity on the test set; note states no dynamic evaluation, cache/pointer, ensemble, or fine-tuning."
+    },
+    {
+      "source_file": "1611.01578_note.txt",
+      "source_kind": "note",
+      "paper_id": "1611.01578",
+      "model": "Neural Architecture Search with base 8 and shared embeddings, 25M parameters",
+      "dataset": "Penn Treebank word-level language modeling",
+      "metric": "test perplexity",
+      "value": "64.0",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "Table 2 reports 64.0 and 67.9 for other Neural Architecture Search configurations.",
+      "location": "Table 2",
+      "confidence": 0.9,
+      "notes": "Single model perplexity on the test set; note states no dynamic evaluation, cache/pointer, ensemble, or fine-tuning."
+    },
+    {
+      "source_file": "1611.01578_note.txt",
+      "source_kind": "note",
+      "paper_id": "1611.01578",
+      "model": "Neural Architecture Search with base 8, 32M parameters",
+      "dataset": "Penn Treebank word-level language modeling",
+      "metric": "test perplexity",
+      "value": "67.9",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "The paper also reports Neural Architecture Search with base 8 at 67.9 with 32M parameters",
+      "location": "Table 2",
+      "confidence": 0.9,
+      "notes": "Single model perplexity on the test set; note states no dynamic evaluation, cache/pointer, ensemble, or fine-tuning."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1611.01578_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1611.01578\", \"model\": \"Neural Architecture Search with base 8 and shared embeddings, 54M parameters\", \"dataset\": \"Penn Treebank word-level language modeling\", \"metric\": \"test perplexity\", \"value\": \"62.4\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"The paper reports 62.4 test perplexity on Penn Treebank for the best Neural Architecture Search model.\", \"location\": \"unknown\", \"confidence\": 0.9, \"notes\": \"Single model perplexity on the test set; note states no dynamic evaluation, cache/pointer, ensemble, or fine-tuning.\"}, {\"source_file\": \"1611.01578_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1611.01578\", \"model\": \"Neural Architecture Search with base 8 and shared embeddings, 25M parameters\", \"dataset\": \"Penn Treebank word-level language modeling\", \"metric\": \"test perplexity\", \"value\": \"64.0\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"Table 2 reports 64.0 and 67.9 for other Neural Architecture Search configurations.\", \"location\": \"Table 2\", \"confidence\": 0.9, \"notes\": \"Single model perplexity on the test set; note states no dynamic evaluation, cache/pointer, ensemble, or fine-tuning.\"}, {\"source_file\": \"1611.01578_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1611.01578\", \"model\": \"Neural Architecture Search with base 8, 32M parameters\", \"dataset\": \"Penn Treebank word-level language modeling\", \"metric\": \"test perplexity\", \"value\": \"67.9\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"The paper also reports Neural Architecture Search with base 8 at 67.9 with 32M parameters\", \"location\": \"Table 2\", \"confidence\": 0.9, \"notes\": \"Single model perplexity on the test set; note states no dynamic evaluation, cache/pointer, ensemble, or fine-tuning.\"}]}",
+  "usage": {
+    "prompt_tokens": 1185,
+    "completion_tokens": 568,
+    "total_tokens": 1753,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1185
+  },
+  "cost_usd": 0.001037,
+  "elapsed_s": 2.4,
+  "finish_reason": "stop"
+}

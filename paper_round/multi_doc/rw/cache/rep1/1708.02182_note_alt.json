@@ -1,0 +1,126 @@
+{
+  "cache_key": "1708.02182_note_alt",
+  "source_file": "1708.02182_note.txt",
+  "source_kind": "note",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\materials\\1708.02182\\Lprime.txt",
+  "doc_sha256": "ee9bd0c24ab00469897baabe7cb0751d6ace5180d6b1e2e302469411fef252d4",
+  "doc_chars": 1905,
+  "rep": 1,
+  "created": "2026-09-15T23:00:22",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 5,
+  "records": [
+    {
+      "source_file": "1708.02182_note.txt",
+      "source_kind": "note",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (3-layer LSTM with tied weights)",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "53.3",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "yes"
+      },
+      "verbatim_quote": "The paper reports a word-level Penn Treebank test perplexity of 53.3 for AWD-LSTM, a 3-layer LSTM with tied weights, as a single model without cache/pointer.",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Note states this result includes the fine-tuning step and is a single model without cache/pointer."
+    },
+    {
+      "source_file": "1708.02182_note.txt",
+      "source_kind": "note",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (3-layer LSTM with tied weights)",
+      "dataset": "WikiText-2, word-level",
+      "metric": "test perplexity",
+      "value": "65.8",
+      "setting": {
+        "dynamic_eval": "unknown",
+        "cache_pointer": "no",
+        "ensemble": "unknown",
+        "fine_tuning": "yes"
+      },
+      "verbatim_quote": "It also reports 65.8 on WikiText-2. This result includes the fine-tuning step.",
+      "location": "unknown",
+      "confidence": 0.7,
+      "notes": "Note does not specify dynamic evaluation or ensemble status for this WikiText-2 result."
+    },
+    {
+      "source_file": "1708.02182_note.txt",
+      "source_kind": "note",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM (no-fine-tuning ablation)",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "58.8",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "Table 4 lists the no-fine-tuning ablation at 58.8 test perplexity on Penn Treebank, and the paper states that removal of the fine-tuning step degrades performance.",
+      "location": "Table 4",
+      "confidence": 0.85,
+      "notes": "No-fine-tuning ablation of the proposed model."
+    },
+    {
+      "source_file": "1708.02182_note.txt",
+      "source_kind": "note",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM with continuous cache pointer",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "52.8",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "yes",
+        "ensemble": "no",
+        "fine_tuning": "yes"
+      },
+      "verbatim_quote": "For the proposed model augmented with a continuous cache pointer, the paper reports an even lower Penn Treebank test perplexity of 52.8",
+      "location": "unknown",
+      "confidence": 0.85,
+      "notes": "Note states the Penn Treebank table is explicitly captioned as single model perplexity; fine-tuning is part of the training procedure."
+    },
+    {
+      "source_file": "1708.02182_note.txt",
+      "source_kind": "note",
+      "paper_id": "1708.02182",
+      "model": "AWD-LSTM with continuous cache pointer",
+      "dataset": "WikiText-2, word-level",
+      "metric": "test perplexity",
+      "value": "52.0",
+      "setting": {
+        "dynamic_eval": "unknown",
+        "cache_pointer": "yes",
+        "ensemble": "unknown",
+        "fine_tuning": "yes"
+      },
+      "verbatim_quote": "For the proposed model augmented with a continuous cache pointer, the paper reports an even lower Penn Treebank test perplexity of 52.8 and 52.0 on WikiText-2.",
+      "location": "unknown",
+      "confidence": 0.7,
+      "notes": "Note does not specify dynamic evaluation or ensemble status for this WikiText-2 result."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1708.02182_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (3-layer LSTM with tied weights)\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"53.3\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"yes\"}, \"verbatim_quote\": \"The paper reports a word-level Penn Treebank test perplexity of 53.3 for AWD-LSTM, a 3-layer LSTM with tied weights, as a single model without cache/pointer.\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Note states this result includes the fine-tuning step and is a single model without cache/pointer.\"}, {\"source_file\": \"1708.02182_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (3-layer LSTM with tied weights)\", \"dataset\": \"WikiText-2, word-level\", \"metric\": \"test perplexity\", \"value\": \"65.8\", \"setting\": {\"dynamic_eval\": \"unknown\", \"cache_pointer\": \"no\", \"ensemble\": \"unknown\", \"fine_tuning\": \"yes\"}, \"verbatim_quote\": \"It also reports 65.8 on WikiText-2. This result includes the fine-tuning step.\", \"location\": \"unknown\", \"confidence\": 0.7, \"notes\": \"Note does not specify dynamic evaluation or ensemble status for this WikiText-2 result.\"}, {\"source_file\": \"1708.02182_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (no-fine-tuning ablation)\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"58.8\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"Table 4 lists the no-fine-tuning ablation at 58.8 test perplexity on Penn Treebank, and the paper states that removal of the fine-tuning step degrades performance.\", \"location\": \"Table 4\", \"confidence\": 0.85, \"notes\": \"No-fine-tuning ablation of the proposed model.\"}, {\"source_file\": \"1708.02182_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM with continuous cache pointer\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"52.8\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"yes\", \"ensemble\": \"no\", \"fine_tuning\": \"yes\"}, \"verbatim_quote\": \"For the proposed model augmented with a continuous cache pointer, the paper reports an even lower Penn Treebank test perplexity of 52.8\", \"location\": \"unknown\", \"confidence\": 0.85, \"notes\": \"Note states the Penn Treebank table is explicitly captioned as single model perplexity; fine-tuning is part of the training procedure.\"}, {\"source_file\": \"1708.02182_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM with continuous cache pointer\", \"dataset\": \"WikiText-2, word-level\", \"metric\": \"test perplexity\", \"value\": \"52.0\", \"setting\": {\"dynamic_eval\": \"unknown\", \"cache_pointer\": \"yes\", \"ensemble\": \"unknown\", \"fine_tuning\": \"yes\"}, \"verbatim_quote\": \"For the proposed model augmented with a continuous cache pointer, the paper reports an even lower Penn Treebank test perplexity of 52.8 and 52.0 on WikiText-2.\", \"location\": \"unknown\", \"confidence\": 0.7, \"notes\": \"Note does not specify dynamic evaluation or ensemble status for this WikiText-2 result.\"}]}",
+  "usage": {
+    "prompt_tokens": 1175,
+    "completion_tokens": 939,
+    "total_tokens": 2114,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 535
+  },
+  "cost_usd": 0.001479,
+  "elapsed_s": 3.5,
+  "finish_reason": "stop"
+}

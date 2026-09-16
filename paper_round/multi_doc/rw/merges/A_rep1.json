@@ -1,0 +1,293 @@
+{
+  "cond": "A",
+  "rep": 1,
+  "records_rep": 1,
+  "created": "2026-09-15T23:18:43",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 8192,
+  "thinking_disabled": true,
+  "json_object": true,
+  "cache_keys": [
+    "1409.2329",
+    "1508.06615",
+    "1512.05287",
+    "1607.03474",
+    "1608.05859",
+    "1611.01462",
+    "1611.01578",
+    "1706.02222",
+    "1707.05589",
+    "1708.02182",
+    "1711.03953"
+  ],
+  "records_per_key": {
+    "1409.2329": 12,
+    "1508.06615": 11,
+    "1512.05287": 9,
+    "1607.03474": 3,
+    "1608.05859": 6,
+    "1611.01462": 21,
+    "1611.01578": 5,
+    "1706.02222": 4,
+    "1707.05589": 26,
+    "1708.02182": 22,
+    "1711.03953": 18
+  },
+  "n_records": 137,
+  "records_chars": 71172,
+  "usage": {
+    "prompt_tokens": 26017,
+    "completion_tokens": 1836,
+    "total_tokens": 27853,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 26017
+  },
+  "cost_usd": 0.010008,
+  "elapsed_s": 6.5,
+  "finish_reason": "stop",
+  "parse_error": null,
+  "parsed": {
+    "answer_prose": "Q1: The lowest word-level Penn Treebank test perplexity for a single model without dynamic evaluation, cache/pointer augmentation, or ensembling is 54.44, reported by 1711.03953 (AWD-LSTM-MoS, with finetuning). Ranking by this number: 1711.03953 (54.44) < 1708.02182 (57.3) < 1707.05589 (58.3) < 1611.01578 (62.4) < 1607.03474 (65.4) < 1608.05859 (66.0) < 1611.01462 (68.5) < 1512.05287 (73.4) < 1409.2329 (78.4) < 1508.06615 (78.9) < 1706.02222 (87.38). Q2: The table lists each paper's own proposed single-model PTB test perplexity under the stated conditions. Note that 1611.01578's 62.4 is its best single-model result; 1608.05859's 66.0 is its RHN+BD+WT; 1611.01462's 68.5 is VD-LSTM+REAL (large); 1508.06615's 78.9 is LSTM-Char-Large; 1409.2329's 78.4 is the large regularized LSTM; 1706.02222's 87.38 is GRURNTN (proposed).",
+    "table": [
+      {
+        "paper_id": "1409.2329",
+        "paper_title_or_id": "1409.2329",
+        "value": "78.4",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1409.2329.txt"
+        ],
+        "secondary_only": false,
+        "note": "Large regularized LSTM, single model."
+      },
+      {
+        "paper_id": "1508.06615",
+        "paper_title_or_id": "1508.06615",
+        "value": "78.9",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1508.06615.txt"
+        ],
+        "secondary_only": false,
+        "note": "LSTM-Char-Large, single model."
+      },
+      {
+        "paper_id": "1512.05287",
+        "paper_title_or_id": "1512.05287",
+        "value": "73.4 ± 0.0",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1512.05287.txt"
+        ],
+        "secondary_only": false,
+        "note": "Variational (untied weights, MC) LSTM, large; best single-model result."
+      },
+      {
+        "paper_id": "1607.03474",
+        "paper_title_or_id": "1607.03474",
+        "value": "65.4",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1607.03474.txt"
+        ],
+        "secondary_only": false,
+        "note": "Variational RHN + WT, single model."
+      },
+      {
+        "paper_id": "1608.05859",
+        "paper_title_or_id": "1608.05859",
+        "value": "66.0",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1608.05859.txt"
+        ],
+        "secondary_only": false,
+        "note": "RHN + BD + WT, single model."
+      },
+      {
+        "paper_id": "1611.01462",
+        "paper_title_or_id": "1611.01462",
+        "value": "68.5",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1611.01462.txt"
+        ],
+        "secondary_only": false,
+        "note": "VD-LSTM+REAL (large, 1500 units), single model."
+      },
+      {
+        "paper_id": "1611.01578",
+        "paper_title_or_id": "1611.01578",
+        "value": "62.4",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1611.01578.txt"
+        ],
+        "secondary_only": false,
+        "note": "Neural Architecture Search with base 8 and shared embeddings (54M), single model."
+      },
+      {
+        "paper_id": "1706.02222",
+        "paper_title_or_id": "1706.02222",
+        "value": "87.38",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1706.02222.txt"
+        ],
+        "secondary_only": false,
+        "note": "GRURNTN (proposed), single model."
+      },
+      {
+        "paper_id": "1707.05589",
+        "paper_title_or_id": "1707.05589",
+        "value": "58.3",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1707.05589.txt"
+        ],
+        "secondary_only": false,
+        "note": "LSTM (24M, depth 4), best single-model PTB test perplexity."
+      },
+      {
+        "paper_id": "1708.02182",
+        "paper_title_or_id": "1708.02182",
+        "value": "57.3",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "yes"
+        },
+        "provenance": [
+          "1708.02182.txt"
+        ],
+        "secondary_only": false,
+        "note": "AWD-LSTM - 3-layer LSTM (tied), single model with fine-tuning."
+      },
+      {
+        "paper_id": "1711.03953",
+        "paper_title_or_id": "1711.03953",
+        "value": "54.44",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "yes"
+        },
+        "provenance": [
+          "1711.03953.txt"
+        ],
+        "secondary_only": false,
+        "note": "AWD-LSTM-MoS, single model with finetuning."
+      }
+    ],
+    "ranking": [
+      {
+        "rank": 1,
+        "paper_id": "1711.03953",
+        "value": "54.44"
+      },
+      {
+        "rank": 2,
+        "paper_id": "1708.02182",
+        "value": "57.3"
+      },
+      {
+        "rank": 3,
+        "paper_id": "1707.05589",
+        "value": "58.3"
+      },
+      {
+        "rank": 4,
+        "paper_id": "1611.01578",
+        "value": "62.4"
+      },
+      {
+        "rank": 5,
+        "paper_id": "1607.03474",
+        "value": "65.4"
+      },
+      {
+        "rank": 6,
+        "paper_id": "1608.05859",
+        "value": "66.0"
+      },
+      {
+        "rank": 7,
+        "paper_id": "1611.01462",
+        "value": "68.5"
+      },
+      {
+        "rank": 8,
+        "paper_id": "1512.05287",
+        "value": "73.4 ± 0.0"
+      },
+      {
+        "rank": 9,
+        "paper_id": "1409.2329",
+        "value": "78.4"
+      },
+      {
+        "rank": 10,
+        "paper_id": "1508.06615",
+        "value": "78.9"
+      },
+      {
+        "rank": 11,
+        "paper_id": "1706.02222",
+        "value": "87.38"
+      }
+    ],
+    "q1_answer": "1711.03953 reports the lowest word-level Penn Treebank test perplexity for a single model without dynamic evaluation, cache/pointer augmentation, or ensembling: 54.44 (AWD-LSTM-MoS with finetuning).",
+    "conflicts": []
+  }
+}

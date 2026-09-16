@@ -1,0 +1,50 @@
+{
+  "cache_key": "1707.05589_note",
+  "source_file": "1707.05589_note.txt",
+  "source_kind": "note",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\materials\\1707.05589\\L.txt",
+  "doc_sha256": "5a7a8ec2843c1bf250e3011a28c5afc0f646d625646a17929cd5da74606d6f95",
+  "doc_chars": 1869,
+  "rep": 1,
+  "created": "2026-09-15T23:00:13",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 1,
+  "records": [
+    {
+      "source_file": "1707.05589_note.txt",
+      "source_kind": "note",
+      "paper_id": "1707.05589",
+      "model": "4-layer LSTM with 24M parameters",
+      "dataset": "Penn Treebank word-level",
+      "metric": "test perplexity",
+      "value": "58.3",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "The paper reports a best word-level test perplexity of 58.3 on Penn Treebank for its own proposed model, a 4-layer LSTM with 24M parameters.",
+      "location": "unknown",
+      "confidence": 0.9,
+      "notes": "Single model, no dynamic evaluation, cache/pointer, ensemble, or fine-tuning."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1707.05589_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1707.05589\", \"model\": \"4-layer LSTM with 24M parameters\", \"dataset\": \"Penn Treebank word-level\", \"metric\": \"test perplexity\", \"value\": \"58.3\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"The paper reports a best word-level test perplexity of 58.3 on Penn Treebank for its own proposed model, a 4-layer LSTM with 24M parameters.\", \"location\": \"unknown\", \"confidence\": 0.9, \"notes\": \"Single model, no dynamic evaluation, cache/pointer, ensemble, or fine-tuning.\"}]}",
+  "usage": {
+    "prompt_tokens": 1205,
+    "completion_tokens": 191,
+    "total_tokens": 1396,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1205
+  },
+  "cost_usd": 0.000591,
+  "elapsed_s": 1.3,
+  "finish_reason": "stop"
+}

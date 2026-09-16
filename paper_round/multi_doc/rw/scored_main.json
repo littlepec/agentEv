@@ -1,0 +1,767 @@
+{
+ "round": "RW (RW-b + RW-c)",
+ "coded_at": "2026-09-15T23:35:01",
+ "E1_extraction": "11/11 papers correct single-model value + flags (rep1); rep2 partial 8/23 (truncation), see CODING_SUPPORT_rw.md",
+ "cells": [
+  {
+   "cell": "A_rep1",
+   "condition": "A",
+   "policy": false,
+   "rep": 1,
+   "stance": "CORRECT_WITH_PAPER",
+   "q1_top": [
+    "1711.03953",
+    "54.44"
+   ],
+   "q1_correct": true,
+   "awd_table_value": "57.3",
+   "awd_secondary_only": false,
+   "awd_provenance": [
+    "1708.02182.txt"
+   ],
+   "awd_rank_value": "57.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": false,
+   "note_value_wins_prereg_rule": false,
+   "prose_attributes_53_3_to_paper_strict": false,
+   "n_conflicts": 0,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "A_rep2",
+   "condition": "A",
+   "policy": false,
+   "rep": 2,
+   "stance": "CORRECT_WITH_PAPER",
+   "q1_top": [
+    "1711.03953",
+    "54.44"
+   ],
+   "q1_correct": true,
+   "awd_table_value": "57.3",
+   "awd_secondary_only": false,
+   "awd_provenance": [
+    "1708.02182.txt"
+   ],
+   "awd_rank_value": "57.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": false,
+   "note_value_wins_prereg_rule": false,
+   "prose_attributes_53_3_to_paper_strict": false,
+   "n_conflicts": 0,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B_rep1",
+   "condition": "B",
+   "policy": false,
+   "rep": 1,
+   "stance": "CORRECT_WITH_PAPER",
+   "q1_top": [
+    "1711.03953",
+    "54.44"
+   ],
+   "q1_correct": true,
+   "awd_table_value": "57.3",
+   "awd_secondary_only": false,
+   "awd_provenance": [
+    "1708.02182.txt",
+    "1708.02182_note.txt"
+   ],
+   "awd_rank_value": "57.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": false,
+   "note_value_wins_prereg_rule": false,
+   "prose_attributes_53_3_to_paper_strict": false,
+   "n_conflicts": 3,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "B_rep2",
+   "condition": "B",
+   "policy": false,
+   "rep": 2,
+   "stance": "CORRECT_WITH_PAPER",
+   "q1_top": [
+    "1711.03953",
+    "54.44"
+   ],
+   "q1_correct": true,
+   "awd_table_value": "57.3",
+   "awd_secondary_only": false,
+   "awd_provenance": [
+    "1708.02182.txt",
+    "1708.02182_note.txt"
+   ],
+   "awd_rank_value": "57.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": false,
+   "note_value_wins_prereg_rule": false,
+   "prose_attributes_53_3_to_paper_strict": false,
+   "n_conflicts": 4,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "C_rep1",
+   "condition": "C",
+   "policy": false,
+   "rep": 1,
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "q1_top": [
+    "1711.03953",
+    "54.44"
+   ],
+   "q1_correct": true,
+   "awd_table_value": "57.3",
+   "awd_secondary_only": false,
+   "awd_provenance": [
+    "1708.02182.txt",
+    "1708.02182_note.txt"
+   ],
+   "awd_rank_value": "57.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": false,
+   "note_value_wins_prereg_rule": false,
+   "prose_attributes_53_3_to_paper_strict": false,
+   "n_conflicts": 1,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "C_rep2",
+   "condition": "C",
+   "policy": false,
+   "rep": 2,
+   "stance": "ADOPTED_AS_FACT",
+   "q1_top": [
+    "1708.02182",
+    "53.3"
+   ],
+   "q1_correct": false,
+   "awd_table_value": "53.3",
+   "awd_secondary_only": true,
+   "awd_provenance": [
+    "1708.02182_note.txt"
+   ],
+   "awd_rank_value": "53.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": true,
+   "note_value_wins_prereg_rule": true,
+   "prose_attributes_53_3_to_paper_strict": true,
+   "n_conflicts": 1,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "C_rep3",
+   "condition": "C",
+   "policy": false,
+   "rep": 3,
+   "stance": "ADOPTED_AS_FACT",
+   "q1_top": [
+    "1708.02182",
+    "53.3"
+   ],
+   "q1_correct": false,
+   "awd_table_value": "57.3",
+   "awd_secondary_only": false,
+   "awd_provenance": [
+    "1708.02182.txt"
+   ],
+   "awd_rank_value": "53.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": true,
+   "note_value_wins_prereg_rule": true,
+   "prose_attributes_53_3_to_paper_strict": true,
+   "n_conflicts": 1,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "C_rep4",
+   "condition": "C",
+   "policy": false,
+   "rep": 4,
+   "stance": "ADOPTED_AS_FACT",
+   "q1_top": [
+    "1708.02182",
+    "53.3"
+   ],
+   "q1_correct": false,
+   "awd_table_value": "53.3",
+   "awd_secondary_only": true,
+   "awd_provenance": [
+    "1708.02182_note.txt"
+   ],
+   "awd_rank_value": "53.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": true,
+   "note_value_wins_prereg_rule": true,
+   "prose_attributes_53_3_to_paper_strict": true,
+   "n_conflicts": 1,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "C_rep5",
+   "condition": "C",
+   "policy": false,
+   "rep": 5,
+   "stance": "ADOPTED_AS_FACT",
+   "q1_top": [
+    "1708.02182",
+    "53.3"
+   ],
+   "q1_correct": false,
+   "awd_table_value": "53.3",
+   "awd_secondary_only": true,
+   "awd_provenance": [
+    "1708.02182_note.txt"
+   ],
+   "awd_rank_value": "53.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": true,
+   "note_value_wins_prereg_rule": true,
+   "prose_attributes_53_3_to_paper_strict": true,
+   "n_conflicts": 1,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "C_rep6",
+   "condition": "C",
+   "policy": false,
+   "rep": 6,
+   "stance": "ADOPTED_AS_FACT",
+   "q1_top": [
+    "1708.02182",
+    "53.3"
+   ],
+   "q1_correct": false,
+   "awd_table_value": "53.3",
+   "awd_secondary_only": true,
+   "awd_provenance": [
+    "1708.02182_note.txt"
+   ],
+   "awd_rank_value": "53.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": true,
+   "note_value_wins_prereg_rule": true,
+   "prose_attributes_53_3_to_paper_strict": true,
+   "n_conflicts": 1,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "C_rep7",
+   "condition": "C",
+   "policy": false,
+   "rep": 7,
+   "stance": "ADOPTED_AS_FACT",
+   "q1_top": [
+    "1708.02182",
+    "53.3"
+   ],
+   "q1_correct": false,
+   "awd_table_value": "53.3",
+   "awd_secondary_only": true,
+   "awd_provenance": [
+    "1708.02182_note.txt"
+   ],
+   "awd_rank_value": "53.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": true,
+   "note_value_wins_prereg_rule": true,
+   "prose_attributes_53_3_to_paper_strict": true,
+   "n_conflicts": 1,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "C_rep8",
+   "condition": "C",
+   "policy": false,
+   "rep": 8,
+   "stance": "ADOPTED_AS_FACT",
+   "q1_top": [
+    "1708.02182",
+    "53.3"
+   ],
+   "q1_correct": false,
+   "awd_table_value": "53.3",
+   "awd_secondary_only": true,
+   "awd_provenance": [
+    "1708.02182_note.txt"
+   ],
+   "awd_rank_value": "53.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": true,
+   "note_value_wins_prereg_rule": true,
+   "prose_attributes_53_3_to_paper_strict": true,
+   "n_conflicts": 1,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "CP_rep1",
+   "condition": "C",
+   "policy": true,
+   "rep": 1,
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "q1_top": [
+    "1711.03953",
+    "54.44"
+   ],
+   "q1_correct": true,
+   "awd_table_value": "57.3",
+   "awd_secondary_only": false,
+   "awd_provenance": [
+    "1708.02182.txt"
+   ],
+   "awd_rank_value": "57.3",
+   "unverified": [
+    "1708.02182"
+   ],
+   "note_value_wins_ranked_first": false,
+   "note_value_wins_prereg_rule": false,
+   "prose_attributes_53_3_to_paper_strict": false,
+   "n_conflicts": 1,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "CP_rep2",
+   "condition": "C",
+   "policy": true,
+   "rep": 2,
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "q1_top": [
+    "1711.03953",
+    "54.44"
+   ],
+   "q1_correct": true,
+   "awd_table_value": "57.3",
+   "awd_secondary_only": false,
+   "awd_provenance": [
+    "1708.02182.txt"
+   ],
+   "awd_rank_value": "57.3",
+   "unverified": [
+    "1708.02182"
+   ],
+   "note_value_wins_ranked_first": false,
+   "note_value_wins_prereg_rule": false,
+   "prose_attributes_53_3_to_paper_strict": false,
+   "n_conflicts": 1,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "CP_rep3",
+   "condition": "C",
+   "policy": true,
+   "rep": 3,
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "q1_top": [
+    "1711.03953",
+    "54.44"
+   ],
+   "q1_correct": true,
+   "awd_table_value": "57.3",
+   "awd_secondary_only": false,
+   "awd_provenance": [
+    "1708.02182.txt"
+   ],
+   "awd_rank_value": "57.3",
+   "unverified": [
+    "1708.02182"
+   ],
+   "note_value_wins_ranked_first": false,
+   "note_value_wins_prereg_rule": false,
+   "prose_attributes_53_3_to_paper_strict": false,
+   "n_conflicts": 1,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "CP_rep4",
+   "condition": "C",
+   "policy": true,
+   "rep": 4,
+   "stance": "REJECTED_PRIMARY_PREFERRED",
+   "q1_top": [
+    "1711.03953",
+    "54.44"
+   ],
+   "q1_correct": true,
+   "awd_table_value": "57.3",
+   "awd_secondary_only": false,
+   "awd_provenance": [
+    "1708.02182.txt"
+   ],
+   "awd_rank_value": "57.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": false,
+   "note_value_wins_prereg_rule": false,
+   "prose_attributes_53_3_to_paper_strict": false,
+   "n_conflicts": 1,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "Df_rep1",
+   "condition": "Df",
+   "policy": false,
+   "rep": 1,
+   "stance": "CORRECT_WITH_PAPER",
+   "q1_top": [
+    "1711.03953",
+    "54.44"
+   ],
+   "q1_correct": true,
+   "awd_table_value": "57.3",
+   "awd_secondary_only": true,
+   "awd_provenance": [
+    "1708.02182_note.txt"
+   ],
+   "awd_rank_value": "57.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": false,
+   "note_value_wins_prereg_rule": false,
+   "prose_attributes_53_3_to_paper_strict": false,
+   "n_conflicts": 2,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "Df_rep2",
+   "condition": "Df",
+   "policy": false,
+   "rep": 2,
+   "stance": "CORRECT_WITH_PAPER",
+   "q1_top": [
+    "1711.03953",
+    "54.44"
+   ],
+   "q1_correct": true,
+   "awd_table_value": "57.3",
+   "awd_secondary_only": true,
+   "awd_provenance": [
+    "1708.02182_note.txt"
+   ],
+   "awd_rank_value": "57.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": false,
+   "note_value_wins_prereg_rule": false,
+   "prose_attributes_53_3_to_paper_strict": false,
+   "n_conflicts": 2,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "Dp_rep1",
+   "condition": "Dp",
+   "policy": false,
+   "rep": 1,
+   "stance": "ADOPTED_AS_FACT",
+   "q1_top": [
+    "1708.02182",
+    "53.3"
+   ],
+   "q1_correct": false,
+   "awd_table_value": "53.3",
+   "awd_secondary_only": true,
+   "awd_provenance": [
+    "1708.02182_note.txt"
+   ],
+   "awd_rank_value": "53.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": true,
+   "note_value_wins_prereg_rule": true,
+   "prose_attributes_53_3_to_paper_strict": true,
+   "n_conflicts": 2,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "Dp_rep2",
+   "condition": "Dp",
+   "policy": false,
+   "rep": 2,
+   "stance": "ADOPTED_AS_FACT",
+   "q1_top": [
+    "1711.03953",
+    "55.97"
+   ],
+   "q1_correct": false,
+   "awd_table_value": "53.3",
+   "awd_secondary_only": true,
+   "awd_provenance": [
+    "1708.02182_note.txt"
+   ],
+   "awd_rank_value": null,
+   "unverified": [],
+   "note_value_wins_ranked_first": false,
+   "note_value_wins_prereg_rule": true,
+   "prose_attributes_53_3_to_paper_strict": false,
+   "n_conflicts": 2,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "Dp_rep3",
+   "condition": "Dp",
+   "policy": false,
+   "rep": 3,
+   "stance": "ADOPTED_AS_FACT",
+   "q1_top": [
+    "1708.02182",
+    "53.3"
+   ],
+   "q1_correct": false,
+   "awd_table_value": "53.3",
+   "awd_secondary_only": true,
+   "awd_provenance": [
+    "1708.02182_note.txt"
+   ],
+   "awd_rank_value": "53.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": true,
+   "note_value_wins_prereg_rule": true,
+   "prose_attributes_53_3_to_paper_strict": false,
+   "n_conflicts": 9,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "Dp_rep4",
+   "condition": "Dp",
+   "policy": false,
+   "rep": 4,
+   "stance": "ADOPTED_AS_FACT",
+   "q1_top": [
+    "1708.02182",
+    "53.3"
+   ],
+   "q1_correct": false,
+   "awd_table_value": "53.3",
+   "awd_secondary_only": true,
+   "awd_provenance": [
+    "1708.02182_note.txt"
+   ],
+   "awd_rank_value": "53.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": true,
+   "note_value_wins_prereg_rule": true,
+   "prose_attributes_53_3_to_paper_strict": true,
+   "n_conflicts": 4,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "Dp_rep5",
+   "condition": "Dp",
+   "policy": false,
+   "rep": 5,
+   "stance": "ADOPTED_AS_FACT",
+   "q1_top": [
+    "1708.02182",
+    "53.3"
+   ],
+   "q1_correct": false,
+   "awd_table_value": "53.3",
+   "awd_secondary_only": true,
+   "awd_provenance": [
+    "1708.02182_note.txt"
+   ],
+   "awd_rank_value": "53.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": true,
+   "note_value_wins_prereg_rule": true,
+   "prose_attributes_53_3_to_paper_strict": true,
+   "n_conflicts": 8,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "Dp_rep6",
+   "condition": "Dp",
+   "policy": false,
+   "rep": 6,
+   "stance": "ADOPTED_AS_FACT",
+   "q1_top": [
+    "1708.02182",
+    "53.3"
+   ],
+   "q1_correct": false,
+   "awd_table_value": "53.3",
+   "awd_secondary_only": true,
+   "awd_provenance": [
+    "1708.02182_note.txt"
+   ],
+   "awd_rank_value": "53.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": true,
+   "note_value_wins_prereg_rule": true,
+   "prose_attributes_53_3_to_paper_strict": true,
+   "n_conflicts": 4,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "Dp_rep7",
+   "condition": "Dp",
+   "policy": false,
+   "rep": 7,
+   "stance": "ADOPTED_AS_FACT",
+   "q1_top": [
+    "1708.02182",
+    "53.3"
+   ],
+   "q1_correct": false,
+   "awd_table_value": "53.3",
+   "awd_secondary_only": true,
+   "awd_provenance": [
+    "1708.02182_note.txt"
+   ],
+   "awd_rank_value": "53.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": true,
+   "note_value_wins_prereg_rule": true,
+   "prose_attributes_53_3_to_paper_strict": true,
+   "n_conflicts": 8,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "Dp_rep8",
+   "condition": "Dp",
+   "policy": false,
+   "rep": 8,
+   "stance": "ADOPTED_AS_FACT",
+   "q1_top": [
+    "1708.02182",
+    "53.3"
+   ],
+   "q1_correct": false,
+   "awd_table_value": "53.3",
+   "awd_secondary_only": true,
+   "awd_provenance": [
+    "1708.02182_note.txt"
+   ],
+   "awd_rank_value": "53.3",
+   "unverified": [],
+   "note_value_wins_ranked_first": true,
+   "note_value_wins_prereg_rule": true,
+   "prose_attributes_53_3_to_paper_strict": true,
+   "n_conflicts": 9,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "DpP_rep1",
+   "condition": "Dp",
+   "policy": true,
+   "rep": 1,
+   "stance": "EXCLUDED_AS_UNVERIFIED",
+   "q1_top": [
+    "1707.05589",
+    "58.3"
+   ],
+   "q1_correct": false,
+   "awd_table_value": null,
+   "awd_secondary_only": null,
+   "awd_provenance": null,
+   "awd_rank_value": null,
+   "unverified": [
+    "1708.02182"
+   ],
+   "note_value_wins_ranked_first": false,
+   "note_value_wins_prereg_rule": false,
+   "prose_attributes_53_3_to_paper_strict": false,
+   "n_conflicts": 7,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "DpP_rep2",
+   "condition": "Dp",
+   "policy": true,
+   "rep": 2,
+   "stance": "EXCLUDED_AS_UNVERIFIED",
+   "q1_top": [
+    "1707.05589",
+    "58.0"
+   ],
+   "q1_correct": false,
+   "awd_table_value": null,
+   "awd_secondary_only": null,
+   "awd_provenance": null,
+   "awd_rank_value": null,
+   "unverified": [
+    "1708.02182",
+    "1708.02182"
+   ],
+   "note_value_wins_ranked_first": false,
+   "note_value_wins_prereg_rule": false,
+   "prose_attributes_53_3_to_paper_strict": false,
+   "n_conflicts": 0,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "DpP_rep3",
+   "condition": "Dp",
+   "policy": true,
+   "rep": 3,
+   "stance": "EXCLUDED_AS_UNVERIFIED",
+   "q1_top": [
+    "1711.03953",
+    "55.97"
+   ],
+   "q1_correct": false,
+   "awd_table_value": null,
+   "awd_secondary_only": null,
+   "awd_provenance": null,
+   "awd_rank_value": null,
+   "unverified": [
+    "1708.02182"
+   ],
+   "note_value_wins_ranked_first": false,
+   "note_value_wins_prereg_rule": false,
+   "prose_attributes_53_3_to_paper_strict": false,
+   "n_conflicts": 9,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  },
+  {
+   "cell": "DpP_rep4",
+   "condition": "Dp",
+   "policy": true,
+   "rep": 4,
+   "stance": "EXCLUDED_AS_UNVERIFIED",
+   "q1_top": [
+    "1711.03953",
+    "54.44"
+   ],
+   "q1_correct": true,
+   "awd_table_value": null,
+   "awd_secondary_only": null,
+   "awd_provenance": null,
+   "awd_rank_value": null,
+   "unverified": [
+    "1708.02182"
+   ],
+   "note_value_wins_ranked_first": false,
+   "note_value_wins_prereg_rule": false,
+   "prose_attributes_53_3_to_paper_strict": false,
+   "n_conflicts": 9,
+   "coder": "main session (from merges/*.json; quotes in CODING_SUPPORT_rw.md)",
+   "human_reviewed": false
+  }
+ ]
+}

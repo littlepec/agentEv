@@ -1,0 +1,240 @@
+{
+  "cache_key": "1508.06615",
+  "source_file": "1508.06615.txt",
+  "source_kind": "paper",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\pool\\1508.06615.txt",
+  "doc_sha256": "3934f6bd344476f1d18dc97cad9bc65b750820c2f8628bc3dfa684625ffb8b84",
+  "doc_chars": 51557,
+  "rep": 2,
+  "created": "2026-09-15T23:00:34",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 11,
+  "records": [
+    {
+      "source_file": "1508.06615.txt",
+      "source_kind": "paper",
+      "paper_id": "1508.06615",
+      "model": "LSTM-Char-Small",
+      "dataset": "English Penn Treebank",
+      "metric": "word-level test perplexity",
+      "value": "92.3",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "LSTM-Char-Small 92.3 5 m",
+      "location": "Table 3",
+      "confidence": 0.9,
+      "notes": "Small character-level model, single model."
+    },
+    {
+      "source_file": "1508.06615.txt",
+      "source_kind": "paper",
+      "paper_id": "1508.06615",
+      "model": "LSTM-Char-Large",
+      "dataset": "English Penn Treebank",
+      "metric": "word-level test perplexity",
+      "value": "78.9",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "LSTM-Char-Large 78.9 19 m",
+      "location": "Table 3",
+      "confidence": 0.9,
+      "notes": "Large character-level model, single model."
+    },
+    {
+      "source_file": "1508.06615.txt",
+      "source_kind": "paper",
+      "paper_id": "1508.06615",
+      "model": "LSTM-Char (No Highway Layers), Small",
+      "dataset": "English Penn Treebank",
+      "metric": "perplexity",
+      "value": "100.3",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "No Highway Layers 100.3 84.6",
+      "location": "Table 7",
+      "confidence": 0.85,
+      "notes": "Ablation, small model without highway layers."
+    },
+    {
+      "source_file": "1508.06615.txt",
+      "source_kind": "paper",
+      "paper_id": "1508.06615",
+      "model": "LSTM-Char (No Highway Layers), Large",
+      "dataset": "English Penn Treebank",
+      "metric": "perplexity",
+      "value": "84.6",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "No Highway Layers 100.3 84.6",
+      "location": "Table 7",
+      "confidence": 0.85,
+      "notes": "Ablation, large model without highway layers."
+    },
+    {
+      "source_file": "1508.06615.txt",
+      "source_kind": "paper",
+      "paper_id": "1508.06615",
+      "model": "LSTM-Char (One Highway Layer), Small",
+      "dataset": "English Penn Treebank",
+      "metric": "perplexity",
+      "value": "92.3",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "One Highway Layer 92.3 79.7",
+      "location": "Table 7",
+      "confidence": 0.85,
+      "notes": "Ablation, small model with one highway layer."
+    },
+    {
+      "source_file": "1508.06615.txt",
+      "source_kind": "paper",
+      "paper_id": "1508.06615",
+      "model": "LSTM-Char (One Highway Layer), Large",
+      "dataset": "English Penn Treebank",
+      "metric": "perplexity",
+      "value": "79.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "One Highway Layer 92.3 79.7",
+      "location": "Table 7",
+      "confidence": 0.85,
+      "notes": "Ablation, large model with one highway layer."
+    },
+    {
+      "source_file": "1508.06615.txt",
+      "source_kind": "paper",
+      "paper_id": "1508.06615",
+      "model": "LSTM-Char (Two Highway Layers), Small",
+      "dataset": "English Penn Treebank",
+      "metric": "perplexity",
+      "value": "90.1",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Two Highway Layers 90.1 78.9",
+      "location": "Table 7",
+      "confidence": 0.85,
+      "notes": "Ablation, small model with two highway layers."
+    },
+    {
+      "source_file": "1508.06615.txt",
+      "source_kind": "paper",
+      "paper_id": "1508.06615",
+      "model": "LSTM-Char (Two Highway Layers), Large",
+      "dataset": "English Penn Treebank",
+      "metric": "perplexity",
+      "value": "78.9",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Two Highway Layers 90.1 78.9",
+      "location": "Table 7",
+      "confidence": 0.85,
+      "notes": "Ablation, large model with two highway layers."
+    },
+    {
+      "source_file": "1508.06615.txt",
+      "source_kind": "paper",
+      "paper_id": "1508.06615",
+      "model": "LSTM-Char (One MLP Layer), Small",
+      "dataset": "English Penn Treebank",
+      "metric": "perplexity",
+      "value": "111.2",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "One MLP Layer 111.2 92.6",
+      "location": "Table 7",
+      "confidence": 0.85,
+      "notes": "Ablation, small model with one MLP layer instead of highway."
+    },
+    {
+      "source_file": "1508.06615.txt",
+      "source_kind": "paper",
+      "paper_id": "1508.06615",
+      "model": "LSTM-Char (One MLP Layer), Large",
+      "dataset": "English Penn Treebank",
+      "metric": "perplexity",
+      "value": "92.6",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "One MLP Layer 111.2 92.6",
+      "location": "Table 7",
+      "confidence": 0.85,
+      "notes": "Ablation, large model with one MLP layer instead of highway."
+    },
+    {
+      "source_file": "1508.06615.txt",
+      "source_kind": "paper",
+      "paper_id": "1508.06615",
+      "model": "LSTM-Char combined with word embeddings (large)",
+      "dataset": "English Penn Treebank",
+      "metric": "perplexity",
+      "value": "81",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Combining word embeddings with the CharCNN's output to form a combined representation of a word (to be used as input to the LSTM) resulted in slightly worse performance (81 on PTB with a large model).",
+      "location": "Further Observations",
+      "confidence": 0.8,
+      "notes": "Large model with combined word embedding and CharCNN representation."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1508.06615.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1508.06615\", \"model\": \"LSTM-Char-Small\", \"dataset\": \"English Penn Treebank\", \"metric\": \"word-level test perplexity\", \"value\": \"92.3\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"LSTM-Char-Small 92.3 5 m\", \"location\": \"Table 3\", \"confidence\": 0.9, \"notes\": \"Small character-level model, single model.\"}, {\"source_file\": \"1508.06615.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1508.06615\", \"model\": \"LSTM-Char-Large\", \"dataset\": \"English Penn Treebank\", \"metric\": \"word-level test perplexity\", \"value\": \"78.9\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"LSTM-Char-Large 78.9 19 m\", \"location\": \"Table 3\", \"confidence\": 0.9, \"notes\": \"Large character-level model, single model.\"}, {\"source_file\": \"1508.06615.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1508.06615\", \"model\": \"LSTM-Char (No Highway Layers), Small\", \"dataset\": \"English Penn Treebank\", \"metric\": \"perplexity\", \"value\": \"100.3\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"No Highway Layers 100.3 84.6\", \"location\": \"Table 7\", \"confidence\": 0.85, \"notes\": \"Ablation, small model without highway layers.\"}, {\"source_file\": \"1508.06615.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1508.06615\", \"model\": \"LSTM-Char (No Highway Layers), Large\", \"dataset\": \"English Penn Treebank\", \"metric\": \"perplexity\", \"value\": \"84.6\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"No Highway Layers 100.3 84.6\", \"location\": \"Table 7\", \"confidence\": 0.85, \"notes\": \"Ablation, large model without highway layers.\"}, {\"source_file\": \"1508.06615.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1508.06615\", \"model\": \"LSTM-Char (One Highway Layer), Small\", \"dataset\": \"English Penn Treebank\", \"metric\": \"perplexity\", \"value\": \"92.3\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"One Highway Layer 92.3 79.7\", \"location\": \"Table 7\", \"confidence\": 0.85, \"notes\": \"Ablation, small model with one highway layer.\"}, {\"source_file\": \"1508.06615.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1508.06615\", \"model\": \"LSTM-Char (One Highway Layer), Large\", \"dataset\": \"English Penn Treebank\", \"metric\": \"perplexity\", \"value\": \"79.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"One Highway Layer 92.3 79.7\", \"location\": \"Table 7\", \"confidence\": 0.85, \"notes\": \"Ablation, large model with one highway layer.\"}, {\"source_file\": \"1508.06615.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1508.06615\", \"model\": \"LSTM-Char (Two Highway Layers), Small\", \"dataset\": \"English Penn Treebank\", \"metric\": \"perplexity\", \"value\": \"90.1\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Two Highway Layers 90.1 78.9\", \"location\": \"Table 7\", \"confidence\": 0.85, \"notes\": \"Ablation, small model with two highway layers.\"}, {\"source_file\": \"1508.06615.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1508.06615\", \"model\": \"LSTM-Char (Two Highway Layers), Large\", \"dataset\": \"English Penn Treebank\", \"metric\": \"perplexity\", \"value\": \"78.9\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Two Highway Layers 90.1 78.9\", \"location\": \"Table 7\", \"confidence\": 0.85, \"notes\": \"Ablation, large model with two highway layers.\"}, {\"source_file\": \"1508.06615.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1508.06615\", \"model\": \"LSTM-Char (One MLP Layer), Small\", \"dataset\": \"English Penn Treebank\", \"metric\": \"perplexity\", \"value\": \"111.2\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"One MLP Layer 111.2 92.6\", \"location\": \"Table 7\", \"confidence\": 0.85, \"notes\": \"Ablation, small model with one MLP layer instead of highway.\"}, {\"source_file\": \"1508.06615.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1508.06615\", \"model\": \"LSTM-Char (One MLP Layer), Large\", \"dataset\": \"English Penn Treebank\", \"metric\": \"perplexity\", \"value\": \"92.6\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"One MLP Layer 111.2 92.6\", \"location\": \"Table 7\", \"confidence\": 0.85, \"notes\": \"Ablation, large model with one MLP layer instead of highway.\"}, {\"source_file\": \"1508.06615.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1508.06615\", \"model\": \"LSTM-Char combined with word embeddings (large)\", \"dataset\": \"English Penn Treebank\", \"metric\": \"perplexity\", \"value\": \"81\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Combining word embeddings with the CharCNN's output to form a combined representation of a word (to be used as input to the LSTM) resulted in slightly worse performance (81 on PTB with a large model).\", \"location\": \"Further Observations\", \"confidence\": 0.8, \"notes\": \"Large model with combined word embedding and CharCNN representation.\"}]}",
+  "usage": {
+    "prompt_tokens": 15251,
+    "completion_tokens": 1744,
+    "total_tokens": 16995,
+    "prompt_tokens_details": {
+      "cached_tokens": 15104
+    },
+    "prompt_cache_hit_tokens": 15104,
+    "prompt_cache_miss_tokens": 147
+  },
+  "cost_usd": 0.006668,
+  "elapsed_s": 5.7,
+  "finish_reason": "stop"
+}

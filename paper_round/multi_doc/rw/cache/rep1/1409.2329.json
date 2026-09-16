@@ -1,0 +1,259 @@
+{
+  "cache_key": "1409.2329",
+  "source_file": "1409.2329.txt",
+  "source_kind": "paper",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\pool\\1409.2329.txt",
+  "doc_sha256": "f9081f39525c8f69ed8639ea59205b78df1477ed389d9d4801ddfedff5723d47",
+  "doc_chars": 25388,
+  "rep": 1,
+  "created": "2026-09-15T22:58:28",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 12,
+  "records": [
+    {
+      "source_file": "1409.2329.txt",
+      "source_kind": "paper",
+      "paper_id": "1409.2329",
+      "model": "Medium regularized LSTM",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "82.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Medium regularized LSTM 86.2 82.7",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Single model row under 'A single model'."
+    },
+    {
+      "source_file": "1409.2329.txt",
+      "source_kind": "paper",
+      "paper_id": "1409.2329",
+      "model": "Large regularized LSTM",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "78.4",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Large regularized LSTM 82.2 78.4",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Single model row under 'A single model'."
+    },
+    {
+      "source_file": "1409.2329.txt",
+      "source_kind": "paper",
+      "paper_id": "1409.2329",
+      "model": "non-regularized LSTM",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "114.5",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "non-regularized LSTM 120.7 114.5",
+      "location": "Table 1",
+      "confidence": 0.85,
+      "notes": "Paper's own trained comparison network, single model."
+    },
+    {
+      "source_file": "1409.2329.txt",
+      "source_kind": "paper",
+      "paper_id": "1409.2329",
+      "model": "2 medium regularized LSTMs",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "77.0",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "yes",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "2 medium regularized LSTMs 80.6 77.0",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Model averaging row."
+    },
+    {
+      "source_file": "1409.2329.txt",
+      "source_kind": "paper",
+      "paper_id": "1409.2329",
+      "model": "5 medium regularized LSTMs",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "73.3",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "yes",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "5 medium regularized LSTMs 76.7 73.3",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Model averaging row."
+    },
+    {
+      "source_file": "1409.2329.txt",
+      "source_kind": "paper",
+      "paper_id": "1409.2329",
+      "model": "10 medium regularized LSTMs",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "72.0",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "yes",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "10 medium regularized LSTMs 75.2 72.0",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Model averaging row."
+    },
+    {
+      "source_file": "1409.2329.txt",
+      "source_kind": "paper",
+      "paper_id": "1409.2329",
+      "model": "2 large regularized LSTMs",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "73.6",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "yes",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "2 large regularized LSTMs 76.9 73.6",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Model averaging row."
+    },
+    {
+      "source_file": "1409.2329.txt",
+      "source_kind": "paper",
+      "paper_id": "1409.2329",
+      "model": "10 large regularized LSTMs",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "69.5",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "yes",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "10 large regularized LSTMs 72.8 69.5",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Model averaging row."
+    },
+    {
+      "source_file": "1409.2329.txt",
+      "source_kind": "paper",
+      "paper_id": "1409.2329",
+      "model": "38 large regularized LSTMs",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "68.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "yes",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "38 large regularized LSTMs 71.9 68.7",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Model averaging row."
+    },
+    {
+      "source_file": "1409.2329.txt",
+      "source_kind": "paper",
+      "paper_id": "1409.2329",
+      "model": "2 non-regularized LSTMs",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "96.1",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "yes",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "2 non-regularized LSTMs 100.4 96.1",
+      "location": "Table 1",
+      "confidence": 0.85,
+      "notes": "Model averaging row for paper's own non-regularized LSTMs."
+    },
+    {
+      "source_file": "1409.2329.txt",
+      "source_kind": "paper",
+      "paper_id": "1409.2329",
+      "model": "5 non-regularized LSTMs",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "84.1",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "yes",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "5 non-regularized LSTMs 87.9 84.1",
+      "location": "Table 1",
+      "confidence": 0.85,
+      "notes": "Model averaging row for paper's own non-regularized LSTMs."
+    },
+    {
+      "source_file": "1409.2329.txt",
+      "source_kind": "paper",
+      "paper_id": "1409.2329",
+      "model": "10 non-regularized LSTMs",
+      "dataset": "Penn Treebank (PTB), word-level",
+      "metric": "test perplexity",
+      "value": "80.0",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "yes",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "10 non-regularized LSTMs 83.5 80.0",
+      "location": "Table 1",
+      "confidence": 0.85,
+      "notes": "Model averaging row for paper's own non-regularized LSTMs."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1409.2329.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1409.2329\", \"model\": \"Medium regularized LSTM\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"82.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Medium regularized LSTM 86.2 82.7\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Single model row under 'A single model'.\"}, {\"source_file\": \"1409.2329.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1409.2329\", \"model\": \"Large regularized LSTM\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"78.4\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Large regularized LSTM 82.2 78.4\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Single model row under 'A single model'.\"}, {\"source_file\": \"1409.2329.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1409.2329\", \"model\": \"non-regularized LSTM\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"114.5\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"non-regularized LSTM 120.7 114.5\", \"location\": \"Table 1\", \"confidence\": 0.85, \"notes\": \"Paper's own trained comparison network, single model.\"}, {\"source_file\": \"1409.2329.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1409.2329\", \"model\": \"2 medium regularized LSTMs\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"77.0\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"yes\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"2 medium regularized LSTMs 80.6 77.0\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Model averaging row.\"}, {\"source_file\": \"1409.2329.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1409.2329\", \"model\": \"5 medium regularized LSTMs\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"73.3\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"yes\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"5 medium regularized LSTMs 76.7 73.3\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Model averaging row.\"}, {\"source_file\": \"1409.2329.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1409.2329\", \"model\": \"10 medium regularized LSTMs\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"72.0\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"yes\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"10 medium regularized LSTMs 75.2 72.0\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Model averaging row.\"}, {\"source_file\": \"1409.2329.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1409.2329\", \"model\": \"2 large regularized LSTMs\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"73.6\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"yes\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"2 large regularized LSTMs 76.9 73.6\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Model averaging row.\"}, {\"source_file\": \"1409.2329.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1409.2329\", \"model\": \"10 large regularized LSTMs\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"69.5\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"yes\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"10 large regularized LSTMs 72.8 69.5\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Model averaging row.\"}, {\"source_file\": \"1409.2329.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1409.2329\", \"model\": \"38 large regularized LSTMs\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"68.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"yes\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"38 large regularized LSTMs 71.9 68.7\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Model averaging row.\"}, {\"source_file\": \"1409.2329.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1409.2329\", \"model\": \"2 non-regularized LSTMs\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"96.1\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"yes\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"2 non-regularized LSTMs 100.4 96.1\", \"location\": \"Table 1\", \"confidence\": 0.85, \"notes\": \"Model averaging row for paper's own non-regularized LSTMs.\"}, {\"source_file\": \"1409.2329.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1409.2329\", \"model\": \"5 non-regularized LSTMs\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"84.1\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"yes\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"5 non-regularized LSTMs 87.9 84.1\", \"location\": \"Table 1\", \"confidence\": 0.85, \"notes\": \"Model averaging row for paper's own non-regularized LSTMs.\"}, {\"source_file\": \"1409.2329.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1409.2329\", \"model\": \"10 non-regularized LSTMs\", \"dataset\": \"Penn Treebank (PTB), word-level\", \"metric\": \"test perplexity\", \"value\": \"80.0\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"yes\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"10 non-regularized LSTMs 83.5 80.0\", \"location\": \"Table 1\", \"confidence\": 0.85, \"notes\": \"Model averaging row for paper's own non-regularized LSTMs.\"}]}",
+  "usage": {
+    "prompt_tokens": 7923,
+    "completion_tokens": 1879,
+    "total_tokens": 9802,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 7923
+  },
+  "cost_usd": 0.004632,
+  "elapsed_s": 6.0,
+  "finish_reason": "stop"
+}

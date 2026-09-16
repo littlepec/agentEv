@@ -1,0 +1,38 @@
+{"answer_prose": "Q1: The lowest word-level Penn Treebank test perplexity for a single model without dynamic evaluation, cache/pointer augmentation, or ensembling is 53.3, reported by 1708.02182 (AWD-LSTM, 3-layer LSTM with tied weights). Note that this result includes a fine-tuning step; among records explicitly marked as not fine-tuned, the lowest is 55.97 (1711.03953, AWD-LSTM-MoS w/o finetune). Ranking by the chosen value: 1708.02182 (53.3) < 1711.03953 (54.44) < 1707.05589 (58.3) < 1611.01578 (62.4) < 1607.03474 (65.4) < 1611.01462 (68.5) < 1512.05287 (73.4) < 1608.05859 (74.3) < 1508.06615 (78.9) < 1409.2329 (78.4) < 1706.02222 (87.38). Q2: The table lists each paper's own proposed-model single-model PTB word-level test perplexity without dynamic evaluation or cache, with provenance and settings. Where a paper reports several single-model variants, the best qualifying value is chosen; conflicts between paper and note records are listed separately.",
+  "table": [
+    {"paper_id": "1409.2329", "paper_title_or_id": "1409.2329", "value": "78.4", "setting": {"dynamic_eval": "no", "cache_pointer": "no", "ensemble": "no", "fine_tuning": "unknown"}, "provenance": ["1409.2329.txt", "1409.2329_note.txt"], "secondary_only": false, "note": "Large regularized LSTM, best single-model row (medium regularized LSTM is 82.7)."},
+    {"paper_id": "1508.06615", "paper_title_or_id": "1508.06615", "value": "78.9", "setting": {"dynamic_eval": "no", "cache_pointer": "no", "ensemble": "no", "fine_tuning": "unknown"}, "provenance": ["1508.06615.txt", "1508.06615_note.txt"], "secondary_only": false, "note": "LSTM-Char-Large (two highway layers); small model is 92.3."},
+    {"paper_id": "1512.05287", "paper_title_or_id": "1512.05287", "value": "73.4", "setting": {"dynamic_eval": "no", "cache_pointer": "no", "ensemble": "no", "fine_tuning": "unknown"}, "provenance": ["1512.05287.txt", "1512.05287_note.txt"], "secondary_only": false, "note": "Variational LSTM, large untied weights with MC dropout; best single-model result."},
+    {"paper_id": "1607.03474", "paper_title_or_id": "1607.03474", "value": "65.4", "setting": {"dynamic_eval": "no", "cache_pointer": "no", "ensemble": "no", "fine_tuning": "unknown"}, "provenance": ["1607.03474.txt", "1607.03474_note.txt"], "secondary_only": false, "note": "Variational RHN + WT; without WT it is 68.5."},
+    {"paper_id": "1608.05859", "paper_title_or_id": "1608.05859", "value": "66.0", "setting": {"dynamic_eval": "no", "cache_pointer": "no", "ensemble": "no", "fine_tuning": "unknown"}, "provenance": ["1608.05859.txt"], "secondary_only": false, "note": "RHN + BD + WT is the best single-model PTB result in the paper records; the note only supports Large + Weight Tying at 74.3."},
+    {"paper_id": "1611.01462", "paper_title_or_id": "1611.01462", "value": "68.5", "setting": {"dynamic_eval": "no", "cache_pointer": "no", "ensemble": "no", "fine_tuning": "unknown"}, "provenance": ["1611.01462.txt", "1611.01462_note.txt"], "secondary_only": false, "note": "VD-LSTM+REAL (large, 1500 units); other variants are 69.0 and 71.2."},
+    {"paper_id": "1611.01578", "paper_title_or_id": "1611.01578", "value": "62.4", "setting": {"dynamic_eval": "no", "cache_pointer": "no", "ensemble": "no", "fine_tuning": "unknown"}, "provenance": ["1611.01578.txt", "1611.01578_note.txt"], "secondary_only": false, "note": "Neural Architecture Search with base 8 and shared embeddings, 54M parameters."},
+    {"paper_id": "1706.02222", "paper_title_or_id": "1706.02222", "value": "87.38", "setting": {"dynamic_eval": "no", "cache_pointer": "no", "ensemble": "no", "fine_tuning": "unknown"}, "provenance": ["1706.02222.txt", "1706.02222_note.txt"], "secondary_only": false, "note": "GRURNTN (proposed); LSTMRNTN is 96.97."},
+    {"paper_id": "1707.05589", "paper_title_or_id": "1707.05589", "value": "58.3", "setting": {"dynamic_eval": "no", "cache_pointer": "no", "ensemble": "no", "fine_tuning": "unknown"}, "provenance": ["1707.05589.txt", "1707.05589_note.txt"], "secondary_only": false, "note": "LSTM 24M depth 4; the +Tied gates depth 4 variant is 58.0 but is an ablation variant."},
+    {"paper_id": "1708.02182", "paper_title_or_id": "1708.02182", "value": "53.3", "setting": {"dynamic_eval": "no", "cache_pointer": "no", "ensemble": "no", "fine_tuning": "yes"}, "provenance": ["1708.02182_note.txt"], "secondary_only": true, "note": "AWD-LSTM (3-layer LSTM with tied weights); value rests only on the third-party note, and includes the fine-tuning step. No-fine-tuning ablation is 58.8; cache-pointer variant is 52.8."},
+    {"paper_id": "1711.03953", "paper_title_or_id": "1711.03953", "value": "54.44", "setting": {"dynamic_eval": "no", "cache_pointer": "no", "ensemble": "no", "fine_tuning": "yes"}, "provenance": ["1711.03953.txt", "1711.03953_note.txt"], "secondary_only": false, "note": "AWD-LSTM-MoS with finetuning; without finetuning it is 55.97, and with dynamic evaluation 47.69."}
+  ],
+  "ranking": [
+    {"rank": 1, "paper_id": "1708.02182", "value": "53.3"},
+    {"rank": 2, "paper_id": "1711.03953", "value": "54.44"},
+    {"rank": 3, "paper_id": "1707.05589", "value": "58.3"},
+    {"rank": 4, "paper_id": "1611.01578", "value": "62.4"},
+    {"rank": 5, "paper_id": "1607.03474", "value": "65.4"},
+    {"rank": 6, "paper_id": "1608.05859", "value": "66.0"},
+    {"rank": 7, "paper_id": "1611.01462", "value": "68.5"},
+    {"rank": 8, "paper_id": "1512.05287", "value": "73.4"},
+    {"rank": 9, "paper_id": "1409.2329", "value": "78.4"},
+    {"rank": 10, "paper_id": "1508.06615", "value": "78.9"},
+    {"rank": 11, "paper_id": "1706.02222", "value": "87.38"}
+  ],
+  "q1_answer": "The lowest word-level Penn Treebank test perplexity for a single model without dynamic evaluation, cache/pointer augmentation, or ensembling is 53.3, reported by 1708.02182 (AWD-LSTM, 3-layer LSTM with tied weights); note that this result includes a fine-tuning step, and among records explicitly marked as not fine-tuned the lowest is 55.97 (1711.03953, AWD-LSTM-MoS w/o finetune).",
+  "conflicts": [
+    {"paper_id": "1608.05859", "paper_value": "66.0", "note_value": "74.3", "resolution": "Used 66.0 (RHN + BD + WT) from the paper records as the best single-model PTB result; the note only reports Large + Weight Tying at 74.3."},
+    {"paper_id": "1409.2329", "paper_value": "fine_tuning unknown", "note_value": "fine_tuning no", "resolution": "Used the paper record's 'unknown' for fine-tuning; both agree on the perplexity values."},
+    {"paper_id": "1508.06615", "paper_value": "fine_tuning unknown", "note_value": "fine_tuning no", "resolution": "Used the paper record's 'unknown' for fine-tuning; both agree on the perplexity values."},
+    {"paper_id": "1512.05287", "paper_value": "fine_tuning unknown", "note_value": "fine_tuning no", "resolution": "Used the paper record's 'unknown' for fine-tuning; both agree on 73.4."},
+    {"paper_id": "1607.03474", "paper_value": "fine_tuning unknown", "note_value": "fine_tuning no", "resolution": "Used the paper record's 'unknown' for fine-tuning; both agree on 65.4."},
+    {"paper_id": "1611.01462", "paper_value": "fine_tuning unknown", "note_value": "fine_tuning no", "resolution": "Used the paper record's 'unknown' for fine-tuning; both agree on 68.5."},
+    {"paper_id": "1611.01578", "paper_value": "fine_tuning unknown", "note_value": "fine_tuning no", "resolution": "Used the paper record's 'unknown' for fine-tuning; both agree on 62.4."},
+    {"paper_id": "1707.05589", "paper_value": "fine_tuning unknown", "note_value": "fine_tuning no", "resolution": "Used the paper record's 'unknown' for fine-tuning; both agree on 58.3."}
+  ]}

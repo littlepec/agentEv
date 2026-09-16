@@ -1,0 +1,183 @@
+{
+  "cache_key": "1409.2329_note",
+  "source_file": "1409.2329_note.txt",
+  "source_kind": "note",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\materials\\1409.2329\\L.txt",
+  "doc_sha256": "cc76b6fa3cad5fbbe5fada93d0645532861414a6fea0d41eccfc3d1f6844e366",
+  "doc_chars": 1773,
+  "rep": 1,
+  "created": "2026-09-15T22:59:51",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 8,
+  "records": [
+    {
+      "source_file": "1409.2329_note.txt",
+      "source_kind": "note",
+      "paper_id": "1409.2329",
+      "model": "medium regularized LSTM",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "82.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "The medium regularized LSTM reaches 82.7, and the large regularized LSTM reaches 78.4.",
+      "location": "unknown",
+      "confidence": 0.9,
+      "notes": "Reported as single model; note states paper does not report dynamic evaluation, cache/pointer, or fine-tuning settings."
+    },
+    {
+      "source_file": "1409.2329_note.txt",
+      "source_kind": "note",
+      "paper_id": "1409.2329",
+      "model": "large regularized LSTM",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "78.4",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "The medium regularized LSTM reaches 82.7, and the large regularized LSTM reaches 78.4.",
+      "location": "unknown",
+      "confidence": 0.9,
+      "notes": "Reported as single model; note states paper does not report dynamic evaluation, cache/pointer, or fine-tuning settings."
+    },
+    {
+      "source_file": "1409.2329_note.txt",
+      "source_kind": "note",
+      "paper_id": "1409.2329",
+      "model": "2 medium regularized LSTMs (model averaging)",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "77.0",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "yes",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "It lists 2 medium regularized LSTMs at 77.0, 5 medium regularized LSTMs at 73.3, 10 medium regularized LSTMs at 72.0",
+      "location": "unknown",
+      "confidence": 0.85,
+      "notes": "Model averaging result."
+    },
+    {
+      "source_file": "1409.2329_note.txt",
+      "source_kind": "note",
+      "paper_id": "1409.2329",
+      "model": "5 medium regularized LSTMs (model averaging)",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "73.3",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "yes",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "It lists 2 medium regularized LSTMs at 77.0, 5 medium regularized LSTMs at 73.3, 10 medium regularized LSTMs at 72.0",
+      "location": "unknown",
+      "confidence": 0.85,
+      "notes": "Model averaging result."
+    },
+    {
+      "source_file": "1409.2329_note.txt",
+      "source_kind": "note",
+      "paper_id": "1409.2329",
+      "model": "10 medium regularized LSTMs (model averaging)",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "72.0",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "yes",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "It lists 2 medium regularized LSTMs at 77.0, 5 medium regularized LSTMs at 73.3, 10 medium regularized LSTMs at 72.0",
+      "location": "unknown",
+      "confidence": 0.85,
+      "notes": "Model averaging result."
+    },
+    {
+      "source_file": "1409.2329_note.txt",
+      "source_kind": "note",
+      "paper_id": "1409.2329",
+      "model": "2 large regularized LSTMs (model averaging)",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "73.6",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "yes",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "2 large regularized LSTMs at 73.6, 10 large regularized LSTMs at 69.5, and 38 large regularized LSTMs at 68.7",
+      "location": "unknown",
+      "confidence": 0.85,
+      "notes": "Model averaging result."
+    },
+    {
+      "source_file": "1409.2329_note.txt",
+      "source_kind": "note",
+      "paper_id": "1409.2329",
+      "model": "10 large regularized LSTMs (model averaging)",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "69.5",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "yes",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "2 large regularized LSTMs at 73.6, 10 large regularized LSTMs at 69.5, and 38 large regularized LSTMs at 68.7",
+      "location": "unknown",
+      "confidence": 0.85,
+      "notes": "Model averaging result."
+    },
+    {
+      "source_file": "1409.2329_note.txt",
+      "source_kind": "note",
+      "paper_id": "1409.2329",
+      "model": "38 large regularized LSTMs (model averaging)",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "68.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "yes",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "2 large regularized LSTMs at 73.6, 10 large regularized LSTMs at 69.5, and 38 large regularized LSTMs at 68.7",
+      "location": "unknown",
+      "confidence": 0.85,
+      "notes": "Model averaging result."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1409.2329_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1409.2329\", \"model\": \"medium regularized LSTM\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"82.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"The medium regularized LSTM reaches 82.7, and the large regularized LSTM reaches 78.4.\", \"location\": \"unknown\", \"confidence\": 0.9, \"notes\": \"Reported as single model; note states paper does not report dynamic evaluation, cache/pointer, or fine-tuning settings.\"}, {\"source_file\": \"1409.2329_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1409.2329\", \"model\": \"large regularized LSTM\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"78.4\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"The medium regularized LSTM reaches 82.7, and the large regularized LSTM reaches 78.4.\", \"location\": \"unknown\", \"confidence\": 0.9, \"notes\": \"Reported as single model; note states paper does not report dynamic evaluation, cache/pointer, or fine-tuning settings.\"}, {\"source_file\": \"1409.2329_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1409.2329\", \"model\": \"2 medium regularized LSTMs (model averaging)\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"77.0\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"yes\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"It lists 2 medium regularized LSTMs at 77.0, 5 medium regularized LSTMs at 73.3, 10 medium regularized LSTMs at 72.0\", \"location\": \"unknown\", \"confidence\": 0.85, \"notes\": \"Model averaging result.\"}, {\"source_file\": \"1409.2329_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1409.2329\", \"model\": \"5 medium regularized LSTMs (model averaging)\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"73.3\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"yes\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"It lists 2 medium regularized LSTMs at 77.0, 5 medium regularized LSTMs at 73.3, 10 medium regularized LSTMs at 72.0\", \"location\": \"unknown\", \"confidence\": 0.85, \"notes\": \"Model averaging result.\"}, {\"source_file\": \"1409.2329_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1409.2329\", \"model\": \"10 medium regularized LSTMs (model averaging)\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"72.0\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"yes\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"It lists 2 medium regularized LSTMs at 77.0, 5 medium regularized LSTMs at 73.3, 10 medium regularized LSTMs at 72.0\", \"location\": \"unknown\", \"confidence\": 0.85, \"notes\": \"Model averaging result.\"}, {\"source_file\": \"1409.2329_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1409.2329\", \"model\": \"2 large regularized LSTMs (model averaging)\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"73.6\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"yes\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"2 large regularized LSTMs at 73.6, 10 large regularized LSTMs at 69.5, and 38 large regularized LSTMs at 68.7\", \"location\": \"unknown\", \"confidence\": 0.85, \"notes\": \"Model averaging result.\"}, {\"source_file\": \"1409.2329_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1409.2329\", \"model\": \"10 large regularized LSTMs (model averaging)\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"69.5\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"yes\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"2 large regularized LSTMs at 73.6, 10 large regularized LSTMs at 69.5, and 38 large regularized LSTMs at 68.7\", \"location\": \"unknown\", \"confidence\": 0.85, \"notes\": \"Model averaging result.\"}, {\"source_file\": \"1409.2329_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1409.2329\", \"model\": \"38 large regularized LSTMs (model averaging)\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"68.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"yes\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"2 large regularized LSTMs at 73.6, 10 large regularized LSTMs at 69.5, and 38 large regularized LSTMs at 68.7\", \"location\": \"unknown\", \"confidence\": 0.85, \"notes\": \"Model averaging result.\"}]}",
+  "usage": {
+    "prompt_tokens": 1197,
+    "completion_tokens": 1423,
+    "total_tokens": 2620,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1197
+  },
+  "cost_usd": 0.002067,
+  "elapsed_s": 4.3,
+  "finish_reason": "stop"
+}

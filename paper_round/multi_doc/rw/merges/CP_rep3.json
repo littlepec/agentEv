@@ -1,0 +1,353 @@
+{
+  "cond": "C",
+  "rep": 3,
+  "cell": "CP_rep3",
+  "policy": true,
+  "policy_text": "Source policy: (1) When a paper file's records and its reading note's records disagree about the same result, use the paper file's value and list the disagreement under conflicts. (2) A value supported only by a reading note (secondary_only true) must not be ranked among paper-supported values; put it in a separate 'unverified' list with its note as provenance. (3) In answer_prose, never attribute a secondary_only value to the paper; say it comes from the reading note.",
+  "records_rep": 1,
+  "created": "2026-09-15T23:28:44",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 8192,
+  "thinking_disabled": true,
+  "json_object": true,
+  "cache_keys": [
+    "1409.2329",
+    "1508.06615",
+    "1512.05287",
+    "1607.03474",
+    "1608.05859",
+    "1611.01462",
+    "1611.01578",
+    "1706.02222",
+    "1707.05589",
+    "1708.02182",
+    "1711.03953",
+    "1409.2329_note",
+    "1508.06615_note",
+    "1512.05287_note",
+    "1607.03474_note",
+    "1608.05859_note",
+    "1611.01462_note",
+    "1611.01578_note",
+    "1706.02222_note",
+    "1707.05589_note",
+    "1708.02182_note_alt",
+    "1711.03953_note"
+  ],
+  "records_per_key": {
+    "1409.2329": 12,
+    "1508.06615": 11,
+    "1512.05287": 9,
+    "1607.03474": 3,
+    "1608.05859": 6,
+    "1611.01462": 21,
+    "1611.01578": 5,
+    "1706.02222": 4,
+    "1707.05589": 26,
+    "1708.02182": 22,
+    "1711.03953": 18,
+    "1409.2329_note": 8,
+    "1508.06615_note": 8,
+    "1512.05287_note": 10,
+    "1607.03474_note": 4,
+    "1608.05859_note": 2,
+    "1611.01462_note": 1,
+    "1611.01578_note": 3,
+    "1706.02222_note": 2,
+    "1707.05589_note": 1,
+    "1708.02182_note_alt": 5,
+    "1711.03953_note": 3
+  },
+  "n_records": 184,
+  "records_chars": 100877,
+  "usage": {
+    "prompt_tokens": 35535,
+    "completion_tokens": 2299,
+    "total_tokens": 37834,
+    "prompt_tokens_details": {
+      "cached_tokens": 35328
+    },
+    "prompt_cache_hit_tokens": 35328,
+    "prompt_cache_miss_tokens": 207
+  },
+  "cost_usd": 0.013419,
+  "elapsed_s": 7.5,
+  "finish_reason": "stop",
+  "parse_error": null,
+  "parsed": {
+    "answer_prose": "Q1: Among the papers, the lowest word-level Penn Treebank test perplexity for a single model without dynamic evaluation, cache/pointer augmentation, or ensembling is 54.44, reported by 1711.03953 (AWD-LSTM-MoS with finetune). Ranking by that number: 1) 1711.03953 (54.44); 2) 1708.02182 (57.3, from the paper record; its reading note gives 53.3, which is secondary-only and therefore unverified); 3) 1707.05589 (58.3); 4) 1611.01578 (62.4); 5) 1607.03474 (65.4); 6) 1611.01462 (68.5); 7) 1512.05287 (73.4); 8) 1608.05859 (74.3); 9) 1508.06615 (78.9); 10) 1409.2329 (78.4); 11) 1706.02222 (87.38). Q2: The table lists each paper's own proposed single-model word-level PTB test perplexity without dynamic evaluation or cache. Note that 1708.02182's 53.3 appears only in the reading note, so the paper-supported value 57.3 is used and 53.3 is listed as unverified. 1409.2329's best single model is the large regularized LSTM at 78.4 (its 68.7 figure is a 38-model average).",
+    "table": [
+      {
+        "paper_id": "1409.2329",
+        "paper_title_or_id": "1409.2329",
+        "value": "78.4",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1409.2329.txt",
+          "1409.2329_note.txt"
+        ],
+        "secondary_only": false,
+        "note": "Large regularized LSTM, single model; the 68.7 figure is a 38-model average."
+      },
+      {
+        "paper_id": "1508.06615",
+        "paper_title_or_id": "1508.06615",
+        "value": "78.9",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1508.06615.txt",
+          "1508.06615_note.txt"
+        ],
+        "secondary_only": false,
+        "note": "LSTM-Char-Large (two highway layers); word-level predictions."
+      },
+      {
+        "paper_id": "1512.05287",
+        "paper_title_or_id": "1512.05287",
+        "value": "73.4",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1512.05287.txt",
+          "1512.05287_note.txt"
+        ],
+        "secondary_only": false,
+        "note": "Variational (untied weights, MC) LSTM, large; best single model."
+      },
+      {
+        "paper_id": "1607.03474",
+        "paper_title_or_id": "1607.03474",
+        "value": "65.4",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1607.03474.txt",
+          "1607.03474_note.txt"
+        ],
+        "secondary_only": false,
+        "note": "Variational RHN + WT, single model."
+      },
+      {
+        "paper_id": "1608.05859",
+        "paper_title_or_id": "1608.05859",
+        "value": "74.3",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1608.05859.txt",
+          "1608.05859_note.txt"
+        ],
+        "secondary_only": false,
+        "note": "Large + Weight Tying; the 66.0 RHN + BD + WT row is an RHN-based model."
+      },
+      {
+        "paper_id": "1611.01462",
+        "paper_title_or_id": "1611.01462",
+        "value": "68.5",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1611.01462.txt",
+          "1611.01462_note.txt"
+        ],
+        "secondary_only": false,
+        "note": "VD-LSTM+REAL (large, 1500 units)."
+      },
+      {
+        "paper_id": "1611.01578",
+        "paper_title_or_id": "1611.01578",
+        "value": "62.4",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1611.01578.txt",
+          "1611.01578_note.txt"
+        ],
+        "secondary_only": false,
+        "note": "NAS with base 8 and shared embeddings, 54M parameters."
+      },
+      {
+        "paper_id": "1706.02222",
+        "paper_title_or_id": "1706.02222",
+        "value": "87.38",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1706.02222.txt",
+          "1706.02222_note.txt"
+        ],
+        "secondary_only": false,
+        "note": "GRURNTN (proposed); LSTMRNTN is 96.97."
+      },
+      {
+        "paper_id": "1707.05589",
+        "paper_title_or_id": "1707.05589",
+        "value": "58.3",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1707.05589.txt",
+          "1707.05589_note.txt"
+        ],
+        "secondary_only": false,
+        "note": "LSTM 24M, depth 4; best single-model PTB test perplexity in the paper."
+      },
+      {
+        "paper_id": "1708.02182",
+        "paper_title_or_id": "1708.02182",
+        "value": "57.3",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "yes"
+        },
+        "provenance": [
+          "1708.02182.txt"
+        ],
+        "secondary_only": false,
+        "note": "AWD-LSTM 3-layer tied; the reading note's 53.3 is not supported by the paper records."
+      },
+      {
+        "paper_id": "1711.03953",
+        "paper_title_or_id": "1711.03953",
+        "value": "54.44",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "yes"
+        },
+        "provenance": [
+          "1711.03953.txt",
+          "1711.03953_note.txt"
+        ],
+        "secondary_only": false,
+        "note": "AWD-LSTM-MoS with finetune; 55.97 without finetune."
+      }
+    ],
+    "ranking": [
+      {
+        "rank": 1,
+        "paper_id": "1711.03953",
+        "value": "54.44"
+      },
+      {
+        "rank": 2,
+        "paper_id": "1708.02182",
+        "value": "57.3"
+      },
+      {
+        "rank": 3,
+        "paper_id": "1707.05589",
+        "value": "58.3"
+      },
+      {
+        "rank": 4,
+        "paper_id": "1611.01578",
+        "value": "62.4"
+      },
+      {
+        "rank": 5,
+        "paper_id": "1607.03474",
+        "value": "65.4"
+      },
+      {
+        "rank": 6,
+        "paper_id": "1611.01462",
+        "value": "68.5"
+      },
+      {
+        "rank": 7,
+        "paper_id": "1512.05287",
+        "value": "73.4"
+      },
+      {
+        "rank": 8,
+        "paper_id": "1608.05859",
+        "value": "74.3"
+      },
+      {
+        "rank": 9,
+        "paper_id": "1409.2329",
+        "value": "78.4"
+      },
+      {
+        "rank": 10,
+        "paper_id": "1508.06615",
+        "value": "78.9"
+      },
+      {
+        "rank": 11,
+        "paper_id": "1706.02222",
+        "value": "87.38"
+      }
+    ],
+    "q1_answer": "1711.03953 reports the lowest word-level Penn Treebank test perplexity for a single model without dynamic evaluation, cache or pointer augmentation: 54.44 (AWD-LSTM-MoS with finetune). The papers rank 1711.03953 (54.44) < 1708.02182 (57.3) < 1707.05589 (58.3) < 1611.01578 (62.4) < 1607.03474 (65.4) < 1611.01462 (68.5) < 1512.05287 (73.4) < 1608.05859 (74.3) < 1409.2329 (78.4) < 1508.06615 (78.9) < 1706.02222 (87.38).",
+    "conflicts": [
+      {
+        "paper_id": "1708.02182",
+        "paper_value": "57.3",
+        "note_value": "53.3",
+        "resolution": "Used the paper file's 57.3; the reading note's 53.3 is not supported by the paper records and is kept as unverified."
+      }
+    ],
+    "unverified": [
+      {
+        "paper_id": "1708.02182",
+        "paper_title_or_id": "1708.02182",
+        "value": "53.3",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "yes"
+        },
+        "provenance": [
+          "1708.02182_note.txt"
+        ],
+        "secondary_only": true,
+        "note": "From the reading note only; the paper records give 57.3 for AWD-LSTM (tied)."
+      }
+    ]
+  }
+}

@@ -1,0 +1,343 @@
+{
+  "cond": "C",
+  "rep": 1,
+  "cell": "CP_rep1",
+  "policy": true,
+  "policy_text": "Source policy: (1) When a paper file's records and its reading note's records disagree about the same result, use the paper file's value and list the disagreement under conflicts. (2) A value supported only by a reading note (secondary_only true) must not be ranked among paper-supported values; put it in a separate 'unverified' list with its note as provenance. (3) In answer_prose, never attribute a secondary_only value to the paper; say it comes from the reading note.",
+  "records_rep": 1,
+  "created": "2026-09-15T23:28:29",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 8192,
+  "thinking_disabled": true,
+  "json_object": true,
+  "cache_keys": [
+    "1409.2329",
+    "1508.06615",
+    "1512.05287",
+    "1607.03474",
+    "1608.05859",
+    "1611.01462",
+    "1611.01578",
+    "1706.02222",
+    "1707.05589",
+    "1708.02182",
+    "1711.03953",
+    "1409.2329_note",
+    "1508.06615_note",
+    "1512.05287_note",
+    "1607.03474_note",
+    "1608.05859_note",
+    "1611.01462_note",
+    "1611.01578_note",
+    "1706.02222_note",
+    "1707.05589_note",
+    "1708.02182_note_alt",
+    "1711.03953_note"
+  ],
+  "records_per_key": {
+    "1409.2329": 12,
+    "1508.06615": 11,
+    "1512.05287": 9,
+    "1607.03474": 3,
+    "1608.05859": 6,
+    "1611.01462": 21,
+    "1611.01578": 5,
+    "1706.02222": 4,
+    "1707.05589": 26,
+    "1708.02182": 22,
+    "1711.03953": 18,
+    "1409.2329_note": 8,
+    "1508.06615_note": 8,
+    "1512.05287_note": 10,
+    "1607.03474_note": 4,
+    "1608.05859_note": 2,
+    "1611.01462_note": 1,
+    "1611.01578_note": 3,
+    "1706.02222_note": 2,
+    "1707.05589_note": 1,
+    "1708.02182_note_alt": 5,
+    "1711.03953_note": 3
+  },
+  "n_records": 184,
+  "records_chars": 100877,
+  "usage": {
+    "prompt_tokens": 35535,
+    "completion_tokens": 1962,
+    "total_tokens": 37497,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 35279
+  },
+  "cost_usd": 0.013015,
+  "elapsed_s": 7.2,
+  "finish_reason": "stop",
+  "parse_error": null,
+  "parsed": {
+    "answer_prose": "Q1: The lowest word-level Penn Treebank test perplexity for a single model without dynamic evaluation, cache/pointer, or ensembling is 54.44, reported by 1711.03953 (AWD-LSTM-MoS with finetuning). Ranking by this number: 1711.03953 (54.44) < 1708.02182 (57.3) < 1707.05589 (58.3) < 1611.01578 (62.4) < 1607.03474 (65.4) < 1611.01462 (68.5) < 1608.05859 (74.3) < 1512.05287 (73.4) < 1508.06615 (78.9) < 1409.2329 (78.4) < 1706.02222 (87.38). Q2: For each paper, the proposed model's own best single-model word-level PTB test perplexity (no dynamic evaluation, no cache/pointer) is given in the table. Note that 1708.02182's 53.3 appears only in the reading note, not in the paper records, so it is listed as unverified and not ranked; the paper record gives 57.3. For 1608.05859 the best proposed single-model value is 74.3 (Large + Weight Tying).",
+    "table": [
+      {
+        "paper_id": "1409.2329",
+        "paper_title_or_id": "1409.2329",
+        "value": "78.4",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1409.2329.txt"
+        ],
+        "secondary_only": false,
+        "note": "Large regularized LSTM, single model."
+      },
+      {
+        "paper_id": "1508.06615",
+        "paper_title_or_id": "1508.06615",
+        "value": "78.9",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1508.06615.txt"
+        ],
+        "secondary_only": false,
+        "note": "LSTM-Char-Large, single model."
+      },
+      {
+        "paper_id": "1512.05287",
+        "paper_title_or_id": "1512.05287",
+        "value": "73.4",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1512.05287.txt"
+        ],
+        "secondary_only": false,
+        "note": "Variational (untied weights, MC) LSTM, large; best single model."
+      },
+      {
+        "paper_id": "1607.03474",
+        "paper_title_or_id": "1607.03474",
+        "value": "65.4",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1607.03474.txt"
+        ],
+        "secondary_only": false,
+        "note": "Variational RHN + WT, single model."
+      },
+      {
+        "paper_id": "1608.05859",
+        "paper_title_or_id": "1608.05859",
+        "value": "74.3",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1608.05859.txt"
+        ],
+        "secondary_only": false,
+        "note": "Large + Weight Tying; best proposed single-model PTB result."
+      },
+      {
+        "paper_id": "1611.01462",
+        "paper_title_or_id": "1611.01462",
+        "value": "68.5",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1611.01462.txt"
+        ],
+        "secondary_only": false,
+        "note": "VD-LSTM+REAL (large, 1500 units)."
+      },
+      {
+        "paper_id": "1611.01578",
+        "paper_title_or_id": "1611.01578",
+        "value": "62.4",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1611.01578.txt"
+        ],
+        "secondary_only": false,
+        "note": "NAS with base 8 and shared embeddings, 54M."
+      },
+      {
+        "paper_id": "1706.02222",
+        "paper_title_or_id": "1706.02222",
+        "value": "87.38",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1706.02222.txt"
+        ],
+        "secondary_only": false,
+        "note": "GRURNTN (proposed)."
+      },
+      {
+        "paper_id": "1707.05589",
+        "paper_title_or_id": "1707.05589",
+        "value": "58.3",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "unknown"
+        },
+        "provenance": [
+          "1707.05589.txt"
+        ],
+        "secondary_only": false,
+        "note": "LSTM (24M, depth 4); best single-model PTB result."
+      },
+      {
+        "paper_id": "1708.02182",
+        "paper_title_or_id": "1708.02182",
+        "value": "57.3",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "yes"
+        },
+        "provenance": [
+          "1708.02182.txt"
+        ],
+        "secondary_only": false,
+        "note": "AWD-LSTM 3-layer LSTM (tied); paper record value. Note reports 53.3 (unverified)."
+      },
+      {
+        "paper_id": "1711.03953",
+        "paper_title_or_id": "1711.03953",
+        "value": "54.44",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "yes"
+        },
+        "provenance": [
+          "1711.03953.txt"
+        ],
+        "secondary_only": false,
+        "note": "AWD-LSTM-MoS with finetuning; best single-model PTB result."
+      }
+    ],
+    "ranking": [
+      {
+        "rank": 1,
+        "paper_id": "1711.03953",
+        "value": "54.44"
+      },
+      {
+        "rank": 2,
+        "paper_id": "1708.02182",
+        "value": "57.3"
+      },
+      {
+        "rank": 3,
+        "paper_id": "1707.05589",
+        "value": "58.3"
+      },
+      {
+        "rank": 4,
+        "paper_id": "1611.01578",
+        "value": "62.4"
+      },
+      {
+        "rank": 5,
+        "paper_id": "1607.03474",
+        "value": "65.4"
+      },
+      {
+        "rank": 6,
+        "paper_id": "1611.01462",
+        "value": "68.5"
+      },
+      {
+        "rank": 7,
+        "paper_id": "1512.05287",
+        "value": "73.4"
+      },
+      {
+        "rank": 8,
+        "paper_id": "1608.05859",
+        "value": "74.3"
+      },
+      {
+        "rank": 9,
+        "paper_id": "1409.2329",
+        "value": "78.4"
+      },
+      {
+        "rank": 10,
+        "paper_id": "1508.06615",
+        "value": "78.9"
+      },
+      {
+        "rank": 11,
+        "paper_id": "1706.02222",
+        "value": "87.38"
+      }
+    ],
+    "q1_answer": "1711.03953 reports the lowest single-model word-level Penn Treebank test perplexity without dynamic evaluation or cache/pointer: 54.44 (AWD-LSTM-MoS with finetuning).",
+    "conflicts": [
+      {
+        "paper_id": "1708.02182",
+        "paper_value": "57.3",
+        "note_value": "53.3",
+        "resolution": "Used the paper file value 57.3; the note's 53.3 is not supported by the paper records and is listed as unverified."
+      }
+    ],
+    "unverified": [
+      {
+        "paper_id": "1708.02182",
+        "paper_title_or_id": "1708.02182",
+        "value": "53.3",
+        "setting": {
+          "dynamic_eval": "no",
+          "cache_pointer": "no",
+          "ensemble": "no",
+          "fine_tuning": "yes"
+        },
+        "provenance": [
+          "1708.02182_note.txt"
+        ],
+        "secondary_only": true,
+        "note": "Reported only in the reading note; not supported by the paper file records."
+      }
+    ]
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "cache_key": "1608.05859",
+  "source_file": "1608.05859.txt",
+  "source_kind": "paper",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\pool\\1608.05859.txt",
+  "doc_sha256": "e25e8777ebf6a01b5f4aada51112185146ee57d049552ceeb61de17cfff918cb",
+  "doc_chars": 33834,
+  "rep": 2,
+  "created": "2026-09-15T23:00:50",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 15,
+  "records": [
+    {
+      "source_file": "1608.05859.txt",
+      "source_kind": "paper",
+      "paper_id": "1608.05859",
+      "model": "Large + Weight Tying",
+      "dataset": "Penn Treebank (word level)",
+      "metric": "perplexity",
+      "value": "74.3",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Large + Weight Tying 51M 48.5 77.7 74.3",
+      "location": "Table 5",
+      "confidence": 0.9,
+      "notes": "Test perplexity for the weight-tied large model."
+    },
+    {
+      "source_file": "1608.05859.txt",
+      "source_kind": "paper",
+      "paper_id": "1608.05859",
+      "model": "Large + BD + WT",
+      "dataset": "Penn Treebank (word level)",
+      "metric": "perplexity",
+      "value": "73.2",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Large + BD + WT 51M 28.2 75.8 73.2",
+      "location": "Table 5",
+      "confidence": 0.9,
+      "notes": "Bayesian dropout with weight tying."
+    },
+    {
+      "source_file": "1608.05859.txt",
+      "source_kind": "paper",
+      "paper_id": "1608.05859",
+      "model": "RHN + BD + WT",
+      "dataset": "Penn Treebank (word level)",
+      "metric": "perplexity",
+      "value": "66.0",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "RHN + BD + WT 24M 74.1 68.1 66.0",
+      "location": "Table 5",
+      "confidence": 0.9,
+      "notes": "Recurrent highway network with Bayesian dropout and weight tying."
+    },
+    {
+      "source_file": "1608.05859.txt",
+      "source_kind": "paper",
+      "paper_id": "1608.05859",
+      "model": "Small + WT",
+      "dataset": "Penn Treebank (word level)",
+      "metric": "perplexity",
+      "value": "112.4",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Small + WT 2.65M 36.4 117.5 112.4",
+      "location": "Table 6",
+      "confidence": 0.9,
+      "notes": "Small model with weight tying, no dropout."
+    },
+    {
+      "source_file": "1608.05859.txt",
+      "source_kind": "paper",
+      "paper_id": "1608.05859",
+      "model": "Small + PR",
+      "dataset": "Penn Treebank (word level)",
+      "metric": "perplexity",
+      "value": "111.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Small + PR 4.69M 50.8 116.0 111.7",
+      "location": "Table 6",
+      "confidence": 0.9,
+      "notes": "Small model with projection regularization, no dropout."
+    },
+    {
+      "source_file": "1608.05859.txt",
+      "source_kind": "paper",
+      "paper_id": "1608.05859",
+      "model": "Small + WT + PR",
+      "dataset": "Penn Treebank (word level)",
+      "metric": "perplexity",
+      "value": "100.9",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Small + WT + PR 2.69M 53.5 104.9 100.9",
+      "location": "Table 6",
+      "confidence": 0.9,
+      "notes": "Small model with weight tying and projection regularization, no dropout."
+    },
+    {
+      "source_file": "1608.05859.txt",
+      "source_kind": "paper",
+      "paper_id": "1608.05859",
+      "model": "S + WT",
+      "dataset": "text8 (word level)",
+      "metric": "perplexity",
+      "value": "187.1",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Test 195.3 187.1 199.0 183.2",
+      "location": "Table 7",
+      "confidence": 0.8,
+      "notes": "text8 test perplexity for S + WT."
+    },
+    {
+      "source_file": "1608.05859.txt",
+      "source_kind": "paper",
+      "paper_id": "1608.05859",
+      "model": "S + PR",
+      "dataset": "text8 (word level)",
+      "metric": "perplexity",
+      "value": "199.0",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Test 195.3 187.1 199.0 183.2",
+      "location": "Table 7",
+      "confidence": 0.8,
+      "notes": "text8 test perplexity for S + PR."
+    },
+    {
+      "source_file": "1608.05859.txt",
+      "source_kind": "paper",
+      "paper_id": "1608.05859",
+      "model": "S + WT + PR",
+      "dataset": "text8 (word level)",
+      "metric": "perplexity",
+      "value": "183.2",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Test 195.3 187.1 199.0 183.2",
+      "location": "Table 7",
+      "confidence": 0.8,
+      "notes": "text8 test perplexity for S + WT + PR."
+    },
+    {
+      "source_file": "1608.05859.txt",
+      "source_kind": "paper",
+      "paper_id": "1608.05859",
+      "model": "S + WT",
+      "dataset": "IMDB (word level)",
+      "metric": "perplexity",
+      "value": "94.8",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Test 94.3 94.8 94.4 91.5",
+      "location": "Table 7",
+      "confidence": 0.8,
+      "notes": "IMDB test perplexity for S + WT."
+    },
+    {
+      "source_file": "1608.05859.txt",
+      "source_kind": "paper",
+      "paper_id": "1608.05859",
+      "model": "S + PR",
+      "dataset": "IMDB (word level)",
+      "metric": "perplexity",
+      "value": "94.4",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Test 94.3 94.8 94.4 91.5",
+      "location": "Table 7",
+      "confidence": 0.8,
+      "notes": "IMDB test perplexity for S + PR."
+    },
+    {
+      "source_file": "1608.05859.txt",
+      "source_kind": "paper",
+      "paper_id": "1608.05859",
+      "model": "S + WT + PR",
+      "dataset": "IMDB (word level)",
+      "metric": "perplexity",
+      "value": "91.5",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Test 94.3 94.8 94.4 91.5",
+      "location": "Table 7",
+      "confidence": 0.8,
+      "notes": "IMDB test perplexity for S + WT + PR."
+    },
+    {
+      "source_file": "1608.05859.txt",
+      "source_kind": "paper",
+      "paper_id": "1608.05859",
+      "model": "S + WT",
+      "dataset": "BBC (word level)",
+      "metric": "perplexity",
+      "value": "106.8",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Test 110.8 106.8 108.7 98.9",
+      "location": "Table 7",
+      "confidence": 0.8,
+      "notes": "BBC test perplexity for S + WT."
+    },
+    {
+      "source_file": "1608.05859.txt",
+      "source_kind": "paper",
+      "paper_id": "1608.05859",
+      "model": "S + PR",
+      "dataset": "BBC (word level)",
+      "metric": "perplexity",
+      "value": "108.7",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Test 110.8 106.8 108.7 98.9",
+      "location": "Table 7",
+      "confidence": 0.8,
+      "notes": "BBC test perplexity for S + PR."
+    },
+    {
+      "source_file": "1608.05859.txt",
+      "source_kind": "paper",
+      "paper_id": "1608.05859",
+      "model": "S + WT + PR",
+      "dataset": "BBC (word level)",
+      "metric": "perplexity",
+      "value": "98.9",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Test 110.8 106.8 108.7 98.9",
+      "location": "Table 7",
+      "confidence": 0.8,
+      "notes": "BBC test perplexity for S + WT + PR."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1608.05859.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1608.05859\", \"model\": \"Large + Weight Tying\", \"dataset\": \"Penn Treebank (word level)\", \"metric\": \"perplexity\", \"value\": \"74.3\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Large + Weight Tying 51M 48.5 77.7 74.3\", \"location\": \"Table 5\", \"confidence\": 0.9, \"notes\": \"Test perplexity for the weight-tied large model.\"}, {\"source_file\": \"1608.05859.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1608.05859\", \"model\": \"Large + BD + WT\", \"dataset\": \"Penn Treebank (word level)\", \"metric\": \"perplexity\", \"value\": \"73.2\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Large + BD + WT 51M 28.2 75.8 73.2\", \"location\": \"Table 5\", \"confidence\": 0.9, \"notes\": \"Bayesian dropout with weight tying.\"}, {\"source_file\": \"1608.05859.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1608.05859\", \"model\": \"RHN + BD + WT\", \"dataset\": \"Penn Treebank (word level)\", \"metric\": \"perplexity\", \"value\": \"66.0\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"RHN + BD + WT 24M 74.1 68.1 66.0\", \"location\": \"Table 5\", \"confidence\": 0.9, \"notes\": \"Recurrent highway network with Bayesian dropout and weight tying.\"}, {\"source_file\": \"1608.05859.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1608.05859\", \"model\": \"Small + WT\", \"dataset\": \"Penn Treebank (word level)\", \"metric\": \"perplexity\", \"value\": \"112.4\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Small + WT 2.65M 36.4 117.5 112.4\", \"location\": \"Table 6\", \"confidence\": 0.9, \"notes\": \"Small model with weight tying, no dropout.\"}, {\"source_file\": \"1608.05859.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1608.05859\", \"model\": \"Small + PR\", \"dataset\": \"Penn Treebank (word level)\", \"metric\": \"perplexity\", \"value\": \"111.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Small + PR 4.69M 50.8 116.0 111.7\", \"location\": \"Table 6\", \"confidence\": 0.9, \"notes\": \"Small model with projection regularization, no dropout.\"}, {\"source_file\": \"1608.05859.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1608.05859\", \"model\": \"Small + WT + PR\", \"dataset\": \"Penn Treebank (word level)\", \"metric\": \"perplexity\", \"value\": \"100.9\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Small + WT + PR 2.69M 53.5 104.9 100.9\", \"location\": \"Table 6\", \"confidence\": 0.9, \"notes\": \"Small model with weight tying and projection regularization, no dropout.\"}, {\"source_file\": \"1608.05859.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1608.05859\", \"model\": \"S + WT\", \"dataset\": \"text8 (word level)\", \"metric\": \"perplexity\", \"value\": \"187.1\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Test 195.3 187.1 199.0 183.2\", \"location\": \"Table 7\", \"confidence\": 0.8, \"notes\": \"text8 test perplexity for S + WT.\"}, {\"source_file\": \"1608.05859.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1608.05859\", \"model\": \"S + PR\", \"dataset\": \"text8 (word level)\", \"metric\": \"perplexity\", \"value\": \"199.0\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Test 195.3 187.1 199.0 183.2\", \"location\": \"Table 7\", \"confidence\": 0.8, \"notes\": \"text8 test perplexity for S + PR.\"}, {\"source_file\": \"1608.05859.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1608.05859\", \"model\": \"S + WT + PR\", \"dataset\": \"text8 (word level)\", \"metric\": \"perplexity\", \"value\": \"183.2\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Test 195.3 187.1 199.0 183.2\", \"location\": \"Table 7\", \"confidence\": 0.8, \"notes\": \"text8 test perplexity for S + WT + PR.\"}, {\"source_file\": \"1608.05859.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1608.05859\", \"model\": \"S + WT\", \"dataset\": \"IMDB (word level)\", \"metric\": \"perplexity\", \"value\": \"94.8\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Test 94.3 94.8 94.4 91.5\", \"location\": \"Table 7\", \"confidence\": 0.8, \"notes\": \"IMDB test perplexity for S + WT.\"}, {\"source_file\": \"1608.05859.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1608.05859\", \"model\": \"S + PR\", \"dataset\": \"IMDB (word level)\", \"metric\": \"perplexity\", \"value\": \"94.4\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Test 94.3 94.8 94.4 91.5\", \"location\": \"Table 7\", \"confidence\": 0.8, \"notes\": \"IMDB test perplexity for S + PR.\"}, {\"source_file\": \"1608.05859.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1608.05859\", \"model\": \"S + WT + PR\", \"dataset\": \"IMDB (word level)\", \"metric\": \"perplexity\", \"value\": \"91.5\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Test 94.3 94.8 94.4 91.5\", \"location\": \"Table 7\", \"confidence\": 0.8, \"notes\": \"IMDB test perplexity for S + WT + PR.\"}, {\"source_file\": \"1608.05859.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1608.05859\", \"model\": \"S + WT\", \"dataset\": \"BBC (word level)\", \"metric\": \"perplexity\", \"value\": \"106.8\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Test 110.8 106.8 108.7 98.9\", \"location\": \"Table 7\", \"confidence\": 0.8, \"notes\": \"BBC test perplexity for S + WT.\"}, {\"source_file\": \"1608.05859.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1608.05859\", \"model\": \"S + PR\", \"dataset\": \"BBC (word level)\", \"metric\": \"perplexity\", \"value\": \"108.7\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Test 110.8 106.8 108.7 98.9\", \"location\": \"Table 7\", \"confidence\": 0.8, \"notes\": \"BBC test perplexity for S + PR.\"}, {\"source_file\": \"1608.05859.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1608.05859\", \"model\": \"S + WT + PR\", \"dataset\": \"BBC (word level)\", \"metric\": \"perplexity\", \"value\": \"98.9\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Test 110.8 106.8 108.7 98.9\", \"location\": \"Table 7\", \"confidence\": 0.8, \"notes\": \"BBC test perplexity for S + WT + PR.\"}]}",
+  "usage": {
+    "prompt_tokens": 10510,
+    "completion_tokens": 2356,
+    "total_tokens": 12866,
+    "prompt_tokens_details": {
+      "cached_tokens": 10368
+    },
+    "prompt_cache_hit_tokens": 10368,
+    "prompt_cache_miss_tokens": 142
+  },
+  "cost_usd": 0.00598,
+  "elapsed_s": 7.5,
+  "finish_reason": "stop"
+}

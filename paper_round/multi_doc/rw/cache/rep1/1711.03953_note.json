@@ -1,0 +1,88 @@
+{
+  "cache_key": "1711.03953_note",
+  "source_file": "1711.03953_note.txt",
+  "source_kind": "note",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\materials\\1711.03953\\L.txt",
+  "doc_sha256": "1af5cf07931388ad5ca1f642b23e491ce306af55a7fa971ebc83542048ff3a39",
+  "doc_chars": 1992,
+  "rep": 1,
+  "created": "2026-09-15T23:00:18",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 3,
+  "records": [
+    {
+      "source_file": "1711.03953_note.txt",
+      "source_kind": "note",
+      "paper_id": "1711.03953",
+      "model": "AWD-LSTM-MoS without finetune",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "55.97",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "Table 1 lists 55.97 for AWD-LSTM-MoS without finetune and 54.44 for AWD-LSTM-MoS with finetune.",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Single-model setting without dynamic evaluation."
+    },
+    {
+      "source_file": "1711.03953_note.txt",
+      "source_kind": "note",
+      "paper_id": "1711.03953",
+      "model": "AWD-LSTM-MoS with finetune",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "54.44",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "yes"
+      },
+      "verbatim_quote": "Table 1 lists 55.97 for AWD-LSTM-MoS without finetune and 54.44 for AWD-LSTM-MoS with finetune.",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Single-model setting without dynamic evaluation."
+    },
+    {
+      "source_file": "1711.03953_note.txt",
+      "source_kind": "note",
+      "paper_id": "1711.03953",
+      "model": "AWD-LSTM-MoS + dynamic evaluation",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "47.69",
+      "setting": {
+        "dynamic_eval": "yes",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "With dynamic evaluation, the paper reports 47.69 for AWD-LSTM-MoS + dynamic evaluation.",
+      "location": "unknown",
+      "confidence": 0.9,
+      "notes": "Uses dynamic evaluation."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1711.03953_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1711.03953\", \"model\": \"AWD-LSTM-MoS without finetune\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"55.97\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"Table 1 lists 55.97 for AWD-LSTM-MoS without finetune and 54.44 for AWD-LSTM-MoS with finetune.\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Single-model setting without dynamic evaluation.\"}, {\"source_file\": \"1711.03953_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1711.03953\", \"model\": \"AWD-LSTM-MoS with finetune\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"54.44\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"yes\"}, \"verbatim_quote\": \"Table 1 lists 55.97 for AWD-LSTM-MoS without finetune and 54.44 for AWD-LSTM-MoS with finetune.\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Single-model setting without dynamic evaluation.\"}, {\"source_file\": \"1711.03953_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1711.03953\", \"model\": \"AWD-LSTM-MoS + dynamic evaluation\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"47.69\", \"setting\": {\"dynamic_eval\": \"yes\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"With dynamic evaluation, the paper reports 47.69 for AWD-LSTM-MoS + dynamic evaluation.\", \"location\": \"unknown\", \"confidence\": 0.9, \"notes\": \"Uses dynamic evaluation.\"}]}",
+  "usage": {
+    "prompt_tokens": 1258,
+    "completion_tokens": 523,
+    "total_tokens": 1781,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1258
+  },
+  "cost_usd": 0.001005,
+  "elapsed_s": 2.1,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,69 @@
+{
+  "cache_key": "1706.02222_note",
+  "source_file": "1706.02222_note.txt",
+  "source_kind": "note",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\materials\\1706.02222\\L.txt",
+  "doc_sha256": "e521db0014e8e08bac27af33dedbc3d37d164ccb5c0b3f8fd5eeda2350e73fe6",
+  "doc_chars": 1959,
+  "rep": 1,
+  "created": "2026-09-15T23:00:12",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 2,
+  "records": [
+    {
+      "source_file": "1706.02222_note.txt",
+      "source_kind": "note",
+      "paper_id": "1706.02222",
+      "model": "GRURNTN",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "87.38",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "For word-level Penn Treebank language modeling, Table II reports test perplexity 87.38 for GRURNTN and 96.97 for LSTMRNTN.",
+      "location": "Table II",
+      "confidence": 0.9,
+      "notes": "Reported as an individual model; no cache/pointer, ensemble, or fine-tuning setting reported."
+    },
+    {
+      "source_file": "1706.02222_note.txt",
+      "source_kind": "note",
+      "paper_id": "1706.02222",
+      "model": "LSTMRNTN",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "96.97",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "For word-level Penn Treebank language modeling, Table II reports test perplexity 87.38 for GRURNTN and 96.97 for LSTMRNTN.",
+      "location": "Table II",
+      "confidence": 0.9,
+      "notes": "Reported as an individual model; no cache/pointer, ensemble, or fine-tuning setting reported."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1706.02222_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1706.02222\", \"model\": \"GRURNTN\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"87.38\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"For word-level Penn Treebank language modeling, Table II reports test perplexity 87.38 for GRURNTN and 96.97 for LSTMRNTN.\", \"location\": \"Table II\", \"confidence\": 0.9, \"notes\": \"Reported as an individual model; no cache/pointer, ensemble, or fine-tuning setting reported.\"}, {\"source_file\": \"1706.02222_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1706.02222\", \"model\": \"LSTMRNTN\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"96.97\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"For word-level Penn Treebank language modeling, Table II reports test perplexity 87.38 for GRURNTN and 96.97 for LSTMRNTN.\", \"location\": \"Table II\", \"confidence\": 0.9, \"notes\": \"Reported as an individual model; no cache/pointer, ensemble, or fine-tuning setting reported.\"}]}",
+  "usage": {
+    "prompt_tokens": 1184,
+    "completion_tokens": 374,
+    "total_tokens": 1558,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1184
+  },
+  "cost_usd": 0.000804,
+  "elapsed_s": 1.7,
+  "finish_reason": "stop"
+}

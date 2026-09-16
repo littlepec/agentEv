@@ -1,0 +1,373 @@
+{
+  "cache_key": "1711.03953",
+  "source_file": "1711.03953.txt",
+  "source_kind": "paper",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\pool\\1711.03953.txt",
+  "doc_sha256": "68399f28737458e8eaf2c13e7a1f30dd18bb0b9116912ae8e0ba42e423aa9632",
+  "doc_chars": 67878,
+  "rep": 1,
+  "created": "2026-09-15T22:59:47",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 18,
+  "records": [
+    {
+      "source_file": "1711.03953.txt",
+      "source_kind": "paper",
+      "paper_id": "1711.03953",
+      "model": "AWD-LSTM-MoS w/o finetune",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "55.97",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "Ours – AWD-LSTM-MoS w/o finetune 22M 58.08 55.97",
+      "location": "Table 1",
+      "confidence": 0.95,
+      "notes": "Single model, no dynamic evaluation or cache/pointer."
+    },
+    {
+      "source_file": "1711.03953.txt",
+      "source_kind": "paper",
+      "paper_id": "1711.03953",
+      "model": "AWD-LSTM-MoS",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "54.44",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "yes"
+      },
+      "verbatim_quote": "Ours – AWD-LSTM-MoS 22M 56.54 54.44",
+      "location": "Table 1",
+      "confidence": 0.9,
+      "notes": "Single model with finetuning, no dynamic evaluation or cache/pointer."
+    },
+    {
+      "source_file": "1711.03953.txt",
+      "source_kind": "paper",
+      "paper_id": "1711.03953",
+      "model": "AWD-LSTM-MoS + dynamic evaluation",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "47.69",
+      "setting": {
+        "dynamic_eval": "yes",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Ours – AWD-LSTM-MoS + dynamic evaluation † 22M 48.33 47.69",
+      "location": "Table 1",
+      "confidence": 0.95,
+      "notes": "Uses dynamic evaluation (†)."
+    },
+    {
+      "source_file": "1711.03953.txt",
+      "source_kind": "paper",
+      "paper_id": "1711.03953",
+      "model": "AWD-LSTM-MoS w/o finetune",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "55.97",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "AWD-LSTM-MoS 58.08 55.97 66.01 63.33",
+      "location": "Table 5",
+      "confidence": 0.9,
+      "notes": "Ablation study without finetuning or dynamical evaluation."
+    },
+    {
+      "source_file": "1711.03953.txt",
+      "source_kind": "paper",
+      "paper_id": "1711.03953",
+      "model": "MoS (15 mixture components)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "55.97",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "15 9981 55.97",
+      "location": "Table 7",
+      "confidence": 0.85,
+      "notes": "Rank/perplexity study varying number of Softmaxes, without finetuning."
+    },
+    {
+      "source_file": "1711.03953.txt",
+      "source_kind": "paper",
+      "paper_id": "1711.03953",
+      "model": "MoS (3 mixture components)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "58.62",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "3 6467 58.62",
+      "location": "Table 7",
+      "confidence": 0.85,
+      "notes": "Rank/perplexity study varying number of Softmaxes, without finetuning."
+    },
+    {
+      "source_file": "1711.03953.txt",
+      "source_kind": "paper",
+      "paper_id": "1711.03953",
+      "model": "MoS (5 mixture components)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "57.36",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "5 8930 57.36",
+      "location": "Table 7",
+      "confidence": 0.85,
+      "notes": "Rank/perplexity study varying number of Softmaxes, without finetuning."
+    },
+    {
+      "source_file": "1711.03953.txt",
+      "source_kind": "paper",
+      "paper_id": "1711.03953",
+      "model": "MoS (10 mixture components)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "56.33",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "10 9973 56.33",
+      "location": "Table 7",
+      "confidence": 0.85,
+      "notes": "Rank/perplexity study varying number of Softmaxes, without finetuning."
+    },
+    {
+      "source_file": "1711.03953.txt",
+      "source_kind": "paper",
+      "paper_id": "1711.03953",
+      "model": "MoS (20 mixture components)",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "56.17",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "20 9981 56.17",
+      "location": "Table 7",
+      "confidence": 0.85,
+      "notes": "Rank/perplexity study varying number of Softmaxes, without finetuning."
+    },
+    {
+      "source_file": "1711.03953.txt",
+      "source_kind": "paper",
+      "paper_id": "1711.03953",
+      "model": "AWD-LSTM-MoS w/o finetune",
+      "dataset": "WikiText-2 (word-level)",
+      "metric": "test perplexity",
+      "value": "63.33",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "Ours – AWD-LSTM-MoS w/o finetune 35M 66.01 63.33",
+      "location": "Table 2",
+      "confidence": 0.95,
+      "notes": "Single model, no dynamic evaluation or cache/pointer."
+    },
+    {
+      "source_file": "1711.03953.txt",
+      "source_kind": "paper",
+      "paper_id": "1711.03953",
+      "model": "AWD-LSTM-MoS",
+      "dataset": "WikiText-2 (word-level)",
+      "metric": "test perplexity",
+      "value": "61.45",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "yes"
+      },
+      "verbatim_quote": "Ours – AWD-LSTM-MoS 35M 63.88 61.45",
+      "location": "Table 2",
+      "confidence": 0.9,
+      "notes": "Single model with finetuning, no dynamic evaluation or cache/pointer."
+    },
+    {
+      "source_file": "1711.03953.txt",
+      "source_kind": "paper",
+      "paper_id": "1711.03953",
+      "model": "AWD-LSTM-MoS + dynamical evaluation",
+      "dataset": "WikiText-2 (word-level)",
+      "metric": "test perplexity",
+      "value": "40.68",
+      "setting": {
+        "dynamic_eval": "yes",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Ours – AWD-LSTM-MoS + dynamical evaluation † 35M 42.41 40.68",
+      "location": "Table 2",
+      "confidence": 0.95,
+      "notes": "Uses dynamic evaluation (†)."
+    },
+    {
+      "source_file": "1711.03953.txt",
+      "source_kind": "paper",
+      "paper_id": "1711.03953",
+      "model": "MoS",
+      "dataset": "1B Word dataset (word-level)",
+      "metric": "test perplexity",
+      "value": "37.10",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "MoS 113M 36.39 38.01 37.10",
+      "location": "Table 3",
+      "confidence": 0.9,
+      "notes": "Train perplexity is the average of the last 4,000 updates."
+    },
+    {
+      "source_file": "1711.03953.txt",
+      "source_kind": "paper",
+      "paper_id": "1711.03953",
+      "model": "Seq2Seq-MoS",
+      "dataset": "Switchboard (dialog)",
+      "metric": "perplexity",
+      "value": "32.727",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Seq2Seq-MoS 32.727",
+      "location": "Table 4",
+      "confidence": 0.85,
+      "notes": "Dialog domain, not Penn Treebank."
+    },
+    {
+      "source_file": "1711.03953.txt",
+      "source_kind": "paper",
+      "paper_id": "1711.03953",
+      "model": "MoS-7 (hid910, emb510)",
+      "dataset": "text8 (character-level)",
+      "metric": "test BPC",
+      "value": "1.49",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "MoS-7 (hid910, emb510) 8.45M 1.35 1.40 1.49",
+      "location": "Table 12",
+      "confidence": 0.8,
+      "notes": "Character-level BPC, not word-level perplexity."
+    },
+    {
+      "source_file": "1711.03953.txt",
+      "source_kind": "paper",
+      "paper_id": "1711.03953",
+      "model": "MoS-7 (hid750, emb750)",
+      "dataset": "text8 (character-level)",
+      "metric": "test BPC",
+      "value": "1.50",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "MoS-7 (hid750, emb750) 8.45M 1.38 1.42 1.50",
+      "location": "Table 12",
+      "confidence": 0.8,
+      "notes": "Character-level BPC, not word-level perplexity."
+    },
+    {
+      "source_file": "1711.03953.txt",
+      "source_kind": "paper",
+      "paper_id": "1711.03953",
+      "model": "MoS-10 (hid860, emb452)",
+      "dataset": "text8 (character-level)",
+      "metric": "test BPC",
+      "value": "1.49",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "MoS-10 (hid860, emb452) 8.43M 1.35 1.41 1.49",
+      "location": "Table 12",
+      "confidence": 0.8,
+      "notes": "Character-level BPC, not word-level perplexity."
+    },
+    {
+      "source_file": "1711.03953.txt",
+      "source_kind": "paper",
+      "paper_id": "1711.03953",
+      "model": "MoS-10 (hid683, emb683)",
+      "dataset": "text8 (character-level)",
+      "metric": "test BPC",
+      "value": "1.50",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "MoS-10 (hid683, emb683) 8.43M 1.38 1.42 1.50",
+      "location": "Table 12",
+      "confidence": 0.8,
+      "notes": "Character-level BPC, not word-level perplexity."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1711.03953.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1711.03953\", \"model\": \"AWD-LSTM-MoS w/o finetune\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"55.97\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"Ours – AWD-LSTM-MoS w/o finetune 22M 58.08 55.97\", \"location\": \"Table 1\", \"confidence\": 0.95, \"notes\": \"Single model, no dynamic evaluation or cache/pointer.\"}, {\"source_file\": \"1711.03953.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1711.03953\", \"model\": \"AWD-LSTM-MoS\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"54.44\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"yes\"}, \"verbatim_quote\": \"Ours – AWD-LSTM-MoS 22M 56.54 54.44\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Single model with finetuning, no dynamic evaluation or cache/pointer.\"}, {\"source_file\": \"1711.03953.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1711.03953\", \"model\": \"AWD-LSTM-MoS + dynamic evaluation\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"47.69\", \"setting\": {\"dynamic_eval\": \"yes\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Ours – AWD-LSTM-MoS + dynamic evaluation † 22M 48.33 47.69\", \"location\": \"Table 1\", \"confidence\": 0.95, \"notes\": \"Uses dynamic evaluation (†).\"}, {\"source_file\": \"1711.03953.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1711.03953\", \"model\": \"AWD-LSTM-MoS w/o finetune\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"55.97\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"AWD-LSTM-MoS 58.08 55.97 66.01 63.33\", \"location\": \"Table 5\", \"confidence\": 0.9, \"notes\": \"Ablation study without finetuning or dynamical evaluation.\"}, {\"source_file\": \"1711.03953.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1711.03953\", \"model\": \"MoS (15 mixture components)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"55.97\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"15 9981 55.97\", \"location\": \"Table 7\", \"confidence\": 0.85, \"notes\": \"Rank/perplexity study varying number of Softmaxes, without finetuning.\"}, {\"source_file\": \"1711.03953.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1711.03953\", \"model\": \"MoS (3 mixture components)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"58.62\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"3 6467 58.62\", \"location\": \"Table 7\", \"confidence\": 0.85, \"notes\": \"Rank/perplexity study varying number of Softmaxes, without finetuning.\"}, {\"source_file\": \"1711.03953.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1711.03953\", \"model\": \"MoS (5 mixture components)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"57.36\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"5 8930 57.36\", \"location\": \"Table 7\", \"confidence\": 0.85, \"notes\": \"Rank/perplexity study varying number of Softmaxes, without finetuning.\"}, {\"source_file\": \"1711.03953.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1711.03953\", \"model\": \"MoS (10 mixture components)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"56.33\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"10 9973 56.33\", \"location\": \"Table 7\", \"confidence\": 0.85, \"notes\": \"Rank/perplexity study varying number of Softmaxes, without finetuning.\"}, {\"source_file\": \"1711.03953.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1711.03953\", \"model\": \"MoS (20 mixture components)\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"56.17\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"20 9981 56.17\", \"location\": \"Table 7\", \"confidence\": 0.85, \"notes\": \"Rank/perplexity study varying number of Softmaxes, without finetuning.\"}, {\"source_file\": \"1711.03953.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1711.03953\", \"model\": \"AWD-LSTM-MoS w/o finetune\", \"dataset\": \"WikiText-2 (word-level)\", \"metric\": \"test perplexity\", \"value\": \"63.33\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"Ours – AWD-LSTM-MoS w/o finetune 35M 66.01 63.33\", \"location\": \"Table 2\", \"confidence\": 0.95, \"notes\": \"Single model, no dynamic evaluation or cache/pointer.\"}, {\"source_file\": \"1711.03953.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1711.03953\", \"model\": \"AWD-LSTM-MoS\", \"dataset\": \"WikiText-2 (word-level)\", \"metric\": \"test perplexity\", \"value\": \"61.45\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"yes\"}, \"verbatim_quote\": \"Ours – AWD-LSTM-MoS 35M 63.88 61.45\", \"location\": \"Table 2\", \"confidence\": 0.9, \"notes\": \"Single model with finetuning, no dynamic evaluation or cache/pointer.\"}, {\"source_file\": \"1711.03953.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1711.03953\", \"model\": \"AWD-LSTM-MoS + dynamical evaluation\", \"dataset\": \"WikiText-2 (word-level)\", \"metric\": \"test perplexity\", \"value\": \"40.68\", \"setting\": {\"dynamic_eval\": \"yes\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Ours – AWD-LSTM-MoS + dynamical evaluation † 35M 42.41 40.68\", \"location\": \"Table 2\", \"confidence\": 0.95, \"notes\": \"Uses dynamic evaluation (†).\"}, {\"source_file\": \"1711.03953.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1711.03953\", \"model\": \"MoS\", \"dataset\": \"1B Word dataset (word-level)\", \"metric\": \"test perplexity\", \"value\": \"37.10\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"MoS 113M 36.39 38.01 37.10\", \"location\": \"Table 3\", \"confidence\": 0.9, \"notes\": \"Train perplexity is the average of the last 4,000 updates.\"}, {\"source_file\": \"1711.03953.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1711.03953\", \"model\": \"Seq2Seq-MoS\", \"dataset\": \"Switchboard (dialog)\", \"metric\": \"perplexity\", \"value\": \"32.727\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Seq2Seq-MoS 32.727\", \"location\": \"Table 4\", \"confidence\": 0.85, \"notes\": \"Dialog domain, not Penn Treebank.\"}, {\"source_file\": \"1711.03953.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1711.03953\", \"model\": \"MoS-7 (hid910, emb510)\", \"dataset\": \"text8 (character-level)\", \"metric\": \"test BPC\", \"value\": \"1.49\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"MoS-7 (hid910, emb510) 8.45M 1.35 1.40 1.49\", \"location\": \"Table 12\", \"confidence\": 0.8, \"notes\": \"Character-level BPC, not word-level perplexity.\"}, {\"source_file\": \"1711.03953.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1711.03953\", \"model\": \"MoS-7 (hid750, emb750)\", \"dataset\": \"text8 (character-level)\", \"metric\": \"test BPC\", \"value\": \"1.50\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"MoS-7 (hid750, emb750) 8.45M 1.38 1.42 1.50\", \"location\": \"Table 12\", \"confidence\": 0.8, \"notes\": \"Character-level BPC, not word-level perplexity.\"}, {\"source_file\": \"1711.03953.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1711.03953\", \"model\": \"MoS-10 (hid860, emb452)\", \"dataset\": \"text8 (character-level)\", \"metric\": \"test BPC\", \"value\": \"1.49\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"MoS-10 (hid860, emb452) 8.43M 1.35 1.41 1.49\", \"location\": \"Table 12\", \"confidence\": 0.8, \"notes\": \"Character-level BPC, not word-level perplexity.\"}, {\"source_file\": \"1711.03953.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1711.03953\", \"model\": \"MoS-10 (hid683, emb683)\", \"dataset\": \"text8 (character-level)\", \"metric\": \"test BPC\", \"value\": \"1.50\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"MoS-10 (hid683, emb683) 8.43M 1.38 1.42 1.50\", \"location\": \"Table 12\", \"confidence\": 0.8, \"notes\": \"Character-level BPC, not word-level perplexity.\"}]}",
+  "usage": {
+    "prompt_tokens": 20093,
+    "completion_tokens": 2961,
+    "total_tokens": 23054,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 20093
+  },
+  "cost_usd": 0.009581,
+  "elapsed_s": 9.7,
+  "finish_reason": "stop"
+}

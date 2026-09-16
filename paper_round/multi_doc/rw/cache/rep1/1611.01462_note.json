@@ -1,0 +1,50 @@
+{
+  "cache_key": "1611.01462_note",
+  "source_file": "1611.01462_note.txt",
+  "source_kind": "note",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\materials\\1611.01462\\L.txt",
+  "doc_sha256": "12aea81f1d6ad9f80bf000a77084cfc7c471a3d5479d7d47a891ba0874ff8d3a",
+  "doc_chars": 1805,
+  "rep": 1,
+  "created": "2026-09-15T23:00:08",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 1,
+  "records": [
+    {
+      "source_file": "1611.01462_note.txt",
+      "source_kind": "note",
+      "paper_id": "1611.01462",
+      "model": "VD-LSTM+REAL (large)",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "68.5",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "The paper reports a word-level test perplexity of 68.5 on Penn Treebank for VD-LSTM+REAL (large), its best LSTM model using reused embeddings and augmented loss.",
+      "location": "Table 3, Section 6.3",
+      "confidence": 0.9,
+      "notes": "Single large 2-layer LSTM with 1500 units, variational dropout, reused embeddings, augmented loss, 51M parameters; note states no dynamic evaluation, cache/pointer, ensemble, or fine-tuning."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1611.01462_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+REAL (large)\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"68.5\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"The paper reports a word-level test perplexity of 68.5 on Penn Treebank for VD-LSTM+REAL (large), its best LSTM model using reused embeddings and augmented loss.\", \"location\": \"Table 3, Section 6.3\", \"confidence\": 0.9, \"notes\": \"Single large 2-layer LSTM with 1500 units, variational dropout, reused embeddings, augmented loss, 51M parameters; note states no dynamic evaluation, cache/pointer, ensemble, or fine-tuning.\"}]}",
+  "usage": {
+    "prompt_tokens": 1171,
+    "completion_tokens": 228,
+    "total_tokens": 1399,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1171
+  },
+  "cost_usd": 0.000625,
+  "elapsed_s": 1.6,
+  "finish_reason": "stop"
+}

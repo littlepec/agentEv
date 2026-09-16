@@ -1,0 +1,63 @@
+{
+  "tag": "rep1:extract:1708.02182_note_alt",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "json_object": true,
+  "created": "2026-09-15T23:00:22",
+  "elapsed_s": 3.5,
+  "usage": {
+    "prompt_tokens": 1175,
+    "completion_tokens": 939,
+    "total_tokens": 2114,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 535
+  },
+  "prompt_tokens": 1175,
+  "completion_tokens": 939,
+  "cost_usd": 0.001479,
+  "finish_reason": "stop",
+  "error": null,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a careful research assistant. You are reading ONE document and extracting the results it reports. Work only from the document text given to you; never add facts that are not in it, and never use outside knowledge to fill in or correct a number."
+    },
+    {
+      "role": "user",
+      "content": "USER TASK (what these extracted records will later be used for):\nQ1: Across the provided papers, which paper reports the lowest word-level test perplexity on the Penn Treebank for a single model without dynamic evaluation, cache or pointer augmentation, and what is that value? Rank the papers by this number.\nQ2: For each of the provided papers, list the word-level Penn Treebank test perplexity the paper reports for its own proposed model (best single-model result without dynamic evaluation or cache), as a table with the paper title and the number.\n\nFile: 1708.02182_note.txt. Files named <arxiv_id>.txt are papers; files named <arxiv_id>_note.txt are third-party reading notes about that paper.\n\nRead the document below and return every result it reports that is relevant to the task above.\n\nRules:\n1. Extract only results that this document itself reports for the OWN proposed model(s) of the paper it is about. For a paper file that means the model(s) the paper itself proposes; for a third-party reading note that means the results the note states about the paper it is about. Do not create records for numbers the document attributes to other authors' models (baselines, prior work, comparison rows).\n2. One record per configuration: if the document reports several values for its own model (different sizes, with or without fine-tuning, with or without a cache or pointer, with or without dynamic evaluation, single model or ensemble), give each of them its own record.\n3. \"value\" must be the number exactly as written in the document, as a string.\n4. \"verbatim_quote\" must be copied exactly from the document and be 40 words or fewer.\n5. Put \"unknown\" in any field you cannot determine from the document. Do not omit a result because you are uncertain about it; record it with \"unknown\" fields and a lower confidence.\n6. Never add a fact, a number or a qualification that is not in the document.\n7. \"source_file\" is the file name given above, and \"source_kind\" is exactly what that file name implies: \"paper\" for <arxiv_id>.txt, \"note\" for <arxiv_id>_note.txt.\n\nReturn ONLY a JSON object of this shape:\n{\"records\": [{\"source_file\": \"<file name>\", \"source_kind\": \"paper|note\", \"paper_id\": \"<arxiv id the result belongs to>\", \"model\": \"<model the value is for>\", \"dataset\": \"<dataset and level>\", \"metric\": \"<metric>\", \"value\": \"<string, exactly as written>\", \"setting\": {\"dynamic_eval\": \"yes|no|unknown\", \"cache_pointer\": \"yes|no|unknown\", \"ensemble\": \"yes|no|unknown\", \"fine_tuning\": \"yes|no|unknown\"}, \"verbatim_quote\": \"<40 words or fewer, copied exactly>\", \"location\": \"<section or table as named in the text>\", \"confidence\": 0.0, \"notes\": \"<short qualification, or empty>\"}]}\n\nDOCUMENT TEXT (1708.02182_note.txt):\nThird-party research note: Regularizing and Optimizing LSTM Language Models\n\nKey questions addressed: Regularizing and Optimizing LSTM Language Models Penn Treebank perplexity | AWD-LSTM Penn Treebank language modeling results | weight-dropped LSTM NT-ASGD Penn Treebank benchmark | neural cache pointer Penn Treebank language model perplexity | Merity Keskar Socher LSTM regularization language modeling baselines\n\nThe paper \"Regularizing and Optimizing LSTM Language Models\" proposes AWD-LSTM, an abbreviation for ASGD Weight-Dropped LSTM. The paper reports a word-level Penn Treebank test perplexity of 53.3 for AWD-LSTM, a 3-layer LSTM with tied weights, as a single model without cache/pointer. It also reports 65.8 on WikiText-2. This result includes the fine-tuning step. The Table 1 caption states \"Single model perplexity on validation and test sets for the Penn Treebank language modeling task.\" Table 4 lists the no-fine-tuning ablation at 58.8 test perplexity on Penn Treebank, and the paper states that removal of the fine-tuning step degrades performance.\n\nFor the proposed model augmented with a continuous cache pointer, the paper reports an even lower Penn Treebank test perplexity of 52.8 and 52.0 on WikiText-2. The Penn Treebank table is explicitly captioned as single model perplexity on validation and test sets. The paper reports a continuous cache pointer variant, and fine-tuning is part of the training procedure. The provided paper text does not report dynamic evaluation or ensemble results.\n\nThe paper states that its vanilla LSTM improves the state of the art by approximately 1 unit on Penn Treebank and 0.1 units on WikiText-2. In Table 1, AWD-LSTM's 53.3 beats the best listed baseline, Melis et al. 2017 4-layer skip connection LSTM (tied) at 58.3. Many other baselines are higher. With the continuous cache pointer, the 52.8 Penn Treebank test perplexity is even lower.\n"
+    }
+  ],
+  "response": {
+    "id": "c06ff606-002c-48f2-a5e6-5a627d1de46c",
+    "object": "chat.completion",
+    "created": 1789477220,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"records\": [{\"source_file\": \"1708.02182_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (3-layer LSTM with tied weights)\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"53.3\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"yes\"}, \"verbatim_quote\": \"The paper reports a word-level Penn Treebank test perplexity of 53.3 for AWD-LSTM, a 3-layer LSTM with tied weights, as a single model without cache/pointer.\", \"location\": \"Table 1\", \"confidence\": 0.9, \"notes\": \"Note states this result includes the fine-tuning step and is a single model without cache/pointer.\"}, {\"source_file\": \"1708.02182_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (3-layer LSTM with tied weights)\", \"dataset\": \"WikiText-2, word-level\", \"metric\": \"test perplexity\", \"value\": \"65.8\", \"setting\": {\"dynamic_eval\": \"unknown\", \"cache_pointer\": \"no\", \"ensemble\": \"unknown\", \"fine_tuning\": \"yes\"}, \"verbatim_quote\": \"It also reports 65.8 on WikiText-2. This result includes the fine-tuning step.\", \"location\": \"unknown\", \"confidence\": 0.7, \"notes\": \"Note does not specify dynamic evaluation or ensemble status for this WikiText-2 result.\"}, {\"source_file\": \"1708.02182_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM (no-fine-tuning ablation)\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"58.8\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"Table 4 lists the no-fine-tuning ablation at 58.8 test perplexity on Penn Treebank, and the paper states that removal of the fine-tuning step degrades performance.\", \"location\": \"Table 4\", \"confidence\": 0.85, \"notes\": \"No-fine-tuning ablation of the proposed model.\"}, {\"source_file\": \"1708.02182_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM with continuous cache pointer\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"52.8\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"yes\", \"ensemble\": \"no\", \"fine_tuning\": \"yes\"}, \"verbatim_quote\": \"For the proposed model augmented with a continuous cache pointer, the paper reports an even lower Penn Treebank test perplexity of 52.8\", \"location\": \"unknown\", \"confidence\": 0.85, \"notes\": \"Note states the Penn Treebank table is explicitly captioned as single model perplexity; fine-tuning is part of the training procedure.\"}, {\"source_file\": \"1708.02182_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1708.02182\", \"model\": \"AWD-LSTM with continuous cache pointer\", \"dataset\": \"WikiText-2, word-level\", \"metric\": \"test perplexity\", \"value\": \"52.0\", \"setting\": {\"dynamic_eval\": \"unknown\", \"cache_pointer\": \"yes\", \"ensemble\": \"unknown\", \"fine_tuning\": \"yes\"}, \"verbatim_quote\": \"For the proposed model augmented with a continuous cache pointer, the paper reports an even lower Penn Treebank test perplexity of 52.8 and 52.0 on WikiText-2.\", \"location\": \"unknown\", \"confidence\": 0.7, \"notes\": \"Note does not specify dynamic evaluation or ensemble status for this WikiText-2 result.\"}]}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1175,
+      "completion_tokens": 939,
+      "total_tokens": 2114,
+      "prompt_tokens_details": {
+        "cached_tokens": 640
+      },
+      "prompt_cache_hit_tokens": 640,
+      "prompt_cache_miss_tokens": 535
+    },
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+  }
+}

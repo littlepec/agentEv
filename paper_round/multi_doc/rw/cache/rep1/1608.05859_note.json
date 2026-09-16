@@ -1,0 +1,69 @@
+{
+  "cache_key": "1608.05859_note",
+  "source_file": "1608.05859_note.txt",
+  "source_kind": "note",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\materials\\1608.05859\\L.txt",
+  "doc_sha256": "928afffd7cecb23b71fba2b444a7b56e9de6533fe11f56b6fec318c14c572951",
+  "doc_chars": 1790,
+  "rep": 1,
+  "created": "2026-09-15T23:00:06",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 2,
+  "records": [
+    {
+      "source_file": "1608.05859_note.txt",
+      "source_kind": "note",
+      "paper_id": "1608.05859",
+      "model": "Large NNLM with weight tying (Large + Weight Tying)",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "74.3",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "The large NNLM with weight tying (Large + Weight Tying) reaches 74.3 test perplexity.",
+      "location": "neural network language model experiments",
+      "confidence": 0.9,
+      "notes": "Single-model result reported without dynamic evaluation, cache/pointer, ensemble, or fine-tuning."
+    },
+    {
+      "source_file": "1608.05859_note.txt",
+      "source_kind": "note",
+      "paper_id": "1608.05859",
+      "model": "Small NNLM with weight tying and projection regularization (Small + WT + PR)",
+      "dataset": "Penn Treebank, word-level",
+      "metric": "test perplexity",
+      "value": "100.9",
+      "setting": {
+        "dynamic_eval": "no",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "no"
+      },
+      "verbatim_quote": "The small NNLM with weight tying and projection regularization (Small + WT + PR) reaches 100.9 test perplexity.",
+      "location": "neural network language model experiments",
+      "confidence": 0.9,
+      "notes": "Single-model result reported without dynamic evaluation, cache/pointer, ensemble, or fine-tuning."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1608.05859_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1608.05859\", \"model\": \"Large NNLM with weight tying (Large + Weight Tying)\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"74.3\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"The large NNLM with weight tying (Large + Weight Tying) reaches 74.3 test perplexity.\", \"location\": \"neural network language model experiments\", \"confidence\": 0.9, \"notes\": \"Single-model result reported without dynamic evaluation, cache/pointer, ensemble, or fine-tuning.\"}, {\"source_file\": \"1608.05859_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1608.05859\", \"model\": \"Small NNLM with weight tying and projection regularization (Small + WT + PR)\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"100.9\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"The small NNLM with weight tying and projection regularization (Small + WT + PR) reaches 100.9 test perplexity.\", \"location\": \"neural network language model experiments\", \"confidence\": 0.9, \"notes\": \"Single-model result reported without dynamic evaluation, cache/pointer, ensemble, or fine-tuning.\"}]}",
+  "usage": {
+    "prompt_tokens": 1112,
+    "completion_tokens": 375,
+    "total_tokens": 1487,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1112
+  },
+  "cost_usd": 0.000784,
+  "elapsed_s": 1.7,
+  "finish_reason": "stop"
+}

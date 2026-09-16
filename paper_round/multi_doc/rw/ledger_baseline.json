@@ -1,0 +1,28 @@
+{
+  "line_cost_at_rw_start": 8.716487899999999,
+  "line_calls_at_rw_start": 757,
+  "created": "2026-09-15T22:58:22",
+  "sub_cap_revisions": [
+    {
+      "sub_cap_usd": 0.50,
+      "from": "2026-09-15T22:58:22",
+      "reason": "round_RW as first frozen (PREREG_rw.md); baseline set at the first paid call"
+    },
+    {
+      "sub_cap_usd": 0.65,
+      "from": "2026-09-15T23:20",
+      "reason": "merge reasoning-token truncation",
+      "detail": "The first frozen merge configuration (thinking enabled, no json_object, max_tokens 16384) spent its entire output budget on reasoning tokens: 10/10 merge cells failed as technical failures (A_rep1 truncated mid-JSON with 15627 reasoning tokens; B/C/Df/Dp rep1 returned empty content twice each). $0.2894 of the first sub-cap was consumed by those 9 unusable calls. Main-session decision recorded in F:/defense/LOG.md, re-frozen as RW-b: merge calls only are changed to thinking disabled + json_object + max_tokens 8192, prose moved inside the JSON as answer_prose. Baseline unchanged; extraction results and all prior call logs kept.",
+      "authorized_by": "main session (coordinator message, 2026-09-15)"
+    },
+    {
+      "sub_cap_usd": 0.90,
+      "from": "2026-09-15T23:26",
+      "reason": "RW-c confirmation + policy arm per PREREG_rw_c.md",
+      "detail": "RW-b spent $0.5447 of the $0.65 sub-cap. RW-c adds a confirmation arm (C x6, Dp x6, reps 3-8, frozen RW-b merge configuration, pooled with RW-b's 2 each to 8/8) and a policy arm (C-policy x4, Dp-policy x4, --policy flag). Per-exp_key call cap also raised 80 -> 100. Baseline unchanged; RW-b outputs are not overwritten because policy cells are named <cond>P_rep<N>.",
+      "authorized_by": "main session (coordinator message, 2026-09-15)",
+      "est_additional_usd": 0.25
+    }
+  ],
+  "note": "baseline is the evidence-package-pilot line total at the first paid rw call and is never revised; the guard cap is min(line_cap, baseline + current sub_cap)."
+}

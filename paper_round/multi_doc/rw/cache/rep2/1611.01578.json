@@ -1,0 +1,88 @@
+{
+  "cache_key": "1611.01578",
+  "source_file": "1611.01578.txt",
+  "source_kind": "paper",
+  "doc_path": "F:\\defense\\evidence_pack_prep_v1\\paper_round\\multi_doc\\pool\\1611.01578.txt",
+  "doc_sha256": "31d1d493cb32bd588d8047a70f998a957db8366c873f12f332c79675a8b1e465",
+  "doc_chars": 50418,
+  "rep": 2,
+  "created": "2026-09-15T23:00:58",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "n_records": 3,
+  "records": [
+    {
+      "source_file": "1611.01578.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01578",
+      "model": "Neural Architecture Search with base 8",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "67.9",
+      "setting": {
+        "dynamic_eval": "unknown",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Neural Architecture Search with base 8 32M 67.9 67.9",
+      "location": "Table 2",
+      "confidence": 0.9,
+      "notes": "Single model perplexity on the test set of PTB; no cache/pointer or dynamic evaluation mentioned."
+    },
+    {
+      "source_file": "1611.01578.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01578",
+      "model": "Neural Architecture Search with base 8 and shared embeddings",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "64.0",
+      "setting": {
+        "dynamic_eval": "unknown",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Neural Architecture Search with base 8 and shared embeddings 25M 64.0 64.0",
+      "location": "Table 2",
+      "confidence": 0.9,
+      "notes": "Single model perplexity on the test set of PTB; shared input/output embeddings."
+    },
+    {
+      "source_file": "1611.01578.txt",
+      "source_kind": "paper",
+      "paper_id": "1611.01578",
+      "model": "Neural Architecture Search with base 8 and shared embeddings",
+      "dataset": "Penn Treebank (word-level)",
+      "metric": "test perplexity",
+      "value": "62.4",
+      "setting": {
+        "dynamic_eval": "unknown",
+        "cache_pointer": "no",
+        "ensemble": "no",
+        "fine_tuning": "unknown"
+      },
+      "verbatim_quote": "Neural Architecture Search with base 8 and shared embeddings 54M 62.4 62.4",
+      "location": "Table 2",
+      "confidence": 0.9,
+      "notes": "Best single model; abstract states 'Our cell achieves a test set perplexity of 62.4 on the Penn Treebank'."
+    }
+  ],
+  "raw": "{\"records\": [{\"source_file\": \"1611.01578.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01578\", \"model\": \"Neural Architecture Search with base 8\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"67.9\", \"setting\": {\"dynamic_eval\": \"unknown\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Neural Architecture Search with base 8 32M 67.9 67.9\", \"location\": \"Table 2\", \"confidence\": 0.9, \"notes\": \"Single model perplexity on the test set of PTB; no cache/pointer or dynamic evaluation mentioned.\"}, {\"source_file\": \"1611.01578.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01578\", \"model\": \"Neural Architecture Search with base 8 and shared embeddings\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"64.0\", \"setting\": {\"dynamic_eval\": \"unknown\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Neural Architecture Search with base 8 and shared embeddings 25M 64.0 64.0\", \"location\": \"Table 2\", \"confidence\": 0.9, \"notes\": \"Single model perplexity on the test set of PTB; shared input/output embeddings.\"}, {\"source_file\": \"1611.01578.txt\", \"source_kind\": \"paper\", \"paper_id\": \"1611.01578\", \"model\": \"Neural Architecture Search with base 8 and shared embeddings\", \"dataset\": \"Penn Treebank (word-level)\", \"metric\": \"test perplexity\", \"value\": \"62.4\", \"setting\": {\"dynamic_eval\": \"unknown\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"unknown\"}, \"verbatim_quote\": \"Neural Architecture Search with base 8 and shared embeddings 54M 62.4 62.4\", \"location\": \"Table 2\", \"confidence\": 0.9, \"notes\": \"Best single model; abstract states 'Our cell achieves a test set perplexity of 62.4 on the Penn Treebank'.\"}]}",
+  "usage": {
+    "prompt_tokens": 14313,
+    "completion_tokens": 538,
+    "total_tokens": 14851,
+    "prompt_tokens_details": {
+      "cached_tokens": 14080
+    },
+    "prompt_cache_hit_tokens": 14080,
+    "prompt_cache_miss_tokens": 233
+  },
+  "cost_usd": 0.004939,
+  "elapsed_s": 2.6,
+  "finish_reason": "stop"
+}

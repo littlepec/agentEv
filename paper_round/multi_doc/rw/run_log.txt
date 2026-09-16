@@ -1,0 +1,277 @@
+=== round_RW RUN START Tue Sep 15 22:58:22     2026 ===
+--- extract rep1 ---
+[ledger] line evidence-package-pilot*: $8.7165 / 757 calls; rw cap $9.2165 (baseline $8.7165 + $0.5); rw calls so far 0/80
+  [rep1:extract:1409.2329] in=7923 out=1879 $0.0046 finish=stop 6.0s -> 1409.2329.json
+    1409.2329: 12 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1409.2329.json
+  [rep1:extract:1508.06615] in=15251 out=1732 $0.0067 finish=stop 6.2s -> 1508.06615.json
+    1508.06615: 11 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1508.06615.json
+  [rep1:extract:1512.05287] in=15822 out=1741 $0.0068 finish=stop 5.7s -> 1512.05287.json
+    1512.05287: 9 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1512.05287.json
+  [rep1:extract:1607.03474] in=15688 out=512 $0.0053 finish=stop 2.5s -> 1607.03474.json
+    1607.03474: 3 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1607.03474.json
+  [rep1:extract:1608.05859] in=10510 out=959 $0.0043 finish=stop 3.3s -> 1608.05859.json
+    1608.05859: 6 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1608.05859.json
+  [rep1:extract:1611.01462] in=13569 out=3577 $0.0084 finish=stop 10.3s -> 1611.01462.json
+    1611.01462: 21 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1611.01462.json
+  [rep1:extract:1611.01578] in=14313 out=878 $0.0053 finish=stop 3.4s -> 1611.01578.json
+    1611.01578: 5 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1611.01578.json
+  [rep1:extract:1706.02222] in=14866 out=669 $0.0053 finish=stop 3.6s -> 1706.02222.json
+    1706.02222: 4 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1706.02222.json
+  [rep1:extract:1707.05589] in=9933 out=3937 $0.0077 finish=stop 11.0s -> 1707.05589.json
+    1707.05589: 26 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1707.05589.json
+  [rep1:extract:1708.02182] in=13365 out=4096 $0.0089 finish=length 12.1s -> 1708.02182.json
+    parse failed (attempt 1): no parseable JSON object (Expecting ',' delimiter: line 1 column 11298 (char 11297))
+  [rep1:extract:1708.02182] in=13365 out=3772 $0.0085 finish=stop 10.9s -> 1708.02182_retry.json
+    1708.02182: 22 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1708.02182.json
+  [rep1:extract:1711.03953] in=20093 out=2961 $0.0096 finish=stop 9.7s -> 1711.03953.json
+    1711.03953: 18 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1711.03953.json
+  [rep1:extract:1409.2329_note] in=1197 out=1423 $0.0021 finish=stop 4.3s -> 1409.2329_note.json
+    1409.2329_note: 8 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1409.2329_note.json
+  [rep1:extract:1508.06615_note] in=1323 out=1378 $0.0021 finish=stop 4.1s -> 1508.06615_note.json
+    1508.06615_note: 8 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1508.06615_note.json
+  [rep1:extract:1512.05287_note] in=1258 out=1786 $0.0025 finish=stop 5.6s -> 1512.05287_note.json
+    1512.05287_note: 10 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1512.05287_note.json
+  [rep1:extract:1607.03474_note] in=1144 out=717 $0.0012 finish=stop 3.1s -> 1607.03474_note.json
+    1607.03474_note: 4 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1607.03474_note.json
+  [rep1:extract:1608.05859_note] in=1112 out=375 $0.0008 finish=stop 1.7s -> 1608.05859_note.json
+    1608.05859_note: 2 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1608.05859_note.json
+  [rep1:extract:1611.01462_note] in=1171 out=228 $0.0006 finish=stop 1.6s -> 1611.01462_note.json
+    1611.01462_note: 1 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1611.01462_note.json
+  [rep1:extract:1611.01578_note] in=1185 out=568 $0.0010 finish=stop 2.4s -> 1611.01578_note.json
+    1611.01578_note: 3 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1611.01578_note.json
+  [rep1:extract:1706.02222_note] in=1184 out=374 $0.0008 finish=stop 1.7s -> 1706.02222_note.json
+    1706.02222_note: 2 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1706.02222_note.json
+  [rep1:extract:1707.05589_note] in=1205 out=191 $0.0006 finish=stop 1.3s -> 1707.05589_note.json
+    1707.05589_note: 1 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1707.05589_note.json
+  [rep1:extract:1708.02182_note] in=1175 out=912 $0.0014 finish=stop 3.4s -> 1708.02182_note.json
+    1708.02182_note: 5 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1708.02182_note.json
+  [rep1:extract:1711.03953_note] in=1258 out=523 $0.0010 finish=stop 2.1s -> 1711.03953_note.json
+    1711.03953_note: 3 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1711.03953_note.json
+  [rep1:extract:1708.02182_note_alt] in=1175 out=939 $0.0015 finish=stop 3.5s -> 1708.02182_note_alt.json
+    1708.02182_note_alt: 5 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep1\1708.02182_note_alt.json
+[ledger] after extract: line $8.8136 / 781 calls; rw 24/80
+--- extract rep2 ---
+[ledger] line evidence-package-pilot*: $8.8136 / 781 calls; rw cap $9.2165 (baseline $8.7165 + $0.5); rw calls so far 24/80
+  [rep2:extract:1409.2329] in=7923 out=1851 $0.0046 finish=stop 5.9s -> 1409.2329.json
+    1409.2329: 12 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep2\1409.2329.json
+  [rep2:extract:1508.06615] in=15251 out=1744 $0.0067 finish=stop 5.7s -> 1508.06615.json
+    1508.06615: 11 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep2\1508.06615.json
+  [rep2:extract:1512.05287] in=15822 out=1810 $0.0069 finish=stop 6.1s -> 1512.05287.json
+    1512.05287: 9 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep2\1512.05287.json
+  [rep2:extract:1607.03474] in=15688 out=688 $0.0055 finish=stop 3.1s -> 1607.03474.json
+    1607.03474: 4 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep2\1607.03474.json
+  [rep2:extract:1608.05859] in=10510 out=2356 $0.0060 finish=stop 7.5s -> 1608.05859.json
+    1608.05859: 15 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep2\1608.05859.json
+  [rep2:extract:1611.01462] in=13569 out=1266 $0.0056 finish=stop 4.5s -> 1611.01462.json
+    1611.01462: 7 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep2\1611.01462.json
+  [rep2:extract:1611.01578] in=14313 out=538 $0.0049 finish=stop 2.6s -> 1611.01578.json
+    1611.01578: 3 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep2\1611.01578.json
+  [rep2:extract:1706.02222] in=14866 out=667 $0.0053 finish=stop 3.3s -> 1706.02222.json
+    1706.02222: 4 records -> F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\cache\rep2\1706.02222.json
+  [rep2:extract:1707.05589] in=9933 out=4096 $0.0079 finish=length 11.5s -> 1707.05589.json
+    parse failed (attempt 1): no parseable JSON object (Expecting ',' delimiter: line 1 column 11302 (char 11301))
+  [rep2:extract:1707.05589] in=9933 out=4096 $0.0079 finish=length 11.6s -> 1707.05589_retry.json
+    parse failed (attempt 2): no parseable JSON object (Expecting ',' delimiter: line 1 column 11524 (char 11523))
+STOP: 1707.05589 rep2 produced no parseable records after 2 attempts
+--- merge A rep1 ---
+[ledger] line evidence-package-pilot*: $8.8748 / 791 calls; rw cap $9.2165 (baseline $8.7165 + $0.5); rw calls so far 34/80
+  [rep1:merge:A] in=26009 out=16384 $0.0275 finish=length 65.7s -> A_rep1.json
+  merge A rep1: 137 records in, parse_error=no parseable JSON object (Expecting ',' delimiter: line 38 column 6 (char 1398)) -> merges/A_rep1.md
+[ledger] after merge: line $8.9023 / 792 calls; rw 35/80
+--- merge B rep1 ---
+[ledger] line evidence-package-pilot*: $8.9023 / 792 calls; rw cap $9.2165 (baseline $8.7165 + $0.5); rw calls so far 35/80
+  [rep1:merge:B] in=35369 out=16384 $0.0303 finish=length 66.8s -> B_rep1.json
+  [rep1:merge:B] in=35369 out=16384 $0.0303 finish=length 70.0s -> B_rep1_retry.json
+STOP: merge B rep1 returned no content after 2 attempts
+--- merge C rep1 ---
+[ledger] line evidence-package-pilot*: $8.9628 / 794 calls; rw cap $9.2165 (baseline $8.7165 + $0.5); rw calls so far 37/80
+  [rep1:merge:C] in=35396 out=16384 $0.0303 finish=length 71.4s -> C_rep1.json
+  [rep1:merge:C] in=35396 out=16384 $0.0303 finish=length 64.0s -> C_rep1_retry.json
+STOP: merge C rep1 returned no content after 2 attempts
+--- merge Df rep1 ---
+[ledger] line evidence-package-pilot*: $9.0234 / 796 calls; rw cap $9.2165 (baseline $8.7165 + $0.5); rw calls so far 39/80
+  [rep1:merge:Df] in=31160 out=16384 $0.0290 finish=length 68.9s -> Df_rep1.json
+  [rep1:merge:Df] in=31160 out=16384 $0.0290 finish=length 73.5s -> Df_rep1_retry.json
+STOP: merge Df rep1 returned no content after 2 attempts
+--- merge Dp rep1 ---
+[ledger] line evidence-package-pilot*: $9.0814 / 798 calls; rw cap $9.2165 (baseline $8.7165 + $0.5); rw calls so far 41/80
+  [rep1:merge:Dp] in=31187 out=16384 $0.0290 finish=length 68.4s -> Dp_rep1.json
+  [rep1:merge:Dp] in=31187 out=16384 $0.0290 finish=length 71.9s -> Dp_rep1_retry.json
+STOP: merge Dp rep1 returned no content after 2 attempts
+--- merge A rep2 ---
+STOP: missing extraction caches for A rep2: ['1707.05589', '1708.02182', '1711.03953']
+--- merge B rep2 ---
+STOP: missing extraction caches for B rep2: ['1707.05589', '1708.02182', '1711.03953', '1409.2329_note', '1508.06615_note', '1512.05287_note', '1607.03474_note', '1608.05859_note', '1611.01462_note', '1611.01578_note', '1706.02222_note', '1707.05589_note', '1708.02182_note', '1711.03953_note']
+--- merge C rep2 ---
+STOP: missing extraction caches for C rep2: ['1707.05589', '1708.02182', '1711.03953', '1409.2329_note', '1508.06615_note', '1512.05287_note', '1607.03474_note', '1608.05859_note', '1611.01462_note', '1611.01578_note', '1706.02222_note', '1707.05589_note', '1708.02182_note_alt', '1711.03953_note']
+--- merge Df rep2 ---
+STOP: missing extraction caches for Df rep2: ['1707.05589', '1711.03953', '1409.2329_note', '1508.06615_note', '1512.05287_note', '1607.03474_note', '1608.05859_note', '1611.01462_note', '1611.01578_note', '1706.02222_note', '1707.05589_note', '1708.02182_note', '1711.03953_note']
+--- merge Dp rep2 ---
+STOP: missing extraction caches for Dp rep2: ['1707.05589', '1711.03953', '1409.2329_note', '1508.06615_note', '1512.05287_note', '1607.03474_note', '1608.05859_note', '1611.01462_note', '1611.01578_note', '1706.02222_note', '1707.05589_note', '1708.02182_note_alt', '1711.03953_note']
+--- screen ---
+wrote F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\SCREEN_rw.md (43 ledger rows for evidence-package-pilot-rw)
+=== round_RW RUN DONE Tue Sep 15 23:11:46     2026 ===
+
+=== round_RW-b MERGE RERUN START Tue Sep 15 23:18:37     2026 ===
+rw_pipeline.py sha256 d74b7113a697dc74bb6dde4208586a033d1c5d0ad797e789a494008c28e40d2f
+--- merge A rep1 (records rep1) ---
+[ledger] line evidence-package-pilot*: $9.1395 / 800 calls; rw cap $9.3665 (baseline $8.7165 + $0.65); rw calls so far 43/80
+  [rep1:merge:A] in=26017 out=1836 $0.0100 finish=stop 6.5s -> A_rep1.json
+  merge A rep1: 137 records in, parse_error=None -> merges/A_rep1.md
+[ledger] after merge: line $9.1495 / 801 calls; rw 44/80
+--- merge B rep1 (records rep1) ---
+[ledger] line evidence-package-pilot*: $9.1495 / 801 calls; rw cap $9.3665 (baseline $8.7165 + $0.65); rw calls so far 44/80
+  [rep1:merge:B] in=35377 out=2235 $0.0133 finish=stop 7.8s -> B_rep1.json
+  merge B rep1: 184 records in, parse_error=None -> merges/B_rep1.md
+[ledger] after merge: line $9.1628 / 802 calls; rw 45/80
+--- merge C rep1 (records rep1) ---
+[ledger] line evidence-package-pilot*: $9.1628 / 802 calls; rw cap $9.3665 (baseline $8.7165 + $0.65); rw calls so far 45/80
+  [rep1:merge:C] in=35404 out=2190 $0.0132 finish=stop 7.5s -> C_rep1.json
+  merge C rep1: 184 records in, parse_error=None -> merges/C_rep1.md
+[ledger] after merge: line $9.1760 / 803 calls; rw 46/80
+--- merge Df rep1 (records rep1) ---
+[ledger] line evidence-package-pilot*: $9.1760 / 803 calls; rw cap $9.3665 (baseline $8.7165 + $0.65); rw calls so far 46/80
+  [rep1:merge:Df] in=31168 out=2401 $0.0122 finish=stop 8.3s -> Df_rep1.json
+  merge Df rep1: 162 records in, parse_error=None -> merges/Df_rep1.md
+[ledger] after merge: line $9.1882 / 804 calls; rw 47/80
+--- merge Dp rep1 (records rep1) ---
+[ledger] line evidence-package-pilot*: $9.1882 / 804 calls; rw cap $9.3665 (baseline $8.7165 + $0.65); rw calls so far 47/80
+  [rep1:merge:Dp] in=31195 out=2182 $0.0120 finish=stop 7.0s -> Dp_rep1.json
+  merge Dp rep1: 162 records in, parse_error=None -> merges/Dp_rep1.md
+[ledger] after merge: line $9.2002 / 805 calls; rw 48/80
+--- merge A rep2 (records rep1) ---
+[ledger] line evidence-package-pilot*: $9.2002 / 805 calls; rw cap $9.3665 (baseline $8.7165 + $0.65); rw calls so far 48/80
+  [rep2:merge:A] in=26017 out=1901 $0.0101 finish=stop 6.3s -> A_rep2.json
+  merge A rep2: 137 records in, parse_error=None -> merges/A_rep2.md
+[ledger] after merge: line $9.2103 / 806 calls; rw 49/80
+--- merge B rep2 (records rep1) ---
+[ledger] line evidence-package-pilot*: $9.2103 / 806 calls; rw cap $9.3665 (baseline $8.7165 + $0.65); rw calls so far 49/80
+  [rep2:merge:B] in=35377 out=2485 $0.0136 finish=stop 8.5s -> B_rep2.json
+  merge B rep2: 184 records in, parse_error=None -> merges/B_rep2.md
+[ledger] after merge: line $9.2239 / 807 calls; rw 50/80
+--- merge C rep2 (records rep1) ---
+[ledger] line evidence-package-pilot*: $9.2239 / 807 calls; rw cap $9.3665 (baseline $8.7165 + $0.65); rw calls so far 50/80
+  [rep2:merge:C] in=35404 out=2171 $0.0132 finish=stop 7.2s -> C_rep2.json
+  merge C rep2: 184 records in, parse_error=None -> merges/C_rep2.md
+[ledger] after merge: line $9.2371 / 808 calls; rw 51/80
+--- merge Df rep2 (records rep1) ---
+[ledger] line evidence-package-pilot*: $9.2371 / 808 calls; rw cap $9.3665 (baseline $8.7165 + $0.65); rw calls so far 51/80
+  [rep2:merge:Df] in=31168 out=2117 $0.0119 finish=stop 7.3s -> Df_rep2.json
+  merge Df rep2: 162 records in, parse_error=None -> merges/Df_rep2.md
+[ledger] after merge: line $9.2490 / 809 calls; rw 52/80
+--- merge Dp rep2 (records rep1) ---
+[ledger] line evidence-package-pilot*: $9.2490 / 809 calls; rw cap $9.3665 (baseline $8.7165 + $0.65); rw calls so far 52/80
+  [rep2:merge:Dp] in=31195 out=2365 $0.0122 finish=stop 8.2s -> Dp_rep2.json
+  merge Dp rep2: 162 records in, parse_error=None -> merges/Dp_rep2.md
+[ledger] after merge: line $9.2612 / 810 calls; rw 53/80
+--- screen ---
+wrote F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\SCREEN_rw.md (53 ledger rows for evidence-package-pilot-rw)
+=== round_RW-b RERUN DONE Tue Sep 15 23:19:53     2026 ===
+
+=== round_RW-c START Tue Sep 15 23:26:44     2026 ===
+rw_pipeline.py sha256 43fed4b067553d6075d547303bbdaea9d6d73fcd46de4da16b289f7b6376beaf
+### confirmation arm (no policy) ###
+--- merge C rep3 ---
+[ledger] line evidence-package-pilot*: $9.2612 / 810 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 53/100
+  [rep3:merge:C] in=35404 out=2118 $0.0132 finish=stop 7.5s -> C_rep3.json
+  merge C_rep3: 184 records in, policy=False, parse_error=None -> merges/C_rep3.md
+[ledger] after merge: line $9.2744 / 811 calls; rw 54/100
+--- merge C rep4 ---
+[ledger] line evidence-package-pilot*: $9.2744 / 811 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 54/100
+  [rep4:merge:C] in=35404 out=2492 $0.0136 finish=stop 8.5s -> C_rep4.json
+  merge C_rep4: 184 records in, policy=False, parse_error=None -> merges/C_rep4.md
+[ledger] after merge: line $9.2880 / 812 calls; rw 55/100
+--- merge C rep5 ---
+[ledger] line evidence-package-pilot*: $9.2880 / 812 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 55/100
+  [rep5:merge:C] in=35404 out=2029 $0.0131 finish=stop 7.1s -> C_rep5.json
+  merge C_rep5: 184 records in, policy=False, parse_error=None -> merges/C_rep5.md
+[ledger] after merge: line $9.3010 / 813 calls; rw 56/100
+--- merge C rep6 ---
+[ledger] line evidence-package-pilot*: $9.3010 / 813 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 56/100
+  [rep6:merge:C] in=35404 out=1950 $0.0130 finish=stop 6.7s -> C_rep6.json
+  merge C_rep6: 184 records in, policy=False, parse_error=None -> merges/C_rep6.md
+[ledger] after merge: line $9.3140 / 814 calls; rw 57/100
+--- merge C rep7 ---
+[ledger] line evidence-package-pilot*: $9.3140 / 814 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 57/100
+  [rep7:merge:C] in=35404 out=2164 $0.0132 finish=stop 7.6s -> C_rep7.json
+  merge C_rep7: 184 records in, policy=False, parse_error=None -> merges/C_rep7.md
+[ledger] after merge: line $9.3272 / 815 calls; rw 58/100
+--- merge C rep8 ---
+[ledger] line evidence-package-pilot*: $9.3272 / 815 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 58/100
+  [rep8:merge:C] in=35404 out=2090 $0.0131 finish=stop 7.3s -> C_rep8.json
+  merge C_rep8: 184 records in, policy=False, parse_error=None -> merges/C_rep8.md
+[ledger] after merge: line $9.3404 / 816 calls; rw 59/100
+--- merge Dp rep3 ---
+[ledger] line evidence-package-pilot*: $9.3404 / 816 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 59/100
+  [rep3:merge:Dp] in=31195 out=2574 $0.0124 finish=stop 8.9s -> Dp_rep3.json
+  merge Dp_rep3: 162 records in, policy=False, parse_error=None -> merges/Dp_rep3.md
+[ledger] after merge: line $9.3528 / 817 calls; rw 60/100
+--- merge Dp rep4 ---
+[ledger] line evidence-package-pilot*: $9.3528 / 817 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 60/100
+  [rep4:merge:Dp] in=31195 out=2289 $0.0121 finish=stop 7.8s -> Dp_rep4.json
+  merge Dp_rep4: 162 records in, policy=False, parse_error=None -> merges/Dp_rep4.md
+[ledger] after merge: line $9.3649 / 818 calls; rw 61/100
+--- merge Dp rep5 ---
+[ledger] line evidence-package-pilot*: $9.3649 / 818 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 61/100
+  [rep5:merge:Dp] in=31195 out=2562 $0.0124 finish=stop 8.8s -> Dp_rep5.json
+  merge Dp_rep5: 162 records in, policy=False, parse_error=None -> merges/Dp_rep5.md
+[ledger] after merge: line $9.3773 / 819 calls; rw 62/100
+--- merge Dp rep6 ---
+[ledger] line evidence-package-pilot*: $9.3773 / 819 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 62/100
+  [rep6:merge:Dp] in=31195 out=2361 $0.0122 finish=stop 8.2s -> Dp_rep6.json
+  merge Dp_rep6: 162 records in, policy=False, parse_error=None -> merges/Dp_rep6.md
+[ledger] after merge: line $9.3895 / 820 calls; rw 63/100
+--- merge Dp rep7 ---
+[ledger] line evidence-package-pilot*: $9.3895 / 820 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 63/100
+  [rep7:merge:Dp] in=31195 out=2488 $0.0123 finish=stop 8.4s -> Dp_rep7.json
+  merge Dp_rep7: 162 records in, policy=False, parse_error=None -> merges/Dp_rep7.md
+[ledger] after merge: line $9.4019 / 821 calls; rw 64/100
+--- merge Dp rep8 ---
+[ledger] line evidence-package-pilot*: $9.4019 / 821 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 64/100
+  [rep8:merge:Dp] in=31195 out=2698 $0.0126 finish=stop 9.5s -> Dp_rep8.json
+  merge Dp_rep8: 162 records in, policy=False, parse_error=None -> merges/Dp_rep8.md
+[ledger] after merge: line $9.4145 / 822 calls; rw 65/100
+### policy arm ###
+--- merge CP rep1 ---
+[ledger] line evidence-package-pilot*: $9.4145 / 822 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 65/100
+  [rep1:merge:CP] in=35535 out=1962 $0.0130 finish=stop 7.2s -> CP_rep1.json
+  merge CP_rep1: 184 records in, policy=True, parse_error=None -> merges/CP_rep1.md
+[ledger] after merge: line $9.4275 / 823 calls; rw 66/100
+--- merge CP rep2 ---
+[ledger] line evidence-package-pilot*: $9.4275 / 823 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 66/100
+  [rep2:merge:CP] in=35535 out=2114 $0.0132 finish=stop 7.1s -> CP_rep2.json
+  merge CP_rep2: 184 records in, policy=True, parse_error=None -> merges/CP_rep2.md
+[ledger] after merge: line $9.4407 / 824 calls; rw 67/100
+--- merge CP rep3 ---
+[ledger] line evidence-package-pilot*: $9.4407 / 824 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 67/100
+  [rep3:merge:CP] in=35535 out=2299 $0.0134 finish=stop 7.5s -> CP_rep3.json
+  merge CP_rep3: 184 records in, policy=True, parse_error=None -> merges/CP_rep3.md
+[ledger] after merge: line $9.4541 / 825 calls; rw 68/100
+--- merge CP rep4 ---
+[ledger] line evidence-package-pilot*: $9.4541 / 825 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 68/100
+  [rep4:merge:CP] in=35535 out=2037 $0.0131 finish=stop 7.2s -> CP_rep4.json
+  merge CP_rep4: 184 records in, policy=True, parse_error=None -> merges/CP_rep4.md
+[ledger] after merge: line $9.4672 / 826 calls; rw 69/100
+--- merge DpP rep1 ---
+[ledger] line evidence-package-pilot*: $9.4672 / 826 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 69/100
+  [rep1:merge:DpP] in=31326 out=2538 $0.0124 finish=stop 8.6s -> DpP_rep1.json
+  merge DpP_rep1: 162 records in, policy=True, parse_error=None -> merges/DpP_rep1.md
+[ledger] after merge: line $9.4797 / 827 calls; rw 70/100
+--- merge DpP rep2 ---
+[ledger] line evidence-package-pilot*: $9.4797 / 827 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 70/100
+  [rep2:merge:DpP] in=31326 out=2293 $0.0121 finish=stop 7.8s -> DpP_rep2.json
+  merge DpP_rep2: 162 records in, policy=True, parse_error=None -> merges/DpP_rep2.md
+[ledger] after merge: line $9.4918 / 828 calls; rw 71/100
+--- merge DpP rep3 ---
+[ledger] line evidence-package-pilot*: $9.4918 / 828 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 71/100
+  [rep3:merge:DpP] in=31326 out=2585 $0.0125 finish=stop 8.7s -> DpP_rep3.json
+  merge DpP_rep3: 162 records in, policy=True, parse_error=None -> merges/DpP_rep3.md
+[ledger] after merge: line $9.5043 / 829 calls; rw 72/100
+--- merge DpP rep4 ---
+[ledger] line evidence-package-pilot*: $9.5043 / 829 calls; rw cap $9.6165 (baseline $8.7165 + $0.9); rw calls so far 72/100
+  [rep4:merge:DpP] in=31326 out=2733 $0.0127 finish=stop 9.4s -> DpP_rep4.json
+  merge DpP_rep4: 162 records in, policy=True, parse_error=None -> merges/DpP_rep4.md
+[ledger] after merge: line $9.5170 / 830 calls; rw 73/100
+--- screen ---
+wrote F:\defense\evidence_pack_prep_v1\paper_round\multi_doc\rw\SCREEN_rw.md (73 ledger rows for evidence-package-pilot-rw)
+=== round_RW-c DONE Tue Sep 15 23:29:26     2026 ===

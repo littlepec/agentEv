@@ -1,0 +1,63 @@
+{
+  "tag": "rep1:extract:1611.01462_note",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "json_object": true,
+  "created": "2026-09-15T23:00:08",
+  "elapsed_s": 1.6,
+  "usage": {
+    "prompt_tokens": 1171,
+    "completion_tokens": 228,
+    "total_tokens": 1399,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1171
+  },
+  "prompt_tokens": 1171,
+  "completion_tokens": 228,
+  "cost_usd": 0.000625,
+  "finish_reason": "stop",
+  "error": null,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a careful research assistant. You are reading ONE document and extracting the results it reports. Work only from the document text given to you; never add facts that are not in it, and never use outside knowledge to fill in or correct a number."
+    },
+    {
+      "role": "user",
+      "content": "USER TASK (what these extracted records will later be used for):\nQ1: Across the provided papers, which paper reports the lowest word-level test perplexity on the Penn Treebank for a single model without dynamic evaluation, cache or pointer augmentation, and what is that value? Rank the papers by this number.\nQ2: For each of the provided papers, list the word-level Penn Treebank test perplexity the paper reports for its own proposed model (best single-model result without dynamic evaluation or cache), as a table with the paper title and the number.\n\nFile: 1611.01462_note.txt. Files named <arxiv_id>.txt are papers; files named <arxiv_id>_note.txt are third-party reading notes about that paper.\n\nRead the document below and return every result it reports that is relevant to the task above.\n\nRules:\n1. Extract only results that this document itself reports for the OWN proposed model(s) of the paper it is about. For a paper file that means the model(s) the paper itself proposes; for a third-party reading note that means the results the note states about the paper it is about. Do not create records for numbers the document attributes to other authors' models (baselines, prior work, comparison rows).\n2. One record per configuration: if the document reports several values for its own model (different sizes, with or without fine-tuning, with or without a cache or pointer, with or without dynamic evaluation, single model or ensemble), give each of them its own record.\n3. \"value\" must be the number exactly as written in the document, as a string.\n4. \"verbatim_quote\" must be copied exactly from the document and be 40 words or fewer.\n5. Put \"unknown\" in any field you cannot determine from the document. Do not omit a result because you are uncertain about it; record it with \"unknown\" fields and a lower confidence.\n6. Never add a fact, a number or a qualification that is not in the document.\n7. \"source_file\" is the file name given above, and \"source_kind\" is exactly what that file name implies: \"paper\" for <arxiv_id>.txt, \"note\" for <arxiv_id>_note.txt.\n\nReturn ONLY a JSON object of this shape:\n{\"records\": [{\"source_file\": \"<file name>\", \"source_kind\": \"paper|note\", \"paper_id\": \"<arxiv id the result belongs to>\", \"model\": \"<model the value is for>\", \"dataset\": \"<dataset and level>\", \"metric\": \"<metric>\", \"value\": \"<string, exactly as written>\", \"setting\": {\"dynamic_eval\": \"yes|no|unknown\", \"cache_pointer\": \"yes|no|unknown\", \"ensemble\": \"yes|no|unknown\", \"fine_tuning\": \"yes|no|unknown\"}, \"verbatim_quote\": \"<40 words or fewer, copied exactly>\", \"location\": \"<section or table as named in the text>\", \"confidence\": 0.0, \"notes\": \"<short qualification, or empty>\"}]}\n\nDOCUMENT TEXT (1611.01462_note.txt):\nThird-party research note: Tying Word Vectors and Word Classifiers: A Loss Framework for Language Modeling\n\nKey questions addressed: Penn Treebank word-level test perplexity tying word vectors and word classifiers | loss framework for language modeling input embedding output projection Penn Treebank results | augmented loss reused embeddings LSTM Penn Treebank perplexity comparison | single model versus ensemble cache pointer Penn Treebank language modeling perplexity | Inan Khosravi Socher language modeling Penn Treebank test perplexity\n\nThe paper reports a word-level test perplexity of 68.5 on Penn Treebank for VD-LSTM+REAL (large), its best LSTM model using reused embeddings and augmented loss. Table 3 in Section 6.3 lists this result. The model is a single large 2-layer LSTM with 1500 units using variational dropout, reused embeddings, and augmented loss (VD-LSTM+REAL), with 51M parameters. The paper does not report dynamic evaluation, cache/pointer, ensemble, or fine-tuning for this model.\n\nThe paper states VD-LSTM+REAL (large) outperforms all previous work using the conventional framework, including large ensembles. In Table 3, it ties VD-RHN at 68.5 test perplexity. It is worse than VD-RHN+RE at 66.0. It is better than the listed cache baseline at 92.0, pointer baseline at 70.9, and ensemble baselines at 68.7.\n\nThe paper reports VD-RHN+RE (Zilly et al. 2016), trained with reused embeddings following the paper's work, achieves validation perplexity 68.1 and test perplexity 66.0 on Penn Treebank. The paper describes this as best overall. The Penn Treebank baselines involving cache, pointer, or ensemble listed by the paper are RNN+LDA+KN-5+Cache with test perplexity 92.0, Pointer Sentinel-LSTM(medium) with 70.9, 38 Large LSTMs with 68.7, and 10 Large VD-LSTMs with 68.7.\n"
+    }
+  ],
+  "response": {
+    "id": "f2dc5165-8369-4eeb-aa0d-7472cea6759f",
+    "object": "chat.completion",
+    "created": 1789477207,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"records\": [{\"source_file\": \"1611.01462_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1611.01462\", \"model\": \"VD-LSTM+REAL (large)\", \"dataset\": \"Penn Treebank, word-level\", \"metric\": \"test perplexity\", \"value\": \"68.5\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"The paper reports a word-level test perplexity of 68.5 on Penn Treebank for VD-LSTM+REAL (large), its best LSTM model using reused embeddings and augmented loss.\", \"location\": \"Table 3, Section 6.3\", \"confidence\": 0.9, \"notes\": \"Single large 2-layer LSTM with 1500 units, variational dropout, reused embeddings, augmented loss, 51M parameters; note states no dynamic evaluation, cache/pointer, ensemble, or fine-tuning.\"}]}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1171,
+      "completion_tokens": 228,
+      "total_tokens": 1399,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 1171
+    },
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+  }
+}

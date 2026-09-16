@@ -1,0 +1,55 @@
+{
+  "cond": "A",
+  "rep": 1,
+  "created": "2026-09-15T23:02:30",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 16384,
+  "thinking_disabled": false,
+  "cache_keys": [
+    "1409.2329",
+    "1508.06615",
+    "1512.05287",
+    "1607.03474",
+    "1608.05859",
+    "1611.01462",
+    "1611.01578",
+    "1706.02222",
+    "1707.05589",
+    "1708.02182",
+    "1711.03953"
+  ],
+  "records_per_key": {
+    "1409.2329": 12,
+    "1508.06615": 11,
+    "1512.05287": 9,
+    "1607.03474": 3,
+    "1608.05859": 6,
+    "1611.01462": 21,
+    "1611.01578": 5,
+    "1706.02222": 4,
+    "1707.05589": 26,
+    "1708.02182": 22,
+    "1711.03953": 18
+  },
+  "n_records": 137,
+  "records_chars": 71172,
+  "usage": {
+    "prompt_tokens": 26009,
+    "completion_tokens": 16384,
+    "total_tokens": 42393,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 15627
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 26009
+  },
+  "cost_usd": 0.027463,
+  "elapsed_s": 65.7,
+  "finish_reason": "length",
+  "parse_error": "no parseable JSON object (Expecting ',' delimiter: line 38 column 6 (char 1398))",
+  "parsed": null
+}

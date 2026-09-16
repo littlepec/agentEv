@@ -1,0 +1,63 @@
+{
+  "tag": "rep1:extract:1607.03474_note",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.4,
+  "max_tokens": 4096,
+  "thinking_disabled": true,
+  "json_object": true,
+  "created": "2026-09-15T23:00:04",
+  "elapsed_s": 3.1,
+  "usage": {
+    "prompt_tokens": 1144,
+    "completion_tokens": 717,
+    "total_tokens": 1861,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1144
+  },
+  "prompt_tokens": 1144,
+  "completion_tokens": 717,
+  "cost_usd": 0.001204,
+  "finish_reason": "stop",
+  "error": null,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a careful research assistant. You are reading ONE document and extracting the results it reports. Work only from the document text given to you; never add facts that are not in it, and never use outside knowledge to fill in or correct a number."
+    },
+    {
+      "role": "user",
+      "content": "USER TASK (what these extracted records will later be used for):\nQ1: Across the provided papers, which paper reports the lowest word-level test perplexity on the Penn Treebank for a single model without dynamic evaluation, cache or pointer augmentation, and what is that value? Rank the papers by this number.\nQ2: For each of the provided papers, list the word-level Penn Treebank test perplexity the paper reports for its own proposed model (best single-model result without dynamic evaluation or cache), as a table with the paper title and the number.\n\nFile: 1607.03474_note.txt. Files named <arxiv_id>.txt are papers; files named <arxiv_id>_note.txt are third-party reading notes about that paper.\n\nRead the document below and return every result it reports that is relevant to the task above.\n\nRules:\n1. Extract only results that this document itself reports for the OWN proposed model(s) of the paper it is about. For a paper file that means the model(s) the paper itself proposes; for a third-party reading note that means the results the note states about the paper it is about. Do not create records for numbers the document attributes to other authors' models (baselines, prior work, comparison rows).\n2. One record per configuration: if the document reports several values for its own model (different sizes, with or without fine-tuning, with or without a cache or pointer, with or without dynamic evaluation, single model or ensemble), give each of them its own record.\n3. \"value\" must be the number exactly as written in the document, as a string.\n4. \"verbatim_quote\" must be copied exactly from the document and be 40 words or fewer.\n5. Put \"unknown\" in any field you cannot determine from the document. Do not omit a result because you are uncertain about it; record it with \"unknown\" fields and a lower confidence.\n6. Never add a fact, a number or a qualification that is not in the document.\n7. \"source_file\" is the file name given above, and \"source_kind\" is exactly what that file name implies: \"paper\" for <arxiv_id>.txt, \"note\" for <arxiv_id>_note.txt.\n\nReturn ONLY a JSON object of this shape:\n{\"records\": [{\"source_file\": \"<file name>\", \"source_kind\": \"paper|note\", \"paper_id\": \"<arxiv id the result belongs to>\", \"model\": \"<model the value is for>\", \"dataset\": \"<dataset and level>\", \"metric\": \"<metric>\", \"value\": \"<string, exactly as written>\", \"setting\": {\"dynamic_eval\": \"yes|no|unknown\", \"cache_pointer\": \"yes|no|unknown\", \"ensemble\": \"yes|no|unknown\", \"fine_tuning\": \"yes|no|unknown\"}, \"verbatim_quote\": \"<40 words or fewer, copied exactly>\", \"location\": \"<section or table as named in the text>\", \"confidence\": 0.0, \"notes\": \"<short qualification, or empty>\"}]}\n\nDOCUMENT TEXT (1607.03474_note.txt):\nThird-party research note: Recurrent Highway Networks\n\nKey questions addressed: Recurrent Highway Networks Penn Treebank word-level language modeling perplexity | Recurrent Highway Networks Penn Treebank comparison with baselines | Penn Treebank language model perplexity single model dynamic evaluation cache pointer ensemble fine-tuning | Recurrent Highway Networks variational dropout weight tying Penn Treebank | Recurrent Highway Networks test perplexity table Penn Treebank\n\nThe paper reports its best Penn Treebank word-level test perplexity for the proposed model as 65.4 for Variational RHN + WT. The paper also reports 68.5 test perplexity for Variational RHN without WT. The best 10 layer model with reduced weight decay improves to 67.9/65.4 validation/test perplexity. Table 1 lists Variational RHN + WT as 23M parameters with validation/test perplexity 67.9/65.4. This setting uses variational dropout and weight tying of input and output mappings. The paper reports the Penn Treebank word-level language modeling task results both with and without weight-tying (WT) of input and output mappings for fair comparisons.\n\nThe best Penn Treebank result is a single model. Dynamic evaluation, cache/pointer, ensemble, and fine-tuning are not reported for the proposed model. Cache and pointer methods appear only as baselines, and ensembles are mentioned only in comparison. The paper states that RHNs outperform most single models as well as all previous ensembles.\n\nThe proposed model's 65.4 test perplexity is better than all listed baselines except the Neural Architecture Search with base 8 + WT entries (64.0 and 62.4). It beats Variational LSTM+WT (73.2), Pointer Sentinel-LSTM (70.9), Variational LSTM+WT+augmented loss (68.5), and Neural Architecture Search with base 8 (67.9). The paper identifies Variational LSTM+WT as the directly comparable baseline, differing only in network architecture and size.\n"
+    }
+  ],
+  "response": {
+    "id": "af64480f-548a-4a6e-ac1c-674dc846fb7e",
+    "object": "chat.completion",
+    "created": 1789477202,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"records\": [{\"source_file\": \"1607.03474_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1607.03474\", \"model\": \"Variational RHN + WT\", \"dataset\": \"Penn Treebank word-level\", \"metric\": \"test perplexity\", \"value\": \"65.4\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"The paper reports its best Penn Treebank word-level test perplexity for the proposed model as 65.4 for Variational RHN + WT.\", \"location\": \"unknown\", \"confidence\": 0.9, \"notes\": \"Single model; note states dynamic evaluation, cache/pointer, ensemble, and fine-tuning are not reported for the proposed model.\"}, {\"source_file\": \"1607.03474_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1607.03474\", \"model\": \"Variational RHN without WT\", \"dataset\": \"Penn Treebank word-level\", \"metric\": \"test perplexity\", \"value\": \"68.5\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"The paper also reports 68.5 test perplexity for Variational RHN without WT.\", \"location\": \"unknown\", \"confidence\": 0.9, \"notes\": \"Single model; note states dynamic evaluation, cache/pointer, ensemble, and fine-tuning are not reported for the proposed model.\"}, {\"source_file\": \"1607.03474_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1607.03474\", \"model\": \"Variational RHN + WT (10 layer model with reduced weight decay)\", \"dataset\": \"Penn Treebank word-level\", \"metric\": \"validation/test perplexity\", \"value\": \"67.9/65.4\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"The best 10 layer model with reduced weight decay improves to 67.9/65.4 validation/test perplexity.\", \"location\": \"unknown\", \"confidence\": 0.8, \"notes\": \"Reported as validation/test pair; single model.\"}, {\"source_file\": \"1607.03474_note.txt\", \"source_kind\": \"note\", \"paper_id\": \"1607.03474\", \"model\": \"Variational RHN + WT\", \"dataset\": \"Penn Treebank word-level\", \"metric\": \"validation/test perplexity\", \"value\": \"67.9/65.4\", \"setting\": {\"dynamic_eval\": \"no\", \"cache_pointer\": \"no\", \"ensemble\": \"no\", \"fine_tuning\": \"no\"}, \"verbatim_quote\": \"Table 1 lists Variational RHN + WT as 23M parameters with validation/test perplexity 67.9/65.4.\", \"location\": \"Table 1\", \"confidence\": 0.8, \"notes\": \"23M parameters; reported as validation/test pair; single model.\"}]}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1144,
+      "completion_tokens": 717,
+      "total_tokens": 1861,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 1144
+    },
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+  }
+}
